@@ -21,7 +21,9 @@
   "homepage": "https://github.com/velabikes/vela-store#readme",
   "dependencies": {
     "next": "^8.0.3",
+    "next-apollo": "^2.0.9",
     "react": "^16.8.3",
+    "react-apollo": "^2.5.1",
     "react-dom": "^16.8.3"
   }
 }

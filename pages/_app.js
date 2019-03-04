@@ -1,17 +1,24 @@
+import React from 'react'
 import App, {Container} from 'next/app'
-
-import Masthead from '/components/struct/Masthead'
-import MessengerChat from '/components/home/MessengerChat'
-import Footer from  '/components/struct/Footer'
+import withShopify from '../lib/shopify'
 
 class MyApp extends App {
+  static async getInitialProps({ Component, ctx }) {
+    let pageProps = {}
+
+    if (Component.getInitialProps) {
+      pageProps = await Component.getInitialProps(ctx)
+    }
+
+    return { pageProps }
+  }
+
   render () {
-    const {Component, pageProps, store, router} = this.props
+    const { Component, pageProps } = this.props
+
     return (
       <Container>
-        <Masthead showSmall={router.pathname !== '/'} />
         <Component {...pageProps} />
-        <Footer />
       </Container>
     )
   }
