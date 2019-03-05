@@ -1,6 +1,8 @@
 import React from 'react'
 import App, {Container} from 'next/app'
-import withShopify from '../lib/shopify'
+import Head from 'next/head'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
 
 class MyApp extends App {
   static async getInitialProps({ Component, ctx }) {
@@ -18,7 +20,9 @@ class MyApp extends App {
 
     return (
       <Container>
+        <Header />
         <Component {...pageProps} />
+        <Footer />
       </Container>
     )
   }

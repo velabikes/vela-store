@@ -1,6 +1,8 @@
+import Page from '../components/Page'
+
 const Home = ({ products }) =>
-  <div>
+  <Page>
     Welcome to next.js!
-  </div>
+  </Page>
 
 export default Home
