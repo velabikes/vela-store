@@ -1,6 +1,6 @@
 import Page from '../components/Page'
 
-const Home = ({ products }) =>
+const Home = () =>
   <Page>
     Welcome to next.js!
   </Page>

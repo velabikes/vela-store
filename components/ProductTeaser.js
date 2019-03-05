@@ -1,4 +1,14 @@
+import PropTypes from 'prop-types'
+
 const ProductTeaser = ({ product }) =>
   <div>
     {JSON.stringify(product)}
-  <div>
+  </div>
+
+ProductTeaser.propTypes = {
+  product: PropTypes.object
+}
+
+// Header.defaultProps = {
+//  product: {}
+// }

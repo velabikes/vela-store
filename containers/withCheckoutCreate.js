@@ -20,4 +20,4 @@ export const checkoutCreate = gql`
   ${CheckoutFragment}
 `
 
-export default graphql(checkoutCreate, {name: 'checkoutCreate', alias: 'withCheckoutCreate'})
+export default graphql(checkoutCreate, { name: 'checkoutCreate', alias: 'withCheckoutCreate' })

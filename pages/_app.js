@@ -1,11 +1,10 @@
 import React from 'react'
-import App, {Container} from 'next/app'
-import Head from 'next/head'
+import App, { Container } from 'next/app'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 class MyApp extends App {
-  static async getInitialProps({ Component, ctx }) {
+  static async getInitialProps ({ Component, ctx }) {
     let pageProps = {}
 
     if (Component.getInitialProps) {

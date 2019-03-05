@@ -5,7 +5,6 @@ import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
 import CheckoutFragment from './inc/CheckoutFragment'
 
-
 export const checkoutLineItemsAdd = gql`
   mutation checkoutLineItemsAdd ($checkoutId: ID!, $lineItems: [CheckoutLineItemInput!]!) {
     checkoutLineItemsAdd(checkoutId: $checkoutId, lineItems: $lineItems) {
@@ -19,6 +18,6 @@ export const checkoutLineItemsAdd = gql`
     }
   }
   ${CheckoutFragment}
-`;
+`
 
-export default graphql(checkoutLineItemsAdd, {name: 'checkoutLineItemsAdd', alias: 'withCheckoutLineItemsAdd'})
+export default graphql(checkoutLineItemsAdd, { name: 'checkoutLineItemsAdd', alias: 'withCheckoutLineItemsAdd' })

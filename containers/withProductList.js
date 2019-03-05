@@ -37,9 +37,9 @@ const normalizeImage = ({ node: { src } }) => ({ src })
 
 const normalizeProduct = ({
   node: {
-     images,
-     variants,
-     ...node
+    images,
+    variants,
+    ...node
   }
 }) => ({
   ...node,
@@ -54,13 +54,12 @@ const normalizeProps = ({
     shop: { collectionByHandle: { products } }
   }
 }) =>
-({
-  loading,
-  products: products.edges.map(normalizeProduct)
-})
+  ({
+    loading,
+    products: products.edges.map(normalizeProduct)
+  })
 
 export default graphql(productList, {
   alias: 'withProductList',
-
   props: props => props.data.shop ? normalizeProps(props) : props
 })

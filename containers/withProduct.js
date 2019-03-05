@@ -28,36 +28,36 @@ query productQuery($handle: String!) {
   }
 }
 `
-const normalizeImage = ({ node: { src } }) => ({ src })
+// const normalizeImage = ({ node: { src } }) => ({ src })
 
-const normalizeProduct = ({
-  node: {
-     images,
-     variants,
-     ...node
-  }
-}) => ({
-  ...node,
-  price: variants.edges[0].node.price,
-  variants: variants.edges,
-  images: images.edges.map(normalizeImage)
-})
+// const normalizeProduct = ({
+//   node: {
+//     images,
+//     variants,
+//     ...node
+//   }
+// }) => ({
+//   ...node,
+//   price: variants.edges[0].node.price,
+//   variants: variants.edges,
+//   images: images.edges.map(normalizeImage)
+// })
 
-const normalizeProps = ({
-  data: {
-    loading,
-    shop: { collectionByHandle: { products } }
-  }
-}) =>
-({
-  loading,
-  products: products.edges.map(normalizeProduct)
-})
+// const normalizeProps = ({
+//   data: {
+//     loading,
+//     shop: { collectionByHandle: { products } }
+//   }
+// }) =>
+//   ({
+//     loading,
+//     products: products.edges.map(normalizeProduct)
+//  })
 
 export default graphql(product, {
   alias: 'withProduct',
 
-  options(props) {
+  options (props) {
     return {
       variables: {
         handle: props.router && props.router.query.slug
@@ -65,8 +65,8 @@ export default graphql(product, {
     }
   },
 
-  //props: ({data: {shop: { productByHandle }}}) => ({product: productByHandle})
-  props: ({data}) => 
-    ({product: data.shop ? data.shop.productByHandle : {}, loading: data.loading})
+  // props: ({data: {shop: { productByHandle }}}) => ({product: productByHandle})
+  props: ({ data }) =>
+    ({ product: data.shop ? data.shop.productByHandle : {}, loading: data.loading })
 
 })

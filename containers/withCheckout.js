@@ -21,7 +21,7 @@ export default graphql(checkout, {
 
   alias: 'withCheckout',
 
-  options(props) {
+  options (props) {
     return {
       variables: {
         id: props.checkoutId
@@ -29,7 +29,7 @@ export default graphql(checkout, {
     }
   },
 
-  props: ({ data: { node } }) => {
-    return {checkout: node}
+  props ({ data: { node } }) {
+    return { checkout: node }
   }
 })
