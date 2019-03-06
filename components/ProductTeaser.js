@@ -12,3 +12,5 @@ ProductTeaser.propTypes = {
 // Header.defaultProps = {
 //  product: {}
 // }
+
+export default ProductTeaser

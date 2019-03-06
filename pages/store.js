@@ -1,18 +1,19 @@
 import PropTypes from 'prop-types'
 import Page from '../components/Page'
 import ProductList from '../components/ProductList'
+import PaddedView from '../components/PaddedView'
 import withProductList from '../containers/withProductList'
 import withShopify from '../lib/shopify'
 
-const Store = ({ productList }) =>
+const Store = ({ products }) =>
   <Page>
-     asdfsdfasdf
-    {JSON.stringify(productList)}asdf
-    <ProductList products={productList} />
+    <PaddedView>
+      <ProductList products={products} />
+    </PaddedView>
   </Page>
 
 Store.propTypes = {
-  productList: PropTypes.object
+  products: PropTypes.object
 }
 
 export default withShopify(withProductList(Store))

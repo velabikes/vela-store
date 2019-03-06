@@ -1,16 +1,11 @@
-import Link from 'next/link'
+import HeaderMenu from '../components/HeaderMenu'
 import { velaGreen } from '../style/colors'
 import PaddedView from '../components/PaddedView'
 
 const Header = () =>
   <header>
     <PaddedView>
-      <nav>
-        <Link href='/store'><a>Loja</a></Link>
-        <Link href='/store'><a>Loja</a></Link>
-        <Link href='/store'><a>Loja</a></Link>
-        <Link href='/store'><a>Loja</a></Link>
-      </nav>
+      <HeaderMenu />
     </PaddedView>
     <style jsx>{`
       header {
