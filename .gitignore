@@ -6,6 +6,7 @@ node_modules/
 jspm_packages/
 .npm
 npm-debug.log
+yarn-error.log
 
 # Optional eslint cache
 .eslintcache
