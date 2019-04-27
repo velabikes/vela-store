@@ -5,9 +5,10 @@ import ProductInfo from '../../components/ProductInfo'
 import withShopify from '../../lib/shopify'
 import withProduct from '../../containers/withProduct'
 
-const ProductPage = ({ loading, product, router }) =>
+const ProductPage = ({ loading, product }) =>
   <Page>
     { loading ? 'carregando...' : <ProductInfo product={product} /> }
+    {JSON.stringify(product)}
   </Page>
 
 export default compose(
