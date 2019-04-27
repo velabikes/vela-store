@@ -20,4 +20,7 @@ export const checkoutLineItemsAdd = gql`
   ${CheckoutFragment}
 `
 
-export default graphql(checkoutLineItemsAdd, { name: 'checkoutLineItemsAdd', alias: 'withCheckoutLineItemsAdd' })
+export default graphql(checkoutLineItemsAdd, {
+  name: 'checkoutLineItemsAdd',
+  alias: 'withCheckoutLineItemsAdd'
+})

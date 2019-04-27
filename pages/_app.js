@@ -1,8 +1,10 @@
 import React from 'react'
 import App, { Container } from 'next/app'
 import Router from 'next/router'
+import { Provider } from 'react-redux'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import withReduxStore from '../containers/withReduxStore'
 
 class MyApp extends App {
   constructor (props) {
@@ -28,18 +30,20 @@ class MyApp extends App {
   }
 
   render () {
-    const { Component, pageProps } = this.props
+    const { Component, pageProps, reduxStore } = this.props
     const { routerLoading } = this.state
 
     return (
       <Container>
-        <div style={{ display: 'flex' }}>
-          <Header loading={routerLoading} />
-          <div style={{ marginLeft: '6em' }}><Component {...pageProps} /></div>
-        </div>
+        <Provider store={reduxStore}>
+          <div style={{ display: 'flex' }}>
+            <Header loading={routerLoading} />
+            <div style={{ marginLeft: '6em' }}><Component {...pageProps} /></div>
+          </div>
+        </Provider>
       </Container>
     )
   }
 }
 
-export default MyApp
+export default withReduxStore(MyApp)
