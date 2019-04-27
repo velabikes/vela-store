@@ -5,15 +5,15 @@ import PaddedView from '../components/PaddedView'
 import withProductList from '../containers/withProductList'
 import withShopify from '../lib/shopify'
 
-const Store = ({ products }) =>
+const Store = ({ products, loading }) =>
   <Page>
     <PaddedView>
-      <ProductList products={products} />
+      <div>{ loading ? <div>'carregando...'</div> : products && <ProductList products={products} /> }</div>
     </PaddedView>
   </Page>
 
 Store.propTypes = {
-  products: PropTypes.object
+  products: PropTypes.array
 }
 
 export default withShopify(withProductList(Store))

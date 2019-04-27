@@ -1,9 +1,15 @@
 import React from 'react'
 import App, { Container } from 'next/app'
+import Router from 'next/router'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
 class MyApp extends App {
+  constructor (props) {
+    super(props)
+    this.state = { routerLoading: false }
+  }
+
   static async getInitialProps ({ Component, ctx }) {
     let pageProps = {}
 
@@ -14,14 +20,23 @@ class MyApp extends App {
     return { pageProps }
   }
 
+  componentDidMount () {
+    const self = this
+    Router.events.on('routeChangeStart', () => self.setState({ routerLoading: true }))
+    Router.events.on('routeChangeComplete', () => self.setState({ routerLoading: false }))
+    Router.events.on('routeChangeError', () => self.setState({ routerLoading: false }))
+  }
+
   render () {
     const { Component, pageProps } = this.props
+    const { routerLoading } = this.state
 
     return (
       <Container>
-        <Header />
-        <Component {...pageProps} />
-        <Footer />
+        <div style={{ display: 'flex' }}>
+          <Header loading={routerLoading} />
+          <div style={{ marginLeft: '6em' }}><Component {...pageProps} /></div>
+        </div>
       </Container>
     )
   }
