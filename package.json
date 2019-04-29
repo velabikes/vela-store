@@ -28,6 +28,7 @@
     "formik": "^1.5.1",
     "next": "^8.0.3",
     "next-apollo": "^2.0.9",
+    "next-redux-wrapper": "^3.0.0-alpha.2",
     "prop-types": "^15.7.2",
     "react": "^16.8.3",
     "react-apollo": "^2.5.1",

@@ -2,6 +2,7 @@ import HeaderMenu from '../components/HeaderMenu'
 import { velaGreen, cream } from '../style/colors'
 import Logo from '../components/Logo'
 import Link from '../components/Link'
+import Cart from '../components/Cart'
 
 const Header = ({ loading }) =>
   <header>

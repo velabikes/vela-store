@@ -2,9 +2,11 @@ import React from 'react'
 import App, { Container } from 'next/app'
 import Router from 'next/router'
 import { Provider } from 'react-redux'
+import withShopify from '../lib/shopify'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import withReduxStore from '../containers/withReduxStore'
+import withRedux from 'next-redux-wrapper'
+import { makeStore } from '../lib/redux'
 
 class MyApp extends App {
   constructor (props) {
@@ -30,15 +32,17 @@ class MyApp extends App {
   }
 
   render () {
-    const { Component, pageProps, reduxStore } = this.props
+    const { Component, pageProps, store } = this.props
     const { routerLoading } = this.state
 
     return (
       <Container>
-        <Provider store={reduxStore}>
+        <Provider store={store}>
           <div style={{ display: 'flex' }}>
             <Header loading={routerLoading} />
-            <div style={{ marginLeft: '6em' }}><Component {...pageProps} /></div>
+            <div style={{ marginLeft: '6em' }}>
+              <Component {...pageProps} />
+            </div>
           </div>
         </Provider>
       </Container>
@@ -46,4 +50,4 @@ class MyApp extends App {
   }
 }
 
-export default withReduxStore(MyApp)
+export default withRedux(makeStore)(MyApp)
