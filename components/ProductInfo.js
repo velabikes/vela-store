@@ -10,7 +10,7 @@ const ProductInfo = ({ product, isLoading, onAddToCartClick, isAddToCartLoading 
     <div>
       <h1>{product.title}</h1>
       <button type='button' onClick={onAddToCartClick} disabled={isLoading}>comprar</button>
-      {isAddToCartLoading ? 'asdf' : 'cu'}
+      {isAddToCartLoading && 'carregando'}
       <div dangerouslySetInnerHTML={{ __html: product.descriptionHtml }} />
     </div>
     <style jsx>{`
