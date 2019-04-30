@@ -9,11 +9,9 @@ import withCheckoutLineItemsAdd from '../../containers/withCheckoutLineItemsAdd'
 const ProductPage = ({ isProductLoading, product, ...props }) =>
   <Page>
     { isProductLoading ? 'carregando...' : <ProductInfo product={product} /> }
-    {console.log(props.checkoutLineItemsAddData)}
   </Page>
 
 export default compose(
-  withShopify,
   withRouter,
   withCheckoutLineItemsAdd,
   withProduct(({ router }) => router.query.handle)

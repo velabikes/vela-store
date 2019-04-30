@@ -5,10 +5,10 @@
 import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
 import { compose, withHandlers, branch } from 'recompose'
+import { setCheckoutId } from '../lib/redux'
 import withCheckoutId from './withCheckoutId'
 import withCheckoutCreate from './withCheckoutCreate'
 import CheckoutFragment from './inc/CheckoutFragment'
-import { setCheckoutId } from '../lib/redux'
 
 const checkout = gql`
   query checkoutQuery($id: ID!) {
@@ -31,7 +31,7 @@ export default compose(
         variables: {
           input: {
             allowPartialAddresses: true,
-            shippingAddress: {city: 'Sao Paulo', province: 'SP', country: 'Brazil'}
+            shippingAddress: { city: 'Sao Paulo', province: 'SP', country: 'Brazil' }
           }
         }
       })

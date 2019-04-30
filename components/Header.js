@@ -3,18 +3,24 @@ import { velaGreen, cream } from '../style/colors'
 import Logo from '../components/Logo'
 import Link from '../components/Link'
 import Cart from '../components/Cart'
+import { compose, withState } from 'recompose';
+import CartContent from './CartContent';
 
-const Header = ({ loading }) =>
-  <header>
-    <div className='top'>
-      <div><Link href='/'><Logo color={loading ? 'red' : velaGreen} style={{ width: '5em', height: '5em' }} /></Link></div>
-      <div><Link href='/user' prefetch>user</Link></div>
-      <div>menu</div>
-    </div>
-    <div className='bottom'>
-      <div><Link href='/store' prefetch>acessorios</Link></div>
-      <div>monte a sua</div>
-    </div>
+const Header = ({ loading, setCartOpen, isCartOpen }) =>
+  <>
+    <div style={{ display: isCartOpen ? 'block' : 'none' }}><CartContent /></div>
+    <header>
+      <div className='top'>
+        <div><Link href='/'><Logo color={loading ? 'red' : velaGreen} style={{ width: '5em', height: '5em' }} /></Link></div>
+        <div><Link href='/user' prefetch>user</Link></div>
+        <div>menu</div>
+      </div>
+      <div onClick={() => setCartOpen(!isCartOpen)}><Cart /></div>
+      <div className='bottom'>
+        <div><Link href='/store' prefetch>acessorios</Link></div>
+        <div>monte a sua</div>
+      </div>
+    </header>
     <style jsx>{`
       header {
         display: flex;
@@ -63,6 +69,6 @@ const Header = ({ loading }) =>
         }
       }
     `}</style>
-  </header>
+  </>
 
-export default Header
+export default compose(withState('isCartOpen', 'setCartOpen', false))(Header)

@@ -1,13 +1,11 @@
 import PropTypes from 'prop-types'
 import { compose, lifecycle } from 'recompose'
 import withCheckout from '../containers/withCheckout'
-import withShopify from '../lib/shopify'
+import Link from '../components/Link'
 
-const Cart = ({ checkout, checkoutId, isCheckoutIdLoading }) =>
+const Cart = ({ checkout, isCheckoutIdLoading }) =>
   <div>
-    <div>{checkout && checkout.lineItems.edges.length}</div>
-    <div>{checkoutId}</div>
-    <div>{JSON.stringify(isCheckoutIdLoading)}</div>
+    cart{checkout && checkout.lineItems.edges.length}
   </div>
 
 Cart.propTypes = {
@@ -15,6 +13,5 @@ Cart.propTypes = {
 }
 
 export default compose(
-//  withShopify,
   withCheckout
 )(Cart)
