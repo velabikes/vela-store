@@ -33,7 +33,7 @@ const CartDrawer = ({ checkout, isCheckoutIdLoading, visible }) =>
         top: 0;
         bottom: 0;
         width: 600px;
-        background-color: white; //#f5f5f5;
+        background-color: #fcfcfc;
         z-index: 0;
         margin-left: 96px;
         padding: 1em;

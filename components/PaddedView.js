@@ -5,7 +5,7 @@ const PaddedView = props =>
     {props.children}
     <style jsx>{`
       div {
-        padding: 0 1em;
+        padding: 0 2em;
       }
     `}</style>
   </div>

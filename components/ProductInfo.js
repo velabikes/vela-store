@@ -17,6 +17,9 @@ const ProductInfo = ({ product, isLoading, onAddToCartClick, isAddToCartLoading 
       .ProductInfo {
         display: flex;
       }
+      .ProductInfo > div {
+        flex: 1
+      }
     `}</style>
   </div>
 
