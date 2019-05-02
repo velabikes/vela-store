@@ -14,14 +14,21 @@ const CustomHead = props =>
         padding: 0;
         min-height: 100vh;
         position: relative;
-        font-family: neue-haas-grotesk-text, serif;
+        font-family: neue-haas-grotesk-text, sans;
         width: 100%;
+      }
+      h1, h2, h3, h4, h5 {
+        font-family: neue-haas-grotesk-display, sans;
+        font-weight: 900;
+        font-style: italic;
+        color: ${velaGreen}
       }
       a, a:visited {
         color: ${velaGreen}
       }
       img {
-        max-width: 100%;
+        vertical-align: middle;
+        width: 100%;
       }
     `}</style>
   </>
