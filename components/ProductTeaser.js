@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import Link from '../components/Link'
+import Link from 'next/link'
 
 const ProductTeaser = ({ product }) =>
   <div>

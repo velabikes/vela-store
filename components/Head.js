@@ -24,7 +24,9 @@ const CustomHead = props =>
         color: ${velaGreen}
       }
       a, a:visited {
-        color: ${velaGreen}
+        color: ${velaGreen};
+        text-decoration: none;
+        cursor: pointer;
       }
       img {
         vertical-align: middle;

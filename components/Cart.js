@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
-import { compose, lifecycle } from 'recompose'
+import { compose } from 'recompose'
+import Link from 'next/link'
 import withCheckout from '../containers/withCheckout'
-import Link from '../components/Link'
 
 const Cart = ({ checkout, isCheckoutIdLoading }) =>
   <div>

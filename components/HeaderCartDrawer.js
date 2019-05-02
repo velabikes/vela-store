@@ -1,7 +1,6 @@
 import PropTypes from 'prop-types'
 import { compose, lifecycle } from 'recompose'
 import withCheckout from '../containers/withCheckout'
-import Link from '../components/Link'
 
 const CartDrawer = ({ checkout, isCheckoutIdLoading, visible }) =>
   <div className='root'>

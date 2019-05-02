@@ -1,10 +1,11 @@
 import { compose, withState } from 'recompose'
+import Link from 'next/link'
 import { velaGreen, cream } from '../style/colors'
 import Logo from '../components/Logo'
-import Link from '../components/Link'
-import Cart from '../components/Cart'
+// import Cart from '../components/Cart'
 import CartContent from './HeaderCartDrawer'
 import MenuDrawer from './HeaderMenuDrawer'
+import { CartIcon, MenuIcon, UserIcon } from './Icons'
 
 const Header = ({ loading, setCartOpen, setMenuOpen, isCartOpen, isMenuOpen }) =>
   <>
@@ -12,11 +13,17 @@ const Header = ({ loading, setCartOpen, setMenuOpen, isCartOpen, isMenuOpen }) =
     <MenuDrawer visible={isMenuOpen} />
     <header>
       <div className='top'>
-        <div><Link href='/'><Logo style={{ width: '4em', height: '4em' }} /></Link></div>
-        <div><Link href='/user' prefetch>user</Link></div>
-        <a onClick={() => setMenuOpen(!isMenuOpen)}>menu</a>
+        <div><Link href='/'><a>
+          <Logo style={{ width: '4em', height: '4em' }} />
+        </a></Link></div>
+        <div><a onClick={() => setMenuOpen(!isMenuOpen)}>
+          <MenuIcon />
+        </a></div>
+        <div><Link href='/user' prefetch><a>
+          <UserIcon />
+        </a></Link></div>
+        <div><a onClick={() => setCartOpen(!isCartOpen)}><CartIcon /></a></div>
       </div>
-      <a onClick={() => setCartOpen(!isCartOpen)}><Cart /></a>
       <div className='bottom'>
         <div><Link href='/store' prefetch>acessorios</Link></div>
         <div>monte a sua vela</div>
