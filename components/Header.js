@@ -1,21 +1,22 @@
-import HeaderMenu from '../components/HeaderMenu'
 import { velaGreen, cream } from '../style/colors'
 import Logo from '../components/Logo'
 import Link from '../components/Link'
 import Cart from '../components/Cart'
 import { compose, withState } from 'recompose';
-import CartContent from './CartContent';
+import CartContent from './HeaderCartDrawer';
+import MenuDrawer from './HeaderMenuDrawer';
 
-const Header = ({ loading, setCartOpen, isCartOpen }) =>
+const Header = ({ loading, setCartOpen, setMenuOpen, isCartOpen, isMenuOpen }) =>
   <>
-    <div style={{ display: isCartOpen ? 'block' : 'none' }}><CartContent /></div>
+    <CartContent visible={isCartOpen} />
+    <MenuDrawer visible={isMenuOpen} />
     <header>
       <div className='top'>
         <div><Link href='/'><Logo color={loading ? 'red' : velaGreen} style={{ width: '5em', height: '5em' }} /></Link></div>
         <div><Link href='/user' prefetch>user</Link></div>
-        <div>menu</div>
+        <a onClick={() => setMenuOpen(!isMenuOpen)}>menu</a>
       </div>
-      <div onClick={() => setCartOpen(!isCartOpen)}><Cart /></div>
+      <a onClick={() => setCartOpen(!isCartOpen)}><Cart /></a>
       <div className='bottom'>
         <div><Link href='/store' prefetch>acessorios</Link></div>
         <div>monte a sua</div>
@@ -71,4 +72,7 @@ const Header = ({ loading, setCartOpen, isCartOpen }) =>
     `}</style>
   </>
 
-export default compose(withState('isCartOpen', 'setCartOpen', false))(Header)
+export default compose(
+  withState('isCartOpen', 'setCartOpen', false),
+  withState('isMenuOpen', 'setMenuOpen', false),
+)(Header)

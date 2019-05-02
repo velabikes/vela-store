@@ -16,4 +16,8 @@ export const customerAccessTokenCreate = gql`
   }
 `
 
-export default graphql(customerAccessTokenCreate, { name: 'customerAccessTokenCreate', alias: 'withcustomerAccessTokenCreate' })
+export default graphql(
+  customerAccessTokenCreate, {
+    name: 'customerAccessTokenCreate',
+    alias: 'withcustomerAccessTokenCreate'
+  })

@@ -6,8 +6,10 @@ import UserLoginForm from '../components/UserLoginForm'
 import UserRegisterForm from '../components/UserRegisterForm'
 import withCustomerCreate from '../containers/withCustomerCreate'
 import withCustomerAccessTokenCreate from '../containers/withCustomerAccessTokenCreate'
+import withCustomerAccessToken from '../containers/withCustomerAccessToken'
+import { setCustomerAccessToken } from '../lib/redux'
 
-const UserPage = ({ customerCreate, userAccessTokenCreate }) =>
+const UserPage = ({ customerCreate, customerAccessTokenCreate, customerAccessToken, dispatch }) =>
   <Page>
     <PaddedView>
       <UserLoginForm />
@@ -17,19 +19,19 @@ const UserPage = ({ customerCreate, userAccessTokenCreate }) =>
             const createMutationResult = await customerCreate({ variables: { input } })
             console.log(createMutationResult)
             const tokenMutationResult = await customerAccessTokenCreate({ variables: { input } })
+            console.log(tokenMutationResult)
+            dispatch(setCustomerAccessToken(tokenMutationResult.data.customerAccessTokenCreate.customerAccessToken))
           } catch (error) {
             console.log('error')
             console.log(error)
           }
-
-          console.log(mutationResult)
         }}
       />
     </PaddedView>
   </Page>
 
 export default compose(
-  withShopify,
+  withCustomerAccessToken,
   withCustomerCreate,
   withCustomerAccessTokenCreate
 )(UserPage)
