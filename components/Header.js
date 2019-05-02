@@ -12,14 +12,14 @@ const Header = ({ loading, setCartOpen, setMenuOpen, isCartOpen, isMenuOpen }) =
     <MenuDrawer visible={isMenuOpen} />
     <header>
       <div className='top'>
-        <div><Link href='/'><Logo color={loading ? 'red' : velaGreen} style={{ width: '5em', height: '5em' }} /></Link></div>
+        <div><Link href='/'><Logo style={{ width: '4em', height: '4em' }} /></Link></div>
         <div><Link href='/user' prefetch>user</Link></div>
         <a onClick={() => setMenuOpen(!isMenuOpen)}>menu</a>
       </div>
       <a onClick={() => setCartOpen(!isCartOpen)}><Cart /></a>
       <div className='bottom'>
         <div><Link href='/store' prefetch>acessorios</Link></div>
-        <div>monte a sua</div>
+        <div>monte a sua vela</div>
       </div>
     </header>
     <style jsx>{`
@@ -67,6 +67,7 @@ const Header = ({ loading, setCartOpen, setMenuOpen, isCartOpen, isMenuOpen }) =
         .bottom > div {
           writing-mode: vertical-rl;
           text-orientation: sideways;
+          transform: rotate(180deg);
         }
       }
     `}</style>

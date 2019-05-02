@@ -9,7 +9,20 @@ import { setCustomerAccessToken } from '../lib/redux'
 
 const UserPage = ({ customerCreate, customerAccessTokenCreate, customerAccessToken, dispatch }) =>
   <PaddedView>
-    <UserLoginForm />
+    <h2>Login</h2>
+    <UserLoginForm
+      onSubmit={async (input) => {
+        try {
+          const tokenMutationResult = await customerAccessTokenCreate({ variables: { input } })
+          console.log(tokenMutationResult)
+          dispatch(setCustomerAccessToken(tokenMutationResult.data.customerAccessTokenCreate.customerAccessToken))
+        } catch (error) {
+          console.log('error')
+          console.log(error)
+        }
+      }}
+    />
+    <h2>Register</h2>
     <UserRegisterForm
       onSubmit={async (input) => {
         try {
