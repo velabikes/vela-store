@@ -1,10 +1,10 @@
+import { compose, withState } from 'recompose'
 import { velaGreen, cream } from '../style/colors'
 import Logo from '../components/Logo'
 import Link from '../components/Link'
 import Cart from '../components/Cart'
-import { compose, withState } from 'recompose';
-import CartContent from './HeaderCartDrawer';
-import MenuDrawer from './HeaderMenuDrawer';
+import CartContent from './HeaderCartDrawer'
+import MenuDrawer from './HeaderMenuDrawer'
 
 const Header = ({ loading, setCartOpen, setMenuOpen, isCartOpen, isMenuOpen }) =>
   <>
@@ -74,5 +74,5 @@ const Header = ({ loading, setCartOpen, setMenuOpen, isCartOpen, isMenuOpen }) =
 
 export default compose(
   withState('isCartOpen', 'setCartOpen', false),
-  withState('isMenuOpen', 'setMenuOpen', false),
+  withState('isMenuOpen', 'setMenuOpen', false)
 )(Header)

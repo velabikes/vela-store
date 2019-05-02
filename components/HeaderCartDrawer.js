@@ -22,7 +22,7 @@ const CartDrawer = ({ checkout, isCheckoutIdLoading, visible }) =>
       <div><span>Total:</span><span>{checkout && checkout.totalPrice}</span></div>
     </div>
     <form>
-      <button type="button" onClick={() => window.location.replace(checkout.webUrl)}>Continuar →</button>
+      <button type='button' onClick={() => window.location.replace(checkout.webUrl)}>Continuar →</button>
     </form>
     <style jsx>{`
       .root {
