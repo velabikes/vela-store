@@ -7,6 +7,7 @@ import withRedux from 'next-redux-wrapper'
 import { ApolloProvider } from 'react-apollo'
 import { PersistGate } from 'redux-persist/integration/react'
 import withShopify from '../lib/shopify'
+import Head from '../components/Head'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { makeStore } from '../lib/redux'
@@ -23,6 +24,7 @@ class MyApp extends App {
 
     return (
       <Container>
+        <Head />
         <Provider store={store}>
           <ApolloProvider client={apollo}>
             <PersistGate loading={<div>loading</div>} persistor={store.__persistor}>

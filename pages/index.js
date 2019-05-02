@@ -1,7 +1,5 @@
-import Page from '../components/Page'
-
 const Home = () =>
-  <Page>
+  <div>
     <img src='http://velabikes.com.br/themes/custom/velatheme/img/Banner-low-azul-60.jpg' alt='' />
     <style jsx>{`
       img {
@@ -10,6 +8,6 @@ const Home = () =>
         width: 100%;
       }
     `}</style>
-  </Page>
+  </div>
 
 export default Home
