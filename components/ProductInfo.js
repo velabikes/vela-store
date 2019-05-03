@@ -19,9 +19,8 @@ const ProductInfo = ({ product, isLoading, onAddToCartClick, isAddToCartLoading 
       .ProductInfo {
         display: flex;
       }
-      .ProductInfo > div {
-        flex: 1
-      }
+      .ProductInfo > div { flex: 1 }
+      .ProductInfo > div:first-child { flex: 1.58; padding-right: 2em }
       h1 {
         margin-bottom: 0
       }

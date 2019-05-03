@@ -1,18 +1,16 @@
 import { compose, withProps } from 'recompose'
 import Link from 'next/link'
 import { velaGreen, cream } from '../style/colors'
-import Logo from '../components/Logo'
-// import Cart from '../components/Cart'
-import CartContent from './HeaderCartDrawer'
-import MenuDrawer from './HeaderMenuDrawer'
-import { CartIcon, MenuIcon, UserIcon } from './Icons'
+import Cart from './Cart'
+import HeaderDrawer from './HeaderDrawer'
 import HeaderMenu from './HeaderMenu'
 import withOpenDrawer from '../containers/withOpenDrawer'
+import MainMenu from './MainMenu';
 
 const Header = ({ isCartOpen, isMenuOpen }) =>
   <>
-    <CartContent visible={isCartOpen} />
-    <MenuDrawer visible={isMenuOpen} />
+    <HeaderDrawer visible={isCartOpen}><Cart /></HeaderDrawer>
+    <HeaderDrawer visible={isMenuOpen}><MainMenu /></HeaderDrawer>
     <header>
       <div className='top'>
         <HeaderMenu />

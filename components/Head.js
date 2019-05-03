@@ -31,6 +31,9 @@ const CustomHead = props =>
         font-weight: 500;
         margin: .5em 0;
       }
+      div {
+        box-sizing: border-box;
+      }
       a, a:visited {
         color: ${velaGreen};
         text-decoration: none;
