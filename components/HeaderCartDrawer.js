@@ -34,7 +34,7 @@ const CartDrawer = ({ checkout, isCheckoutIdLoading, visible }) =>
         width: 600px;
         background-color: #fcfcfc;
         z-index: 0;
-        margin-left: 96px;
+        margin-left: 5em;
         padding: 1em;
       }
       .items tr td:first-child {

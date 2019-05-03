@@ -30,7 +30,7 @@ class MyApp extends App {
             <PersistGate loading={<div>loading</div>} persistor={store.__persistor}>
               <div style={{ display: 'flex' }}>
                 <Header />
-                <div style={{ marginLeft: '6em' }}>
+                <div style={{ marginLeft: '5em' }}>
                   <Component {...pageProps} />
                 </div>
               </div>

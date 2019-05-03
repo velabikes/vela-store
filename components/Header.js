@@ -14,7 +14,7 @@ const Header = ({ loading, setCartOpen, setMenuOpen, isCartOpen, isMenuOpen }) =
     <header>
       <div className='top'>
         <div><Link href='/'><a>
-          <Logo style={{ width: '4em', height: '4em' }} />
+          <Logo style={{ width: '3em', height: '3em' }} />
         </a></Link></div>
         <div><a onClick={() => setMenuOpen(!isMenuOpen)}>
           <MenuIcon />
@@ -48,8 +48,8 @@ const Header = ({ loading, setCartOpen, setMenuOpen, isCartOpen, isMenuOpen }) =
         display: flex;
         justify-content: center;
         align-items: center;
-        min-height: 6em;
-        min-width: 6em;
+        min-height: 5em;
+        min-width: 5em;
       }
       .bottom > div {
         text-transform: uppercase;
@@ -67,7 +67,8 @@ const Header = ({ loading, setCartOpen, setMenuOpen, isCartOpen, isMenuOpen }) =
       and (min-width: 600px) {
         header {
           flex-direction: column;
-          width: 6em;
+          width: 5em;
+          padding-top: .5em;
         }
         header > div {
           flex-direction: column;

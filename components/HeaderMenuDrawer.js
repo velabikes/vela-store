@@ -19,7 +19,7 @@ const MenuDrawer = ({ visible }) =>
         width: 600px;
         background-color: white; //#f5f5f5;
         z-index: 0;
-        margin-left: 96px;
+        margin-left: 5em;
         padding: 1em;
       }
       .items li {

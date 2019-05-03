@@ -2,14 +2,13 @@ import PropTypes from 'prop-types'
 import Link from 'next/link'
 
 const ProductTeaser = ({ product }) =>
-  <div>
+  <Link href={'/store/product?handle=' + product.handle}><a>
     <img src={product.images[0].src} />
     <h2>
-      <Link href={'/store/product?handle=' + product.handle}>{product.title}</Link>
+      {product.title}
     </h2>
     <div>{product.price}</div>
-    {/* JSON.stringify(product) */}
-  </div>
+  </a></Link>
 
 ProductTeaser.propTypes = {
   product: PropTypes.object

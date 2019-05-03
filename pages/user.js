@@ -9,6 +9,7 @@ import { setCustomerAccessToken } from '../lib/redux'
 
 const UserPage = ({ customerCreate, customerAccessTokenCreate, customerAccessToken, dispatch }) =>
   <PaddedView>
+    {customerAccessToken && customerAccessToken.accessToken}
     <h2>Login</h2>
     <UserLoginForm
       onSubmit={async (input) => {
