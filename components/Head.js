@@ -16,12 +16,20 @@ const CustomHead = props =>
         position: relative;
         font-family: neue-haas-grotesk-text, sans;
         width: 100%;
+        color: #3e5052;
       }
-      h1, h2, h3, h4, h5 {
+      h1, h2, h3, h4, h5, h6 {
         font-family: neue-haas-grotesk-display, sans;
-        font-weight: 900;
+        text-transform: uppercase;
+      }
+      h1, h2, h3 {
         font-style: italic;
-        color: ${velaGreen}
+        font-weight: 900;
+        color: ${velaGreen};
+      }
+      h4, h5, h6 {
+        font-weight: 500;
+        margin: .5em 0;
       }
       a, a:visited {
         color: ${velaGreen};
@@ -31,6 +39,25 @@ const CustomHead = props =>
       img {
         vertical-align: middle;
         width: 100%;
+      }
+      input:not([type='checkbox']) {
+        border: 0;
+        border-bottom: 1px solid ${velaGreen};
+        border-radius: 0;
+        display: block;
+        font-size: 1rem;
+      }
+      button {
+        padding: 1em;
+        border-radius: 10px;
+        background-color: ${velaGreen};
+        color: white;
+        border: 0px solid transparent;
+        font-family: neue-haas-grotesk-display, sans;
+        font-weight: 900;
+        font-style: italic;
+        text-transform: uppercase;
+        font-size: 1em;
       }
     `}</style>
   </>

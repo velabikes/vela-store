@@ -9,9 +9,9 @@ const ProductList = ({ products, loading }) =>
     { products && products.map(product => <ProductTeaser product={product} key={product.id} />) }
     <style jsx>{`
       div {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 50vh 50vh;
+        //display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 50vh 50vh 50vh;
       }
     `}</style>
   </div>

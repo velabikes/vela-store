@@ -1,4 +1,4 @@
-import { compose, withState } from 'recompose'
+import { compose, withProps } from 'recompose'
 import Link from 'next/link'
 import { velaGreen, cream } from '../style/colors'
 import Logo from '../components/Logo'
@@ -6,23 +6,16 @@ import Logo from '../components/Logo'
 import CartContent from './HeaderCartDrawer'
 import MenuDrawer from './HeaderMenuDrawer'
 import { CartIcon, MenuIcon, UserIcon } from './Icons'
+import HeaderMenu from './HeaderMenu'
+import withOpenDrawer from '../containers/withOpenDrawer'
 
-const Header = ({ loading, setCartOpen, setMenuOpen, isCartOpen, isMenuOpen }) =>
+const Header = ({ isCartOpen, isMenuOpen }) =>
   <>
     <CartContent visible={isCartOpen} />
     <MenuDrawer visible={isMenuOpen} />
     <header>
       <div className='top'>
-        <div><Link href='/'><a>
-          <Logo style={{ width: '3em', height: '3em' }} />
-        </a></Link></div>
-        <div><a onClick={() => setMenuOpen(!isMenuOpen)}>
-          <MenuIcon />
-        </a></div>
-        <div><Link href='/user' prefetch><a>
-          <UserIcon />
-        </a></Link></div>
-        <div><a onClick={() => setCartOpen(!isCartOpen)}><CartIcon /></a></div>
+        <HeaderMenu />
       </div>
       <div className='bottom'>
         <div><Link href='/store' prefetch>acessorios</Link></div>
@@ -35,7 +28,6 @@ const Header = ({ loading, setCartOpen, setMenuOpen, isCartOpen, isMenuOpen }) =
         background-color: ${cream};
         justify-content: space-between;
         color: ${velaGreen};
-        z-index: 9000;
         position: fixed;
         top: 0;
         left: 0;
@@ -44,7 +36,7 @@ const Header = ({ loading, setCartOpen, setMenuOpen, isCartOpen, isMenuOpen }) =
       header > div {
         display: flex;
       }
-      header > div > div {
+      header > div > :global(div) {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -83,6 +75,6 @@ const Header = ({ loading, setCartOpen, setMenuOpen, isCartOpen, isMenuOpen }) =
   </>
 
 export default compose(
-  withState('isCartOpen', 'setCartOpen', false),
-  withState('isMenuOpen', 'setMenuOpen', false)
+  withOpenDrawer,
+  withProps(({ openDrawer }) => ({ isCartOpen: openDrawer === 'CART', isMenuOpen: openDrawer === 'MENU' }))
 )(Header)

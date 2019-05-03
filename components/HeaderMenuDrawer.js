@@ -10,16 +10,14 @@ const MenuDrawer = ({ visible }) =>
     </ul>
     <style jsx>{`
       .root {
-        position: absolute;
-        left: 0;
+        position: fixed;
+        left: 5em;
         transform: translateX(${visible ? '0' : '-100%'});
         transition: 1s all;
         top: 0;
         bottom: 0;
-        width: 600px;
+        width: 500px;
         background-color: white; //#f5f5f5;
-        z-index: 0;
-        margin-left: 5em;
         padding: 1em;
       }
       .items li {
