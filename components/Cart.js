@@ -5,7 +5,7 @@ import Price from '../components/Price'
 
 const Cart = ({ checkout, isCheckoutIdLoading, visible }) =>
   <div className='Cart'>
-    <h1>Carrinho</h1>
+    <h2>Carrinho</h2>
     <div className='cart-content'>
       <table className='items'>
         <tbody>
@@ -26,11 +26,9 @@ const Cart = ({ checkout, isCheckoutIdLoading, visible }) =>
     </div>
     <style jsx>{`
       .Cart {
-        width: 500px;
         display: flex;
         height: 100%;
         flex-direction: column;
-        padding: 1em;
       }
       .cart-content {
         flex: 1;

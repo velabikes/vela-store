@@ -52,7 +52,7 @@ const CustomHead = props =>
       }
       button {
         padding: 1em;
-        border-radius: 10px;
+        //border-radius: 10px;
         background-color: ${velaGreen};
         color: white;
         border: 0px solid transparent;
@@ -61,6 +61,7 @@ const CustomHead = props =>
         font-style: italic;
         text-transform: uppercase;
         font-size: 1em;
+        cursor: pointer;
       }
     `}</style>
   </>

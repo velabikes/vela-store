@@ -6,7 +6,7 @@ import Price from '../components/Price'
 const ProductInfo = ({ product, isLoading, onAddToCartClick, isAddToCartLoading }) =>
   <div className='ProductInfo'>
     <div>
-      <img src={product.images && product.images.edges[0].node.src} alt='' />
+      {product.images && product.images.edges.map(edge => <img src={edge.node.src} alt='' />)}
     </div>
     <div>
       <h1>{product.title}</h1>

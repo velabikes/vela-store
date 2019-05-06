@@ -1,6 +1,6 @@
 import { compose } from "recompose";
 import withCheckout from "../containers/withCheckout";
-import { velaGreen } from '../style/colors'
+import { velaGreen, velaBlue } from '../style/colors'
 
 export const UserIcon = props => (
   <svg viewBox="0 0 27.05 27.04" width="1em" height="1em" {...props}>
@@ -13,7 +13,6 @@ export const UserIcon = props => (
         <g id="prefix__Grupo_39" data-name="Grupo 39">
           <circle
             id="prefix__Elipse_1"
-            data-name="Elipse 1"
             className="prefix__cls-1"
             cx={13.52}
             cy={6.76}
@@ -21,7 +20,6 @@ export const UserIcon = props => (
           />
           <path
             id="prefix__Caminho_35"
-            data-name="Caminho 35"
             className="prefix__cls-1"
             d="M27.05 27H0v-2.21c0-4.51 9-7 13.52-7S27 20.28 27 24.79z"
           />
@@ -31,7 +29,7 @@ export const UserIcon = props => (
   </svg>
 )
 
-export const MenuIcon = ({ title, ...props }) => (
+export const MenuIcon = ({ ...props }) => (
   <svg viewBox="0 0 28.44 20.07" width="1em" height="1em" {...props}>
     <defs>
       <style>{'.prefix__cls-1{fill:#51776b}'}</style>
@@ -74,7 +72,7 @@ export const CartIcon = compose(
   withCheckout
 )(({ checkout, ...props }) => (
   <div className='CartIcon'>
-    { checkout && checkout.lineItems.edges.length && <div className='count'>{checkout.lineItems.edges.length}</div> }
+    <div className='count'>{checkout && checkout.lineItems.edges.length}</div>
     <svg viewBox="0 0 26.01 26" width="1em" height="1em" {...props}>
       <title>Cart Icon</title>
       <path
@@ -83,22 +81,35 @@ export const CartIcon = compose(
     </svg>
     <style jsx>{`
       .CartIcon {
+        transition: .5s all;
         position: relative;
-        color: ${velaGreen};
-        fill: ${velaGreen};
+        fill: ${checkout && checkout.lineItems.edges.length ? velaBlue : velaGreen};
       }
       .count {
+        transition: .5s all;
         position: absolute;
-        top: -.8em;
-        right: -.8em;
+        top: -1em;
+        right: -1em;
         background: white;
-        border-radius: 0.5em;
-        width: 1.2em;
-        height: 1.2em;
-        line-height: 1.2em;
+        border-radius: 1em;
+        width: 1.5em;
+        height: 1.5em;
+        line-height: 1.5em;
         text-align: center;
-        font-size: 0.5em;
+        font-size: 0.6em;
+        font-weight: 700;
+        color: ${velaBlue};
+        opacity: ${checkout && checkout.lineItems.edges.length ? 1 : 0};
       }
     `}</style>
   </div>
 ))
+
+export const Logo = props =>
+  <svg viewBox='0 0 149.77 184.66' width="1em" height="1em" className='Logo' {...props}>
+    <title>{'Vela Logo'}</title>
+    <path
+      d='M130.66 111.65c-17.33 27.27-52 53.6-86.63 70.16-16.34 7.81-37.45-.53-38.92-23.87-.9-14.33 10.89-72.16 11.36-76.69.9-8.37-5.64-10.92-14.48-2.69l-2-3s39.59-38.14 43.28-41.84 18.94-17.23 25 2.09-4.55 60.24-6.62 70.12c-2.24 10.75-12.49 53.43 0 53.43 17.61 0 32.41-48.73 34.66-57.65 2.47-9.88 13-77.89-8.3-56.56l-2-2.88s31.59-30.61 39.54-35.72S144-7.37 148.28 11.66s-.29 72.71-17.62 100'
+      fill='#51776b'
+    />
+  </svg>

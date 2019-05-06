@@ -6,12 +6,16 @@ import HeaderDrawer from './HeaderDrawer'
 import HeaderMenu from './HeaderMenu'
 import withOpenDrawer from '../containers/withOpenDrawer'
 import MainMenu from './MainMenu';
+import Footer from './Footer';
 
-const Header = ({ isCartOpen, isMenuOpen }) =>
+const Header = ({ isCartOpen, isMenuOpen, children }) =>
   <>
     <HeaderDrawer visible={isCartOpen}><Cart /></HeaderDrawer>
-    <HeaderDrawer visible={isMenuOpen}><MainMenu /></HeaderDrawer>
-    <header>
+    <HeaderDrawer visible={isMenuOpen}>
+      <MainMenu />
+      <Footer />
+    </HeaderDrawer>
+    <header className='Header'>
       <div className='top'>
         <HeaderMenu />
       </div>
@@ -20,6 +24,9 @@ const Header = ({ isCartOpen, isMenuOpen }) =>
         <div>monte a sua vela</div>
       </div>
     </header>
+    <div className='app-content'>
+      {children}
+    </div>
     <style jsx>{`
       header {
         display: flex;
@@ -29,7 +36,10 @@ const Header = ({ isCartOpen, isMenuOpen }) =>
         position: fixed;
         top: 0;
         left: 0;
-        bottom: 0;
+        right: 0;
+      }
+      .app-content {
+        margin-top: 4em;
       }
       header > div {
         display: flex;
@@ -38,35 +48,54 @@ const Header = ({ isCartOpen, isMenuOpen }) =>
         display: flex;
         justify-content: center;
         align-items: center;
-        min-height: 5em;
-        min-width: 5em;
+        min-width: 4rem;
+      }
+      .top :global(.Logo) {
+        width: 3rem;
+        height: 3rem;
       }
       .bottom > div {
         text-transform: uppercase;
         font-family: neue-haas-grotesk-display, sans;
         font-weight: 900;
         font-style: italic;
-        padding: 2em;
+        padding: 1.5em;
         box-sizing: border-box;
+        display: none;
+        font-size: 1rem;
+        line-height: 1rem;
       }
       .bottom > div:last-child {
         background-color: ${velaGreen};
-        color: ${cream}
+        color: ${cream};
+        display: block;
       }
-      @media only screen
-      and (min-width: 600px) {
+      @media only screen and (min-width: 768px) {
         header {
           flex-direction: column;
           width: 5em;
-          padding-top: .5em;
+          bottom: 0;
+          rught: inital;
+        }
+        .app-content {
+          margin-left: 5em;
+          margin-top: 0;
         }
         header > div {
           flex-direction: column;
+        }
+        header > div > :global(div) {
+          min-height: 5rem;
+        }
+        .top {
+          font-size: 1.2rem;
         }
         .bottom > div {
           writing-mode: vertical-rl;
           text-orientation: sideways;
           transform: rotate(180deg);
+          display: block;
+          padding: 2rem;
         }
       }
     `}</style>

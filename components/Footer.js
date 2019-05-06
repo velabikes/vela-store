@@ -1,21 +1,13 @@
 import { velaGreen } from '../style/colors'
-import PaddedView from '../components/PaddedView'
 
 const Footer = () =>
   <footer>
-    <PaddedView>
-      footer
-    </PaddedView>
+    <div>VELA BIKES © COPYRIGHT 2019</div>
+    <div>CNPJ 20.430.806/0001-27</div>
+    <div>TERMOS DE USO, GARANTIAS E POITICA DE DEVOLUÇÕES.</div>
     <style jsx>{`
       footer {
-        background-color: ${velaGreen};
-        padding: 1em 0;
-        color: white;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        transform: translateY(99%);
+        font-size: .8em
       }
     `}</style>
   </footer>
