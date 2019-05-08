@@ -37,6 +37,8 @@ const Header = ({ isCartOpen, isMenuOpen, children }) =>
         top: 0;
         left: 0;
         right: 0;
+        z-index: 1001;
+        box-shadow: 0px 0px 8px 0px rgba(100,100,100,0.3);
       }
       .app-content {
         margin-top: 4em;
@@ -62,7 +64,7 @@ const Header = ({ isCartOpen, isMenuOpen, children }) =>
         padding: 1.5em;
         box-sizing: border-box;
         display: none;
-        font-size: 1rem;
+        font-size: 1.25rem;
         line-height: 1rem;
       }
       .bottom > div:last-child {

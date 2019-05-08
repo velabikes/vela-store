@@ -23,7 +23,7 @@ const Image = props =>
         justify-content: center;
         align-items: center;
         display: flex;
-        z-index: -1;
+        z-index: 0;
       }
     `}</style>
   </div>

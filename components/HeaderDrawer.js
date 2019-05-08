@@ -17,6 +17,7 @@ const HeaderDrawer = ({ children, visible }) =>
         padding: 0em 1em 1em;
         min-width: 300px;
         max-width: 100vw;
+        z-index: 1000;
       }
       .HeaderDrawer :global(div:first-child) {
         flex: 1;

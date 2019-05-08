@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { velaGreen, darkGray } from '../style/colors'
+import { velaGreen, darkGray, offWhite } from '../style/colors'
 
 const CustomHead = props =>
   <>
@@ -17,6 +17,7 @@ const CustomHead = props =>
         font-family: neue-haas-grotesk-text, sans;
         width: 100%;
         color: #3e5052;
+        background-color: ${offWhite}
       }
       h1, h2, h3, h4, h5, h6 {
         font-family: neue-haas-grotesk-display, sans;
