@@ -11,7 +11,7 @@ const productList = gql`
             id
             title
             handle
-            images(first: 1, maxWidth: 450) {
+            images(first: 1, maxWidth: 800) {
               edges {
                 node {
                   src
