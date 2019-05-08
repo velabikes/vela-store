@@ -45,6 +45,10 @@ const CustomHead = props =>
         vertical-align: middle;
         width: 100%;
       }
+      label {
+        font-weight: 600;
+        display: block;
+      }
       input:not([type='checkbox']) {
         border: 0;
         border-bottom: 1px solid ${velaGreen};
