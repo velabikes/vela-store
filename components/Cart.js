@@ -23,7 +23,7 @@ const Cart = ({ checkout, isCheckoutIdLoading, visible }) =>
     </div>
     <div className='cart-footer'>
       <div><h4>Total: {checkout && checkout.totalPrice}</h4></div>
-      <button type='button' onClick={() => window.location.replace(checkout.webUrl)}>Continuar →</button>
+      <button type='button' onClick={() => window.location.replace(checkout.webUrl)}>Finalizar</button>
     </div>
     <style jsx>{`
       .Cart {

@@ -53,8 +53,8 @@ const CustomHead = props =>
         font-size: 1rem;
       }
       button {
-        padding: 1em;
-        //border-radius: 10px;
+        padding: .6em;
+        border-radius: 5px;
         background-color: ${velaGreen};
         color: white;
         border: 0px solid transparent;
@@ -62,7 +62,7 @@ const CustomHead = props =>
         font-weight: 900;
         font-style: italic;
         text-transform: uppercase;
-        font-size: 1em;
+        font-size: 1.25em;
         cursor: pointer;
       }
     `}</style>
