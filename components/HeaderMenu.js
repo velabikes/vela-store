@@ -12,9 +12,6 @@ const HeaderMenu = ({ handleCartClick, handleMenuClick }) =>
     <div><a onClick={handleMenuClick}>
       <MenuIcon />
     </a></div>
-    <div><Link href='/user' prefetch><a>
-      <UserIcon />
-    </a></Link></div>
     <div><a onClick={handleCartClick}>
       <CartIcon />
     </a></div>

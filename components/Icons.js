@@ -81,7 +81,7 @@ export const CartIcon = compose(
     </svg>
     <style jsx>{`
       .CartIcon {
-        transition: .5s all;
+        transition: .3s all;
         position: relative;
         fill: ${checkout && checkout.lineItems.edges.length ? velaBlue : velaGreen};
       }

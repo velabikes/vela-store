@@ -9,6 +9,11 @@ query productQuery($handle: String!) {
       title
       handle
       descriptionHtml
+      options {
+        id
+        name
+        values
+      }
       images(first: 5, maxWidth: 1200) {
         edges {
           node {
@@ -16,11 +21,15 @@ query productQuery($handle: String!) {
           }
         }
       }
-      variants(first: 1) {
+      variants(first: 250) {
         edges {
           node {
             id
             price
+            selectedOptions {
+              name
+              value
+            }
           }
         }
       }

@@ -14,7 +14,13 @@ const ProductInfo = ({ product, isLoading, onAddToCartClick, isAddToCartLoading 
     <div>
       <h1>{product.title}</h1>
       <h4><Price value={product.variants.edges[0].node.price} /></h4>
-      <button type='button' onClick={onAddToCartClick} disabled={isLoading}>comprar</button>
+      {product.options[0].name !== 'Title' && product.options.map(option =>
+        <div>
+          <label>{option.name}</label>
+          {option.values.map(value => <button>{value}</button>)}
+        </div>
+      )}
+      <button onClick={onAddToCartClick} disabled={isLoading}>comprar</button>
       {isAddToCartLoading && 'carregando'}
       <div dangerouslySetInnerHTML={{ __html: product.descriptionHtml }} />
     </div>
