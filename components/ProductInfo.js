@@ -1,10 +1,8 @@
-import { compose, withHandlers, withState } from 'recompose'
-import withCheckoutLineItemsAdd from '../containers/withCheckoutLineItemsAdd'
-import withCheckoutId from '../containers/withCheckoutId'
 import Price from '../components/Price'
 import Image from '../components/Image'
+import ProductForm from './ProductForm';
 
-const ProductInfo = ({ product, isLoading, onAddToCartClick, isAddToCartLoading }) =>
+const ProductInfo = ({ product }) =>
   <div className='ProductInfo'>
     <div>
       {product.images && product.images.edges.map(edge =>
@@ -14,14 +12,7 @@ const ProductInfo = ({ product, isLoading, onAddToCartClick, isAddToCartLoading 
     <div>
       <h1>{product.title}</h1>
       <h4><Price value={product.variants.edges[0].node.price} /></h4>
-      {product.options[0].name !== 'Title' && product.options.map(option =>
-        <div>
-          <label>{option.name}</label>
-          {option.values.map(value => <button>{value}</button>)}
-        </div>
-      )}
-      <button onClick={onAddToCartClick} disabled={isLoading}>comprar</button>
-      {isAddToCartLoading && 'carregando'}
+      <ProductForm product={product} />
       <div dangerouslySetInnerHTML={{ __html: product.descriptionHtml }} />
     </div>
     <style jsx>{`
@@ -31,39 +22,16 @@ const ProductInfo = ({ product, isLoading, onAddToCartClick, isAddToCartLoading 
       .ProductInfo > div { flex: 1 }
       .ProductInfo > div:first-child { flex: 1.58; padding-right: 2em }
       .ProductInfo :global(.Image) {
-        margin-top: 1rem;
+        margin-top: 1.5rem;
       }
       h1 {
         margin-bottom: 0
       }
       h4 {
-        margin-top: 0
+        margin-top: 0;
+        margin-bottom: 1em
       }
     `}</style>
   </div>
 
-export default compose(
-  withState('isAddToCartLoading', 'setAddToCartLoading', false),
-  withCheckoutLineItemsAdd,
-  withCheckoutId,
-  withHandlers({
-    onAddToCartClick: ({
-      checkoutLineItemsAdd,
-      checkoutId,
-      setAddToCartLoading,
-      product
-    }) => async e => {
-      setAddToCartLoading(true)
-      const mutationResult = await checkoutLineItemsAdd({
-        variables: {
-          checkoutId: checkoutId,
-          lineItems: [
-            { variantId: product.variants.edges[0].node.id, quantity: 1 }
-          ]
-        }
-      })
-      console.log(mutationResult)
-      setAddToCartLoading(false)
-    }
-  })
-)(ProductInfo)
+export default ProductInfo

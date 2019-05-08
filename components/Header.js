@@ -64,7 +64,7 @@ const Header = ({ isCartOpen, isMenuOpen, children }) =>
         padding: 1.5em;
         box-sizing: border-box;
         display: none;
-        font-size: 1.25rem;
+        font-size: 1rem;
         line-height: 1rem;
       }
       .bottom > div:last-child {
@@ -95,6 +95,7 @@ const Header = ({ isCartOpen, isMenuOpen, children }) =>
           transform: rotate(180deg);
           display: block;
           padding: 2rem;
+          font-size: 1.25rem
         }
       }
     `}</style>

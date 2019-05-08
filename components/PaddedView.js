@@ -12,6 +12,11 @@ const PaddedView = props =>
           padding: 0 2em;
         }
       }
+      @media only screen and (min-width: 1200px) {
+        div {
+          padding: 0 3em;
+        }
+      }
     `}</style>
   </div>
 

@@ -12,7 +12,6 @@ const ProductList = ({ products, loading }) =>
       div {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 50vh 50vh 50vh;
         grid-column-gap: 1rem;
         grid-row-gap: 1rem;
       }

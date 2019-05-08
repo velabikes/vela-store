@@ -30,7 +30,7 @@ export default gql`
           variant {
             id
             title
-            image {
+            image(maxWidth: 350) {
               src
             }
             price
