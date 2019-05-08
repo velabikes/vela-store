@@ -28,17 +28,12 @@ class MyApp extends App {
         <Provider store={store}>
           <ApolloProvider client={apollo}>
             <PersistGate loading={<div>loading</div>} persistor={store.__persistor}>
-              <div style={{ display: 'flex' }}>
-                <Header>
-                  <Component {...pageProps} />
-                </Header>
-              </div>
+              <Header>
+                <Component {...pageProps} />
+              </Header>
             </PersistGate>
           </ApolloProvider>
         </Provider>
-        <style jsx>{`
-          
-        `}</style>
       </Container>
     )
   }

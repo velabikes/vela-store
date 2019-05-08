@@ -1,4 +1,4 @@
-import { cream } from '../style/colors'
+import { lightGray } from '../style/colors'
 
 const HeaderDrawer = ({ children, visible }) =>
   <div className='HeaderDrawer'>
@@ -10,7 +10,7 @@ const HeaderDrawer = ({ children, visible }) =>
         transition: ${visible ? '.5s all ease-out' : '.3s all ease-in'};
         top: 4em;
         bottom: 0;
-        background-color: ${cream};
+        background-color: ${lightGray};
         box-shadow: 0px 0px ${visible ? '8' : '0'}px 0px rgba(100,100,100,0.3);
         display: flex;
         flex-direction: column;

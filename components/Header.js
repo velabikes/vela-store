@@ -1,6 +1,6 @@
 import { compose, withProps } from 'recompose'
 import Link from 'next/link'
-import { velaGreen, cream } from '../style/colors'
+import { velaGreen, lightGray } from '../style/colors'
 import Cart from './Cart'
 import HeaderDrawer from './HeaderDrawer'
 import HeaderMenu from './HeaderMenu'
@@ -21,7 +21,7 @@ const Header = ({ isCartOpen, isMenuOpen, children }) =>
       </div>
       <div className='bottom'>
         <div><Link href='/store' prefetch>acessorios</Link></div>
-        <div>monte a sua vela</div>
+        <div>monte sua vela</div>
       </div>
     </header>
     <div className='app-content'>
@@ -30,7 +30,7 @@ const Header = ({ isCartOpen, isMenuOpen, children }) =>
     <style jsx>{`
       header {
         display: flex;
-        background-color: ${cream};
+        background-color: ${lightGray};
         justify-content: space-between;
         color: ${velaGreen};
         position: fixed;
@@ -51,8 +51,8 @@ const Header = ({ isCartOpen, isMenuOpen, children }) =>
         min-width: 4rem;
       }
       .top :global(.Logo) {
-        width: 3rem;
-        height: 3rem;
+        width: 2.59rem;
+        height: 2.59rem;
       }
       .bottom > div {
         text-transform: uppercase;
@@ -67,7 +67,7 @@ const Header = ({ isCartOpen, isMenuOpen, children }) =>
       }
       .bottom > div:last-child {
         background-color: ${velaGreen};
-        color: ${cream};
+        color: ${lightGray};
         display: block;
       }
       @media only screen and (min-width: 768px) {
@@ -86,9 +86,6 @@ const Header = ({ isCartOpen, isMenuOpen, children }) =>
         }
         header > div > :global(div) {
           min-height: 5rem;
-        }
-        .top {
-          font-size: 1.2rem;
         }
         .bottom > div {
           writing-mode: vertical-rl;

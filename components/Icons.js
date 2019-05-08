@@ -70,10 +70,10 @@ export const MenuIcon = ({ ...props }) => (
 
 export const CartIcon = compose(
   withCheckout
-)(({ checkout, ...props }) => (
+)(({ checkout, width, height, ...props }) => (
   <div className='CartIcon'>
     <div className='count'>{checkout && checkout.lineItems.edges.length}</div>
-    <svg viewBox="0 0 26.01 26" width="1em" height="1em" {...props}>
+    <svg viewBox="0 0 26.01 26" width={width || "1em"} height={height || "1em"}>
       <title>Cart Icon</title>
       <path
         d="M7.8 20.8a2.6 2.6 0 1 0 2.6 2.6 2.6 2.6 0 0 0-2.6-2.6zM0 1.3a1.31 1.31 0 0 0 1.3 1.3h1.3l4.68 9.87-1.75 3.17A2.6 2.6 0 0 0 7.8 19.5h14.3a1.3 1.3 0 0 0 0-2.6H7.8l1.43-2.6h9.69a2.58 2.58 0 0 0 2.27-1.3l4.65-8.44a1.29 1.29 0 0 0-1.13-1.96H5.47L4.6.74A1.29 1.29 0 0 0 3.43 0H1.3A1.31 1.31 0 0 0 0 1.3zm20.8 19.5a2.6 2.6 0 1 0 2.6 2.6 2.6 2.6 0 0 0-2.6-2.6z"

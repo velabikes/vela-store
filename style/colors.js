@@ -1,4 +1,5 @@
 export const velaGreen = '#51776B'
 export const velaBlue = '#4F7EA8'
-export const cream = '#f5f5f5'
-export const lightGray = '#f0f0f0'
+export const lightGray = 'whitesmoke'
+export const darkGray = '#666'
+export const offWhite = '#FAFAFA'

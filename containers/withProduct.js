@@ -9,7 +9,7 @@ query productQuery($handle: String!) {
       title
       handle
       descriptionHtml
-      images(first: 5, maxWidth: 600) {
+      images(first: 5, maxWidth: 1200) {
         edges {
           node {
             src

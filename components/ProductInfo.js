@@ -2,11 +2,14 @@ import { compose, withHandlers, withState } from 'recompose'
 import withCheckoutLineItemsAdd from '../containers/withCheckoutLineItemsAdd'
 import withCheckoutId from '../containers/withCheckoutId'
 import Price from '../components/Price'
+import Image from '../components/Image'
 
 const ProductInfo = ({ product, isLoading, onAddToCartClick, isAddToCartLoading }) =>
   <div className='ProductInfo'>
     <div>
-      {product.images && product.images.edges.map(edge => <img src={edge.node.src} alt='' />)}
+      {product.images && product.images.edges.map(edge =>
+        <Image src={edge.node.src} key={edge.node.src} alt='' />
+      )}
     </div>
     <div>
       <h1>{product.title}</h1>
@@ -21,6 +24,9 @@ const ProductInfo = ({ product, isLoading, onAddToCartClick, isAddToCartLoading 
       }
       .ProductInfo > div { flex: 1 }
       .ProductInfo > div:first-child { flex: 1.58; padding-right: 2em }
+      .ProductInfo :global(.Image) {
+        margin-top: 1rem;
+      }
       h1 {
         margin-bottom: 0
       }

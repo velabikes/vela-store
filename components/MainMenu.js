@@ -7,7 +7,7 @@ const MainMenu = ({ visible }) =>
   <div className='MainMenu'>
     <h2>Menu</h2>
     <ul className='items'>
-      <li><Link><a>
+      <li><Link href='https://turmadamonica.com.br'><a>
         Monte a sua
       </a></Link></li>
       <li><Link href='/store'><a>
