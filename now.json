@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "name": "nextjs",
+  "name": "vela-store",
   "builds": [
     { "src": "package.json", "use": "@now/next" }
   ]
