@@ -3,36 +3,37 @@ import withCheckoutLineItemsAdd from '../containers/withCheckoutLineItemsAdd'
 import withCheckoutId from '../containers/withCheckoutId'
 import { velaBlue } from '../style/colors'
 
-const OptionButton = props =>
-  <button>{props.children}
+const OptionButton = ({ selected, children, ...props }) =>
+  <button {...props}>{children}
     <style jsx>{`
       button {
-        background: transparent;
-        color: ${velaBlue};
-        border: 2px solid ${velaBlue};
+        background: ${selected ? velaBlue : 'transparent' };
+        color: ${selected ? 'white' : velaBlue};
+        border: 1px solid ${velaBlue};
         font-size: 0.75rem;
       }
     `}</style>
   </button>
 
-const OpttionColor = props =>
-  <button>{props.children}
-    <style jsx>{`
-      button {
-        background: transparent;
-        color: ${velaBlue};
-        border: 2px solid ${velaBlue};
-        font-size: 0.75rem;
-      }
-    `}</style>
-  </button>
-
-const ProductForm = ({ product, handleAddToCartClick, isLoading }) =>
+const ProductForm = ({
+  product,
+  handleAddToCartClick,
+  isLoading,
+  selected,
+  setSelected
+}) =>
   <div className='ProductForm'>
     {product.options[0].name !== 'Title' && product.options.map(option =>
       <div className='option'>
         <label>{option.name}</label>
-        {option.values.map(value => <OptionButton>{value}</OptionButton>)}
+        {option.values.map(value =>
+          <OptionButton
+            onClick={() => setSelected({...selected, [option.name]: value})}
+            selected={selected[option.name] === value}
+          >
+            {value.replace(/\s*\[.*?\]\s*/g, '')}
+          </OptionButton>
+        )}
       </div>
     )}
     <button onClick={handleAddToCartClick} disabled={isLoading}>comprar</button>
@@ -44,6 +45,7 @@ const ProductForm = ({ product, handleAddToCartClick, isLoading }) =>
   </div>
 
 export default compose(
+  withState('selected', 'setSelected', {}),
   withState('isAddToCartLoading', 'setAddToCartLoading', false),
   withCheckoutLineItemsAdd,
   withCheckoutId,

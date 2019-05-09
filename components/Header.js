@@ -41,7 +41,7 @@ const Header = ({ isCartOpen, isMenuOpen, children }) =>
         box-shadow: 0px 0px 8px 0px rgba(100,100,100,0.3);
       }
       .app-content {
-        margin-top: 4em;
+        padding-top: 4em;
       }
       header > div {
         display: flex;
@@ -61,7 +61,7 @@ const Header = ({ isCartOpen, isMenuOpen, children }) =>
         font-family: neue-haas-grotesk-display, sans;
         font-weight: 900;
         font-style: italic;
-        padding: 1.5em;
+        padding: 1.5em 1em;
         box-sizing: border-box;
         display: none;
         font-size: 1rem;
@@ -80,8 +80,8 @@ const Header = ({ isCartOpen, isMenuOpen, children }) =>
           rught: inital;
         }
         .app-content {
-          margin-left: 5em;
-          margin-top: 0;
+          padding-left: 5em;
+          padding-top: 0;
         }
         header > div {
           flex-direction: column;

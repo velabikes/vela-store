@@ -10,10 +10,19 @@ const ProductList = ({ products, loading }) =>
     { products && products.map(product => <ProductTeaser product={product} key={product.id} />) }
     <style jsx>{`
       div {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-column-gap: 1rem;
-        grid-row-gap: 1rem;
+      }
+      @media only screen and (min-width: 768px) {
+        div {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-column-gap: 1rem;
+          grid-row-gap: 1rem;
+        }
+      }
+      @media only screen and (min-width: 1200px) {
+        div {
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
       }
     `}</style>
   </div>
