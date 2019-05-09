@@ -34,7 +34,7 @@ const HeaderDrawer = ({ children, visible, handleCloseClick }) =>
       a {
         position: absolute;
         right: 2em;
-        top: 1.59em;
+        top: 1.75em;
       }
       @media only screen and (min-width: 768px) {
         .HeaderDrawer {

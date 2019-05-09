@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types'
-import { compose, lifecycle } from 'recompose'
+import { compose, lifecycle, withHandlers } from 'recompose'
 import withCheckout from '../containers/withCheckout'
 import Price from '../components/Price'
 import Image from '../components/Image'
 import PaddedView from '../components/PaddedView'
+import withCheckoutLineItemsUpdate from '../containers/withCheckoutLineItemsUpdate';
 
-const Cart = ({ checkout, isCheckoutIdLoading, visible }) =>
+const Cart = ({ checkout, isCheckoutIdLoading, handleMoreClick, handleLessClick }) =>
   <PaddedView className='Cart'>
     <h2>Carrinho</h2>
     <div className='cart-content'>
@@ -14,8 +15,11 @@ const Cart = ({ checkout, isCheckoutIdLoading, visible }) =>
         <tbody>
           {checkout && checkout.lineItems.edges.map(item =>
             <tr key={item.node.title}>
-              <td><Image src={item.node.variant && item.node.variant.image.src} alt='' /></td>
-              <td>{item.node.quantity}</td>
+              <td><Image src={item.node.variant && item.node.variant.image.src} alt='' />{item.node.quantity}</td>
+              <td>
+                <a onClick={() => handleMoreClick(item)}>mais</a>
+                <a onClick={() => handleLessClick(item)}>menos</a>
+              </td>
               <td><b>{item.node.title}</b></td>
               <td><Price value={parseInt(item.node.variant && item.node.variant.price)} /></td>
             </tr>
@@ -36,13 +40,16 @@ const Cart = ({ checkout, isCheckoutIdLoading, visible }) =>
       .cart-content {
         flex: 1;
       }
+      .items tr td {
+        padding: .2em 1em
+      }
       .items tr td:first-child {
         width: 30%;
-        padding-right: 1em;
+        padding-left: 0;
       }
       .items tr td:last-child {
         text-align: right;
-        padding-left: 1em;
+        padding-right: 0;
       }
       .cart-footer {
         display: flex;
@@ -56,5 +63,24 @@ Cart.propTypes = {
 }
 
 export default compose(
-  withCheckout
+  withCheckout,
+  withCheckoutLineItemsUpdate,
+  withHandlers({
+    handleMoreClick: ({ checkoutLineItemsUpdate, checkoutId }) => async item => {
+      await checkoutLineItemsUpdate({
+        variables: {
+          checkoutId: checkoutId,
+          lineItems: [{ quantity: parseInt(item.node.quantity + 1, 10), id: item.node.id }]
+        }
+      })
+    },
+    handleLessClick: ({ checkoutLineItemsUpdate, checkoutId }) => async item => {
+      await checkoutLineItemsUpdate({
+        variables: {
+          checkoutId: checkoutId,
+          lineItems: [{ quantity: parseInt(item.node.quantity - 1, 10), id: item.node.id }]
+        }
+      })
+    }
+  })
 )(Cart)

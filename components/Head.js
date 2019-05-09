@@ -36,6 +36,10 @@ const CustomHead = props =>
       div {
         box-sizing: border-box;
       }
+      small {
+        //font-size: 0.4em;
+        color: #707070;
+      }
       a, a:visited {
         color: ${velaGreen};
         text-decoration: none;

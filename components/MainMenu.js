@@ -5,19 +5,22 @@ import withCheckout from '../containers/withCheckout'
 import PaddedView from '../components/PaddedView'
 
 const MainMenu = ({ visible }) =>
+  
   <PaddedView className='MainMenu'>
-    <h2>Menu</h2>
-    <ul className='items'>
-      <li><Link href='https://turmadamonica.com.br'><a>
-        Monte a sua
-      </a></Link></li>
-      <li><Link href='/store'><a>
-        Acessorios
-      </a></Link></li>
-      <li><Link href='/contact'><a>
-        Contato
-      </a></Link></li>
-    </ul>
+    <nav>
+      <h1>Menu</h1>
+      <ul className='items'>
+        <li><Link href='https://turmadamonica.com.br'><a>
+          Monte a sua
+        </a></Link></li>
+        <li><Link href='/store'><a>
+          Acessorios
+        </a></Link></li>
+        <li><Link href='/contact'><a>
+          Contato
+        </a></Link></li>
+      </ul>
+    </nav>
     <style jsx>{`
       ul {
         padding: 0;
@@ -25,7 +28,9 @@ const MainMenu = ({ visible }) =>
       li {
         list-style: none;
         line-height: 2em;
+        font-size: 1em;
       }
+      li
     `}</style>
   </PaddedView>
 
