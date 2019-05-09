@@ -1,14 +1,14 @@
-import { lightGray, offWhite } from '../style/colors'
-import withOpenDrawer
- from '../containers/withOpenDrawer'
-import { toggleDrawer } from '../lib/redux'
 import { compose, withHandlers, lifecycle } from 'recompose'
 import Router, { withRouter } from 'next/router'
+import { offWhite } from '../style/colors'
+import withOpenDrawer from '../containers/withOpenDrawer'
+import { toggleDrawer } from '../lib/redux'
+import { BackIcon } from '../components/Icons'
 
 const HeaderDrawer = ({ children, visible, handleCloseClick }) =>
   <div className='HeaderDrawer'>
     {children}
-    <a onClick={handleCloseClick}>close</a>
+    <a onClick={handleCloseClick}><BackIcon /></a>
     <style jsx>{`
       .HeaderDrawer {
         position: fixed;
@@ -34,7 +34,7 @@ const HeaderDrawer = ({ children, visible, handleCloseClick }) =>
       a {
         position: absolute;
         right: 2em;
-        top: 2em;
+        top: 1.59em;
       }
       @media only screen and (min-width: 768px) {
         .HeaderDrawer {

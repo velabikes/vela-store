@@ -29,6 +29,14 @@ export const UserIcon = props => (
   </svg>
 )
 
+export const BackIcon = props =>
+  <svg width="1em" height="1em" viewBox="0 0 15.583 15.175" {...props}>
+    <path
+      d="M14.583 6.593H3.413l4.88-4.88a1.008 1.008 0 0 0 0-1.42 1 1 0 0 0-1.41 0l-6.59 6.59a1 1 0 0 0 0 1.41l6.59 6.59a1 1 0 1 0 1.41-1.41l-4.88-4.88h11.17a1 1 0 0 0 0-2z"
+      fill="#3e5052"
+    />
+  </svg>
+
 export const MenuIcon = ({ ...props }) => (
   <svg viewBox='0 0 28.44 20.07' width='1em' height='1em' {...props}>
     <defs>
