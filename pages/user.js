@@ -10,5 +10,5 @@ const UserPage = ({ customerCreate, customerAccessTokenCreate, customerAccessTok
   </PaddedView>
 
 export default compose(
-  withCustomerAccessToken,
+  withCustomerAccessToken
 )(UserPage)

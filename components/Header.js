@@ -1,12 +1,12 @@
 import { compose, withProps } from 'recompose'
 import Link from 'next/link'
 import { velaGreen, lightGray } from '../style/colors'
+import withOpenDrawer from '../containers/withOpenDrawer'
 import Cart from './Cart'
 import HeaderDrawer from './HeaderDrawer'
 import HeaderMenu from './HeaderMenu'
-import withOpenDrawer from '../containers/withOpenDrawer'
-import MainMenu from './MainMenu';
-import Footer from './Footer';
+import MainMenu from './MainMenu'
+import Footer from './Footer'
 
 const Header = ({ isCartOpen, isMenuOpen, children }) =>
   <>
@@ -41,7 +41,7 @@ const Header = ({ isCartOpen, isMenuOpen, children }) =>
         box-shadow: 0px 0px 8px 0px rgba(100,100,100,0.3);
       }
       .app-content {
-        margin-top: 4em;
+        padding-top: 4em;
       }
       header > div {
         display: flex;
@@ -61,10 +61,10 @@ const Header = ({ isCartOpen, isMenuOpen, children }) =>
         font-family: neue-haas-grotesk-display, sans;
         font-weight: 900;
         font-style: italic;
-        padding: 1.5em;
+        padding: 1.5em 1em;
         box-sizing: border-box;
         display: none;
-        font-size: 1.25rem;
+        font-size: 1rem;
         line-height: 1rem;
       }
       .bottom > div:last-child {
@@ -80,8 +80,8 @@ const Header = ({ isCartOpen, isMenuOpen, children }) =>
           rught: inital;
         }
         .app-content {
-          margin-left: 5em;
-          margin-top: 0;
+          padding-left: 5em;
+          padding-top: 0;
         }
         header > div {
           flex-direction: column;
@@ -95,6 +95,7 @@ const Header = ({ isCartOpen, isMenuOpen, children }) =>
           transform: rotate(180deg);
           display: block;
           padding: 2rem;
+          font-size: 1.25rem
         }
       }
     `}</style>

@@ -45,6 +45,10 @@ const CustomHead = props =>
         vertical-align: middle;
         width: 100%;
       }
+      label {
+        font-weight: 600;
+        display: block;
+      }
       input:not([type='checkbox']) {
         border: 0;
         border-bottom: 1px solid ${velaGreen};
@@ -53,7 +57,7 @@ const CustomHead = props =>
         font-size: 1rem;
       }
       button {
-        padding: .6em;
+        padding: .5em .8em;
         border-radius: 5px;
         background-color: ${velaGreen};
         color: white;
@@ -62,8 +66,26 @@ const CustomHead = props =>
         font-weight: 900;
         font-style: italic;
         text-transform: uppercase;
-        font-size: 1.25em;
+        font-size: 1.25rem;
         cursor: pointer;
+      }
+      button:disabled {
+        opacity: 0.7;
+        filter: saturate(0%);
+      }
+      .page-transition-enter {
+        opacity: 0;
+      }
+      .page-transition-enter-active {
+        opacity: 1;
+        transition: opacity 300ms;
+      }
+      .page-transition-exit {
+        opacity: 1;
+      }
+      .page-transition-exit-active {
+        opacity: 0;
+        transition: opacity 300ms;
       }
     `}</style>
   </>

@@ -6,6 +6,7 @@ import { Provider } from 'react-redux'
 import withRedux from 'next-redux-wrapper'
 import { ApolloProvider } from 'react-apollo'
 import { PersistGate } from 'redux-persist/integration/react'
+import { PageTransition } from 'next-page-transitions'
 import withShopify from '../lib/shopify'
 import Head from '../components/Head'
 import Header from '../components/Header'
@@ -29,7 +30,13 @@ class MyApp extends App {
           <ApolloProvider client={apollo}>
             <PersistGate loading={<div>loading</div>} persistor={store.__persistor}>
               <Header>
-                <Component {...pageProps} />
+                <PageTransition
+                  timeout={100}
+                  classNames='page-transition'
+                  monkeyPatchScrolling
+                >
+                  <Component {...pageProps} />
+                </PageTransition>
               </Header>
             </PersistGate>
           </ApolloProvider>
