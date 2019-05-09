@@ -14,13 +14,19 @@ const MainMenu = ({ visible }) =>
       <li><Link href='/store'><a>
         Acessorios
       </a></Link></li>
-      <li><Link href='/user'><a>
-        Minha Conta
-      </a></Link></li>
       <li><Link href='/contact'><a>
         Contato
       </a></Link></li>
     </ul>
+    <style jsx>{`
+      ul {
+        padding: 0;
+      }
+      li {
+        list-style: none;
+        line-height: 2em;
+      }
+    `}</style>
   </PaddedView>
 
 export default compose(
