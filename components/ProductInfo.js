@@ -16,11 +16,6 @@ const ProductInfo = ({ product }) =>
       <div dangerouslySetInnerHTML={{ __html: product.descriptionHtml }} />
     </div>
     <style jsx>{`
-      .ProductInfo {
-        display: flex;
-      }
-      .ProductInfo > div { flex: 1 }
-      .ProductInfo > div:first-child { flex: 1.58; padding-right: 2em }
       .ProductInfo :global(.Image) {
         margin-top: 1.5rem;
       }
@@ -30,6 +25,13 @@ const ProductInfo = ({ product }) =>
       h4 {
         margin-top: 0;
         margin-bottom: 1em
+      }
+      @media only screen and (min-width: 768px) {
+        .ProductInfo {
+          display: flex;
+        }
+        .ProductInfo > div { flex: 1 }
+        .ProductInfo > div:first-child { flex: 1.58; padding-right: 2em }
       }
     `}</style>
   </div>
