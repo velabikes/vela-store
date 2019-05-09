@@ -12,12 +12,12 @@ const Cart = ({ checkout, isCheckoutIdLoading, visible }) =>
       {checkout && !checkout.lineItems.edges.length && <small>Nao ha itens no seu carrinho</small>}
       <table className='items'>
         <tbody>
-          {checkout && checkout.lineItems.edges.map(item => item.node.variant &&
-            <tr key={item.node.id}>
-              <td><Image src={item.node.variant.image.src} alt='' /></td>
+          {checkout && checkout.lineItems.edges.map(item =>
+            <tr key={item.node.title}>
+              <td><Image src={item.node.variant && item.node.variant.image.src} alt='' /></td>
               <td>{item.node.quantity}</td>
               <td><b>{item.node.title}</b></td>
-              <td><Price value={parseInt(item.node.variant.price)} /></td>
+              <td><Price value={parseInt(item.node.variant && item.node.variant.price)} /></td>
             </tr>
           )}
         </tbody>

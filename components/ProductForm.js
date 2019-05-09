@@ -1,4 +1,4 @@
-import { compose, withHandlers, withState } from 'recompose'
+import { compose, withHandlers, withState, withProps } from 'recompose'
 import withCheckoutLineItemsAdd from '../containers/withCheckoutLineItemsAdd'
 import withCheckoutId from '../containers/withCheckoutId'
 import { velaBlue } from '../style/colors'
@@ -20,10 +20,11 @@ const ProductForm = ({
   handleAddToCartClick,
   isLoading,
   selected,
-  setSelected
+  setSelected,
+  hasOptions
 }) =>
   <div className='ProductForm'>
-    {product.options[0].name !== 'Title' && product.options.map(option =>
+    {hasOptions && product.options.map(option =>
       <div className='option'>
         <label>{option.name}</label>
         {option.values.map(value =>
@@ -36,7 +37,12 @@ const ProductForm = ({
         )}
       </div>
     )}
-    <button onClick={handleAddToCartClick} disabled={isLoading}>comprar</button>
+    <button
+      onClick={handleAddToCartClick}
+      disabled={hasOptions && Object.keys(selected).length !== product.options.length}
+    >
+        comprar
+    </button>
     <style jsx>{`
       .option {
         margin-bottom: 1em;
@@ -49,6 +55,7 @@ export default compose(
   withState('isAddToCartLoading', 'setAddToCartLoading', false),
   withCheckoutLineItemsAdd,
   withCheckoutId,
+  withProps( ({product}) => ({ hasOptions: product.options.length > 1 || product.options[0].values.length > 1}) ),
   withHandlers({
     handleAddToCartClick: ({
       checkoutLineItemsAdd,
@@ -57,6 +64,7 @@ export default compose(
       product
     }) => async e => {
       setAddToCartLoading(true)
+      alert('manutencao')
       await checkoutLineItemsAdd({
         variables: {
           checkoutId: checkoutId,

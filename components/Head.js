@@ -69,6 +69,10 @@ const CustomHead = props =>
         font-size: 1.25rem;
         cursor: pointer;
       }
+      button:disabled {
+        opacity: 0.7;
+        filter: saturate(0%);
+      }
       .page-transition-enter {
         opacity: 0;
       }
