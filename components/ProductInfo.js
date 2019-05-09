@@ -1,18 +1,21 @@
+import { compose } from 'recompose'
+import withProduct from '../containers/withProduct'
 import Price from '../components/Price'
 import Image from '../components/Image'
 import ProductForm from './ProductForm';
 
-const ProductInfo = ({ product }) =>
+const ProductInfo = ({ product, isProductLoading }) =>
   <div className='ProductInfo'>
     <div>
+      {!product && <Image />}
       {product.images && product.images.edges.map(edge =>
         <Image src={edge.node.src} key={edge.node.src} alt='' />
       )}
     </div>
     <div>
       <h1>{product.title}</h1>
-      <h4><Price value={product.variants.edges[0].node.price} /></h4>
-      <ProductForm product={product} />
+      <h4>{product.variants && <Price value={product.variants.edges[0].node.price} />}</h4>
+      {product.options && <ProductForm product={product} />}
       <div dangerouslySetInnerHTML={{ __html: product.descriptionHtml }} />
     </div>
     <style jsx>{`
@@ -36,4 +39,6 @@ const ProductInfo = ({ product }) =>
     `}</style>
   </div>
 
-export default ProductInfo
+export default compose(
+  withProduct(({ handle }) => handle)
+)(ProductInfo)

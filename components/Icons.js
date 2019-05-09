@@ -110,24 +110,22 @@ export const Logo = props =>
     <svg viewBox='0 0 149.77 184.66' width="1em" height="1em" className='Logo' {...props}>
       <title>{'Vela Logo'}</title>
       <g>
-        <path
+        <path id='logo'
           d='M130.66 111.65c-17.33 27.27-52 53.6-86.63 70.16-16.34 7.81-37.45-.53-38.92-23.87-.9-14.33 10.89-72.16 11.36-76.69.9-8.37-5.64-10.92-14.48-2.69l-2-3s39.59-38.14 43.28-41.84 18.94-17.23 25 2.09-4.55 60.24-6.62 70.12c-2.24 10.75-12.49 53.43 0 53.43 17.61 0 32.41-48.73 34.66-57.65 2.47-9.88 13-77.89-8.3-56.56l-2-2.88s31.59-30.61 39.54-35.72S144-7.37 148.28 11.66s-.29 72.71-17.62 100'
         />
       </g>
     </svg>
     <style jsx>{`
-	  path {
-	    animation: colorchange 1s infinite;
+	  .Logo {
             fill: ${velaGreen}
           }
+          path {
+	    //animation: colorchange 1s infinite;
+          }
 	  @keyframes colorchange {
-	    0%  { fill: ${velaGreen}; }
-            23% { fill: ${velaGreen}; }
-	    33% { fill: ${velaBlue}; }
-            56% { fill: ${velaBlue}; }
-	    66% { fill: ${velaRed}; }
-            90% { fill: ${velaRed}; }
-	    100% { fill: ${velaGreen}; }
+	    0%  { transform: scale(1) }
+	    50% { transform: scale(0.9) }
+	    100% { transform: scale(1) }
 	  }
 
 	`}</style>

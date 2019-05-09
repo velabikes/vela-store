@@ -3,10 +3,18 @@ import { compose } from 'recompose'
 import Loading from '../components/Loading'
 import ProductTeaser from '../components/ProductTeaser'
 import withProductList from '../containers/withProductList'
+import Image from '../components/Image'
+
+const ProductListLoading = () =>
+  <>
+    <ProductTeaser product={{}} />
+    <ProductTeaser product={{}} />
+    <ProductTeaser product={{}} />
+  </>
 
 const ProductList = ({ products, loading }) =>
-  <div>
-    { !products && <Loading />}
+  <div className='ProductList'>
+    { !products && <ProductListLoading />}
     { products && products.map(product => <ProductTeaser product={product} key={product.id} />) }
     <style jsx>{`
       div {

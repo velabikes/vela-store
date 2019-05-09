@@ -4,12 +4,11 @@ import ProductInfo from '../../components/ProductInfo'
 import withProduct from '../../containers/withProduct'
 import PaddedView from '../../components/PaddedView';
 
-const ProductPage = ({ isProductLoading, product, ...props }) =>
+const ProductPage = ({ router }) =>
   <PaddedView>
-    { isProductLoading ? 'carregando...' : <ProductInfo product={product} /> }
+    <ProductInfo handle={router.query.handle} />
   </PaddedView>
 
 export default compose(
-  withRouter,
-  withProduct(({ router }) => router.query.handle)
+  withRouter
 )(ProductPage)

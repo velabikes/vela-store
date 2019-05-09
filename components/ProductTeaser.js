@@ -7,7 +7,7 @@ import Image from './Image'
 const ProductTeaser = ({ product }) =>
   <div className='ProductTeaser'>
     <Link href={'/store/product?handle=' + product.handle}><a>
-      <Image src={product.images[0].src} />
+      <Image src={product.images && product.images[0].src} />
       <h2>
         {product.title}
       </h2>
