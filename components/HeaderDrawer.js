@@ -1,8 +1,13 @@
 import { offWhite } from '../style/colors'
+import withOpenDrawer
+ from '../containers/withOpenDrawer'
+import { toggleDrawer } from '../lib/redux'
+import { compose, withHandlers } from 'recompose'
 
-const HeaderDrawer = ({ children, visible }) =>
+const HeaderDrawer = ({ children, visible, handleCloseClick }) =>
   <div className='HeaderDrawer'>
     {children}
+    <a onClick={handleCloseClick}>close</a>
     <style jsx>{`
       .HeaderDrawer {
         position: fixed;
@@ -25,6 +30,11 @@ const HeaderDrawer = ({ children, visible }) =>
         opacity: ${visible ? '1' : '0'};
         transition: .2s opacity ${visible ? '.3s ease-in' : 'ease-out'};
       }
+      a {
+        position: absolute;
+        right: 2em;
+        top: 2em;
+      }
       @media only screen and (min-width: 768px) {
         .HeaderDrawer {
           left: 5em;
@@ -35,4 +45,9 @@ const HeaderDrawer = ({ children, visible }) =>
     `}</style>
   </div>
 
-export default HeaderDrawer
+export default compose(
+  withOpenDrawer,
+  withHandlers({
+    handleCloseClick: ({ dispatch }) => e => dispatch(toggleDrawer(''))
+  })
+)(HeaderDrawer)
