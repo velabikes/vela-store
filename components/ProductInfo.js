@@ -2,7 +2,7 @@ import { compose } from 'recompose'
 import withProduct from '../containers/withProduct'
 import Price from '../components/Price'
 import Image from '../components/Image'
-import ProductForm from './ProductForm';
+import ProductForm from './ProductForm'
 
 const ProductInfo = ({ product, isProductLoading }) =>
   <div className='ProductInfo'>

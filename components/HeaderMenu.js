@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import { compose, withState, withHandlers } from 'recompose'
-import { Logo, MenuIcon, UserIcon, CartIcon } from './Icons'
 import { toggleDrawer } from '../lib/redux'
 import withOpenDrawer from '../containers/withOpenDrawer'
+import { Logo, MenuIcon, UserIcon, CartIcon } from './Icons'
 
 const HeaderMenu = ({ handleCartClick, handleMenuClick }) =>
   <>

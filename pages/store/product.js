@@ -2,7 +2,7 @@ import { compose } from 'recompose'
 import { withRouter } from 'next/router'
 import ProductInfo from '../../components/ProductInfo'
 import withProduct from '../../containers/withProduct'
-import PaddedView from '../../components/PaddedView';
+import PaddedView from '../../components/PaddedView'
 
 const ProductPage = ({ router }) =>
   <PaddedView>

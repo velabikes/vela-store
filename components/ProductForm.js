@@ -7,7 +7,7 @@ const OptionButton = ({ selected, children, ...props }) =>
   <button {...props}>{children}
     <style jsx>{`
       button {
-        background: ${selected ? velaBlue : 'transparent' };
+        background: ${selected ? velaBlue : 'transparent'};
         color: ${selected ? 'white' : velaBlue};
         border: 1px solid ${velaBlue};
         font-size: 0.75rem;
@@ -29,7 +29,7 @@ const ProductForm = ({
         <label>{option.name}</label>
         {option.values.map(value =>
           <OptionButton
-            onClick={() => setSelected({...selected, [option.name]: value})}
+            onClick={() => setSelected({ ...selected, [option.name]: value })}
             selected={selected[option.name] === value}
           >
             {value.replace(/\s*\[.*?\]\s*/g, '')}
@@ -55,7 +55,7 @@ export default compose(
   withState('isAddToCartLoading', 'setAddToCartLoading', false),
   withCheckoutLineItemsAdd,
   withCheckoutId,
-  withProps( ({product}) => ({ hasOptions: product.options.length > 1 || product.options[0].values.length > 1}) ),
+  withProps(({ product }) => ({ hasOptions: product.options.length > 1 || product.options[0].values.length > 1 })),
   withHandlers({
     handleAddToCartClick: ({
       checkoutLineItemsAdd,

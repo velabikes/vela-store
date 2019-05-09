@@ -1,6 +1,6 @@
 import PaddedView from '../components/PaddedView'
 
-const Contact= () =>
+const Contact = () =>
   <PaddedView>
     contato
   </PaddedView>

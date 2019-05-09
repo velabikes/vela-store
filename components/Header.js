@@ -1,12 +1,12 @@
 import { compose, withProps } from 'recompose'
 import Link from 'next/link'
 import { velaGreen, lightGray } from '../style/colors'
+import withOpenDrawer from '../containers/withOpenDrawer'
 import Cart from './Cart'
 import HeaderDrawer from './HeaderDrawer'
 import HeaderMenu from './HeaderMenu'
-import withOpenDrawer from '../containers/withOpenDrawer'
-import MainMenu from './MainMenu';
-import Footer from './Footer';
+import MainMenu from './MainMenu'
+import Footer from './Footer'
 
 const Header = ({ isCartOpen, isMenuOpen, children }) =>
   <>
