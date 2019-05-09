@@ -2,7 +2,8 @@ import { offWhite } from '../style/colors'
 import withOpenDrawer
  from '../containers/withOpenDrawer'
 import { toggleDrawer } from '../lib/redux'
-import { compose, withHandlers } from 'recompose'
+import { compose, withHandlers, lifecycle } from 'recompose'
+import Router, { withRouter } from 'next/router'
 
 const HeaderDrawer = ({ children, visible, handleCloseClick }) =>
   <div className='HeaderDrawer'>
@@ -46,8 +47,14 @@ const HeaderDrawer = ({ children, visible, handleCloseClick }) =>
   </div>
 
 export default compose(
+  withRouter,
   withOpenDrawer,
   withHandlers({
     handleCloseClick: ({ dispatch }) => e => dispatch(toggleDrawer(''))
+  }),
+  lifecycle({
+    componentDidMount() {
+      Router.events.on('routeChangeStart', this.props.handleCloseClick)
+    }
   })
 )(HeaderDrawer)
