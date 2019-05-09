@@ -9,6 +9,7 @@ const Cart = ({ checkout, isCheckoutIdLoading, visible }) =>
   <PaddedView className='Cart'>
     <h2>Carrinho</h2>
     <div className='cart-content'>
+      {checkout && !checkout.lineItems.edges.length && <small>Nao ha itens no seu carrinho</small>}
       <table className='items'>
         <tbody>
           {checkout && checkout.lineItems.edges.map(item => item.node.variant &&
@@ -22,10 +23,10 @@ const Cart = ({ checkout, isCheckoutIdLoading, visible }) =>
         </tbody>
       </table>
     </div>
-    <div className='cart-footer'>
+    {checkout && !!checkout.lineItems.edges.length && <div className='cart-footer'>
       <div><h4>Total: {checkout && checkout.totalPrice}</h4></div>
       <button type='button' onClick={() => window.location.replace(checkout.webUrl)}>Finalizar</button>
-    </div>
+    </div>}
     <style jsx>{`
       :global(.Cart) {
         display: flex;
