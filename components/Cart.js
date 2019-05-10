@@ -6,9 +6,10 @@ import Image from '../components/Image'
 import PaddedView from '../components/PaddedView'
 import withCheckoutLineItemsUpdate from '../containers/withCheckoutLineItemsUpdate';
 
-const Cart = ({ checkout, isCheckoutIdLoading, handleMoreClick, handleLessClick }) =>
+const Cart = ({ checkout, isCheckoutIdLoading, handleMoreClick, handleLessClick, handleCheckoutCreation }) =>
   <PaddedView className='Cart'>
     <h2>Carrinho</h2>
+    <a onClick={handleCheckoutCreation}>Limpar Carringo</a>
     <div className='cart-content'>
       {checkout && !checkout.lineItems.edges.length && <small>Nao ha itens no seu carrinho</small>}
       <table className='items'>
