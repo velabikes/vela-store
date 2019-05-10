@@ -20,8 +20,8 @@ const HeaderDrawer = ({ children, visible, handleCloseClick }) =>
         box-shadow: 0px 0px ${visible ? '8' : '0'}px 0px rgba(100,100,100,0.3);
         display: flex;
         flex-direction: column;
-        min-width: 300px;
-        max-width: 100vw;
+        max-width: 100%;
+        min-width: 100%;
         z-index: 1000;
       }
       .HeaderDrawer :global(div:first-child) {
@@ -41,6 +41,7 @@ const HeaderDrawer = ({ children, visible, handleCloseClick }) =>
           left: 5em;
           top: 0;
           max-width: 40vw;
+          min-width: 300px;
         }
       }
     `}</style>

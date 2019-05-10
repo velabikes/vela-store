@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { velaGreen, darkGray, offWhite } from '../style/colors'
+import { velaGreen, velaBlue, darkGray, offWhite } from '../style/colors'
 
 const CustomHead = props =>
   <>
@@ -49,6 +49,9 @@ const CustomHead = props =>
         vertical-align: middle;
         width: 100%;
       }
+      table {
+        width: 100%;
+      }
       label {
         font-weight: 600;
         display: block;
@@ -72,10 +75,14 @@ const CustomHead = props =>
         text-transform: uppercase;
         font-size: 1.25rem;
         cursor: pointer;
+        transition: .4s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
       }
       button:disabled {
         opacity: 0.7;
         filter: saturate(0%);
+      }
+      button:active {
+        box-shadow: 0px 0px 20px -4px ${velaBlue}
       }
       .page-transition-enter {
         opacity: 0;

@@ -2,6 +2,7 @@ import { compose, withHandlers, withState, withProps } from 'recompose'
 import withCheckoutLineItemsAdd from '../containers/withCheckoutLineItemsAdd'
 import withCheckoutId from '../containers/withCheckoutId'
 import { velaBlue } from '../style/colors'
+import { toggleDrawer } from '../lib/redux'
 
 const OptionButton = ({ selected, children, ...props }) =>
   <button {...props}>{children}
@@ -18,7 +19,7 @@ const OptionButton = ({ selected, children, ...props }) =>
 const ProductForm = ({
   product,
   handleAddToCartClick,
-  isLoading,
+  isAddToCartLoading,
   selected,
   setSelected,
   hasOptions
@@ -41,7 +42,7 @@ const ProductForm = ({
       onClick={handleAddToCartClick}
       disabled={hasOptions && Object.keys(selected).length !== product.options.length}
     >
-        comprar
+      { isAddToCartLoading ? 'Carregando...' : 'comprar' }
     </button>
     <style jsx>{`
       .option {
@@ -61,10 +62,10 @@ export default compose(
       checkoutLineItemsAdd,
       checkoutId,
       setAddToCartLoading,
-      product
+      product,
+      dispatch
     }) => async e => {
       setAddToCartLoading(true)
-      alert('manutencao')
       await checkoutLineItemsAdd({
         variables: {
           checkoutId: checkoutId,
@@ -74,6 +75,7 @@ export default compose(
         }
       })
       setAddToCartLoading(false)
+      dispatch(toggleDrawer('CART'))
     }
   })
 )(ProductForm)
