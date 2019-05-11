@@ -40,8 +40,8 @@ const HeaderDrawer = ({ children, visible, handleCloseClick }) =>
         .HeaderDrawer {
           left: 5em;
           top: 0;
-          max-width: 550px;
-          min-width: 400px;
+          max-width: 600px;
+          min-width: 480px;
         }
       }
     `}</style>

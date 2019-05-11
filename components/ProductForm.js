@@ -1,4 +1,4 @@
-import { compose, withHandlers, withState, withProps } from 'recompose'
+import { compose, withHandlers, withState, withProps, withPropsOnChange } from 'recompose'
 import withCheckoutLineItemsAdd from '../containers/withCheckoutLineItemsAdd'
 import withCheckoutId from '../containers/withCheckoutId'
 import { velaBlue } from '../style/colors'
@@ -20,8 +20,10 @@ const ProductForm = ({
   product,
   handleAddToCartClick,
   isAddToCartLoading,
-  selected,
-  setSelected,
+  selectedOptions,
+  setSelectedOptions,
+  selectedVariant,
+  onVariantSelect,
   hasOptions
 }) =>
   <div className='ProductForm'>
@@ -30,8 +32,10 @@ const ProductForm = ({
         <label>{option.name}</label>
         {option.values.map(value =>
           <OptionButton
-            onClick={() => setSelected({ ...selected, [option.name]: value })}
-            selected={selected[option.name] === value}
+            onClick={() => {
+              setSelectedOptions({ ...selectedOptions, [option.name]: value })
+            }}
+            selected={selectedOptions[option.name] === value}
           >
             {value.replace(/\s*\[.*?\]\s*/g, '')}
           </OptionButton>
@@ -40,7 +44,7 @@ const ProductForm = ({
     )}
     <button
       onClick={handleAddToCartClick}
-      disabled={hasOptions && Object.keys(selected).length !== product.options.length}
+      disabled={hasOptions && Object.keys(selectedOptions).length !== product.options.length}
     >
       { isAddToCartLoading ? 'Carregando...' : 'comprar' }
     </button>
@@ -83,11 +87,23 @@ const handleAddToCartClick = ({
 }
 
 export default compose(
-  withState('selected', 'setSelected', {}),
+  withState('selectedOptions', 'setSelectedOptions', {}),
+  withProps(({ product }) => ({ hasOptions: product.options.length > 1 || product.options[0].values.length > 1 })),
+  withProps(({ product, hasOptions, selectedOptions }) => ({
+    selectedVariant: !hasOptions
+      ? product.variants.edges[0].node.id
+      : findSelectedVariant(product.variants.edges, selectedOptions)
+  })),
+  withPropsOnChange(
+    (props, nextProps) =>
+      nextProps.selectedVariant
+      && !props.selectedVariant
+      || props.selectedVariant !== nextProps.selectedVariant,
+    ({ selectedVariant, onVariantSelect }) => onVariantSelect(selectedVariant)
+  ),
   withState('isAddToCartLoading', 'setAddToCartLoading', false),
   withCheckoutLineItemsAdd,
   withCheckoutId,
-  withProps(({ product }) => ({ hasOptions: product.options.length > 1 || product.options[0].values.length > 1 })),
   withHandlers({
     handleAddToCartClick
   })

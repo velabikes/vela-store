@@ -1,33 +1,20 @@
 import PropTypes from 'prop-types'
-import { compose, lifecycle, withHandlers } from 'recompose'
+import { compose } from 'recompose'
 import withCheckout from '../containers/withCheckout'
+import CartItem from '../components/CartItem'
 import Price from '../components/Price'
-import Image from '../components/Image'
 import PaddedView from '../components/PaddedView'
-import withCheckoutLineItemsUpdate from '../containers/withCheckoutLineItemsUpdate'
 import { velaGreen, velaBlue, velaRed } from '../style/colors'
 
 const Cart = ({ checkout, isCheckoutIdLoading, handleMoreClick, handleLessClick, handleCheckoutCreation }) =>
   <PaddedView className='Cart'>
+    {console.log(checkout)}
     <h2>Carrinho</h2>
     <div className='cart-content'>
       {checkout && !checkout.lineItems.edges.length && <small>Nao ha itens no seu carrinho</small>}
       <table className='items'>
         <tbody>
-          {checkout && checkout.lineItems.edges.map(item =>
-            <tr key={item.node.title}>
-              <td><Image src={item.node.variant && item.node.variant.image.src} alt='' /><span>{item.node.quantity}</span></td>
-              <td className='quantity'>
-                <a onClick={() => handleMoreClick(item)}>mais</a>
-                <a onClick={() => handleLessClick(item)}>menos</a>
-              </td>
-              <td className='name'>
-                <div><b>{item.node.title}</b></div>
-                <small>{item.node.variant.title !== "Default Title" && item.node.variant.title.replace(/\s*\[.*?\]/g, '')}</small>
-              </td>
-              <td><Price value={item.node.variant && item.node.variant.price} /></td>
-            </tr>
-          )}
+          {checkout && checkout.lineItems.edges.map(item => <CartItem item={item} />)}
         </tbody>
       </table>
     </div>
@@ -45,49 +32,7 @@ const Cart = ({ checkout, isCheckoutIdLoading, handleMoreClick, handleLessClick,
         flex: 1;
       }
       .items {
-        border-spacing: 0 10px;
-      }
-      .items td:first-child {
-        width: 20%;
-        padding-left: 0;
-        padding-right: 0;
-        position: relative;
-      }
-      .items td:first-child span {
-        position: absolute;
-        top: -.9em;
-        right: -.9em;
-        background: ${velaBlue};
-        border-radius: 1em;
-        width: 1.8em;
-        height: 1.8em;
-        line-height: 1.8em;
-        text-align: center;
-        font-size: .8em;
-        font-weight: 700;
-        color: white;
-      }
-      .items td.name {
-        white-space: nowrap; 
-        overflow: hidden;
-        text-overflow: ellipsis;
-      }
-      .items td.quantity a {
-        display: block;
-        width: 0; 
-        height: 0; 
-        border-left: 8px solid transparent;
-        border-right: 8px solid transparent;
-        border-bottom: 8px solid ${velaGreen};
-        font-size: 0;
-        margin: 10px -6px 10px 4px;
-      }
-      .items td.quantity a:last-child {
-        transform: rotate(180deg)
-      }
-      .items td:last-child {
-        text-align: right;
-        padding-right: 0;
+        border-spacing: 0 1em;
       }
       .cart-footer {
         display: flex;
@@ -102,24 +47,5 @@ Cart.propTypes = {
 }
 
 export default compose(
-  withCheckout,
-  withCheckoutLineItemsUpdate,
-  withHandlers({
-    handleMoreClick: ({ checkoutLineItemsUpdate, checkoutId }) => async item => {
-      await checkoutLineItemsUpdate({
-        variables: {
-          checkoutId: checkoutId,
-          lineItems: [{ quantity: parseInt(item.node.quantity + 1, 10), id: item.node.id }]
-        }
-      })
-    },
-    handleLessClick: ({ checkoutLineItemsUpdate, checkoutId }) => async item => {
-      await checkoutLineItemsUpdate({
-        variables: {
-          checkoutId: checkoutId,
-          lineItems: [{ quantity: parseInt(item.node.quantity - 1, 10), id: item.node.id }]
-        }
-      })
-    }
-  })
+  withCheckout
 )(Cart)

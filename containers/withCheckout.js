@@ -1,7 +1,3 @@
-
-/*
-  Query to get Checkout object
-*/
 import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
 import { compose, withHandlers, branch } from 'recompose'
