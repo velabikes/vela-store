@@ -1,9 +1,5 @@
 import PropTypes from 'prop-types'
-import { compose } from 'recompose'
-import Loading from '../components/Loading'
 import ProductTeaser from '../components/ProductTeaser'
-import withProductList from '../containers/withProductList'
-import Image from '../components/Image'
 
 const ProductListLoading = () =>
   <>
@@ -14,8 +10,8 @@ const ProductListLoading = () =>
 
 const ProductList = ({ products, loading }) =>
   <div className='ProductList'>
-    { !products && <ProductListLoading />}
-    { products && products.map(product => <ProductTeaser product={product} key={product.id} />) }
+    { !products && loading && <ProductListLoading /> }
+    { products && products.edges.map(product => <ProductTeaser product={product.node} key={product.id} />) }
     <style jsx>{`
       div {
       }
@@ -36,9 +32,8 @@ const ProductList = ({ products, loading }) =>
   </div>
 
 ProductList.propTypes = {
-  products: PropTypes.array
+  products: PropTypes.array,
+  loading: PropTypes.bool
 }
 
-export default compose(
-  withProductList
-)(ProductList)
+export default ProductList

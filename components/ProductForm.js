@@ -51,6 +51,37 @@ const ProductForm = ({
     `}</style>
   </div>
 
+const findSelectedVariant = (variants, selected) => {
+  return variants.find(variant =>
+    variant.node.selectedOptions.every(option => selected[option.name] === option.value)
+  )
+}
+
+const handleAddToCartClick = ({
+  checkoutLineItemsAdd,
+  checkoutId,
+  setAddToCartLoading,
+  product,
+  hasOptions,
+  selected,
+  dispatch
+}) => async e => {
+  setAddToCartLoading(true)
+  await checkoutLineItemsAdd({
+    variables: {
+      checkoutId: checkoutId,
+      lineItems: [
+        {
+          variantId: !hasOptions ? product.variants.edges[0].node.id : findSelectedVariant(product.variants.edges, selected).node.id,
+          quantity: 1
+        }
+      ]
+    }
+  })
+  setAddToCartLoading(false)
+  dispatch(toggleDrawer('CART'))
+}
+
 export default compose(
   withState('selected', 'setSelected', {}),
   withState('isAddToCartLoading', 'setAddToCartLoading', false),
@@ -58,24 +89,6 @@ export default compose(
   withCheckoutId,
   withProps(({ product }) => ({ hasOptions: product.options.length > 1 || product.options[0].values.length > 1 })),
   withHandlers({
-    handleAddToCartClick: ({
-      checkoutLineItemsAdd,
-      checkoutId,
-      setAddToCartLoading,
-      product,
-      dispatch
-    }) => async e => {
-      setAddToCartLoading(true)
-      await checkoutLineItemsAdd({
-        variables: {
-          checkoutId: checkoutId,
-          lineItems: [
-            { variantId: product.variants.edges[0].node.id, quantity: 1 }
-          ]
-        }
-      })
-      setAddToCartLoading(false)
-      dispatch(toggleDrawer('CART'))
-    }
+    handleAddToCartClick
   })
 )(ProductForm)

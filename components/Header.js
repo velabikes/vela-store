@@ -20,8 +20,8 @@ const Header = ({ isCartOpen, isMenuOpen, children }) =>
         <HeaderMenu />
       </div>
       <div className='bottom'>
-        <div><Link href='/store' prefetch>acessórios</Link></div>
-        <div>monte sua vela</div>
+        <div><Link href='/store' prefetch><a>acessórios</a></Link></div>
+        <div><Link href='/store?handle=vela-1' prefetch><a>monte sua vela</a></Link></div>
       </div>
     </header>
     <div className='app-content'>
@@ -38,7 +38,7 @@ const Header = ({ isCartOpen, isMenuOpen, children }) =>
         left: 0;
         right: 0;
         z-index: 1001;
-        box-shadow: 0px 0px 8px 0px rgba(100,100,100,0.3);
+        box-shadow: 0px 0px 9px 0px rgba(100,100,100,0.3);
       }
       .app-content {
         padding-top: 4em;
@@ -69,8 +69,11 @@ const Header = ({ isCartOpen, isMenuOpen, children }) =>
       }
       .bottom > div:last-child {
         background-color: ${velaGreen};
-        color: ${lightGray};
         display: block;
+        white-space: nowrap;
+      }
+      .bottom > div:last-child a {
+        color: ${lightGray};
       }
       @media only screen and (min-width: 768px) {
         header {

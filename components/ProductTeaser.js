@@ -7,12 +7,12 @@ import Image from './Image'
 const ProductTeaser = ({ product }) =>
   <div className='ProductTeaser'>
     <Link href={'/store/product?handle=' + product.handle}><a>
-      <Image src={product.images && product.images[0].src} />
+      <Image src={product.images && product.images.edges[0].node.src} />
       <h2>
         {product.title}
       </h2>
       <h4>
-        <Price value={product.price} />
+        <Price value={product.variants.edges.map(v => v.node.price)} />
       </h4>
     </a></Link>
     <style jsx>{`
@@ -32,9 +32,5 @@ const ProductTeaser = ({ product }) =>
 ProductTeaser.propTypes = {
   product: PropTypes.object
 }
-
-// Header.defaultProps = {
-//  product: {}
-// }
 
 export default ProductTeaser

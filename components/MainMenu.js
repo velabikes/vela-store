@@ -4,13 +4,12 @@ import Link from 'next/link'
 import withCheckout from '../containers/withCheckout'
 import PaddedView from '../components/PaddedView'
 
-const MainMenu = ({ visible }) =>
-  
+const MainMenu = () =>
   <PaddedView className='MainMenu'>
     <nav>
       <h1>Menu</h1>
       <ul className='items'>
-        <li><Link href='https://turmadamonica.com.br'><a>
+        <li><Link href='/store?handle=vela-1'><a>
           Monte a sua
         </a></Link></li>
         <li><Link href='/store'><a>

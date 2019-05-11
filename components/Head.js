@@ -82,7 +82,7 @@ const CustomHead = props =>
         filter: saturate(0%);
       }
       button:active {
-        box-shadow: 0px 0px 20px -4px ${velaBlue}
+        box-shadow: 0px 0px 18px -7px ${velaBlue}
       }
       .page-transition-enter {
         opacity: 0;

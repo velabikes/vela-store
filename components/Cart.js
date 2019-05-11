@@ -21,15 +21,18 @@ const Cart = ({ checkout, isCheckoutIdLoading, handleMoreClick, handleLessClick,
                 <a onClick={() => handleMoreClick(item)}>mais</a>
                 <a onClick={() => handleLessClick(item)}>menos</a>
               </td>
-              <td className='name'><b>{item.node.title}</b></td>
-              <td><Price value={parseInt(item.node.variant && item.node.variant.price)} /></td>
+              <td className='name'>
+                <div><b>{item.node.title}</b></div>
+                <small>{item.node.variant.title !== "Default Title" && item.node.variant.title.replace(/\s*\[.*?\]/g, '')}</small>
+              </td>
+              <td><Price value={item.node.variant && item.node.variant.price} /></td>
             </tr>
           )}
         </tbody>
       </table>
     </div>
     {checkout && !!checkout.lineItems.edges.length && <div className='cart-footer'>
-      <div><h4>Total: {checkout && checkout.totalPrice}</h4></div>
+      <div><b>Total:</b> <Price value={checkout && checkout.totalPrice} /></div>
       <button type='button' onClick={() => window.location.replace(checkout.webUrl)}>Finalizar</button>
     </div>}
     <style jsx>{`
@@ -43,9 +46,6 @@ const Cart = ({ checkout, isCheckoutIdLoading, handleMoreClick, handleLessClick,
       }
       .items {
         border-spacing: 0 10px;
-      }
-      .items  td {
-        padding: 0em 1em;
       }
       .items td:first-child {
         width: 20%;
@@ -80,7 +80,7 @@ const Cart = ({ checkout, isCheckoutIdLoading, handleMoreClick, handleLessClick,
         border-right: 8px solid transparent;
         border-bottom: 8px solid ${velaGreen};
         font-size: 0;
-        margin: 10px 0;
+        margin: 10px -6px 10px 4px;
       }
       .items td.quantity a:last-child {
         transform: rotate(180deg)
@@ -92,6 +92,7 @@ const Cart = ({ checkout, isCheckoutIdLoading, handleMoreClick, handleLessClick,
       .cart-footer {
         display: flex;
         justify-content: space-between;
+        align-items: center;
       }
     `}</style>
   </PaddedView>
