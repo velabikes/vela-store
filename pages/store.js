@@ -10,7 +10,7 @@ const Store = ({
 }) =>
   <PaddedView>
     <h1>Loja</h1>
-    <ProductList products={collection.products} loading={isCollectionLoading} />
+    <ProductList products={collection && collection.products} loading={isCollectionLoading} />
   </PaddedView>
 
 export default compose(

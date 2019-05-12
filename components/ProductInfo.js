@@ -15,7 +15,7 @@ const ProductInfo = ({ product, isProductLoading, setSelectedVariant, selectedVa
     <div>
       <h1>{product.title}</h1>
       <h4>
-        <Price value={selectedVariant ? selectedVariant.node.price : product.variants && product.variants.edges.map(v => v.node.price)} />
+        <Price value={selectedVariant && selectedVariant.node ? selectedVariant.node.price : product.variants && product.variants.edges.map(v => v.node.price)} />
       </h4>
       {product.options && <ProductForm product={product} onVariantSelect={setSelectedVariant} />}
       <div dangerouslySetInnerHTML={{ __html: product.descriptionHtml }} />

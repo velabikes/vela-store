@@ -51,6 +51,7 @@ const CustomHead = props =>
       }
       table {
         width: 100%;
+        border-spacing: 0;
       }
       label {
         font-weight: 600;

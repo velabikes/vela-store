@@ -21,7 +21,7 @@ class MyApp extends App {
   }
 
   render () {
-    const { Component, pageProps, store, apollo } = this.props
+    const { Component, pageProps, store, apollo, router } = this.props
 
     return (
       <Container>
@@ -31,11 +31,11 @@ class MyApp extends App {
             <PersistGate loading={<div>loading</div>} persistor={store.__persistor}>
               <Header>
                 <PageTransition
-                  timeout={100}
+                  timeout={300}
                   classNames='page-transition'
                   monkeyPatchScrolling
                 >
-                  <Component {...pageProps} />
+                  <Component {...pageProps} key={router.route} />
                 </PageTransition>
               </Header>
             </PersistGate>

@@ -1,25 +1,29 @@
 import PropTypes from 'prop-types'
 import { compose } from 'recompose'
 import withCheckout from '../containers/withCheckout'
+import CartPrice from '../components/CartPrice'
 import CartItem from '../components/CartItem'
-import Price from '../components/Price'
 import PaddedView from '../components/PaddedView'
-import { velaGreen, velaBlue, velaRed } from '../style/colors'
+import { velaGreen, velaBlue, lightGray } from '../style/colors'
 
 const Cart = ({ checkout, isCheckoutIdLoading, handleMoreClick, handleLessClick, handleCheckoutCreation }) =>
   <PaddedView className='Cart'>
-    {console.log(checkout)}
     <h2>Carrinho</h2>
     <div className='cart-content'>
       {checkout && !checkout.lineItems.edges.length && <small>Nao ha itens no seu carrinho</small>}
-      <table className='items'>
-        <tbody>
-          {checkout && checkout.lineItems.edges.map(item => <CartItem item={item} />)}
-        </tbody>
-      </table>
+      <div className='items'>
+        <table>
+          <tbody>
+            {checkout && checkout.lineItems.edges.map(item => <CartItem key={item.node.variant.id} item={item} />)}
+          </tbody>
+        </table>
+      </div>
+      <div className='price'>
+        <CartPrice checkout={checkout} />
+      </div>
     </div>
     {checkout && !!checkout.lineItems.edges.length && <div className='cart-footer'>
-      <div><b>Total:</b> <Price value={checkout && checkout.totalPrice} /></div>
+      <small></small>
       <button type='button' onClick={() => window.location.replace(checkout.webUrl)}>Finalizar</button>
     </div>}
     <style jsx>{`
@@ -30,11 +34,17 @@ const Cart = ({ checkout, isCheckoutIdLoading, handleMoreClick, handleLessClick,
       }
       .cart-content {
         flex: 1;
+        display: flex;
+        flex-direction: column;
       }
       .items {
+        flex: 1;
+      }
+      .items table {
         border-spacing: 0 1em;
       }
       .cart-footer {
+        padding-top: 1em;
         display: flex;
         justify-content: space-between;
         align-items: center;

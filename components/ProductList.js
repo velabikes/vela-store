@@ -3,15 +3,15 @@ import ProductTeaser from '../components/ProductTeaser'
 
 const ProductListLoading = () =>
   <>
-    <ProductTeaser product={{}} />
-    <ProductTeaser product={{}} />
-    <ProductTeaser product={{}} />
+    <ProductTeaser product={{}} key={1} />
+    <ProductTeaser product={{}} key={1} />
+    <ProductTeaser product={{}} key={1} />
   </>
 
 const ProductList = ({ products, loading }) =>
   <div className='ProductList'>
     { !products && loading && <ProductListLoading /> }
-    { products && products.edges.map(product => <ProductTeaser product={product.node} key={product.id} />) }
+    { products && products.edges.map(product => <ProductTeaser product={product.node} key={product.node.id} />) }
     <style jsx>{`
       div {
       }
@@ -32,7 +32,7 @@ const ProductList = ({ products, loading }) =>
   </div>
 
 ProductList.propTypes = {
-  products: PropTypes.array,
+  products: PropTypes.object,
   loading: PropTypes.bool
 }
 

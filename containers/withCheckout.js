@@ -1,3 +1,4 @@
+
 import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
 import { compose, withHandlers, branch } from 'recompose'
@@ -12,6 +13,14 @@ const checkout = gql`
       id
       ... on Checkout{
         ...CheckoutFragment
+        availableShippingRates {
+          shippingRates {
+            handle
+            priceV2 {
+              amount
+            }
+          }
+        }
       }
     }
   }
@@ -33,7 +42,6 @@ export default compose(
       })
       const checkoutId = mutationResponse.data.checkoutCreate.checkout.id
       dispatch(setCheckoutId(checkoutId))
-      console.log('setCheckout!!!!!! ! ! ! ! ')
     }
   }),
   branch(
@@ -49,7 +57,7 @@ export default compose(
         }
       },
 
-      props ({ data: { node } }) {
+      props ({ data: { node, error }}) {
         return { checkout: node }
       }
     })

@@ -19,7 +19,7 @@ const Image = props =>
       .content {
         position: absolute;
         top: 0px; bottom: 0px; right: 0px; left: 0px;
-        background: #e1e1e1;
+        background: #e2e3e3;
         justify-content: center;
         align-items: center;
         display: flex;

@@ -1,6 +1,6 @@
 import { compose, withHandlers, lifecycle } from 'recompose'
 import Router, { withRouter } from 'next/router'
-import { offWhite } from '../style/colors'
+import { offWhite, lightGray } from '../style/colors'
 import withOpenDrawer from '../containers/withOpenDrawer'
 import { toggleDrawer } from '../lib/redux'
 import { BackIcon } from '../components/Icons'
