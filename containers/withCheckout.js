@@ -1,7 +1,7 @@
 
 import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
-import { compose, withHandlers, withProps, branch } from 'recompose'
+import { compose, withHandlers, withProps, branch, withPropsOnChange } from 'recompose'
 import { setCheckoutId } from '../lib/redux'
 import withCheckoutId from './withCheckoutId'
 import withCheckoutCreate from './withCheckoutCreate'
@@ -40,8 +40,8 @@ const withCheckoutHoC = graphql(checkout, {
     }
   },
 
-  props ({ data: { node, loading, error }}) {
-    return { checkout: node, isCheckoutLoading: loading }
+  props ({ data: { node, loading, error, refetch }}) {
+    return { checkout: node, isCheckoutLoading: loading, checkoutRefetch: refetch }
   }
 })
 
@@ -70,5 +70,9 @@ export default compose(
   branch(
     ({ withShippingRates }) => withShippingRates,
     withCheckoutHoC
+  ),
+  withPropsOnChange(
+    (props, nextProps) => props.checkout && props.checkout.lineItems !== nextProps.checkout.lineItems,
+    props => props.checkoutRefetch()
   )
 )
