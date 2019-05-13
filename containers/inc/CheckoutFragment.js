@@ -10,6 +10,7 @@ export default gql`
     completedAt
     ready
     paymentDue
+    requiresShipping
     order {
       id
       processedAt

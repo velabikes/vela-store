@@ -3,15 +3,18 @@ import { lightGray } from '../style/colors'
 
 const CartPrice = ({ checkout }) =>
   <div className='CartPrice'>
+    {console.log(checkout, 'checkou')}
     <table>
       <tbody>
-        <tr>
+        { checkout.availableShippingRates && checkout.availableShippingRates.shippingRates && checkout.availableShippingRates.shippingRates.length && <tr>
           <td>Envio:</td>
-          <td><Price value={checkout && checkout.availableShippingRates && checkout.availableShippingRates.shippingRates && checkout.availableShippingRates.shippingRates[0].ammout} /></td>
-        </tr>
+          <td>
+            <Price value={checkout.availableShippingRates.shippingRates[0].priceV2.amount} />
+          </td>
+        </tr>}
         <tr>
           <td>Total:</td>
-          <td><Price value={checkout && checkout.totalPrice} /></td>
+          <td><Price value={checkout.totalPrice} /></td>
         </tr>
       </tbody>
     </table>
