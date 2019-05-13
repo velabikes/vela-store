@@ -51,6 +51,7 @@ const Header = ({ isCartOpen, isMenuOpen, children }) =>
         justify-content: center;
         align-items: center;
         min-width: 4rem;
+        min-height: 4rem;
       }
       .top :global(.Logo) {
         width: 2.59rem;
@@ -89,6 +90,7 @@ const Header = ({ isCartOpen, isMenuOpen, children }) =>
         }
         header > div :global(a) {
           min-height: 5rem;
+          min-width: 5rem;
         }
         .bottom > div > a {
           writing-mode: vertical-rl;
