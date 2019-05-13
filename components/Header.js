@@ -46,7 +46,7 @@ const Header = ({ isCartOpen, isMenuOpen, children }) =>
       header > div {
         display: flex;
       }
-      header > div > :global(div) {
+      header > div :global(a) {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -56,7 +56,7 @@ const Header = ({ isCartOpen, isMenuOpen, children }) =>
         width: 2.59rem;
         height: 2.59rem;
       }
-      .bottom > div {
+      .bottom > div > a {
         text-transform: uppercase;
         font-family: neue-haas-grotesk-display, sans;
         font-weight: 900;
@@ -67,12 +67,10 @@ const Header = ({ isCartOpen, isMenuOpen, children }) =>
         font-size: 1rem;
         line-height: 1rem;
       }
-      .bottom > div:last-child {
+      .bottom > div:last-child > a {
         background-color: ${velaGreen};
         display: block;
         white-space: nowrap;
-      }
-      .bottom > div:last-child a {
         color: ${lightGray};
       }
       @media only screen and (min-width: 768px) {
@@ -89,10 +87,10 @@ const Header = ({ isCartOpen, isMenuOpen, children }) =>
         header > div {
           flex-direction: column;
         }
-        header > div > :global(div) {
+        header > div :global(a) {
           min-height: 5rem;
         }
-        .bottom > div {
+        .bottom > div > a {
           writing-mode: vertical-rl;
           text-orientation: sideways;
           transform: rotate(180deg);
