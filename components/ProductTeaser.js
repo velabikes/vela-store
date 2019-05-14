@@ -19,13 +19,6 @@ const ProductTeaser = ({ product }) =>
       .ProductTeaser {
         margin-top: 2rem
       }
-      h3 {
-        margin-top: 1rem;
-        margin-bottom: 0.5em
-      }
-      h4 {
-        margin-top: 0
-      }
     `}</style>
   </div>
 

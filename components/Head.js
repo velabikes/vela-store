@@ -22,6 +22,7 @@ const CustomHead = props =>
       h1, h2, h3, h4, h5, h6 {
         text-transform: uppercase;
         font-family: neue-haas-grotesk-display, sans;
+        margin: .618em 0;
       }
       h1, h2, h3 {
         font-style: italic;
@@ -30,8 +31,11 @@ const CustomHead = props =>
       }
       h4, h5, h6 {
         font-weight: 600;
-        margin: .5em 0;
         color: ${darkGray};
+      }
+      hr {
+        margin: 1.61rem 0;
+        border: 1px solid red;
       }
       div {
         box-sizing: border-box;

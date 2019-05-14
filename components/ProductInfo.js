@@ -17,19 +17,14 @@ const ProductInfo = ({ product, isProductLoading, setSelectedVariant, selectedVa
       <h4>
         <Price value={selectedVariant && selectedVariant.node ? selectedVariant.node.price : product.variants && product.variants.edges.map(v => v.node.price)} />
       </h4>
+      <hr />
       {product.options && <ProductForm product={product} onVariantSelect={setSelectedVariant} />}
+      <hr />
       <div dangerouslySetInnerHTML={{ __html: product.descriptionHtml }} />
     </div>
     <style jsx>{`
       .ProductInfo :global(.Image) {
         margin-top: 1.5rem;
-      }
-      h1 {
-        margin-bottom: 0
-      }
-      h4 {
-        margin-top: 0;
-        margin-bottom: 1em
       }
       @media only screen and (min-width: 768px) {
         .ProductInfo {
