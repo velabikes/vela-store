@@ -38,6 +38,7 @@
     "react": "^16.8.3",
     "react-apollo": "^2.5.5",
     "react-dom": "^16.8.3",
+    "react-google-maps": "^9.4.5",
     "react-lazyload": "^2.5.0",
     "react-redux": "^7.0.3",
     "recompose": "^0.30.0",

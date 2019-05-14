@@ -6,7 +6,7 @@ const CartPrice = ({ checkout }) =>
     <table>
       <tbody>
         { checkout.availableShippingRates && checkout.availableShippingRates.shippingRates && checkout.availableShippingRates.shippingRates.length && <tr>
-          <td>Envio:{console.log(checkout, 'CartPrice')}</td>
+          <td>Envio para <small>{checkout.shippingAddress.zip}</small>:</td>
           <td>
             <Price value={checkout.availableShippingRates.shippingRates[0].priceV2.amount} />
           </td>
@@ -23,7 +23,7 @@ const CartPrice = ({ checkout }) =>
     </table>
     <style jsx>{`
       td {
-        padding: 0.61rem 0;
+        padding: 0.33rem 0;
       }
       td:last-child {
         text-align: right;

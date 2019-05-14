@@ -54,10 +54,11 @@ export default compose(
         variables: {
           input: {
             allowPartialAddresses: true,
-            shippingAddress: { city: 'Sao Paulo', province: 'SP', country: 'Brazil' }
+            shippingAddress: { city: 'Sao Paulo', province: 'SP', country: 'Brazil', zip: '01000-000' }
           }
         }
       })
+      debugger
       const checkoutId = mutationResponse.data.checkoutCreate.checkout.id
       dispatch(setCheckoutId(checkoutId))
     }

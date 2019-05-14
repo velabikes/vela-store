@@ -1,5 +1,5 @@
 import PaddedView from '../components/PaddedView'
-import ContactMap from '../components/ContactMap'
+import Map from '../components/Map'
 
 const Contact = () =>
   <>
@@ -10,7 +10,7 @@ const Contact = () =>
        <h5>Conheça a Vela, faça test-rides, tome um cafe</h5>
      </div>
   </PaddedView>
-  <ContactMap />
+  <Map />
   <PaddedView>
      <div>
        <h2>Fale com a gente</h2>

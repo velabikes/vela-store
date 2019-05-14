@@ -11,6 +11,13 @@ export default gql`
     ready
     paymentDue
     requiresShipping
+    shippingAddress {
+      address1
+      address2
+      city
+      provinceCode
+      zip
+    }
     order {
       id
       processedAt
