@@ -57,7 +57,9 @@ const ProductForm = ({
 
 const findSelectedVariant = (variants, selected) => {
   return variants.find(variant =>
-    variant.node.selectedOptions.every(option => selected[option.name] === option.value)
+    variant.node.selectedOptions.every(
+      option => selected[option.name] === option.value
+    )
   )
 }
 
@@ -67,7 +69,7 @@ const handleAddToCartClick = ({
   setAddToCartLoading,
   product,
   hasOptions,
-  selected,
+  selectedOptions,
   dispatch
 }) => async e => {
   setAddToCartLoading(true)
@@ -76,7 +78,9 @@ const handleAddToCartClick = ({
       checkoutId: checkoutId,
       lineItems: [
         {
-          variantId: !hasOptions ? product.variants.edges[0].node.id : findSelectedVariant(product.variants.edges, selected).node.id,
+          variantId: !hasOptions
+            ? product.variants.edges[0].node.id
+            : findSelectedVariant(product.variants.edges, selectedOptions).node.id,
           quantity: 1
         }
       ]
