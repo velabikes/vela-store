@@ -14,18 +14,18 @@ const CustomHead = props =>
         padding: 0;
         min-height: 100vh;
         position: relative;
-        font-family: neue-haas-grotesk-text, sans;
         width: 100%;
         color: #3e5052;
         background-color: ${offWhite}
+        font-family: neue-haas-grotesk-display, sans;
       }
       h1, h2, h3, h4, h5, h6 {
-        font-family: neue-haas-grotesk-display, sans;
         text-transform: uppercase;
+        font-family: neue-haas-grotesk-display, sans;
       }
       h1, h2, h3 {
         font-style: italic;
-        font-weight: 900;
+        font-weight: 800;
         color: ${velaGreen};
       }
       h4, h5, h6 {
@@ -37,13 +37,17 @@ const CustomHead = props =>
         box-sizing: border-box;
       }
       small {
-        //font-size: 0.4em;
-        color: #707070;
+        font-size: 0.8rem;
+        color: #777;
       }
       a, a:visited {
         color: ${velaGreen};
         text-decoration: none;
         cursor: pointer;
+      }
+      p {
+        line-height: 1.5em;
+        font-family: neue-haas-grotesk-text, sans;
       }
       img {
         vertical-align: middle;
@@ -63,18 +67,19 @@ const CustomHead = props =>
         border-radius: 0;
         display: block;
         font-size: 1rem;
+        font-family: neue-haas-grotesk-display, sans;
       }
       button {
-        padding: .5em .8em;
+        padding: .61em 1em;
         border-radius: 5px;
         background-color: ${velaGreen};
         color: white;
         border: 0px solid transparent;
         font-family: neue-haas-grotesk-display, sans;
-        font-weight: 900;
+        font-weight: 700;
         font-style: italic;
+        font-size: 1em;
         text-transform: uppercase;
-        font-size: 1.25rem;
         cursor: pointer;
         transition: .4s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
       }
