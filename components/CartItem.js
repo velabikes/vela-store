@@ -45,6 +45,7 @@ const CartItem = ({ item, handleMoreClick, handleLessClick }) =>
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        padding-right: 1rem;
       }
       td.quantity {
         width: 1.5em;

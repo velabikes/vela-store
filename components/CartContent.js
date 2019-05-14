@@ -27,6 +27,9 @@ const CartContent = ({ checkout }) =>
       .items {
         flex: 1
       }
+      .items table {
+        border-spacing: 0 1rem;
+      }
       .footer {
         padding-top: 1em;
         display: flex;

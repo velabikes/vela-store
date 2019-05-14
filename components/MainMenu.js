@@ -3,6 +3,7 @@ import { compose, lifecycle } from 'recompose'
 import Link from 'next/link'
 import withCheckout from '../containers/withCheckout'
 import PaddedView from '../components/PaddedView'
+import { velaBlue } from '../style/colors'
 
 const MainMenu = () =>
   <PaddedView className='MainMenu'>
@@ -26,8 +27,11 @@ const MainMenu = () =>
       }
       li {
         list-style: none;
-        line-height: 2em;
+        line-height: 3em;
+        font-weight: 600;
         font-size: 1em;
+        color: ${velaBlue};
+        text-transform: uppercase;
       }
       li
     `}</style>
