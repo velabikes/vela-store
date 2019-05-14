@@ -6,11 +6,15 @@ const CartPrice = ({ checkout }) =>
     <table>
       <tbody>
         { checkout.availableShippingRates && checkout.availableShippingRates.shippingRates && checkout.availableShippingRates.shippingRates.length && <tr>
-          <td>Envio:</td>
+          <td>Envio:{console.log(checkout, 'CartPrice')}</td>
           <td>
             <Price value={checkout.availableShippingRates.shippingRates[0].priceV2.amount} />
           </td>
         </tr>}
+        <tr>
+          <td>Impostos (?):</td>
+          <td><Price value={checkout.totalTax} /></td>
+        </tr>
         <tr>
           <td>Total:</td>
           <td><Price value={checkout.totalPrice} /></td>
