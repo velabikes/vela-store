@@ -26,6 +26,9 @@ const Header = ({ isCartOpen, isMenuOpen, children }) =>
     </header>
     <div className='app-content'>
       {children}
+      <div className='copyright'>
+        <small>COPYRIGHT (C) 2019 VELA BIKES. TODOS DIREITOS RESERVADOS</small>
+      </div>
     </div>
     <style jsx>{`
       header {
@@ -42,6 +45,10 @@ const Header = ({ isCartOpen, isMenuOpen, children }) =>
       }
       .app-content {
         padding-top: 4em;
+      }
+      .copyright {
+        text-align: center;
+        padding: 1em 0;
       }
       header > div {
         display: flex;
@@ -84,6 +91,9 @@ const Header = ({ isCartOpen, isMenuOpen, children }) =>
         .app-content {
           padding-left: 5em;
           padding-top: 0;
+        }
+        .app-content > :global(div:first-child) {
+          min-height: 100vh;
         }
         header > div {
           flex-direction: column;
