@@ -16,7 +16,7 @@ const CustomHead = props =>
         position: relative;
         width: 100%;
         color: #3e5052;
-        background-color: ${offWhite}
+        background-color: ${offWhite};
         font-family: neue-haas-grotesk-display, sans;
       }
       h1, h2, h3, h4, h5, h6 {
@@ -46,7 +46,7 @@ const CustomHead = props =>
         cursor: pointer;
       }
       p {
-        line-height: 1.5em;
+        line-height: 2em;
         font-family: neue-haas-grotesk-text, sans;
       }
       img {
@@ -76,10 +76,8 @@ const CustomHead = props =>
         color: white;
         border: 0px solid transparent;
         font-family: neue-haas-grotesk-display, sans;
-        font-weight: 700;
-        font-style: italic;
+        font-weight: 500;
         font-size: 1em;
-        text-transform: uppercase;
         cursor: pointer;
         transition: .4s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
       }
