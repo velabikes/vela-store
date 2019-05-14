@@ -46,7 +46,7 @@ const ProductForm = ({
       onClick={handleAddToCartClick}
       disabled={hasOptions && Object.keys(selectedOptions).length !== product.options.length}
     >
-      { isAddToCartLoading ? 'Carregando...' : 'comprar' }
+      { isAddToCartLoading ? 'Carregando...' : 'adicionar ao carrinho' }
     </button>
     <style jsx>{`
       .option {

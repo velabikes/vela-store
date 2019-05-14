@@ -11,6 +11,7 @@ const CartContent = ({ checkout }) =>
         </tbody>
       </table>
     </div>
+    <hr />
     <div className='price'>
       <CartPrice checkout={checkout} />
     </div>

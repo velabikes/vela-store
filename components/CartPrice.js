@@ -22,15 +22,11 @@ const CartPrice = ({ checkout }) =>
       </tbody>
     </table>
     <style jsx>{`
-      td {
-        padding: 0.33rem 0;
-      }
       td:last-child {
         text-align: right;
       }
       tr:last-child td {
         font-size: 1.25em;
-        border-top: 1px solid ${lightGray};
       }
     `}</style>
   </div>

@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { velaGreen, velaBlue, darkGray, offWhite } from '../style/colors'
+import { velaGreen, velaBlue, darkGray, offWhite, lightGray } from '../style/colors'
 
 const CustomHead = props =>
   <>
@@ -35,7 +35,8 @@ const CustomHead = props =>
       }
       hr {
         margin: 1.61rem 0;
-        border: 1px solid red;
+        border: 1px solid #e2e3e3;
+        border-bottom: none;
       }
       div {
         box-sizing: border-box;
@@ -50,7 +51,7 @@ const CustomHead = props =>
         cursor: pointer;
       }
       p {
-        line-height: 2em;
+        line-height: 1.618em;
         font-family: neue-haas-grotesk-text, sans;
       }
       img {
@@ -59,7 +60,7 @@ const CustomHead = props =>
       }
       table {
         width: 100%;
-        border-spacing: 0;
+        border-spacing: 0 .372em;
       }
       label {
         font-weight: 600;
@@ -80,10 +81,12 @@ const CustomHead = props =>
         color: white;
         border: 0px solid transparent;
         font-family: neue-haas-grotesk-display, sans;
-        font-weight: 500;
         font-size: 1em;
         cursor: pointer;
         transition: .4s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        text-transform: uppercase;
+        font-style: italic;
+        font-weight: 700;
       }
       button:disabled {
         opacity: 0.7;

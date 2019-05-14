@@ -23,8 +23,11 @@ const ProductInfo = ({ product, isProductLoading, setSelectedVariant, selectedVa
       <div dangerouslySetInnerHTML={{ __html: product.descriptionHtml }} />
     </div>
     <style jsx>{`
-      .ProductInfo :global(.Image) {
-        margin-top: 1.5rem;
+      h1 {
+        margin: 0;
+      }
+      .ProductInfo {
+        padding-top: 1.61rem;
       }
       @media only screen and (min-width: 768px) {
         .ProductInfo {
