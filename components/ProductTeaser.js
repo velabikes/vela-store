@@ -8,9 +8,9 @@ const ProductTeaser = ({ product }) =>
   <div className='ProductTeaser'>
     <Link href={'/store/product?handle=' + product.handle}><a>
       <Image src={product.images && product.images.edges[0].node.src} />
-      <h2>
+      <h3>
         {product.title}
-      </h2>
+      </h3>
       <h4>
         <Price value={product.variants.edges.map(v => v.node.price)} />
       </h4>
@@ -19,9 +19,9 @@ const ProductTeaser = ({ product }) =>
       .ProductTeaser {
         margin-top: 2rem
       }
-      h2 {
+      h3 {
         margin-top: 1rem;
-        margin-bottom: 0
+        margin-bottom: 0.5em
       }
       h4 {
         margin-top: 0
