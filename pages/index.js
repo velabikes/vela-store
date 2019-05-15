@@ -1,7 +1,7 @@
 const HomePage = () =>
   <div className='HomePage'>
-    <img src='https://gallery.mailchimp.com/68a0cce7cc109d78a8b44d7a0/images/8d489dc5-e7c2-4fb0-aa4d-ce15b001a6d9.jpg' className='desktop' alt='' />
-    <img src='https://gallery.mailchimp.com/68a0cce7cc109d78a8b44d7a0/images/65bd53d9-b574-4107-b641-c6100423667b.jpg' className='mobile' alt='' />
+    <img src='https://gallery.mailchimp.com/68a0cce7cc109d78a8b44d7a0/images/82b613c5-7dd6-4c3c-b539-bbdb523b3cc9.jpg' className='desktop' alt='' />
+    <img src='https://gallery.mailchimp.com/68a0cce7cc109d78a8b44d7a0/images/872f4266-37f2-4939-bd66-5745b34ff5e8.jpg' className='mobile' alt='' />
     <div className='cta'>
       <h1>Vá de Vela</h1>
       <h5>Algum texto eletrica</h5>
