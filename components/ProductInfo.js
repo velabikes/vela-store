@@ -24,7 +24,7 @@ const ProductInfo = ({ product, isProductLoading, setSelectedVariant, selectedVa
     </div>
     <style jsx>{`
       h1 {
-        margin: 0;
+        margin-top: 0;
       }
       .ProductInfo {
         padding-top: 1.61rem;

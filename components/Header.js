@@ -93,7 +93,7 @@ const Header = ({ isCartOpen, isMenuOpen, children }) =>
           padding-top: 0;
         }
         .app-content > :global(div:first-child) {
-          min-height: 100vh;
+          min-height: calc(100vh - 3rem);
         }
         header > div {
           flex-direction: column;

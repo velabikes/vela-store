@@ -42,11 +42,13 @@ const ProductForm = ({
         )}
       </div>
     )}
+    <div><label>Disponibilidade: </label><span>Em Estoque</span></div>
+    <br />
     <button
       onClick={handleAddToCartClick}
       disabled={hasOptions && Object.keys(selectedOptions).length !== product.options.length}
     >
-      { isAddToCartLoading ? 'Carregando...' : 'adicionar ao carrinho' }
+      { isAddToCartLoading ? 'Carregando...' : 'comprar' }
     </button>
     <style jsx>{`
       .option {
@@ -100,9 +102,9 @@ export default compose(
   })),
   withPropsOnChange(
     (props, nextProps) =>
-      nextProps.selectedVariant
-      && !props.selectedVariant
-      || props.selectedVariant !== nextProps.selectedVariant,
+      nextProps.selectedVariant &&
+      !props.selectedVariant ||
+      props.selectedVariant !== nextProps.selectedVariant,
     ({ selectedVariant, onVariantSelect }) => onVariantSelect(selectedVariant)
   ),
   withState('isAddToCartLoading', 'setAddToCartLoading', false),

@@ -17,8 +17,8 @@ const CartItem = ({ item, handleMoreClick, handleLessClick }) =>
       <a onClick={() => handleLessClick(item)}>-</a>
     </td>
     <td className='name'>
-      <div><b>{item.node.title}</b></div>
-      <small>{item.node.variant && item.node.variant.title !== "Default Title" && item.node.variant.title.replace(/\s*\[.*?\]/g, '')}</small>
+      <div>{item.node.title}</div>
+      <small>{item.node.variant && item.node.variant.title !== 'Default Title' && item.node.variant.title.replace(/\s*\[.*?\]/g, '')}</small>
     </td>
     <td><Price value={item.node.variant && item.node.variant.price} /></td>
     <style jsx>{`
@@ -38,7 +38,7 @@ const CartItem = ({ item, handleMoreClick, handleLessClick }) =>
         line-height: 1.8em;
         text-align: center;
         font-size: .8em;
-        font-weight: 700;
+        font-weight: 600;
         color: white;
       }
       td.name {
@@ -46,6 +46,7 @@ const CartItem = ({ item, handleMoreClick, handleLessClick }) =>
         overflow: hidden;
         text-overflow: ellipsis;
         padding-right: 1rem;
+        font-weight: 600;
       }
       td.quantity {
         width: 1.5em;
