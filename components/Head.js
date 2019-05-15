@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { velaGreen, velaBlue, darkGray, offWhite, lightGray } from '../style/colors'
+import { velaGreen, velaBlue, offBlack, offWhite, lightGray } from '../style/colors'
 
 const CustomHead = props =>
   <>
@@ -15,7 +15,7 @@ const CustomHead = props =>
         min-height: 100vh;
         position: relative;
         width: 100%;
-        color: #3e5052;
+        color: ${offBlack};
         background-color: ${offWhite};
         font-family: neue-haas-grotesk-display, sans;
       }
@@ -31,12 +31,14 @@ const CustomHead = props =>
       }
       h4, h5, h6 {
         font-weight: 600;
-        color: ${darkGray};
+        color: ${offBlack};
+      }
+      h4 {
+        font-size: 1.26em;
       }
       hr {
         margin: 1.61rem 0;
-        border: 1px solid #e2e3e3;
-        border-bottom: none;
+        border: 1px solid #e2e2e2;
       }
       div {
         box-sizing: border-box;
@@ -58,13 +60,22 @@ const CustomHead = props =>
         vertical-align: middle;
         width: 100%;
       }
+      ul {
+        padding-left: 1.61em;
+      }
+      li {
+        line-height: 1.37em;
+        color: ${offBlack};
+        margin: 0.37em;
+        font-family: neue-haas-grotesk-text, sans;
+      }
       table {
         width: 100%;
         border-spacing: 0 .372em;
       }
       label {
         font-weight: 600;
-        display: block;
+        color: ${offBlack}
       }
       input:not([type='checkbox']) {
         border: 0;
