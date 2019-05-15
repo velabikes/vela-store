@@ -102,9 +102,9 @@ export default compose(
   })),
   withPropsOnChange(
     (props, nextProps) =>
-      nextProps.selectedVariant
-      && !props.selectedVariant
-      || props.selectedVariant !== nextProps.selectedVariant,
+      nextProps.selectedVariant &&
+      !props.selectedVariant ||
+      props.selectedVariant !== nextProps.selectedVariant,
     ({ selectedVariant, onVariantSelect }) => onVariantSelect(selectedVariant)
   ),
   withState('isAddToCartLoading', 'setAddToCartLoading', false),

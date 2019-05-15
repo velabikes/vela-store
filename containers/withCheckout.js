@@ -35,12 +35,12 @@ const withCheckoutHoC = graphql(checkout, {
     return {
       variables: {
         id: props.checkoutId || props.handleCheckoutCreation(),
-        withShippingRates: !props.withShippingRates ? false : true
+        withShippingRates: !!props.withShippingRates
       }
     }
   },
 
-  props ({ data: { node, loading, error, refetch }}) {
+  props ({ data: { node, loading, error, refetch } }) {
     return { checkout: node, isCheckoutLoading: loading, checkoutRefetch: refetch }
   }
 })

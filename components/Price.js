@@ -1,4 +1,4 @@
-import { compose, withProps } from "recompose"
+import { compose, withProps } from 'recompose'
 
 const Price = ({ minValue, maxValue }) =>
   <span className='price'>

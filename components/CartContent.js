@@ -16,7 +16,7 @@ const CartContent = ({ checkout }) =>
       <CartPrice checkout={checkout} />
     </div>
     <div className='footer'>
-      <small></small>
+      <small />
       <button type='button' onClick={() => window.location.replace(checkout.webUrl)}>Finalizar</button>
     </div>
     <style jsx>{`

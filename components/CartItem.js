@@ -18,7 +18,7 @@ const CartItem = ({ item, handleMoreClick, handleLessClick }) =>
     </td>
     <td className='name'>
       <div>{item.node.title}</div>
-      <small>{item.node.variant && item.node.variant.title !== "Default Title" && item.node.variant.title.replace(/\s*\[.*?\]/g, '')}</small>
+      <small>{item.node.variant && item.node.variant.title !== 'Default Title' && item.node.variant.title.replace(/\s*\[.*?\]/g, '')}</small>
     </td>
     <td><Price value={item.node.variant && item.node.variant.price} /></td>
     <style jsx>{`

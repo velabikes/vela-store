@@ -54,7 +54,7 @@ export default compose(
     handleCloseClick: ({ dispatch }) => e => dispatch(toggleDrawer(''))
   }),
   lifecycle({
-    componentDidMount() {
+    componentDidMount () {
       Router.events.on('routeChangeStart', this.props.handleCloseClick)
     }
   })
