@@ -43,7 +43,7 @@ const CartContent = ({ checkout }) =>
 export default compose(
   branch(
     ({ checkout }) => checkout && !checkout.lineItems.edges.length,
-    renderComponent(props => <div>Nao ha itens para exibir.</div>)
+    renderComponent(props => <div>Seu carrinho de compras está vazio.</div>)
   ),
   branch(
     ({ checkout, loading }) => !checkout,
