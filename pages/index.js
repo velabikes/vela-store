@@ -12,7 +12,7 @@ const HomePage = () =>
          position: relative;
       }
       img {
-        height: calc(100vh - 4rem);
+        height: calc(100vh-4rem);
         object-fit: cover;
         width: 100%;
       }
@@ -25,7 +25,16 @@ const HomePage = () =>
       .desktop {
         display: none;
       }
+      :global(.copyright) {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+      }
       @media only screen and (min-width: 768px) {
+        img {
+          height: calc(100vh);
+        }
         .cta {
           text-align: right;
           top: calc(5% + 10px);
