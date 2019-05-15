@@ -30,6 +30,9 @@ query productQuery($handle: String!) {
               name
               value
             }
+            image {
+              originalSrc
+            }
           }
         }
       }

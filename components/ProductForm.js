@@ -97,7 +97,7 @@ export default compose(
   withProps(({ product }) => ({ hasOptions: product.options.length > 1 || product.options[0].values.length > 1 })),
   withProps(({ product, hasOptions, selectedOptions }) => ({
     selectedVariant: !hasOptions
-      ? product.variants.edges[0].node.id
+      ? product.variants.edges[0]
       : findSelectedVariant(product.variants.edges, selectedOptions)
   })),
   withPropsOnChange(

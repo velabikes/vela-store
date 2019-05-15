@@ -7,10 +7,7 @@ import ProductForm from './ProductForm'
 const ProductInfo = ({ product, isProductLoading, setSelectedVariant, selectedVariant }) =>
   <div className='ProductInfo'>
     <div>
-      {!product && <Image />}
-      {product.images && product.images.edges.map(edge =>
-        <Image src={edge.node.src} key={edge.node.src} alt='' />
-      )}
+      <Image src={selectedVariant ? selectedVariant.node && selectedVariant.node.image.originalSrc : product.images && product.images.edges[0].node.src} alt='' />
     </div>
     <div>
       <h1>{product.title}</h1>
