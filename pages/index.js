@@ -3,9 +3,11 @@ const HomePage = () =>
     <img src='https://gallery.mailchimp.com/68a0cce7cc109d78a8b44d7a0/images/82b613c5-7dd6-4c3c-b539-bbdb523b3cc9.jpg' className='desktop' alt='' />
     <img src='https://gallery.mailchimp.com/68a0cce7cc109d78a8b44d7a0/images/3ad24714-654d-48ec-88bc-42223879e6b1.jpg' className='mobile' alt='' />
     <div className='cta'>
-      <h1>Vá de Vela</h1>
-      <h5>Algum texto eletrica</h5>
-      <button>Compre a sua</button>
+      <div className='slogan'>
+        <h1>#VADEVELA</h1>
+        <h4>Algum texto eletrica</h4>
+      </div>
+      <button>Monte a sua</button>
     </div>
     <style jsx>{`
       .HomePage {
@@ -22,6 +24,12 @@ const HomePage = () =>
         left: calc(5%);
         bottom: calc(5%);
       }
+      h1, h4 {
+        margin: 0
+      }
+      button {
+        margin-top: 1rem;
+      }
       .desktop {
         display: none;
       }
@@ -37,8 +45,11 @@ const HomePage = () =>
         }
         .cta {
           text-align: right;
-          top: calc(5% + 10px);
-          right: calc(5% + 20px);
+          top: calc(1% + 10px);
+          right: calc(1% + 20px);
+        }
+        h1 {
+          font-size: ${4.40}em;
         }
         .mobile {
           display: none;
