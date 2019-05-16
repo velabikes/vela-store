@@ -3,24 +3,31 @@ const HomePage = () =>
     <img src='https://gallery.mailchimp.com/68a0cce7cc109d78a8b44d7a0/images/69c9e416-74cd-4be5-a8db-7a04763999cb.jpg' className='desktop' alt='' />
     <img src='https://gallery.mailchimp.com/68a0cce7cc109d78a8b44d7a0/images/5a250267-fd4a-44db-8103-8dff543ffa91.jpg' className='mobile' alt='' />
     <div className='cta'>
-      <h1>Vá de Vela</h1>
-      <h5>Algum texto eletrica</h5>
-      <button>Compre a sua</button>
+      <div className='slogan'>
+        <h1>#VADEVELA</h1>
+        <h4>Algum texto eletrica</h4>
+      </div>
+      <button>Monte a sua</button>
     </div>
     <style jsx>{`
       .HomePage {
          position: relative;
       }
       img {
-        height: calc(100vh-4rem);
+        height: calc(100vh - 4rem);
         object-fit: cover;
         width: 100%;
       }
       .cta {
         position: absolute;
-        text-align: right;
-        left: calc(5%);
-        bottom: calc(5%);
+        left: calc(3% + 2rem);
+        top: calc(3% + 2rem);
+      }
+      h1, h4 {
+        margin: 0
+      }
+      button {
+        margin-top: 1rem;
       }
       .desktop {
         display: none;
@@ -37,8 +44,11 @@ const HomePage = () =>
         }
         .cta {
           text-align: right;
-          top: calc(5% + 10px);
-          right: calc(5% + 20px);
+          top: calc(1% + 2rem);
+          right: calc(1% + 2rem);
+        }
+        h1 {
+          font-size: ${4.40}em;
         }
         .mobile {
           display: none;
