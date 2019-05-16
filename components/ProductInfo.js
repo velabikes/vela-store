@@ -20,9 +20,6 @@ const ProductInfo = ({ product, setSelectedVariant, selectedVariant }) =>
       <div dangerouslySetInnerHTML={{ __html: product.descriptionHtml }} />
     </div>
     <style jsx>{`
-      h1 {
-        margin-top: 0;
-      }
       .ProductInfo {
         padding-top: 1.61rem;
       }
@@ -32,6 +29,9 @@ const ProductInfo = ({ product, setSelectedVariant, selectedVariant }) =>
         }
         .ProductInfo > div { flex: 1 }
         .ProductInfo > div:first-child { flex: 1.58; padding-right: 2em }
+        h1 {
+          margin: 0;
+        }
       }
     `}</style>
   </div>

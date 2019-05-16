@@ -1,3 +1,5 @@
+import { lightGray } from '../style/colors'
+
 const HomePage = () =>
   <div className='HomePage'>
     <img src='https://gallery.mailchimp.com/68a0cce7cc109d78a8b44d7a0/images/69c9e416-74cd-4be5-a8db-7a04763999cb.jpg' className='desktop' alt='' />
@@ -19,9 +21,10 @@ const HomePage = () =>
         width: 100%;
       }
       .cta {
+        text-align: right;
         position: absolute;
-        left: calc(3% + 2rem);
-        top: calc(3% + 2rem);
+        right: 1rem;
+        top: 1rem;
       }
       h1, h4 {
         margin: 0
@@ -37,13 +40,13 @@ const HomePage = () =>
         bottom: 0;
         left: 0;
         right: 0;
+        color: ${lightGray}
       }
       @media only screen and (min-width: 768px) {
         img {
           height: calc(100vh);
         }
         .cta {
-          text-align: right;
           top: calc(1% + 2rem);
           right: calc(1% + 2rem);
         }
