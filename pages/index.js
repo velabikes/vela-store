@@ -1,4 +1,4 @@
-import { lightGray } from '../style/colors'
+import { lightGray, velaBlue } from '../style/colors'
 
 const HomePage = () =>
   <div className='HomePage'>
@@ -7,7 +7,7 @@ const HomePage = () =>
     <div className='cta'>
       <div className='slogan'>
         <h1>#VADEVELA</h1>
-        <h4>Algum texto eletrica</h4>
+        <h4>FAÇA PARTE DA REVOLUÇÃO NA MOBILIDADE ELÉTRICA</h4>
       </div>
       <button>Monte a sua</button>
     </div>
@@ -51,7 +51,8 @@ const HomePage = () =>
           right: calc(1% + 2rem);
         }
         h1 {
-          font-size: ${4.40}em;
+          font-size: 4.40em;
+          font-weight: 900;
         }
         .mobile {
           display: none;
