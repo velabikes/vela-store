@@ -14,15 +14,14 @@ const HomePage = () =>
          position: relative;
       }
       img {
-        height: calc(100vh-4rem);
+        height: calc(100vh - 4rem);
         object-fit: cover;
         width: 100%;
       }
       .cta {
         position: absolute;
-        text-align: right;
-        left: calc(5%);
-        bottom: calc(5%);
+        left: calc(3% + 2rem);
+        top: calc(3% + 2rem);
       }
       h1, h4 {
         margin: 0
@@ -45,8 +44,8 @@ const HomePage = () =>
         }
         .cta {
           text-align: right;
-          top: calc(1% + 10px);
-          right: calc(1% + 20px);
+          top: calc(1% + 2rem);
+          right: calc(1% + 2rem);
         }
         h1 {
           font-size: ${4.40}em;
