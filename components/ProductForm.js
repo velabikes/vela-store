@@ -12,6 +12,7 @@ const OptionButton = ({ selected, children, ...props }) =>
         color: ${selected ? 'white' : velaBlue};
         border: 1px solid ${velaBlue};
         font-size: 0.75rem;
+        margin: 0.61em 0.61em 0 0;
       }
     `}</style>
   </button>
@@ -28,18 +29,20 @@ const ProductForm = ({
 }) =>
   <div className='ProductForm'>
     {hasOptions && product.options.map(option =>
-      <div className='option'>
+      <div className='options'>
         <label>{option.name}</label>
-        {option.values.map(value =>
-          <OptionButton
-            onClick={() => {
-              setSelectedOptions({ ...selectedOptions, [option.name]: value })
-            }}
-            selected={selectedOptions[option.name] === value}
-          >
-            {value.replace(/\s*\[.*?\]\s*/g, '')}
-          </OptionButton>
-        )}
+        <div>
+          {option.values.map(value =>
+            <OptionButton
+              onClick={() => {
+                setSelectedOptions({ ...selectedOptions, [option.name]: value })
+              }}
+              selected={selectedOptions[option.name] === value}
+            >
+              {value.replace(/\s*\[.*?\]\s*/g, '')}
+            </OptionButton>
+          )}
+        </div>
       </div>
     )}
     <div><label>Disponibilidade: </label><span>Em Estoque</span></div>
@@ -51,8 +54,11 @@ const ProductForm = ({
       { isAddToCartLoading ? 'Carregando...' : 'comprar' }
     </button>
     <style jsx>{`
-      .option {
+      .options {
         margin-bottom: 1em;
+      }
+      .options label {
+        margin-bottom: 0.61em;
       }
     `}</style>
   </div>

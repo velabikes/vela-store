@@ -33,6 +33,9 @@ const CustomHead = props =>
         font-weight: 600;
         color: ${offBlack};
       }
+      h3 {
+        font-size: 1.39em;
+      }
       h4 {
         font-size: 1.26em;
       }
@@ -98,6 +101,7 @@ const CustomHead = props =>
         text-transform: uppercase;
         font-style: italic;
         font-weight: 700;
+        margin: 0;
       }
       button:disabled {
         opacity: 0.7;

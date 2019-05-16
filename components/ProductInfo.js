@@ -4,7 +4,7 @@ import Price from '../components/Price'
 import Image from '../components/Image'
 import ProductForm from './ProductForm'
 
-const ProductInfo = ({ product, isProductLoading, setSelectedVariant, selectedVariant }) =>
+const ProductInfo = ({ product, setSelectedVariant, selectedVariant }) =>
   <div className='ProductInfo'>
     <div>
       <Image src={selectedVariant ? selectedVariant.node && selectedVariant.node.image.originalSrc : product.images && product.images.edges[0].node.src} alt='' />
