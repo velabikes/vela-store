@@ -5,14 +5,29 @@ import { velaBlue } from '../style/colors'
 import { toggleDrawer } from '../lib/redux'
 
 const OptionButton = ({ selected, children, ...props }) =>
-  <button {...props}>{children}
+  <button {...props}>
+    <span />
+    {children.replace(/\s*\[.*?\]\s*/g, '')}
     <style jsx>{`
       button {
         background: ${selected ? velaBlue : 'transparent'};
         color: ${selected ? 'white' : velaBlue};
         border: 1px solid ${velaBlue};
-        font-size: 0.75rem;
+        font-size: 0.61rem;
         margin: 0.61em 0.61em 0 0;
+        display: inline-block;
+        text-transform: uppercase;
+        font-style: normal;
+      }
+      span {
+        background-color: ${children.match(/\s*\[.*?\]\s*/g) && children.match(/\[(.*?)\]/)[1]};
+        margin: 0 auto;
+        display: ${children.match(/\s*\[.*?\]\s*/g) ? 'block' : 'none'};
+        height: 1.61em;
+        border-radius: 1em;
+        margin-bottom: ${0.61 * 0.61}em;
+        width: 3em;
+        border: 2px solid white;
       }
     `}</style>
   </button>
@@ -29,9 +44,9 @@ const ProductForm = ({
 }) =>
   <div className='ProductForm'>
     {hasOptions && product.options.map(option =>
-      <div className='options'>
-        <label>{option.name}</label>
-        <div>
+      <div className='optionField'>
+        <label>{option.name}:</label><br />
+        <div className='options'>
           {option.values.map(value =>
             <OptionButton
               onClick={() => {
@@ -39,7 +54,7 @@ const ProductForm = ({
               }}
               selected={selectedOptions[option.name] === value}
             >
-              {value.replace(/\s*\[.*?\]\s*/g, '')}
+              {value}
             </OptionButton>
           )}
         </div>
@@ -54,11 +69,12 @@ const ProductForm = ({
       { isAddToCartLoading ? 'Carregando...' : 'comprar' }
     </button>
     <style jsx>{`
-      .options {
+      .optionField {
         margin-bottom: 1em;
       }
-      .options label {
-        margin-bottom: 0.61em;
+      .optionField label {
+        display: inline-block;
+        margin-bottom: .37em;
       }
     `}</style>
   </div>

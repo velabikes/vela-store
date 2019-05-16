@@ -27,7 +27,7 @@ const MainMenu = () =>
       }
       li {
         list-style: none;
-        line-height: 3em;
+        line-height: 2em;
         font-weight: 600;
         font-size: 1em;
         color: ${velaBlue};
