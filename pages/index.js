@@ -7,7 +7,7 @@ const HomePage = () =>
     <div className='cta'>
       <div className='slogan'>
         <h1>#VADEVELA</h1>
-        <h4>FAÇA PARTE DA REVOLUÇÃO NA MOBILIDADE ELÉTRICA</h4>
+        <h4>FAÇA PARTE DA REVOLUÇÃO ELÉTRICA<br /> NA MOBILIDADE URBANA</h4>
       </div>
       <button>Monte a sua</button>
     </div>
@@ -31,6 +31,7 @@ const HomePage = () =>
       }
       button {
         margin-top: 1rem;
+        font-size: 1.29em;
       }
       .desktop {
         display: none;
@@ -40,7 +41,10 @@ const HomePage = () =>
         bottom: 0;
         left: 0;
         right: 0;
+      }
+      :global(.copyright) :global(small) {
         color: ${lightGray}
+
       }
       @media only screen and (min-width: 768px) {
         img {

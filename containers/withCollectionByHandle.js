@@ -5,6 +5,7 @@ const collectionByHandle = gql`
 query collectionByHandleQuery($handle: String!) {
   shop {
     collectionByHandle(handle: $handle) {
+      title
       products(first: 20) {
         edges {
           node {

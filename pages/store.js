@@ -9,7 +9,7 @@ const Store = ({
   collection, isCollectionLoading
 }) =>
   <PaddedView>
-    <h1>Loja</h1>
+    <h1>{collection && collection.title}</h1>
     <ProductList products={collection && collection.products} loading={isCollectionLoading} />
   </PaddedView>
 
