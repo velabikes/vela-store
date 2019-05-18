@@ -16,19 +16,14 @@ const MainMenu = () =>
         <li><Link href='/store'><a>
           Acessórios
         </a></Link></li>
-<<<<<<< HEAD
-        <li><Link href='/stores'><a>
-          Nossas Lojas
-=======
         <li><Link href='/locations'><a>
           Nossas lojas
         </a></Link></li>
-		<li><Link href='/about'><a>
+        <li><Link href='/about'><a>
           Sobre nós
-		 </a></Link></li>
-        <li><Link href='/contact'><a>
+        </a></Link></li>
+        <li><Link href='/support'><a>
           Suporte
->>>>>>> a0252b1fca0898a186721d9ffbfa39e2d2763390
         </a></Link></li>
       </ul>
     </nav>

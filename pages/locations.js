@@ -1,7 +1,7 @@
 import fetch from 'isomorphic-fetch'
 import PaddedView from '../components/PaddedView'
 
-const Stores = ({ stores }) =>
+const Locations = ({ stores }) =>
   <>
     {console.log(stores)}
     <PaddedView className='Stores'>
@@ -32,7 +32,7 @@ const Stores = ({ stores }) =>
     </PaddedView>
   </>
 
-Stores.getInitialProps = async () => {
+Locations.getInitialProps = async () => {
   const host = typeof window === 'undefined' ? 'http://localhost:3000' : 'http://' + window.location.hostname.concat(':3000')
 
   const response = await fetch(host.concat('/api/stores'))
@@ -41,4 +41,4 @@ Stores.getInitialProps = async () => {
   return json
 }
 
-export default Stores
+export default Locations
