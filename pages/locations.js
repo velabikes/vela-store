@@ -33,6 +33,7 @@ const Locations = ({ stores }) =>
   </>
 
 Locations.getInitialProps = async ({ req }) => {
+  console.log(req)
   const baseUrl = req ? `${req.protocol}://${req.headers.host}` : ''
   const response = await fetch(baseUrl + '/api/stores')
   const json = await response.json()
