@@ -33,9 +33,8 @@ const Locations = ({ stores }) =>
   </>
 
 Locations.getInitialProps = async ({ req }) => {
-  const protocol = process.env.NOW_REGION === 'dev1' ? 'http' : 'https'
-  const baseUrl = `${protocol}://${req.headers.host}/api/stores`
-  const response = await fetch(baseUrl)
+  const baseUrl = req ? `${req.protocol}://${req.get('Host')}` : '';
+  const response = await fetch(baseUrl + '/api/stores');
   const json = await response.json()
 
   return json
