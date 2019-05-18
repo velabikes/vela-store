@@ -12,7 +12,7 @@ const CartPrice = ({ checkout }) =>
           </td>
         </tr>}
         <tr>
-          <td><label>Impostos (?):</label></td>
+          <td><label>Impostos estaduais (?):</label></td>
           <td><Price value={checkout.totalTax} /></td>
         </tr>
         <tr>

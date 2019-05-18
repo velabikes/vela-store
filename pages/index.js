@@ -55,7 +55,7 @@ const HomePage = () =>
           right: calc(1% + 2rem);
         }
         h1 {
-          font-size: 4.40em;
+          font-size: 3.1em;
           font-weight: 900;
         }
         .mobile {
