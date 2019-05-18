@@ -32,12 +32,10 @@ const Locations = ({ stores }) =>
     </PaddedView>
   </>
 
-Locations.getInitialProps = async () => {
-  const host = typeof window === 'undefined'
-    ? process.env.NOW_REGION ? 'http://localhost' : 'http://localhost:3000'
-    : 'http://' + window.location.hostname.concat(window.location.hostname === 'localhost' ? ':3000' : '')
-
-  const response = await fetch(host.concat('/api/stores'))
+Locations.getInitialProps = async ({ req }) => {
+  const protocol = process.env.NOW_REGION === 'dev1' ? 'http' : 'https'
+  const baseUrl = `${protocol}://${req.headers.host}/api/stores`
+  const response = await fetch(baseUrl)
   const json = await response.json()
 
   return json
