@@ -16,8 +16,8 @@ const MainMenu = () =>
         <li><Link href='/store'><a>
           Acessorios
         </a></Link></li>
-        <li><Link href='/contact'><a>
-          Contato
+        <li><Link href='/stores'><a>
+          Nossas Lojas
         </a></Link></li>
       </ul>
     </nav>

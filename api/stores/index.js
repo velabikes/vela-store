@@ -14,14 +14,13 @@ module.exports = async (req, res) => {
 
   const fetchPlace = placeid =>
     new Promise((resolve, reject) =>
-      googleMapsClient.place({ placeid }, (err, result) => {
-        if (!err) return resolve(result)
+      googleMapsClient.place({ placeid, language: 'pt-BR' }, (err, result) => {
+        if (!err) return resolve(result.json.result)
       })
     )
 
   const placeArray = await Promise.all(placeIdArray.map(fetchPlace))
+  res.setHeader('Content-Type', 'application/json')
 
-  console.log(placeArray)
-
-  return res.end(JSON.stringify(placeArray))
+  return res.end(JSON.stringify({ stores: placeArray }))
 }
