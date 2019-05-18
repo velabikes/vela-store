@@ -4,5 +4,8 @@
   "builds": [
     { "src": "next.config.js", "use": "@now/next" },
     { "src": "api/**/*.js", "use": "@now/node" }
-  ]
+  ],
+  "env": {
+    "GOOGLE_MAPS_SERVER_KEY": "@google-maps-server-key"
+  }
 }
