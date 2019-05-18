@@ -1,5 +1,6 @@
 import fetch from 'isomorphic-fetch'
 import PaddedView from '../components/PaddedView'
+import { velaGreen } from '../style/colors'
 
 const Locations = ({ stores }) =>
   <>
@@ -13,27 +14,35 @@ const Locations = ({ stores }) =>
         <div
           className='store'
           key={store.placeid}
-          style={{ backgroundImage: 'url(https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=' + store.photos[0].photo_reference + '&key=AIzaSyDPIMs29240aTRj5izYnWSRfmKucLR0cwY' }}
+          style={{ backgroundImage: 'url(https://maps.googleapis.com/maps/api/place/photo?maxwidth=1080&photoreference=' + store.photos[0].photo_reference + '&key=AIzaSyDPIMs29240aTRj5izYnWSRfmKucLR0cwY' }}
         >
-          <div>
-            <h2>{store.address_components[3].long_name}</h2>
-            <address>{store.vicinity}</address>
-            <div className='hours'>
+          <div className='info'>
+            <h1>{store.address_components[3].long_name}</h1>
+            <h4><address>{store.vicinity}</address></h4>
+            <p className='hours'>
               {store.opening_hours.weekday_text.map(day =>
                 <div>{day}</div>
               )}
-            </div>
+            </p>
           </div>
         </div>
       )}
     </PaddedView>
-    <PaddedView>
-      <div>
-        <h2>Fale com a gente</h2>
-        <div>contato@velabikes.com.br</div>
-        <div>4200-4950</div>
-      </div>
-    </PaddedView>
+    <style jsx>{`
+      .store {
+        background-size: cover;
+      }
+      .info {
+        background: ${velaGreen};
+        padding: 1px 20px;
+        width: 300px;
+        margin-bottom: 3em;
+      }
+      .info h1, h4, p {
+        color: white
+      }
+
+    `}</style>
   </>
 
 Locations.getInitialProps = async ({ req }) => {
