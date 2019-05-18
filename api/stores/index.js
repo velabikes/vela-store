@@ -1,9 +1,12 @@
-export default (req, res) => {
-  const googleMapsClient = require('@google/maps').createClient({
+const googleMapsClient = require('@google/maps')
+
+module.exports (req, res) => {
+  const googleMapsClient.createClient({
     key: process.env.GOOGLE_MAPS_SERVER_KEY
   })
 
-  googleMapsClient.findPlace({ input: 'Vela Bikes', inputtype: 'textquery' }, (err, response) => {
+  googleMapsClient.findPlace({ input: 'Vela Bikes Sao Paulo', inputtype: 'textquery' }, (err, response) => {
+    console.log(response)
     if (!err) return res.end(JSON.stringify(response))
     return res.end(JSON.stringify(err))
   })
