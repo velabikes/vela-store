@@ -13,7 +13,7 @@ const Locations = ({ stores }) =>
         <div
           className='store'
           key={store.placeid}
-          style={{ backgroundImage: 'url(https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=' + store.photos[0].photo_reference + 'key=AIzaSyDPIMs29240aTRj5izYnWSRfmKucLR0cwY' }}
+          style={{ backgroundImage: 'url(https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=' + store.photos[0].photo_reference + '&key=AIzaSyDPIMs29240aTRj5izYnWSRfmKucLR0cwY' }}
         >
           <div>
             <h2>{store.address_components[3].long_name}</h2>
