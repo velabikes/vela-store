@@ -10,7 +10,11 @@ const Locations = ({ stores }) =>
         Conheça a Vela, faça test-rides, tome um cafe, escreva um texto para aparecer no nosso site sobre nossas lojas. Aqui deveria ter algo legal escrito.
       </h5>
       {stores && stores.map(store =>
-        <div className='store' key={store.placeid}>
+        <div
+          className='store'
+          key={store.placeid}
+          style={{ backgroundImage: 'url(https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference=' + store.photos[0].photo_reference + 'key=AIzaSyDPIMs29240aTRj5izYnWSRfmKucLR0cwY' }}
+        >
           <div>
             <h2>{store.address_components[3].long_name}</h2>
             <address>{store.vicinity}</address>
@@ -33,7 +37,6 @@ const Locations = ({ stores }) =>
   </>
 
 Locations.getInitialProps = async ({ req }) => {
-  console.log(req)
   const baseUrl = req ? `https://${req.headers.host}` : ''
   const response = await fetch(baseUrl + '/api/stores')
   const json = await response.json()
