@@ -11,13 +11,19 @@ const MainMenu = () =>
       <h1>Menu</h1>
       <ul className='items'>
         <li><Link href='/store?handle=vela-1'><a>
-          Monte a sua
+          Monte sua Vela
         </a></Link></li>
         <li><Link href='/store'><a>
-          Acessorios
+          Acessórios
         </a></Link></li>
+        <li><Link href='/locations'><a>
+          Nossas lojas
+        </a></Link></li>
+		<li><Link href='/about'><a>
+          Sobre nós
+		 </a></Link></li>
         <li><Link href='/contact'><a>
-          Contato
+          Suporte
         </a></Link></li>
       </ul>
     </nav>
