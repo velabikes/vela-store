@@ -29,8 +29,13 @@ const CustomHead = props =>
         font-weight: 800;
         color: ${velaGreen};
       }
+      h1:first-child,
+      h2:first-child,
+      h3:first-child {
+        margin-top: 0;
+      }
       h4, h5, h6 {
-        font-weight: 600;
+        font-weight: 500;
         color: ${offBlack};
       }
       h3 {
@@ -58,6 +63,9 @@ const CustomHead = props =>
       p {
         line-height: 1.618em;
         font-family: neue-haas-grotesk-text, sans;
+      }
+      p:last-child {
+        margin-bottom: 0
       }
       img {
         vertical-align: middle;

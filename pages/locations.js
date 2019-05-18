@@ -7,9 +7,9 @@ const Locations = ({ stores }) =>
     {console.log(stores)}
     <PaddedView className='Stores'>
       <h1>Nossas Lojas</h1>
-      <h5>
+      <h4>
         Conheça a Vela, faça test-rides, tome um cafe, escreva um texto para aparecer no nosso site sobre nossas lojas. Aqui deveria ter algo legal escrito.
-      </h5>
+      </h4>
       {stores && stores.map(store =>
         <div
           className='store'
@@ -19,11 +19,11 @@ const Locations = ({ stores }) =>
           <div className='info'>
             <h1>{store.address_components[3].long_name}</h1>
             <h4><address>{store.vicinity}</address></h4>
-            <p className='hours'>
+            <table className='hours'>
               {store.opening_hours.weekday_text.map(day =>
-                <div>{day}</div>
+                <tr><td>{day.split(/:(.+)/)[0]}</td><td>{day.split(/:(.+)/)[1]}</td></tr>
               )}
-            </p>
+            </table>
           </div>
         </div>
       )}
@@ -31,15 +31,28 @@ const Locations = ({ stores }) =>
     <style jsx>{`
       .store {
         background-size: cover;
+        padding: 2em;
+        margin-bottom: 3em;
       }
       .info {
         background: ${velaGreen};
-        padding: 1px 20px;
+        padding: 2em;
         width: 300px;
-        margin-bottom: 3em;
       }
-      .info h1, h4, p {
+      .info.invert {
+        margin-left: auto
+      }
+      .info h1, .info h4, .info table {
         color: white
+      }
+      .info h1 {
+        margin-bottom: 0
+      }
+      table {
+        text-transform: capitalize
+      }
+      table td:last-child {
+        text-align: right
       }
 
     `}</style>
