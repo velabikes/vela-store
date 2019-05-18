@@ -1,6 +1,6 @@
 const googleMapsClient = require('@google/maps')
 
-module.exports (req, res) => {
+module.exports = (req, res) => {
   const googleMapsClient.createClient({
     key: process.env.GOOGLE_MAPS_SERVER_KEY
   })
