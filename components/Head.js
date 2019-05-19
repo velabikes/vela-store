@@ -22,10 +22,10 @@ const CustomHead = props =>
       h1, h2, h3, h4, h5, h6 {
         text-transform: uppercase;
         font-family: neue-haas-grotesk-display, sans;
-        margin: .618em 0;
+        margin: 0.61em 0;
+        font-style: italic;
       }
       h1, h2, h3 {
-        font-style: italic;
         font-weight: 800;
         color: ${velaGreen};
       }

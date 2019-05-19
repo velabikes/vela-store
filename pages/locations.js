@@ -10,13 +10,14 @@ const Locations = ({ stores }) =>
       <h4>
         Conheça a Vela, faça test-rides, tome um cafe, escreva um texto para aparecer no nosso site sobre nossas lojas. Aqui deveria ter algo legal escrito.
       </h4>
-      {stores && stores.map(store =>
+      <br />
+      {stores && stores.map((store, i) =>
         <div
           className='store'
           key={store.placeid}
           style={{ backgroundImage: 'url(https://maps.googleapis.com/maps/api/place/photo?maxwidth=1080&photoreference=' + store.photos[0].photo_reference + '&key=AIzaSyDPIMs29240aTRj5izYnWSRfmKucLR0cwY' }}
         >
-          <div className='info'>
+          <div className={`info ${(i % 2) && 'right'}`}>
             <h1>{store.address_components[3].long_name}</h1>
             <h4><address>{store.vicinity}</address></h4>
             <table className='hours'>
@@ -32,6 +33,7 @@ const Locations = ({ stores }) =>
       .store {
         background-size: cover;
         padding: 2em;
+        background-position: center;
         margin-bottom: 3em;
       }
       .info {
@@ -39,7 +41,7 @@ const Locations = ({ stores }) =>
         padding: 2em;
         width: 300px;
       }
-      .info.invert {
+      .info.right {
         margin-left: auto
       }
       .info h1, .info h4, .info table {
