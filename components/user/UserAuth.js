@@ -1,9 +1,9 @@
 import { compose, withHandlers } from 'recompose'
-import { setCustomerAccessToken } from '../lib/redux'
-import withCustomerCreate from '../containers/withCustomerCreate'
-import withCustomerAccessTokenCreate from '../containers/withCustomerAccessTokenCreate'
-import UserLoginForm from '../components/UserLoginForm'
-import UserRegisterForm from '../components/UserRegisterForm'
+import { setCustomerAccessToken } from '../../lib/redux'
+import withCustomerCreate from '../../containers/withCustomerCreate'
+import withCustomerAccessTokenCreate from '../../containers/withCustomerAccessTokenCreate'
+import UserLoginForm from './UserLoginForm'
+import UserRegisterForm from './UserRegisterForm'
 
 const UserAuth = ({ handleLoginSubmit, handleRegisterSubmit }) =>
   <div className='UserAuth'>

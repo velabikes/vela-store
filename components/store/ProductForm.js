@@ -1,8 +1,8 @@
 import { compose, withHandlers, withState, withProps, withPropsOnChange } from 'recompose'
-import withCheckoutLineItemsAdd from '../containers/withCheckoutLineItemsAdd'
-import withCheckoutId from '../containers/withCheckoutId'
-import { velaBlue } from '../style/colors'
-import { toggleDrawer } from '../lib/redux'
+import withCheckoutLineItemsAdd from '../../containers/withCheckoutLineItemsAdd'
+import withCheckoutId from '../../containers/withCheckoutId'
+import { velaBlue } from '../../style/colors'
+import { toggleDrawer } from '../../lib/redux'
 
 const OptionButton = ({ selected, children, ...props }) =>
   <button {...props}>
@@ -13,7 +13,7 @@ const OptionButton = ({ selected, children, ...props }) =>
         background: ${selected ? velaBlue : 'transparent'};
         color: ${selected ? 'white' : velaBlue};
         border: 1px solid ${velaBlue};
-        font-size: 0.61rem;
+        font-size: 0.6rem;
         margin: 0.61em 0.61em 0 0;
         display: inline-block;
         text-transform: uppercase;

@@ -1,7 +1,7 @@
 import { compose } from 'recompose'
 import PaddedView from '../components/PaddedView'
 import withCustomerAccessToken from '../containers/withCustomerAccessToken'
-import UserAuth from '../components/UserAuth'
+import UserAuth from '../components/user/UserAuth'
 
 const UserPage = ({ customerCreate, customerAccessTokenCreate, customerAccessToken, dispatch }) =>
   <PaddedView>

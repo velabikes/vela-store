@@ -1,7 +1,7 @@
 import { compose, withState } from 'recompose'
-import withProduct from '../containers/withProduct'
-import Price from '../components/Price'
-import Image from '../components/Image'
+import withProduct from '../../containers/withProduct'
+import Price from '../Price'
+import Image from '../Image'
 import ProductForm from './ProductForm'
 
 const ProductInfo = ({ product, setSelectedVariant, selectedVariant }) =>

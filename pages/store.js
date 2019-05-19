@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import { withRouter } from 'next/router'
 import { compose } from 'recompose'
-import ProductList from '../components/ProductList'
+import ProductList from '../components/store/ProductList'
 import PaddedView from '../components/PaddedView'
 import withCollectionByHandle from '../containers/withCollectionByHandle'
 

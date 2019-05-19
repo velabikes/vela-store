@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import ProductTeaser from '../components/ProductTeaser'
+import ProductTeaser from './ProductTeaser'
 
 const ProductListLoading = () =>
   <>

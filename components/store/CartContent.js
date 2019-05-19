@@ -1,6 +1,6 @@
 import { compose, branch, renderComponent } from 'recompose'
-import CartItem from '../components/CartItem'
-import CartPrice from '../components/CartPrice'
+import CartItem from './CartItem'
+import CartPrice from './CartPrice'
 
 const CartContent = ({ checkout }) =>
   <div className='CartContent'>

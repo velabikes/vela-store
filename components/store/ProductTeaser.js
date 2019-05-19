@@ -1,8 +1,8 @@
 
 import PropTypes from 'prop-types'
 import Link from 'next/link'
-import Price from './Price'
-import Image from './Image'
+import Price from '../Price'
+import Image from '../Image'
 
 const ProductTeaser = ({ product }) =>
   <div className='ProductTeaser'>

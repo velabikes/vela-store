@@ -1,6 +1,6 @@
 import { compose } from 'recompose'
 import { withRouter } from 'next/router'
-import ProductInfo from '../../components/ProductInfo'
+import ProductInfo from '../../components/store/ProductInfo'
 import withProduct from '../../containers/withProduct'
 import PaddedView from '../../components/PaddedView'
 

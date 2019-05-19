@@ -56,7 +56,10 @@ const Locations = ({ stores }) =>
       table td:last-child {
         text-align: right
       }
-
+      @media only screen and (min-width: 768px) {
+        .store {
+          padding-top: 6em;
+      }
     `}</style>
   </>
 

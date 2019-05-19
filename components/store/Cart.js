@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types'
 import { compose } from 'recompose'
-import withCheckout from '../containers/withCheckout'
-import CartPrice from '../components/CartPrice'
-import CartItem from '../components/CartItem'
-import PaddedView from '../components/PaddedView'
-import { velaGreen, velaBlue, lightGray } from '../style/colors'
-import CartContent from '../components/CartContent'
+import CartPrice from './CartPrice'
+import CartItem from './CartItem'
+import CartContent from './CartContent'
+import PaddedView from '../PaddedView'
+import withCheckout from '../../containers/withCheckout'
+import { velaGreen, velaBlue, lightGray } from '../../style/colors'
 
 const Cart = ({ checkout, isCheckoutLoading }) =>
   <PaddedView className='Cart'>
