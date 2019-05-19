@@ -22,11 +22,11 @@ const OptionButton = ({ selected, children, ...props }) =>
       span {
         background-color: ${children.match(/\s*\[.*?\]\s*/g) && children.match(/\[(.*?)\]/)[1]};
         margin: 0 auto;
-        display: ${children.match(/\s*\[.*?\]\s*/g) ? 'inline-block' : 'none'};
-        height: 3em;
+        display: ${children.match(/\s*\[.*?\]\s*/g) ? 'block' : 'none'};
+        height: 2em;
         border-radius: 2em;
         margin-bottom: ${0.61 * 0.61}em;
-        width: 3em;
+        width: 2em;
         border: 2px solid white;
       }
     `}</style>

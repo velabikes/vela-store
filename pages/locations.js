@@ -8,7 +8,7 @@ const Locations = ({ stores }) =>
     <PaddedView className='Stores'>
       <h1>Nossas Lojas</h1>
       <h4>
-        Conheça a Vela, faça test-rides, tome um cafe, escreva um texto para aparecer no nosso site sobre nossas lojas. Aqui deveria ter algo legal escrito.
+      Conheça todas as versões da Vela através de nossas lojas exclusivas. Temos como objetivo poder oferecer a melhor experiência de test-ride, serviços, ampla gama de acessórios, café fresco, ambiente confortável e inclusivo ao mundo do ciclismo e da mobilidade urbana elétrica.
       </h4>
       <br />
       {stores && stores.map((store, i) =>
@@ -32,7 +32,7 @@ const Locations = ({ stores }) =>
     <style jsx>{`
       .store {
         background-size: cover;
-        padding: 2em;
+        padding: 3em;
         background-position: center;
         margin-bottom: 3em;
       }

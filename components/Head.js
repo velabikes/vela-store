@@ -99,7 +99,7 @@ const CustomHead = props =>
       button {
         padding: .61em 1em;
         border-radius: 5px;
-        background-color: ${velaGreen};
+        background-color: ${velaBlue};
         color: white;
         border: 0px solid transparent;
         font-family: neue-haas-grotesk-display, sans;
