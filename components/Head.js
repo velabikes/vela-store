@@ -20,7 +20,6 @@ const CustomHead = props =>
         font-family: neue-haas-grotesk-display, sans;
       }
       h1, h2, h3, h4, h5, h6 {
-        text-transform: uppercase;
         font-family: neue-haas-grotesk-display, sans;
         margin: 0.61em 0;
         font-style: italic;
@@ -28,21 +27,21 @@ const CustomHead = props =>
       h1, h2, h3 {
         font-weight: 800;
         color: ${velaGreen};
+        text-transform: uppercase;
       }
       h1:first-child,
       h2:first-child,
       h3:first-child {
         margin-top: 0;
       }
+      h4 ~ h1,
+      h5 ~ h2,
+      h6 ~ h3 {
+        margin-bottom: 0;
+      }
       h4, h5, h6 {
         font-weight: 500;
         color: ${offBlack};
-      }
-      h3 {
-        font-size: 1.39em;
-      }
-      h4 {
-        font-size: 1.26em;
       }
       hr {
         margin: 1.61rem 0;
@@ -88,7 +87,11 @@ const CustomHead = props =>
         font-weight: 600;
         color: ${offBlack}
       }
+      label + input:not([type='checkbox']) {
+        margin-top: 0.61em;
+      }
       input:not([type='checkbox']) {
+        width: 100%;
         border: 0;
         border-bottom: 1px solid ${velaGreen};
         border-radius: 0;
