@@ -8,8 +8,8 @@ const Form89 = () =>
     </div>
   </div>
 
-const Modal89 = ({ visible }) =>
-  <div className='modal89' onClick={() => alert('close?')}>
+const Modal89 = ({ visible, onCloseClick }) =>
+  <div className='modal89' onClick={e => { if (e.target === e.currentTarget) onCloseClick()}}>
     <div className='content'>
       <h2>Promoção Velabikes 89fm</h2>
       <div>Preencha os dados indicados</div>
@@ -39,7 +39,7 @@ const Modal89 = ({ visible }) =>
 
 const Cta89 = ({ modalVisible, setModalVisible }) =>
   <div>
-    <Modal89 visible={modalVisible} />
+    <Modal89 visible={modalVisible} onCloseClick={() => setModalVisible(false)} />
     <img src="" />
     <span onClick={() => setModalVisible(!modalVisible)}>89</span>
     <style jsx>{`
