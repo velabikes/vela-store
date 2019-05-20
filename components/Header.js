@@ -20,8 +20,8 @@ const Header = ({ isCartOpen, isMenuOpen, children }) =>
         <HeaderMenu />
       </div>
       <div className='bottom'>
-        <div><Link href='/store' prefetch><a>acessórios</a></Link></div>
-        <div><Link href='/store?handle=vela-1' prefetch><a>monte sua vela</a></Link></div>
+        <div><Link href='/store' as='/loja' prefetch><a>acessórios</a></Link></div>
+        <div><Link href='/store?handle=vela-1' as='/loja/vela-1' prefetch><a>monte sua vela</a></Link></div>
       </div>
     </header>
     <div className='app-content'>

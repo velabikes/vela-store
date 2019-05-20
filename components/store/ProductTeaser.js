@@ -5,7 +5,7 @@ import ProductImage from './ProductImage'
 
 const ProductTeaser = ({ product }) =>
   <div className='ProductTeaser'>
-    <Link href={'/store/product?handle=' + product.handle} as={'/loja/produto/' + handle}><a>
+    <Link href={'/store/product?handle=' + product.handle} as={'/loja/produto/' + product.handle}><a>
       <ProductImage src={product.images && product.images.edges[0].node.src} />
       <h3>
         {product.title}
