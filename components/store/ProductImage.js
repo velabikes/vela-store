@@ -20,6 +20,10 @@ const ProductImage = props =>
         display: flex;
         z-index: 0;
       }
+      .content :global(img) {
+        max-height: 100%;
+        object-fit: contain;
+      }
     `}</style>
   </div>
 

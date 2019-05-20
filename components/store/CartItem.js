@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import { compose, lifecycle, withHandlers } from 'recompose'
 import Price from '../Price'
-import Image from '../Image'
+import ProductImage from './ProductImage'
 import withCheckoutId from '../../containers/withCheckoutId'
 import withCheckoutLineItemsUpdate from '../../containers/withCheckoutLineItemsUpdate'
 import { velaGreen, velaBlue, velaRed } from '../../style/colors'
@@ -9,7 +9,7 @@ import { velaGreen, velaBlue, velaRed } from '../../style/colors'
 const CartItem = ({ item, handleMoreClick, handleLessClick }) =>
   <tr key={item.node.title}>
     <td>
-      <Image src={item.node.variant && item.node.variant.image.src} alt='' />
+      <ProductImage src={item.node.variant && item.node.variant.image.src} alt='' />
       <span>{item.node.quantity}</span>
     </td>
     <td className='quantity'>
