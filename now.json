@@ -8,4 +8,9 @@
   "env": {
     "GOOGLE_MAPS_SERVER_KEY": "@google-maps-server-key"
   }
+  "routes": [
+    { "src": "/sobre", "dest": "/about" },
+    { "src": "/loja", "dest": "/store" },
+    { "src": "/loja/produto/(?<handle>[^/]+)$", "dest": "/store/product?handle=$handle" }
+  ]
 }

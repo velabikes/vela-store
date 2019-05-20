@@ -13,13 +13,13 @@ const MainMenu = () =>
         <li><Link href='/store?handle=vela-1'><a>
           Monte sua Vela
         </a></Link></li>
-        <li><Link href='/store'><a>
+        <li><Link href='/store' as='/loja'><a>
           Acessórios
         </a></Link></li>
         <li><Link href='/locations'><a>
           Nossas lojas
         </a></Link></li>
-        <li><Link href='/about'><a>
+        <li><Link href='/about' as='/sobre'><a>
           Sobre nós
         </a></Link></li>
         <li><Link href='https://velabikes.freshdesk.com/support/home'><a>
