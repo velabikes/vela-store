@@ -6,15 +6,15 @@ const CartPrice = ({ checkout }) =>
     <table>
       <tbody>
         { checkout.availableShippingRates && checkout.availableShippingRates.shippingRates && checkout.availableShippingRates.shippingRates.length && <tr>
-          <td><label>Envio para </label> <small>{checkout.shippingAddress.zip}</small>:</td>
+          <td><label>Envio: </label></td>
           <td>
             <Price value={checkout.availableShippingRates.shippingRates[0].priceV2.amount} />
           </td>
         </tr>}
-        <tr>
-          <td><label>Impostos estaduais (?):</label></td>
+        { !!parseInt(checkout.totalTax) && <tr>
+          <td><label>Impostos estaduais:</label></td>
           <td><Price value={checkout.totalTax} /></td>
-        </tr>
+        </tr> }
         <tr>
           <td><label>Total:</label></td>
           <td><Price value={checkout.totalPrice} /></td>
