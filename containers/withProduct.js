@@ -30,8 +30,8 @@ query productQuery($handle: String!) {
               name
               value
             }
-            image {
-              originalSrc
+            image(maxWidth: 1600) {
+              src
             }
           }
         }
