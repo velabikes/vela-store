@@ -18,25 +18,29 @@ const Form89 = props =>
             onBlur={handleBlur}
             className={error && error.name && 'error'}
           />
+        </fieldset>
         <fieldset>
-        <label>Email</label>
-        <input
-          type='text'
-          name='email'
-          value={values && values.email}
-          onChange={handleChange}
-          onBlur={handleBlur}
-          className={error && error.email && 'error'}
-        />
-        <label>Profissão</label>
-        <input
-          type='text'
-          name='job'
-          value={values && values.job}
-          onChange={handleChange}
-          onBlur={handleBlur}
-          className={error && error.job && 'error'}
-        />
+          <label>Email</label>
+          <input
+            type='text'
+            name='email'
+            value={values && values.email}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            className={error && error.email && 'error'}
+          />
+        </fieldset>
+        <fieldset>
+          <label>Profissão</label>
+          <input
+            type='text'
+            name='job'
+            value={values && values.job}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            className={error && error.job && 'error'}
+          />
+        </fieldset>
         <button type='submit' disabled={isSubmitting}>
           Enviar
         </button>

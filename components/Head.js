@@ -88,6 +88,8 @@ const CustomHead = props =>
 
       fieldset {
         margin-bottom: 1em;
+        padding: 0;
+        border: none;
       }
       label {
         font-weight: 600;
@@ -126,6 +128,9 @@ const CustomHead = props =>
       button:active {
         box-shadow: 0px 0px 18px -7px ${velaBlue}
       }
+
+      // PAGE TRANSITION
+
       .page-transition-enter {
         opacity: 0;
       }
