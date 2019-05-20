@@ -8,7 +8,7 @@ const HomePage = () =>
     <div className='cta'>
       <div className='slogan'>
         <h1>#VADEVELA</h1>
-        <h4>FAÇA PARTE DA REVOLUÇÃO ELÉTRICA<br /> NA MOBILIDADE URBANA</h4>
+        <h4>Bicicletas elétricas para cidades mais saudáveis</h4>
       </div>
       <button>Monte a sua</button>
     </div>

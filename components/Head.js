@@ -117,6 +117,8 @@ const CustomHead = props =>
       button:disabled {
         opacity: 0.7;
         filter: saturate(0%);
+        pointer-events: none;
+        transform: translate3d(0,0,0)
       }
       button:active {
         box-shadow: 0px 0px 18px -7px ${velaBlue}
