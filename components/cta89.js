@@ -49,6 +49,9 @@ const Modal89 = ({ visible, onCloseClick }) =>
       <div>Preencha os dados indicados</div>
       <br />
       <Form89 />
+      <p><small>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+      </small></p>
     </div>
     <style jsx>{`
       .modal89 {
@@ -67,6 +70,9 @@ const Modal89 = ({ visible, onCloseClick }) =>
       .content {
         padding: 2em;
         background: white;
+        max-width: 340px;
+        max-height: 70vh;
+        overflow-y: scroll;
       }
     `}</style>
   </div>
