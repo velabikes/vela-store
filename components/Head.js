@@ -95,7 +95,7 @@ const CustomHead = props =>
         font-weight: 600;
         color: ${offBlack}
       }
-      input:not([type='checkbox']) {
+      input:not([type='checkbox']):not([type='radio']) {
         width: 100%;
         border: 0;
         border-bottom: 1px solid ${velaGreen};
@@ -103,6 +103,7 @@ const CustomHead = props =>
         display: block;
         font-size: 1rem;
         font-family: neue-haas-grotesk-display, sans;
+        box-sizing: border-box;
       }
       button {
         padding: .61em 1em;
