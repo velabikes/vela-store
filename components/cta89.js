@@ -1,12 +1,28 @@
 import { compose, withState } from 'recompose'
+import { Formik } from 'formik'
 
-const Form89 = () =>
-  <div>
-    <div>
-      <label>Nome:</label>
-      <input type='text' />
-    </div>
-  </div>
+const Form89 = props =>
+ <Formik
+    initialValues={{ name: '' }}
+    {...props}
+  >
+    {({ handleSubmit, handleChange, handleBlur, values, error, isSubmitting }) =>
+      <form onSubmit={handleSubmit}>
+        <label>Nome</label>
+        <input
+          type='text'
+          name='name'
+          value={values && values.name}
+          onChange={handleChange}
+          onBlur={handleBlur}
+          className={error && error.name && 'error'}
+        />
+        <button type='submit' disabled={isSubmitting}>
+          Enviar
+        </button>
+      </form>
+    }
+  </Formik>
 
 const Modal89 = ({ visible, onCloseClick }) =>
   <div className='modal89' onClick={e => { if (e.target === e.currentTarget) onCloseClick()}}>

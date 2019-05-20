@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types'
 import Link from 'next/link'
 import Price from '../Price'
-import Image from '../Image'
+import ProductImage from './ProductImage'
 
 const ProductTeaser = ({ product }) =>
   <div className='ProductTeaser'>
     <Link href={'/store/product?handle=' + product.handle}><a>
-      <Image src={product.images && product.images.edges[0].node.src} />
+      <ProductImage src={product.images && product.images.edges[0].node.src} />
       <h3>
         {product.title}
       </h3>

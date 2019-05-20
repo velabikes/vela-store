@@ -36,6 +36,9 @@ const Locations = ({ stores }) =>
         background-position: center;
         margin-bottom: 3em;
       }
+      .store:last-child {
+        margin-bottom: 0;
+      }
       .info {
         background: ${velaGreen};
         padding: 2em;
@@ -58,7 +61,8 @@ const Locations = ({ stores }) =>
       }
       @media only screen and (min-width: 768px) {
         .store {
-          padding-top: 6em;
+          padding-top: 12em;
+        }
       }
     `}</style>
   </>
