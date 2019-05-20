@@ -83,15 +83,15 @@ const CustomHead = props =>
         width: 100%;
         border-spacing: 0 .372em;
       }
+
+      // FORMS
+
+      fieldset {
+        margin-bottom: 1em;
+      }
       label {
         font-weight: 600;
         color: ${offBlack}
-      }
-      label + input:not([type='checkbox']),
-      input:not([type='checkbox']) + label,
-      input:not([type='checkbox']) + button {
-        margin-top: 0.61em;
-        display: block;
       }
       input:not([type='checkbox']) {
         width: 100%;

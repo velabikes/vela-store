@@ -8,15 +8,17 @@ const Form89 = props =>
   >
     {({ handleSubmit, handleChange, handleBlur, values, error, isSubmitting }) =>
       <form onSubmit={handleSubmit}>
-        <label>Nome</label>
-        <input
-          type='text'
-          name='name'
-          value={values && values.name}
-          onChange={handleChange}
-          onBlur={handleBlur}
-          className={error && error.name && 'error'}
-        />
+        <fieldset>
+          <label>Nome</label>
+          <input
+            type='text'
+            name='name'
+            value={values && values.name}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            className={error && error.name && 'error'}
+          />
+        <fieldset>
         <label>Email</label>
         <input
           type='text'
@@ -84,7 +86,6 @@ const Cta89 = ({ modalVisible, setModalVisible }) =>
     <style jsx>{`
       span {
         background: white;
-        padding: 2em;
         display: block;
         width: 65px;
         height: 65px;
