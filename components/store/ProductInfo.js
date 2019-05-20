@@ -15,14 +15,11 @@ const ProductInfo = ({ product, setSelectedVariant, selectedVariant }) =>
         <Price value={selectedVariant && selectedVariant.node ? selectedVariant.node.price : product.variants && product.variants.edges.map(v => v.node.price)} />
       </h4>
       <hr />
-      {product.options && <ProductForm product={product} onVariantSelect={setSelectedVariant} />}
+      { product.options && <ProductForm product={product} selectedVariant={selectedVariant} onVariantSelect={setSelectedVariant} /> }
       <hr />
       <div dangerouslySetInnerHTML={{ __html: product.descriptionHtml }} />
     </div>
     <style jsx>{`
-      .ProductInfo {
-        padding-top: 1.61rem;
-      }
       @media only screen and (min-width: 768px) {
         .ProductInfo {
           display: flex;

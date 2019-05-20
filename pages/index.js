@@ -1,4 +1,5 @@
 import { lightGray, velaBlue } from '../style/colors'
+import Cta89 from '../components/cta89'
 
 const HomePage = () =>
   <div className='HomePage'>
@@ -10,6 +11,9 @@ const HomePage = () =>
         <h4>FAÇA PARTE DA REVOLUÇÃO ELÉTRICA<br /> NA MOBILIDADE URBANA</h4>
       </div>
       <button>Monte a sua</button>
+    </div>
+    <div className='promotion'>
+      <Cta89 />
     </div>
     <style jsx>{`
       .HomePage {
@@ -35,6 +39,11 @@ const HomePage = () =>
       }
       .desktop {
         display: none;
+      }
+      .promotion {
+        position: fixed;
+        bottom: 2em;
+        right: 2em;
       }
       :global(.copyright) {
         position: absolute;

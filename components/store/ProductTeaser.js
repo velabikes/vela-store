@@ -1,4 +1,3 @@
-
 import PropTypes from 'prop-types'
 import Link from 'next/link'
 import Price from '../Price'

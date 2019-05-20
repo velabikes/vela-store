@@ -1,4 +1,4 @@
-import { compose, withHandlers, withState, withProps, withPropsOnChange } from 'recompose'
+import { compose, withHandlers, withState, withProps, withPropsOnChange, branch } from 'recompose'
 import withCheckoutLineItemsAdd from '../../containers/withCheckoutLineItemsAdd'
 import withCheckoutId from '../../containers/withCheckoutId'
 import { velaBlue } from '../../style/colors'
