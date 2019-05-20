@@ -60,7 +60,7 @@ const CustomHead = props =>
         cursor: pointer;
       }
       p {
-        line-height: 1.618em;
+        line-height: 1.37em;
         font-family: neue-haas-grotesk-text, sans;
       }
       p:last-child {
@@ -87,8 +87,11 @@ const CustomHead = props =>
         font-weight: 600;
         color: ${offBlack}
       }
-      label + input:not([type='checkbox']) {
+      label + input:not([type='checkbox']),
+      input:not([type='checkbox']) + label,
+      input:not([type='checkbox']) + button {
         margin-top: 0.61em;
+        display: block;
       }
       input:not([type='checkbox']) {
         width: 100%;
