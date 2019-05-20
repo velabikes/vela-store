@@ -3,7 +3,7 @@ import { Formik } from 'formik'
 
 const Form89 = props =>
  <Formik
-    initialValues={{ name: '' }}
+    initialValues={{ name: '', email: '', job: ''}}
     {...props}
   >
     {({ handleSubmit, handleChange, handleBlur, values, error, isSubmitting }) =>
@@ -16,6 +16,24 @@ const Form89 = props =>
           onChange={handleChange}
           onBlur={handleBlur}
           className={error && error.name && 'error'}
+        />
+        <label>Email</label>
+        <input
+          type='text'
+          name='email'
+          value={values && values.email}
+          onChange={handleChange}
+          onBlur={handleBlur}
+          className={error && error.email && 'error'}
+        />
+        <label>Profissão</label>
+        <input
+          type='text'
+          name='job'
+          value={values && values.job}
+          onChange={handleChange}
+          onBlur={handleBlur}
+          className={error && error.job && 'error'}
         />
         <button type='submit' disabled={isSubmitting}>
           Enviar
@@ -56,13 +74,16 @@ const Modal89 = ({ visible, onCloseClick }) =>
 const Cta89 = ({ modalVisible, setModalVisible }) =>
   <div>
     <Modal89 visible={modalVisible} onCloseClick={() => setModalVisible(false)} />
-    <img src="" />
-    <span onClick={() => setModalVisible(!modalVisible)}>89</span>
+    <span onClick={() => setModalVisible(!modalVisible)}><img src="https://www.radiorock.com.br/assets/img/bot2.svg" /></span>
     <style jsx>{`
       span {
-        background: green;
+        background: white;
         padding: 2em;
         display: block;
+        width: 65px;
+        height: 65px;
+        border-radius: 100px;
+        box-shadow: 0 0px 1px 0 rgba(0,0,0,0.16), 0 0px 10px 0 rgba(0,0,0,0.12);
       }
     `}</style>
   </div>
