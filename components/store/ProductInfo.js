@@ -6,8 +6,16 @@ import ProductForm from './ProductForm'
 
 const ProductInfo = ({ product, setSelectedVariant, selectedVariant }) =>
   <div className='ProductInfo'>
-    <div>
-      <ProductImage src={selectedVariant ? selectedVariant.node && selectedVariant.node.image.originalSrc : product.images && product.images.edges[0].node.src} alt='' />
+    <div className='images'>
+      <ProductImage
+        src={
+          selectedVariant
+          ? selectedVariant.node && selectedVariant.node.image.originalSrc
+          : product.images && product.images.edges[0].node.src
+        }
+        alt=''
+      />
+      { product.images && product.images.edges.map((image, i) => i !== 0 && <ProductImage src={image.node.src} />)}
     </div>
     <div>
       <h1>{product.title}</h1>
@@ -20,6 +28,9 @@ const ProductInfo = ({ product, setSelectedVariant, selectedVariant }) =>
       <div dangerouslySetInnerHTML={{ __html: product.descriptionHtml }} />
     </div>
     <style jsx>{`
+      .images > :global(.ProductImage) {
+        margin-bottom: 2em;
+      }
       @media only screen and (min-width: 768px) {
         .ProductInfo {
           display: flex;
