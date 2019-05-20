@@ -1,9 +1,20 @@
 import { compose, withState } from 'recompose'
 
+const Form89 = () =>
+  <div>
+    <div>
+      <label>Nome:</label>
+      <input type='text' />
+    </div>
+  </div>
+
 const Modal89 = ({ visible }) =>
-  <div className='modal89'>
+  <div className='modal89' onClick={() => alert('close?')}>
     <div className='content'>
-      conteudo
+      <h2>Promoção Velabikes 89fm</h2>
+      <div>Preencha os dados indicados</div>
+      <br />
+      <Form89 />
     </div>
     <style jsx>{`
       .modal89 {
@@ -12,12 +23,11 @@ const Modal89 = ({ visible }) =>
         right: 0;
         top: 0;
         bottom: 0;
-        background: red;
         display: flex;
         justify-content: center;
         align-items: center;
         opacity: ${visible ? '1' : '0'};
-        pointer-events: none;
+        pointer-events: ${visible ? 'all' : 'none'};
         z-index: 99999;
       }
       .content {
