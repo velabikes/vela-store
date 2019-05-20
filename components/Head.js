@@ -91,6 +91,9 @@ const CustomHead = props =>
         padding: 0;
         border: none;
       }
+      legend {
+        margin-bottom: 0.61em;
+      }
       label {
         font-weight: 600;
         color: ${offBlack}
@@ -104,6 +107,10 @@ const CustomHead = props =>
         font-size: 1rem;
         font-family: neue-haas-grotesk-display, sans;
         box-sizing: border-box;
+        background: transparent;
+      }
+      input[type='radio'] {
+        margin: 0.61em;
       }
       button {
         padding: .61em 1em;

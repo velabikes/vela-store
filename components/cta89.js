@@ -150,6 +150,24 @@ const Form89 = props =>
             className={error && error.job && 'error'}
           />
         </fieldset>
+        <fieldset>
+         <legend>Como você conheceu a Vela?</legend>
+         <label>
+           <input
+             type='radio'
+             name='refer'
+           />
+           Opcao 1
+         </label>
+         <br />
+         <label>
+           <input
+             type='radio'
+             name='refer'
+           />
+           Opcao 2
+         </label>
+        </fieldset>
         <button type='submit' disabled={isSubmitting}>
           Enviar
         </button>
@@ -164,6 +182,7 @@ const Modal89 = ({ visible, onCloseClick }) =>
       <div>Preencha os dados indicados</div>
       <br />
       <Form89 />
+      <br />
       <small><Reg89 /></small>
     </div>
     <style jsx>{`
@@ -183,9 +202,10 @@ const Modal89 = ({ visible, onCloseClick }) =>
       .content {
         padding: 2em;
         background: white;
-        max-width: 340px;
+        width: 418px;
         max-height: 70vh;
         overflow-y: scroll;
+        box-shadow: 0 0px 1px 0 rgba(0,0,0,0.16), 0 0px 10px 0 rgba(0,0,0,0.12);
       }
     `}</style>
   </div>
