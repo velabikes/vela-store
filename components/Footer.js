@@ -2,6 +2,7 @@
 // Os textos internos ustilizanm do componente <small>
 // com estilo localizado dentro do components/Head.js
 
+import Link from 'next/link'
 import PaddedView from '../components/PaddedView'
 import { velaGreen } from '../style/colors'
 
@@ -10,7 +11,7 @@ const Footer = () =>
     <PaddedView>
       <small>
         <div>CNPJ 20.430.806/0001-27</div>
-        <div>TERMOS DE USO, GARANTIAS E POITICA DE DEVOLUÇÕES.</div>
+        <div><Link href='/legal'><a>TERMOS DE USO, GARANTIAS E POITICA DE DEVOLUÇÕES.</a></Link></div>
       </small>
     </PaddedView>
     <style jsx>{`
