@@ -48,6 +48,9 @@ const ProductInfo = ({ product, setSelectedVariant, selectedVariant }) =>
         h1 {
           margin: 0;
         }
+        .ProductInfo :global(.ProductImage) {
+          margin-bottom: 2em;
+        }
       }
     `}</style>
   </div>
