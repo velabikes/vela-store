@@ -14,7 +14,7 @@ const shop = gql`
   }
 `
 
-export default handle => graphql(collectionByHandle, {
+export default graphql(shop, {
   alias: 'withShop',
 
   props: ({ data: { shop }, loading }) => ({
