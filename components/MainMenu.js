@@ -10,7 +10,7 @@ const MainMenu = () =>
     <nav>
       <h1>Menu</h1>
       <ul className='items'>
-        <li><Link href='/store?handle=vela-1'><a>
+        <li><Link href='/store?handle=vela-1' as='/loja/vela-1'><a>
           Monte sua Vela
         </a></Link></li>
         <li><Link href='/store' as='/loja'><a>

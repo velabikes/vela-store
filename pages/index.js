@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { lightGray, velaBlue } from '../style/colors'
 import Cta89 from '../components/cta89'
 
@@ -10,7 +11,9 @@ const HomePage = () =>
         <h1>#VADEVELA</h1>
         <h4>Bicicletas elétricas para cidades mais saudáveis</h4>
       </div>
-      <button>Monte a sua</button>
+      <Link href='/store?handle=vela-1' as='/loja/vela-1'>
+        <button className='desktop'>Monte a sua</button>
+      </Link>
     </div>
     <div className='promotion'>
       {/*<Cta89 />*/}

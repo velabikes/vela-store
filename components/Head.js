@@ -34,11 +34,6 @@ const CustomHead = props =>
       h3:first-child {
         margin-top: 0;
       }
-      h4 ~ h1,
-      h5 ~ h2,
-      h6 ~ h3 {
-        margin-bottom: 0;
-      }
       h4, h5, h6 {
         font-weight: 500;
         color: ${offBlack};

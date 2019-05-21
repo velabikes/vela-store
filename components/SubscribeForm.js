@@ -5,11 +5,11 @@ const SubscribeForm = () =>
   <PaddedView>
     <form action="https://velabikes.us15.list-manage.com/subscribe/post?u=950b7d190680648ed40ffbe84&amp;id=dde7c564df" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
       <h3>Newsletter:</h3>
-        <input type="email" defaultValue="" name="EMAIL" id="mce-EMAIL" placeholder="Digite seu email"/>
-        <div style={{position: 'absolute', left: '-5000px'}} aria-hidden="true">
-          <input type="text" name="b_950b7d190680648ed40ffbe84_dde7c564df" tabIndex="-1" defaultValue="" />
-        </div>
-        <button type="submit">Assinar</button>
+      <input type="email" defaultValue="" name="EMAIL" id="mce-EMAIL" placeholder="Digite seu email"/>
+      <div style={{position: 'absolute', left: '-5000px'}} aria-hidden="true">
+        <input type="text" name="b_950b7d190680648ed40ffbe84_dde7c564df" tabIndex="-1" defaultValue="" />
+      </div>
+      <button type="submit">Assinar</button>
     </form>
     <style jsx>{`
       form {
