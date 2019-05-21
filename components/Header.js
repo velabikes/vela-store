@@ -7,12 +7,14 @@ import HeaderDrawer from './HeaderDrawer'
 import HeaderMenu from './HeaderMenu'
 import MainMenu from './MainMenu'
 import Footer from './Footer'
+import SubscribeForm from './SubscribeForm'
 
 const Header = ({ isCartOpen, isMenuOpen, children }) =>
   <>
     <HeaderDrawer visible={isCartOpen}><Cart /></HeaderDrawer>
     <HeaderDrawer visible={isMenuOpen}>
       <MainMenu />
+      <SubscribeForm />
       <Footer />
     </HeaderDrawer>
     <header className='Header'>
