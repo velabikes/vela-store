@@ -53,12 +53,11 @@ export default compose(
       const mutationResponse = await checkoutCreate({
         variables: {
           input: {
-            allowPartialAddresses: true,
-            shippingAddress: { city: 'Sao Paulo', province: 'SP', country: 'Brazil', zip: '01000-000' }
+            //allowPartialAddresses: true,
+            //shippingAddress: { city: 'Sao Paulo', province: 'SP', country: 'Brazil', zip: '01000-000' }
           }
         }
       })
-      debugger
       const checkoutId = mutationResponse.data.checkoutCreate.checkout.id
       dispatch(setCheckoutId(checkoutId))
     }
@@ -67,7 +66,7 @@ export default compose(
     ({ isCheckoutIdLoading }) => !isCheckoutIdLoading,
     withCheckoutHoC
   ),
-  withProps(({ checkout, isCheckoutLoading }) => ({ withShippingRates: checkout && checkout.requiresShipping })),
+  withProps(({ checkout, isCheckoutLoading }) => ({ withShippingRates: checkout && checkout.requiresShipping && checkout.shippingAddress })),
   branch(
     ({ withShippingRates }) => withShippingRates,
     withCheckoutHoC

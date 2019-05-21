@@ -3,6 +3,7 @@ import { lightGray } from '../../style/colors'
 
 const CartPrice = ({ checkout }) =>
   <div className='CartPrice'>
+    { console.log(checkout) }
     <table>
       <tbody>
         { checkout.availableShippingRates && checkout.availableShippingRates.shippingRates && checkout.availableShippingRates.shippingRates.length && <tr>
