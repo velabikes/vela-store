@@ -13,7 +13,7 @@ const HomePage = () =>
       <button>Monte a sua</button>
     </div>
     <div className='promotion'>
-      <Cta89 />
+      {/*<Cta89 />*/}
     </div>
     <style jsx>{`
       .HomePage {
@@ -53,7 +53,6 @@ const HomePage = () =>
       }
       :global(.copyright) :global(small) {
         color: ${lightGray}
-
       }
       @media only screen and (min-width: 768px) {
         img {

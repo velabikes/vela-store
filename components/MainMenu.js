@@ -19,9 +19,11 @@ const MainMenu = () =>
         <li><Link href='/locations'><a>
           Nossas lojas
         </a></Link></li>
+        {/*
         <li><Link href='/about' as='/sobre'><a>
           Sobre nós
         </a></Link></li>
+        */}
         <li><Link href='https://velabikes.freshdesk.com/support/home'><a>
           Suporte
         </a></Link></li>
