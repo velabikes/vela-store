@@ -167,6 +167,14 @@ const Form89 = props =>
            />
            Opcao 2
          </label>
+         <br />
+         <label>
+           <input
+             type='radio'
+             name='refer'
+           />
+           Opcao 3
+         </label>
         </fieldset>
         <button type='submit' disabled={isSubmitting}>
           Enviar
