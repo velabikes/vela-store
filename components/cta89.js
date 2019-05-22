@@ -110,14 +110,14 @@ REDE AUTONOMISTA DE RADIOFUS&Atilde;O LTDA
 
 const Form89 = props =>
  <Formik
-    initialValues={{ Name: '', Email: '', Job: '', Zip:'', Phone:''}}
+    initialValues={{ Name: '', Email: '', Job: '', Zip:'', Phone:'', Birth: ''}}
     {...props}
   >
     {({ handleSubmit, handleChange, handleBlur, values, error, isSubmitting }) =>
       <form onSubmit={handleSubmit}>
         {!!isSubmitting && <div>Obrigado por participar</div>}
         <fieldset>
-          <label>Nome Completo</label>
+          <label>Nome Completo:</label>
           <input
             type='text'
             name='Name'
@@ -128,7 +128,7 @@ const Form89 = props =>
           />
         </fieldset>
         <fieldset>
-          <label>Email</label>
+          <label>Email:</label>
           <input
             type='text'
             name='Email'
@@ -139,7 +139,7 @@ const Form89 = props =>
           />
         </fieldset>
         <fieldset>
-          <label>Cep</label>
+          <label>Cep:</label>
           <input
             type='text'
             name='Zip'
@@ -150,7 +150,18 @@ const Form89 = props =>
           />
         </fieldset>
         <fieldset>
-          <label>Telefone</label>
+          <label>Data de nascimento:</label>
+          <input
+            type='text'
+            name='Birth'
+            value={values && values.Birth}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            className={error && error.job && 'error'}
+          />
+        </fieldset>
+        <fieldset>
+          <label>Telefone:</label>
           <input
             type='text'
             name='Phone'
@@ -161,7 +172,7 @@ const Form89 = props =>
           />
         </fieldset>
         <fieldset>
-          <label>Profissão</label>
+          <label>Profissão:</label>
           <input
             type='text'
             name='Job'
