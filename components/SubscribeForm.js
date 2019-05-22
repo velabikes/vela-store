@@ -1,16 +1,44 @@
+import MailchimpSubscribe from "react-mailchimp-subscribe"
+import { Formik } from 'formik'
+import fetch from 'isomorphic-fetch'
+import { compose, withHandlers } from 'recompose'
 import PaddedView from './PaddedView'
 import { velaBlue } from '../style/colors'
 
-const SubscribeForm = () =>
+const url = 'https://velabikes.us15.list-manage.com/subscribe/post?u=950b7d190680648ed40ffbe84&amp;id=dde7c564df'
+
+const SubscribeForm = ({ handleFormSubmit }) =>
   <PaddedView>
-    <form action="https://velabikes.us15.list-manage.com/subscribe/post?u=950b7d190680648ed40ffbe84&amp;id=dde7c564df" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" noValidate>
-      <h3>Newsletter:</h3>
-      <input type="email" defaultValue="" name="EMAIL" id="mce-EMAIL" placeholder="Digite seu email"/>
-      <div style={{position: 'absolute', left: '-5000px'}} aria-hidden="true">
-        <input type="text" name="b_950b7d190680648ed40ffbe84_dde7c564df" tabIndex="-1" defaultValue="" />
-      </div>
-      <button type="submit">Assinar</button>
-    </form>
+    <h3>Newsletter:</h3>
+    <MailchimpSubscribe
+      url={url}
+      render={({ subscribe, status }) =>
+        status === 'success'
+        ? <div>Obrigado!</div>
+        : <Formik initialValues={{ EMAIL: '' }} onSubmit={subscribe}>
+          {({
+            values,
+            handleChange,
+            handleBlur,
+            handleSubmit,
+          }) =>
+            <form method="post" onSubmit={handleSubmit}>
+              <input
+                type="email"
+                id="EMAIL"
+                placeholder="Digite seu email"
+                onChange={handleChange}
+                onBlur={handleBlur}
+              />
+              <div style={{position: 'absolute', left: '-5000px'}} aria-hidden="true">
+                <input type="text" name="b_950b7d190680648ed40ffbe84_dde7c564df" tabIndex="-1" defaultValue="" />
+              </div>
+              <button type="submit">Assinar</button>
+            </form>
+          }
+        </Formik>
+      }
+    />
     <style jsx>{`
       form {
         position: relative;
@@ -26,4 +54,15 @@ const SubscribeForm = () =>
     `}</style>
   </PaddedView>
 
-export default SubscribeForm
+export default compose(
+  withHandlers({
+    handleFormSubmit: () => async (input) => {
+      const response = await fetch('https://velabikes.us15.list-manage.com/subscribe/post-json?u=950b7d190680648ed40ffbe84&amp;id=dde7c564df&c=?', {
+        method: 'POST',
+        body: JSON.stringify(input),
+        mode: 'no-cors'
+      })
+      console.log(response)
+    }
+  })
+)(SubscribeForm)
