@@ -1,4 +1,5 @@
 import { compose } from 'recompose'
+import Head from 'next/head'
 import { withRouter } from 'next/router'
 import ProductInfo from '../../components/store/ProductInfo'
 import withProduct from '../../containers/withProduct'
