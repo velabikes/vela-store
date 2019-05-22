@@ -1,5 +1,6 @@
 import { compose, withState } from 'recompose'
 import { Formik } from 'formik'
+import fetch from 'isomorphic-fetch'
 
 const Reg89 = props =>
   <div>
@@ -112,17 +113,18 @@ REDE AUTONOMISTA DE RADIOFUS&Atilde;O LTDA</p>
 
 const Form89 = props =>
  <Formik
-    initialValues={{ name: '', email: '', job: ''}}
+    initialValues={{ Name: '', Email: '', Job: ''}}
     {...props}
   >
     {({ handleSubmit, handleChange, handleBlur, values, error, isSubmitting }) =>
       <form onSubmit={handleSubmit}>
+        {!!isSubmitting && <div>Obrigado por participar</div>}
         <fieldset>
           <label>Nome</label>
           <input
             type='text'
-            name='name'
-            value={values && values.name}
+            name='Name'
+            value={values && values.Name}
             onChange={handleChange}
             onBlur={handleBlur}
             className={error && error.name && 'error'}
@@ -132,8 +134,8 @@ const Form89 = props =>
           <label>Email</label>
           <input
             type='text'
-            name='email'
-            value={values && values.email}
+            name='Email'
+            value={values && values.Email}
             onChange={handleChange}
             onBlur={handleBlur}
             className={error && error.email && 'error'}
@@ -143,14 +145,14 @@ const Form89 = props =>
           <label>Profissão</label>
           <input
             type='text'
-            name='job'
-            value={values && values.job}
+            name='Job'
+            value={values && values.Job}
             onChange={handleChange}
             onBlur={handleBlur}
             className={error && error.job && 'error'}
           />
         </fieldset>
-        <fieldset>
+        <fieldset style={{ display: 'none'}}>
          <legend>Como você conheceu a Vela?</legend>
          <label>
            <input
@@ -183,13 +185,18 @@ const Form89 = props =>
     }
   </Formik>
 
-const Modal89 = ({ visible, onCloseClick }) =>
+const Modal89 = ({ visible, onCloseClick, onFormSubmit }) =>
   <div className='modal89' onClick={e => { if (e.target === e.currentTarget) onCloseClick()}}>
     <div className='content'>
       <h2>Promoção Velabikes 89fm</h2>
       <div>Preencha os dados indicados</div>
       <br />
-      <Form89 />
+      <Form89 onSubmit={(data) => {
+        fetch('/api/promo', {
+          method: 'POST',
+          body: JSON.stringify(data),
+        })
+      }} />
       <br />
       <small><Reg89 /></small>
     </div>
