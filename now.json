@@ -7,7 +7,8 @@
     { "src": "api/**/*.js", "use": "@now/node" }
   ],
   "env": {
-    "GOOGLE_MAPS_SERVER_KEY": "@google-maps-server-key"
+    "GOOGLE_MAPS_SERVER_KEY": "@google-maps-server-key",
+    "AIRTABLE_KEY": "@airtable-key"
   },
   "routes": [
     { "src": "/sobre", "dest": "/about" },
