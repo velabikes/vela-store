@@ -10,6 +10,11 @@ const shop = gql`
         title
         url
       }
+      refundPolicy {
+        body
+        title
+        url
+      }
     }
   }
 `
