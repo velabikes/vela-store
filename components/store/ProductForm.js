@@ -61,7 +61,7 @@ const ProductForm = ({
         </div>
       </div>
     )}
-    <div><label>Disponibilidade: </label><span>Em estoque</span></div>
+    { /* <div><label>Disponibilidade: </label><span>Em estoque</span></div> */ }
     <br />
     <button
       onClick={handleAddToCartClick}
