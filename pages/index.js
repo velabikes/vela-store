@@ -16,7 +16,7 @@ const HomePage = () =>
       </Link>
     </div>
     <div className='promotion'>
-      {/*<Cta89 />*/}
+      <Cta89 />
     </div>
     <style jsx>{`
       .HomePage {
