@@ -4,13 +4,13 @@ import fetch from 'isomorphic-fetch'
 
 const Reg89 = props =>
   <div>
-<p>REGULAMENTO DA PROMO&Ccedil;&Atilde;O<br />
+&ldquo;BIKE DO VENTURA&rdquo;: REGULAMENTO DA PROMO&Ccedil;&Atilde;O<br />
  <br />
 Vela Bikes Com&eacute;rcio e Servi&ccedil;os de Bicicletas, pessoa jur&iacute;dica de direito privado com endere&ccedil;o na cidade de S&atilde;o Paulo, Capital, &agrave; Rua Cunha Gago 169, Pinheiros, CEP: 05421-000, inscrita no CNPJ/MF sob n&ordm;. 20.430.806/0001-27, doravante denominada simplesmente &ldquo;PROMOTORA&rdquo;, por seu representante legal, vem, por este instrumento, apresentar as condi&ccedil;&otilde;es (regulamento para o Concurso Cultural &ldquo;BIKE DO VENTURA&rdquo;), que esta empresa promove. A promo&ccedil;&atilde;o &eacute; volunt&aacute;ria e gratuita, n&atilde;o depende de qualquer modalidade de sorte ou &aacute;lea, de livre acesso a quem queira participar.<br />
  <br />
-1. CONDI&Ccedil;&Otilde;ES PARA PARTICIPAR</p>
-
-<p>1.1 A presente promo&ccedil;&atilde;o &eacute; aberta ao p&uacute;blico em geral, podendo participar as pessoas F&iacute;sicas, (residentes no estado de S&atilde;o Paulo), respeitados os termos e condi&ccedil;&otilde;es estabelecidas neste regulamento.<br />
+1. CONDI&Ccedil;&Otilde;ES PARA PARTICIPAR<br />
+ <br />
+1.1 A presente promo&ccedil;&atilde;o &eacute; aberta ao p&uacute;blico em geral, podendo participar as pessoas F&iacute;sicas, (residentes no estado de S&atilde;o Paulo), respeitados os termos e condi&ccedil;&otilde;es estabelecidas neste regulamento.<br />
  <br />
 1.2 A participa&ccedil;&atilde;o no presente Concurso &eacute; volunt&aacute;ria, gratuita e implica na aceita&ccedil;&atilde;o total e irrestrita dos termos e condi&ccedil;&otilde;es do presente Regulamento.<br />
  <br />
@@ -19,7 +19,7 @@ Vela Bikes Com&eacute;rcio e Servi&ccedil;os de Bicicletas, pessoa jur&iacute;di
 1.4 O vencedor devem ter idade m&iacute;nima de 18 anos.<br />
  <br />
 2. COMO PARTICIPAR<br />
-2.1 Entre os dias 20/05/2019 &agrave; 21/06/2019 at&eacute; &agrave;s 23h59, os interessados em participar do presente Concurso poder&atilde;o entrar no link www.velabikes.com.br, onde preencher&atilde;o um formul&aacute;rio para fins de cadastramento com nome completo, data de nascimento, cidade, estado, telefone e e-mail. <br />
+2.1 Entre os dias 22/05/2019 &agrave; 24/06/2019 at&eacute; &agrave;s 23h59, os interessados em participar do presente Concurso poder&atilde;o entrar no link www.velabikes.com.br, onde preencher&atilde;o um formul&aacute;rio para fins de cadastramento com nome completo, data de nascimento, cidade, estado, telefone e e-mail.<br />
  <br />
 2.1.2 Qualquer inscri&ccedil;&atilde;o realizada fora do per&iacute;odo disposto no item 2.1 acima estar&aacute; desclassificada e n&atilde;o participar&aacute; do presente Concurso.<br />
  <br />
@@ -31,7 +31,7 @@ Vela Bikes Com&eacute;rcio e Servi&ccedil;os de Bicicletas, pessoa jur&iacute;di
  <br />
 2.3 Os formul&aacute;rios que n&atilde;o forem preenchidos com os dados completos, ou que forem incorretamente preenchidos, ou enviados incorretamente, ou que n&atilde;o permitirem a perfeita identifica&ccedil;&atilde;o e localiza&ccedil;&atilde;o dos participantes, ser&atilde;o eliminados para fins de premia&ccedil;&atilde;o. Os dados fornecidos pelo participante, no momento de sua inscri&ccedil;&atilde;o, dever&atilde;o ser corretos, claros, precisos, completos e apresentados de uma forma que permita a verifica&ccedil;&atilde;o de sua proced&ecirc;ncia e veracidade e autenticidade.<br />
  <br />
-2.4 Uma Comiss&atilde;o Julgadora analisar&aacute; todas os textos efetivamente recebidos at&eacute; &agrave;s 23:59 horas do dia 21 de junho de 2019 e selecionar&aacute; um texto, classificando-o como vencedor, em primeiro do concurso. O resultado ser&aacute; divulgado no dia 25 de junho de 2019 no link www.radiorock.com.br. <br />
+2.4 O resultado ser&aacute; divulgado no dia 25 de junho de 2019 no link www.radiorock.com.br.<br />
  <br />
 2.4.1 N&atilde;o haver&aacute; possibilidade de empate, sendo que, no caso de haver mais de um texto id&ecirc;ntico, prevalecer&aacute; o texto que, cronologicamente, foi enviado primeiro.<br />
  <br />
@@ -45,22 +45,19 @@ Vela Bikes Com&eacute;rcio e Servi&ccedil;os de Bicicletas, pessoa jur&iacute;di
  <br />
 2.5.3 A organiza&ccedil;&atilde;o da promo&ccedil;&atilde;o n&atilde;o ser&aacute; respons&aacute;vel caso n&atilde;o receba a confirma&ccedil;&atilde;o da aceita&ccedil;&atilde;o do pr&ecirc;mio por parte do vencedor dentro do prazo de 48 (quarenta e oito) horas seguintes &agrave; data da notifica&ccedil;&atilde;o.<br />
  <br />
-2.5.4 Caso n&atilde;o seja recebida &agrave; confirma&ccedil;&atilde;o de aceita&ccedil;&atilde;o do pr&ecirc;mio, a organiza&ccedil;&atilde;o da promo&ccedil;&atilde;o notificar&aacute; o vencedor de que o mesmo foi desclassificado e perder&aacute; direito ao pr&ecirc;mio.</p>
-
-<p></p>
-
-<p>
+2.5.4 Caso n&atilde;o seja recebida &agrave; confirma&ccedil;&atilde;o de aceita&ccedil;&atilde;o do pr&ecirc;mio, a organiza&ccedil;&atilde;o da promo&ccedil;&atilde;o notificar&aacute; o vencedor de que o mesmo foi desclassificado e perder&aacute; direito ao pr&ecirc;mio.<br />
+ <br />
 3. DO PR&Ecirc;MIO<br />
 3.1 02 (dois) participantes contemplados ganhar&atilde;o (cada um) como pr&ecirc;mio:<br />
-01 bicicleta el&eacute;trica Vela S (O cliente pode escolher entre a vers&atilde;o Top Tube e a Low Step).</p>
-
-<p>3.2 O vencedor dever&aacute; retirar o respectivo pr&ecirc;mio na sede da Vela Bikes - Rua Cunha Gago, 169 - Pinheiros - CEP: 05421-000 &ndash; S&atilde;o Paulo/SP<br />
+01 bicicleta el&eacute;trica Vela S - o vencedor poder&aacute; escolher entre a vers&atilde;o Top Tube ou a vers&atilde;o Low Step).<br />
  <br />
-3.3 O vencedor assinar&aacute; o respectivo &quot;Recibo de Entrega de Pr&ecirc;mio&quot;, onde atestar&aacute; ter recebido o pr&ecirc;mio conforme descrito neste Regulamento. A assinatura &eacute; obrigat&oacute;ria e dever&aacute; ser realizada na sede da 89fm. <br />
+3.2 O vencedor dever&aacute; retirar o respectivo pr&ecirc;mio na sede da Vela Bikes - Rua Cunha Gago, 169 - Pinheiros - CEP: 05421-000 &ndash; S&atilde;o Paulo/SP<br />
  <br />
-3.4 O resultado do Concurso ser&aacute; divulgado no dia 25/06/2019, ap&oacute;s &agrave;s 15h00 no site www.velabikes.com.br; </p>
-
-<p>3.5 O pr&ecirc;mio n&atilde;o poder&aacute; ser trocado por outros, muito menos convertido em dinheiro, consoante a previs&atilde;o do par&aacute;grafo 3&ordm; do artigo 1&ordm; da Lei n.&ordm; 5.768/71.<br />
+3.3 O vencedor assinar&aacute; o respectivo &quot;Recibo de Entrega de Pr&ecirc;mio&quot;, onde atestar&aacute; ter recebido o pr&ecirc;mio conforme descrito neste Regulamento. A assinatura &eacute; obrigat&oacute;ria e dever&aacute; ser realizada na sede da Vela<br />
+ <br />
+3.4 O resultado do Concurso ser&aacute; divulgado no dia 25/06/2019, ap&oacute;s &agrave;s 15h00 no site www.velabikes.com.br<br />
+ <br />
+3.5 O pr&ecirc;mio n&atilde;o poder&aacute; ser trocado por outros, muito menos convertido em dinheiro, consoante a previs&atilde;o do par&aacute;grafo 3&ordm; do artigo 1&ordm; da Lei n.&ordm; 5.768/71.<br />
  <br />
 3.6 O pr&ecirc;mio &eacute; pessoal e intransfer&iacute;vel e n&atilde;o poder&aacute; ser trocado, sendo dado ao contemplado, mediante apresenta&ccedil;&atilde;o do RG.<br />
  <br />
@@ -106,21 +103,21 @@ Vela Bikes Com&eacute;rcio e Servi&ccedil;os de Bicicletas, pessoa jur&iacute;di
  <br />
 4.12 &Agrave; divulga&ccedil;&atilde;o, condu&ccedil;&atilde;o, participa&ccedil;&atilde;o, premia&ccedil;&atilde;o, bem como qualquer ato/fato decorrente deste Concurso aplicar-se-&aacute; a legisla&ccedil;&atilde;o brasileira.<br />
  <br />
-S&atilde;o Paulo, 09 de maio de 2019.<br />
+S&atilde;o Paulo, 20 de maio de 2019.<br />
  <br />
-REDE AUTONOMISTA DE RADIOFUS&Atilde;O LTDA</p>
+REDE AUTONOMISTA DE RADIOFUS&Atilde;O LTDA
   </div>
 
 const Form89 = props =>
  <Formik
-    initialValues={{ Name: '', Email: '', Job: ''}}
+    initialValues={{ Name: '', Email: '', Job: '', Zip:'', Phone:''}}
     {...props}
   >
     {({ handleSubmit, handleChange, handleBlur, values, error, isSubmitting }) =>
       <form onSubmit={handleSubmit}>
         {!!isSubmitting && <div>Obrigado por participar</div>}
         <fieldset>
-          <label>Nome</label>
+          <label>Nome Completo</label>
           <input
             type='text'
             name='Name'
@@ -139,6 +136,28 @@ const Form89 = props =>
             onChange={handleChange}
             onBlur={handleBlur}
             className={error && error.email && 'error'}
+          />
+        </fieldset>
+        <fieldset>
+          <label>Cep</label>
+          <input
+            type='text'
+            name='Zip'
+            value={values && values.Zip}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            className={error && error.job && 'error'}
+          />
+        </fieldset>
+        <fieldset>
+          <label>Telefone</label>
+          <input
+            type='text'
+            name='Phone'
+            value={values && values.Phone}
+            onChange={handleChange}
+            onBlur={handleBlur}
+            className={error && error.job && 'error'}
           />
         </fieldset>
         <fieldset>
