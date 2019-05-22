@@ -57,5 +57,4 @@ const ProductInfo = ({ product, setSelectedVariant, selectedVariant }) =>
 
 export default compose(
   withState('selectedVariant', 'setSelectedVariant', null),
-  withProduct(({ handle }) => handle)
 )(ProductInfo)

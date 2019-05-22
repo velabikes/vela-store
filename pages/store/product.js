@@ -5,14 +5,17 @@ import ProductInfo from '../../components/store/ProductInfo'
 import withProduct from '../../containers/withProduct'
 import PaddedView from '../../components/PaddedView'
 
-const ProductPage = ({ router }) =>
+const ProductPage = ({
+  product
+}) =>
   <PaddedView>
     <Head>
-      <title>Produto - Vela Bikes</title>
+      <title>{product.title} - Vela Bikes</title>
     </Head>
-    <ProductInfo handle={router.query.handle} />
+    <ProductInfo product={product} />
   </PaddedView>
 
 export default compose(
-  withRouter
+  withRouter,
+  withProduct(({ router }) => router.query.handle)
 )(ProductPage)
