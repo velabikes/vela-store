@@ -215,20 +215,26 @@ const Form89 = props =>
     }
   </Formik>
 
-const Modal89 = ({ visible, onCloseClick, onFormSubmit }) =>
+const Modal89 = compose(
+  withState('isSent', 'setSent', false)
+)(({ visible, onCloseClick, isSent, setSent }) =>
   <div className='modal89' onClick={e => { if (e.target === e.currentTarget) onCloseClick()}}>
     <div className='content'>
       <h2>Promoção Velabikes 89fm</h2>
+      {!isSent && <div>
       <div>Preencha os dados indicados</div>
       <br />
-      <Form89 onSubmit={(data) => {
-        fetch('/api/promo', {
+      <Form89 onSubmit={async (data) => {
+        const response = await fetch('/api/promo', {
           method: 'POST',
           body: JSON.stringify(data),
         })
+        setSent(true)
       }} />
       <br />
       <small><Reg89 /></small>
+      </div>}
+      { !!isSent && 'Obrigado pela participação!' }
     </div>
     <style jsx>{`
       .modal89 {
@@ -254,6 +260,7 @@ const Modal89 = ({ visible, onCloseClick, onFormSubmit }) =>
       }
     `}</style>
   </div>
+)
 
 const Cta89 = ({ modalVisible, setModalVisible }) =>
   <div>
