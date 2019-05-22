@@ -6,6 +6,9 @@ import PaddedView from '../../components/PaddedView'
 
 const ProductPage = ({ router }) =>
   <PaddedView>
+    <Head>
+      <title>Produto - Vela Bikes</title>
+    </Head>
     <ProductInfo handle={router.query.handle} />
   </PaddedView>
 
