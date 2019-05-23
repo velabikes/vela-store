@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import fetch from 'isomorphic-fetch'
 import PaddedView from '../components/PaddedView'
 import { velaGreen } from '../style/colors'
