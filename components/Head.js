@@ -7,6 +7,10 @@ const CustomHead = props =>
       <meta name='viewport' content='width=device-width, initial-scale=1' />
       <meta charSet='utf-8' />
       <link rel='stylesheet' href='https://use.typekit.net/sho3jmj.css' />
+      <link rel="icon" type="image/png" sizes="32x32" href="/static/fav/favicon-32x32.png" />
+      <link rel="icon" type="image/png" sizes="96x96" href="/static/fav/favicon-96x96.png" />
+      <link rel="icon" type="image/png" sizes="16x16" href="/static/fav/favicon-16x16.png" />
+      <meta name="theme-color" content="#ffffff" />
     </Head>
     <style jsx global>{`
       html, body {

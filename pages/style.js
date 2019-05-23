@@ -28,7 +28,7 @@ const style = () =>
     <label>Label:</label>
     <input type='text' />
     <small>Small text</small>
-    <legend>Legend text</small>
+    <legend>Legend text</legend>
   </PaddedView>
 
 export default style

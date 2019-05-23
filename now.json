@@ -11,6 +11,7 @@
     "AIRTABLE_KEY": "@airtable-key"
   },
   "routes": [
+    { "src": "/favicon.ico", "dest": "/static/fav/favicon.ico" },
     { "src": "/sobre", "dest": "/about" },
     { "src": "/loja", "dest": "/store" },
     { "src": "/lugares", "dest": "/locations" },
