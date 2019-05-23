@@ -1,5 +1,6 @@
 import { compose, withProps } from 'recompose'
 import Link from 'next/link'
+import PaddedView from 'components/PaddedView'
 import { velaGreen, lightGray } from '../style/colors'
 import withOpenDrawer from '../containers/withOpenDrawer'
 import Cart from './store/Cart'
@@ -13,9 +14,9 @@ const Header = ({ isCartOpen, isMenuOpen, children }) =>
   <>
     <HeaderDrawer visible={isCartOpen}><Cart /></HeaderDrawer>
     <HeaderDrawer visible={isMenuOpen}>
-      <MainMenu />
-      <SubscribeForm />
-      <Footer />
+      <PaddedView><MainMenu /></PaddedView>
+      <PaddedView><SubscribeForm /></PaddedView>
+      <PaddedView><Footer /></PaddedView>
     </HeaderDrawer>
     <header className='Header'>
       <div className='top'>

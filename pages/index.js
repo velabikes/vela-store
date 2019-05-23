@@ -6,8 +6,13 @@ import Cta89 from '../components/cta89'
 const HomePage = () =>
   <div className='HomePage'>
     <Head>
-      <title>Vela: Bicicletas elétricas para cidades mais saudáveis.</title>
+      <title>Vela : Bicicletas elétricas para cidades mais saudáveis.</title>
       <meta name='description' content='Conheça as bicicletas elétricas da Vela, desenvolvidas com design clássico e alta tecnologia. Feitas no Brasil.' />
+      <meta property='og:url' content='http://velabikes.com.br' />
+      <meta property='og:type' content='website' />
+      <meta property='og:title' content='Vela : Bicicletas elétricas para cidades mais saudáveis.' />
+      <meta property='og:description' content='Conheça as bicicletas elétricas da Vela, desenvolvidas com design clássico e alta tecnologia. Feitas no Brasil.' />
+      <meta property='og:image' content='https://gallery.mailchimp.com/68a0cce7cc109d78a8b44d7a0/images/69c9e416-74cd-4be5-a8db-7a04763999cb.jpg' />
     </Head>
     <img src='https://gallery.mailchimp.com/68a0cce7cc109d78a8b44d7a0/images/69c9e416-74cd-4be5-a8db-7a04763999cb.jpg' className='desktop' alt='' />
     <img src='https://gallery.mailchimp.com/68a0cce7cc109d78a8b44d7a0/images/5a250267-fd4a-44db-8103-8dff543ffa91.jpg' className='mobile' alt='' />

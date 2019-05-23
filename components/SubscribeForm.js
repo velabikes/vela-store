@@ -1,14 +1,11 @@
 import MailchimpSubscribe from 'react-mailchimp-subscribe'
 import { Formik } from 'formik'
-import fetch from 'isomorphic-fetch'
-import { compose, withHandlers } from 'recompose'
 import { velaBlue } from '../style/colors'
-import PaddedView from './PaddedView'
 
 const url = 'https://velabikes.us15.list-manage.com/subscribe/post?u=950b7d190680648ed40ffbe84&amp;id=dde7c564df'
 
-const SubscribeForm = ({ handleFormSubmit }) =>
-  <PaddedView>
+const SubscribeForm = () =>
+  <div className='SubscribeForm'>
     <h3>Newsletter:</h3>
     <MailchimpSubscribe
       url={url}
@@ -52,17 +49,6 @@ const SubscribeForm = ({ handleFormSubmit }) =>
         padding: 0.29em;
       }
     `}</style>
-  </PaddedView>
+  </div>
 
-export default compose(
-  withHandlers({
-    handleFormSubmit: () => async (input) => {
-      const response = await fetch('https://velabikes.us15.list-manage.com/subscribe/post-json?u=950b7d190680648ed40ffbe84&amp;id=dde7c564df&c=?', {
-        method: 'POST',
-        body: JSON.stringify(input),
-        mode: 'no-cors'
-      })
-      console.log(response)
-    }
-  })
-)(SubscribeForm)
+export default SubscribeForm
