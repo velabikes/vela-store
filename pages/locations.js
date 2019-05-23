@@ -4,7 +4,9 @@ import { velaGreen } from '../style/colors'
 
 const Locations = ({ stores }) =>
   <>
-    {console.log(stores)}
+    <Head>
+      <title>Conheça nossas bikes em uma loja Vela</title>
+    </Head>
     <PaddedView className='Stores'>
       <h1>Nossas Lojas</h1>
       <h4>

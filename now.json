@@ -13,6 +13,7 @@
   "routes": [
     { "src": "/sobre", "dest": "/about" },
     { "src": "/loja", "dest": "/store" },
+    { "src": "/lugares", "dest": "/locations" },
     { "src": "/loja/(?<handle>[^/]+)$", "dest": "/store?handle=$handle" },
     { "src": "/loja/produto/(?<handle>[^/]+)$", "dest": "/store/product?handle=$handle" }
   ]
