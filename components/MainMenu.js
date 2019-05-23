@@ -1,34 +1,28 @@
-import PropTypes from 'prop-types'
-import { compose, lifecycle } from 'recompose'
 import Link from 'next/link'
-import withCheckout from '../containers/withCheckout'
-import PaddedView from '../components/PaddedView'
 import { velaBlue } from '../style/colors'
 
 const MainMenu = () =>
-  <PaddedView className='MainMenu'>
-    <nav>
-      <h1>Menu</h1>
-      <ul className='items'>
-        <li><Link href='/store?handle=vela-1' as='/loja/vela-1'><a>
-          Monte sua Vela
-        </a></Link></li>
-        <li><Link href='/store' as='/loja'><a>
-          Acessórios
-        </a></Link></li>
-        <li><Link href='/locations' as='/lugares'><a>
-          Nossas lojas
-        </a></Link></li>
-        {/*
-        <li><Link href='/about' as='/sobre'><a>
-          Sobre nós
-        </a></Link></li>
-        */}
-        <li><Link href='https://velabikes.freshdesk.com/support/home'><a>
-          Suporte
-        </a></Link></li>
-      </ul>
-    </nav>
+  <nav className='MainMenu'>
+    <h1>Menu</h1>
+    <ul className='items'>
+      <li><Link href='/store?handle=vela-1' as='/loja/vela-1'><a>
+        Monte sua Vela
+      </a></Link></li>
+      <li><Link href='/store' as='/loja'><a>
+        Acessórios
+      </a></Link></li>
+      <li><Link href='/locations' as='/lugares'><a>
+        Nossas lojas
+      </a></Link></li>
+      {/*
+      <li><Link href='/about' as='/sobre'><a>
+        Sobre nós
+      </a></Link></li>
+      */}
+      <li><Link href='https://velabikes.freshdesk.com/support/home'><a>
+        Suporte
+      </a></Link></li>
+    </ul>
     <style jsx>{`
       ul {
         padding: 0;
@@ -43,8 +37,6 @@ const MainMenu = () =>
       }
       li
     `}</style>
-  </PaddedView>
+  </nav>
 
-export default compose(
-  withCheckout
-)(MainMenu)
+export default MainMenu

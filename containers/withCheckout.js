@@ -53,8 +53,8 @@ export default compose(
       const mutationResponse = await checkoutCreate({
         variables: {
           input: {
-            //allowPartialAddresses: true,
-            //shippingAddress: { city: 'Sao Paulo', province: 'SP', country: 'Brazil', zip: '01000-000' }
+            // allowPartialAddresses: true,
+            // shippingAddress: { city: 'Sao Paulo', province: 'SP', country: 'Brazil', zip: '01000-000' }
           }
         }
       })

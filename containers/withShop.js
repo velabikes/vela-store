@@ -25,6 +25,6 @@ export default graphql(shop, {
   props: ({ data: { shop }, loading }) => ({
     shop,
     isShopLoading: loading
-  }),
+  })
 
 })

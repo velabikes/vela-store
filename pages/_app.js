@@ -7,7 +7,7 @@ import withRedux from 'next-redux-wrapper'
 import { ApolloProvider } from 'react-apollo'
 import { PersistGate } from 'redux-persist/integration/react'
 import { PageTransition } from 'next-page-transitions'
-import withGA from "next-ga";
+import withGA from 'next-ga'
 import withShopify from '../lib/shopify'
 import Head from '../components/Head'
 import Header from '../components/Header'
