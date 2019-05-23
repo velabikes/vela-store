@@ -13,6 +13,7 @@ import Head from '../components/Head'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import { makeStore } from '../lib/redux'
+import Progress from '../components/Progress'
 
 class MyApp extends App {
   static async getInitialProps ({ Component, ctx }) {
@@ -26,6 +27,7 @@ class MyApp extends App {
 
     return (
       <Container>
+        <Progress />
         <Head />
         <Provider store={store}>
           <ApolloProvider client={apollo}>
