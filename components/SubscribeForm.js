@@ -1,9 +1,9 @@
-import MailchimpSubscribe from "react-mailchimp-subscribe"
+import MailchimpSubscribe from 'react-mailchimp-subscribe'
 import { Formik } from 'formik'
 import fetch from 'isomorphic-fetch'
 import { compose, withHandlers } from 'recompose'
-import PaddedView from './PaddedView'
 import { velaBlue } from '../style/colors'
+import PaddedView from './PaddedView'
 
 const url = 'https://velabikes.us15.list-manage.com/subscribe/post?u=950b7d190680648ed40ffbe84&amp;id=dde7c564df'
 
@@ -14,29 +14,29 @@ const SubscribeForm = ({ handleFormSubmit }) =>
       url={url}
       render={({ subscribe, status }) =>
         status === 'success'
-        ? <div>Obrigado!</div>
-        : <Formik initialValues={{ EMAIL: '' }} onSubmit={subscribe}>
-          {({
-            values,
-            handleChange,
-            handleBlur,
-            handleSubmit,
-          }) =>
-            <form method="post" onSubmit={handleSubmit}>
-              <input
-                type="email"
-                id="EMAIL"
-                placeholder="Digite seu email"
-                onChange={handleChange}
-                onBlur={handleBlur}
-              />
-              <div style={{position: 'absolute', left: '-5000px'}} aria-hidden="true">
-                <input type="text" name="b_950b7d190680648ed40ffbe84_dde7c564df" tabIndex="-1" defaultValue="" />
-              </div>
-              <button type="submit">Assinar</button>
-            </form>
-          }
-        </Formik>
+          ? <div>Obrigado!</div>
+          : <Formik initialValues={{ EMAIL: '' }} onSubmit={subscribe}>
+            {({
+              values,
+              handleChange,
+              handleBlur,
+              handleSubmit
+            }) =>
+              <form method='post' onSubmit={handleSubmit}>
+                <input
+                  type='email'
+                  id='EMAIL'
+                  placeholder='Digite seu email'
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                />
+                <div style={{ position: 'absolute', left: '-5000px' }} aria-hidden='true'>
+                  <input type='text' name='b_950b7d190680648ed40ffbe84_dde7c564df' tabIndex='-1' defaultValue='' />
+                </div>
+                <button type='submit'>Assinar</button>
+              </form>
+            }
+          </Formik>
       }
     />
     <style jsx>{`

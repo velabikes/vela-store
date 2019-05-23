@@ -6,7 +6,7 @@ import ProductForm from './ProductForm'
 
 const ProductVariantImage = ({ variant }) =>
   <ProductImage
-    src={ variant.node && variant.node.image.src }
+    src={variant.node && variant.node.image.src}
   />
 
 const ProductImageGallery = ({ product }) =>
@@ -56,5 +56,5 @@ const ProductInfo = ({ product, setSelectedVariant, selectedVariant }) =>
   </div>
 
 export default compose(
-  withState('selectedVariant', 'setSelectedVariant', null),
+  withState('selectedVariant', 'setSelectedVariant', null)
 )(ProductInfo)

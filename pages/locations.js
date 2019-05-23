@@ -22,7 +22,7 @@ const Locations = ({ stores }) =>
           style={{ backgroundImage: 'url(https://maps.googleapis.com/maps/api/place/photo?maxwidth=1080&photoreference=' + store.photos[0].photo_reference + '&key=AIzaSyDPIMs29240aTRj5izYnWSRfmKucLR0cwY' }}
         >
           <div className={`info ${(i % 2) && 'right'}`}>
-            <h1>{store.address_components[store.address_components.length-4].long_name}</h1>
+            <h1>{store.address_components[store.address_components.length - 4].long_name}</h1>
             <h4><address>{store.vicinity}</address></h4>
             <table className='hours'>
               {store.opening_hours.weekday_text.map(day =>

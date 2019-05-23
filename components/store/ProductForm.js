@@ -53,7 +53,7 @@ const ProductForm = ({
                 setSelectedOptions({ ...selectedOptions, [option.name]: value })
               }}
               selected={selectedOptions[option.name] === value}
-              disabled={!!product.options.findIndex(o => o.name === option.name) && !selectedOptions[product.options[product.options.findIndex(o => o.name === option.name)-1].name]}
+              disabled={!!product.options.findIndex(o => o.name === option.name) && !selectedOptions[product.options[product.options.findIndex(o => o.name === option.name) - 1].name]}
             >
               {value}
             </OptionButton>
