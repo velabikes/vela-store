@@ -7,6 +7,7 @@ const Locations = ({ stores }) =>
   <>
     <Head>
       <title>Conheça nossas bikes em uma loja Vela</title>
+      <meta name='description' content='Venha conhecer uma de nossas lojas oficiais, estamos em São Paulo, Brasilia, Curitiba e Rio de Janeiro' />
     </Head>
     <PaddedView className='Stores'>
       <h1>Nossas Lojas</h1>

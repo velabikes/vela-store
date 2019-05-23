@@ -27,6 +27,8 @@ const style = () =>
     <hr />
     <label>Label:</label>
     <input type='text' />
+    <small>Small text</small>
+    <legend>Legend text</small>
   </PaddedView>
 
 export default style
