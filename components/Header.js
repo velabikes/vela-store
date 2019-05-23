@@ -104,6 +104,9 @@ const Header = ({ isCartOpen, isMenuOpen, children }) =>
           min-height: 5rem;
           min-width: 5rem;
         }
+        .top {
+          margin-top: 0.28em;
+        }
         .bottom > div > a {
           writing-mode: vertical-rl;
           text-orientation: sideways;
