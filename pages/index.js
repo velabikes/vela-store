@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import HomeImage from 'components/home/HomeImage'
 import { lightGray, velaBlue } from '../style/colors'
 import Cta89 from '../components/cta89'
 
@@ -15,8 +16,7 @@ const HomePage = () =>
       <meta property='og:image' content='https://gallery.mailchimp.com/68a0cce7cc109d78a8b44d7a0/images/69c9e416-74cd-4be5-a8db-7a04763999cb.jpg' />
       <meta property='fb:app_id' content='373948403355114' />
     </Head>
-    <img src='https://gallery.mailchimp.com/68a0cce7cc109d78a8b44d7a0/images/69c9e416-74cd-4be5-a8db-7a04763999cb.jpg' className='desktop' alt='' />
-    <img src='https://gallery.mailchimp.com/68a0cce7cc109d78a8b44d7a0/images/5a250267-fd4a-44db-8103-8dff543ffa91.jpg' className='mobile' alt='' />
+    <HomeImage />
     <div className='cta'>
       <div className='slogan'>
         <h1>#VADEVELA</h1>
@@ -33,11 +33,6 @@ const HomePage = () =>
       .HomePage {
          position: relative;
       }
-      img {
-        height: calc(100vh - 4rem);
-        object-fit: cover;
-        width: 100%;
-      }
       .cta {
         text-align: right;
         position: absolute;
@@ -50,9 +45,6 @@ const HomePage = () =>
       button {
         margin-top: 1rem;
         font-size: 1.29em;
-      }
-      .desktop {
-        display: none;
       }
       .promotion {
         position: fixed;
@@ -79,12 +71,6 @@ const HomePage = () =>
         h1 {
           font-size: 3.1em;
           font-weight: 900;
-        }
-        .mobile {
-          display: none;
-        }
-        .desktop {
-          display: initial;
         }
       }
     `}</style>
