@@ -47,32 +47,39 @@ const withCheckoutHoC = graphql(checkout, {
 
 export default compose(
   withCheckoutId,
-  withCheckoutCreate,
-  withHandlers({
-    handleCheckoutCreation: ({ checkoutCreate, dispatch }) => async () => {
-      const mutationResponse = await checkoutCreate({
-        variables: {
-          input: {
-            // allowPartialAddresses: true,
-            // shippingAddress: { city: 'Sao Paulo', province: 'SP', country: 'Brazil', zip: '01000-000' }
-          }
-        }
-      })
-      const checkoutId = mutationResponse.data.checkoutCreate.checkout.id
-      dispatch(setCheckoutId(checkoutId))
-    }
-  }),
   branch(
     ({ isCheckoutIdLoading }) => !isCheckoutIdLoading,
-    withCheckoutHoC
-  ),
-  withProps(({ checkout, isCheckoutLoading }) => ({ withShippingRates: checkout && checkout.requiresShipping && checkout.shippingAddress })),
-  branch(
-    ({ withShippingRates }) => withShippingRates,
-    withCheckoutHoC
-  ),
-  withPropsOnChange(
-    (props, nextProps) => props.checkout && props.checkout.lineItems !== nextProps.checkout.lineItems,
-    props => props.checkoutRefetch()
+    compose(
+      withCheckoutCreate,
+      withHandlers({
+        handleCheckoutCreation: ({ checkoutCreate, dispatch }) => async () => {
+          const mutationResponse = await checkoutCreate({
+            variables: {
+              input: {
+                // allowPartialAddresses: true,
+                // shippingAddress: { city: 'Sao Paulo', province: 'SP', country: 'Brazil', zip: '01000-000' }
+              }
+            }
+          })
+          const checkoutId = mutationResponse.data.checkoutCreate.checkout.id
+          dispatch(setCheckoutId(checkoutId))
+        }
+      }),
+      branch(
+        ({ checkoutId }) => checkoutId,
+        compose(
+          withCheckoutHoC,
+          withProps(({ checkout, isCheckoutLoading }) => ({ withShippingRates: checkout && checkout.requiresShipping && checkout.shippingAddress })),
+          branch(
+            ({ withShippingRates }) => withShippingRates,
+            withCheckoutHoC
+          ),
+          withPropsOnChange(
+            (props, nextProps) => props.checkout && props.checkout.lineItems !== nextProps.checkout.lineItems,
+            props => props.checkoutRefetch()
+          )
+        )
+      )
+    )
   )
 )

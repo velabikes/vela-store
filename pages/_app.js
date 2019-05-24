@@ -31,17 +31,15 @@ class MyApp extends App {
         <Head />
         <Provider store={store}>
           <ApolloProvider client={apollo}>
-            <PersistGate loading={<div>loading</div>} persistor={store.__persistor}>
-              <Header>
-                <PageTransition
-                  timeout={300}
-                  classNames='page-transition'
-                  monkeyPatchScrolling
-                >
-                  <Component {...pageProps} key={router.route} />
-                </PageTransition>
-              </Header>
-            </PersistGate>
+            <Header>
+              <PageTransition
+                timeout={300}
+                classNames='page-transition'
+                monkeyPatchScrolling
+              >
+                <Component {...pageProps} key={router.route} />
+              </PageTransition>
+            </Header>
           </ApolloProvider>
         </Provider>
       </Container>
