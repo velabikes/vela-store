@@ -1,8 +1,8 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import HomeImage from 'components/home/HomeImage'
+import Cta89 from 'components/home/HomePromo'
 import { lightGray, velaBlue } from '../style/colors'
-import Cta89 from '../components/cta89'
 
 const HomePage = () =>
   <div className='HomePage'>
