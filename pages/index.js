@@ -8,7 +8,7 @@ const HomePage = () =>
     <Head>
       <title>Vela : Bicicletas elétricas para cidades mais saudáveis.</title>
       <meta name='description' content='Conheça as bicicletas elétricas da Vela, desenvolvidas com design clássico e alta tecnologia. Feitas no Brasil.' />
-      <meta property='og:url' content='http://velabikes.com.br' />
+      <meta property='og:url' content='https://velabikes.com.br' />
       <meta property='og:type' content='website' />
       <meta property='og:title' content='Vela : Bicicletas elétricas para cidades mais saudáveis.' />
       <meta property='og:description' content='Conheça as bicicletas elétricas da Vela, desenvolvidas com design clássico e alta tecnologia. Feitas no Brasil.' />
