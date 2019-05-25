@@ -34,7 +34,7 @@ const withCheckout = graphql(checkout, {
   options ({ checkout, checkoutId, handleCheckoutCreation }) {
     const hoursPastCreation = checkout && dayjs().diff(dayjs(checkout.createdAt), 'hours')
     const withShippingRates = checkout && checkout.requiresShipping && checkout.shippingAddress
-    const isCheckoutExpired = hoursPastCreation > 1
+    const isCheckoutExpired = hoursPastCreation > 72
     const isCheckoutCompleted = checkout && checkout.completedAt
 
     return {
