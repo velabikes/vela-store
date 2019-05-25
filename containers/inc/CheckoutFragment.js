@@ -7,6 +7,7 @@ export default gql`
     totalTax
     subtotalPrice
     totalPrice
+    createdAt
     completedAt
     ready
     paymentDue

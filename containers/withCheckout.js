@@ -1,7 +1,7 @@
-
 import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
 import { compose, withHandlers, withProps, branch, withPropsOnChange } from 'recompose'
+import dayjs from 'dayjs'
 import { setCheckoutId } from '../lib/redux'
 import withCheckoutId from './withCheckoutId'
 import withCheckoutCreate from './withCheckoutCreate'
@@ -28,14 +28,19 @@ const checkout = gql`
   ${CheckoutFragment}
 `
 
-const withCheckoutHoC = graphql(checkout, {
+const withCheckout = graphql(checkout, {
   alias: 'withCheckout',
 
-  options (props) {
+  options ({ checkout, checkoutId, handleCheckoutCreation }) {
+    const hoursPastCreation = checkout && dayjs().diff(dayjs(checkout.createdAt), 'hours')
+    const withShippingRates = checkout && checkout.requiresShipping && checkout.shippingAddress
+    const isCheckoutExpired = hoursPastCreation > 1
+    const isCheckoutCompleted = checkout && checkout.completedAt
+
     return {
       variables: {
-        id: props.checkoutId || props.handleCheckoutCreation(),
-        withShippingRates: !!props.withShippingRates
+        id: checkoutId && !isCheckoutExpired && !isCheckoutCompleted ? checkoutId : handleCheckoutCreation(),
+        withShippingRates: !!withShippingRates
       }
     }
   },
@@ -55,31 +60,15 @@ export default compose(
         handleCheckoutCreation: ({ checkoutCreate, dispatch }) => async () => {
           const mutationResponse = await checkoutCreate({
             variables: {
-              input: {
-                // allowPartialAddresses: true,
-                // shippingAddress: { city: 'Sao Paulo', province: 'SP', country: 'Brazil', zip: '01000-000' }
-              }
+              input: {}
             }
           })
           const checkoutId = mutationResponse.data.checkoutCreate.checkout.id
           dispatch(setCheckoutId(checkoutId))
         }
       }),
-      branch(
-        ({ checkoutId }) => checkoutId,
-        compose(
-          withCheckoutHoC,
-          withProps(({ checkout, isCheckoutLoading }) => ({ withShippingRates: checkout && checkout.requiresShipping && checkout.shippingAddress })),
-          branch(
-            ({ withShippingRates }) => withShippingRates,
-            withCheckoutHoC
-          ),
-          withPropsOnChange(
-            (props, nextProps) => props.checkout && props.checkout.lineItems !== nextProps.checkout.lineItems,
-            props => props.checkoutRefetch()
-          )
-        )
-      )
+      withCheckout
     )
-  )
+  ),
+  branch(({ checkoutId }) => checkoutId, withCheckout)
 )

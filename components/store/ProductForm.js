@@ -61,7 +61,7 @@ const ProductForm = ({
         </div>
       </div>
     )}
-    { /* <div><label>Disponibilidade: </label><span>Em estoque</span></div> */ }
+    { /* <div><label>Disponibilidade: </label><span>{!selectedVariant ? ' Selecione uma versão' : selectedVariant.node.availableForSale ? ' Em estoque' : ' 5 - 7 semanas.' }</span></div> */ }
     <br />
     <button
       onClick={handleAddToCartClick}

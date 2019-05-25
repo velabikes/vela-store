@@ -26,6 +26,7 @@ query productQuery($handle: String!) {
           node {
             id
             price
+            availableForSale
             selectedOptions {
               name
               value
