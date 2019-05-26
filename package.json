@@ -37,7 +37,6 @@
     "next": "^8.1.0",
     "next-apollo": "^2.1.0",
     "next-ga": "^2.3.4",
-    "next-page-transitions": "^1.0.0-beta.2",
     "next-redux-wrapper": "^3.0.0-alpha.2",
     "next-with-apollo": "^3.4.0",
     "nprogress": "^0.2.0",
