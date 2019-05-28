@@ -39,6 +39,7 @@
     "next-ga": "^2.3.4",
     "next-redux-wrapper": "^3.0.0-alpha.2",
     "next-with-apollo": "^3.4.0",
+    "node-correios": "^2.2.0",
     "nprogress": "^0.2.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.3",
@@ -52,7 +53,8 @@
     "redux-devtools-extension": "^2.13.8",
     "redux-logger": "^3.0.6",
     "redux-persist": "^5.10.0",
-    "redux-thunk": "^2.3.0"
+    "redux-thunk": "^2.3.0",
+    "shopify-api-node": "^2.19.2"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
