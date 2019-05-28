@@ -9,8 +9,6 @@ module.exports = async (req, res) => {
   const totalGrams = items.map(item => item.grams).reduce((partial_sum, a) => partial_sum + a,0)
   const totalPrice = items.map(item => item.price).reduce((partial_sum, a) => partial_sum + a,0)
 
-  if (destination.name !== 'Diogo Vianna') return
-
   if (totalPrice < 400000) {
     const queryArgs = {
       nCdServico: '40010,41106',
