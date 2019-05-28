@@ -25,7 +25,6 @@ module.exports = async (req, res) => {
       nVlValorDeclarado: totalPrice/100
     }
     return correios.calcPrecoPrazo(queryArgs, (err, result) => {
-      console.log(result)
       return res.end(JSON.stringify({
         rates: mapCorreiosResultToRate(result)
       }))
