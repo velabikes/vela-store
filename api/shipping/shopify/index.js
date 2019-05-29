@@ -8,6 +8,18 @@ module.exports = async (req, res) => {
   const totalGrams = items.map(item => item.grams).reduce((b, a) => b + a, 0)
   const totalPrice = items.map(item => item.price).reduce((b, a) => b + a, 0)
 
+  if (totalPrice > 6500 && totalGrams < 300) {
+    res.end(JSON.stringify({
+      rates: [{
+        service_name: 'Frete Gratis',
+        service_code: 'FG',
+        total_price: '0',
+        description: '5-10 dias úteis',
+        currency: 'BRL'
+      }]
+    }))
+  }
+
   if (totalPrice < 400000) {
     const queryArgs = {
       nCdServico: '40010,41106',
@@ -29,7 +41,7 @@ module.exports = async (req, res) => {
         rates: mapCorreiosResultToRate(result)
       }))
     })
-  } else if (destination.city === 'São Paulo' || (totalPrice > 6500 && totalGrams < 300)) {
+  } else if (destination.city === 'São Paulo') {
     return (
       res.end(JSON.stringify({
         rates: [{
