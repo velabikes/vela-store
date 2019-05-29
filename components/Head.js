@@ -22,10 +22,10 @@ const CustomHead = props =>
         width: 100%;
         color: ${offBlack};
         background-color: ${offWhite};
-        font-family: neue-haas-grotesk-display, sans;
+        font-family: neue-haas-grotesk-display, sans-serif;
       }
       h1, h2, h3, h4, h5, h6 {
-        font-family: neue-haas-grotesk-display, sans;
+        font-family: neue-haas-grotesk-display, sans-serif;
         margin: 0.61em 0;
         font-style: italic;
       }
@@ -61,7 +61,7 @@ const CustomHead = props =>
       }
       p {
         line-height: 1.37em;
-        font-family: neue-haas-grotesk-text, sans;
+        font-family: neue-haas-grotesk-text, sans-serif;
       }
       p:last-child {
         margin-bottom: 0
@@ -77,7 +77,7 @@ const CustomHead = props =>
         line-height: 1.37em;
         color: ${offBlack};
         margin: 0.37em;
-        font-family: neue-haas-grotesk-text, sans;
+        font-family: neue-haas-grotesk-text, sans-serif;
       }
       table {
         width: 100%;
@@ -105,7 +105,7 @@ const CustomHead = props =>
         border-radius: 0;
         display: block;
         font-size: 1rem;
-        font-family: neue-haas-grotesk-display, sans;
+        font-family: neue-haas-grotesk-display, sans-serif;
         box-sizing: border-box;
         background: transparent;
       }
@@ -118,7 +118,7 @@ const CustomHead = props =>
         background-color: ${velaBlue};
         color: white;
         border: 0px solid transparent;
-        font-family: neue-haas-grotesk-display, sans;
+        font-family: neue-haas-grotesk-display, sans-serif;
         font-size: 1em;
         cursor: pointer;
         transition: .4s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
