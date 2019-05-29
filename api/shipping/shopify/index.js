@@ -1,13 +1,12 @@
 const { json } = require('micro')
-const { parse } = require('url')
 const correios = require('node-correios')()
 
 module.exports = async (req, res) => {
   res.setHeader('Content-Type', 'application/json')
 
   const { rate: { origin, destination, items } } = await json(req)
-  const totalGrams = items.map(item => item.grams).reduce((partial_sum, a) => partial_sum + a,0)
-  const totalPrice = items.map(item => item.price).reduce((partial_sum, a) => partial_sum + a,0)
+  const totalGrams = items.map(item => item.grams).reduce((b, a) => b + a, 0)
+  const totalPrice = items.map(item => item.price).reduce((b, a) => b + a, 0)
 
   if (totalPrice < 400000) {
     const queryArgs = {
@@ -20,14 +19,17 @@ module.exports = async (req, res) => {
       nVlLargura: 20,
       nVlComprimento: 40,
       nVlDiametro: 20,
-      nVlValorDeclarado: totalPrice/100
+      nVlValorDeclarado: totalPrice / 100
     }
+
     return correios.calcPrecoPrazo(queryArgs, (err, result) => {
+      if (err) return
+
       return res.end(JSON.stringify({
         rates: mapCorreiosResultToRate(result)
       }))
     })
-  } else if (destination.city === 'São Paulo') {
+  } else if (destination.city === 'São Paulo' || (totalPrice > 6500 && totalGrams < 300)) {
     return (
       res.end(JSON.stringify({
         rates: [{
