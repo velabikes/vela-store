@@ -14,7 +14,7 @@ query productQuery($handle: String!) {
         name
         values
       }
-      images(first: 5, maxWidth: 1600) {
+      images(first: 40, maxWidth: 1600) {
         edges {
           node {
             src
