@@ -2,6 +2,8 @@ import Head from 'next/head'
 import Link from 'next/link'
 import HomeImage from 'components/home/HomeImage'
 import Cta89 from 'components/home/HomePromo'
+import HomeBikes from 'components/home/HomeBikes'
+import HomeAlbum from 'components/home/HomeAlbum'
 import { lightGray, velaBlue } from '../style/colors'
 
 const HomePage = () =>
@@ -26,6 +28,8 @@ const HomePage = () =>
         <button className='desktop'>Monte a sua</button>
       </Link>
     </div>
+    <HomeBikes />
+    <HomeAlbum />
     <div className='promotion'>
       <Cta89 />
     </div>
