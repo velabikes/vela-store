@@ -71,6 +71,7 @@ const HomeAlbum = ({ images }) =>
       @media only screen and (min-width: 1200px) {
         .HomeAlbum {
           grid-template-columns: 220px 1fr;
+          margin-top: 7rem;
           margin-right: 4rem;
         }
         .Album {
