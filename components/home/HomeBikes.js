@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import PropTypes from 'prop-types'
 import { offBlack, velaGreen } from '../../style/colors'
+import PaddedView from 'components/PaddedView'
 
 const bikes = [
   {
@@ -19,37 +20,37 @@ const bikes = [
 ]
 
 const BikeCard = ({ title, href, hrefAs, action, src, index }) =>
-  <div className='Card'>
+  <section className='BikeCard'>
     <div className='CardHeader'>
-      <h1 className='CardTitle'>{title}</h1>
+      <h1>{title}</h1>
 
-      <Link href={href} as={hrefAs}>
-        <button className={`Button ${index % 2 ? 'odd' : 'even'}`}>{action}</button>
-      </Link>
+      <div>
+        <Link href={href} as={hrefAs}>
+          <button className={`Button ${index % 2 ? 'odd' : 'even'}`}>{action}</button>
+        </Link>
+      </div>
     </div>
 
     <img alt={title} src={src} />
 
-    <style>{`
-      .Card {
+    <style jsx>{`
+      .BikeCard {
         position: relative;
+        font-size: .61rem;
       }
       .CardHeader {
         position: absolute;
-        width: 100%;
-        height: 1.29em;
-        padding-left: 3rem;
-        padding-top: 3rem;
+        left: 1.61rem;
+        top: 1.61rem;
+        right: 1.61rem;
+        display: flex;
+        justify-content: space-between;
       }
-      .CardTitle {
-        display: inline;
+      h1 {
         color: ${offBlack};
+        font-size: 2.63em;
       }
       .Button {
-        position: absolute;
-        right: 3rem;
-        display: inline;
-        vertical-align: middle;
         font-size: 1.29em;
       }
       .odd {
@@ -60,12 +61,11 @@ const BikeCard = ({ title, href, hrefAs, action, src, index }) =>
       .even {
         background-color: ${velaGreen};
       }
-
-      @media only screen and (min-width: 1200px) {
-        margin: 0 2rem;
+      @media only screen and (min-width: 768px) {
+        font-size: 1rem;
       }
     `}</style>
-  </div>
+  </section>
 
 BikeCard.propTypes = {
   title: PropTypes.string,
@@ -77,11 +77,13 @@ BikeCard.propTypes = {
 }
 
 const HomeBikes = () =>
-  <div className='HomeBikes'>
-    <h1>Nossas Bikes</h1>
-    <div className='BikeCards'>
-      {bikes.map((bike, index) => <BikeCard key={bike.title} {...bike} index={index} />)}
-    </div>
+  <PaddedView>
+    <section className='HomeBikes'>
+      <h1>Nossas Bikes</h1>
+      <div className='BikeCards'>
+        {bikes.map((bike, index) => <BikeCard key={bike.title} {...bike} index={index} />)}
+      </div>
+    </section>
 
     <style jsx>{`
       .HomeBikes {
@@ -89,26 +91,15 @@ const HomeBikes = () =>
       }
       .BikeCards {
         display: grid;
-        margin: 0 2rem;
         grid-row-gap: 2rem;
-      }
-      h1 {
-        margin-left: 2rem;
-        margin-bottom: 4rem;
       }
       @media only screen and (min-width: 768px) {
         .BikeCards {
-          grid-template-columns: 1fr;
+          grid-template-columns: 1fr 1fr;
           grid-column-gap: 1rem;
         }
       }
-      @media only screen and (min-width: 1200px) {
-        .BikeCards {
-          grid-template-columns: 1fr 1fr;
-          margin-right: 4rem;
-        }
-      }
     `}</style>
-  </div>
+  </PaddedView>
 
 export default HomeBikes

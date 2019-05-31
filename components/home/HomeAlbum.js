@@ -38,7 +38,7 @@ const HomeAlbum = ({ images }) =>
       }
       .Hashtag {
         font-family: neue-haas-grotesk-display, sans-serif;
-        font-size: 5em;
+        font-size: 3.61em;
         font-style: italic;
         font-weight: 900;
         text-transform: uppercase;
@@ -46,8 +46,8 @@ const HomeAlbum = ({ images }) =>
         -webkit-text-stroke-width: 2px;
         -webkit-text-stroke-color: ${velaGreen};
         position: absolute;
-        right: 0;
-        bottom: 3rem;
+        right: 0em;
+        bottom: 4rem;
         margin: 0;
       }
 
@@ -68,7 +68,7 @@ const HomeAlbum = ({ images }) =>
         }
       }
 
-      @media only screen and (min-width: 1200px) {
+      @media only screen and (min-width: 1366px) {
         .HomeAlbum {
           grid-template-columns: 220px 1fr;
           margin-top: 7rem;
