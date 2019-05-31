@@ -18,7 +18,7 @@ const HomeAlbum = ({ images }) =>
       })}
     </div>
     <p className='Hashtag'>#vadevela</p>
-    <style>{`
+    <style jsx>{`
       .HomeAlbum {
         position: relative;
         display: grid;
