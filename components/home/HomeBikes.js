@@ -19,7 +19,7 @@ const bikes = [
 ]
 
 const BikeCard = ({ title, href, hrefAs, action, src, index }) =>
-  <div className='Card'>
+  <section className='BikeCard'>
     <div className='CardHeader'>
       <h1 className='CardTitle'>{title}</h1>
 
@@ -31,7 +31,7 @@ const BikeCard = ({ title, href, hrefAs, action, src, index }) =>
     <img alt={title} src={src} />
 
     <style>{`
-      .Card {
+      .BikeCard {
         position: relative;
       }
       .CardHeader {
@@ -65,7 +65,7 @@ const BikeCard = ({ title, href, hrefAs, action, src, index }) =>
         margin: 0 2rem;
       }
     `}</style>
-  </div>
+  </section>
 
 BikeCard.propTypes = {
   title: PropTypes.string,
@@ -77,7 +77,7 @@ BikeCard.propTypes = {
 }
 
 const HomeBikes = () =>
-  <div className='HomeBikes'>
+  <section className='HomeBikes'>
     <h1>Nossas Bikes</h1>
     <div className='BikeCards'>
       {bikes.map((bike, index) => <BikeCard key={bike.title} {...bike} index={index} />)}
@@ -109,6 +109,6 @@ const HomeBikes = () =>
         }
       }
     `}</style>
-  </div>
+  </section>
 
 export default HomeBikes
