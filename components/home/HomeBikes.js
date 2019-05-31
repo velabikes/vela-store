@@ -33,7 +33,6 @@ const BikeCard = ({ title, href, hrefAs, action, src, index }) =>
     <style>{`
       .Card {
         position: relative;
-        margin: 0 2rem;
       }
       .CardHeader {
         position: absolute;
@@ -61,6 +60,10 @@ const BikeCard = ({ title, href, hrefAs, action, src, index }) =>
       .even {
         background-color: ${velaGreen};
       }
+
+      @media only screen and (min-width: 1200px) {
+        margin: 0 2rem;
+      }
     `}</style>
   </div>
 
@@ -85,7 +88,9 @@ const HomeBikes = () =>
         margin: 4rem auto 4rem;
       }
       .BikeCards {
-        margin-right: 2rem;
+        display: grid;
+        margin: 0 2rem;
+        grid-row-gap: 2rem;
       }
       h1 {
         margin-left: 2rem;
@@ -93,15 +98,14 @@ const HomeBikes = () =>
       }
       @media only screen and (min-width: 768px) {
         .BikeCards {
-          display: grid;
           grid-template-columns: 1fr;
           grid-column-gap: 1rem;
-          grid-row-gap: 1rem;
         }
       }
       @media only screen and (min-width: 1200px) {
         .BikeCards {
           grid-template-columns: 1fr 1fr;
+          margin-right: 4rem;
         }
       }
     `}</style>
