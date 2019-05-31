@@ -12,7 +12,7 @@ const PaddedView = props =>
           padding: 1.5em 2em;
         }
       }
-      @media only screen and (min-width: 1200px) {
+      @media only screen and (min-width: 1366px) {
         div {
           padding: 1.5em 3em;
           width: 100%;
