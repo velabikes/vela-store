@@ -60,15 +60,6 @@ const HomePage = ({ images }) =>
         bottom: 2em;
         right: 2em;
       }
-      :global(.copyright) {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-      }
-      :global(.copyright) :global(small) {
-        color: ${lightGray}
-      }
       @media only screen and (min-width: 768px) {
         img {
           height: calc(100vh);
