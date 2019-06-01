@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import PropTypes from 'prop-types'
 import { offBlack, velaGreen } from '../../style/colors'
-import PaddedView from 'components/PaddedView'
 
 const bikes = [
   {
@@ -77,13 +76,11 @@ BikeCard.propTypes = {
 }
 
 const HomeBikes = () =>
-  <PaddedView>
-    <section className='HomeBikes'>
-      <h1>Nossas Bikes</h1>
-      <div className='BikeCards'>
-        {bikes.map((bike, index) => <BikeCard key={bike.title} {...bike} index={index} />)}
-      </div>
-    </section>
+  <section className='HomeBikes'>
+    <h1>Nossas Bikes</h1>
+    <div className='BikeCards'>
+      {bikes.map((bike, index) => <BikeCard key={bike.title} {...bike} index={index} />)}
+    </div>
 
     <style jsx>{`
       .HomeBikes {
@@ -100,6 +97,5 @@ const HomeBikes = () =>
         }
       }
     `}</style>
-  </PaddedView>
-
+  </section>
 export default HomeBikes

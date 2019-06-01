@@ -6,6 +6,7 @@ import HomeImage from 'components/home/HomeImage'
 import Cta89 from 'components/home/HomePromo'
 import HomeBikes from 'components/home/HomeBikes'
 import HomeAlbum from 'components/home/HomeAlbum'
+import PaddedView from 'components/PaddedView'
 import { lightGray } from '../style/colors'
 
 const HomePage = ({ images }) =>
@@ -30,8 +31,10 @@ const HomePage = ({ images }) =>
         <button className='desktop'>Monte a sua</button>
       </Link>
     </div>
-    <HomeBikes />
-    <HomeAlbum images={images} />
+    <PaddedView>
+      <HomeBikes />
+      <HomeAlbum images={images} />
+    </PaddedView>
     <div className='promotion'>
       <Cta89 />
     </div>

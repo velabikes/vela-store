@@ -2,7 +2,7 @@ import PropTypes from 'prop-types'
 import { velaGreen } from '../../style/colors'
 
 const HomeAlbum = ({ images }) =>
-  <div className='HomeAlbum'>
+  <section className='HomeAlbum'>
     <div className='AlbumTitle'>
       <h1>Siga o movimento</h1>
     </div>
@@ -33,12 +33,9 @@ const HomeAlbum = ({ images }) =>
         grid-template-columns: 1fr;
         grid-row-gap: 2rem;
       }
-      .AlbumTitle h1 {
-        margin-bottom: 3rem;
-      }
       .Hashtag {
         font-family: neue-haas-grotesk-display, sans-serif;
-        font-size: 3.61em;
+        font-size: 3.63em;
         font-style: italic;
         font-weight: 900;
         text-transform: uppercase;
@@ -51,7 +48,7 @@ const HomeAlbum = ({ images }) =>
         margin: 0;
       }
 
-      @media only screen and (min-width: 768px) {
+      @media only screen and (min-width: 580px) {
         .HomeAlbum {
           margin: 0 2rem;
           grid-template-columns: 1fr;
@@ -63,12 +60,12 @@ const HomeAlbum = ({ images }) =>
           grid-column-gap: 1.5rem;
         }
         .Hashtag {
-          font-size: 8rem;
+          font-size: 7.09rem;
           bottom: 1rem;
         }
       }
 
-      @media only screen and (min-width: 1366px) {
+      @media only screen and (min-width: 768px) {
         .HomeAlbum {
           grid-template-columns: 220px 1fr;
           margin-top: 7rem;
@@ -82,7 +79,7 @@ const HomeAlbum = ({ images }) =>
         }
       }
     `}</style>
-  </div>
+  </section>
 
 HomeAlbum.propTypes = {
   images: PropTypes.array

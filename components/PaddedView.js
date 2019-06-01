@@ -16,7 +16,7 @@ const PaddedView = props =>
         div {
           padding: 1.5em 3em;
           width: 100%;
-          max-width: 1200px;
+          max-width: 1366px;
           margin: 0 auto;
         }
       }
