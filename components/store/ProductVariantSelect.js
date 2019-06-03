@@ -7,16 +7,48 @@ const ProductVariantSelect = ({
   selectedOptions,
   handleOptionSelect
 }) =>
-    product.options.map((option, i) => {
-      return (
-        <ProductFormItem
-          name={option.name}
-          values={option.values}
-          selectedValue={selectedOptions[option.name]}
-          onSelect={handleOptionSelect}
-        />
-      )
-    })
+  product.options.map((option, i) => {
+    return (
+      <ProductFormItem
+        name={option.name}
+        values={
+          getAvailableOptionValues(
+            option.name,
+            getAvailableVariants(
+              product.variants,
+              filterSelectedOptions(selectedOptions, product.options.slice(0, i))
+            )
+          )
+        }
+        selectedValue={selectedOptions[option.name]}
+        onSelect={handleOptionSelect}
+      />
+    )
+  })
+
+
+const filterSelectedOptions = (selectedOptions, options) => {
+  return options.reduce((obj, item) => {
+    if (!selectedOptions[item.name]) return obj
+    return (obj[item.name] = selectedOptions[item.name], obj)
+  }, {})
+}
+
+const getAvailableVariants = (variants, selectedOptions) => {
+  const availableEdges = variants.edges.filter(variant => {
+    const variantOptions = variant.node.selectedOptions.reduce((obj,item) => {
+      obj[item.name] = item.value
+      return obj
+    }, {});
+    return Object.keys(selectedOptions).every(k => variantOptions[k] == selectedOptions[k])
+  })
+  return { edges: availableEdges }
+}
+
+const getAvailableOptionValues = (name, variants) => {
+  const dupeValues = variants.edges.map(variant => variant.node.selectedOptions.find(option => option.name === name).value)
+  return [...new Set(dupeValues)]
+}
 
 export default compose(
   withState('selectedOptions', 'setSelectedOptions', {}),
@@ -25,7 +57,7 @@ export default compose(
       const optionPos = props.product.options.findIndex(option => option.name === Object.keys(change)[0])
       const slicedOptions = props.product.options.slice(0, optionPos)
       const nextSelectedOptions = {
-        ...slicedOptions.reduce((obj, item) => (obj[item.name] = props.selectedOptions[item.name], obj) ,{}),
+        ...filterSelectedOptions(props.selectedOptions, slicedOptions),
         ...change
       }
 
