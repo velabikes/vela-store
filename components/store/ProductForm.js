@@ -13,10 +13,10 @@ const OptionButton = ({ selected, children, ...props }) =>
         background: ${selected ? velaBlue : 'transparent'};
         color: ${selected ? 'white' : velaBlue};
         border: 1px solid ${velaBlue};
-        font-size: 0.6rem;
+        font-size: 0.8rem;
         margin: 0.61em 0.61em 0 0;
         display: inline-block;
-        text-transform: uppercase;
+        text-transform: initial;
         font-style: normal;
       }
       span {
