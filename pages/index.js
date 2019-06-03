@@ -69,8 +69,11 @@ const HomePage = () =>
           right: calc(1% + 2rem);
         }
         h1 {
-          font-size: 3.1em;
+          font-size: 2.8em;
           font-weight: 900;
+        }
+        h4 {
+          font-size: 1.2em;
         }
       }
     `}</style>
