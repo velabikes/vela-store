@@ -23,7 +23,7 @@ const SubscribeForm = () =>
                 <input
                   type='email'
                   id='EMAIL'
-                  placeholder='Digite seu email'
+                  placeholder='Digite seu e-mail'
                   onChange={handleChange}
                   onBlur={handleBlur}
                 />
@@ -46,7 +46,7 @@ const SubscribeForm = () =>
         bottom: 0;
         color: ${velaBlue};
         background: transparent;
-        padding: 0.29em;
+        padding: 0.5em;
       }
     `}</style>
   </div>
