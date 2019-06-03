@@ -30,6 +30,7 @@ const CustomHead = props =>
       }
   	  h1 {
         font-size: 1.75rem;
+      }
       h1, h2, h3 {
         font-weight: 800;
         color: ${velaGreen};
