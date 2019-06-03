@@ -28,7 +28,7 @@ const OptionButton = ({ selected, label, ...props }) =>
     `}</style>
   </button>
 
-const ProductFormItem = ({
+const ProductVariantSelectItem = ({
   name,
   values,
   selectedValue,
@@ -45,4 +45,4 @@ const ProductFormItem = ({
     )}
   </div>
 
-export default ProductFormItem
+export default ProductVariantSelectItem

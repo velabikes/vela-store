@@ -1,4 +1,4 @@
-import ProductFormItem from './ProductFormItem'
+import ProductVariantSelectItem from './ProductVariantSelectItem'
 import { compose, withState, withHandlers, withProps } from 'recompose'
 
 const ProductVariantSelect = ({
@@ -9,7 +9,7 @@ const ProductVariantSelect = ({
 }) =>
   product.options.map((option, i) => {
     return (
-      <ProductFormItem
+      <ProductVariantSelectItem
         name={option.name}
         values={
           getAvailableOptionValues(
