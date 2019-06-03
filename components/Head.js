@@ -27,12 +27,14 @@ const CustomHead = props =>
       h1, h2, h3, h4, h5, h6 {
         font-family: neue-haas-grotesk-display, sans-serif;
         margin: 0.61em 0;
-        font-style: italic;
       }
+  	  h1 {
+        font-size: 1.75rem;
       h1, h2, h3 {
         font-weight: 800;
         color: ${velaGreen};
         text-transform: uppercase;
+        font-style: italic;
       }
       h1:first-child,
       h2:first-child,
