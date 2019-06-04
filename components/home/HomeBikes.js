@@ -5,14 +5,14 @@ import { offBlack, velaGreen } from '../../style/colors'
 const bikes = [
   {
     title: 'Vela 1',
-    href: '#',
-    hrefAs: '#',
+    href: '/store/product?handle=vela-1',
+    hrefAs: '/loja/produto/vela-1',
     action: 'Saiba +',
     src: 'https://gallery.mailchimp.com/68a0cce7cc109d78a8b44d7a0/images/37675488-67a3-4fac-b384-dfd235e23f96.png'
   }, {
     title: 'Vela S',
-    href: '#',
-    hrefAs: '#',
+    href: '/store/product?handle=vela-s',
+    hrefAs: '/loja/produto/vela-s',
     action: 'Saiba +',
     src: 'https://gallery.mailchimp.com/68a0cce7cc109d78a8b44d7a0/images/df50619a-f3bd-4a54-9b44-b4b5da38ac36.png'
   }
