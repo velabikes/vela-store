@@ -1,10 +1,15 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import fetch from 'isomorphic-fetch'
+import PropTypes from 'prop-types'
 import HomeImage from 'components/home/HomeImage'
 import Cta89 from 'components/home/HomePromo'
-import { lightGray, velaBlue } from '../style/colors'
+import HomeBikes from 'components/home/HomeBikes'
+import HomeAlbum from 'components/home/HomeAlbum'
+import PaddedView from 'components/PaddedView'
+import { lightGray } from '../style/colors'
 
-const HomePage = () =>
+const HomePage = ({ images }) =>
   <div className='HomePage'>
     <Head>
       <title>Vela : Bicicletas elétricas para cidades mais saudáveis.</title>
@@ -26,6 +31,10 @@ const HomePage = () =>
         <button className='desktop'>Monte a sua</button>
       </Link>
     </div>
+    <PaddedView>
+      <HomeBikes />
+      <HomeAlbum images={images} />
+    </PaddedView>
     <div className='promotion'>
       <Cta89 />
     </div>
@@ -51,15 +60,6 @@ const HomePage = () =>
         bottom: 2em;
         right: 2em;
       }
-      :global(.copyright) {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-      }
-      :global(.copyright) :global(small) {
-        color: ${lightGray}
-      }
       @media only screen and (min-width: 768px) {
         img {
           height: calc(100vh);
@@ -78,5 +78,27 @@ const HomePage = () =>
       }
     `}</style>
   </div>
+
+HomePage.propTypes = {
+  images: PropTypes.array
+}
+
+HomePage.getInitialProps = async () => {
+  const response = await fetch('https://www.instagram.com/velabikes/?__a=1')
+  const {
+    graphql: { user: { edge_owner_to_timeline_media: { edges } } }
+  } = await response.json()
+
+  const images = edges.map(edge => {
+    const resource = edge.node.thumbnail_resources.find(resource => resource.config_width > 350)
+
+    return {
+      id: edge.node.shortcode,
+      url: resource.src
+    }
+  })
+
+  return { images }
+}
 
 export default HomePage
