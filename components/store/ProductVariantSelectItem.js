@@ -1,4 +1,4 @@
-import { velaBlue } from '../../style/colors'
+import { velaBlue, offWhite } from '../../style/colors'
 
 const OptionButton = ({ selected, label, ...props }) =>
   <button {...props}>
@@ -48,6 +48,11 @@ const ProductVariantSelectItem = ({
         onClick={() => onSelect({[name]: value})}
       />
     )}
+    <style jsx>{`
+      label {
+        opacity: ${disabled && '0.5'}
+      }
+    `}</style>
   </fieldset>
 
 export default ProductVariantSelectItem
