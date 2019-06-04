@@ -11,7 +11,7 @@ const HomeAlbum = ({ images }) =>
         if (index > 7) return
 
         return <div key={image.id}>
-          <a href={`https://www.instagram.com/p/${image.id}`}>
+          <a href={`https://www.instagram.com/p/${image.id}`} target='_blank'>
             <img alt={image.title} src={image.url} />
           </a>
         </div>
