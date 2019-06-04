@@ -27,12 +27,15 @@ const CustomHead = props =>
       h1, h2, h3, h4, h5, h6 {
         font-family: neue-haas-grotesk-display, sans-serif;
         margin: 0.61em 0;
-        font-style: italic;
+      }
+  	  h1 {
+        font-size: 1.75rem;
       }
       h1, h2, h3 {
         font-weight: 800;
         color: ${velaGreen};
         text-transform: uppercase;
+        font-style: italic;
       }
       h1:first-child,
       h2:first-child,
@@ -101,13 +104,16 @@ const CustomHead = props =>
       input:not([type='checkbox']):not([type='radio']) {
         width: 100%;
         border: 0;
-        border-bottom: 1px solid ${velaGreen};
-        border-radius: 0;
+        padding: 10px;	        
+        margin-bottom: 0.61em;
+        margin-top: 0.61em;
+        border-radius: 5px;
         display: block;
         font-size: 1rem;
         font-family: neue-haas-grotesk-display, sans-serif;
         box-sizing: border-box;
-        background: transparent;
+        background: ${lightGray};
+        box-shadow: 0 2px 3px rgba(0,0,0,0.05), 0 2px 3px rgba(0,0,0,0.05);
       }
       input[type='radio'] {
         margin: 0.61em;
