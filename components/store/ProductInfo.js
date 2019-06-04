@@ -25,7 +25,7 @@ const ProductImageGallery = ({ product }) =>
 const ProductInfo = ({ product, setSelectedVariant, selectedVariant }) =>
   <div className='ProductInfo'>
     <div>
-      { product.variants && <ProductVariantImage variant={selectedVariant || product.variants.edges[0]} /> }
+      { product.variants && <ProductVariantImage variant={selectedVariant ? selectedVariant.edges[0] : product.variants.edges[0]} /> }
       <ProductImageGallery product={product} />
     </div>
     <div>
@@ -34,7 +34,11 @@ const ProductInfo = ({ product, setSelectedVariant, selectedVariant }) =>
         <Price value={selectedVariant && selectedVariant.node ? selectedVariant.node.price : product.variants && product.variants.edges.map(v => v.node.price)} />
       </h4>
       <hr />
-      { product.options && <ProductForm product={product} selectedVariant={selectedVariant} onVariantSelect={setSelectedVariant} /> }
+      <ProductForm
+        product={product}
+        selectedVariant={selectedVariant}
+        onVariantSelect={setSelectedVariant}
+      />
       <hr />
       <div dangerouslySetInnerHTML={{ __html: product.descriptionHtml }} />
     </div>
