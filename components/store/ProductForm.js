@@ -27,30 +27,6 @@ const ProductForm = ({
     </button>
   </div>
 
-const getAvailableVariants = (variants, selectedOptions) => {
-  const availableEdges = variants.edges.filter(variant => {
-    const variantOptions = variant.node.selectedOptions.reduce((obj,item) => {
-      obj[item.name] = item.value
-      return obj
-    }, {});
-    return Object.keys(selectedOptions).every(k => variantOptions[k] == selectedOptions[k])
-  })
-  return { edges: availableEdges }
-}
-
-const getAvailableOptionValues = (name, variants) => {
-  const dupeValues = variants.edges.map(variant => variant.node.selectedOptions.find(option => option.name === name).value)
-  return [...new Set(dupeValues)]
-}
-
-const findSelectedVariant = (variants, selected) => {
-  return variants.find(variant =>
-    variant.node.selectedOptions.every(
-      option => selected[option.name] === option.value
-    )
-  )
-}
-
 const handleAddToCartClick = ({
   checkoutLineItemsAdd,
   checkoutId,
@@ -72,27 +48,13 @@ const handleAddToCartClick = ({
           quantity: 1
         }
       ]
-    }
+     }
   })
   setAddToCartLoading(false)
   dispatch(toggleDrawer('CART'))
 }
 
 export default compose(
-  withState('selectedOptions', 'setSelectedOptions', {}),
-  withProps(({ product }) => ({ hasOptions: product.options.length > 1 || product.options[0].values.length > 1 })),
-  withProps(({ product, hasOptions, selectedOptions }) => ({
-    selectedVariant: !hasOptions
-      ? product.variants.edges[0]
-      : findSelectedVariant(product.variants.edges, selectedOptions)
-  })),
-  withPropsOnChange(
-    (props, nextProps) =>
-      nextProps.selectedVariant &&
-      !props.selectedVariant ||
-      props.selectedVariant !== nextProps.selectedVariant,
-    ({ selectedVariant, onVariantSelect }) => onVariantSelect(selectedVariant)
-  ),
   withState('isAddToCartLoading', 'setAddToCartLoading', false),
   withCheckoutLineItemsAdd,
   withCheckoutId,

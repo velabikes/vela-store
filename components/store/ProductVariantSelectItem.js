@@ -32,17 +32,20 @@ const ProductVariantSelectItem = ({
   name,
   values,
   selectedValue,
+  disabled,
   onSelect
 }) =>
-  <div>
-    <label>{name}</label>
-    {values.map(value =>
+  <fieldset>
+    <div>
+      <label>{name}</label>
+    </div>
+    {!disabled && values.map(value =>
       <OptionButton
         label={value}
         selected={value === selectedValue}
         onClick={() => onSelect({[name]: value})}
       />
     )}
-  </div>
+  </fieldset>
 
 export default ProductVariantSelectItem

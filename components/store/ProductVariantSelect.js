@@ -22,6 +22,7 @@ const ProductVariantSelect = ({
         }
         selectedValue={selectedOptions[option.name]}
         onSelect={handleOptionSelect}
+        disabled={Object.keys(selectedOptions).length < i}
       />
     )
   })
