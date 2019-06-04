@@ -8,7 +8,7 @@ const Footer = () =>
   <footer>
     <small>
       <div>CNPJ 20.430.806/0001-27</div>
-      <div><Link href='/legal'><a>TERMOS DE USO, GARANTIAS E POITICA DE DEVOLUÇÕES.</a></Link></div>
+      <div><Link href='/legal'><a>TERMOS DE USO, GARANTIAS E POLÍTICA DE DEVOLUÇÕES.</a></Link></div>
     </small>
   </footer>
 
