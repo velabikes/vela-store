@@ -39,8 +39,10 @@ const ProductVariantSelectItem = ({
     <div>
       <label>{name}</label>
     </div>
+    {disabled && <small></small>}
     {!disabled && values.map(value =>
       <OptionButton
+        key={value}
         label={value}
         selected={value === selectedValue}
         onClick={() => onSelect({[name]: value})}

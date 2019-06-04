@@ -8,20 +8,20 @@ const ProductForm = ({
   product,
   handleAddToCartClick,
   isAddToCartLoading,
-  selectedOptions,
-  setSelectedOptions,
-  selectedVariant,
   onVariantSelect,
+  selectedVariant,
   hasOptions
 }) =>
   <div className='ProductForm'>
-    <ProductVariantSelect
-      product={product}
-    />
-    <br />
+    { hasOptions &&
+      <ProductVariantSelect
+        product={product}
+        onVariantSelect={onVariantSelect}
+      />
+    }
     <button
       onClick={handleAddToCartClick}
-      disabled={hasOptions && Object.keys(selectedOptions).length !== product.options.length}
+      disabled={hasOptions ? !(selectedVariant && selectedVariant.edges.length === 1) : false}
     >
       { isAddToCartLoading ? 'Carregando...' : 'comprar' }
     </button>
@@ -33,18 +33,17 @@ const handleAddToCartClick = ({
   setAddToCartLoading,
   product,
   hasOptions,
-  selectedOptions,
+  selectedVariant,
   dispatch
 }) => async e => {
+  const variant = hasOptions ? selectedVariant.edges[0] : product.variants.edges[0]
   setAddToCartLoading(true)
   await checkoutLineItemsAdd({
     variables: {
       checkoutId: checkoutId,
       lineItems: [
         {
-          variantId: !hasOptions
-            ? product.variants.edges[0].node.id
-            : findSelectedVariant(product.variants.edges, selectedOptions).node.id,
+          variantId: variant.node.id,
           quantity: 1
         }
       ]
@@ -56,6 +55,7 @@ const handleAddToCartClick = ({
 
 export default compose(
   withState('isAddToCartLoading', 'setAddToCartLoading', false),
+  withProps(({ product }) => ({ hasOptions: product.options && product.options[0].values.length > 1 })),
   withCheckoutLineItemsAdd,
   withCheckoutId,
   withHandlers({

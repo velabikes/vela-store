@@ -10,6 +10,7 @@ const ProductVariantSelect = ({
   product.options.map((option, i) => {
     return (
       <ProductVariantSelectItem
+        key={option.name}
         name={option.name}
         values={
           getAvailableOptionValues(
@@ -61,8 +62,10 @@ export default compose(
         ...filterSelectedOptions(props.selectedOptions, slicedOptions),
         ...change
       }
+      const availableVariants = getAvailableVariants(props.product.variants, nextSelectedOptions)
 
-      return props.setSelectedOptions(nextSelectedOptions)
+      props.onVariantSelect(availableVariants)
+      props.setSelectedOptions(nextSelectedOptions)
     }
   })
 )(ProductVariantSelect)
