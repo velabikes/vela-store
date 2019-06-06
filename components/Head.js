@@ -118,30 +118,6 @@ const CustomHead = props =>
       input[type='radio'] {
         margin: 0.61em;
       }
-      button {
-        padding: .61em 1em;
-        border-radius: 5px;
-        background-color: ${velaBlue};
-        color: white;
-        border: 0px solid transparent;
-        font-family: neue-haas-grotesk-display, sans-serif;
-        font-size: 1em;
-        cursor: pointer;
-        transition: .4s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        text-transform: uppercase;
-        font-style: italic;
-        font-weight: 700;
-        margin: 0;
-      }
-      button:disabled {
-        opacity: 0.7;
-        filter: saturate(0%);
-        pointer-events: none;
-        transform: translate3d(0,0,0)
-      }
-      button:active {
-        box-shadow: 0px 0px 18px -7px ${velaBlue}
-      }
 
       // PAGE TRANSITION
 

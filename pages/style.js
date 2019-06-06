@@ -1,6 +1,10 @@
 import PaddedView from '../components/PaddedView'
+import Button from '../components/Button'
+import { offBlack, darkGray } from '../style/colors'
+import { withState } from 'recompose';
+import { compose } from 'redux';
 
-const style = () =>
+const style = ({ loading, setLoading }) => 
   <PaddedView>
     <h1>This is a h1</h1>
     <h2>This is a h2</h2>
@@ -29,6 +33,27 @@ const style = () =>
     <input type='text' />
     <small>Small text</small>
     <legend>Legend text</legend>
+    <hr />
+
+    <p><Button loading={loading} onClick={() => setLoading(!loading)}>Toggle load</Button></p>
+
+    <hr />
+    <p><Button>Default</Button></p>
+    <p><Button primary>Primary</Button></p>
+    <p><Button secondary>Secondary</Button></p>
+    <p><Button disabled>Disabled</Button></p>
+
+    <hr />
+    <div style={{
+      backgroundColor: darkGray,
+      padding: '2rem',
+    }}>
+      <p style={{ marginTop: '0' }}><Button inverted>Default Inverted</Button></p>
+      <p><Button primary inverted>Primary Inverted</Button></p>
+      <p><Button secondary inverted>Secondary Inverted</Button></p>
+    </div>
   </PaddedView>
 
-export default style
+export default compose(
+  withState('loading', 'setLoading', false)
+)(style)
