@@ -47,8 +47,15 @@ const handleAddToCartClick = ({
           quantity: 1
         }
       ]
-     }
+    }
   })
+
+  if (process.client && ga) {
+    ga('ec:addProduct', { id: variant.node.id, name: product.title, price: variant.node.price, quantity: 1 })
+    ga('ec:setAction', 'add')
+    ga('send', 'event', 'UX', 'click', 'add to cart')
+  }
+
   setAddToCartLoading(false)
   dispatch(toggleDrawer('CART'))
 }
