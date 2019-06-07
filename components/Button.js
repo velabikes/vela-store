@@ -1,4 +1,3 @@
-import { Rabbit } from 'react-button-loaders'
 import { velaGreen, velaBlue, offBlack, offWhite, lightGray } from '../style/colors'
 
 const createClassName = ({ primary, secondary, inverted, loading }) => {
