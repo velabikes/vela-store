@@ -52,6 +52,7 @@ const handleAddToCartClick = ({
   })
 
   if (process.client && ga) {
+    ReactGA.plugin.require('ec')
     ReactGA.plugin.execute('ec', 'addProduct', {
       id: variant.node.id,
       name: product.title,

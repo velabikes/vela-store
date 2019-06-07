@@ -22,10 +22,6 @@ class MyApp extends App {
     return { pageProps }
   }
 
-  componentDidMount () {
-    ReactGA.plugin.require('ec')
-  }
-
   render () {
     const { Component, pageProps, store, apollo, router } = this.props
 
