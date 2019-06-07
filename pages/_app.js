@@ -7,6 +7,7 @@ import withRedux from 'next-redux-wrapper'
 import { ApolloProvider } from 'react-apollo'
 import { PersistGate } from 'redux-persist/integration/react'
 import withGA from 'next-ga'
+import ReactGA from 'react-ga'
 import withShopify from '../lib/shopify'
 import Head from '../components/Head'
 import Header from '../components/Header'
@@ -19,6 +20,10 @@ class MyApp extends App {
     const pageProps = Component.getInitialProps ? await Component.getInitialProps(ctx) : {}
 
     return { pageProps }
+  }
+
+  componentDidMount () {
+    ReactGA.plugin.require('ec')
   }
 
   render () {
