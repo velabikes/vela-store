@@ -4,7 +4,10 @@ import { offBlack, darkGray } from '../style/colors'
 import { withState } from 'recompose';
 import { compose } from 'redux';
 
-const style = ({ loading, setLoading }) => 
+const style = ({
+  loadingDefault, setLoadingDefault, loadingPrimary, setLoadingPrimary, loadingSecondary, setLoadingSecondary,
+  loadingDefaultInverted, setLoadingDefaultInverted, loadingPrimaryInverted, setLoadingPrimaryInverted, loadingSecondaryInverted, setLoadingSecondaryInverted
+}) => 
   <PaddedView>
     <h1>This is a h1</h1>
     <h2>This is a h2</h2>
@@ -35,25 +38,48 @@ const style = ({ loading, setLoading }) =>
     <legend>Legend text</legend>
     <hr />
 
-    <p><Button loading={loading} onClick={() => setLoading(!loading)}>Toggle load</Button></p>
-
-    <hr />
-    <p><Button>Default</Button></p>
-    <p><Button primary>Primary</Button></p>
-    <p><Button secondary>Secondary</Button></p>
+    <h2>Buttons</h2>
+    <p>
+      <Button>Default</Button>
+      <Button loading={loadingDefault} onClick={() => setLoadingDefault(!loadingDefault)}>Toggle load</Button>
+    </p>
+    <p>
+      <Button primary>Primary</Button>
+      <Button primary loading={loadingPrimary} onClick={() => setLoadingPrimary(!loadingPrimary)}>Toggle load</Button>
+    </p>
+    <p>
+      <Button secondary>Secondary</Button>
+      <Button secondary loading={loadingSecondary} onClick={() => setLoadingSecondary(!loadingSecondary)}>Toggle load</Button>
+    </p>
     <p><Button disabled>Disabled</Button></p>
 
     <hr />
+
+    <h2>Inverted Buttons</h2>
     <div style={{
       backgroundColor: darkGray,
       padding: '2rem',
     }}>
-      <p style={{ marginTop: '0' }}><Button inverted>Default Inverted</Button></p>
-      <p><Button primary inverted>Primary Inverted</Button></p>
-      <p><Button secondary inverted>Secondary Inverted</Button></p>
+      <p>
+        <Button inverted>Default Inverted</Button>
+        <Button inverted loading={loadingDefaultInverted} onClick={() => setLoadingDefaultInverted(!loadingDefaultInverted)}>Toggle load</Button>
+      </p>
+      <p>
+        <Button primary inverted>Primary Inverted</Button>
+      <Button primary inverted loading={loadingPrimaryInverted} onClick={() => setLoadingPrimaryInverted(!loadingPrimaryInverted)}>Toggle load</Button>
+      </p>
+      <p>
+        <Button secondary inverted>Secondary Inverted</Button>
+      <Button secondary inverted loading={loadingSecondaryInverted} onClick={() => setLoadingSecondaryInverted(!loadingSecondaryInverted)}>Toggle load</Button>
+      </p>
     </div>
   </PaddedView>
 
 export default compose(
-  withState('loading', 'setLoading', false)
+  withState('loadingDefault', 'setLoadingDefault', false),
+  withState('loadingPrimary', 'setLoadingPrimary', false),
+  withState('loadingSecondary', 'setLoadingSecondary', false),
+  withState('loadingDefaultInverted', 'setLoadingDefaultInverted', false),
+  withState('loadingPrimaryInverted', 'setLoadingPrimaryInverted', false),
+  withState('loadingSecondaryInverted', 'setLoadingSecondaryInverted', false),
 )(style)

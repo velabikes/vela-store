@@ -1,3 +1,4 @@
+import { Rabbit } from 'react-button-loaders'
 import { velaGreen, velaBlue, offBlack, offWhite, lightGray } from '../style/colors'
 
 const createClassName = ({ primary, secondary, inverted, loading }) => {
@@ -15,7 +16,9 @@ const createClassName = ({ primary, secondary, inverted, loading }) => {
   return classLoading
 }
 
-const button = ({ children, onClick, disabled, primary, secondary, inverted, style, loading }) =>
+const button = ({
+  children, onClick, disabled, primary, secondary, inverted, style, loading, loadingBgColor, loadingTextColor
+}) =>
   <>
     <button
       onClick={onClick}
@@ -23,9 +26,14 @@ const button = ({ children, onClick, disabled, primary, secondary, inverted, sty
       disabled={disabled}
       className={createClassName({ primary, secondary, inverted, loading })}
     >
-      {children}
+      <span className='btn-text' style={{position:'relative'}}>{children}</span>
+      <div className={`btn-loading-bar ${loading ? 'btn-loading-progress' : ''}`}/>
     </button>
     <style jsx>{`
+      .btn-text {
+        position-relative;
+        z-index: 1;
+      }
       .btn-default {
         background-color: ${velaBlue};
       }
@@ -67,7 +75,8 @@ const button = ({ children, onClick, disabled, primary, secondary, inverted, sty
       }
       .btn-secondary-inverted {
         background-color: none;
-        color: ${offBlack};
+        color: ${offWhite};
+        // color: ${offBlack};
         border: 1px solid ${offWhite};
       }
       .btn-secondary-inverted:hover {
@@ -77,6 +86,7 @@ const button = ({ children, onClick, disabled, primary, secondary, inverted, sty
       }
 
       button {
+        position: relative;
         color: white;
         border: 0px solid transparent;
         font-size: 1em;
@@ -101,7 +111,21 @@ const button = ({ children, onClick, disabled, primary, secondary, inverted, sty
       }
 
       .btn-loading {
-        background-color: red;
+        color: white;
+      }
+      .btn-loading-bar {
+        position: absolute;
+        background-color: ${velaGreen};
+        height: 100%;
+        width: 0;
+        top: 0;
+        left: 0;
+        border-radius: 5px;
+        transition: width .5s;
+      }
+      .btn-loading-progress {
+        width: 100%;
+        transition: width .5s;
       }
     `}</style>
   </>
