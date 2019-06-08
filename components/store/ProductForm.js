@@ -51,17 +51,15 @@ const handleAddToCartClick = ({
     }
   })
 
-  if (process.client && ga) {
-    ReactGA.plugin.require('ec')
-    ReactGA.plugin.execute('ec', 'addProduct', {
-      id: variant.node.id,
-      name: product.title,
-      price: variant.node.price,
-      quantity: 1
-    })
-    ReactGA.plugin.execute('ec','setAction', 'add')
-    // ga('send', 'event', 'UX', 'click', 'add to cart')
-  }
+  ReactGA.plugin.require('ec')
+  ReactGA.plugin.execute('ec', 'addProduct', {
+    id: variant.node.id,
+    name: product.title,
+    price: variant.node.price,
+    quantity: 1
+  })
+  ReactGA.plugin.execute('ec', 'setAction', 'add')
+  // ga('send', 'event', 'UX', 'click', 'add to cart')
 
   setAddToCartLoading(false)
   dispatch(toggleDrawer('CART'))
