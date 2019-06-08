@@ -59,7 +59,11 @@ const handleAddToCartClick = ({
     quantity: 1
   })
   ReactGA.plugin.execute('ec', 'setAction', 'add')
-  // ga('send', 'event', 'UX', 'click', 'add to cart')
+  ReactGA.event({
+    category: 'UX',
+    action: 'click',
+    label: 'add to cart'
+  })
 
   setAddToCartLoading(false)
   dispatch(toggleDrawer('CART'))
