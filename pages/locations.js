@@ -27,14 +27,14 @@ const Locations = ({ stores }) =>
             <table className='hours'>
               {hours.map(opening_hour =>
                 !opening_hour.opening
-                ? <tr>
-                  <td>{opening_hour.day}</td>
-                  <td>Fechado</td>
-                </tr>
-                : <tr>
-                  <td>{opening_hour.day}</td>
-                  <td>{opening_hour.openTime}h às {opening_hour.closeTime}h</td>
-                </tr>
+                  ? <tr>
+                    <td>{opening_hour.day}</td>
+                    <td>Fechado</td>
+                  </tr>
+                  : <tr>
+                    <td>{opening_hour.day}</td>
+                    <td>{opening_hour.openTime}h às {opening_hour.closeTime}h</td>
+                  </tr>
               )}
             </table>
           </div>
@@ -87,13 +87,13 @@ Locations.getInitialProps = () => {
     hours: [
       { day: 'dom', opening: false },
       { day: 'seg', opening: false },
-      { day: 'ter', opening: true, openTime: '10', closeTime: '19'},
-      { day: 'qua', opening: true, openTime: '10', closeTime: '19'},
-      { day: 'qui', opening: true, openTime: '10', closeTime: '19'},
-      { day: 'sex', opening: true, openTime: '10', closeTime: '19'},
-      { day: 'sáb', opening: true, openTime: '09', closeTime: '18'}
+      { day: 'ter', opening: true, openTime: '10', closeTime: '19' },
+      { day: 'qua', opening: true, openTime: '10', closeTime: '19' },
+      { day: 'qui', opening: true, openTime: '10', closeTime: '19' },
+      { day: 'sex', opening: true, openTime: '10', closeTime: '19' },
+      { day: 'sáb', opening: true, openTime: '09', closeTime: '18' }
     ]
-  },{
+  }, {
     city: 'Vela Brasília',
     address: 'SCLN 310 - Bloco D Loja 5 - Asa Norte',
     photo: 'https://gallery.mailchimp.com/68a0cce7cc109d78a8b44d7a0/images/c0b721d3-760d-4da0-a561-784d786a5801.jpg',
@@ -104,20 +104,7 @@ Locations.getInitialProps = () => {
       { day: 'qua', opening: true, openTime: '09', closeTime: '18' },
       { day: 'qui', opening: true, openTime: '09', closeTime: '18' },
       { day: 'sex', opening: true, openTime: '09', closeTime: '18' },
-      { day: 'sáb', opening: true, openTime: '09', closeTime: '18' },
-    ]
-  }, {
-    city: 'Vela Rio',
-    address: 'Rua Aires de Saldanha, 28B - Copacabana',
-    photo: 'https://gallery.mailchimp.com/68a0cce7cc109d78a8b44d7a0/images/3fac6c9a-2ee8-4040-9562-77d138901976.jpg',
-    hours: [
-      { day: 'dom', opening: false },
-      { day: 'seg', opening: true, openTime: '09', closeTime: '18' },
-      { day: 'ter', opening: false },
-      { day: 'qua', opening: true, openTime: '09', closeTime: '18' },
-      { day: 'qui', opening: true, openTime: '09', closeTime: '18' },
-      { day: 'sex', opening: true, openTime: '09', closeTime: '18' },
-      { day: 'sáb', opening: true, openTime: '09', closeTime: '18' },
+      { day: 'sáb', opening: true, openTime: '09', closeTime: '18' }
     ]
   }, {
     city: 'Vela Curitiba',
@@ -130,7 +117,20 @@ Locations.getInitialProps = () => {
       { day: 'qua', opening: true, openTime: '09', closeTime: '18' },
       { day: 'qui', opening: true, openTime: '09', closeTime: '18' },
       { day: 'sex', opening: true, openTime: '09', closeTime: '18' },
-      { day: 'sáb', opening: true, openTime: '09', closeTime: '18' },
+      { day: 'sáb', opening: true, openTime: '09', closeTime: '18' }
+    ]
+  }, {
+    city: 'Vela Rio',
+    address: 'Rua Aires de Saldanha, 28B - Copacabana',
+    photo: 'https://gallery.mailchimp.com/68a0cce7cc109d78a8b44d7a0/images/3fac6c9a-2ee8-4040-9562-77d138901976.jpg',
+    hours: [
+      { day: 'dom', opening: false },
+      { day: 'seg', opening: true, openTime: '09', closeTime: '18' },
+      { day: 'ter', opening: false },
+      { day: 'qua', opening: true, openTime: '09', closeTime: '18' },
+      { day: 'qui', opening: true, openTime: '09', closeTime: '18' },
+      { day: 'sex', opening: true, openTime: '09', closeTime: '18' },
+      { day: 'sáb', opening: true, openTime: '09', closeTime: '18' }
     ]
   }]
 
