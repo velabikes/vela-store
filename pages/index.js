@@ -7,7 +7,8 @@ import Cta89 from 'components/home/HomePromo'
 import HomeBikes from 'components/home/HomeBikes'
 import HomeAlbum from 'components/home/HomeAlbum'
 import PaddedView from 'components/PaddedView'
-import { lightGray } from '../style/colors'
+import Button from '../components/Button'
+import { velaBlue } from '../style/colors'
 
 const HomePage = ({ images }) =>
   <div className='HomePage'>
@@ -28,7 +29,7 @@ const HomePage = ({ images }) =>
         <h4>Bicicletas elétricas para cidades mais saudáveis</h4>
       </div>
       <Link href='/store?handle=vela-1' as='/loja/vela-1'>
-        <button className='desktop'>Monte a sua</button>
+        <Button>Monte a sua</Button>
       </Link>
     </div>
     <PaddedView>
@@ -51,7 +52,8 @@ const HomePage = ({ images }) =>
       h1, h4 {
         margin: 0
       }
-      button {
+      .cta > :global(.btn) {
+        background-color: ${velaBlue};
         margin-top: 1rem;
         font-size: 1.29em;
       }
