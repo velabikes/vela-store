@@ -3,6 +3,7 @@ import withCheckoutLineItemsAdd from '../../containers/withCheckoutLineItemsAdd'
 import withCheckoutId from '../../containers/withCheckoutId'
 import { toggleDrawer } from '../../lib/redux'
 import ProductVariantSelect from './ProductVariantSelect'
+import ReactGA from 'react-ga'
 
 const ProductForm = ({
   product,
@@ -47,8 +48,23 @@ const handleAddToCartClick = ({
           quantity: 1
         }
       ]
-     }
+    }
   })
+
+  ReactGA.plugin.require('ec')
+  ReactGA.plugin.execute('ec', 'addProduct', {
+    id: variant.node.id,
+    name: product.title,
+    price: variant.node.price,
+    quantity: 1
+  })
+  ReactGA.plugin.execute('ec', 'setAction', 'add')
+  ReactGA.event({
+    category: 'UX',
+    action: 'click',
+    label: 'add to cart'
+  })
+
   setAddToCartLoading(false)
   dispatch(toggleDrawer('CART'))
 }
