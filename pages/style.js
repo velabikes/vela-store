@@ -1,13 +1,95 @@
 import PaddedView from '../components/PaddedView'
 import Button from '../components/Button'
-import { offBlack, darkGray } from '../style/colors'
-import { withState } from 'recompose';
-import { compose } from 'redux';
+import { withState } from 'recompose'
+import { compose } from 'redux'
+import { velaGreen, offWhite } from '../style/colors'
 
-const style = ({
-  loadingDefault, setLoadingDefault, loadingPrimary, setLoadingPrimary, loadingSecondary, setLoadingSecondary,
-  loadingDefaultInverted, setLoadingDefaultInverted, loadingPrimaryInverted, setLoadingPrimaryInverted, loadingSecondaryInverted, setLoadingSecondaryInverted
-}) => 
+const styles = {
+  button: { marginTop: '.5rem', marginRight: '1.4rem', width: 200 }
+}
+
+const ButtonsExamples = ({
+  loadingPrimary, loadingSecondary, loadingSecondaryInverted,
+  setLoadingPrimary, setLoadingSecondary, setLoadingSecondaryInverted
+}) =>
+  <div className='buttonsWrapper'>
+    <h2>Buttons</h2>
+    <p>
+      <Button style={styles.button}>Primary</Button>
+      <Button
+        style={styles.button}
+        loadingBgColor={velaGreen}
+        loadingTextColor={offWhite}
+        loading={loadingPrimary}
+        onClick={() => setLoadingPrimary(!loadingPrimary)}
+      >
+        Press to load
+      </Button>
+    </p>
+    <p>
+      <Button
+        secondary
+        style={styles.button}
+      >
+        Secondary
+      </Button>
+      <Button
+        secondary
+        style={styles.button}
+        loadingBgColor={velaGreen}
+        loadingTextColor={offWhite}
+        loading={loadingSecondary}
+        onClick={() => setLoadingSecondary(!loadingSecondary)}
+      >
+        Press to load
+      </Button>
+    </p>
+    <p><Button disabled style={styles.button}>Disabled</Button></p>
+
+    <hr />
+
+    <h2>Inverted Buttons</h2>
+    <div className='inverted-area'>
+      <p>
+        <Button
+          secondary
+          inverted
+          style={styles.button}
+        >
+          Secondary
+        </Button>
+        <Button
+          secondary
+          inverted
+          style={styles.button}
+          loadingBgColor={velaGreen}
+          loadingTextColor={offWhite}
+          loading={loadingSecondaryInverted}
+          onClick={() => setLoadingSecondaryInverted(!loadingSecondaryInverted)}
+        >
+          Press to load
+        </Button>
+      </p>
+      <p><Button disabled style={styles.button}>Disabled</Button></p>
+    </div>
+    <style jsx>{`
+      .inverted-area {
+        background-color: #a6b5a0;
+        padding: 2rem;
+      }
+      .inverted-area p {
+        margin-top: 0;
+      }
+    `}</style>
+  </div>
+
+const Buttons = compose(
+  withState('loadingPrimary', 'setLoadingPrimary', false),
+  withState('loadingSecondary', 'setLoadingSecondary', false),
+  withState('loadingSecondaryInverted', 'setLoadingSecondaryInverted', false),
+)(ButtonsExamples)
+
+const style = () =>
   <PaddedView>
     <h1>This is a h1</h1>
     <h2>This is a h2</h2>
@@ -38,48 +120,7 @@ const style = ({
     <legend>Legend text</legend>
     <hr />
 
-    <h2>Buttons</h2>
-    <p>
-      <Button>Default</Button>
-      <Button loading={loadingDefault} onClick={() => setLoadingDefault(!loadingDefault)}>Toggle load</Button>
-    </p>
-    <p>
-      <Button primary>Primary</Button>
-      <Button primary loading={loadingPrimary} onClick={() => setLoadingPrimary(!loadingPrimary)}>Toggle load</Button>
-    </p>
-    <p>
-      <Button secondary>Secondary</Button>
-      <Button secondary loading={loadingSecondary} onClick={() => setLoadingSecondary(!loadingSecondary)}>Toggle load</Button>
-    </p>
-    <p><Button disabled>Disabled</Button></p>
-
-    <hr />
-
-    <h2>Inverted Buttons</h2>
-    <div style={{
-      backgroundColor: darkGray,
-      padding: '2rem',
-    }}>
-      <p>
-        <Button inverted>Default Inverted</Button>
-        <Button inverted loading={loadingDefaultInverted} onClick={() => setLoadingDefaultInverted(!loadingDefaultInverted)}>Toggle load</Button>
-      </p>
-      <p>
-        <Button primary inverted>Primary Inverted</Button>
-      <Button primary inverted loading={loadingPrimaryInverted} onClick={() => setLoadingPrimaryInverted(!loadingPrimaryInverted)}>Toggle load</Button>
-      </p>
-      <p>
-        <Button secondary inverted>Secondary Inverted</Button>
-      <Button secondary inverted loading={loadingSecondaryInverted} onClick={() => setLoadingSecondaryInverted(!loadingSecondaryInverted)}>Toggle load</Button>
-      </p>
-    </div>
+    <Buttons />
   </PaddedView>
 
-export default compose(
-  withState('loadingDefault', 'setLoadingDefault', false),
-  withState('loadingPrimary', 'setLoadingPrimary', false),
-  withState('loadingSecondary', 'setLoadingSecondary', false),
-  withState('loadingDefaultInverted', 'setLoadingDefaultInverted', false),
-  withState('loadingPrimaryInverted', 'setLoadingPrimaryInverted', false),
-  withState('loadingSecondaryInverted', 'setLoadingSecondaryInverted', false),
-)(style)
+export default style

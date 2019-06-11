@@ -1,69 +1,54 @@
-import { velaGreen, velaBlue, offBlack, offWhite, lightGray } from '../style/colors'
+import { velaGreen, offBlack, offWhite } from '../style/colors'
 
-const createClassName = ({ primary, secondary, inverted, loading }) => {
-  if(primary && secondary) console.error('You can only choose between primary or secondary, and not both')
-  const defaultClass = !primary && !secondary
-
-  let name;
-  if (defaultClass) name = 'default'
-  if (primary) name = 'primary'
-  if (secondary) name = 'secondary'
-
-  const classNames = inverted ? `btn-${name} btn-${name}-inverted` : `btn-${name}`
-  const classLoading = loading ? `${classNames} btn-loading` : classNames
-
-  return classLoading
+const createClassName = ({ secondary, inverted }) => {
+  if (secondary && inverted) return 'btn-secondary-inverted'
+  return secondary ? 'btn-secondary' : 'btn-default'
 }
 
 const button = ({
-  children, onClick, disabled, primary, secondary, inverted, style, loading, loadingBgColor, loadingTextColor
+  children, onClick, disabled, secondary, inverted, style, loading, loadingBgColor, loadingTextColor
 }) =>
   <>
     <button
       onClick={onClick}
       style={style}
       disabled={disabled}
-      className={createClassName({ primary, secondary, inverted, loading })}
+      className={`btn ${createClassName({ secondary, inverted })}`}
     >
-      <span className='btn-text' style={{position:'relative'}}>{children}</span>
+      <span className={`btn-text ${loading ? 'btn-text-progress' : ''}`}>{children}</span>
       <div className={`btn-loading-bar ${loading ? 'btn-loading-progress' : ''}`}/>
     </button>
     <style jsx>{`
       .btn-text {
-        position-relative;
+        position: relative;
         z-index: 1;
       }
-      .btn-default {
-        background-color: ${velaBlue};
+      .btn-text-progress {
+        color: ${secondary && !inverted ? offBlack : offWhite};
+        animation-duration: 1s;
+        animation-name: loading-text-animation;
+        animation-iteration-count: infinite;
       }
-      .btn-default-inverted {
-        background-color: transparent;
-        border: 1px solid ${velaBlue};
-        color: ${velaBlue};
-      }
-      .btn-default:hover {
-        background-color: #649bcc;
-      }
-      .btn-default-inverted:hover {
-        color: ${offWhite}
+      @keyframes loading-text-animation {
+        from {  }
+        40% { color: ${loadingTextColor} }
+        60% { color: ${loadingTextColor} }
+        to {  }
       }
 
-      .btn-primary {
+      .btn-default {
         background-color: ${offBlack};
         color: ${offWhite};
         border: 0px solid transparent;
       }
-      .btn-primary:hover {
+      .btn-default:hover {
         background-color: ${velaGreen};
         color: ${offWhite};
         border: 0px solid transparent;
       }
-      .btn-primary:hover {
-        background-color: ${velaGreen};
-      }
 
       .btn-secondary {
-        background-color: none;
+        background-color: transparent;
         color: ${offBlack};
         border: 1px solid ${offBlack};
       }
@@ -73,9 +58,8 @@ const button = ({
         border: 1px solid ${velaGreen};
       }
       .btn-secondary-inverted {
-        background-color: none;
+        background-color: transparent;
         color: ${offWhite};
-        // color: ${offBlack};
         border: 1px solid ${offWhite};
       }
       .btn-secondary-inverted:hover {
@@ -109,22 +93,24 @@ const button = ({
         box-shadow: 0px 0px 18px -7px ${velaGreen};
       }
 
-      .btn-loading {
-        color: white;
-      }
       .btn-loading-bar {
         position: absolute;
-        background-color: ${velaGreen};
+        background-color: ${loadingBgColor};
         height: 100%;
         width: 0;
         top: 0;
-        left: 0;
         border-radius: 5px;
-        transition: width .5s;
       }
       .btn-loading-progress {
-        width: 100%;
-        transition: width .5s;
+        animation-duration: 1s;
+        animation-name: loading-animation;
+        animation-iteration-count: infinite;
+      }
+      @keyframes loading-animation {
+        from { left: 0; width: 0; }
+        40% { left: 0; width: 100%; }
+        60% { right: 0; width: 100%; }
+        to { right: 0; width: 0; }
       }
     `}</style>
   </>
