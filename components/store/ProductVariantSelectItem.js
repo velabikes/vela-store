@@ -1,3 +1,4 @@
+import Button from '../Button'
 import { velaBlue, offWhite } from '../../style/colors'
 
 const OptionButton = ({ selected, label, ...props }) =>
@@ -20,7 +21,6 @@ const OptionButton = ({ selected, label, ...props }) =>
         margin: 0 auto;
         display: ${label.match(/\s*\[.*?\]\s*/g) ? 'block' : 'none'};
         height: 2em;
-        border-radius: 2em;
         margin-bottom: ${0.61 * 0.61}em;
         width: 2em;
         border: 2px solid white;
@@ -41,12 +41,20 @@ const ProductVariantSelectItem = ({
     </div>
     {disabled && <small></small>}
     {!disabled && values.map(value =>
-      <OptionButton
+      <Button
+        small
         key={value}
-        label={value}
-        selected={value === selectedValue}
+        secondary={value !== selectedValue}
         onClick={() => onSelect({[name]: value})}
-      />
+      >
+        {value.replace(/\s*\[.*?\]\s*/g, '')}
+      </Button>
+      // <OptionButton
+      //   key={value}
+      //   label={value}
+      //   selected={value === selectedValue}
+      //   onClick={() => onSelect({[name]: value})}
+      // />
     )}
     <style jsx>{`
       label {

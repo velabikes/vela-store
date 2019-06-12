@@ -4,84 +4,165 @@ import { withState } from 'recompose'
 import { compose } from 'redux'
 import { velaGreen, offWhite } from '../style/colors'
 
-const styles = {
-  button: { marginTop: '.5rem', marginRight: '1.4rem', width: 200 }
-}
-
 const ButtonsExamples = ({
   loadingPrimary, loadingSecondary, loadingSecondaryInverted,
   setLoadingPrimary, setLoadingSecondary, setLoadingSecondaryInverted
 }) =>
-  <div className='buttonsWrapper'>
-    <h2>Buttons</h2>
-    <p>
-      <Button style={styles.button}>Primary</Button>
-      <Button
-        style={styles.button}
-        loadingBgColor={velaGreen}
-        loadingTextColor={offWhite}
-        loading={loadingPrimary}
-        onClick={() => setLoadingPrimary(!loadingPrimary)}
-      >
-        Press to load
-      </Button>
-    </p>
-    <p>
-      <Button
-        secondary
-        style={styles.button}
-      >
-        Secondary
-      </Button>
-      <Button
-        secondary
-        style={styles.button}
-        loadingBgColor={velaGreen}
-        loadingTextColor={offWhite}
-        loading={loadingSecondary}
-        onClick={() => setLoadingSecondary(!loadingSecondary)}
-      >
-        Press to load
-      </Button>
-    </p>
-    <p><Button disabled style={styles.button}>Disabled</Button></p>
+  <>
+    <div className='buttons-wrapper'>
+      <h2>Buttons</h2>
+      <p>
+        <Button small>Small</Button>
+        <Button>Normal</Button>
+        <Button big>Big</Button>
+      </p>
+      <p>
+        <Button secondary small>Small</Button>
+        <Button secondary>Normal</Button>
+        <Button secondary big>Big</Button>
+      </p>
+      <p>
+        <Button cta small>Small</Button>
+        <Button cta>Normal</Button>
+        <Button cta big>Big</Button>
+      </p>
+
+      <div className='inverted-area'>
+        <p>
+          <Button secondary inverted small>Small</Button>
+          <Button secondary inverted>Normal</Button>
+          <Button secondary inverted big>Big</Button>
+        </p>
+        <p>
+          <Button cta inverted small>Small</Button>
+          <Button cta inverted>Normal</Button>
+          <Button cta inverted big>Big</Button>
+        </p>
+      </div>
+
+
+      <p>
+        <Button disabled small>Disabled</Button>
+        <Button disabled>Disabled</Button>
+        <Button disabled big>Disabled</Button>
+      </p>
+
+    </div>
 
     <hr />
-
-    <h2>Inverted Buttons</h2>
-    <div className='inverted-area'>
+    
+    <div className='inverted-buttons-wrapper'>
+      <h2>Loading Buttons</h2>
       <p>
         <Button
-          secondary
-          inverted
-          style={styles.button}
-        >
-          Secondary
-        </Button>
-        <Button
-          secondary
-          inverted
-          style={styles.button}
+          small
           loadingBgColor={velaGreen}
           loadingTextColor={offWhite}
-          loading={loadingSecondaryInverted}
-          onClick={() => setLoadingSecondaryInverted(!loadingSecondaryInverted)}
+          loading={loadingPrimary}
+          onClick={() => setLoadingPrimary(!loadingPrimary)}
+        >
+          Press to load
+        </Button>
+        <Button
+          loadingBgColor={velaGreen}
+          loadingTextColor={offWhite}
+          loading={loadingPrimary}
+          onClick={() => setLoadingPrimary(!loadingPrimary)}
+        >
+          Press to load
+        </Button>
+        <Button
+          big
+          loadingBgColor={velaGreen}
+          loadingTextColor={offWhite}
+          loading={loadingPrimary}
+          onClick={() => setLoadingPrimary(!loadingPrimary)}
         >
           Press to load
         </Button>
       </p>
-      <p><Button disabled style={styles.button}>Disabled</Button></p>
+      <p>
+        <Button
+          small
+          secondary
+          loadingBgColor={velaGreen}
+          loadingTextColor={offWhite}
+          loading={loadingSecondary}
+          onClick={() => setLoadingSecondary(!loadingSecondary)}
+        >
+          Press to load
+        </Button>
+        <Button
+          secondary
+          loadingBgColor={velaGreen}
+          loadingTextColor={offWhite}
+          loading={loadingSecondary}
+          onClick={() => setLoadingSecondary(!loadingSecondary)}
+        >
+          Press to load
+        </Button>
+        <Button
+          big
+          secondary
+          loadingBgColor={velaGreen}
+          loadingTextColor={offWhite}
+          loading={loadingSecondary}
+          onClick={() => setLoadingSecondary(!loadingSecondary)}
+        >
+          Press to load
+        </Button>
+      </p>
+
+      <div className='inverted-area'>
+        <p>
+          <Button
+            small
+            secondary
+            inverted
+            loadingBgColor={velaGreen}
+            loadingTextColor={offWhite}
+            loading={loadingSecondaryInverted}
+            onClick={() => setLoadingSecondaryInverted(!loadingSecondaryInverted)}
+          >
+            Press to load
+          </Button>
+          <Button
+            secondary
+            inverted
+            loadingBgColor={velaGreen}
+            loadingTextColor={offWhite}
+            loading={loadingSecondaryInverted}
+            onClick={() => setLoadingSecondaryInverted(!loadingSecondaryInverted)}
+          >
+            Press to load
+          </Button>
+          <Button
+            big
+            secondary
+            inverted
+            loadingBgColor={velaGreen}
+            loadingTextColor={offWhite}
+            loading={loadingSecondaryInverted}
+            onClick={() => setLoadingSecondaryInverted(!loadingSecondaryInverted)}
+          >
+            Press to load
+          </Button>
+        </p>
+      </div>
     </div>
     <style jsx>{`
       .inverted-area {
         background-color: #a6b5a0;
-        padding: 2rem;
+        padding-bottom: .8rem;
       }
-      .inverted-area p {
-        margin-top: 0;
+      .buttons-wrapper p > :global(.btn) {
+        // width: 150px;
+      }
+      .inverted-buttons-wrapper p > :global(.btn) {
+        // width: 200px;
       }
     `}</style>
-  </div>
+  </>
 
 const Buttons = compose(
   withState('loadingPrimary', 'setLoadingPrimary', false),
