@@ -1,6 +1,31 @@
 const { json } = require('micro')
 const correios = require('node-correios')()
 
+const normalizeText = text => {
+  const specialChars = 'àáäâãèéëêìíïîòóöôùúüûñçßÿœæŕśńṕẃǵǹḿǘẍźḧ'
+  const  normalChars = 'aaaaaeeeeiiiioooouuuuncsyoarsnpwgnmuxzh'
+  const expression = new RegExp(specialChars.split('').join('|'), 'g')
+  return text.toString().toLowerCase().trim()
+    .replace(expression, index => normalChars.charAt(specialChars.indexOf(index)))
+}
+
+const isCityFreeShipping = ({ city }) => {
+  const freeCitiesAvailable = [
+    'São Paulo',
+    'Diadema',
+    'São Caetano do Sul',
+    'São Bernardo do Campo',
+    'Santo André',
+    'Barueri',
+    'Santana de Parnaíba',
+    'Guarulhos',
+    'Osasco',
+    'Mauá'
+  ]
+
+  return freeCitiesAvailable.some(cityAvailable => normalizeText(cityAvailable) === normalizeText(city))
+}
+
 module.exports = async (req, res) => {
   res.setHeader('Content-Type', 'application/json')
 
@@ -41,7 +66,7 @@ module.exports = async (req, res) => {
         rates: mapCorreiosResultToRate(result)
       }))
     })
-  } else if (destination.city === 'São Paulo') {
+  } else if (isCityFreeShipping({ city: destination.city })) {
     return (
       res.end(JSON.stringify({
         rates: [{
