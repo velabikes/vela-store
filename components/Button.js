@@ -77,7 +77,7 @@ const Button = ({
         border: 0px solid transparent;
       }
       .btn-default:hover {
-        background-color: ${velaGreen};
+        background-color: ${offBlack};
         color: ${offWhite};
         border: 0px solid transparent;
       }
@@ -169,12 +169,14 @@ const Button = ({
   </>
 
 export default compose(
-  withProps(({ loadingBgColor, action, inverted }) => {
+  withProps(({ loadingBgColor, action, secondary, inverted }) => {
     if (action) return inverted
       ? { bgLoadingBar: velaBlue }
       : { bgLoadingBar: offWhite }
 
-    return { bgLoadingBar: loadingBgColor || offBlack }
+    if(!inverted && !action && !secondary) return { bgLoadingBar: offBlack }
+    
+    return { bgLoadingBar: loadingBgColor || velaGreen }
   }),
   withProps(({ inverted, secondary, action, loadingTextColor, }) => {
     if (!inverted && secondary) return {
