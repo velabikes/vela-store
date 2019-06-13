@@ -26,7 +26,7 @@ const BikeCard = ({ title, href, hrefAs, action, src, index }) =>
 
       <div className='CardsHome'>
         <Link href={href} as={hrefAs}>
-          <Button secondary={index % 2 && true}>{action}</Button>
+          <Button big secondary={index % 2 && true}>{action}</Button>
         </Link>
       </div>
     </div>
@@ -49,9 +49,6 @@ const BikeCard = ({ title, href, hrefAs, action, src, index }) =>
       h1 {
         color: ${offBlack};
         font-size: 2.63em;
-      }
-      .CardsHome > :global(.btn) {
-        font-size: 1.29em;
       }
       @media only screen and (min-width: 768px) {
         font-size: 1rem;

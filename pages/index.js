@@ -29,7 +29,7 @@ const HomePage = ({ images }) =>
         <h4>Bicicletas elétricas para cidades mais saudáveis</h4>
       </div>
       <Link href='/store?handle=vela-1' as='/loja/vela-1'>
-        <Button>Monte a sua</Button>
+        <Button big action>Monte a sua</Button>
       </Link>
     </div>
     <PaddedView>
@@ -49,13 +49,11 @@ const HomePage = ({ images }) =>
         right: 1rem;
         top: 1rem;
       }
+      .slogan {
+        margin-bottom: 1rem;
+      }
       h1, h4 {
         margin: 0
-      }
-      .cta > :global(.btn) {
-        background-color: ${velaBlue};
-        margin-top: 1rem;
-        font-size: 1.29em;
       }
       .promotion {
         position: fixed;

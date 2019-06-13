@@ -3,6 +3,7 @@ import withCheckoutLineItemsAdd from '../../containers/withCheckoutLineItemsAdd'
 import withCheckoutId from '../../containers/withCheckoutId'
 import { toggleDrawer } from '../../lib/redux'
 import ProductVariantSelect from './ProductVariantSelect'
+import Button from '../Button'
 import ReactGA from 'react-ga'
 
 const ProductForm = ({
@@ -20,12 +21,14 @@ const ProductForm = ({
         onVariantSelect={onVariantSelect}
       />
     }
-    <button
+    <Button
+      action
       onClick={handleAddToCartClick}
       disabled={hasOptions ? !(selectedVariant && selectedVariant.edges.length === 1) : false}
+      loading={isAddToCartLoading}
     >
       { isAddToCartLoading ? 'Carregando...' : 'comprar' }
-    </button>
+    </Button>
   </div>
 
 const handleAddToCartClick = ({

@@ -2,11 +2,13 @@ import PaddedView from '../components/PaddedView'
 import Button from '../components/Button'
 import { withState } from 'recompose'
 import { compose } from 'redux'
-import { velaGreen, offWhite } from '../style/colors'
+import { velaGreen, offWhite, offBlack, velaBlue } from '../style/colors'
 
 const ButtonsExamples = ({
   loadingPrimary, loadingSecondary, loadingSecondaryInverted,
-  setLoadingPrimary, setLoadingSecondary, setLoadingSecondaryInverted
+  setLoadingPrimary, setLoadingSecondary, setLoadingSecondaryInverted,
+  loadingAction, setLoadingAction,
+  loadingActionInverted, setLoadingActionInverted
 }) =>
   <>
     <div className='buttons-wrapper'>
@@ -22,9 +24,9 @@ const ButtonsExamples = ({
         <Button secondary big>Big</Button>
       </p>
       <p>
-        <Button cta small>Small</Button>
-        <Button cta>Normal</Button>
-        <Button cta big>Big</Button>
+        <Button action small>Small</Button>
+        <Button action>Normal</Button>
+        <Button action big>Big</Button>
       </p>
 
       <div className='inverted-area'>
@@ -34,9 +36,9 @@ const ButtonsExamples = ({
           <Button secondary inverted big>Big</Button>
         </p>
         <p>
-          <Button cta inverted small>Small</Button>
-          <Button cta inverted>Normal</Button>
-          <Button cta inverted big>Big</Button>
+          <Button action inverted small>Small</Button>
+          <Button action inverted>Normal</Button>
+          <Button action inverted big>Big</Button>
         </p>
       </div>
 
@@ -112,6 +114,37 @@ const ButtonsExamples = ({
           Press to load
         </Button>
       </p>
+      <p>
+        <Button
+          small
+          action
+          loadingBgColor={offWhite}
+          loadingTextColor={velaBlue}
+          loading={loadingAction}
+          onClick={() => setLoadingAction(!loadingAction)}
+        >
+          Press to load
+        </Button>
+        <Button
+          action
+          loadingBgColor={offWhite}
+          loadingTextColor={velaBlue}
+          loading={loadingAction}
+          onClick={() => setLoadingAction(!loadingAction)}
+        >
+          Press to load
+        </Button>
+        <Button
+          big
+          action
+          loadingBgColor={offWhite}
+          loadingTextColor={velaBlue}
+          loading={loadingAction}
+          onClick={() => setLoadingAction(!loadingAction)}
+        >
+          Press to load
+        </Button>
+      </p>
 
       <div className='inverted-area'>
         <p>
@@ -148,11 +181,43 @@ const ButtonsExamples = ({
             Press to load
           </Button>
         </p>
+        <p>
+          <Button
+            small
+            action
+            inverted
+            loadingBgColor={velaBlue}
+            loading={loadingActionInverted}
+            onClick={() => setLoadingActionInverted(!loadingActionInverted)}
+          >
+            Press to load
+          </Button>
+          <Button
+            action
+            inverted
+            loadingBgColor={velaBlue}
+            loading={loadingActionInverted}
+            onClick={() => setLoadingActionInverted(!loadingActionInverted)}
+          >
+            Press to load
+          </Button>
+          <Button
+            big
+            action
+            inverted
+            loadingBgColor={velaBlue}
+            loading={loadingActionInverted}
+            onClick={() => setLoadingActionInverted(!loadingActionInverted)}
+          >
+            Press to load
+          </Button>
+        </p>
       </div>
     </div>
     <style jsx>{`
       .inverted-area {
         background-color: #a6b5a0;
+        padding-top: .1rem;
         padding-bottom: .8rem;
       }
       .buttons-wrapper p > :global(.btn) {
@@ -168,6 +233,8 @@ const Buttons = compose(
   withState('loadingPrimary', 'setLoadingPrimary', false),
   withState('loadingSecondary', 'setLoadingSecondary', false),
   withState('loadingSecondaryInverted', 'setLoadingSecondaryInverted', false),
+  withState('loadingAction', 'setLoadingAction', false),
+  withState('loadingActionInverted', 'setLoadingActionInverted', false),
 )(ButtonsExamples)
 
 const style = () =>

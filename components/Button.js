@@ -1,4 +1,4 @@
-import { velaGreen, offBlack, offWhite } from '../style/colors'
+import { velaGreen, offBlack, offWhite, velaBlue } from '../style/colors'
 
 const classNameSize = ({ small, big }) => {
   if (small) return 'btn-small'
@@ -6,21 +6,21 @@ const classNameSize = ({ small, big }) => {
   return 'btn-normal'
 }
 
-const createClassName = ({ secondary, cta, inverted }) =>
+const createClassName = ({ secondary, action, inverted }) =>
   inverted
-    ? secondary ? 'btn-secondary-inverted' : cta ? 'btn-cta-inverted' : 'btn-default'
-    : secondary ? 'btn-secondary' : cta ? 'btn-cta' : 'btn-default'
+    ? secondary ? 'btn-secondary-inverted' : action ? 'btn-action-inverted' : 'btn-default'
+    : secondary ? 'btn-secondary' : action ? 'btn-action' : 'btn-default'
 
 const button = ({
-  children, onClick, disabled, secondary, cta, inverted, style, loading, loadingBgColor, loadingTextColor, type, small, big, ...props
+  children, onClick, disabled, secondary, action, inverted, style, loading, loadingBgColor, loadingTextColor, type, small, big, ...props
 }) =>
   <>
     <button
       type={type}
-      onClick={!loading && onClick}
+      onClick={loading ? undefined : onClick}
       style={style}
       disabled={disabled}
-      className={`btn ${createClassName({ secondary, cta, inverted })} ${classNameSize({small, big})}`}
+      className={`btn ${createClassName({ secondary, action, inverted })} ${classNameSize({small, big})}`}
       {...props}
     >
       <span className={`btn-text ${loading ? 'btn-text-progress' : ''}`}>{children}</span>
@@ -33,12 +33,10 @@ const button = ({
         padding: 0.61em 1em;
       }
       .btn-normal {
-        margin-right: 1em;
         font-size: 1em;
         padding: 0.61em 1.6em;
       }
       .btn-big {
-        margin: 0.61em 0.61em 0 0;
         font-size: 1.29em;
         padding: 0.61em 1em;
       }
@@ -55,10 +53,8 @@ const button = ({
         animation-iteration-count: infinite;
       }
       @keyframes loading-text-animation {
-        from {  }
         40% { color: ${loadingTextColor} }
         60% { color: ${loadingTextColor} }
-        to {  }
       }
 
       .btn-default {
@@ -93,9 +89,30 @@ const button = ({
         border: 1px solid ${offWhite};
       }
 
+      .btn-action {
+        background-color: ${velaBlue};
+        color: ${offWhite};
+        border: 1px solid transparent;
+      }
+      .btn-action:hover {
+        background-color: ${offWhite};
+        color: ${velaBlue};
+        border: 1px solid ${velaBlue};
+      }
+      .btn-action-inverted {
+        background-color: transparent;
+        color: ${velaBlue};
+        border: 1px solid ${velaBlue};
+      }
+      .btn-action-inverted:hover {
+        background-color: ${velaBlue};
+        color: ${offWhite};
+        border: 1px solid ${velaBlue};
+      }
+
       button {
         position: relative;
-        color: white;
+        color: ${offWhite};
         border: 0px solid transparent;
         border-radius: 5px;
         font-family: neue-haas-grotesk-display, sans;

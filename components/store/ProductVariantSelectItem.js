@@ -1,21 +1,16 @@
 import Button from '../Button'
-import { velaBlue, offWhite } from '../../style/colors'
 
-const OptionButton = ({ selected, label, ...props }) =>
-  <button {...props}>
+const OptionButton = ({ selected, label, value, onClick, ...props }) =>
+  <Button
+  action
+    small
+    inverted={!selected}
+    onClick={onClick}
+    {...props}
+  >
     <span />
     {label.replace(/\s*\[.*?\]\s*/g, '')}
     <style jsx>{`
-      button {
-        background: ${selected ? velaBlue : 'transparent'};
-        color: ${selected ? 'white' : velaBlue};
-        border: 1px solid ${velaBlue};
-        font-size: 0.6rem;
-        margin: 0.61em 0.61em 0 0;
-        display: inline-block;
-        text-transform: uppercase;
-        font-style: normal;
-      }
       span {
         background-color: ${label.match(/\s*\[.*?\]\s*/g) && label.match(/\[(.*?)\]/)[1]};
         margin: 0 auto;
@@ -24,9 +19,10 @@ const OptionButton = ({ selected, label, ...props }) =>
         margin-bottom: ${0.61 * 0.61}em;
         width: 2em;
         border: 2px solid white;
+        border-radius: 50%;
       }
     `}</style>
-  </button>
+  </Button>
 
 const ProductVariantSelectItem = ({
   name,
@@ -35,30 +31,26 @@ const ProductVariantSelectItem = ({
   disabled,
   onSelect
 }) =>
-  <fieldset>
+  <fieldset className='product-variant'>
     <div>
       <label>{name}</label>
     </div>
     {disabled && <small></small>}
     {!disabled && values.map(value =>
-      <Button
-        small
+      <OptionButton
         key={value}
-        secondary={value !== selectedValue}
+        value={value}
+        label={value}
+        selected={value === selectedValue}
         onClick={() => onSelect({[name]: value})}
-      >
-        {value.replace(/\s*\[.*?\]\s*/g, '')}
-      </Button>
-      // <OptionButton
-      //   key={value}
-      //   label={value}
-      //   selected={value === selectedValue}
-      //   onClick={() => onSelect({[name]: value})}
-      // />
+      />
     )}
     <style jsx>{`
       label {
         opacity: ${disabled && '0.5'}
+      }
+      .product-variant > :global(.btn span) {
+        font-style: normal;
       }
     `}</style>
   </fieldset>

@@ -209,7 +209,7 @@ const Form89 = props =>
            Opcao 3
           </label>
         </fieldset>
-        <Button type='submit' loading={isSubmitting}>
+        <Button action type='submit' loading={isSubmitting}>
           Enviar
         </Button>
       </form>

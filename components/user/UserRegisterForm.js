@@ -1,4 +1,5 @@
 import { Formik } from 'formik'
+import Button from '../Button'
 
 const UserRegisterForm = props =>
   <Formik
@@ -25,9 +26,9 @@ const UserRegisterForm = props =>
           onBlur={handleBlur}
           className={error && error.password && 'error'}
         />
-        <button type='submit' disabled={isSubmitting}>
+        <Button action type='submit' loading={isSubmitting}>
           Submit
-        </button>
+        </Button>
       </form>
     }
   </Formik>
