@@ -5,10 +5,11 @@ import { compose } from 'redux'
 import { velaGreen, offWhite, offBlack, velaBlue } from '../style/colors'
 
 const ButtonsExamples = ({
-  loadingPrimary, loadingSecondary, loadingSecondaryInverted,
-  setLoadingPrimary, setLoadingSecondary, setLoadingSecondaryInverted,
-  loadingAction, setLoadingAction,
-  loadingActionInverted, setLoadingActionInverted
+  loadPrim, setLoadPrim,
+  loadSec, setLoadSec,
+  loadAct, setLoadAct,
+  loadSecInv, setLoadSecInv,
+  loadActInv, setLoadActInv,
 }) =>
   <>
     <div className='buttons-wrapper'>
@@ -56,159 +57,59 @@ const ButtonsExamples = ({
     <div className='inverted-buttons-wrapper'>
       <h2>Loading Buttons</h2>
       <p>
-        <Button
-          small
-          loadingBgColor={velaGreen}
-          loadingTextColor={offWhite}
-          loading={loadingPrimary}
-          onClick={() => setLoadingPrimary(!loadingPrimary)}
-        >
+        <Button small loading={loadPrim} onClick={() => setLoadPrim(!loadPrim)} >
           Press to load
         </Button>
-        <Button
-          loadingBgColor={velaGreen}
-          loadingTextColor={offWhite}
-          loading={loadingPrimary}
-          onClick={() => setLoadingPrimary(!loadingPrimary)}
-        >
+        <Button loading={loadPrim} onClick={() => setLoadPrim(!loadPrim)} >
           Press to load
         </Button>
-        <Button
-          big
-          loadingBgColor={velaGreen}
-          loadingTextColor={offWhite}
-          loading={loadingPrimary}
-          onClick={() => setLoadingPrimary(!loadingPrimary)}
-        >
+        <Button big loading={loadPrim} onClick={() => setLoadPrim(!loadPrim)} >
           Press to load
         </Button>
       </p>
       <p>
-        <Button
-          small
-          secondary
-          loadingBgColor={velaGreen}
-          loadingTextColor={offWhite}
-          loading={loadingSecondary}
-          onClick={() => setLoadingSecondary(!loadingSecondary)}
-        >
+        <Button small secondary loading={loadSec} onClick={() => setLoadSec(!loadSec)} >
           Press to load
         </Button>
-        <Button
-          secondary
-          loadingBgColor={velaGreen}
-          loadingTextColor={offWhite}
-          loading={loadingSecondary}
-          onClick={() => setLoadingSecondary(!loadingSecondary)}
-        >
+        <Button secondary loading={loadSec} onClick={() => setLoadSec(!loadSec)} >
           Press to load
         </Button>
-        <Button
-          big
-          secondary
-          loadingBgColor={velaGreen}
-          loadingTextColor={offWhite}
-          loading={loadingSecondary}
-          onClick={() => setLoadingSecondary(!loadingSecondary)}
-        >
+        <Button big secondary loading={loadSec} onClick={() => setLoadSec(!loadSec)} >
           Press to load
         </Button>
       </p>
       <p>
-        <Button
-          small
-          action
-          loadingBgColor={offWhite}
-          loadingTextColor={velaBlue}
-          loading={loadingAction}
-          onClick={() => setLoadingAction(!loadingAction)}
-        >
+        <Button small action loading={loadAct} onClick={() => setLoadAct(!loadAct)} >
           Press to load
         </Button>
-        <Button
-          action
-          loadingBgColor={offWhite}
-          loadingTextColor={velaBlue}
-          loading={loadingAction}
-          onClick={() => setLoadingAction(!loadingAction)}
-        >
+        <Button action loading={loadAct} onClick={() => setLoadAct(!loadAct)} >
           Press to load
         </Button>
-        <Button
-          big
-          action
-          loadingBgColor={offWhite}
-          loadingTextColor={velaBlue}
-          loading={loadingAction}
-          onClick={() => setLoadingAction(!loadingAction)}
-        >
+        <Button big action loading={loadAct} onClick={() => setLoadAct(!loadAct)} >
           Press to load
         </Button>
       </p>
 
       <div className='inverted-area'>
         <p>
-          <Button
-            small
-            secondary
-            inverted
-            loadingBgColor={velaGreen}
-            loadingTextColor={offWhite}
-            loading={loadingSecondaryInverted}
-            onClick={() => setLoadingSecondaryInverted(!loadingSecondaryInverted)}
-          >
+          <Button small secondary inverted loading={loadSecInv} onClick={() => setLoadSecInv(!loadSecInv)} >
             Press to load
           </Button>
-          <Button
-            secondary
-            inverted
-            loadingBgColor={velaGreen}
-            loadingTextColor={offWhite}
-            loading={loadingSecondaryInverted}
-            onClick={() => setLoadingSecondaryInverted(!loadingSecondaryInverted)}
-          >
+          <Button secondary inverted loading={loadSecInv} onClick={() => setLoadSecInv(!loadSecInv)} >
             Press to load
           </Button>
-          <Button
-            big
-            secondary
-            inverted
-            loadingBgColor={velaGreen}
-            loadingTextColor={offWhite}
-            loading={loadingSecondaryInverted}
-            onClick={() => setLoadingSecondaryInverted(!loadingSecondaryInverted)}
-          >
+          <Button big secondary inverted loading={loadSecInv} onClick={() => setLoadSecInv(!loadSecInv)} >
             Press to load
           </Button>
         </p>
         <p>
-          <Button
-            small
-            action
-            inverted
-            loadingBgColor={velaBlue}
-            loading={loadingActionInverted}
-            onClick={() => setLoadingActionInverted(!loadingActionInverted)}
-          >
+          <Button small action inverted loading={loadActInv} onClick={() => setLoadActInv(!loadActInv)} >
             Press to load
           </Button>
-          <Button
-            action
-            inverted
-            loadingBgColor={velaBlue}
-            loading={loadingActionInverted}
-            onClick={() => setLoadingActionInverted(!loadingActionInverted)}
-          >
+          <Button action inverted loading={loadActInv} onClick={() => setLoadActInv(!loadActInv)} >
             Press to load
           </Button>
-          <Button
-            big
-            action
-            inverted
-            loadingBgColor={velaBlue}
-            loading={loadingActionInverted}
-            onClick={() => setLoadingActionInverted(!loadingActionInverted)}
-          >
+          <Button big action inverted loading={loadActInv} onClick={() => setLoadActInv(!loadActInv)} >
             Press to load
           </Button>
         </p>
@@ -230,11 +131,11 @@ const ButtonsExamples = ({
   </>
 
 const Buttons = compose(
-  withState('loadingPrimary', 'setLoadingPrimary', false),
-  withState('loadingSecondary', 'setLoadingSecondary', false),
-  withState('loadingSecondaryInverted', 'setLoadingSecondaryInverted', false),
-  withState('loadingAction', 'setLoadingAction', false),
-  withState('loadingActionInverted', 'setLoadingActionInverted', false),
+  withState('loadPrim', 'setLoadPrim', false),
+  withState('loadSec', 'setLoadSec', false),
+  withState('loadSecInv', 'setLoadSecInv', false),
+  withState('loadAct', 'setLoadAct', false),
+  withState('loadActInv', 'setLoadActInv', false),
 )(ButtonsExamples)
 
 const style = () =>

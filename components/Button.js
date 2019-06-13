@@ -1,4 +1,5 @@
 import { velaGreen, offBlack, offWhite, velaBlue } from '../style/colors'
+import { compose, withProps } from 'recompose';
 
 const classNameSize = ({ small, big }) => {
   if (small) return 'btn-small'
@@ -11,20 +12,34 @@ const createClassName = ({ secondary, action, inverted }) =>
     ? secondary ? 'btn-secondary-inverted' : action ? 'btn-action-inverted' : 'btn-default'
     : secondary ? 'btn-secondary' : action ? 'btn-action' : 'btn-default'
 
-const button = ({
-  children, onClick, disabled, secondary, action, inverted, style, loading, loadingBgColor, loadingTextColor, type, small, big, ...props
+const Button = ({
+  children,
+  onClick,
+  disabled,
+  secondary,
+  action,
+  inverted,
+  style,
+  loading,
+  type,
+  small,
+  big,
+  bgLoadingBar,
+  txtLoadingColor,
+  txtBarColor,
+  ...props
 }) =>
   <>
     <button
-      type={type}
+      type={loading ? 'button' : type}
       onClick={loading ? undefined : onClick}
       style={style}
       disabled={disabled}
       className={`btn ${createClassName({ secondary, action, inverted })} ${classNameSize({small, big})}`}
       {...props}
     >
-      <span className={`btn-text ${loading ? 'btn-text-progress' : ''}`}>{children}</span>
       <div className={`btn-loading-bar ${loading ? 'btn-loading-progress' : ''}`}/>
+      <span className={`btn-text ${loading ? 'btn-text-progress' : ''}`}>{children}</span>
     </button>
     <style jsx>{`
       .btn-small {
@@ -44,21 +59,20 @@ const button = ({
       .btn-text {
         font-style: italic;
         position: relative;
-        z-index: 1;
       }
       .btn-text-progress {
-        color: ${secondary && !inverted ? offBlack : offWhite};
+        color: ${txtLoadingColor};
         animation-duration: 1s;
         animation-name: loading-text-animation;
         animation-iteration-count: infinite;
       }
       @keyframes loading-text-animation {
-        40% { color: ${loadingTextColor} }
-        60% { color: ${loadingTextColor} }
+        40% { color: ${txtBarColor} }
+        60% { color: ${txtBarColor} }
       }
 
       .btn-default {
-        background-color: ${offBlack};
+        background-color: ${velaGreen};
         color: ${offWhite};
         border: 0px solid transparent;
       }
@@ -134,7 +148,7 @@ const button = ({
 
       .btn-loading-bar {
         position: absolute;
-        background-color: ${loadingBgColor || velaGreen};
+        background-color: ${bgLoadingBar};
         height: 100%;
         width: 0;
         top: 0;
@@ -154,4 +168,28 @@ const button = ({
     `}</style>
   </>
 
-export default button
+export default compose(
+  withProps(({ loadingBgColor, action, inverted }) => {
+    if (action) return inverted
+      ? { bgLoadingBar: velaBlue }
+      : { bgLoadingBar: offWhite }
+
+    return { bgLoadingBar: loadingBgColor || offBlack }
+  }),
+  withProps(({ inverted, secondary, action, loadingTextColor, }) => {
+    if (!inverted && secondary) return {
+      txtLoadingColor: offBlack,
+      txtBarColor: offWhite
+    }
+    
+    if (!inverted && action) return {
+      txtLoadingColor: offWhite,
+      txtBarColor: velaBlue
+    }
+
+    return {
+      txtLoadingColor: offWhite,
+      txtBarColor: loadingTextColor || offWhite
+    }
+  })
+)(Button)
