@@ -90,9 +90,7 @@ HomePage.getInitialProps = async () => {
       graphql: { user: { edge_owner_to_timeline_media: { edges } } }
     } = await response.json()
   } catch (e) {
-    const {
-      graphql: { user: { edge_owner_to_timeline_media: { edges } } }
-    } = []
+    const edges = []
   )
     
   const images = edges.map(edge => {
