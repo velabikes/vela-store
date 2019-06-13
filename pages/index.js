@@ -85,14 +85,17 @@ HomePage.propTypes = {
 
 HomePage.getInitialProps = async () => {
   const response = await fetch('https://www.instagram.com/velabikes/?__a=1')
+  let edges = []
+
   try {
     const {
-      graphql: { user: { edge_owner_to_timeline_media: { edges } } }
+      graphql: { user: { edge_owner_to_timeline_media } }
     } = await response.json()
+    edges = edge_owner_to_timeline_media.edges
   } catch (e) {
-    const edges = []
-  )
-    
+    console.log('Instagram error')
+  }
+
   const images = edges.map(edge => {
     const resource = edge.node.thumbnail_resources.find(resource => resource.config_width > 350)
 
