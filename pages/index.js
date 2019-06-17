@@ -9,7 +9,7 @@ import HomeAlbum from 'components/home/HomeAlbum'
 import PaddedView from 'components/PaddedView'
 import { lightGray } from '../style/colors'
 
-const HomePage = ({ images, from, fullUrl }) =>
+const HomePage = ({ images, from }) =>
   <div className='HomePage'>
     <Head>
       <title>Vela : Bicicletas elétricas para cidades mais saudáveis.</title>
@@ -33,7 +33,7 @@ const HomePage = ({ images, from, fullUrl }) =>
     </div>
     <PaddedView>
       <HomeBikes />
-      {console.log(`instagram images loaded from: ${from} on url: ${fullUrl}`)}
+      {console.log(`instagram images loaded from: ${from}`)}
       {images && <HomeAlbum images={images} />}
     </PaddedView>
     <div className='promotion'>
@@ -85,16 +85,16 @@ HomePage.propTypes = {
 }
 
 HomePage.getInitialProps = async ({ req }) => {
-  const baseUrl = typeof(req) !== 'undefined' ? `${req.headers['x-forwarded-proto']}://${req.headers.host}` : ''
-  const fullUrl = `${baseUrl}/api/instagram`
   try {
-    console.log({ fullUrl })
-    const response = await fetch(fullUrl)
+    const baseUrl = typeof(req) !== 'undefined'
+      ? `${req.headers['x-forwarded-proto']}://${req.headers.host}`
+      : ''
+    const response = await fetch(`${baseUrl}/api/instagram`)
     const { data, from } = await response.json()
   
     return { images: data, from }
   } catch (error) {
-    return { images: [], from: 'error', fullUrl }
+    return { images: [], from: 'error' }
   }
 }
 
