@@ -84,11 +84,16 @@ HomePage.propTypes = {
   images: PropTypes.array
 }
 
-HomePage.getInitialProps = async () => {
-  const response = await fetch('http://localhost:3000/api/instagram')
-  const { data, from } = await response.json()
-
-  return { images: data, from }
+HomePage.getInitialProps = async ({ req }) => {
+  try {
+    const baseUrl = typeof(req) !== 'undefined' ? req.headers.referer : '/'
+    const response = await fetch(`${baseUrl}api/instagram`)
+    const { data, from } = await response.json()
+  
+    return { images: data, from }
+  } catch (error) {
+    return { images: [], from: 'error'}
+  }
 }
 
 export default HomePage
