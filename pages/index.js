@@ -9,7 +9,7 @@ import HomeAlbum from 'components/home/HomeAlbum'
 import PaddedView from 'components/PaddedView'
 import { lightGray } from '../style/colors'
 
-const HomePage = ({ images, from }) =>
+const HomePage = ({ images, from, baseUrl }) =>
   <div className='HomePage'>
     <Head>
       <title>Vela : Bicicletas elétricas para cidades mais saudáveis.</title>
@@ -33,7 +33,7 @@ const HomePage = ({ images, from }) =>
     </div>
     <PaddedView>
       <HomeBikes />
-      {console.log(`instagram images loaded from: ${from}`)}
+      {console.log(`instagram images loaded from: ${from} on url: ${baseUrl}`)}
       {images && <HomeAlbum images={images} />}
     </PaddedView>
     <div className='promotion'>
@@ -85,8 +85,8 @@ HomePage.propTypes = {
 }
 
 HomePage.getInitialProps = async ({ req }) => {
+  const baseUrl = typeof(req) !== 'undefined' ? req.headers.host : ''
   try {
-    const baseUrl = typeof(req) !== 'undefined' ? req.headers.host : ''
     const fullUrl = `${baseUrl}/api/instagram`
     console.log({ fullUrl })
     const response = await fetch(fullUrl)
@@ -94,7 +94,7 @@ HomePage.getInitialProps = async ({ req }) => {
   
     return { images: data, from }
   } catch (error) {
-    return { images: [], from: 'error'}
+    return { images: [], from: 'error', baseUrl }
   }
 }
 
