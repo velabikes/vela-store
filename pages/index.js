@@ -86,9 +86,9 @@ HomePage.propTypes = {
 
 HomePage.getInitialProps = async ({ req }) => {
   try {
-    const baseUrl = typeof(req) !== 'undefined' ? req.headers.referer : '/'
-    const fullUrl = `${baseUrl}api/instagram`
-    console.log({ fullUrl: `${baseUrl}api/instagram` })
+    const baseUrl = typeof(req) !== 'undefined' ? req.headers.host : ''
+    const fullUrl = `${baseUrl}/api/instagram`
+    console.log({ fullUrl })
     const response = await fetch(fullUrl)
     const { data, from } = await response.json()
   
