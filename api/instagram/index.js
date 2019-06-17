@@ -21,9 +21,9 @@ const instagram = async () =>
           }
         })
 
-        resolve(images)
+        if (images) return resolve(images)
       })
-    }).on("error", (err) => reject(err))
+    }).on("error", () => resolve([]))
   })
 
 module.exports = async (req, res) => {
