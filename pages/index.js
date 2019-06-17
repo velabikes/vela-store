@@ -85,7 +85,7 @@ HomePage.propTypes = {
 }
 
 HomePage.getInitialProps = async ({ req }) => {
-  const baseUrl = typeof(req) !== 'undefined' ? req.headers.referer : ''
+  const baseUrl = typeof(req) !== 'undefined' ? req.headers.host : ''
   const fullUrl = `${baseUrl}/api/instagram`
   try {
     console.log({ fullUrl })
