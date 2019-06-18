@@ -29,6 +29,7 @@ const instagram = async () =>
 module.exports = async (req, res) => {
   const images = await getFromCache('instagram', instagram)
   res.setHeader('Content-Type', 'application/json')
+  res.setHeader('s-maxage', '7200')
 
   return res.end(JSON.stringify(images))
 }
