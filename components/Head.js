@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import { velaGreen, velaBlue, offBlack, offWhite, lightGray } from '../style/colors'
+import FacebookPixel from '../components/FacebookPixel'
 
 const CustomHead = props =>
   <>
@@ -13,8 +14,8 @@ const CustomHead = props =>
       <link rel='icon' type='image/png' sizes='16x16' href='/static/fav/favicon-16x16.png' />
       <link rel='icon' type='image/x-icon' href='/static/fav/favicon.ico' />
       <meta name='theme-color' content='#ffffff' />
-
     </Head>
+    <FacebookPixel />
     <style jsx global>{`
       html, body {
         margin: 0;
