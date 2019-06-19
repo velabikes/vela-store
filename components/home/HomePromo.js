@@ -1,6 +1,7 @@
 import { compose, withState } from 'recompose'
 import { Formik } from 'formik'
 import fetch from 'isomorphic-fetch'
+import Button from '../Button'
 
 const Reg89 = props =>
   <div>
@@ -208,9 +209,9 @@ const Form89 = props =>
            Opcao 3
           </label>
         </fieldset>
-        <button type='submit' disabled={isSubmitting}>
+        <Button action type='submit' loading={isSubmitting}>
           Enviar
-        </button>
+        </Button>
       </form>
     }
   </Formik>

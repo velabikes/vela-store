@@ -1,32 +1,28 @@
-import { velaBlue, offWhite } from '../../style/colors'
+import Button from '../Button'
 
-const OptionButton = ({ selected, label, ...props }) =>
-  <button {...props}>
+const OptionButton = ({ selected, label, value, onClick, ...props }) =>
+  <Button
+  action
+    small
+    inverted={!selected}
+    onClick={onClick}
+    {...props}
+  >
     <span />
     {label.replace(/\s*\[.*?\]\s*/g, '')}
     <style jsx>{`
-      button {
-        background: ${selected ? velaBlue : 'transparent'};
-        color: ${selected ? 'white' : velaBlue};
-        border: 1px solid ${velaBlue};
-        font-size: 0.6rem;
-        margin: 0.61em 0.61em 0 0;
-        display: inline-block;
-        text-transform: uppercase;
-        font-style: normal;
-      }
       span {
         background-color: ${label.match(/\s*\[.*?\]\s*/g) && label.match(/\[(.*?)\]/)[1]};
         margin: 0 auto;
         display: ${label.match(/\s*\[.*?\]\s*/g) ? 'block' : 'none'};
         height: 2em;
-        border-radius: 2em;
         margin-bottom: ${0.61 * 0.61}em;
         width: 2em;
         border: 2px solid white;
+        border-radius: 50%;
       }
     `}</style>
-  </button>
+  </Button>
 
 const ProductVariantSelectItem = ({
   name,
@@ -35,7 +31,7 @@ const ProductVariantSelectItem = ({
   disabled,
   onSelect
 }) =>
-  <fieldset>
+  <fieldset className='product-variant'>
     <div>
       <label>{name}</label>
     </div>
@@ -43,6 +39,7 @@ const ProductVariantSelectItem = ({
     {!disabled && values.map(value =>
       <OptionButton
         key={value}
+        value={value}
         label={value}
         selected={value === selectedValue}
         onClick={() => onSelect({[name]: value})}
@@ -51,6 +48,9 @@ const ProductVariantSelectItem = ({
     <style jsx>{`
       label {
         opacity: ${disabled && '0.5'}
+      }
+      .product-variant > :global(.btn span) {
+        font-style: normal;
       }
     `}</style>
   </fieldset>

@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import PropTypes from 'prop-types'
 import { offBlack, velaGreen } from '../../style/colors'
+import Button from '../Button'
 
 const bikes = [
   {
@@ -23,9 +24,9 @@ const BikeCard = ({ title, href, hrefAs, action, src, index }) =>
     <div className='CardHeader'>
       <h1>{title}</h1>
 
-      <div>
+      <div className='CardsHome'>
         <Link href={href} as={hrefAs}>
-          <button className={`Button ${index % 2 ? 'odd' : 'even'}`}>{action}</button>
+          <Button big secondary={index % 2 && true}>{action}</Button>
         </Link>
       </div>
     </div>
@@ -48,17 +49,6 @@ const BikeCard = ({ title, href, hrefAs, action, src, index }) =>
       h1 {
         color: ${offBlack};
         font-size: 2.63em;
-      }
-      .Button {
-        font-size: 1.29em;
-      }
-      .odd {
-        background-color: transparent;
-        color: ${offBlack};
-        border: 1px solid ${offBlack};
-      }
-      .even {
-        background-color: ${velaGreen};
       }
       @media only screen and (min-width: 768px) {
         font-size: 1rem;

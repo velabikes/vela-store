@@ -1,6 +1,7 @@
 import { compose, branch, renderComponent } from 'recompose'
 import CartItem from './CartItem'
 import CartPrice from './CartPrice'
+import Button from '../Button'
 
 const CartContent = ({ checkout }) =>
   <div className='CartContent'>
@@ -17,7 +18,7 @@ const CartContent = ({ checkout }) =>
     </div>
     <div className='footer'>
       <small />
-      <button type='button' onClick={() => window.location.replace(checkout.webUrl)}>Finalizar</button>
+      <Button action onClick={() => window.location.replace(checkout.webUrl)}>Finalizar</Button>
     </div>
     <style jsx>{`
       .CartContent {

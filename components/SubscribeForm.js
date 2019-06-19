@@ -1,6 +1,7 @@
 import MailchimpSubscribe from 'react-mailchimp-subscribe'
 import { Formik } from 'formik'
 import { velaBlue } from '../style/colors'
+import Button from './Button'
 
 const url = 'https://velabikes.us15.list-manage.com/subscribe/post?u=950b7d190680648ed40ffbe84&amp;id=dde7c564df'
 
@@ -27,10 +28,12 @@ const SubscribeForm = () =>
                   onChange={handleChange}
                   onBlur={handleBlur}
                 />
-                <div style={{ position: 'absolute', left: '-5000px' }} aria-hidden='true'>
+                <div className='hidden' aria-hidden='true'>
                   <input type='text' name='b_950b7d190680648ed40ffbe84_dde7c564df' tabIndex='-1' defaultValue='' />
                 </div>
-                <button type='submit'>Assinar</button>
+                <div className='submit'>
+                  <Button action inverted type='submit'>Assinar</Button>
+                </div>
               </form>
             }
           </Formik>
@@ -40,13 +43,20 @@ const SubscribeForm = () =>
       form {
         position: relative;
       }
-      button {
+      .hidden {
+        position: absolute;
+        left: -5000px;
+      }
+      .submit {
         position: absolute;
         right: 0;
         bottom: 0;
-        color: ${velaBlue};
-        background: transparent;
-        padding: 0.5em;
+      }
+      form > :global(.submit button) {
+        border: 0px;
+      }
+      form > :global(.submit button:hover) {
+        border: 0px;
       }
     `}</style>
   </div>

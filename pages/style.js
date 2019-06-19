@@ -1,4 +1,142 @@
 import PaddedView from '../components/PaddedView'
+import Button from '../components/Button'
+import { withState } from 'recompose'
+import { compose } from 'redux'
+import { velaGreen, offWhite, offBlack, velaBlue } from '../style/colors'
+
+const ButtonsExamples = ({
+  loadPrim, setLoadPrim,
+  loadSec, setLoadSec,
+  loadAct, setLoadAct,
+  loadSecInv, setLoadSecInv,
+  loadActInv, setLoadActInv,
+}) =>
+  <>
+    <div className='buttons-wrapper'>
+      <h2>Buttons</h2>
+      <p>
+        <Button small>Small</Button>
+        <Button>Normal</Button>
+        <Button big>Big</Button>
+      </p>
+      <p>
+        <Button secondary small>Small</Button>
+        <Button secondary>Normal</Button>
+        <Button secondary big>Big</Button>
+      </p>
+      <p>
+        <Button action small>Small</Button>
+        <Button action>Normal</Button>
+        <Button action big>Big</Button>
+      </p>
+
+      <div className='inverted-area'>
+        <p>
+          <Button secondary inverted small>Small</Button>
+          <Button secondary inverted>Normal</Button>
+          <Button secondary inverted big>Big</Button>
+        </p>
+        <p>
+          <Button action inverted small>Small</Button>
+          <Button action inverted>Normal</Button>
+          <Button action inverted big>Big</Button>
+        </p>
+      </div>
+
+
+      <p>
+        <Button disabled small>Disabled</Button>
+        <Button disabled>Disabled</Button>
+        <Button disabled big>Disabled</Button>
+      </p>
+
+    </div>
+
+    <hr />
+    
+    <div className='inverted-buttons-wrapper'>
+      <h2>Loading Buttons</h2>
+      <p>
+        <Button small loading={loadPrim} onClick={() => setLoadPrim(!loadPrim)} >
+          Press to load
+        </Button>
+        <Button loading={loadPrim} onClick={() => setLoadPrim(!loadPrim)} >
+          Press to load
+        </Button>
+        <Button big loading={loadPrim} onClick={() => setLoadPrim(!loadPrim)} >
+          Press to load
+        </Button>
+      </p>
+      <p>
+        <Button small secondary loading={loadSec} onClick={() => setLoadSec(!loadSec)} >
+          Press to load
+        </Button>
+        <Button secondary loading={loadSec} onClick={() => setLoadSec(!loadSec)} >
+          Press to load
+        </Button>
+        <Button big secondary loading={loadSec} onClick={() => setLoadSec(!loadSec)} >
+          Press to load
+        </Button>
+      </p>
+      <p>
+        <Button small action loading={loadAct} onClick={() => setLoadAct(!loadAct)} >
+          Press to load
+        </Button>
+        <Button action loading={loadAct} onClick={() => setLoadAct(!loadAct)} >
+          Press to load
+        </Button>
+        <Button big action loading={loadAct} onClick={() => setLoadAct(!loadAct)} >
+          Press to load
+        </Button>
+      </p>
+
+      <div className='inverted-area'>
+        <p>
+          <Button small secondary inverted loading={loadSecInv} onClick={() => setLoadSecInv(!loadSecInv)} >
+            Press to load
+          </Button>
+          <Button secondary inverted loading={loadSecInv} onClick={() => setLoadSecInv(!loadSecInv)} >
+            Press to load
+          </Button>
+          <Button big secondary inverted loading={loadSecInv} onClick={() => setLoadSecInv(!loadSecInv)} >
+            Press to load
+          </Button>
+        </p>
+        <p>
+          <Button small action inverted loading={loadActInv} onClick={() => setLoadActInv(!loadActInv)} >
+            Press to load
+          </Button>
+          <Button action inverted loading={loadActInv} onClick={() => setLoadActInv(!loadActInv)} >
+            Press to load
+          </Button>
+          <Button big action inverted loading={loadActInv} onClick={() => setLoadActInv(!loadActInv)} >
+            Press to load
+          </Button>
+        </p>
+      </div>
+    </div>
+    <style jsx>{`
+      .inverted-area {
+        background-color: #a6b5a0;
+        padding-top: .1rem;
+        padding-bottom: .8rem;
+      }
+      .buttons-wrapper p > :global(.btn) {
+        // width: 150px;
+      }
+      .inverted-buttons-wrapper p > :global(.btn) {
+        // width: 200px;
+      }
+    `}</style>
+  </>
+
+const Buttons = compose(
+  withState('loadPrim', 'setLoadPrim', false),
+  withState('loadSec', 'setLoadSec', false),
+  withState('loadSecInv', 'setLoadSecInv', false),
+  withState('loadAct', 'setLoadAct', false),
+  withState('loadActInv', 'setLoadActInv', false),
+)(ButtonsExamples)
 
 const style = () =>
   <PaddedView>
@@ -29,6 +167,9 @@ const style = () =>
     <input type='text' />
     <small>Small text</small>
     <legend>Legend text</legend>
+    <hr />
+
+    <Buttons />
   </PaddedView>
 
 export default style
