@@ -39,6 +39,7 @@
     "next-ga": "^2.3.4",
     "next-redux-wrapper": "^3.0.0-alpha.2",
     "next-with-apollo": "^3.4.0",
+    "node-cache": "^4.2.0",
     "node-correios": "^2.2.0",
     "nprogress": "^0.2.0",
     "prop-types": "^15.7.2",

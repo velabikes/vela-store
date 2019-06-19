@@ -3,20 +3,22 @@ import { velaGreen } from '../../style/colors'
 
 const HomeAlbum = ({ images }) =>
   <section className='HomeAlbum'>
-    <div className='AlbumTitle'>
-      <h1>Siga o movimento</h1>
-    </div>
-    <div className='Album'>
-      {images.map((image, index) => {
-        if (index > 7) return
+    {images && images.length > 0 && <>
+      <div className='AlbumTitle'>
+        <h1>Siga o movimento</h1>
+      </div>
+      <div className='Album'>
+        {images.map((image, index) => {
+          if (index > 7) return
 
-        return <div key={image.id}>
-          <a href={`https://www.instagram.com/p/${image.id}`} target='_blank'>
-            <img alt={image.title} src={image.url} />
-          </a>
-        </div>
-      })}
-    </div>
+          return <div key={image.id}>
+            <a href={`https://www.instagram.com/p/${image.id}`} target='_blank'>
+              <img alt={image.title} src={image.url} />
+            </a>
+          </div>
+        })}
+      </div>
+    </>}
     <p className='Hashtag'>#vadevela</p>
     <style jsx>{`
       .HomeAlbum {

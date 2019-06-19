@@ -9,7 +9,7 @@ import HomeAlbum from 'components/home/HomeAlbum'
 import PaddedView from 'components/PaddedView'
 import { lightGray } from '../style/colors'
 
-const HomePage = ({ images }) =>
+const HomePage = ({ images, from }) =>
   <div className='HomePage'>
     <Head>
       <title>Vela : Bicicletas elétricas para cidades mais saudáveis.</title>
@@ -33,7 +33,8 @@ const HomePage = ({ images }) =>
     </div>
     <PaddedView>
       <HomeBikes />
-      <HomeAlbum images={images} />
+      {console.log(`instagram images loaded from: ${from}`)}
+      {images && <HomeAlbum images={images} />}
     </PaddedView>
     <div className='promotion'>
       <Cta89 />
@@ -83,29 +84,18 @@ HomePage.propTypes = {
   images: PropTypes.array
 }
 
-HomePage.getInitialProps = async () => {
-  const response = await fetch('https://www.instagram.com/velabikes/?__a=1')
-  let edges = []
-
+HomePage.getInitialProps = async ({ req }) => {
   try {
-    const {
-      graphql: { user: { edge_owner_to_timeline_media } }
-    } = await response.json()
-    edges = edge_owner_to_timeline_media.edges
-  } catch (e) {
-    console.log('Instagram error')
+    const baseUrl = typeof(req) !== 'undefined'
+      ? `${req.headers['x-forwarded-proto']}://${req.headers.host}`
+      : ''
+    const response = await fetch(`${baseUrl}/api/instagram`)
+    const { data, from } = await response.json()
+  
+    return { images: data, from }
+  } catch (error) {
+    return { images: [], from: 'error' }
   }
-
-  const images = edges.map(edge => {
-    const resource = edge.node.thumbnail_resources.find(resource => resource.config_width > 350)
-
-    return {
-      id: edge.node.shortcode,
-      url: resource.src
-    }
-  })
-
-  return { images }
 }
 
 export default HomePage
