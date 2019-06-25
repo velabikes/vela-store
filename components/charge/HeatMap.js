@@ -2,7 +2,9 @@ import Button from '../Button'
 
 const HeatMap = () =>
   <div className='heat-map'>
-		<div className='map'></div>
+		<div className='map'>
+
+    </div>
 
 		<div className='heat-map-description'>
       <h1>Mapa de calor</h1>
@@ -15,21 +17,20 @@ const HeatMap = () =>
       .heat-map {
         display: grid;
         position: relative;
-        grid-template-columns: 1fr 0;
+        grid-template-columns: 1fr;
+        height: fit-content;
       }
       .heat-map .map {
-        height: 45rem;
+        height: 800px;
         background-color: #d0d0d0;
       }
       .heat-map-description {
-        position: absolute;
-        top: 7rem;
-        left: 7rem;
-        width: 30%;
+        position: relative;
+        margin: 0 2rem;
       }
       .heat-map-description h1 {
-        font-size: 4rem;
-        margin-bottom: 4rem;
+        font-size: 3rem;
+        margin: 4rem 0;
       }
       .heat-map-description p {
         text-align: justify;
@@ -39,6 +40,22 @@ const HeatMap = () =>
         text-align: left;
         font-weight: bold;
         font-style: italic;
+      }
+      
+      @media only screen and (min-width: 1100px) {
+        .heat-map {
+          grid-template-columns: 1fr 0;
+        }
+        .heat-map-description h1 {
+          font-size: 4rem;
+        }
+        .heat-map-description {
+          margin: 7rem;
+          position: absolute;
+          top: 0rem;
+          left: 0rem;
+          width: 35%;
+        }
       }
     `}</style>
   </div>

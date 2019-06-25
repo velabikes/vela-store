@@ -24,13 +24,14 @@ const ChargePage = () =>
     <Features />
 
     <style jsx>{`
-      .charge {
-        // background-color: #f5f5f5;
-      }
       .title {
-        padding: 4rem;
+        padding: 4rem 2rem;
       }
-
+      @media only screen and (min-width: 768px) {
+        .title {
+          padding: 4rem;
+        }
+      }
     `}</style>
   </div>
 

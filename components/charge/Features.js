@@ -3,7 +3,7 @@ const Features = () =>
   <div className='features'>
     <div className='icon'>
       <div className='image rota'>
-        <img src='static/rota.png'/>
+        <img src='static/route-bike.png'/>
       </div>
       <p>Rota de</p>
       <p>ciclistas</p>
@@ -11,7 +11,7 @@ const Features = () =>
 
     <div className='icon'>
       <div className='image clientes'>
-        <img src='static/clientes.png'/>
+        <img src='static/clients.png'/>
       </div>
       <p>Clientes</p>
       <p>potenciais</p>
@@ -29,23 +29,21 @@ const Features = () =>
       .features {
         display: grid;
         position: relative;
-        grid-template-columns: 1fr 1fr 1fr;
-        margin: 6rem 20rem;
         text-align: center;
       }
-      .icon {
-        margin: 0 auto;
+      .features .icon {
+        margin: 3rem auto;
       }
-      .image.rota {
+      .features .image.rota {
         background-color: ${velaRed};
       }
-      .image.clientes {
+      .features .image.clientes {
         background-color: ${offBlack};
       }
-      .image.site {
+      .features .image.site {
         background-color: ${velaBlue};
       }
-      .image img {
+      .features .image img {
         width: 7rem;
         height: auto;
         position: relative;
@@ -58,13 +56,26 @@ const Features = () =>
         border-radius: 5px;
         margin-bottom: 1rem;
       }
-      .icon p {
+      .features .icon p {
         margin: 0;
         text-align: center;
         text-transform: uppercase;
         font-size: 1.5rem;
         font-style: italic;
         line-height: 1;
+      }
+
+      @media only screen and (min-width: 768px) {
+        .features {
+          grid-template-columns: 1fr 1fr 1fr;
+          margin: 6rem 0;
+        }
+      }
+
+      @media only screen and (min-width: 1400px) {
+        .features {
+          margin: 6rem 12rem;
+        }
       }
     `}</style>
   </div>

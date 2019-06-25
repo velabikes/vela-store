@@ -1,4 +1,4 @@
-import { offBlack, offWhite } from '../../style/colors'
+import { offBlack, offWhite, velaGreen } from '../../style/colors'
 
 const About = () =>
   <div className='about'>
@@ -19,13 +19,13 @@ const About = () =>
           <td><p>10 Minutos carregando</p></td>
         </tr>
         <tr>
-          <td><img className='img-plus-ten' src='static/plus-ten.png' /></td>
+          <p className='plus-ten'>+10</p>
           <td><p>Quilômetros para rodar</p></td>
         </tr>
       </table>
 
       <div className='bateries'>
-        <img className='img-bateries' src='static/bateries.png' />
+        <img className='img-bateries' src='static/batteries.png' />
         <p>Carregador para até</p>
         <p>três baterias simultâneas</p>
       </div>
@@ -33,22 +33,22 @@ const About = () =>
 
     <style jsx>{`
       .about {
-        margin-top: 8rem;
         display: grid;
-        grid-template-columns: 4fr 3fr;
       }
 
-      .station {
+      .about .station {
         position: relative;
+        min-height: 600px;
         width: auto;
         height: auto;
         display: grid;
         grid-template-columns: 1fr 0;
+        margin-bottom: 7rem;
       }
-      .spare-parts {
+      .about .spare-parts {
         background-color: #d0d0d0;
       }
-      .made-by {
+      .about .made-by {
         position: absolute;
         left: 50%;
         bottom: -10%;
@@ -59,52 +59,93 @@ const About = () =>
         width: fit-content;
         background-color: ${offBlack};
       }
-      .made-by p {
-        font-size: 2rem;
+      .about .made-by p {
+        font-size: 1.8rem;
         color: ${offWhite};
         font-weight: bold;
         font-style: italic;
         text-transform: uppercase;
       }
 
-      .texts {
-        margin: 0 6rem;
+      .about .texts {
+        display: grid;
+      }
+      .about .plus-ten {
+        font-size: 3rem;
+        color: ${offWhite};
+        text-shadow:
+          -2px -2px 0 ${velaGreen},
+          2px -2px 0 ${velaGreen},
+          -2px 2px 0 ${velaGreen},
+          2px 2px 0 ${velaGreen};
       }
       .about table {
-        border-spacing: 3rem 5rem;
-      }
-      .about img {
-        opacity: 0.2;
+        border-spacing: 2rem 3rem;
       }
       .about td:first-child {
         height: 5rem;
         text-align: center;
       }
       .about p {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         font-style: italic;
         text-transform: uppercase;
         margin: 0;
       }
-      .bateries {
+      .about .bateries {
         text-align: center;
         margin-bottom: 3rem;
       }
-      .bateries p {
+      .about .bateries p {
         line-height: 1;
       }
-      .img-clock {
-        height: 6rem;
+      .about .img-clock {
+        height: 2.5rem;
         width: auto;
       }
-      .img-plus-ten {
-        height: 100%;
+      .about .img-plus-ten {
+        height: 2.5rem;
         width: auto;
       }
-      .img-bateries {
-        height: 25rem;
+      .about .img-bateries {
+        height: 15rem;
         width: auto;
         margin-bottom: 3rem;
+      }
+
+      @media only screen and (min-width: 880px) {
+        .about .texts {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+        }
+        .about table {
+          border-spacing: 3rem 5rem;
+        }
+        .about .plus-ten {
+          font-size: 6rem;
+        }
+        .about .img-clock {
+          height: 6rem;
+        }
+        .about .img-plus-ten {
+          height: 100%;
+        }
+        .about .img-bateries {
+          height: 25rem;
+        }
+      }
+
+      @media only screen and (min-width: 1300px) {
+        .about {
+          grid-template-columns: 4fr 3fr;
+          margin-top: 8rem;
+        }
+        .about .station {
+          margin: 0;
+        }
+        .about .texts {
+          grid-template-columns: none;
+        }
       }
     `}</style>
   </div>
