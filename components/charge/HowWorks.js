@@ -7,7 +7,8 @@ const HowWorks = () =>
         <img src='static/low-battery.png' />
         <div className='description'>
           <h2>Ficou sem bateria?</h2>
-          <p>Você pode oferecer testes para amigos e indicações nosas.</p>
+          <p>Fique tranquilo!</p>
+          <p>Agora você pode recarregar pelo caminho.</p>
         </div>
       </div>
 
@@ -15,7 +16,7 @@ const HowWorks = () =>
         <img src='static/find-vela-point.png' />
         <div className='description'>
           <h2>Procure um ponto Vela</h2>
-          <p>A partir deles, você ajuda a expandir a comunidade Vela pelo Brasil.</p>
+          <p>Basta checar no mapa nossa rede de cafés parceiros.</p>
         </div>
       </div>
 
@@ -23,7 +24,7 @@ const HowWorks = () =>
         <img src='static/wait.png' />
         <div className='description'>
           <h2>Espere 15 minutos</h2>
-          <p>Com os teste e vendas realizados, você acumula benefícios com a gente.</p>
+          <p>Relaxe, tome um café e aproceite o fim do percurso sem se preocupar.</p>
         </div>
       </div>
     </div>
@@ -46,9 +47,7 @@ const HowWorks = () =>
       }
       .how-works .card p {
         font-size: 2rem;
-      }
-      .how-works .card img {
-        max-width: 500px;
+        margin: 0
       }
       .how-works .hold {
         grid-column: 1 / span 2;
@@ -59,6 +58,9 @@ const HowWorks = () =>
       }
 
       @media only screen and (min-width: 960px) {
+        .how-works {
+          margin: 0 7rem;
+        }
         .how-works h1 {
           font-size: 4rem;
           margin-top: 8rem;
@@ -74,8 +76,8 @@ const HowWorks = () =>
         .how-works .cards {
           grid-template-columns: 1fr 1fr 1fr;
         }
-        .how-works .card {
-          margin: 0;
+        .how-works .description {
+          margin: 0 4rem;
         }
         .how-works .hold {
           grid-row: 1;
