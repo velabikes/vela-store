@@ -42,6 +42,17 @@ const About = () =>
         height: 100%;
         // height: auto;
       }
+      .about video::-webkit-media-controls-volume-slider,
+      .about video::-webkit-media-controls-volume-slider-container,
+      .about video::-webkit-media-controls-current-time-display,
+      .about video::-webkit-media-controls-time-remaining-display,
+      .about video::-webkit-media-controls-seek-back-button,
+      .about video::-webkit-media-controls-seek-forward-button,
+      .about video::-webkit-media-controls-fullscreen-button,
+      .about video::-webkit-media-controls-timeline {
+        display: none
+      }
+
       .about .station {
         position: relative;
         min-height: 600px;

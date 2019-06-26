@@ -31,6 +31,18 @@ const Banner = () =>
         width: 100%;
         height: auto;
       }
+
+      .banner video::-webkit-media-controls-volume-slider,
+      .banner video::-webkit-media-controls-volume-slider-container,
+      .banner video::-webkit-media-controls-current-time-display,
+      .banner video::-webkit-media-controls-time-remaining-display,
+      .banner video::-webkit-media-controls-seek-back-button,
+      .banner video::-webkit-media-controls-seek-forward-button,
+      .banner video::-webkit-media-controls-fullscreen-button,
+      .banner video::-webkit-media-controls-timeline {
+        display: none
+      }
+
       .banner .content {
         display: grid;
         grid-template-columns: auto 1fr;
