@@ -4,7 +4,6 @@ const Banner = () =>
   <div className='banner'>
     <video autoPlay muted controls controlsList="nodownload">
       <source src="static/charge-banner.mp4" type="video/mp4" />
-      {/* <source src="static/station.mp4" type='video/mp4' label='SD' res='480' /> */}
     </video>
 
     <div className='content'>
