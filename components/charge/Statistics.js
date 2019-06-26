@@ -22,7 +22,7 @@ const Statistics = () =>
 
     <style jsx>{`
       .statistics {
-        margin-top: 12rem;
+        margin-top: 6rem;
         margin-bottom: 1rem;
         display: grid;
         background-color: ${velaGreen};
@@ -49,7 +49,7 @@ const Statistics = () =>
       }
       .statistics .statistic p {
         margin: 0;
-        font-size: 1.5rem;
+        // font-size: 1.5rem;
         text-transform: uppercase;
         font-style: italic;
         line-height: 1;

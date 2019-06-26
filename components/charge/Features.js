@@ -60,7 +60,7 @@ const Features = () =>
         margin: 0;
         text-align: center;
         text-transform: uppercase;
-        font-size: 1.5rem;
+        // font-size: 1.5rem;
         font-style: italic;
         line-height: 1;
       }

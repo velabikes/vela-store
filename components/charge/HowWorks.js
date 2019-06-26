@@ -33,28 +33,26 @@ const HowWorks = () =>
       .how-works {
         margin: 0 2rem;
       }
+      .how-works img {
+        width: 40vw;
+      }
       .how-works h1 {
-        font-size: 3rem;
         margin-top: 6rem;
         margin-bottom: 6rem;
       }
       .how-works .card {
         text-align: center;
-        margin-bottom: 7rem;
-      }
-      .how-works .card h2 {
-        font-size: 2.5rem;
+        margin: 0 2rem 8rem 2rem;
       }
       .how-works .card p {
-        font-size: 2rem;
-        margin: 0
+        margin: 0;
       }
       .how-works .last {
         grid-column: 1 / span 2;
         left: 0;
       }
-      .how-works .card.description {
-        margin: 0 4rem;
+      .how-works .description {
+        margin: 2rem 4rem 0 4rem;
       }
 
       @media only screen and (min-width: 960px) {
@@ -62,7 +60,6 @@ const HowWorks = () =>
           margin: 0 7rem;
         }
         .how-works h1 {
-          font-size: 4rem;
           margin-top: 8rem;
           margin-bottom: 6rem;
         }
@@ -70,18 +67,31 @@ const HowWorks = () =>
           display: grid;
           grid-template-columns: 1fr 1fr;
         }
+        .how-works img {
+          width: 30vw;
+        }
+        .how-works .card {
+          margin-bottom: 5rem;
+        }
       }
 
+
+      @media only screen and (min-width: 460px) {
+        .how-works {
+          margin: 0 7rem 8rem 7rem;
+        }
+      }
       @media only screen and (min-width: 1300px) {
         .how-works .cards {
           grid-template-columns: 1fr 1fr 1fr;
-        }
-        .how-works .description {
-          margin: 0 4rem;
+          margin-bottom: 0rem;
         }
         .how-works .last {
           grid-row: 1;
           grid-column: 3;
+        }
+        .how-works img {
+          width: 22vw;
         }
       }
     `}</style>

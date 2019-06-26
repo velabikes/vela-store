@@ -2,8 +2,9 @@ import { offBlack, offWhite } from '../../style/colors'
 
 const Banner = () => 
   <div className='banner'>
-    <video width="320" height="240" autoPlay muted controls controlsList="nodownload">
+    <video autoPlay muted controls controlsList="nodownload">
       <source src="static/charge-banner.mp4" type="video/mp4" />
+      {/* <source src="static/station.mp4" type='video/mp4' label='SD' res='480' /> */}
     </video>
 
     <div className='content'>
@@ -35,6 +36,7 @@ const Banner = () =>
         display: grid;
         grid-template-columns: auto 1fr;
         width: fit-content;
+        height: fit-content;
         margin: 3rem auto;
       }
       .banner .card {
@@ -45,7 +47,7 @@ const Banner = () =>
         background-color: ${offBlack};
       }
       .banner .card p {
-        font-size: 4vw;
+        font-size: 3vw;
         font-weight: bold;
         font-style: italic;
         text-transform: uppercase;
@@ -70,7 +72,7 @@ const Banner = () =>
         }
         .banner .description p {
           margin: 0;
-          font-size: 1.7rem;
+          // font-size: 1.7rem;
         }
         .banner .content {
           position: relative;
@@ -96,7 +98,7 @@ const Banner = () =>
         .banner .content {
           width: fit-content;
           display: block;
-          left: -14vw;
+          left: -8vw;
           top: 10vw;
           transform: translateX(0);
         }

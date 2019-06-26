@@ -20,10 +20,10 @@ const VelaPoint = () =>
       }
       .vela-point h1 {
         color: ${offWhite};
-        font-size: 3rem;
+        // font-size: 3rem;
       }
       .vela-point p {
-        font-size: 1.8rem;
+        // font-size: 1.8rem;
       }
       .vela-point .description :global(button) {
         margin-top: 3rem;
@@ -36,7 +36,7 @@ const VelaPoint = () =>
 
       @media only screen and (min-width: 460px) {
         .vela-point h1 {
-          font-size: 4rem;
+          // font-size: 4rem;
         }
         .vela-point .description {
           margin: 0 7rem 7rem 7rem;

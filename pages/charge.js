@@ -4,9 +4,10 @@ import Banner from '../components/charge/Banner'
 import VelaPoint from '../components/charge/VelaPoint'
 import HowWorks from '../components/charge/HowWorks'
 import About from '../components/charge/About'
+import BePartOf from '../components/charge/BePartOf'
+import Features from '../components/charge/Features'
 import Statistics from '../components/charge/Statistics'
 import HeatMap from '../components/charge/HeatMap'
-import Features from '../components/charge/Features'
 
 const ChargePage = () =>
   <div className='charge'>
@@ -19,9 +20,10 @@ const ChargePage = () =>
     <VelaPoint />
     <HowWorks />
     <About />
+    <BePartOf />
+    <Features />
     <Statistics />
     <HeatMap />
-    <Features />
 
     <style jsx>{`
       .title {

@@ -29,12 +29,12 @@ const HeatMap = () =>
         margin: 0 2rem;
       }
       .heat-map-description h1 {
-        font-size: 3rem;
+        // font-size: 3rem;
         margin: 4rem 0;
       }
       .heat-map-description p {
         text-align: justify;
-        font-size: 1.7rem;
+        // font-size: 1.7rem;
       }
       .heat-map-description .cta {
         text-align: left;
@@ -47,7 +47,7 @@ const HeatMap = () =>
           grid-template-columns: 1fr 0;
         }
         .heat-map-description h1 {
-          font-size: 4rem;
+          // font-size: 4rem;
         }
         .heat-map-description {
           margin: 7rem;
