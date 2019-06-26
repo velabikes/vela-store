@@ -3,7 +3,6 @@ import Link from 'next/link'
 import fetch from 'isomorphic-fetch'
 import PropTypes from 'prop-types'
 import HomeImage from 'components/home/HomeImage'
-import Cta89 from 'components/home/HomePromo'
 import HomeBikes from 'components/home/HomeBikes'
 import HomeAlbum from 'components/home/HomeAlbum'
 import PaddedView from 'components/PaddedView'
@@ -37,9 +36,7 @@ const HomePage = ({ images, from }) =>
       {console.log(`instagram images loaded from: ${from}`)}
       {images && <HomeAlbum images={images} />}
     </PaddedView>
-    <div className='promotion'>
-      <Cta89 />
-    </div>
+ 
     <style jsx>{`
       .HomePage {
          position: relative;
