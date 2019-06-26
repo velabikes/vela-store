@@ -2,7 +2,9 @@ import { offBlack, offWhite } from '../../style/colors'
 
 const Banner = () => 
   <div className='banner'>
-    <img src='static/video.png' style={{ opacity: 0.2 }} />
+    <video width="320" height="240" autoPlay muted controls controlsList="nodownload">
+      <source src="static/charge-banner.mp4" type="video/mp4" />
+    </video>
 
     <div className='content'>
       <div className='card'>
@@ -24,6 +26,10 @@ const Banner = () =>
       .banner {
         display: grid;
         position: relative;
+      }
+      .banner video {
+        width: 100%;
+        height: auto;
       }
       .banner .content {
         display: grid;

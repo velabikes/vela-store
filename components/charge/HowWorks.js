@@ -20,7 +20,7 @@ const HowWorks = () =>
         </div>
       </div>
 
-      <div className='card hold'>
+      <div className='card last'>
         <img src='static/wait.png' />
         <div className='description'>
           <h2>Espere 15 minutos</h2>
@@ -49,7 +49,7 @@ const HowWorks = () =>
         font-size: 2rem;
         margin: 0
       }
-      .how-works .hold {
+      .how-works .last {
         grid-column: 1 / span 2;
         left: 0;
       }
@@ -79,9 +79,9 @@ const HowWorks = () =>
         .how-works .description {
           margin: 0 4rem;
         }
-        .how-works .hold {
+        .how-works .last {
           grid-row: 1;
-          grid-column: 1;
+          grid-column: 3;
         }
       }
     `}</style>

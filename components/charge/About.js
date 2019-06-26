@@ -6,9 +6,8 @@ const About = () =>
       <div className='spare-parts'></div>
 
       <div className='made-by'>
-        <p>Produzido</p>
-        <p>nacionalmente</p>
-        <p>pela vela.</p>
+        <p>Desenvolvido e produzido</p>
+        <p>por jovens brasileiros</p>
       </div>
     </div>
 
