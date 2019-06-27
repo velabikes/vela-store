@@ -16,8 +16,8 @@ const Statistics = () =>
 
     <div className='statistic price'>
       <h2>R$0,05</h2>
-      <p>Por dez minutos</p>
-      <p>de recarga</p>
+      <p>Custo fixo por recarga</p>
+      <p>para o estabelecimento</p>
     </div>
 
     <style jsx>{`

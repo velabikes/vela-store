@@ -44,15 +44,15 @@ const Features = () =>
         background-color: ${velaBlue};
       }
       .features .image img {
-        width: 7rem;
+        width: 4rem;
         height: auto;
         position: relative;
         top: 50%;
         transform: translateY(-50%);
       }
       .features .image {
-        width: 10rem;
-        height: 10rem;
+        width: 8rem;
+        height: 8rem;
         border-radius: 5px;
         margin-bottom: 1rem;
       }

@@ -16,15 +16,15 @@ const HowWorks = () =>
         <img src='static/find-vela-point.png' />
         <div className='description'>
           <h2>Procure um ponto Vela</h2>
-          <p>Basta checar no mapa nossa rede de cafés parceiros.</p>
+          <p>Basta conferir no mapa nossa rede de cafés parceiros.</p>
         </div>
       </div>
 
       <div className='card last'>
         <img src='static/wait.png' />
         <div className='description'>
-          <h2>Espere 15 minutos</h2>
-          <p>Relaxe, tome um café e aproceite o fim do percurso sem se preocupar.</p>
+          <h2>Espere 10 minutos</h2>
+          <p>Relaxe, tome um café e aproveite o fim do percurso sem se preocupar.</p>
         </div>
       </div>
     </div>

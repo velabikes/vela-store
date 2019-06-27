@@ -88,6 +88,7 @@ const About = () =>
       .about .plus-ten {
         font-size: 3rem;
         color: ${offWhite};
+        font-weight: 800;
         text-shadow:
           -2px -2px 0 ${velaGreen},
           2px -2px 0 ${velaGreen},
@@ -138,6 +139,7 @@ const About = () =>
         }
         .about .plus-ten {
           font-size: 6rem;
+          margin-top: 2rem;
         }
         .about .img-clock {
           height: 6rem;
@@ -146,21 +148,7 @@ const About = () =>
           height: 100%;
         }
         .about .img-bateries {
-          height: 25rem;
-        }
-      }
-
-      @media only screen and (min-width: 1300px) {
-        .about {
-          grid-template-columns: 3fr 1fr;
-          margin-top: 8rem;
-        }
-        .about .station {
-          margin: 0;
-        }
-        .about .texts {
-          grid-template-columns: none;
-          margin-top: 1rem;
+          height: 20rem;
         }
       }
     `}</style>

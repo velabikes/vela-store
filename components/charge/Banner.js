@@ -49,6 +49,7 @@ const Banner = () =>
         width: fit-content;
         height: fit-content;
         margin: 3rem auto;
+        display: none;
       }
       .banner .card {
         position: relative;
@@ -92,30 +93,6 @@ const Banner = () =>
           transform: translateX(-25%);
           width: 75%;
           margin: 0;
-        }
-      }
-
-      @media only screen and (min-width: 1350px) {
-        .banner {
-          grid-template-columns: 75% 0;
-        }
-        .banner .description {
-          width: 100%;
-          margin: 0;
-          margin-top: 2vw;
-          bottom: 0;
-          position: relative;
-        }
-        .banner .content {
-          width: fit-content;
-          display: block;
-          left: -8vw;
-          top: 10vw;
-          transform: translateX(0);
-        }
-        .banner .description-text {
-          position: absolute;
-          right: 0;
         }
       }
     `}</style>

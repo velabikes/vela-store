@@ -1,4 +1,5 @@
 import Button from '../Button'
+import Link from 'next/link'
 
 const HeatMap = () =>
   <div className='heat-map'>
@@ -8,9 +9,9 @@ const HeatMap = () =>
 
 		<div className='heat-map-description'>
       <h1>Mapa de calor</h1>
-      <p>Para entender melhor o trajeto diário dos Velejadores Urbanos, a Vela realizou uma pesquisa origem-destino, até chegar nas regiões com mais fluxo.</p>
+      <p>Para entender melhor o trajeto diário dos Velejadores Urbanos, a Vela realizou uma pesquisa origem-destino, até chegar nas regiões com maior fluxo.</p>
       <p className='cta'>Seu estabelecimento está no nosso mapa de calor?</p>
-      <Button big>Seja um parceiro</Button>
+      <Link href='https://forms.gle/Wb7DyMpQwUwqQL6F7'><a><Button big>Seja um parceiro</Button></a></Link>
 		</div>
 
     <style jsx>{`
@@ -21,16 +22,17 @@ const HeatMap = () =>
         height: fit-content;
       }
       .heat-map .map {
-        height: 800px;
         background-color: #d0d0d0;
       }
       .heat-map-description {
         position: relative;
         margin: 0 2rem;
+        padding: 2em;
+        background-color: rgba(208, 208, 208, 0.9);
       }
       .heat-map-description h1 {
         // font-size: 3rem;
-        margin: 4rem 0;
+        margin: 0 0 2rem;
       }
       .heat-map-description p {
         text-align: justify;
@@ -40,6 +42,7 @@ const HeatMap = () =>
         text-align: left;
         font-weight: bold;
         font-style: italic;
+        margin-bottom: 2em;
       }
       
       @media only screen and (min-width: 1100px) {
@@ -50,9 +53,9 @@ const HeatMap = () =>
           // font-size: 4rem;
         }
         .heat-map-description {
-          margin: 7rem;
+          margin: 3rem;
           position: absolute;
-          top: 0rem;
+          bottom: 0rem;
           left: 0rem;
           width: 35%;
         }
