@@ -2,8 +2,8 @@ import Button from '../Button'
 
 const HeatMap = () =>
   <div className='heat-map'>
-		<div className='map'>
-
+    <div className='map'>
+      <img src="static/heatmap.jpg" />
     </div>
 
 		<div className='heat-map-description'>
