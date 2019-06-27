@@ -19,6 +19,9 @@ const MainMenu = () =>
         Sobre nós
       </a></Link></li>
       */}
+      <li><Link href='/charge' as='/recarga'><a>
+        Rede de Recarga Rápida
+      </a></Link></li>
       <li><Link href='https://velabikes.freshdesk.com/support/home'><a>
         Suporte
       </a></Link></li>
