@@ -3,9 +3,7 @@ import { offBlack, offWhite, velaGreen } from '../../style/colors'
 const About = () =>
   <div className='about'>
     <div className='station'>
-      <video muted controls controlsList="nodownload">
-        <source src="static/station.mp4" type='video/mp4' />
-      </video>
+      <iframe src='https://player.vimeo.com/video/344802481' frameborder='0' allow='autoplay; fullscreen' allowfullscreen/>
 
       <div className='made-by'>
         <p>Desenvolvido e produzido</p>
@@ -37,25 +35,13 @@ const About = () =>
         display: grid;
       }
 
-      .about video {
+      .station iframe {
         width: 100%;
-        height: 100%;
-        // height: auto;
-      }
-      .about video::-webkit-media-controls-volume-slider,
-      .about video::-webkit-media-controls-volume-slider-container,
-      .about video::-webkit-media-controls-current-time-display,
-      .about video::-webkit-media-controls-time-remaining-display,
-      .about video::-webkit-media-controls-seek-back-button,
-      .about video::-webkit-media-controls-seek-forward-button,
-      .about video::-webkit-media-controls-fullscreen-button,
-      .about video::-webkit-media-controls-timeline {
-        display: none
+        height: 56vw;
       }
 
       .about .station {
         position: relative;
-        min-height: 600px;
         width: auto;
         height: auto;
         display: grid;
@@ -65,7 +51,7 @@ const About = () =>
       .about .made-by {
         position: absolute;
         left: 50%;
-        bottom: -5%;
+        bottom: -10%;
         transform: translateX(-50%);
         text-align: center;
         padding: 1.5rem 3rem;
@@ -103,14 +89,12 @@ const About = () =>
         text-align: center;
       }
       .about p {
-        // font-size: 1.3rem;
         font-style: italic;
         text-transform: uppercase;
         margin: 0;
       }
       .about .bateries {
         text-align: center;
-        // margin-bottom: 1rem;
       }
       .about .bateries p {
         line-height: 1;
@@ -149,6 +133,9 @@ const About = () =>
         }
         .about .img-bateries {
           height: 20rem;
+        }
+        .station iframe {
+          height: 53vw;
         }
       }
     `}</style>

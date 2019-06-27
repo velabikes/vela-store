@@ -2,9 +2,7 @@ import { offBlack, offWhite } from '../../style/colors'
 
 const Banner = () => 
   <div className='banner'>
-    <video autoPlay muted controls controlsList="nodownload">
-      <source src="static/charge-banner.mp4" type="video/mp4" />
-    </video>
+    <iframe src='https://player.vimeo.com/video/344801026' frameborder='0' allow='autoplay; fullscreen' allowfullscreen />
 
     <div className='content'>
       <div className='card'>
@@ -27,20 +25,9 @@ const Banner = () =>
         display: grid;
         position: relative;
       }
-      .banner video {
+      .banner iframe {
         width: 100%;
-        height: auto;
-      }
-
-      .banner video::-webkit-media-controls-volume-slider,
-      .banner video::-webkit-media-controls-volume-slider-container,
-      .banner video::-webkit-media-controls-current-time-display,
-      .banner video::-webkit-media-controls-time-remaining-display,
-      .banner video::-webkit-media-controls-seek-back-button,
-      .banner video::-webkit-media-controls-seek-forward-button,
-      .banner video::-webkit-media-controls-fullscreen-button,
-      .banner video::-webkit-media-controls-timeline {
-        display: none
+        height: 56vw;
       }
 
       .banner .content {
@@ -94,6 +81,10 @@ const Banner = () =>
           width: 75%;
           margin: 0;
         }
+        .banner iframe {
+          height: 54vw;
+        }
+  
       }
     `}</style>
   </div>
