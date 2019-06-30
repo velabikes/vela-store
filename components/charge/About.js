@@ -44,15 +44,10 @@ const About = () =>
         position: relative;
         width: auto;
         height: auto;
-        display: grid;
         grid-template-columns: 1fr 0;
         margin-bottom: 7rem;
       }
       .about .made-by {
-        position: absolute;
-        left: 50%;
-        bottom: -10%;
-        transform: translateX(-50%);
         text-align: center;
         padding: 1.5rem 3rem;
         height: fit-content;
