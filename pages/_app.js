@@ -6,6 +6,7 @@ import { Provider } from 'react-redux'
 import withRedux from 'next-redux-wrapper'
 import { ApolloProvider } from 'react-apollo'
 import withGA from 'next-ga'
+import LogRocket from 'logrocket'
 import withShopify from '../lib/shopify'
 import Head from '../components/Head'
 import Header from '../components/Header'
@@ -17,6 +18,10 @@ class MyApp extends App {
     const pageProps = Component.getInitialProps ? await Component.getInitialProps(ctx) : {}
 
     return { pageProps }
+  }
+
+  componentDidMount () {
+    LogRocket.init('rishga/vela-store')
   }
 
   render () {
