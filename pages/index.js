@@ -7,9 +7,8 @@ import HomeBikes from 'components/home/HomeBikes'
 import HomeAlbum from 'components/home/HomeAlbum'
 import PaddedView from 'components/PaddedView'
 import Button from '../components/Button'
-import { velaBlue } from '../style/colors'
 
-const HomePage = ({ images, from }) =>
+const HomePage = ({ images }) =>
   <div className='HomePage'>
     <Head>
       <title>Vela : Bicicletas elétricas para cidades mais saudáveis.</title>
@@ -33,10 +32,9 @@ const HomePage = ({ images, from }) =>
     </div>
     <PaddedView>
       <HomeBikes />
-      {console.log(`instagram images loaded from: ${from}`)}
       {images && <HomeAlbum images={images} />}
     </PaddedView>
- 
+
     <style jsx>{`
       .HomePage {
          position: relative;
@@ -83,14 +81,15 @@ HomePage.propTypes = {
 
 HomePage.getInitialProps = async ({ req }) => {
   try {
-    const baseUrl = typeof(req) !== 'undefined'
-      ? `${req.headers['x-forwarded-proto']}://${req.headers.host}`
-      : ''
+    const baseUrl = req ? `https://${req.headers.host}` : ''
+    // const baseUrl = 'http://localhost:3000'
     const response = await fetch(`${baseUrl}/api/instagram`)
-    const { data, from } = await response.json()
-  
-    return { images: data, from }
+    const data = await response.json()
+
+    return { images: data }
   } catch (error) {
+    console.log('error', error)
+
     return { images: [], from: 'error' }
   }
 }
