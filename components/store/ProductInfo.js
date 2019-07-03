@@ -49,9 +49,6 @@ const ProductInfo = ({ product, setSelectedVariant, selectedVariant }) =>
         }
         .ProductInfo > div { flex: 1 }
         .ProductInfo > div:first-child { flex: 1.61; padding-right: 2em }
-        h1 {
-          margin: 0;
-        }
         .ProductInfo :global(.ProductImage) {
           margin-bottom: 2em;
         }
