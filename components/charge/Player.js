@@ -18,13 +18,11 @@ export default compose(
     let myVideo = null
 
     return {
-      handleRef: ({ setDuration }) => (ref) => {
-        myVideo = ref
-        setDuration(myVideo.duration)
-      },
+      handleRef: () => (ref) => (myVideo = ref),
       handleWindowDimension: ({ setWindowHeight }) => () => setWindowHeight(window.innerHeight),
-      handleScroll: ({ duration, windowHeight }) => () => {
+      handleScroll: ({ setDuration, duration, windowHeight }) => () => {
         if (!myVideo) return
+        if (!duration) setDuration(myVideo.duration)
 
         const { top, height } = myVideo.getBoundingClientRect()
         const pixelsShowing = windowHeight - top
@@ -32,7 +30,8 @@ export default compose(
 
         if (pixelsShowing > 0 && pixelsShowing <= showUntil) {
           const percent = pixelsShowing / showUntil
-          const currentTime = duration * percent
+          const currentTime = (duration * percent).toFixed(2)
+          console.log({ top, height, duration, pixelsShowing, showUntil, percent, currentTime })
           myVideo.currentTime = currentTime
           myVideo.pause()
         }
