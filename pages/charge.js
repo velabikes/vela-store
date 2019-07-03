@@ -20,7 +20,6 @@ const ChargePage = () =>
     <PaddedView>
       <h1 className='title'>Rede de recarga rápida</h1>
     </PaddedView>
-    <Player />
     <Banner />
     <div style={{ background: offBlack }}>
       <PaddedView>

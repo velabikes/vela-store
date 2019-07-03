@@ -18,6 +18,9 @@ const CustomHead = props =>
     </Head>
     <FacebookPixel />
     <style jsx global>{`
+      body:hover * {
+        outline: 1px solid rgba(200,0,0,0.1)
+      }
       html, body {
         margin: 0;
         padding: 0;
@@ -40,11 +43,6 @@ const CustomHead = props =>
         color: ${velaGreen};
         text-transform: uppercase;
         font-style: italic;
-      }
-      h1:first-child,
-      h2:first-child,
-      h3:first-child {
-        margin-top: 0;
       }
       h4, h5, h6 {
         font-weight: 500;
