@@ -10,7 +10,6 @@ import Statistics from '../components/charge/Statistics'
 import HeatMap from '../components/charge/HeatMap'
 import PaddedView from '../components/PaddedView'
 import { offBlack } from '../style/colors'
-import Player from '../components/charge/Player'
 
 const ChargePage = () =>
   <div className='charge'>
@@ -20,7 +19,6 @@ const ChargePage = () =>
     <PaddedView>
       <h1 className='title'>Rede de recarga rápida</h1>
     </PaddedView>
-    <Player />
     <Banner />
     <div style={{ background: offBlack }}>
       <PaddedView>

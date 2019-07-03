@@ -1,10 +1,11 @@
 import PaddedView from '../PaddedView'
 import { offBlack, offWhite, velaGreen } from '../../style/colors'
+import Player from './Player'
 
 const About = () =>
   <div className='about'>
     <div className='station'>
-      <iframe src='https://player.vimeo.com/video/344802481' frameborder='0' allow='autoplay; fullscreen' allowfullscreen/>
+      <Player src='/static/station.mp4' />
 
       <div className='made-by'>
         <p>Desenvolvido e produzido</p>
