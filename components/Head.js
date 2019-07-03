@@ -35,8 +35,11 @@ const CustomHead = props =>
         font-family: neue-haas-grotesk-display, sans-serif;
         margin: 1em 0;
       }
+      h1 {
+        font-size: 2rem;
+      }
       section h1 {
-        font-size: 1.61em;
+        font-size: 2rem;
       }
       h1, h2, h3 {
         font-weight: 800;
@@ -68,7 +71,7 @@ const CustomHead = props =>
         line-height: 1.37em;
         font-family: neue-haas-grotesk-text, sans-serif;
       }
-      p:last-child {
+      p:last-child:not(:first-child) {
         margin-bottom: 0
       }
       img {

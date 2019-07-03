@@ -33,9 +33,6 @@ const HowWorks = () =>
       .card {
         margin-bottom: 2rem
       }
-      .card img {
-        margin-bottom: 1rem
-      }
       .card h2 {
         margin-bottom: 0
       }

@@ -1,8 +1,7 @@
 const BePartOf = () =>
   <div className='be-part'>
     <div>
-      <h1>Faça parte</h1>
-      <h1>da rede</h1>
+      <h1>Faça parte da rede</h1>
     </div>
 
     <div className='description'>
@@ -10,28 +9,14 @@ const BePartOf = () =>
     </div>
 
     <style jsx>{`
-      .be-part {
-        display: grid;
-      }
-      .be-part p, .be-part h1 {
-        margin: 0;
-      }
-      .be-part .description {
-        margin-top: 2rem;
-      }
-
-      @media only screen and (min-width: 460px) {
+      @media only screen and (min-width: 768px) {
         .be-part {
-          margin: 3rem 7rem 3rem 7rem;
-        }
-      }
-      @media only screen and (min-width: 1000px) {
-        .be-part {
-          grid-template-columns: auto auto;
-          margin: 8rem 7rem 0 7rem;
+          display: flex;
+          align-items: center;
         }
         .be-part .description {
-          margin: 0 7rem;
+          margin-left: 4rem;
+          width: 66%;
         }
       }
     `}</style>
