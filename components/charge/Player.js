@@ -12,23 +12,30 @@ const Player = ({ handleRef, src }) =>
 
 export default compose(
   withState('windowHeight', 'setWindowHeight', 0),
+  withState('duration', 'setDuration', 0),
   withProps({ ref: React.createRef() }),
   withHandlers(() => {
     let myVideo = null
 
     return {
-      handleRef: () => (ref) => (myVideo = ref),
+      handleRef: ({ setDuration }) => (ref) => {
+        myVideo = ref
+        setDuration(myVideo.duration)
+      },
       handleWindowDimension: ({ setWindowHeight }) => () => setWindowHeight(window.innerHeight),
-      handleScroll: ({ windowHeight }) => () => {
+      handleScroll: ({ duration, windowHeight }) => () => {
         if (!myVideo) return
 
         const { top, height } = myVideo.getBoundingClientRect()
         const pixelsShowing = windowHeight - top
         const showUntil = windowHeight + height
 
-        pixelsShowing > 0 && pixelsShowing <= showUntil
-          ? myVideo.play()
-          : myVideo.pause()
+        if (pixelsShowing > 0 && pixelsShowing <= showUntil) {
+          const percent = pixelsShowing / showUntil
+          const currentTime = duration * percent
+          myVideo.currentTime = currentTime
+          myVideo.pause()
+        }
       }
     }
   }),
