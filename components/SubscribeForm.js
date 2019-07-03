@@ -3,7 +3,7 @@ import { Formik } from 'formik'
 import { velaBlue } from '../style/colors'
 import Button from './Button'
 
-const url = 'https://velabikes.us15.list-manage.com/subscribe/post?u=950b7d190680648ed40ffbe84&amp;id=dde7c564df'
+const url = 'https://velabikes.us19.list-manage.com/subscribe/post?u=68a0cce7cc109d78a8b44d7a0&amp;id=35e53f5d9e'
 
 const SubscribeForm = () =>
   <div className='SubscribeForm'>
