@@ -14,6 +14,7 @@ const CustomHead = props =>
       <link rel='icon' type='image/png' sizes='16x16' href='/static/fav/favicon-16x16.png' />
       <link rel='icon' type='image/x-icon' href='/static/fav/favicon.ico' />
       <meta name='theme-color' content='#ffffff' />
+      <meta name="google-site-verification" content="lIwow7Y18biWwBTokFJ5xN1nB1jjo8yvh87r1SFTBcg" />
     </Head>
     <FacebookPixel />
     <style jsx global>{`
@@ -29,10 +30,10 @@ const CustomHead = props =>
       }
       h1, h2, h3, h4, h5, h6 {
         font-family: neue-haas-grotesk-display, sans-serif;
-        margin: 0.61em 0;
+        margin: 1em 0;
       }
-  	  h1 {
-        font-size: 1.75rem;
+      section h1 {
+        font-size: 1.61em;
       }
       h1, h2, h3 {
         font-weight: 800;
