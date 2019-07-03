@@ -4,8 +4,11 @@ import { compose, lifecycle, withState, withProps, withHandlers } from 'recompos
 const Player = ({ setPos, pos, handleRef }) =>
   <div>
     <video
-      src='Sample MP4 Video File'
+      src='http://techslides.com/demos/sample-videos/small.mp4'
       ref={handleRef}
+      autobuffer="true"
+      preload="true"
+      muted="muted"
     />
     asdf
     {pos}
@@ -19,7 +22,7 @@ export default compose(
 
     return {
       handleRef: () => (ref) => (myVideo = ref),
-      handleScroll: () => () => console.log(myVideo.getBoundingClientRect())
+      handleScroll: () => () => { if (myVideo && myVideo.getBoundingClientRect().top > 0) myVideo.play() }
     }
   }),
   lifecycle({
