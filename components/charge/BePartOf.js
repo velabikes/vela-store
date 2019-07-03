@@ -11,9 +11,7 @@ const BePartOf = () =>
 
     <style jsx>{`
       .be-part {
-        margin: 0 2rem;
         display: grid;
-        margin: 3rem 2rem 3rem 2rem;
       }
       .be-part p, .be-part h1 {
         margin: 0;

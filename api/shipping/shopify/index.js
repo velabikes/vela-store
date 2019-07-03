@@ -5,6 +5,7 @@ const normalizeText = text => {
   const specialChars = 'àáäâãèéëêìíïîòóöôùúüûñçßÿœæŕśńṕẃǵǹḿǘẍźḧ'
   const  normalChars = 'aaaaaeeeeiiiioooouuuuncsyoarsnpwgnmuxzh'
   const expression = new RegExp(specialChars.split('').join('|'), 'g')
+
   return text.toString().toLowerCase().trim()
     .replace(expression, index => normalChars.charAt(specialChars.indexOf(index)))
 }

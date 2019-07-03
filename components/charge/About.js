@@ -1,3 +1,4 @@
+import PaddedView from '../PaddedView'
 import { offBlack, offWhite, velaGreen } from '../../style/colors'
 
 const About = () =>
@@ -11,25 +12,26 @@ const About = () =>
       </div>
     </div>
 
-    <div className='texts'>
-      <table>
-        <tr>
-          <td><img className='img-clock' src='static/clock.png' /></td>
-          <td><p>10 Minutos carregando</p></td>
-        </tr>
-        <tr>
-          <td><p className='plus-ten'>+10</p></td>
-          <td><p>Quilômetros para rodar</p></td>
-        </tr>
-      </table>
+    <PaddedView>
+      <div className='texts'>
+        <table>
+          <tr>
+            <td><img className='img-clock' src='static/clock.png' /></td>
+            <td><p>10 Minutos carregando</p></td>
+          </tr>
+          <tr>
+            <td><p className='plus-ten'>+10</p></td>
+            <td><p>Quilômetros para rodar</p></td>
+          </tr>
+        </table>
 
-      <div className='bateries'>
-        <img className='img-bateries' src='static/batteries.png' />
-        <p>Carregador para até</p>
-        <p>três baterias simultâneas</p>
+        <div className='bateries'>
+          <img className='img-bateries' src='static/batteries.png' />
+          <p>Carregador para até</p>
+          <p>três baterias simultâneas</p>
+        </div>
       </div>
-    </div>
-
+    </PaddedView>
     <style jsx>{`
       .about {
         display: grid;

@@ -1,5 +1,5 @@
 const HowWorks = () =>
-  <div className='how-works'>
+  <section className='how-works'>
     <h1>Como funciona?</h1>
 
     <div className='cards'>
@@ -7,8 +7,8 @@ const HowWorks = () =>
         <img src='static/low-battery.png' />
         <div className='description'>
           <h2>Ficou sem bateria?</h2>
-          <p>Fique tranquilo!</p>
-          <p>Agora você pode recarregar pelo caminho.</p>
+          <p>Fique tranquilo!<br />
+          Agora você pode recarregar pelo caminho.</p>
         </div>
       </div>
 
@@ -30,71 +30,36 @@ const HowWorks = () =>
     </div>
 
     <style>{`
-      .how-works {
-        margin: 0 2rem;
+      .card {
+        margin-bottom: 2rem
       }
-      .how-works img {
-        width: 40vw;
+      .card img {
+        margin-bottom: 1rem
       }
-      .how-works h1 {
-        margin-top: 6rem;
-        margin-bottom: 6rem;
+      .card h2 {
+        margin-bottom: 0
       }
-      .how-works .card {
+      .card .description {
         text-align: center;
-        margin: 0 2rem 8rem 2rem;
+        margin: 0 auto;
+        max-width: 230px
       }
-      .how-works .card p {
-        margin: 0;
-      }
-      .how-works .last {
-        grid-column: 1 / span 2;
-        left: 0;
-      }
-      .how-works .description {
-        margin: 2rem 4rem 0 4rem;
-      }
-
-      @media only screen and (min-width: 960px) {
+      @media only screen and (min-width: 768px) {
         .how-works {
-          margin: 0 7rem;
         }
         .how-works h1 {
-          margin-top: 8rem;
-          margin-bottom: 6rem;
+
         }
         .how-works .cards {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
+          display: flex;
         }
         .how-works img {
-          width: 30vw;
+
         }
         .how-works .card {
-          margin-bottom: 5rem;
-        }
-      }
-
-
-      @media only screen and (min-width: 460px) {
-        .how-works {
-          margin: 0 7rem 8rem 7rem;
-        }
-      }
-      @media only screen and (min-width: 1300px) {
-        .how-works .cards {
-          grid-template-columns: 1fr 1fr 1fr;
-          margin-bottom: 0rem;
-        }
-        .how-works .last {
-          grid-row: 1;
-          grid-column: 3;
-        }
-        .how-works img {
-          width: 22vw;
         }
       }
     `}</style>
-  </div>
+  </section>
 
 export default HowWorks
