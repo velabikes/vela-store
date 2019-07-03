@@ -31,7 +31,7 @@ export default compose(
         if (pixelsShowing > 0 && pixelsShowing <= showUntil) {
           const percent = pixelsShowing / showUntil
           const currentTime = (duration * percent).toFixed(2)
-          console.log({ top, height, duration, pixelsShowing, showUntil, percent, currentTime })
+
           myVideo.currentTime = currentTime
           myVideo.pause()
         }
