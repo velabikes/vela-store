@@ -15,32 +15,22 @@ const About = () =>
 
     <PaddedView>
       <div className='texts'>
-        <table>
-          <tr>
-            <td><img className='img-clock' src='static/clock.png' /></td>
-            <td><p>10 Minutos carregando</p></td>
-          </tr>
-          <tr>
-            <td><p className='plus-ten'>+10</p></td>
-            <td><p>Quilômetros para rodar</p></td>
-          </tr>
-        </table>
-
+        <div>
+          <img className='img-clock' src='static/clock.png' />
+          <p>10 Minutos carregando</p>
+        </div>
+        <div>
+          <p className='plus-ten'>+10</p>
+          <p>Quilômetros para rodar</p>
+        </div>
         <div className='bateries'>
           <img className='img-bateries' src='static/batteries.png' />
-          <p>Carregador para até</p>
-          <p>três baterias simultâneas</p>
+          <p>Carregador para até três baterias simultâneas</p>
         </div>
       </div>
     </PaddedView>
     <style jsx>{`
       .about {
-        display: grid;
-      }
-
-      .station iframe {
-        width: 100%;
-        height: 56vw;
       }
 
       .about .station {
@@ -58,7 +48,6 @@ const About = () =>
         background-color: ${offBlack};
       }
       .about .made-by p {
-        // font-size: 1.8rem;
         color: ${offWhite};
         font-weight: bold;
         font-style: italic;
@@ -66,7 +55,7 @@ const About = () =>
       }
 
       .about .texts {
-        display: grid;
+        display: flex;
         text-align: center;
       }
       .about .plus-ten {
@@ -112,29 +101,7 @@ const About = () =>
       }
 
       @media only screen and (min-width: 880px) {
-        .about .texts {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-        }
-        .about table {
-          border-spacing: 3rem 0;
-        }
-        .about .plus-ten {
-          font-size: 6rem;
-          margin-top: 2rem;
-        }
-        .about .img-clock {
-          height: 6rem;
-        }
-        .about .img-plus-ten {
-          height: 100%;
-        }
-        .about .img-bateries {
-          height: 20rem;
-        }
-        .station iframe {
-          height: 53vw;
-        }
+
       }
     `}</style>
   </div>

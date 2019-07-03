@@ -36,7 +36,6 @@ const Banner = () =>
         width: fit-content;
         height: fit-content;
         margin: 3rem auto;
-        display: none;
       }
       .banner .card {
         position: relative;
