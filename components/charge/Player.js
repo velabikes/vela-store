@@ -2,13 +2,21 @@ import React from 'react'
 import { compose, lifecycle, withState, withProps, withHandlers } from 'recompose'
 
 const Player = ({ handleRef, src }) =>
-  <video
-    src={src}
-    ref={handleRef}
-    autobuffer="true"
-    preload="true"
-    muted="muted"
-  />
+  <div className='player'>
+    <video
+      src={src}
+      ref={handleRef}
+      autobuffer="true"
+      preload="true"
+      muted="muted"
+    />
+    <style jsx>{`
+      .player video {
+        width: 100%;
+        height: 56vw;
+      }
+    `}</style>
+  </div>
 
 export default compose(
   withState('windowHeight', 'setWindowHeight', 0),
