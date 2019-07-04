@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { velaBlue } from '../style/colors'
+import { velaBlue, velaRed } from '../style/colors'
 
 const MainMenu = () =>
   <nav className='MainMenu'>
@@ -25,6 +25,9 @@ const MainMenu = () =>
       <li><Link href='https://velabikes.freshdesk.com/support/home'><a>
         Suporte
       </a></Link></li>
+      <li><Link href='/store?handle=outlet' as='/loja/outlet'>
+        <a className='outlet'>Outlet</a>
+      </Link></li>
     </ul>
     <style jsx>{`
       ul {
@@ -38,7 +41,9 @@ const MainMenu = () =>
         color: ${velaBlue};
         text-transform: uppercase;
       }
-      li
+      li .outlet {
+        color: ${velaRed}
+      }
     `}</style>
   </nav>
 

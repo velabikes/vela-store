@@ -20,7 +20,7 @@ const Store = ({
 
 export default compose(
   withRouter,
-  withCollectionByHandle(({ router }) => router.query.handle || 'acessorios')
+  withCollectionByHandle(({ router }) => router.query.handle || 'acessorios', { filterUnavailable: true })
 )(Store)
 
 Store.propTypes = {
