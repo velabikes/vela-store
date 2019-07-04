@@ -24,6 +24,7 @@ query collectionByHandleQuery($handle: String!) {
                 node {
                   id
                   price
+                  availableForSale
                 }
               }
             }
@@ -35,13 +36,26 @@ query collectionByHandleQuery($handle: String!) {
 }
 `
 
-export default handle => graphql(collectionByHandle, {
+const filter = collection => {
+  const filteredEdges = collection.products.edges.filter(product => product.node.variants.edges[0].node.availableForSale)
+
+  return Object.assign({}, collection, { products: { edges: filteredEdges } })
+}
+
+export default (handle, { filterUnavailable }) => graphql(collectionByHandle, {
   alias: 'withCollectionByHandle',
 
-  props: ({ data: { shop }, loading }) => ({
-    collection: shop ? shop.collectionByHandle : {},
-    isCollectionLoading: loading
-  }),
+  props: ({ data: { shop }, loading }) => {
+    const collection = !shop ? {}
+      : filterUnavailable
+        ? filter(shop.collectionByHandle)
+        : shop.collectionByHandle
+
+    return {
+      collection: collection,
+      isCollectionLoading: loading
+    }
+  },
 
   options (props) {
     return {
