@@ -9,6 +9,7 @@ const VelaPoint = () =>
       <p>A primeira Rede de Recarga Rápida para bicicletas elétricas, desenvolvida pela Vela, chegou em São Paulo.</p>
       <p>Os pontos são distribuídos em estabelecimentos parceiros para todos os Velejadores aproveitarem.</p>
       <Link href='https://forms.gle/Wb7DyMpQwUwqQL6F7'><a><Button big>Seja um parceiro</Button></a></Link>
+      <Link href='https://forms.gle/Wb7DyMpQwUwqQL6F7'><a><Button big>Saiba mais</Button></a></Link>
     </div>
 
     <div><img src='static/point.png' alt='Ponto de recarga vela' /></div>
@@ -26,7 +27,7 @@ const VelaPoint = () =>
         margin-bottom: 1rem;
       }
       .vela-point .description :global(button) {
-        margin-top: 3rem;
+        margin-bottom: 1rem;
       }
 
       @media only screen and (min-width: 768px) {
@@ -35,7 +36,7 @@ const VelaPoint = () =>
         }
         .vela-point .description {
           width: 75%;
-          margin-right: 6rem;
+          margin-right: 4rem;
         }
         .vela-point .description {
         }
