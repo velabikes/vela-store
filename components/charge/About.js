@@ -20,12 +20,12 @@ const About = () =>
           <p>10 Minutos carregando</p>
         </div>
         <div>
-          <p className='plus-ten'>+10</p>
+          <img className='img-plusten' src='static/plusten.png' />
           <p>Quilômetros para rodar</p>
         </div>
         <div className='bateries'>
           <img className='img-bateries' src='static/batteries.png' />
-          <p>Carregador para até três baterias simultâneas</p>
+          <p>Até três baterias simultâneas</p>
         </div>
       </div>
     </PaddedView>
@@ -53,55 +53,30 @@ const About = () =>
         font-style: italic;
         text-transform: uppercase;
       }
-
-      .about .texts {
-        display: flex;
+      .texts {
         text-align: center;
       }
-      .about .plus-ten {
-        font-size: 3rem;
-        color: ${offWhite};
-        font-weight: 800;
-        text-shadow:
-          -2px -2px 0 ${velaGreen},
-          2px -2px 0 ${velaGreen},
-          -2px 2px 0 ${velaGreen},
-          2px 2px 0 ${velaGreen};
+      .texts > div {
+        padding: 2rem;
+        min-width: 33%;
       }
-      .about table {
-        border-spacing: 2rem 3rem;
+      .texts img {
+        width: auto;
+        margin-bottom: 1rem;
       }
-      .about td:first-child {
-        height: 5rem;
-        text-align: center;
+      .texts p {
+        max-width: 130px;
+        margin: 0 auto;
       }
       .about p {
         font-style: italic;
         text-transform: uppercase;
-        margin: 0;
       }
-      .about .bateries {
-        text-align: center;
-      }
-      .about .bateries p {
-        line-height: 1;
-      }
-      .about .img-clock {
-        height: 2.5rem;
-        width: auto;
-      }
-      .about .img-plus-ten {
-        height: 2.5rem;
-        width: auto;
-      }
-      .about .img-bateries {
-        height: 15rem;
-        width: auto;
-        margin-bottom: 1rem;
-      }
-
-      @media only screen and (min-width: 880px) {
-
+      @media only screen and (min-width: 768px) {
+        .texts {
+          display: flex;
+          justify-content: space-between;
+        }
       }
     `}</style>
   </div>
