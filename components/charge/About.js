@@ -46,6 +46,7 @@ const About = () =>
         height: fit-content;
         width: fit-content;
         background-color: ${offBlack};
+        display: none;
       }
       .about .made-by p {
         color: ${offWhite};

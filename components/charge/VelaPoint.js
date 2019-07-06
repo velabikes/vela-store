@@ -9,6 +9,7 @@ const VelaPoint = () =>
       <p>A primeira Rede de Recarga Rápida para bicicletas elétricas, desenvolvida pela Vela, chegou em São Paulo.</p>
       <p>Os pontos são distribuídos em estabelecimentos parceiros para todos os Velejadores aproveitarem.</p>
       <Link href='https://forms.gle/Wb7DyMpQwUwqQL6F7'><a><Button big>Seja um parceiro</Button></a></Link>
+      <br />
       <Link href='https://forms.gle/Wb7DyMpQwUwqQL6F7'><a><Button big>Saiba mais</Button></a></Link>
     </div>
 

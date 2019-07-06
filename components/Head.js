@@ -19,7 +19,7 @@ const CustomHead = props =>
     <FacebookPixel />
     <style jsx global>{`
       body:hover * {
-        outline: 1px solid rgba(200,0,0,0.1)
+        /outline: 1px solid rgba(200,0,0,0.1)
       }
       html, body {
         margin: 0;
