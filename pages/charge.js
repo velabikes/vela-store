@@ -8,30 +8,41 @@ import BePartOf from '../components/charge/BePartOf'
 import Features from '../components/charge/Features'
 import Statistics from '../components/charge/Statistics'
 import HeatMap from '../components/charge/HeatMap'
+import PaddedView from '../components/PaddedView'
+import { offBlack } from '../style/colors'
 
 const ChargePage = () =>
   <div className='charge'>
     <Head>
       <title>Vela: Rede de recarga rápida.</title>
     </Head>
-
-    <h1 className='title'>Rede de recarga rápida</h1>
+    <PaddedView>
+      <h1 className='title'>Rede de recarga rápida</h1>
+    </PaddedView>
     <Banner />
-    <VelaPoint />
-    <HowWorks />
+    <div style={{ background: offBlack }}>
+      <PaddedView>
+        <VelaPoint />
+      </PaddedView>
+    </div>
+    <PaddedView>
+      <HowWorks />
+    </PaddedView>
     <About />
-    <BePartOf />
-    <Features />
+    <PaddedView>
+      <BePartOf />
+      <Features />
+    </PaddedView>
     <Statistics />
     <HeatMap />
 
     <style jsx>{`
       .title {
-        padding: 4rem 2rem;
+        //padding: 4rem 2rem;
       }
       @media only screen and (min-width: 768px) {
         .title {
-          padding: 4rem;
+          //padding: 4rem;
         }
       }
     `}</style>

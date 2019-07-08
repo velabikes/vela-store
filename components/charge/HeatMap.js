@@ -45,7 +45,7 @@ const HeatMap = () =>
         margin-bottom: 2em;
       }
       
-      @media only screen and (min-width: 1100px) {
+      @media only screen and (min-width: 768px) {
         .heat-map {
           grid-template-columns: 1fr 0;
         }

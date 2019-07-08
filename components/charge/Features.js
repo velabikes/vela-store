@@ -71,12 +71,6 @@ const Features = () =>
           margin: 6rem 0;
         }
       }
-
-      @media only screen and (min-width: 1400px) {
-        .features {
-          margin: 6rem 12rem;
-        }
-      }
     `}</style>
   </div>
 

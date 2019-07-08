@@ -18,6 +18,9 @@ const CustomHead = props =>
     </Head>
     <FacebookPixel />
     <style jsx global>{`
+      body:hover * {
+        /outline: 1px solid rgba(200,0,0,0.1)
+      }
       html, body {
         margin: 0;
         padding: 0;
@@ -32,19 +35,17 @@ const CustomHead = props =>
         font-family: neue-haas-grotesk-display, sans-serif;
         margin: 1em 0;
       }
+      h1 {
+        font-size: 2rem;
+      }
       section h1 {
-        font-size: 1.61em;
+        font-size: 2rem;
       }
       h1, h2, h3 {
         font-weight: 800;
         color: ${velaGreen};
         text-transform: uppercase;
         font-style: italic;
-      }
-      h1:first-child,
-      h2:first-child,
-      h3:first-child {
-        margin-top: 0;
       }
       h4, h5, h6 {
         font-weight: 500;
@@ -70,7 +71,7 @@ const CustomHead = props =>
         line-height: 1.37em;
         font-family: neue-haas-grotesk-text, sans-serif;
       }
-      p:last-child {
+      p:last-child:not(:first-child) {
         margin-bottom: 0
       }
       img {
