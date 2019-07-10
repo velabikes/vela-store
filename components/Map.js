@@ -2,11 +2,11 @@ import { compose, withProps, lifecycle, withState } from 'recompose'
 import GoogleMapReact from 'google-map-react'
 import MapMarker from './MapMarker'
 
-const Map = ({ children }) =>
-  <GoogleMapReact
+const Map = ({ children, initialCenter, isLoading }) =>
+  !isLoading && <GoogleMapReact
     bootstrapURLKeys={{ key: 'AIzaSyDPIMs29240aTRj5izYnWSRfmKucLR0cwY' }}
     defaultZoom={12}
-    defaultCenter={{ lat: -23.5350, lng: -46.7053 }}
+    defaultCenter={initialCenter || { lat: -23.5350, lng: -46.7053 }}
     defaultOptions={{
       mapTypeControl: false,
       streetViewControl: false,
@@ -18,12 +18,17 @@ const Map = ({ children }) =>
 
 export default compose(
   withState('isLoading', 'setLoading', true),
+  withState('initialCenter', 'setInitialCenter', null),
   lifecycle({
     async componentDidMount () {
       if ('geolocation' in navigator) {
-        //const location = await navigator.geolocation.getCurrentPosition()
-        this.props.setLoading(false)
-        alert('oi')
+        navigator.geolocation.getCurrentPosition(pos => {
+          this.props.setInitialCenter({ lat: pos.coords.latitude, lng: pos.coords.longitude })
+          this.props.setLoading(false)
+        }, err => {
+          console.log(err)
+          this.props.setLoading(false)
+        })
       } else {
         this.props.setLoading(false)
       }

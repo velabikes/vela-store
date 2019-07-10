@@ -1,8 +1,8 @@
-import { MarkerStoreIcon } from './Icons'
+import { MarkerStoreIcon, MarkerChargerIcon } from './Icons'
 
 const MapMarker = () =>
   <div>
-    <MarkerStoreIcon />
+    <MarkerChargerIcon />
     <style jsx>{`
       div {
         font-size: 3rem;
