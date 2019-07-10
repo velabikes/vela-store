@@ -1,5 +1,6 @@
 import { compose, withState } from 'recompose'
 import withProduct from '../../containers/withProduct'
+import { HideOnDesktop, HideOnMobile } from '../HideOn'
 import Price from '../Price'
 import ProductImage from './ProductImage'
 import ProductForm from './ProductForm'
@@ -26,7 +27,9 @@ const ProductInfo = ({ product, setSelectedVariant, selectedVariant }) =>
   <div className='ProductInfo'>
     <div>
       { product.variants && <ProductVariantImage variant={selectedVariant ? selectedVariant.edges[0] : product.variants.edges[0]} /> }
-      <ProductImageGallery product={product} />
+      <HideOnMobile>
+        <ProductImageGallery product={product} />
+      </HideOnMobile>
     </div>
     <div>
       <h1>{product.title}</h1>
@@ -41,6 +44,10 @@ const ProductInfo = ({ product, setSelectedVariant, selectedVariant }) =>
       />
       <hr />
       <div dangerouslySetInnerHTML={{ __html: product.descriptionHtml }} />
+
+      <HideOnDesktop>
+        <ProductImageGallery product={product} />
+      </HideOnDesktop>
     </div>
     <style jsx>{`
       @media only screen and (min-width: 768px) {
