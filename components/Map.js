@@ -1,6 +1,5 @@
 import { compose, withProps, lifecycle, withState } from 'recompose'
 import GoogleMapReact from 'google-map-react'
-import MapMarker from './MapMarker'
 
 const Map = ({ children, initialCenter, isLoading }) =>
   !isLoading && <GoogleMapReact
@@ -13,7 +12,7 @@ const Map = ({ children, initialCenter, isLoading }) =>
       fullscreenControl: false
     }}
   >
-    <MapMarker lat={-23.567429054521625} lng={-46.693267822265625} />
+    {children}
   </GoogleMapReact>
 
 export default compose(

@@ -1,7 +1,7 @@
 import { MarkerStoreIcon, MarkerChargerIcon } from './Icons'
 
-const MapMarker = () =>
-  <div>
+const MapMarker = ({ onClick }) =>
+  <div onClick={onClick}>
     <MarkerChargerIcon />
     <style jsx>{`
       div {

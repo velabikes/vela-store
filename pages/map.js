@@ -1,8 +1,13 @@
-import Map from '../components/Map'
+import LocationsMap from 'components/locations/LocationsMap'
 
-const MapPage = () =>
+const places = [{
+  name: 'metro faria lima',
+  pos: { lat: -23.567429054521625, lng: -46.693267822265625 }
+}]
+
+const LocationsMapPage = () =>
   <div>
-    <Map />
+    <LocationsMap locations={places} />
     <style jsx>{`
       div {
         position: absolute;
@@ -14,4 +19,4 @@ const MapPage = () =>
     `}</style>
   </div>
 
-export default MapPage
+export default LocationsMapPage
