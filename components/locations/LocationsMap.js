@@ -15,6 +15,7 @@ const LocationsMap = ({ locations, setSelected, selected }) =>
       )}
     </Map>
     <div className='info'>
+      <div onClick={() => setSelected(null)}>close</div>
       <LocationInfo {...locations[selected]} />
     </div>
     <style jsx>{`
