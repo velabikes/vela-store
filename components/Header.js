@@ -49,6 +49,7 @@ const Header = ({ isCartOpen, isMenuOpen, children }) =>
       .app-content {
         margin-top: 4em;
         position: relative;
+        min-height: calc(100vh - 4rem);
       }
       .copyright {
         text-align: center;
@@ -95,9 +96,7 @@ const Header = ({ isCartOpen, isMenuOpen, children }) =>
         .app-content {
           margin-left: 5em;
           margin-top: 0;
-        }
-        .app-content > :global(div:first-child) {
-          min-height: calc(100vh - 3rem);
+          min-height: calc(100vh);
         }
         header > div {
           flex-direction: column;

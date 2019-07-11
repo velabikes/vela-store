@@ -24,7 +24,6 @@ const CustomHead = props =>
       html, body {
         margin: 0;
         padding: 0;
-        min-height: 100vh;
         position: relative;
         width: 100%;
         color: ${offBlack};
