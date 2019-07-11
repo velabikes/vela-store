@@ -14,23 +14,35 @@ const LocationsMap = ({ locations, setSelected, selected }) =>
         />
       )}
     </Map>
-    <div className='info'>
-      <div onClick={() => setSelected(null)}>close</div>
-      <LocationInfo {...locations[selected]} />
-    </div>
+    { selected !== null &&
+      <div className='info'>
+        <a onClick={() => setSelected(null)}>close</a>
+        <LocationInfo {...locations[selected]} />
+      </div>
+    }
     <style jsx>{`
       .LocationsMap {
         height: 100%
       }
       .info {
         position: absolute;
-        top: 2rem; left: 2rem;
+        top: 1rem; left: 1rem; right: 1rem;
         padding: 0 2rem 2rem;
         background-color: #f5f5f5;
+      }
+      .info a {
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+      }
+      @media only screen and (min-width: 768px) {
+        .info {
+          max-width: 320px;
+        }
       }
     `}</style>
   </div>
 
 export default compose(
-  withState('selected', 'setSelected', false)
+  withState('selected', 'setSelected', null)
 )(LocationsMap)
