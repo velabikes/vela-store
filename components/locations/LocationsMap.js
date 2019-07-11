@@ -11,6 +11,8 @@ const LocationsMap = ({ locations, setSelected, selected }) =>
           lat={pos.lat}
           lng={pos.lng}
           onClick={() => setSelected(i)}
+          selected={selected === i}
+          disabled={selected !== null && selected !== i}
         />
       )}
     </Map>
