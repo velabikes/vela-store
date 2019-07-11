@@ -47,7 +47,8 @@ const Header = ({ isCartOpen, isMenuOpen, children }) =>
         box-shadow: 0px 0px 9px 0px rgba(100,100,100,0.3);
       }
       .app-content {
-        padding-top: 4em;
+        margin-top: 4em;
+        position: relative;
       }
       .copyright {
         text-align: center;
@@ -92,8 +93,8 @@ const Header = ({ isCartOpen, isMenuOpen, children }) =>
           rught: inital;
         }
         .app-content {
-          padding-left: 5em;
-          padding-top: 0;
+          margin-left: 5em;
+          margin-top: 0;
         }
         .app-content > :global(div:first-child) {
           min-height: calc(100vh - 3rem);

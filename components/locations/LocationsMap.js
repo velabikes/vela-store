@@ -23,8 +23,8 @@ const LocationsMap = ({ locations, setSelected, selected }) =>
       }
       .info {
         position: absolute;
-        right: 2rem; bottom: 2rem;
-        padding: 2rem;
+        top: 2rem; left: 2rem;
+        padding: 0 2rem 2rem;
         background-color: #f5f5f5;
       }
     `}</style>

@@ -19,7 +19,13 @@ module.exports = async (req, res) => {
       })
     )
 
-  const placeArray = await Promise.all(placeIdArray.map(fetchPlace))
+  try {
+    const placeArray = await Promise.all(placeIdArray.map(fetchPlace))
+  } catch (err) {
+    console.log(err)
+    res.statusCode = 500
+    res.end()
+  }
   res.setHeader('Content-Type', 'application/json')
 
   return res.end(JSON.stringify({ stores: placeArray }))
