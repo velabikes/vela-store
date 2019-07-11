@@ -2,7 +2,7 @@ const GoogleMaps = require('@google/maps')
 
 module.exports = async (req, res) => {
   const googleMapsClient = GoogleMaps.createClient({
-    key: process.env.GOOGLE_MAPS_SERVER_KEY
+    key: process.env.GOOGLE_SERVER_KEY
   })
 
   const placeIdArray = [

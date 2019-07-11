@@ -1,21 +1,35 @@
+import { compose, withState } from 'recompose'
 import Map from 'components/Map'
 import MapMarker from 'components/MapMarker'
+import LocationInfo from 'components/locations/LocationInfo'
 
-const LocationsMap = ({ locations }) =>
-  <div>
+const LocationsMap = ({ locations, setSelected, selected }) =>
+  <div className='LocationsMap'>
     <Map>
-      {locations.map(({ pos, name }) =>
+      {locations.map(({ pos, name }, i) =>
         <MapMarker
           lat={pos.lat}
           lng={pos.lng}
-          onClick={() => alert('i')}
+          onClick={() => setSelected(i)}
         />
       )}
     </Map>
+    <div className='info'>
+      <LocationInfo {...locations[selected]} />
+    </div>
     <style jsx>{`
-      div {
+      .LocationsMap {
         height: 100%
+      }
+      .info {
+        position: absolute;
+        right: 2rem; bottom: 2rem;
+        padding: 2rem;
+        background-color: #f5f5f5;
       }
     `}</style>
   </div>
-export default LocationsMap
+
+export default compose(
+  withState('selected', 'setSelected', false)
+)(LocationsMap)
