@@ -9,10 +9,22 @@ module.exports = async (req, res) => {
     {
       googlePlace: 'ChIJL-xzGGFXzpQR_X4Kin8W9lQ',
       type: 'store'
+    },{
+      googlePlace: 'ChIJazzL3K5ZzpQRD9IIOo6VVGo',
+      type: 'charger'
+    },{
+      googlePlace: 'ChIJM0wFcdxXzpQRo_-Wyy4K_qE',
+      type: 'charger'
+    },{
+      googlePlace: 'ChIJ1aPPuV5ZzpQR4BIHucm4vGQ',
+      type: 'charger'
+    },{
+      googlePlace: 'ChIJbSxi-w9XzpQRxor0_L36Djs',
+      type: 'charger'
+    },{
+      googlePlace: 'ChIJ-0Zi6PxZzpQR-b6maQjQjSA',
+      type: 'charger'
     }
-//    'ChIJzZtKMWg7WpMRrWtOjWWtH2M',
-//    'ChIJb00g-rHVmwARzTLLKX3i-lU',
-//    'ChIJC94Ll0vl3JQRwtMIVjOnAf8'
   ]
 
   const fetchLocationData = location =>
@@ -32,8 +44,8 @@ module.exports = async (req, res) => {
     name: name,
     address: formatted_address,
     phone: formatted_phone_number,
-    open: opening_hours.open_now,
-    hours: opening_hours.weekday_text.map(normalizeOpeningText),
+    open: opening_hours && opening_hours.open_now,
+    hours: opening_hours && opening_hours.weekday_text.map(normalizeOpeningText),
     pos: geometry.location
   })
 
@@ -42,7 +54,7 @@ module.exports = async (req, res) => {
     res.setHeader('Content-Type', 'application/json')
     return res.end(JSON.stringify(placeArray))
   } catch (err) {
-    console.log(err)
+    console.log('caralho')
     res.statusCode = 500
     return res.end()
   }
