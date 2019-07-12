@@ -6,10 +6,11 @@ import LocationInfo from 'components/locations/LocationInfo'
 const LocationsMap = ({ locations, setSelected, selected }) =>
   <div className='LocationsMap'>
     <Map>
-      {locations.map(({ pos, name }, i) =>
+      {locations.map(({ pos, type }, i) =>
         <MapMarker
           lat={pos.lat}
           lng={pos.lng}
+          type={type}
           onClick={() => setSelected(i)}
           selected={selected === i}
           disabled={selected !== null && selected !== i}
