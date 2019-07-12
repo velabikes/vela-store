@@ -45,9 +45,9 @@ const places = [
   }
 ]
 
-const LocationsMapPage = () =>
+const LocationsMapPage = ({ locations }) =>
   <div>
-    <LocationsMap locations={places} />
+    <LocationsMap locations={locations} />
     <style jsx>{`
       div {
         position: absolute;
@@ -58,5 +58,14 @@ const LocationsMapPage = () =>
       }
     `}</style>
   </div>
+
+LocationsMapPage.getInitialProps = async ({ req }) => {
+  //const baseUrl = req ? `https://${req.headers.host}` : ''
+  const baseUrl = 'http://localhost:3000'
+  const response = await fetch(baseUrl + '/api/locations')
+  const locations = await response.json()
+
+  return { locations }
+}
 
 export default LocationsMapPage
