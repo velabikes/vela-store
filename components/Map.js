@@ -12,6 +12,7 @@ const Map = ({ children, initialCenter, isLoading, ...props }) =>
       fullscreenControl: false,
       gestureHandling: 'greedy'
     })}
+    { ...props }
   >
     {children}
   </GoogleMapReact>

@@ -24,7 +24,7 @@ const MapMarker = ({ onClick, selected, disabled, type }) =>
         opacity: ${disabled ? 0.7 : 1};
         transition: .4s all;
         position: relative;
-        z-index: ${disabled ? -1 : 1};
+        z-index: ${disabled ? 'auto' : 1};
         cursor: pointer;
       }
     `}</style>

@@ -2,10 +2,11 @@ import { compose, withState } from 'recompose'
 import Map from 'components/Map'
 import MapMarker from 'components/MapMarker'
 import LocationInfo from 'components/locations/LocationInfo'
+import { BackIcon } from 'components/Icons'
 
 const LocationsMap = ({ locations, setSelected, selected }) =>
   <div className='LocationsMap'>
-    <Map>
+    <Map onClick={e => e.event.target.nodeName === 'DIV' && setSelected(null)}>
       {locations.map(({ pos, type }, i) =>
         <MapMarker
           lat={pos.lat}
@@ -19,7 +20,9 @@ const LocationsMap = ({ locations, setSelected, selected }) =>
     </Map>
     { selected !== null &&
       <div className='info'>
-        <a onClick={() => setSelected(null)}>close</a>
+        <a onClick={() => setSelected(null)}>
+          <BackIcon />
+        </a>
         <LocationInfo {...locations[selected]} />
       </div>
     }
