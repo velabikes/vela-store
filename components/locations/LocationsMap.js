@@ -35,6 +35,7 @@ const LocationsMap = ({ locations, setSelected, selected }) =>
         top: 1rem; left: 1rem; right: 1rem;
         padding: 0 2rem 2rem;
         background-color: #f5f5f5;
+        box-shadow: 0px 18px 9px -18px rgba(100,100,100,0.3);
       }
       .info a {
         position: absolute;
