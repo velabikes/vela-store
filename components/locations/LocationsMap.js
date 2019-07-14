@@ -33,7 +33,7 @@ const LocationsMap = ({ locations, setSelected, selected }) =>
       .info {
         position: absolute;
         top: 1rem; left: 1rem; right: 1rem;
-        padding: 0 2rem 2rem;
+        padding: 2rem;
         background-color: #f5f5f5;
         box-shadow: 0px 18px 9px -18px rgba(100,100,100,0.3);
       }
@@ -44,7 +44,7 @@ const LocationsMap = ({ locations, setSelected, selected }) =>
       }
       @media only screen and (min-width: 768px) {
         .info {
-          max-width: 320px;
+          max-width: 340px;
         }
       }
     `}</style>

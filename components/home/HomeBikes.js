@@ -26,7 +26,7 @@ const BikeCard = ({ title, href, hrefAs, action, src, index }) =>
 
       <div className='CardsHome'>
         <Link href={href} as={hrefAs}>
-          <Button big secondary={index % 2 && true}>{action}</Button>
+          <Button big secondary={true}>{action}</Button>
         </Link>
       </div>
     </div>
@@ -36,22 +36,20 @@ const BikeCard = ({ title, href, hrefAs, action, src, index }) =>
     <style jsx>{`
       .BikeCard {
         position: relative;
-        font-size: .61rem;
       }
       .CardHeader {
         position: absolute;
-        left: 1.61rem;
-        top: 1.61rem;
-        right: 1.61rem;
+        left: 2rem;
+        top: 2rem;
+        right: 2rem;
         display: flex;
         justify-content: space-between;
       }
       h1 {
         color: ${offBlack};
-        font-size: 2.63em;
+        margin-top: 0;
       }
       @media only screen and (min-width: 768px) {
-        font-size: 1rem;
       }
     `}</style>
   </section>

@@ -15,8 +15,11 @@ const LocationsMapPage = ({ locations }) =>
   </div>
 
 LocationsMapPage.getInitialProps = async ({ req }) => {
-  //const baseUrl = req ? `https://${req.headers.host}` : ''
-  const baseUrl = 'http://localhost:3000'
+  const baseUrl = req
+    ? process.env.NODE_ENV === 'development' 
+      ? 'http://localhost:3000'
+      : `https://${req.headers.host}`
+    : ''
   const response = await fetch(baseUrl + '/api/locations')
   const locations = await response.json()
 

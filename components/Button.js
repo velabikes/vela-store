@@ -43,17 +43,19 @@ const Button = ({
     </button>
     <style jsx>{`
       .btn-small {
-        margin: 0.61em 0.61em 0 0;
-        font-size: 0.61rem;
-        padding: 0.61em 1em;
+        margin: 0.5em 0.5em 0 0;
+        font-size: 0.5em;
+        padding: 0.5em 1em;
       }
       .btn-normal {
         font-size: 1em;
-        padding: 0.61em 1.6em;
+        line-height: 1em;
+        padding: 0.5em 1em;
       }
       .btn-big {
-        font-size: 1.29em;
-        padding: 0.61em 1em;
+        font-size: 1em;
+        line-height: 1em;
+        padding: 1em 1em;
       }
 
       .btn-text {
@@ -84,8 +86,8 @@ const Button = ({
 
       .btn-secondary {
         background-color: transparent;
-        color: ${offBlack};
-        border: 1px solid ${offBlack};
+        color: ${velaGreen};
+        border: 1px solid ${velaGreen};
       }
       .btn-secondary:hover {
         background-color: ${velaGreen};

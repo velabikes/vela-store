@@ -64,13 +64,6 @@ const HomePage = ({ images }) =>
           top: calc(1% + 2rem);
           right: calc(1% + 2rem);
         }
-        h1 {
-          font-size: 2.8em;
-          font-weight: 900;
-        }
-        h4 {
-          font-size: 1.2em;
-        }
       }
     `}</style>
   </div>
@@ -81,8 +74,11 @@ HomePage.propTypes = {
 
 HomePage.getInitialProps = async ({ req }) => {
   try {
-    const baseUrl = req ? `https://${req.headers.host}` : ''
-    // const baseUrl = 'http://localhost:3000'
+    const baseUrl = req
+      ? process.env.NODE_ENV === 'development'
+        ? 'http://localhost:3000'
+        : `https://${req.headers.host}`
+      : ''
     const response = await fetch(`${baseUrl}/api/instagram`)
     const data = await response.json()
 

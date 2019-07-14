@@ -1,7 +1,9 @@
 const LocationsInfo = ({ name, address, hours }) =>
-  <div className={`LocationsInfo`}>
-    <h1>{name}</h1>
-    <h4><address>{address}</address></h4>
+  <section className={`LocationsInfo`}>
+    <h1>
+      {name}
+      <h4><address>{address[0]} - {address[1]}</address></h4>
+    </h1>
     <table className='hours'>
       {hours && hours.map(hour =>
         <tr>
@@ -10,6 +12,11 @@ const LocationsInfo = ({ name, address, hours }) =>
         </tr>
       )}
     </table>
-  </div>
+    <style jsx>{`
+      tr {
+        text-transform: capitalize;
+      }
+    `}</style>
+  </section>
 
 export default LocationsInfo

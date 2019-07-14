@@ -38,11 +38,13 @@ module.exports = async (req, res) => {
       })
     )
 
+  const normalizeAddress = address => address.split(' - ')
+
   const normalizeOpeningText = day => day.split(/:(.+)/).filter((_,i) => i !== 2)
 
   const normalizePlace = ({name, formatted_address, formatted_phone_number, opening_hours, geometry}) => ({
     name: name,
-    address: formatted_address,
+    address: normalizeAddress(formatted_address),
     phone: formatted_phone_number,
     open: opening_hours && opening_hours.open_now,
     hours: opening_hours && opening_hours.weekday_text.map(normalizeOpeningText),

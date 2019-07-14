@@ -18,8 +18,8 @@ const CustomHead = props =>
     </Head>
     <FacebookPixel />
     <style jsx global>{`
-      body:hover * {
-        /outline: 1px solid rgba(200,0,0,0.1)
+      body * {
+//        outline: 1px solid rgba(200,0,0,0.1)
       }
       html, body {
         margin: 0;
@@ -30,26 +30,46 @@ const CustomHead = props =>
         background-color: ${offWhite};
         font-family: neue-haas-grotesk-display, sans-serif;
       }
+
       h1, h2, h3, h4, h5, h6 {
         font-family: neue-haas-grotesk-display, sans-serif;
-        margin: 1em 0;
-      }
-      h1 {
-        font-size: 2rem;
-      }
-      section h1 {
-        font-size: 2rem;
+        margin-top: 0;
       }
       h1, h2, h3 {
         font-weight: 800;
         color: ${velaGreen};
         text-transform: uppercase;
         font-style: italic;
+        line-height: 1.4em;
+        margin-bottom: 1.5rem;
       }
       h4, h5, h6 {
         font-weight: 500;
         color: ${offBlack};
+        text-transform: none;
+        font-style: normal;
+        line-height: 1.5em;
+        margin-bottom: 1.5rem;
       }
+      h1 {
+        font-size: 2.5rem;
+      }
+      h2 {
+        font-size: 2rem;
+      }
+      h3 {
+        font-size: 1.5rem;
+      }
+      h4 {
+        font-size: 1rem;
+      }
+      h5 {
+        font-size: 1rem;
+      }
+      section h1, nav h1 {
+        font-size: 2rem;
+      }
+
       hr {
         margin: 1.61rem 0;
         border: 1px solid #e2e2e2;
@@ -67,7 +87,7 @@ const CustomHead = props =>
         cursor: pointer;
       }
       p {
-        line-height: 1.37em;
+        line-height: 1.5em;
         font-family: neue-haas-grotesk-text, sans-serif;
       }
       p:last-child:not(:first-child) {
@@ -78,10 +98,10 @@ const CustomHead = props =>
         width: 100%;
       }
       ul {
-        padding-left: 1.61em;
+        padding-left: 1.5em;
       }
       li {
-        line-height: 1.37em;
+        line-height: 1.5em;
         color: ${offBlack};
         margin: 0.37em;
         font-family: neue-haas-grotesk-text, sans-serif;
