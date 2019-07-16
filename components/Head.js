@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import { velaGreen, velaBlue, offBlack, offWhite, lightGray } from '../style/colors'
 import FacebookPixel from '../components/FacebookPixel'
+import Freshchat from './head/Freshchat';
 
 const CustomHead = props =>
   <>
@@ -14,9 +15,9 @@ const CustomHead = props =>
       <link rel='icon' type='image/png' sizes='16x16' href='/static/fav/favicon-16x16.png' />
       <link rel='icon' type='image/x-icon' href='/static/fav/favicon.ico' />
       <meta name='theme-color' content='#ffffff' />
-      <meta name="google-site-verification" content="lIwow7Y18biWwBTokFJ5xN1nB1jjo8yvh87r1SFTBcg" />
     </Head>
     <FacebookPixel />
+    <Freshchat />
     <style jsx global>{`
       body * {
 //        outline: 1px solid rgba(200,0,0,0.1)
