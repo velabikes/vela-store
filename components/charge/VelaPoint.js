@@ -2,6 +2,7 @@ import Button from '../Button'
 import { offBlack, offWhite } from '../../style/colors'
 import Link from 'next/link'
 import Grid from 'components/Grid'
+import VelaPointFigure from './VelaPointFigure'
 
 const VelaPoint = () =>
   <section className='vela-point'>
@@ -14,7 +15,9 @@ const VelaPoint = () =>
         <Link href='https://forms.gle/Wb7DyMpQwUwqQL6F7'><a><Button>Saiba mais</Button></a></Link>
       </div>
 
-      <div><img src='static/point.png' alt='Ponto de recarga vela' /></div>
+      <div>
+        <div><VelaPointFigure /></div>
+      </div>
     </Grid>
     <style jsx>{`
       .vela-point {
