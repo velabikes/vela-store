@@ -6,6 +6,7 @@ import HomeImage from 'components/home/HomeImage'
 import HomeBikes from 'components/home/HomeBikes'
 import HomeAlbum from 'components/home/HomeAlbum'
 import PaddedView from 'components/PaddedView'
+import Inverter from 'components/Inverter'
 import Section from 'components/Section'
 import Button from '../components/Button'
 import VelaPoint from '../components/charge/VelaPoint'
@@ -37,11 +38,13 @@ const HomePage = ({ images }) =>
         <HomeBikes />
       </PaddedView>
     </Section>
-    <Section>
-      <PaddedView>
-        <VelaPoint />
-      </PaddedView>
-    </Section>
+    <Inverter>
+      <Section>
+        <PaddedView>
+          <VelaPoint />
+        </PaddedView>
+      </Section>
+    </Inverter>
     <PaddedView>
       {images && <HomeAlbum images={images} />}
     </PaddedView>

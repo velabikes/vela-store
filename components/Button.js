@@ -48,9 +48,9 @@ const Button = ({
         padding: 0.5em 1em;
       }
       .btn-normal {
-        font-size: 1em;
+        font-size: .75em;
         line-height: 1em;
-        padding: 0.5em 1em;
+        padding: 1em 1em;
       }
       .btn-big {
         font-size: 1em;
@@ -137,6 +137,7 @@ const Button = ({
         cursor: pointer;
         margin: 0;
         transition: .4s all cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        margin-right: .6rem;
       }
       button:disabled {
         opacity: 0.7;
