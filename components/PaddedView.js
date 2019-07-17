@@ -7,7 +7,7 @@ const PaddedView = props =>
       div {
         padding: 1rem;
       }
-      @media only screen and (min-width: 768px) {
+      @media only screen and (min-width: 400px) {
         div {
           padding: 1rem 2rem;
         }
