@@ -24,6 +24,12 @@ module.exports = async (req, res) => {
     },{
       googlePlace: 'ChIJ-0Zi6PxZzpQR-b6maQjQjSA',
       type: 'charger'
+    },{
+      googlePlace: 'ChIJe45oNJZXzpQRUXYN4bE42h8',
+      type: 'charger'
+    },{
+      googlePlace: 'ChIJpydZ5j5YzpQR1V_gNLyvHV4',
+      type: 'charger'
     }
   ]
 
