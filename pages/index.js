@@ -7,6 +7,7 @@ import HomeBikes from 'components/home/HomeBikes'
 import HomeAlbum from 'components/home/HomeAlbum'
 import PaddedView from 'components/PaddedView'
 import Button from '../components/Button'
+import VelaPoint from '../components/charge/VelaPoint'
 
 const HomePage = ({ images }) =>
   <div className='HomePage'>
@@ -32,6 +33,9 @@ const HomePage = ({ images }) =>
     </div>
     <PaddedView>
       <HomeBikes />
+    </PaddedView>
+    <VelaPoint />
+    <PaddedView>
       {images && <HomeAlbum images={images} />}
     </PaddedView>
 
