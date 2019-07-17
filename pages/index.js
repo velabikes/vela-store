@@ -6,6 +6,7 @@ import HomeImage from 'components/home/HomeImage'
 import HomeBikes from 'components/home/HomeBikes'
 import HomeAlbum from 'components/home/HomeAlbum'
 import PaddedView from 'components/PaddedView'
+import Section from 'components/Section'
 import Button from '../components/Button'
 import VelaPoint from '../components/charge/VelaPoint'
 
@@ -31,10 +32,16 @@ const HomePage = ({ images }) =>
         <Button big action>Monte a sua</Button>
       </Link>
     </div>
-    <PaddedView>
-      <HomeBikes />
-    </PaddedView>
-    <VelaPoint />
+    <Section>
+      <PaddedView>
+        <HomeBikes />
+      </PaddedView>
+    </Section>
+    <Section>
+      <PaddedView>
+        <VelaPoint />
+      </PaddedView>
+    </Section>
     <PaddedView>
       {images && <HomeAlbum images={images} />}
     </PaddedView>

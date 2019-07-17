@@ -2,6 +2,7 @@ import Link from 'next/link'
 import PropTypes from 'prop-types'
 import { offBlack, velaGreen } from '../../style/colors'
 import Button from '../Button'
+import Grid from 'components/Grid'
 
 const bikes = [
   {
@@ -66,24 +67,8 @@ BikeCard.propTypes = {
 const HomeBikes = () =>
   <section className='HomeBikes'>
     <h1>Nossas Bikes</h1>
-    <div className='BikeCards'>
+    <Grid template='1fr 1fr'>
       {bikes.map((bike, index) => <BikeCard key={bike.title} {...bike} index={index} />)}
-    </div>
-
-    <style jsx>{`
-      .HomeBikes {
-        margin: 4rem auto 4rem;
-      }
-      .BikeCards {
-        display: grid;
-        grid-row-gap: 2rem;
-      }
-      @media only screen and (min-width: 768px) {
-        .BikeCards {
-          grid-template-columns: 1fr 1fr;
-          grid-column-gap: 1rem;
-        }
-      }
-    `}</style>
+    </Grid>
   </section>
 export default HomeBikes
