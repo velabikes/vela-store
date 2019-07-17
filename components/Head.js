@@ -20,7 +20,7 @@ const CustomHead = props =>
     <Freshchat />
     <style jsx global>{`
       body * {
-        outline: 1px solid rgba(200,0,0,0.1)
+        //outline: 1px solid rgba(200,0,0,0.1)
       }
       html, body {
         margin: 0;
