@@ -10,6 +10,8 @@ import Statistics from '../components/charge/Statistics'
 import HeatMap from '../components/charge/HeatMap'
 import PaddedView from '../components/PaddedView'
 import { offBlack } from '../style/colors'
+import Inverter from 'components/Inverter'
+import Section from 'components/Section'
 
 const ChargePage = () =>
   <div className='charge'>
@@ -20,11 +22,13 @@ const ChargePage = () =>
       <h1 className='title'>Rede de recarga rápida</h1>
     </PaddedView>
     <Banner />
-    <div style={{ background: offBlack }}>
-      <PaddedView>
-        <VelaPoint />
-      </PaddedView>
-    </div>
+    <Inverter>
+      <Section>
+        <PaddedView>
+          <VelaPoint />
+        </PaddedView>
+      </Section>
+    </Inverter>
     <PaddedView>
       <HowWorks />
     </PaddedView>
