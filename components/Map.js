@@ -11,7 +11,7 @@ const Map = ({ children, initialCenter, isLoading, ...props }) =>
       streetViewControl: false,
       fullscreenControl: false,
       zoomControlOptions: {
-        position: 3
+        position: 6
       },
       gestureHandling: 'greedy'
     })}
