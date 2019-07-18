@@ -1,27 +1,25 @@
+
 import { compose } from 'recompose'
 import withCheckout from '../containers/withCheckout'
 import { velaGreen, velaBlue, velaRed } from '../style/colors'
 
 export const UserIcon = props => (
   <svg viewBox='0 0 27.05 27.04' width='1em' height='1em' {...props}>
-    <defs>
-      <style>{'.prefix__cls-1{fill:#51776b}'}</style>
-    </defs>
     <title>User Icon</title>
     <g id='prefix__Camada_2' data-name='Camada 2'>
       <g id='prefix__Camada_1-2' data-name='Camada 1'>
         <g id='prefix__Grupo_39' data-name='Grupo 39'>
           <circle
             id='prefix__Elipse_1'
-            className='prefix__cls-1'
+            style={{fill: '#51776b'}}
             cx={13.52}
             cy={6.76}
             r={6.76}
           />
           <path
             id='prefix__Caminho_35'
-            className='prefix__cls-1'
             d='M27.05 27H0v-2.21c0-4.51 9-7 13.52-7S27 20.28 27 24.79z'
+            style='fill: #51776b'
           />
         </g>
       </g>
@@ -39,9 +37,6 @@ export const BackIcon = props =>
 
 export const MenuIcon = ({ ...props }) => (
   <svg viewBox='0 0 28.44 20.07' width='1em' height='1em' {...props}>
-    <defs>
-      <style>{'.prefix__cls-1{fill:#51776b}'}</style>
-    </defs>
     <title>Menu Icon</title>
     <g id='prefix__Camada_2' data-name='Camada 2'>
       <g id='prefix__Camada_1-2' data-name='Camada 1'>
@@ -51,6 +46,7 @@ export const MenuIcon = ({ ...props }) => (
               id='prefix__Caminho_5'
               data-name='Caminho 5'
               className='prefix__cls-1'
+              style={{fill: '#51776b'}}
               d='M27.58 2.2H.86A1.13 1.13 0 0 1 0 .82 1.12 1.12 0 0 1 .86 0h26.72a1.13 1.13 0 0 1 .82 1.38 1.12 1.12 0 0 1-.82.82z'
             />
           </g>
@@ -58,7 +54,7 @@ export const MenuIcon = ({ ...props }) => (
             <path
               id='prefix__Caminho_6'
               data-name='Caminho 6'
-              className='prefix__cls-1'
+              style={{fill: '#51776b'}}
               d='M27.58 11.14H.86A1.13 1.13 0 0 1 0 9.76a1.1 1.1 0 0 1 .82-.82h26.76a1.14 1.14 0 0 1 0 2.2z'
             />
           </g>
@@ -66,7 +62,7 @@ export const MenuIcon = ({ ...props }) => (
             <path
               id='prefix__Caminho_7'
               data-name='Caminho 7'
-              className='prefix__cls-1'
+              style={{fill: '#51776b'}}
               d='M27.58 20.07H.86A1.12 1.12 0 0 1 0 18.7a1.1 1.1 0 0 1 .82-.82h26.76a1.12 1.12 0 0 1 .82 1.37 1.1 1.1 0 0 1-.82.82z'
             />
           </g>
@@ -138,3 +134,37 @@ export const Logo = props =>
 
 	`}</style>
   </div>
+
+export const MarkerStoreIcon = props =>
+  <svg viewBox="0 0 97.14 128.36" width="1em" height="1em" {...props}>
+    <title>{'Ativo 1'}</title>
+    <g data-name="Camada 2">
+      <g data-name="Camada 1">
+        <path
+          d="M97.14 53.86a81.58 81.58 0 0 0-1.27-14.42C91.16 13.12 69.82 0 48.5 0h.07a51.62 51.62 0 0 0-11.94 1.4c-16.8 4-31.54 16.7-35.36 38A82.54 82.54 0 0 0 0 53.86a81.42 81.42 0 0 0 48.57 74.5 81.4 81.4 0 0 0 48.57-74.5z"
+          fill="#51776b"
+        />
+        <path
+          d="M65.89 62c-5 7.85-15 15.43-24.94 20.2-4.71 2.25-10.79-.15-11.21-6.87-.26-4.13 3.13-20.78 3.27-22.09.26-2.41-1.62-3.14-4.17-.77l-.57-.87s11.39-11 12.46-12 5.45-5 7.2.6S46.62 57.55 46 60.39c-.65 3.1-3.6 15.38 0 15.38 5.07 0 9.33-14 10-16.6.71-2.84 3.75-22.42-2.39-16.28l-.61-.83s9.11-8.81 11.4-10.29 5.31-4 6.54 1.48-.06 20.93-5.05 28.75"
+          fill="#f5f5f5"
+        />
+      </g>
+    </g>
+  </svg>
+
+export const MarkerChargerIcon = props =>
+  <svg viewBox="0 0 97.14 128.36" width="1em" height="1em" {...props}>
+    <title>{'Vela Charge Point'}</title>
+    <g>
+      <g>
+        <path
+          d="M97.14 53.86a81.58 81.58 0 0 0-1.27-14.42C91.16 13.12 69.82 0 48.5 0h.07a51.62 51.62 0 0 0-11.94 1.4c-16.8 4-31.54 16.7-35.36 38A82.54 82.54 0 0 0 0 53.86a81.42 81.42 0 0 0 48.57 74.5 81.4 81.4 0 0 0 48.57-74.5z"
+          fill="#a84b61"
+        />
+        <path
+          d="M40.63 76.7l7.88-22.45-20.69-.06a1.55 1.55 0 0 1-1.57-1.56 1.52 1.52 0 0 1 .38-1l18.19-22.32c3-3.63 6-7.31 9.06-11.06a1.58 1.58 0 0 1 2.19-.25 1.67 1.67 0 0 1 .5 1.75l-7.94 22.5 20.7.06a1.55 1.55 0 0 1 1.56 1.57 1.57 1.57 0 0 1-.31.93c-5.82 7.51-11.94 14.88-18.07 22.32-3 3.63-6 7.25-9.19 11.13a1.58 1.58 0 0 1-2.19.25 1.6 1.6 0 0 1-.5-1.81"
+          fill="#f5f5f5"
+        />
+      </g>
+    </g>
+  </svg>

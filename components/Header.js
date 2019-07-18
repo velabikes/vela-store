@@ -1,6 +1,7 @@
-import { compose, withProps } from 'recompose'
+import { compose, withProps, withHandlers } from 'recompose'
 import Link from 'next/link'
 import PaddedView from 'components/PaddedView'
+import { toggleDrawer } from '../lib/redux'
 import { velaGreen, lightGray } from '../style/colors'
 import withOpenDrawer from '../containers/withOpenDrawer'
 import Cart from './store/Cart'
@@ -10,7 +11,7 @@ import MainMenu from './MainMenu'
 import Footer from './Footer'
 import SubscribeForm from './SubscribeForm'
 
-const Header = ({ isCartOpen, isMenuOpen, children }) =>
+const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
   <>
     <HeaderDrawer visible={isCartOpen}><Cart /></HeaderDrawer>
     <HeaderDrawer visible={isMenuOpen}>
@@ -27,7 +28,7 @@ const Header = ({ isCartOpen, isMenuOpen, children }) =>
         <div><Link href='/store?handle=vela-1' as='/loja/vela-1' prefetch><a>monte sua vela</a></Link></div>
       </div>
     </header>
-    <div className='app-content'>
+    <div className='app-content' onClick={handleContentClick}>
       {children}
       <div className='copyright'>
         <small>COPYRIGHT (C) 2019 VELA BIKES. TODOS DIREITOS RESERVADOS</small>
@@ -47,7 +48,9 @@ const Header = ({ isCartOpen, isMenuOpen, children }) =>
         box-shadow: 0px 0px 9px 0px rgba(100,100,100,0.3);
       }
       .app-content {
-        padding-top: 4em;
+        margin-top: 4em;
+        position: relative;
+        min-height: calc(100vh - 4rem);
       }
       .copyright {
         text-align: center;
@@ -92,11 +95,9 @@ const Header = ({ isCartOpen, isMenuOpen, children }) =>
           rught: inital;
         }
         .app-content {
-          padding-left: 5em;
-          padding-top: 0;
-        }
-        .app-content > :global(div:first-child) {
-          min-height: calc(100vh - 3rem);
+          margin-left: 5em;
+          margin-top: 0;
+          min-height: calc(100vh);
         }
         header > div {
           flex-direction: column;
@@ -122,5 +123,8 @@ const Header = ({ isCartOpen, isMenuOpen, children }) =>
 
 export default compose(
   withOpenDrawer,
+  withHandlers({
+    handleContentClick: ({ dispatch }) => e => dispatch(toggleDrawer(null)),
+  }),
   withProps(({ openDrawer }) => ({ isCartOpen: openDrawer === 'CART', isMenuOpen: openDrawer === 'MENU' }))
 )(Header)

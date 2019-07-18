@@ -7,7 +7,7 @@ const CustomHead = props =>
   <>
     <Head>
       <script dangerouslySetInnerHTML={{ __html: "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-K9555FS');" }} />
-      <meta name='viewport' content='width=device-width, initial-scale=1' />
+      <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0' />
       <meta charSet='utf-8' />
       <link rel='stylesheet' href='https://use.typekit.net/sho3jmj.css' />
       <link rel='icon' type='image/png' sizes='32x32' href='/static/fav/favicon-32x32.png' />
@@ -19,39 +19,58 @@ const CustomHead = props =>
     <FacebookPixel />
     <Freshchat />
     <style jsx global>{`
-      body:hover * {
-        /outline: 1px solid rgba(200,0,0,0.1)
+      body * {
+        //outline: 1px solid rgba(200,0,0,0.1)
       }
       html, body {
         margin: 0;
         padding: 0;
-        min-height: 100vh;
         position: relative;
         width: 100%;
         color: ${offBlack};
         background-color: ${offWhite};
         font-family: neue-haas-grotesk-display, sans-serif;
       }
+
       h1, h2, h3, h4, h5, h6 {
         font-family: neue-haas-grotesk-display, sans-serif;
-        margin: 1em 0;
-      }
-      h1 {
-        font-size: 2rem;
-      }
-      section h1 {
-        font-size: 2rem;
+        margin-top: 0;
       }
       h1, h2, h3 {
         font-weight: 800;
         color: ${velaGreen};
         text-transform: uppercase;
         font-style: italic;
+        line-height: 1.4em;
+        margin-bottom: 1.5rem;
       }
       h4, h5, h6 {
         font-weight: 500;
         color: ${offBlack};
+        text-transform: none;
+        font-style: normal;
+        line-height: 1.5em;
+        margin-bottom: 1.5rem;
       }
+      h1 {
+        font-size: 2.5rem;
+      }
+      h2 {
+        font-size: 2rem;
+      }
+      h3 {
+        font-size: 1.5rem;
+      }
+      h4 {
+        font-size: 1rem;
+      }
+      h5 {
+        font-size: 1rem;
+      }
+      section h1, nav h1 {
+        font-size: 2rem;
+      }
+
       hr {
         margin: 1.61rem 0;
         border: 1px solid #e2e2e2;
@@ -69,7 +88,7 @@ const CustomHead = props =>
         cursor: pointer;
       }
       p {
-        line-height: 1.37em;
+        line-height: 1.5em;
         font-family: neue-haas-grotesk-text, sans-serif;
       }
       p:last-child:not(:first-child) {
@@ -80,10 +99,10 @@ const CustomHead = props =>
         width: 100%;
       }
       ul {
-        padding-left: 1.61em;
+        padding-left: 1.5em;
       }
       li {
-        line-height: 1.37em;
+        line-height: 1.5em;
         color: ${offBlack};
         margin: 0.37em;
         font-family: neue-haas-grotesk-text, sans-serif;
@@ -92,7 +111,9 @@ const CustomHead = props =>
         width: 100%;
         border-spacing: 0 .372em;
       }
-
+      table tr td:last-child {
+        text-align: right;
+      }
       // FORMS
 
       fieldset {

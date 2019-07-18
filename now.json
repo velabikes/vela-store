@@ -6,11 +6,15 @@
     { "src": "next.config.js", "use": "@now/next" },
     { "src": "api/**/*.js", "use": "@now/node" }
   ],
+  "env": {
+    "GOOGLE_SERVER_KEY": "@google-server-key"
+  },
   "routes": [
     { "src": "/favicon.ico", "dest": "/static/fav/favicon.ico" },
     { "src": "/sobre", "dest": "/about" },
     { "src": "/loja", "dest": "/store" },
     { "src": "/lugares", "dest": "/locations" },
+    { "src": "/rede/mapa", "dest": "/network/map" },
     { "src": "/recarga", "dest": "/charge" },
     { "src": "/loja/(?<handle>[^/]+)$", "dest": "/store?handle=$handle" },
     { "src": "/loja/produto/(?<handle>[^/]+)$", "dest": "/store/product?handle=$handle" }

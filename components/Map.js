@@ -1,27 +1,38 @@
-import React from 'react'
-import { compose, withProps } from 'recompose'
-import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps'
+import { compose, withProps, lifecycle, withState } from 'recompose'
+import GoogleMapReact from 'google-map-react'
 
-const Map = (props) =>
-  <GoogleMap
-    defaultZoom={4}
-    defaultCenter={{ lat: -14.2350, lng: -51.8053 }}
-    defaultOptions={{
+const Map = ({ children, initialCenter, isLoading, ...props }) =>
+  !isLoading && <GoogleMapReact
+    bootstrapURLKeys={{ key: 'AIzaSyDPIMs29240aTRj5izYnWSRfmKucLR0cwY' }}
+    defaultZoom={12}
+    defaultCenter={initialCenter || { lat: -23.5350, lng: -46.7053 }}
+    options={gmaps => ({
       mapTypeControl: false,
       streetViewControl: false,
-      fullscreenControl: false
-    }}
+      fullscreenControl: false,
+      gestureHandling: 'greedy'
+    })}
+    { ...props }
   >
-    {props.isMarkerShown && <Marker position={{ lat: -34.397, lng: 150.644 }} onClick={props.onMarkerClick} />}
-  </GoogleMap>
+    {children}
+  </GoogleMapReact>
 
 export default compose(
-  withProps({
-    googleMapURL: 'https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyDPIMs29240aTRj5izYnWSRfmKucLR0cwY',
-    loadingElement: <div style={{ height: `100%` }} />,
-    containerElement: <div style={{ height: `400px` }} />,
-    mapElement: <div style={{ height: `100%` }} />
-  }),
-  withScriptjs,
-  withGoogleMap
+  withState('isLoading', 'setLoading', true),
+  withState('initialCenter', 'setInitialCenter', null),
+  lifecycle({
+    async componentDidMount () {
+      if ('geolocation' in navigator) {
+        navigator.geolocation.getCurrentPosition(pos => {
+          this.props.setInitialCenter({ lat: pos.coords.latitude, lng: pos.coords.longitude })
+          this.props.setLoading(false)
+        }, err => {
+          console.log(err)
+          this.props.setLoading(false)
+        })
+      } else {
+        this.props.setLoading(false)
+      }
+    }
+  })
 )(Map)

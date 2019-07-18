@@ -6,7 +6,10 @@ import HomeImage from 'components/home/HomeImage'
 import HomeBikes from 'components/home/HomeBikes'
 import HomeAlbum from 'components/home/HomeAlbum'
 import PaddedView from 'components/PaddedView'
+import Inverter from 'components/Inverter'
+import Section from 'components/Section'
 import Button from '../components/Button'
+import VelaPoint from '../components/charge/VelaPoint'
 
 const HomePage = ({ images }) =>
   <div className='HomePage'>
@@ -30,8 +33,19 @@ const HomePage = ({ images }) =>
         <Button big action>Monte a sua</Button>
       </Link>
     </div>
+    <Section>
+      <PaddedView>
+        <HomeBikes />
+      </PaddedView>
+    </Section>
+    <Inverter>
+      <Section>
+        <PaddedView>
+          <VelaPoint />
+        </PaddedView>
+      </Section>
+    </Inverter>
     <PaddedView>
-      <HomeBikes />
       {images && <HomeAlbum images={images} />}
     </PaddedView>
 
@@ -64,13 +78,6 @@ const HomePage = ({ images }) =>
           top: calc(1% + 2rem);
           right: calc(1% + 2rem);
         }
-        h1 {
-          font-size: 2.8em;
-          font-weight: 900;
-        }
-        h4 {
-          font-size: 1.2em;
-        }
       }
     `}</style>
   </div>
@@ -81,8 +88,11 @@ HomePage.propTypes = {
 
 HomePage.getInitialProps = async ({ req }) => {
   try {
-    const baseUrl = req ? `https://${req.headers.host}` : ''
-    // const baseUrl = 'http://localhost:3000'
+    const baseUrl = req
+      ? process.env.NODE_ENV === 'development'
+        ? 'http://localhost:3000'
+        : `https://${req.headers.host}`
+      : ''
     const response = await fetch(`${baseUrl}/api/instagram`)
     const data = await response.json()
 
