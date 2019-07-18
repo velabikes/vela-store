@@ -1,4 +1,4 @@
-import { compose, withProps, lifecycle, withState } from 'recompose'
+import { compose, lifecycle, withState } from 'recompose'
 import GoogleMapReact from 'google-map-react'
 
 const Map = ({ children, initialCenter, isLoading, ...props }) =>
@@ -12,7 +12,7 @@ const Map = ({ children, initialCenter, isLoading, ...props }) =>
       fullscreenControl: false,
       gestureHandling: 'greedy'
     })}
-    { ...props }
+    {...props}
   >
     {children}
   </GoogleMapReact>
