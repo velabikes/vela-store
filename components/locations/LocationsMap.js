@@ -1,10 +1,11 @@
-import { compose, withState } from 'recompose'
+import { compose, withState, withProps } from 'recompose'
 import Map from 'components/Map'
 import MapMarker from 'components/MapMarker'
 import LocationInfo from 'components/locations/LocationInfo'
 import { BackIcon } from 'components/Icons'
+import LocationFilter from './LocationFilter';
 
-const LocationsMap = ({ locations, setSelected, selected }) =>
+const LocationsMap = ({ locations, setSelected, selected, setFilter }) =>
   <div className='LocationsMap'>
     <Map onClick={e => e.event.target.nodeName === 'DIV' && setSelected(null)}>
       {locations.map(({ pos, type }, i) =>
@@ -18,6 +19,9 @@ const LocationsMap = ({ locations, setSelected, selected }) =>
         />
       )}
     </Map>
+    <div className='filter'>
+      <LocationFilter onFilterSelect={filter => setFilter(filter)} />
+    </div>
     { selected !== null &&
       <div className='info'>
         <a onClick={() => setSelected(null)}>
@@ -42,6 +46,10 @@ const LocationsMap = ({ locations, setSelected, selected }) =>
         right: 1rem;
         top: 1rem;
       }
+      .filter {
+        position: absolute;
+        bottom: 1rem; left: 1rem;
+      }
       @media only screen and (min-width: 768px) {
         .info {
           max-width: 340px;
@@ -51,5 +59,11 @@ const LocationsMap = ({ locations, setSelected, selected }) =>
   </div>
 
 export default compose(
-  withState('selected', 'setSelected', null)
+  withState('selected', 'setSelected', null),
+  withState('filter', 'setFilter', null),
+  withProps(
+    ({ filter, locations }) => ({
+      locations: filter ? locations.filter(filter) : locations
+    })
+  )
 )(LocationsMap)
