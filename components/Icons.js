@@ -5,24 +5,21 @@ import { velaGreen, velaBlue, velaRed } from '../style/colors'
 
 export const UserIcon = props => (
   <svg viewBox='0 0 27.05 27.04' width='1em' height='1em' {...props}>
-    <defs>
-      <style>{'.prefix__cls-1{fill:#51776b}'}</style>
-    </defs>
     <title>User Icon</title>
     <g id='prefix__Camada_2' data-name='Camada 2'>
       <g id='prefix__Camada_1-2' data-name='Camada 1'>
         <g id='prefix__Grupo_39' data-name='Grupo 39'>
           <circle
             id='prefix__Elipse_1'
-            className='prefix__cls-1'
+            style={{fill: '#51776b'}}
             cx={13.52}
             cy={6.76}
             r={6.76}
           />
           <path
             id='prefix__Caminho_35'
-            className='prefix__cls-1'
             d='M27.05 27H0v-2.21c0-4.51 9-7 13.52-7S27 20.28 27 24.79z'
+            style='fill: #51776b'
           />
         </g>
       </g>
@@ -40,9 +37,6 @@ export const BackIcon = props =>
 
 export const MenuIcon = ({ ...props }) => (
   <svg viewBox='0 0 28.44 20.07' width='1em' height='1em' {...props}>
-    <defs>
-      <style>{'.prefix__cls-1{fill:#51776b}'}</style>
-    </defs>
     <title>Menu Icon</title>
     <g id='prefix__Camada_2' data-name='Camada 2'>
       <g id='prefix__Camada_1-2' data-name='Camada 1'>
@@ -52,6 +46,7 @@ export const MenuIcon = ({ ...props }) => (
               id='prefix__Caminho_5'
               data-name='Caminho 5'
               className='prefix__cls-1'
+              style={{fill: '#51776b'}}
               d='M27.58 2.2H.86A1.13 1.13 0 0 1 0 .82 1.12 1.12 0 0 1 .86 0h26.72a1.13 1.13 0 0 1 .82 1.38 1.12 1.12 0 0 1-.82.82z'
             />
           </g>
@@ -59,7 +54,7 @@ export const MenuIcon = ({ ...props }) => (
             <path
               id='prefix__Caminho_6'
               data-name='Caminho 6'
-              className='prefix__cls-1'
+              style={{fill: '#51776b'}}
               d='M27.58 11.14H.86A1.13 1.13 0 0 1 0 9.76a1.1 1.1 0 0 1 .82-.82h26.76a1.14 1.14 0 0 1 0 2.2z'
             />
           </g>
@@ -67,7 +62,7 @@ export const MenuIcon = ({ ...props }) => (
             <path
               id='prefix__Caminho_7'
               data-name='Caminho 7'
-              className='prefix__cls-1'
+              style={{fill: '#51776b'}}
               d='M27.58 20.07H.86A1.12 1.12 0 0 1 0 18.7a1.1 1.1 0 0 1 .82-.82h26.76a1.12 1.12 0 0 1 .82 1.37 1.1 1.1 0 0 1-.82.82z'
             />
           </g>

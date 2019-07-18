@@ -28,13 +28,13 @@ const SvgComponent = props => (
       </linearGradient>
       <clipPath id='prefix__clip-path'>
         <path
-          className='prefix__cls-1'
+          fill='none'
           d='M52.81 802.2v239.43l95.57 51.02 100.6-81.16V772.06l-100.6 81.16-95.57-51.02z'
         />
       </clipPath>
       <clipPath id='prefix__clip-path-2'>
         <path
-          className='prefix__cls-1'
+          fill='none'
           d='M1766.55 146.83l-106.17-56.67V344.5l104.92 55.68 113-89.16V56.67l-111.75 90.16z'
         />
       </clipPath>
@@ -47,7 +47,7 @@ const SvgComponent = props => (
       </filter>
       <style>
         {
-          '.prefix__cls-1{fill:none}.prefix__cls-6{opacity:.55}.prefix__cls-7{fill:#fff}.prefix__cls-8{fill:#225245}.prefix__cls-9{fill:#1e473b}.prefix__cls-10{fill:#326e5d}.prefix__cls-15{fill:#b9c7c7}.prefix__cls-19{fill:#94a3a3}.prefix__cls-20{fill:#9babab}.prefix__cls-21{fill:#b2bfbf}.prefix__cls-25{fill:#c5d4d4}'
+          '.prefix__cls-6{opacity:.55}.prefix__cls-7{fill:#fff}.prefix__cls-8{fill:#225245}.prefix__cls-9{fill:#1e473b}.prefix__cls-10{fill:#326e5d}.prefix__cls-15{fill:#b9c7c7}.prefix__cls-19{fill:#94a3a3}.prefix__cls-20{fill:#9babab}.prefix__cls-21{fill:#b2bfbf}.prefix__cls-25{fill:#c5d4d4}'
         }
       </style>
       <mask
@@ -274,15 +274,15 @@ const SvgComponent = props => (
             </g>
             <g opacity={0.75}>
               <path
-                className='prefix__cls-25'
+                fill='#c5d4d4'
                 d='M1761.68 90.77a2 2 0 01-1.54-.72 2 2 0 01.26-2.82l31.07-25.68a2 2 0 012.54 3.09L1763 90.31a2 2 0 01-1.32.46zM1746.68 81.88a2 2 0 01-1.27-3.54l31.06-25.67a2 2 0 112.55 3.08L1748 81.43a2.06 2.06 0 01-1.32.45z'
               />
               <path
-                className='prefix__cls-25'
+                fill='#c5d4d4'
                 d='M1777.21 77.93a2 2 0 01-1-.28l-15-8.88a2 2 0 112-3.44l15 8.88a2 2 0 01-1 3.72z'
               />
               <path
-                className='prefix__cls-25'
+                fill='#c5d4d4'
                 d='M1770.18 106c-10.92 0-21.28-4.11-28.41-11.29a32 32 0 01-9.48-22.87c.12-17.64 17.48-32.53 37.89-32.53 11 0 20.92 3.82 27.82 10.77a31.1 31.1 0 019.13 22.59c-.13 18.11-17.04 33.33-36.95 33.33zm0-62.69c-18.26 0-33.78 13.08-33.89 28.56a28 28 0 008.32 20c6.38 6.43 15.7 10.11 25.57 10.11 19.59 0 32.85-15.18 33-29.36a27.14 27.14 0 00-8-19.74c-6.18-6.13-15.03-9.53-25-9.53zm35 29.35z'
               />
             </g>
