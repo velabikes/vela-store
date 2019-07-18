@@ -48,7 +48,7 @@ module.exports = async (req, res) => {
 
   if (totalPrice < 400000) {
     const queryArgs = {
-      nCdServico: '40010,41106',
+      nCdServico: 'SEDEX,PAC',
       sCepOrigem: origin.postal_code.replace('-', ''),
       sCepDestino: destination.postal_code.replace('-', ''),
       nVlPeso: 1,
@@ -71,7 +71,7 @@ module.exports = async (req, res) => {
     return (
       res.end(JSON.stringify({
         rates: [{
-          service_name: 'Frete Gratis',
+          service_name: 'Frete Grátis',
           service_code: 'FG',
           total_price: '0',
           description: '3 - 5 dias úteis',
