@@ -131,7 +131,7 @@ const CustomHead = props =>
       input:not([type='checkbox']):not([type='radio']) {
         width: 100%;
         border: 0;
-        padding: 10px;	        
+        padding: 10px;
         margin-bottom: 0.61em;
         margin-top: 0.61em;
         border-radius: 5px;
