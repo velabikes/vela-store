@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import { velaGreen, velaBlue, offBlack, offWhite, lightGray } from '../style/colors'
-import FacebookPixel from '../components/FacebookPixel'
-import Freshchat from './head/Freshchat';
+import { velaGreen, offBlack, offWhite, lightGray } from '../style/colors'
+import FacebookPixel from './head/FacebookPixel'
+import Freshchat from './head/Freshchat'
 
 const CustomHead = props =>
   <>
