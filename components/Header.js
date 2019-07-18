@@ -123,8 +123,10 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
 
 export default compose(
   withOpenDrawer,
+  withProps(({ openDrawer }) => ({ isCartOpen: openDrawer === 'CART', isMenuOpen: openDrawer === 'MENU' })),
   withHandlers({
-    handleContentClick: ({ dispatch }) => e => dispatch(toggleDrawer(null)),
-  }),
-  withProps(({ openDrawer }) => ({ isCartOpen: openDrawer === 'CART', isMenuOpen: openDrawer === 'MENU' }))
+    handleContentClick: ({ dispatch, isCartOpen, isMenuOpen }) => e => {
+      return (isCartOpen || isMenuOpen) && dispatch(toggleDrawer(null))
+    }
+  })
 )(Header)
