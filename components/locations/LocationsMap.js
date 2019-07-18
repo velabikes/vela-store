@@ -49,6 +49,8 @@ const LocationsMap = ({ locations, setSelected, selected, setFilter }) =>
       .filter {
         position: absolute;
         bottom: 1rem; left: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
       }
       @media only screen and (min-width: 768px) {
         .info {
