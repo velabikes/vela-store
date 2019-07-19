@@ -5,7 +5,7 @@ import LocationInfo from 'components/locations/LocationInfo'
 import { BackIcon } from 'components/Icons'
 import LocationFilter from './LocationFilter';
 
-const LocationsMap = ({ locations, filterLocations, setSelected, selected, setFilter }) =>
+const LocationsMap = ({ locations, filterLocations, setSelected, selected, setFilter, filter }) =>
   <div className='LocationsMap'>
     <Map onClick={e => e.event.target.nodeName === 'DIV' && setSelected(null)}>
       {locations.map(({ pos, type }, i) =>
@@ -21,7 +21,13 @@ const LocationsMap = ({ locations, filterLocations, setSelected, selected, setFi
       )}
     </Map>
     <div className='filter'>
-      <LocationFilter onFilterSelect={filter => { setFilter(filter); setSelected(null) }} />
+      <LocationFilter
+        onFilterSelect={newFilter => {
+          setFilter(filter === newFilter ? null : newFilter)
+          setSelected(null)
+        }}
+        selectedFilter={filter}
+      />
     </div>
     { selected !== null &&
       <div className='info'>
@@ -66,7 +72,7 @@ export default compose(
   withState('filter', 'setFilter', null),
   withProps(
     ({ filter, locations }) => ({
-      filterLocations: filter ? locations.filter(filter) : null
+      filterLocations: filter ? locations.filter(({type}) => type === filter) : null
     })
   )
 )(LocationsMap)

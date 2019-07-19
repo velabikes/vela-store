@@ -28,7 +28,7 @@ const MapMarker = ({ onClick, selected, disabled, type, hidden }) =>
         cursor: pointer;
       }
       div {
-        ${hidden && 'transform: translate3d(-50%, -75%, 0) scale(0)'}
+        ${hidden && 'transform: translate3d(-50%, -50%, 0) scale(0)'}
       }
     `}</style>
   </div>

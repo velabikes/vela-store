@@ -1,15 +1,19 @@
 import { MarkerChargerIcon, MarkerStoreIcon } from 'components/Icons'
 import { offWhite } from '../../style/colors';
-import Button from '../Button';
+import Tag from 'components/Tag';
 
-const LocationFilter = ({ onFilterSelect }) =>
+const LocationFilter = ({ onFilterSelect, selectedFilter }) =>
   <div>
-    <Button onClick={() => onFilterSelect(() => ({ type }) => type === 'store')}>
-      <MarkerStoreIcon /> lojas
-    </Button>
-    <Button onClick={() => onFilterSelect(() => ({ type }) => type === 'charger')}>
-      <MarkerChargerIcon /> recarga rapida
-    </Button>
+    <Tag
+      onClick={() => onFilterSelect("store")}
+      label={<span><MarkerStoreIcon /> Lojas</span>}
+      selected={selectedFilter == "store"}
+    />
+    <Tag
+      onClick={() => onFilterSelect("charger")}
+      label={<span><MarkerChargerIcon /> Recarga Rapida</span>}
+      selected={selectedFilter == "charger"}
+    />
     <style jsx>{`
       div {
         background: ${offWhite};
