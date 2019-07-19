@@ -4,6 +4,7 @@ import Tag from 'components/Tag';
 
 const LocationFilter = ({ onFilterSelect, selectedFilter }) =>
   <div>
+    <span>Filtrar por:</span>
     <Tag
       onClick={() => onFilterSelect("store")}
       label={<span><MarkerStoreIcon /> Lojas</span>}
@@ -18,6 +19,9 @@ const LocationFilter = ({ onFilterSelect, selectedFilter }) =>
       div {
         background: ${offWhite};
         padding: 1rem;
+      }
+      div > span {
+        margin-right: .5em;
       }
     `}</style>
   </div>

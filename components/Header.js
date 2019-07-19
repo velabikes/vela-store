@@ -2,7 +2,7 @@ import { compose, withProps, withHandlers } from 'recompose'
 import Link from 'next/link'
 import PaddedView from 'components/PaddedView'
 import { toggleDrawer } from '../lib/redux'
-import { velaGreen, lightGray } from '../style/colors'
+import { velaGreen, offWhite } from '../style/colors'
 import withOpenDrawer from '../containers/withOpenDrawer'
 import Cart from './store/Cart'
 import HeaderDrawer from './HeaderDrawer'
@@ -37,7 +37,7 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
     <style jsx>{`
       header {
         display: flex;
-        background-color: ${lightGray};
+        background-color: ${offWhite};
         justify-content: space-between;
         color: ${velaGreen};
         position: fixed;
@@ -85,7 +85,7 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
         background-color: ${velaGreen};
         display: block;
         white-space: nowrap;
-        color: ${lightGray};
+        color: ${offWhite};
       }
       @media only screen and (min-width: 768px) {
         header {
