@@ -1,12 +1,12 @@
-import { MarkerChargerIcon, MarkerStoreIcon } from 'components/icons'
+import { MarkerChargerIcon, MarkerStoreIcon } from 'components/Icons'
 import { offWhite } from '../../style/colors';
 import Button from '../Button';
 
 const LocationFilter = ({ onFilterSelect }) =>
   <div>
-    <a onClick={() => onFilterSelect(() => ({ type }) => type === 'store')}>
+    <Button onClick={() => onFilterSelect(() => ({ type }) => type === 'store')}>
       <MarkerStoreIcon /> lojas
-    </a>
+    </Button>
     <Button onClick={() => onFilterSelect(() => ({ type }) => type === 'charger')}>
       <MarkerChargerIcon /> recarga rapida
     </Button>

@@ -5,7 +5,7 @@ import LocationInfo from 'components/locations/LocationInfo'
 import { BackIcon } from 'components/Icons'
 import LocationFilter from './LocationFilter';
 
-const LocationsMap = ({ locations, setSelected, selected, setFilter }) =>
+const LocationsMap = ({ locations, filterLocations, setSelected, selected, setFilter }) =>
   <div className='LocationsMap'>
     <Map onClick={e => e.event.target.nodeName === 'DIV' && setSelected(null)}>
       {locations.map(({ pos, type }, i) =>
@@ -16,11 +16,12 @@ const LocationsMap = ({ locations, setSelected, selected, setFilter }) =>
           onClick={() => setSelected(i)}
           selected={selected === i}
           disabled={selected !== null && selected !== i}
+          hidden={filterLocations && !filterLocations.includes(locations[i])}
         />
       )}
     </Map>
     <div className='filter'>
-      <LocationFilter onFilterSelect={filter => setFilter(filter)} />
+      <LocationFilter onFilterSelect={filter => { setFilter(filter); setSelected(null) }} />
     </div>
     { selected !== null &&
       <div className='info'>
@@ -47,7 +48,7 @@ const LocationsMap = ({ locations, setSelected, selected, setFilter }) =>
         top: 1rem;
       }
       .filter {
-        position: absolute;
+        position: fixed;
         bottom: 1rem; left: 1rem;
         left: 50%;
         transform: translateX(-50%);
@@ -65,7 +66,7 @@ export default compose(
   withState('filter', 'setFilter', null),
   withProps(
     ({ filter, locations }) => ({
-      locations: filter ? locations.filter(filter) : locations
+      filterLocations: filter ? locations.filter(filter) : null
     })
   )
 )(LocationsMap)

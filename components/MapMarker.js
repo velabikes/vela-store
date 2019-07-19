@@ -11,7 +11,7 @@ const MapMarkerIcon = ({ type }) => {
   }
 }
 
-const MapMarker = ({ onClick, selected, disabled, type }) =>
+const MapMarker = ({ onClick, selected, disabled, type, hidden }) =>
   <div onClick={onClick}>
     <MapMarkerIcon type={type} />
     <style jsx>{`
@@ -26,6 +26,9 @@ const MapMarker = ({ onClick, selected, disabled, type }) =>
         position: relative;
         z-index: ${disabled ? 'auto' : 1};
         cursor: pointer;
+      }
+      div {
+        ${hidden && 'transform: translate3d(-50%, -75%, 0) scale(0)'}
       }
     `}</style>
   </div>
