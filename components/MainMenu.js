@@ -11,7 +11,7 @@ const MainMenu = () =>
       <li><Link href='/store' as='/loja'><a>
         Acessórios
       </a></Link></li>
-      <li><Link href='/locations' as='/lugares'><a>
+      <li><Link href='/network/stores' as='/rede/lojas'><a>
         Nossas lojas
       </a></Link></li>
       {/*
@@ -19,7 +19,7 @@ const MainMenu = () =>
         Sobre nós
       </a></Link></li>
       */}
-      <li><Link href='/charge' as='/recarga'><a>
+      <li><Link href='/network/charge' as='/rede/recarga'><a>
         Rede de Recarga Rápida
       </a></Link></li>
       <li><Link href='https://velabikes.freshdesk.com/support/home'><a>

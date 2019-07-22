@@ -4,7 +4,6 @@ import LocationInfo from 'components/locations/LocationInfo'
 import PaddedView from 'components/PaddedView'
 import Card from 'components/Card'
 import Inverter from 'components/Inverter'
-import { velaGreen } from '../style/colors'
 
 const Locations = ({ stores }) =>
   <>
