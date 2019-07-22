@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import { compose, lifecycle } from 'recompose'
 import { velaGreen, offBlack, offWhite, lightGray } from '../style/colors'
 import FacebookPixel from './head/FacebookPixel'
 import Freshchat from './head/Freshchat'
@@ -165,4 +166,11 @@ const CustomHead = props =>
     `}</style>
   </>
 
-export default CustomHead
+export default compose(
+  lifecycle({
+    componentDidMount() {
+      const vh = window.innerHeight * 0.01
+      document.documentElement.style.setProperty('--vh', `${vh}px`)
+    }
+  })
+)(CustomHead)

@@ -51,6 +51,7 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
         margin-top: 4em;
         position: relative;
         min-height: calc(100vh - 4rem);
+        min-height: calc(var(--vh, 1vh) * 100 - 4rem);
       }
       .copyright {
         text-align: center;

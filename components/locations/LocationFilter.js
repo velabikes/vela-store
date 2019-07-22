@@ -19,6 +19,7 @@ const LocationFilter = ({ onFilterSelect, selectedFilter }) =>
       div {
         background: ${offWhite};
         padding: 1rem;
+        white-space: nowrap;
       }
       div > span {
         margin-right: .5em;

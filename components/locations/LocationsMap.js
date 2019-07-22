@@ -56,14 +56,16 @@ const LocationsMap = ({ locations, filterLocations, setSelected, selected, setFi
         top: 1rem;
       }
       .filter {
-        position: fixed;
-        bottom: 1rem; left: 1rem;
-        left: 50%;
+        position: absolute;
+        top: 1rem; left: 50%;
         transform: translateX(-50%);
       }
       @media only screen and (min-width: 768px) {
         .info {
           max-width: 340px;
+        }
+        .filter {
+          top: auto; bottom: 1rem;
         }
       }
     `}</style>
