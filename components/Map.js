@@ -4,7 +4,7 @@ import GoogleMapReact from 'google-map-react'
 const Map = ({ children, initialCenter, isLoading, ...props }) =>
   !isLoading && <GoogleMapReact
     bootstrapURLKeys={{ key: 'AIzaSyDPIMs29240aTRj5izYnWSRfmKucLR0cwY' }}
-    defaultZoom={12}
+    defaultZoom={13}
     defaultCenter={initialCenter || { lat: -23.5350, lng: -46.7053 }}
     options={gmaps => ({
       mapTypeControl: false,
