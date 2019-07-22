@@ -52,8 +52,9 @@ const LocationsMap = ({ locations, filterLocations, setSelected, selected, setFi
       }
       .info a {
         position: absolute;
-        right: 1rem;
-        top: 1rem;
+        right: 0;
+        top: 0;
+        padding: 1rem;
       }
       .filter {
         position: absolute;
