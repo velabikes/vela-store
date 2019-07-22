@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 
 const PaddedView = props =>
-  <div {...props}>
+  <div className='PaddedView' {...props}>
     {props.children}
     <style jsx>{`
       div {

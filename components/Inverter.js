@@ -5,7 +5,6 @@ const Inverter = ({children}) =>
     {children}
     <style jsx>{`
       div {
-        background-color: ${offBlack};
         color: white;
       }
       div :global(h1),
@@ -15,6 +14,12 @@ const Inverter = ({children}) =>
       div :global(h5),
       div :global(h6) {
         color: white;
+      }
+      div :global(.Card) {
+        background-color: ${offBlack};
+      }
+      div :global(.Section) {
+        background-color: ${offBlack};
       }
     `}</style>
   </div>
