@@ -7,11 +7,11 @@ import withRedux from 'next-redux-wrapper'
 import { ApolloProvider } from 'react-apollo'
 import withGA from 'next-ga'
 import LogRocket from 'logrocket'
+import Progress from 'components/navigation/Progress'
 import withShopify from '../lib/shopify'
 import Head from '../components/Head'
 import Header from '../components/Header'
 import { makeStore } from '../lib/redux'
-import Progress from '../components/Progress'
 
 class MyApp extends App {
   static async getInitialProps ({ Component, ctx }) {

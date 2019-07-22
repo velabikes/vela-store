@@ -1,9 +1,10 @@
 import { BackIcon } from 'components/Icons'
+import PropTypes from 'prop-types'
 
-const Card = ({children, onBackClick}) =>
+const Card = ({ children, onBackClick }) =>
   <div className='Card'>
     {children}
-    {onBackClick && <a onClick={onBackClick}>
+    {onBackClick && <a href='#' onClick={onBackClick}>
       <BackIcon />
     </a>}
     <style jsx>{`
@@ -20,5 +21,10 @@ const Card = ({children, onBackClick}) =>
       }
     `}</style>
   </div>
+
+Card.propTypes = {
+  children: PropTypes.node,
+  onBackClick: PropTypes.func
+}
 
 export default Card
