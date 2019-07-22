@@ -3,7 +3,6 @@ import Map from 'components/Map'
 import MapMarker from 'components/MapMarker'
 import LocationInfo from 'components/locations/LocationInfo'
 import Card from 'components/Card'
-import { BackIcon } from 'components/Icons'
 import LocationFilter from './LocationFilter';
 
 const LocationsMap = ({ locations, filterLocations, setSelected, selected, setFilter, filter }) =>
@@ -33,10 +32,7 @@ const LocationsMap = ({ locations, filterLocations, setSelected, selected, setFi
     </div>
     { selected !== null &&
       <div className='info'>
-        <Card>
-          <a onClick={() => setSelected(null)}>
-            <BackIcon />
-          </a>
+        <Card onBackClick={() => setSelected(null)}>
           <LocationInfo {...locations[selected]} />
         </Card>
       </div>
@@ -49,12 +45,6 @@ const LocationsMap = ({ locations, filterLocations, setSelected, selected, setFi
         position: absolute;
         top: 1rem; left: 1rem; right: 1rem;
         background-color: #f5f5f5;
-      }
-      .info a {
-        position: absolute;
-        right: 0;
-        top: 0;
-        padding: 1rem;
       }
       .filter {
         position: absolute;
