@@ -1,19 +1,19 @@
 import { MarkerChargerIcon, MarkerStoreIcon } from 'components/Icons'
 import { offWhite } from '../../style/colors';
-import Tag from 'components/Tag';
+import LocationTag from 'components/locations/LocationTag';
 
 const LocationFilter = ({ onFilterSelect, selectedFilter }) =>
   <div>
     <span>Filtrar por:</span>
-    <Tag
+    <LocationTag
       onClick={() => onFilterSelect("store")}
-      label={<span><MarkerStoreIcon /> Lojas</span>}
       selected={selectedFilter == "store"}
+      type='store'
     />
-    <Tag
+    <LocationTag
       onClick={() => onFilterSelect("charger")}
-      label={<span><MarkerChargerIcon /> Recarga Rapida</span>}
       selected={selectedFilter == "charger"}
+      type='charger'
     />
     <style jsx>{`
       div {

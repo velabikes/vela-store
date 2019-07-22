@@ -2,6 +2,7 @@ import { compose, withState, withProps } from 'recompose'
 import Map from 'components/Map'
 import MapMarker from 'components/MapMarker'
 import LocationInfo from 'components/locations/LocationInfo'
+import Card from 'components/Card'
 import { BackIcon } from 'components/Icons'
 import LocationFilter from './LocationFilter';
 
@@ -12,7 +13,7 @@ const LocationsMap = ({ locations, filterLocations, setSelected, selected, setFi
         <MapMarker
           lat={pos.lat}
           lng={pos.lng}
-          type={type}
+          type={type[0]}
           onClick={() => setSelected(i)}
           selected={selected === i}
           disabled={selected !== null && selected !== i}
@@ -31,10 +32,12 @@ const LocationsMap = ({ locations, filterLocations, setSelected, selected, setFi
     </div>
     { selected !== null &&
       <div className='info'>
-        <a onClick={() => setSelected(null)}>
-          <BackIcon />
-        </a>
-        <LocationInfo {...locations[selected]} />
+        <Card>
+          <a onClick={() => setSelected(null)}>
+            <BackIcon />
+          </a>
+          <LocationInfo {...locations[selected]} />
+        </Card>
       </div>
     }
     <style jsx>{`
@@ -44,9 +47,7 @@ const LocationsMap = ({ locations, filterLocations, setSelected, selected, setFi
       .info {
         position: absolute;
         top: 1rem; left: 1rem; right: 1rem;
-        padding: 2rem;
         background-color: #f5f5f5;
-        box-shadow: 0px 18px 9px -18px rgba(100,100,100,0.3);
       }
       .info a {
         position: absolute;
@@ -72,7 +73,7 @@ export default compose(
   withState('filter', 'setFilter', null),
   withProps(
     ({ filter, locations }) => ({
-      filterLocations: filter ? locations.filter(({type}) => type === filter) : null
+      filterLocations: filter ? locations.filter(({type}) => type.includes(filter)) : null
     })
   )
 )(LocationsMap)

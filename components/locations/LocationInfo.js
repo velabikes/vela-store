@@ -1,9 +1,12 @@
-const LocationsInfo = ({ name, address, hours }) =>
-  <section className={`LocationsInfo`}>
+import LocationTag from 'components/locations/LocationTag'
+
+const LocationsInfo = ({ name, address, hours, type }) =>
+  <section className='LocationsInfo'>
     <h1>
       {name}
       <h4><address>{address[0]} - {address[1]}</address></h4>
     </h1>
+    <div className='tags'>{type.map(type => <LocationTag type={type} />)}</div>
     <table className='hours'>
       {hours && hours.map(hour =>
         <tr>
@@ -13,6 +16,9 @@ const LocationsInfo = ({ name, address, hours }) =>
       )}
     </table>
     <style jsx>{`
+      h1, h4, .tags {
+        margin-bottom: 1rem;
+      }
       tr {
         text-transform: capitalize;
       }
