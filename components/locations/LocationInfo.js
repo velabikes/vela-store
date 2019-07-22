@@ -6,7 +6,7 @@ const LocationsInfo = ({ name, address, hours, type }) =>
       {name}
       <h4><address>{address[0]} - {address[1]}</address></h4>
     </h1>
-    <div className='tags'>{type.map(type => <LocationTag type={type} />)}</div>
+    {type && <div className='tags'>{type.map(type => <LocationTag type={type} />)}</div>}
     <table className='hours'>
       {hours && hours.map(hour =>
         <tr>

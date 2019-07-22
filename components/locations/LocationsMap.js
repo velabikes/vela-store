@@ -9,7 +9,7 @@ import LocationFilter from './LocationFilter';
 const LocationsMap = ({ locations, filterLocations, setSelected, selected, setFilter, filter }) =>
   <div className='LocationsMap'>
     <Map onClick={e => e.event.target.nodeName === 'DIV' && setSelected(null)}>
-      {locations.map(({ pos, type }, i) =>
+      {locations.map(({ pos, type, googlePlace }, i) =>
         <MapMarker
           lat={pos.lat}
           lng={pos.lng}
@@ -18,6 +18,7 @@ const LocationsMap = ({ locations, filterLocations, setSelected, selected, setFi
           selected={selected === i}
           disabled={selected !== null && selected !== i}
           hidden={filterLocations && !filterLocations.includes(locations[i])}
+          key={googlePlace}
         />
       )}
     </Map>
