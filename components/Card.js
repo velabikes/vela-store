@@ -4,7 +4,7 @@ const Card = ({children}) =>
     <style jsx>{`
       .Card {
         padding: 2rem;
-        box-shadow: 0px 18px 9px -18px rgba(100,100,100, 0.3);
+        box-shadow: 0px 18px 10px -18px rgba(100,100,100, 0.6);
       }
     `}</style>
   </div>

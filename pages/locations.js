@@ -23,11 +23,11 @@ const Locations = ({ stores }) =>
           key={photo}
           style={{ backgroundImage: `url(${photo})` }}
         >
-          <Card>
-            <Inverter>
+          <Inverter>
+            <Card>
               <LocationInfo {...locationInfo} />
-            </Inverter>
-          </Card>
+            </Card>
+          </Inverter>
         </div>
       )}
     </PaddedView>
@@ -42,7 +42,6 @@ const Locations = ({ stores }) =>
         margin-bottom: 0;
       }
       .store :global(.Card) {
-        background: ${velaGreen};
         max-width: 360px;
         margin-left: auto
       }

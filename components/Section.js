@@ -1,5 +1,5 @@
 const Section = ({ children }) =>
-  <section>
+  <section className='Section'>
     {children}
     <style jsx>{`
       section {
