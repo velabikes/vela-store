@@ -45,9 +45,11 @@ const HomePage = ({ images }) =>
         </PaddedView>
       </Section>
     </Inverter>
-    <PaddedView>
-      {images && <HomeAlbum images={images} />}
-    </PaddedView>
+    <Section>
+      <PaddedView>
+        {images && <HomeAlbum images={images} />}
+      </PaddedView>
+    </Section>
 
     <style jsx>{`
       .HomePage {
