@@ -8,28 +8,28 @@ module.exports = async (req, res) => {
   const locations = [
     {
       googlePlace: 'ChIJL-xzGGFXzpQR_X4Kin8W9lQ',
-      type: 'store'
+      type: ['store', 'charger']
     },{
       googlePlace: 'ChIJazzL3K5ZzpQRD9IIOo6VVGo',
-      type: 'charger'
+      type: ['charger']
     },{
       googlePlace: 'ChIJM0wFcdxXzpQRo_-Wyy4K_qE',
-      type: 'charger'
+      type: ['charger']
     },{
       googlePlace: 'ChIJ1aPPuV5ZzpQR4BIHucm4vGQ',
-      type: 'charger'
+      type: ['charger']
     },{
       googlePlace: 'ChIJbSxi-w9XzpQRxor0_L36Djs',
-      type: 'charger'
+      type: ['charger']
     },{
       googlePlace: 'ChIJ-0Zi6PxZzpQR-b6maQjQjSA',
-      type: 'charger'
+      type: ['charger']
     },{
       googlePlace: 'ChIJe45oNJZXzpQRUXYN4bE42h8',
-      type: 'charger'
+      type: ['charger']
     },{
       googlePlace: 'ChIJpydZ5j5YzpQR1V_gNLyvHV4',
-      type: 'charger'
+      type: ['charger']
     }
   ]
 

@@ -13,10 +13,22 @@
     { "src": "/favicon.ico", "dest": "/static/fav/favicon.ico" },
     { "src": "/sobre", "dest": "/about" },
     { "src": "/loja", "dest": "/store" },
-    { "src": "/lugares", "dest": "/locations" },
+    { "src": "/rede/lojas", "dest": "/network/stores" },
     { "src": "/rede/mapa", "dest": "/network/map" },
-    { "src": "/recarga", "dest": "/charge" },
+    { "src": "/rede/recarga", "dest": "/network/charge" },
     { "src": "/loja/(?<handle>[^/]+)$", "dest": "/store?handle=$handle" },
-    { "src": "/loja/produto/(?<handle>[^/]+)$", "dest": "/store/product?handle=$handle" }
+    { "src": "/loja/produto/(?<handle>[^/]+)$", "dest": "/store/product?handle=$handle" },
+
+    {
+      "src": "/lugares",
+      "status": 301,
+      "headers": { "Location": "/rede/lojas" }
+    },
+    {
+      "src": "/recarga",
+      "status": 301,
+      "headers": { "Location": "/rede/recarga" }
+    }
+    
   ]
 }

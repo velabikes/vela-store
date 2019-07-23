@@ -1,29 +1,40 @@
-import { compose, withState } from 'recompose'
+import { compose, withState, withProps } from 'recompose'
 import Map from 'components/Map'
 import MapMarker from 'components/MapMarker'
 import LocationInfo from 'components/locations/LocationInfo'
-import { BackIcon } from 'components/Icons'
+import Card from 'components/Card'
+import LocationFilter from './LocationFilter';
 
-const LocationsMap = ({ locations, setSelected, selected }) =>
+const LocationsMap = ({ locations, filterLocations, setSelected, selected, setFilter, filter }) =>
   <div className='LocationsMap'>
     <Map onClick={e => e.event.target.nodeName === 'DIV' && setSelected(null)}>
-      {locations.map(({ pos, type }, i) =>
+      {locations.map(({ pos, type, googlePlace }, i) =>
         <MapMarker
           lat={pos.lat}
           lng={pos.lng}
-          type={type}
+          type={type[0]}
           onClick={() => setSelected(i)}
           selected={selected === i}
           disabled={selected !== null && selected !== i}
+          hidden={filterLocations && !filterLocations.includes(locations[i])}
+          key={googlePlace}
         />
       )}
     </Map>
+    <div className='filter'>
+      <LocationFilter
+        onFilterSelect={newFilter => {
+          setFilter(filter === newFilter ? null : newFilter)
+          setSelected(null)
+        }}
+        selectedFilter={filter}
+      />
+    </div>
     { selected !== null &&
       <div className='info'>
-        <a onClick={() => setSelected(null)}>
-          <BackIcon />
-        </a>
-        <LocationInfo {...locations[selected]} />
+        <Card onBackClick={() => setSelected(null)}>
+          <LocationInfo {...locations[selected]} />
+        </Card>
       </div>
     }
     <style jsx>{`
@@ -33,23 +44,30 @@ const LocationsMap = ({ locations, setSelected, selected }) =>
       .info {
         position: absolute;
         top: 1rem; left: 1rem; right: 1rem;
-        padding: 2rem;
         background-color: #f5f5f5;
-        box-shadow: 0px 18px 9px -18px rgba(100,100,100,0.3);
       }
-      .info a {
+      .filter {
         position: absolute;
-        right: 1rem;
-        top: 1rem;
+        top: 1rem; left: 50%;
+        transform: translateX(-50%);
       }
       @media only screen and (min-width: 768px) {
         .info {
           max-width: 340px;
+        }
+        .filter {
+          top: auto; bottom: 1rem;
         }
       }
     `}</style>
   </div>
 
 export default compose(
-  withState('selected', 'setSelected', null)
+  withState('selected', 'setSelected', null),
+  withState('filter', 'setFilter', null),
+  withProps(
+    ({ filter, locations }) => ({
+      filterLocations: filter ? locations.filter(({type}) => type.includes(filter)) : null
+    })
+  )
 )(LocationsMap)

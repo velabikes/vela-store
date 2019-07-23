@@ -1,5 +1,6 @@
 import Head from 'next/head'
-import { velaGreen, offBlack, offWhite, lightGray } from '../style/colors'
+import { compose, lifecycle } from 'recompose'
+import { velaGreen, offBlack, offWhite, lightGray, white } from '../style/colors'
 import FacebookPixel from './head/FacebookPixel'
 import Freshchat from './head/Freshchat'
 
@@ -139,7 +140,7 @@ const CustomHead = props =>
         font-size: 1rem;
         font-family: neue-haas-grotesk-display, sans-serif;
         box-sizing: border-box;
-        background: ${lightGray};
+        background: ${white};
         box-shadow: 0 2px 3px rgba(0,0,0,0.05), 0 2px 3px rgba(0,0,0,0.05);
       }
       input[type='radio'] {
@@ -165,4 +166,11 @@ const CustomHead = props =>
     `}</style>
   </>
 
-export default CustomHead
+export default compose(
+  lifecycle({
+    componentDidMount() {
+      const vh = window.innerHeight * 0.01
+      document.documentElement.style.setProperty('--vh', `${vh}px`)
+    }
+  })
+)(CustomHead)
