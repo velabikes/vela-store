@@ -14,7 +14,7 @@ const ProductImageGallery = ({ product }) =>
   <div className='ProductImageGallery'>
     { product.images && product.images.edges.map((image, i) =>
       !product.variants.edges.find(variant => image.node.src === variant.node.image.src) &&
-        <ProductImage src={image.node.src} />
+        <ProductImage src={image.node.src} key={i} />
     )}
     <style jsx>{`
       .ProductImageGallery :global(.ProductImage) {
@@ -27,10 +27,12 @@ const ProductInfo = ({ product, setSelectedVariant, selectedVariant }) =>
   <div className='ProductInfo'>
     <div>
       { product.variants && <ProductVariantImage variant={selectedVariant ? selectedVariant.edges[0] : product.variants.edges[0]} /> }
+      {JSON.stringify(selectedVariant)}
       <HideOnMobile>
         <ProductImageGallery product={product} />
       </HideOnMobile>
     </div>
+    {JSON.stringify(selectedVariant)}
     <div>
       <h1>{product.title}</h1>
       <h4>
