@@ -11,14 +11,16 @@ import Features from 'components/charge/Features'
 import Statistics from 'components/charge/Statistics'
 import HeatMap from 'components/charge/HeatMap'
 import PaddedView from 'components/PaddedView'
+import Main from 'components/Main'
+import MainHeader from 'components/MainHeader'
 
 const ChargePage = () =>
-  <div className='charge'>
+  <Main className='charge'>
     <Head>
       <title>Vela: Rede de recarga rápida.</title>
     </Head>
     <PaddedView>
-      <h1 className='title'>Rede de recarga rápida</h1>
+      <MainHeader title='Rede de recarga rápida' />
     </PaddedView>
     <Banner />
     <Inverter>
@@ -38,7 +40,7 @@ const ChargePage = () =>
     </PaddedView>
     <Statistics />
     <HeatMap />
-  </div>
+  </Main>
 
 export default compose(
 )(ChargePage)
