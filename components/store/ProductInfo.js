@@ -4,6 +4,7 @@ import { HideOnDesktop, HideOnMobile } from '../HideOn'
 import Price from '../Price'
 import ProductImage from './ProductImage'
 import ProductForm from './ProductForm'
+import ProductPrice from 'components/store/ProductPrice'
 
 const ProductVariantImage = ({ variant }) =>
   <ProductImage
@@ -14,7 +15,7 @@ const ProductImageGallery = ({ product }) =>
   <div className='ProductImageGallery'>
     { product.images && product.images.edges.map((image, i) =>
       !product.variants.edges.find(variant => image.node.src === variant.node.image.src) &&
-        <ProductImage src={image.node.src} />
+        <ProductImage src={image.node.src} key={i} />
     )}
     <style jsx>{`
       .ProductImageGallery :global(.ProductImage) {
@@ -32,10 +33,15 @@ const ProductInfo = ({ product, setSelectedVariant, selectedVariant }) =>
       </HideOnMobile>
     </div>
     <div>
-      <h1>{product.title}</h1>
-      <h4>
-        <Price value={selectedVariant && selectedVariant.node ? selectedVariant.node.price : product.variants && product.variants.edges.map(v => v.node.price)} />
-      </h4>
+      <h1>
+        {product.title}
+      </h1>
+      <div className='price'>
+        <ProductPrice
+          product={product}
+          variant={product.variants.edges.length === 1 ? product.variants.edges[0] : selectedVariant && selectedVariant.edges[0]}
+        />
+      </div>
       <hr />
       <ProductForm
         product={product}
@@ -50,6 +56,9 @@ const ProductInfo = ({ product, setSelectedVariant, selectedVariant }) =>
       </HideOnDesktop>
     </div>
     <style jsx>{`
+      .price {
+        font-size: 1.25em;
+      }
       @media only screen and (min-width: 768px) {
         .ProductInfo {
           display: flex;

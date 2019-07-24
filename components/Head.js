@@ -30,20 +30,19 @@ const CustomHead = props =>
         width: 100%;
         color: ${offBlack};
         background-color: ${offWhite};
-        font-family: neue-haas-grotesk-display, sans-serif;
+        font-family: neue-haas-grotesk-text, sans-serif;
       }
-
       h1, h2, h3, h4, h5, h6 {
         font-family: neue-haas-grotesk-display, sans-serif;
         margin-top: 0;
+        margin-bottom: .5rem;
       }
       h1, h2, h3 {
-        font-weight: 800;
+        font-weight: 900;
         color: ${velaGreen};
         text-transform: uppercase;
         font-style: italic;
         line-height: 1.4em;
-        margin-bottom: 1.5rem;
       }
       h4, h5, h6 {
         font-weight: 500;
@@ -63,7 +62,7 @@ const CustomHead = props =>
         font-size: 1.5rem;
       }
       h4 {
-        font-size: 1rem;
+        font-size: 1.25rem;
       }
       h5 {
         font-size: 1rem;
@@ -91,6 +90,8 @@ const CustomHead = props =>
       p {
         line-height: 1.5em;
         font-family: neue-haas-grotesk-text, sans-serif;
+        margin-top: 0;
+        margin-bottom: 1em;
       }
       p:last-child:not(:first-child) {
         margin-bottom: 0

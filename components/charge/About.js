@@ -16,15 +16,15 @@ const About = () =>
     <PaddedView>
       <div className='texts'>
         <div>
-          <img className='img-clock' src='static/clock.png' />
+          <img className='img-clock' src='/static/clock.png' />
           <p>10 Minutos carregando</p>
         </div>
         <div>
-          <img className='img-plusten' src='static/plusten.png' />
+          <img className='img-plusten' src='/static/plusten.png' />
           <p>Quilômetros para rodar</p>
         </div>
         <div className='bateries'>
-          <img className='img-bateries' src='static/batteries.png' />
+          <img className='img-bateries' src='/static/batteries.png' />
           <p>Até três baterias simultâneas</p>
         </div>
       </div>

@@ -1,5 +1,5 @@
 const Grid = ({children, template}) =>
-  <div>
+  <div className='Grid'>
     {children}
   <style jsx>{`
     div {

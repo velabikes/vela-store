@@ -19,8 +19,8 @@ const ProductList = ({ products, loading }) =>
         div {
           display: grid;
           grid-template-columns: ${products && products.edges.length == 2 ? '1fr 1fr' : '1fr 1fr 1fr'};
-          grid-column-gap: 1rem;
-          grid-row-gap: 1rem;
+          grid-column-gap: 2rem;
+          grid-row-gap: 2rem;
         }
       }
       @media only screen and (min-width: 1200px) {

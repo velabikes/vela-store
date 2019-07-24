@@ -23,7 +23,12 @@ query collectionByHandleQuery($handle: String!) {
               edges {
                 node {
                   id
-                  price
+                  priceV2 {
+                    amount
+                  }
+                  compareAtPriceV2 {
+                    amount
+                  }
                   availableForSale
                 }
               }

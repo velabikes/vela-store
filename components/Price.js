@@ -1,16 +1,15 @@
 import { compose, withProps } from 'recompose'
 
-const Price = ({ minValue, maxValue }) =>
-  <span className='price'>
-    {minValue && parseInt(minValue).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
-    {minValue !== maxValue && ' - ' + parseInt(maxValue).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}
+const Price = ({ formatedValue }) =>
+  <span className='Price'>
+    {formatedValue}
   </span>
+
+const intToBRL = n => parseInt(n).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', currencyDisplay: 'symbol' })
 
 export default compose(
   withProps(
-    ({ value }) => ({
-      minValue: value instanceof Array ? Math.min.apply(null, value) : value,
-      maxValue: value instanceof Array ? Math.max.apply(null, value) : value
-    })
+    ({ value }) => ({ formatedValue: intToBRL(value) })
   )
 )(Price)
+

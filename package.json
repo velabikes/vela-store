@@ -28,7 +28,7 @@
   "dependencies": {
     "@google/maps": "^0.5.5",
     "airtable": "^0.7.0",
-    "apollo-boost": "^0.3.1",
+    "apollo-boost": "^0.4.1",
     "dayjs": "^1.8.14",
     "formik": "^1.5.1",
     "google-map-react": "^1.1.4",
@@ -55,8 +55,7 @@
     "redux-devtools-extension": "^2.13.8",
     "redux-logger": "^3.0.6",
     "redux-persist": "^5.10.0",
-    "redux-thunk": "^2.3.0",
-    "shopify-api-node": "^2.19.2"
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
@@ -71,5 +70,8 @@
     "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-standard": "^4.0.0",
     "pre-commit": "^1.2.2"
+  },
+  "engines": {
+    "node": "10.x"
   }
 }
