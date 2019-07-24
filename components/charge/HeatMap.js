@@ -4,7 +4,7 @@ import Link from 'next/link'
 const HeatMap = () =>
   <div className='heat-map'>
     <div className='map'>
-      <img src="static/heatmap.jpg" />
+      <img src="/static/heatmap.jpg" />
     </div>
 
 		<div className='heat-map-description'>
