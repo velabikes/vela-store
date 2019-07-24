@@ -7,7 +7,9 @@
     { "src": "api/**/*.js", "use": "@now/node" }
   ],
   "env": {
-    "GOOGLE_SERVER_KEY": "@google-server-key"
+    "GOOGLE_SERVER_KEY": "@google-server-key",
+    "SHOPIFY_API_KEY": "@shopify-api-key",
+    "SHOPIFY_API_PASS": "@shopify-api-pass"
   },
   "routes": [
     { "src": "/favicon.ico", "dest": "/static/fav/favicon.ico" },
