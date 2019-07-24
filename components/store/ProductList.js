@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import ProductTeaser from './ProductTeaser'
+import Grid from 'components/Grid'
 
 const ProductListLoading = () =>
   <>
@@ -9,27 +10,10 @@ const ProductListLoading = () =>
   </>
 
 const ProductList = ({ products, loading }) =>
-  <div className='ProductList'>
-    { !products && loading && <ProductListLoading /> }
-    { products && products.edges.map(product => <ProductTeaser product={product.node} key={product.node.id} />) }
-    <style jsx>{`
-      div {
-      }
-      @media only screen and (min-width: 768px) {
-        div {
-          display: grid;
-          grid-template-columns: ${products && products.edges.length == 2 ? '1fr 1fr' : '1fr 1fr 1fr'};
-          grid-column-gap: 2rem;
-          grid-row-gap: 2rem;
-        }
-      }
-      @media only screen and (min-width: 1200px) {
-        div {
-          grid-template-columns: ${products && products.edges.length == 2 ? '1fr 1fr' : '1fr 1fr 1fr 1fr'}
-        }
-      }
-    `}</style>
-  </div>
+  <Grid className='ProductList' template={ !loading && products && products.edges.length === 2 ? '1fr 1fr' : '1fr 1fr 1fr 1fr'} >
+    { loading && <ProductListLoading /> }
+    { !loading && products && products.edges && products.edges.map(product => <ProductTeaser product={product.node} key={product.node.id} />) }
+  </Grid>
 
 ProductList.propTypes = {
   products: PropTypes.object,
