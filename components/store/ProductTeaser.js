@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import Link from 'next/link'
-import Price from '../Price'
+import ProductPrice from 'components/store/ProductPrice'
 import ProductImage from './ProductImage'
 
 const ProductTeaser = ({ product }) =>
@@ -10,13 +10,14 @@ const ProductTeaser = ({ product }) =>
       <h3>
         {product.title}
       </h3>
-      <h4>
-        <Price value={product.variants.edges.map(v => v.node.price)} />
-      </h4>
+      <ProductPrice
+        product={product}
+        variant={product.variants.edges.length === 1 && product.variants.edges[0]}
+      />
     </a></Link>
     <style jsx>{`
-      .ProductTeaser {
-        margin-top: 2rem
+      h3 {
+        margin-top: 1rem
       }
     `}</style>
   </div>

@@ -1,4 +1,4 @@
-const Shopify = require('shopify-api-node')
+const Shopify = require('./shopify-api-node')
 
 const shopify = new Shopify({
   shopName: 'vela-bikes-store',

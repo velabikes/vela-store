@@ -13,9 +13,9 @@ const Locations = ({ stores }) =>
     </Head>
     <PaddedView className='Stores'>
       <h1>Nossas Lojas</h1>
-      <h4>
+      <p>
         Conheça todas as versões da Vela através de nossas lojas exclusivas. Oferecemos experiências personalizadas de test-ride, serviços, ampla gama de acessórios e café fresco, em ambiente confortável e inclusivo para o universo do ciclismo e da mobilidade urbana elétrica.
-      </h4>
+      </p>
       {stores && stores.map(({ photo, ...locationInfo }) =>
         <div
           className='store'

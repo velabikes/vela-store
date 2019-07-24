@@ -55,8 +55,7 @@
     "redux-devtools-extension": "^2.13.8",
     "redux-logger": "^3.0.6",
     "redux-persist": "^5.10.0",
-    "redux-thunk": "^2.3.0",
-    "shopify-api-node": "^2.21.0"
+    "redux-thunk": "^2.3.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
@@ -71,5 +70,8 @@
     "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-standard": "^4.0.0",
     "pre-commit": "^1.2.2"
+  },
+  "engines": {
+    "node": "10.x"
   }
 }
