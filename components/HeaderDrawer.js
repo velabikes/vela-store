@@ -23,6 +23,7 @@ const HeaderDrawer = ({ children, visible, handleCloseClick }) =>
         max-width: 100%;
         min-width: 100%;
         z-index: 1000;
+        padding: 1rem 0;
       }
       .HeaderDrawer :global(div:first-child) {
         flex: 1;
