@@ -1,32 +1,33 @@
 import PropTypes from 'prop-types'
 import Grid from 'components/Grid'
 import { velaGreen } from '../../style/colors'
+import Section from 'components/Section'
+import SectionHeader from 'components/SectionHeader'
 
 const HomeAlbum = ({ images }) =>
   <div className='HomeAlbum'>
-    <Grid template='1fr 5fr'>
-      <div className='AlbumTitle'>
-        <h1>Siga o movimento</h1>
-      </div>
-      <div className='Album'>
-        {images.map((image, index) => {
-          if (index > 7) return
+    <Section>
+      <Grid template='1fr 5fr'>
+        <div className='AlbumTitle'>
+          <SectionHeader title='Siga o movimento' />
+        </div>
+        <div className='Album'>
+          {images.map((image, index) => {
+            if (index > 7) return
 
-          return <div key={image.id}>
-            <a href={`https://www.instagram.com/p/${image.id}`} target='_blank'>
-              <img alt={image.title} src={image.url} />
-            </a>
-          </div>
-        })}
-      </div>
-    </Grid>
-    <p className='Hashtag'>#vadevela</p>
+            return <div key={image.id}>
+              <a href={`https://www.instagram.com/p/${image.id}`} target='_blank'>
+                <img alt={image.title} src={image.url} />
+              </a>
+            </div>
+          })}
+        </div>
+      </Grid>
+      <p className='Hashtag'>#vadevela</p>
+    </Section>
     <style jsx>{`
       .HomeAlbum {
         position: relative;
-      }
-      h1 {
-        margin-bottom: 0px;
       }
       .Album {
         display: grid;
@@ -45,7 +46,7 @@ const HomeAlbum = ({ images }) =>
         -webkit-text-stroke-color: ${velaGreen};
         position: absolute;
         right: 0;
-        bottom: -1em;
+        bottom: 0em;
       }
       @media only screen and (min-width: 768px) {
         .Album {

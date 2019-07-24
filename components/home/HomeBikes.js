@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import { offBlack, velaGreen } from '../../style/colors'
 import Button from '../Button'
 import Grid from 'components/Grid'
+import Section from 'components/Section'
+import SectionHeader from 'components/SectionHeader'
 
 const bikes = [
   {
@@ -21,7 +23,7 @@ const bikes = [
 ]
 
 const BikeCard = ({ title, href, hrefAs, action, src, index }) =>
-  <section className='BikeCard'>
+  <article className='BikeCard'>
     <div className='CardHeader'>
       <h1>{title}</h1>
 
@@ -53,7 +55,7 @@ const BikeCard = ({ title, href, hrefAs, action, src, index }) =>
       @media only screen and (min-width: 768px) {
       }
     `}</style>
-  </section>
+  </article>
 
 BikeCard.propTypes = {
   title: PropTypes.string,
@@ -65,10 +67,10 @@ BikeCard.propTypes = {
 }
 
 const HomeBikes = () =>
-  <section className='HomeBikes'>
-    <h1>Nossas Bikes</h1>
+  <Section className='HomeBikes'>
+    <SectionHeader title='Nossas Bikes' />
     <Grid template='1fr 1fr'>
       {bikes.map((bike, index) => <BikeCard key={bike.title} {...bike} index={index} />)}
     </Grid>
-  </section>
+  </Section>
 export default HomeBikes

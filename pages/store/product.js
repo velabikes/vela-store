@@ -5,6 +5,7 @@ import PropTypes from 'prop-types'
 import ProductInfo from '../../components/store/ProductInfo'
 import withProduct from '../../containers/withProduct'
 import PaddedView from '../../components/PaddedView'
+import Main from 'components/Main'
 
 const ProductPage = ({
   product
@@ -13,7 +14,9 @@ const ProductPage = ({
     <Head>
       <title>{product.title} - Vela Bikes</title>
     </Head>
-    <ProductInfo product={product} />
+    <Main>
+      { product && <ProductInfo product={product} /> }
+    </Main>
   </PaddedView>
 
 ProductPage.propTypes = {

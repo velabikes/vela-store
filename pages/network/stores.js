@@ -1,17 +1,18 @@
 import Head from 'next/head'
 // import fetch from 'isomorphic-fetch'
+import Main from 'components/Main'
 import LocationInfo from 'components/locations/LocationInfo'
 import PaddedView from 'components/PaddedView'
 import Card from 'components/Card'
 import Inverter from 'components/Inverter'
 
 const Locations = ({ stores }) =>
-  <>
+  <PaddedView className='Stores'>
     <Head>
       <title>Conheça nossas bikes em uma loja Vela</title>
       <meta name='description' content='Venha conhecer uma de nossas lojas oficiais, estamos em São Paulo, Brasilia, Curitiba e Rio de Janeiro' />
     </Head>
-    <PaddedView className='Stores'>
+    <Main>
       <h1>Nossas Lojas</h1>
       <p>
         Conheça todas as versões da Vela através de nossas lojas exclusivas. Oferecemos experiências personalizadas de test-ride, serviços, ampla gama de acessórios e café fresco, em ambiente confortável e inclusivo para o universo do ciclismo e da mobilidade urbana elétrica.
@@ -29,7 +30,7 @@ const Locations = ({ stores }) =>
           </Inverter>
         </div>
       )}
-    </PaddedView>
+    </Main>
     <style jsx>{`
       .store {
         background-size: cover;
@@ -50,7 +51,7 @@ const Locations = ({ stores }) =>
         }
       }
     `}</style>
-  </>
+  </PaddedView>
 
 Locations.getInitialProps = () => {
   const stores = [{

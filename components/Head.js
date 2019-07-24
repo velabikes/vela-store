@@ -42,7 +42,7 @@ const CustomHead = props =>
         color: ${velaGreen};
         text-transform: uppercase;
         font-style: italic;
-        line-height: 1.4em;
+        line-height: 1.25em;
       }
       h4, h5, h6 {
         font-weight: 500;
@@ -53,10 +53,10 @@ const CustomHead = props =>
         margin-bottom: 1.5rem;
       }
       h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
       }
       h2 {
-        font-size: 2rem;
+        font-size: 1.75rem;
       }
       h3 {
         font-size: 1.5rem;

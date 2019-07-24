@@ -3,7 +3,7 @@ const Section = ({ children }) =>
     {children}
     <style jsx>{`
       section {
-        padding: 4rem 0
+        padding: 3rem 0
       }
     `}</style>
   </section>

@@ -18,7 +18,7 @@ const Inverter = ({children}) =>
       div :global(.Card) {
         background-color: ${offBlack};
       }
-      div :global(.Section) {
+      div :global(.PaddedView) {
         background-color: ${offBlack};
       }
     `}</style>
