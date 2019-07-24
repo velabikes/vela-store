@@ -8,14 +8,15 @@ import PaddedView from '../../components/PaddedView'
 import Main from 'components/Main'
 
 const ProductPage = ({
-  product
+  product,
+  isProductLoading
 }) =>
   <PaddedView>
     <Head>
       <title>{product.title} - Vela Bikes</title>
     </Head>
     <Main>
-      { product.variants && <ProductInfo product={product} /> }
+      { !isProductLoading && <ProductInfo product={product} /> }
     </Main>
   </PaddedView>
 
