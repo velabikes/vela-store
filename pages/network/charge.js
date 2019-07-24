@@ -24,16 +24,12 @@ const ChargePage = () =>
     </PaddedView>
     <Banner />
     <Inverter>
-      <Section>
-        <PaddedView>
-          <VelaPoint />
-        </PaddedView>
-      </Section>
+      <PaddedView>
+        <VelaPoint />
+      </PaddedView>
     </Inverter>
     <PaddedView>
-      <Section>
-        <HowWorks />
-      </Section>
+      <HowWorks />
     </PaddedView>
     <PaddedView>
       <Section>

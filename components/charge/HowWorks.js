@@ -1,8 +1,12 @@
-const HowWorks = () =>
-  <section className='how-works'>
-    <h1>Como funciona?</h1>
+import Section from 'components/Section'
+import SectionHeader from 'components/SectionHeader'
+import Grid from 'components/Grid'
 
-    <div className='cards'>
+const HowWorks = () =>
+  <Section className='how-works'>
+    <SectionHeader title='Como funciona?' />
+
+    <Grid template='1fr 1fr 1fr'>
       <div className='card'>
         <img src='/static/low-battery.png' />
         <div className='description'>
@@ -27,36 +31,20 @@ const HowWorks = () =>
           <p>Relaxe, tome um café e aproveite o fim do percurso sem se preocupar.</p>
         </div>
       </div>
-    </div>
+    </Grid>
 
     <style>{`
-      .card {
-        margin-bottom: 2rem
-      }
       .card h2 {
-        margin-bottom: 0
+        margin-bottom: 0;
+        margin-top: 1rem;
+        font-size: 1.5rem;
       }
       .card .description {
         text-align: center;
         margin: 0 auto;
-        max-width: 230px
-      }
-      @media only screen and (min-width: 768px) {
-        .how-works {
-        }
-        .how-works h1 {
-
-        }
-        .how-works .cards {
-          display: flex;
-        }
-        .how-works img {
-
-        }
-        .how-works .card {
-        }
+        max-width: 250px
       }
     `}</style>
-  </section>
+  </Section>
 
 export default HowWorks
