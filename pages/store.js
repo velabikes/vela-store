@@ -5,17 +5,21 @@ import { compose } from 'recompose'
 import ProductList from '../components/store/ProductList'
 import PaddedView from '../components/PaddedView'
 import withCollectionByHandle from '../containers/withCollectionByHandle'
+import Main from 'components/Main'
+import MainHeader from 'components/MainHeader'
 
 const Store = ({
   collection,
   isCollectionLoading
 }) =>
   <PaddedView>
-    <Head>
-      <title>{collection && collection.title} - Vela Bikes</title>
-    </Head>
-    <h1>{collection && collection.title}</h1>
-    <ProductList products={collection && collection.products} loading={isCollectionLoading} />
+    <Main>
+      <Head>
+        <title>{collection && collection.title} - Vela Bikes</title>
+      </Head>
+      <MainHeader title={collection && collection.title} />
+      <ProductList products={collection && collection.products} loading={isCollectionLoading} />
+    </Main>
   </PaddedView>
 
 export default compose(
