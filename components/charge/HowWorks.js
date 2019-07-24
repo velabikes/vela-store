@@ -4,7 +4,7 @@ const HowWorks = () =>
 
     <div className='cards'>
       <div className='card'>
-        <img src='static/low-battery.png' />
+        <img src='/static/low-battery.png' />
         <div className='description'>
           <h2>Ficou sem bateria?</h2>
           <p>Fique tranquilo!<br />
@@ -13,7 +13,7 @@ const HowWorks = () =>
       </div>
 
       <div className='card'>
-        <img src='static/find-vela-point.png' />
+        <img src='/static/find-vela-point.png' />
         <div className='description'>
           <h2>Procure um ponto Vela</h2>
           <p>Basta conferir no mapa nossa rede de cafés parceiros.</p>
@@ -21,7 +21,7 @@ const HowWorks = () =>
       </div>
 
       <div className='card last'>
-        <img src='static/wait.png' />
+        <img src='/static/wait.png' />
         <div className='description'>
           <h2>Espere 10 minutos</h2>
           <p>Relaxe, tome um café e aproveite o fim do percurso sem se preocupar.</p>

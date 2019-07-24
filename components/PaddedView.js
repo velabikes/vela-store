@@ -5,11 +5,11 @@ const PaddedView = props =>
     {props.children}
     <style jsx>{`
       div {
-        padding: 1rem;
+        padding: 0 1rem;
       }
       @media only screen and (min-width: 400px) {
         div {
-          padding: 1rem 2rem;
+          padding: 0rem 2rem;
         }
       }
       @media only screen and (min-width: 1366px) {

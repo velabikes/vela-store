@@ -3,7 +3,7 @@ const Features = () =>
   <div className='features'>
     <div className='icon'>
       <div className='image rota'>
-        <img src='static/route-bike.png'/>
+        <img src='/static/route-bike.png'/>
       </div>
       <p>Rota de</p>
       <p>ciclistas</p>
@@ -11,7 +11,7 @@ const Features = () =>
 
     <div className='icon'>
       <div className='image clientes'>
-        <img src='static/clients.png'/>
+        <img src='/static/clients.png'/>
       </div>
       <p>Clientes</p>
       <p>potenciais</p>
@@ -19,7 +19,7 @@ const Features = () =>
 
     <div className='icon'>
       <div className='image site'>
-        <img src='static/site.png'/>
+        <img src='/static/site.png'/>
       </div>
       <p>Divulgação</p>
       <p>no site</p>

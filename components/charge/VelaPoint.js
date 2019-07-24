@@ -2,12 +2,14 @@ import Link from 'next/link'
 import Grid from 'components/Grid'
 import Button from 'components/Button'
 import VelaPointFigure from './VelaPointFigure'
+import Section from 'components/Section'
+import SectionHeader from 'components/SectionHeader'
 
 const VelaPoint = () =>
-  <section>
+  <Section>
     <Grid template='1fr 1fr'>
-      <div className='description'>
-        <h1>Ponto Vela</h1>
+      <div>
+        <SectionHeader title='Ponto Vela' />
         <p>A primeira Rede de Recarga Rápida para bicicletas elétricas, desenvolvida pela Vela, chegou em São Paulo.</p>
         <p>Os pontos são distribuídos em estabelecimentos parceiros para todos os Velejadores aproveitarem.</p>
         <div>
@@ -21,17 +23,14 @@ const VelaPoint = () =>
       </div>
 
       <div className='figureWrapper'>
-        <div><VelaPointFigure /></div>
+        <VelaPointFigure />
       </div>
     </Grid>
     <style jsx>{`
-      .description div {
-        margin-top: 2em;
-      }
       .figureWrapper :global(svg) {
-        max-height: 260px;
+        max-height: 280px;
       }
     `}</style>
-  </section>
+  </Section>
 
 export default VelaPoint

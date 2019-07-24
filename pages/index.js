@@ -33,23 +33,17 @@ const HomePage = ({ images }) =>
         <Button big action>Monte a sua</Button>
       </Link>
     </div>
-    <Section>
-      <PaddedView>
-        <HomeBikes />
-      </PaddedView>
-    </Section>
+    <PaddedView>
+      <HomeBikes />
+    </PaddedView>
     <Inverter>
-      <Section>
-        <PaddedView>
-          <VelaPoint />
-        </PaddedView>
-      </Section>
-    </Inverter>
-    <Section>
       <PaddedView>
-        {images && <HomeAlbum images={images} />}
+        <VelaPoint />
       </PaddedView>
-    </Section>
+    </Inverter>
+    <PaddedView>
+      {images && <HomeAlbum images={images} />}
+    </PaddedView>
 
     <style jsx>{`
       .HomePage {
