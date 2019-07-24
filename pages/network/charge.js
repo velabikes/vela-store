@@ -31,12 +31,14 @@ const ChargePage = () =>
       </Section>
     </Inverter>
     <PaddedView>
-      <HowWorks />
+      <Section>
+        <HowWorks />
+      </Section>
     </PaddedView>
-    <About />
     <PaddedView>
-      <BePartOf />
-      <Features />
+      <Section>
+        <BePartOf />
+      </Section>
     </PaddedView>
     <Statistics />
     <HeatMap />
