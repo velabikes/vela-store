@@ -15,7 +15,7 @@ const ProductPage = ({
       <title>{product.title} - Vela Bikes</title>
     </Head>
     <Main>
-      { product && <ProductInfo product={product} /> }
+      { product.variants && <ProductInfo product={product} /> }
     </Main>
   </PaddedView>
 
