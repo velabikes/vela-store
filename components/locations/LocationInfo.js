@@ -16,7 +16,7 @@ const LocationsInfo = ({ name, address, hours, type }) =>
       )}
     </table>
     <style jsx>{`
-      h1, h4, .tags {
+      .tags, address {
         margin-bottom: 1rem;
       }
       tr {

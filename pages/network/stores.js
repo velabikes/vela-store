@@ -1,6 +1,7 @@
 import Head from 'next/head'
 // import fetch from 'isomorphic-fetch'
 import Main from 'components/Main'
+import MainHeader from 'components/MainHeader'
 import LocationInfo from 'components/locations/LocationInfo'
 import PaddedView from 'components/PaddedView'
 import Card from 'components/Card'
@@ -13,7 +14,7 @@ const Locations = ({ stores }) =>
       <meta name='description' content='Venha conhecer uma de nossas lojas oficiais, estamos em São Paulo, Brasilia, Curitiba e Rio de Janeiro' />
     </Head>
     <Main>
-      <h1>Nossas Lojas</h1>
+      <MainHeader title='Nossas Lojas' />
       <p>
         Conheça todas as versões da Vela através de nossas lojas exclusivas. Oferecemos experiências personalizadas de test-ride, serviços, ampla gama de acessórios e café fresco, em ambiente confortável e inclusivo para o universo do ciclismo e da mobilidade urbana elétrica.
       </p>

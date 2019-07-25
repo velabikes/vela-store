@@ -17,7 +17,8 @@ const ProductTeaser = ({ product }) =>
     </a></Link>
     <style jsx>{`
       h3 {
-        margin-top: 1rem
+        margin: .5rem 0 0;
+        font-size: 1.25rem;
       }
     `}</style>
   </div>
