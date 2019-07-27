@@ -2,6 +2,7 @@ import { compose, withHandlers, withState, withProps, withPropsOnChange, branch 
 import withCheckoutLineItemsAdd from '../../containers/withCheckoutLineItemsAdd'
 import withCheckoutId from '../../containers/withCheckoutId'
 import { toggleDrawer } from '../../lib/redux'
+import ProductFormLead from './ProductFormLead'
 import ProductVariantSelect from './ProductVariantSelect'
 import Button from '../Button'
 import ReactGA from 'react-ga'
@@ -29,6 +30,7 @@ const ProductForm = ({
     >
       { isAddToCartLoading ? 'Carregando...' : 'comprar' }
     </Button>
+    { selectedVariant && selectedVariant.edges.length === 1 && <ProductFormLead variant={selectedVariant.edges[0]} /> }
   </div>
 
 const handleAddToCartClick = ({
