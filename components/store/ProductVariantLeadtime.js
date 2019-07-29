@@ -1,6 +1,6 @@
 import { compose, withState, lifecycle, withProps, branch } from 'recompose'
 
-const ProductFormLead = ({ leadText }) =>
+const ProductVariantLeadtime = ({ leadText }) =>
   <div>
     { leadText }
   </div>
@@ -24,7 +24,7 @@ export default compose(
 
     return { leadText }
   })
-)(ProductFormLead)
+)(ProductVariantLeadtime)
 
 const getVariantLeadtime = async variantId => {
   const response = await fetch('/api/store/leadtime?variantId='+variantId)
