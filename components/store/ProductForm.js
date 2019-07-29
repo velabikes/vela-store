@@ -22,6 +22,9 @@ const ProductForm = ({
         onVariantSelect={onVariantSelect}
       />
     }
+    { selectedVariant && selectedVariant.edges.length === 1 && <div className='leadtime'>
+      <small><ProductFormLead variant={selectedVariant.edges[0]} /></small>
+    </div>}
     <Button
       action
       onClick={handleAddToCartClick}
@@ -30,7 +33,11 @@ const ProductForm = ({
     >
       { isAddToCartLoading ? 'Carregando...' : 'comprar' }
     </Button>
-    { selectedVariant && selectedVariant.edges.length === 1 && <ProductFormLead variant={selectedVariant.edges[0]} /> }
+    <style jsx>{`
+      .leadtime {
+        margin-bottom: 1em;
+      }
+    `}</style>
   </div>
 
 const handleAddToCartClick = ({
