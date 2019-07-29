@@ -2,7 +2,7 @@ import { compose, withHandlers, withState, withProps, withPropsOnChange, branch 
 import withCheckoutLineItemsAdd from '../../containers/withCheckoutLineItemsAdd'
 import withCheckoutId from '../../containers/withCheckoutId'
 import { toggleDrawer } from '../../lib/redux'
-import ProductFormLead from './ProductFormLead'
+import ProductVariantLeadtime from './ProductVariantLeadtime'
 import ProductVariantSelect from './ProductVariantSelect'
 import Button from '../Button'
 import ReactGA from 'react-ga'
@@ -23,7 +23,7 @@ const ProductForm = ({
       />
     }
     { selectedVariant && selectedVariant.edges.length === 1 && <div className='leadtime'>
-      <small><ProductFormLead variant={selectedVariant.edges[0]} /></small>
+      <small><ProductVariantLeadtime variant={selectedVariant.edges[0]} /></small>
     </div>}
     <Button
       action
