@@ -30,6 +30,9 @@ module.exports = async (req, res) => {
     },{
       googlePlace: 'ChIJpydZ5j5YzpQR1V_gNLyvHV4',
       type: ['charger']
+    },{
+      googlePlace: 'ChIJlVqH9KVXzpQRgkyOBRW-Peo',
+      type: ['charger']
     }
   ]
 
