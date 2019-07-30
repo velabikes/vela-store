@@ -65,7 +65,6 @@ module.exports = async (req, res) => {
     res.setHeader('Content-Type', 'application/json')
     return res.end(JSON.stringify(placeArray))
   } catch (err) {
-    console.log('caralho')
     res.statusCode = 500
     return res.end()
   }
