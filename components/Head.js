@@ -81,8 +81,8 @@ const CustomHead = props =>
         box-sizing: border-box;
       }
       small {
-        font-size: 0.8rem;
-        color: #777;
+        font-size: 0.8em;
+        color: ${darkGray};
       }
       a, a:visited {
         color: ${velaGreen};
