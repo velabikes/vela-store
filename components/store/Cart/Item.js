@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types'
 import { compose, lifecycle, withHandlers } from 'recompose'
-import Price from '../Price'
-import withCheckoutId from '../../containers/withCheckoutId'
-import withCheckoutLineItemsUpdate from '../../containers/withCheckoutLineItemsUpdate'
-import { velaGreen, velaBlue, velaRed } from '../../style/colors'
-import ProductImage from './ProductImage'
+import Price from 'components/Price'
+import withCheckoutId from 'containers/withCheckoutId'
+import withCheckoutLineItemsUpdate from 'containers/withCheckoutLineItemsUpdate'
+import { velaGreen, velaBlue, velaRed } from 'style/colors'
+import ProductImage from 'components/store/ProductImage'
 
 const CartItem = ({ item, handleMoreClick, handleLessClick }) =>
   <tr key={item.node.title}>

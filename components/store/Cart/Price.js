@@ -1,5 +1,5 @@
-import Price from '../Price'
-import { lightGray } from '../../style/colors'
+import Price from 'components/Price'
+import { lightGray } from 'style/colors'
 
 const CartPrice = ({ checkout }) =>
   <div className='CartPrice'>
