@@ -72,9 +72,8 @@ const CustomHead = props =>
       section h1, nav h1 {
         font-size: 2rem;
       }
-
       hr {
-        margin: 1.61rem 0;
+        margin: 1.3rem 0;
         border: 1px solid #e2e2e2;
       }
       div {

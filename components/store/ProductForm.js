@@ -22,20 +22,26 @@ const ProductForm = ({
         onVariantSelect={onVariantSelect}
       />
     }
-    <Button
-      action
-      onClick={handleAddToCartClick}
-      disabled={hasOptions ? !(selectedVariant && selectedVariant.edges.length === 1) : false}
-      loading={isAddToCartLoading}
-    >
-      { isAddToCartLoading ? 'Carregando...' : 'comprar' }
-    </Button>
+    <div className='actions'>
+      <Button
+        action
+        onClick={handleAddToCartClick}
+        disabled={hasOptions ? !(selectedVariant && selectedVariant.edges.length === 1) : false}
+        loading={isAddToCartLoading}
+      >
+        { isAddToCartLoading ? 'Carregando...' : 'comprar' }
+      </Button>
+    </div>
     { selectedVariant && selectedVariant.edges.length === 1 && <div className='leadtime'>
       <ProductVariantLeadtime variant={selectedVariant.edges[0]} />
     </div>}
     <style jsx>{`
       .leadtime {
-        margin-bottom: 1em;
+        margin-bottom: 1rem;
+        font-weight: 700;
+      }
+      .actions {
+        margin-bottom: 1rem;
       }
     `}</style>
   </div>
