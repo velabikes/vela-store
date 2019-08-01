@@ -12,6 +12,8 @@ const ProductForm = ({
   handleAddToCartClick,
   isAddToCartLoading,
   onVariantSelect,
+  availableVariants,
+  sVariant,
   selectedVariant,
   hasOptions
 }) =>
@@ -32,7 +34,7 @@ const ProductForm = ({
         { isAddToCartLoading ? 'Carregando...' : 'comprar' }
       </Button>
     </div>
-    { selectedVariant && selectedVariant.edges.length === 1 && <div className='leadtime'>
+    { sVariant && <div className='leadtime'>
       <ProductVariantLeadtime variant={selectedVariant.edges[0]} />
     </div>}
     <style jsx>{`

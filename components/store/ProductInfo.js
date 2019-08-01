@@ -47,6 +47,8 @@ const ProductInfo = ({ product, setAvailableVariants, availableVariants, selecte
       <ProductForm
         product={product}
         selectedVariant={availableVariants}
+        sVariant={selectedVariant}
+        availableVariants={availableVariants}
         onVariantSelect={setAvailableVariants}
       />
       <hr />
