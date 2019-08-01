@@ -16,6 +16,6 @@ module.exports = async (req, res) => {
     res.end(JSON.stringify(0))
   }
   const variantInventory = variant.inventory_quantity
-  const leadTime = variantInventory > 0 ? 0 : 21
+  const leadTime = variantInventory > 0 ? 0 : 10
   res.end(JSON.stringify(leadTime))
 }

@@ -3,7 +3,7 @@ import Price from 'components/Price'
 
 const InstallmentPrice = ({ count, installmentValue }) =>
   <span>
-   ou {count}x de <Price value={installmentValue} />
+   ou {count}x de <Price value={installmentValue} /> sem juros.
   </span>
 
 export default compose(

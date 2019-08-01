@@ -20,7 +20,7 @@ export default compose(
       ? 'Consultando disponibilidade...'
       : leadtime === 0
         ? 'Disponivel para envio imediato.'
-        : `Disponivel em ${leadtime} dias.`
+        : `Disponivel em ${leadtime} dias úteis.`
 
     return { leadText }
   })
