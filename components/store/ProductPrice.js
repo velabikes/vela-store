@@ -1,9 +1,10 @@
 import { compose, withProps } from 'recompose'
 import Price from 'components/Price'
+import InstallmentPrice from 'components/store/InstallmentPrice'
 import { velaRed, offBlack } from 'style/colors'
 
-const ProductPrice = ({ baseValue, maxValue, compareAt }) =>
-  <span className='ProductPrice'>
+const ProductPrice = ({ baseValue, maxValue, compareAt, showInstallment }) =>
+  <div className='ProductPrice'>
     {compareAt && <span className='compare'>
       <Price value={compareAt} />
     </span>}
@@ -13,6 +14,9 @@ const ProductPrice = ({ baseValue, maxValue, compareAt }) =>
     {maxValue && <span className='max'>
       {' - '} <Price value={maxValue} />
     </span>}
+    {showInstallment && <div className='istallment'>
+      <small><InstallmentPrice count={12} value={baseValue} /></small>
+    </div>}
     <style jsx>{`
       .ProductPrice {
         color: ${offBlack};
@@ -25,8 +29,11 @@ const ProductPrice = ({ baseValue, maxValue, compareAt }) =>
         color: ${compareAt ? velaRed : 'inherit'};
         font-weight: 700;
       }
+      .installment {
+        font-size: .75em;
+      }
     `}</style>
-  </span>
+  </div>
 
 export default compose(
   withProps(

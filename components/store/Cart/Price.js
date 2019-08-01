@@ -1,5 +1,6 @@
-import Price from '../Price'
-import { lightGray } from '../../style/colors'
+import Price from 'components/Price'
+import InstallmentPrice from 'components/store/InstallmentPrice'
+import { lightGray } from 'style/colors'
 
 const CartPrice = ({ checkout }) =>
   <div className='CartPrice'>
@@ -16,9 +17,12 @@ const CartPrice = ({ checkout }) =>
           <td><label>Impostos estaduais:</label></td>
           <td><Price value={checkout.totalTax} /></td>
         </tr> }
-        <tr>
+        <tr className='total'>
           <td><label>Total:</label></td>
           <td><Price value={checkout.totalPrice} /></td>
+        </tr>
+        <tr>
+          <tf /><td><InstallmentPrice count={12} value={checkout.totalPrice} /></td>
         </tr>
       </tbody>
     </table>
@@ -26,7 +30,7 @@ const CartPrice = ({ checkout }) =>
       td:last-child {
         text-align: right;
       }
-      tr:last-child td {
+      tr.total td {
         font-size: 1.25em;
         font-weight: 600;
       }

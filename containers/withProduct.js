@@ -25,13 +25,13 @@ query productQuery($handle: String!) {
         edges {
           node {
             id
+            availableForSale
             priceV2 {
               amount
             }
             compareAtPriceV2 {
               amount
             }
-            availableForSale
             selectedOptions {
               name
               value

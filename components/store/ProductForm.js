@@ -2,6 +2,7 @@ import { compose, withHandlers, withState, withProps, withPropsOnChange, branch 
 import withCheckoutLineItemsAdd from '../../containers/withCheckoutLineItemsAdd'
 import withCheckoutId from '../../containers/withCheckoutId'
 import { toggleDrawer } from '../../lib/redux'
+import ProductVariantLeadtime from './ProductVariantLeadtime'
 import ProductVariantSelect from './ProductVariantSelect'
 import Button from '../Button'
 import ReactGA from 'react-ga'
@@ -11,6 +12,8 @@ const ProductForm = ({
   handleAddToCartClick,
   isAddToCartLoading,
   onVariantSelect,
+  availableVariants,
+  sVariant,
   selectedVariant,
   hasOptions
 }) =>
@@ -21,14 +24,28 @@ const ProductForm = ({
         onVariantSelect={onVariantSelect}
       />
     }
-    <Button
-      action
-      onClick={handleAddToCartClick}
-      disabled={hasOptions ? !(selectedVariant && selectedVariant.edges.length === 1) : false}
-      loading={isAddToCartLoading}
-    >
-      { isAddToCartLoading ? 'Carregando...' : 'comprar' }
-    </Button>
+    <div className='actions'>
+      <Button
+        action
+        onClick={handleAddToCartClick}
+        disabled={hasOptions ? !(selectedVariant && selectedVariant.edges.length === 1) : false}
+        loading={isAddToCartLoading}
+      >
+        { isAddToCartLoading ? 'Carregando...' : 'comprar' }
+      </Button>
+    </div>
+    { sVariant && <div className='leadtime'>
+      <ProductVariantLeadtime variant={selectedVariant.edges[0]} />
+    </div>}
+    <style jsx>{`
+      .leadtime {
+        margin-bottom: 1rem;
+        font-weight: 700;
+      }
+      .actions {
+        margin-bottom: 1rem;
+      }
+    `}</style>
   </div>
 
 const handleAddToCartClick = ({

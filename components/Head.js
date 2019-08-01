@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { compose, lifecycle } from 'recompose'
-import { velaGreen, offBlack, offWhite, white } from 'style/colors'
+import { velaGreen, offBlack, darkGray, offWhite, white } from 'style/colors'
 import FacebookPixel from 'components/head/FacebookPixel'
 import Freshchat from 'components/head/Freshchat'
 import Heatmap from 'components/head/Heatmap'
@@ -72,17 +72,16 @@ const CustomHead = props =>
       section h1, nav h1 {
         font-size: 2rem;
       }
-
       hr {
-        margin: 1.61rem 0;
+        margin: 1.3rem 0;
         border: 1px solid #e2e2e2;
       }
       div {
         box-sizing: border-box;
       }
       small {
-        font-size: 0.8rem;
-        color: #777;
+        font-size: 0.8em;
+        color: ${darkGray};
       }
       a, a:visited {
         color: ${velaGreen};

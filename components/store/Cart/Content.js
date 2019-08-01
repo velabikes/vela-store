@@ -1,7 +1,7 @@
 import { compose, branch, renderComponent } from 'recompose'
-import CartItem from './CartItem'
-import CartPrice from './CartPrice'
-import Button from '../Button'
+import CartItem from 'components/store/Cart/Item'
+import CartPrice from 'components/store/Cart/Price'
+import Button from 'components/Button'
 
 const CartContent = ({ checkout }) =>
   <div className='CartContent'>
