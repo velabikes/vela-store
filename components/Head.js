@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { compose, lifecycle } from 'recompose'
-import { velaGreen, offBlack, offWhite, white } from 'style/colors'
+import { velaGreen, offBlack, darkGray, offWhite, white } from 'style/colors'
 import FacebookPixel from 'components/head/FacebookPixel'
 import Freshchat from 'components/head/Freshchat'
 import Heatmap from 'components/head/Heatmap'
