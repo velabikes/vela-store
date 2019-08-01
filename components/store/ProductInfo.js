@@ -40,6 +40,7 @@ const ProductInfo = ({ product, setSelectedVariant, selectedVariant }) =>
         <ProductPrice
           product={product}
           variant={product.variants.edges.length === 1 ? product.variants.edges[0] : selectedVariant && selectedVariant.edges[0]}
+          showInstallment
         />
       </div>
       <hr />

@@ -3,7 +3,7 @@ import Price from 'components/Price'
 import InstallmentPrice from 'components/store/InstallmentPrice'
 import { velaRed, offBlack } from 'style/colors'
 
-const ProductPrice = ({ baseValue, maxValue, compareAt }) =>
+const ProductPrice = ({ baseValue, maxValue, compareAt, showInstallment }) =>
   <div className='ProductPrice'>
     {compareAt && <span className='compare'>
       <Price value={compareAt} />
@@ -14,9 +14,9 @@ const ProductPrice = ({ baseValue, maxValue, compareAt }) =>
     {maxValue && <span className='max'>
       {' - '} <Price value={maxValue} />
     </span>}
-    <div className='istallment'>
+    {showInstallment && <div className='istallment'>
       <small><InstallmentPrice count={12} value={baseValue} /></small>
-    </div>
+    </div>}
     <style jsx>{`
       .ProductPrice {
         color: ${offBlack};
