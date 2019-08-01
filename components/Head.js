@@ -1,8 +1,9 @@
 import Head from 'next/head'
 import { compose, lifecycle } from 'recompose'
-import { velaGreen, offBlack, offWhite, lightGray, white } from '../style/colors'
-import FacebookPixel from './head/FacebookPixel'
-import Freshchat from './head/Freshchat'
+import { velaGreen, offBlack, offWhite, white } from 'style/colors'
+import FacebookPixel from 'components/head/FacebookPixel'
+import Freshchat from 'components/head/Freshchat'
+import Heatmap from 'components/head/Heatmap'
 
 const CustomHead = props =>
   <>
@@ -19,6 +20,7 @@ const CustomHead = props =>
     </Head>
     <FacebookPixel />
     <Freshchat />
+    <Heatmap />
     <style jsx global>{`
       body * {
         //outline: 1px solid rgba(200,0,0,0.1)
