@@ -1,4 +1,4 @@
-import { compose, withState } from 'recompose'
+import { compose, withState, withProps } from 'recompose'
 import withProduct from '../../containers/withProduct'
 import { HideOnDesktop, HideOnMobile } from '../HideOn'
 import Price from '../Price'
@@ -24,10 +24,10 @@ const ProductImageGallery = ({ product }) =>
     `}</style>
   </div>
 
-const ProductInfo = ({ product, setSelectedVariant, selectedVariant }) =>
+const ProductInfo = ({ product, setAvailableVariants, availableVariants, selectedVariant }) =>
   <div className='ProductInfo'>
     <div>
-      { product.variants && <ProductVariantImage variant={selectedVariant ? selectedVariant.edges[0] : product.variants.edges[0]} /> }
+      { product.variants && <ProductVariantImage variant={availableVariants ? availableVariants.edges[0] : product.variants.edges[0]} /> }
       <HideOnMobile>
         <ProductImageGallery product={product} />
       </HideOnMobile>
@@ -39,15 +39,15 @@ const ProductInfo = ({ product, setSelectedVariant, selectedVariant }) =>
       <div className='price'>
         <ProductPrice
           product={product}
-          variant={product.variants.edges.length === 1 ? product.variants.edges[0] : selectedVariant && selectedVariant.edges[0]}
+          variant={selectedVariant}
           showInstallment
         />
       </div>
       <hr />
       <ProductForm
         product={product}
-        selectedVariant={selectedVariant}
-        onVariantSelect={setSelectedVariant}
+        selectedVariant={availableVariants}
+        onVariantSelect={setAvailableVariants}
       />
       <hr />
       <div dangerouslySetInnerHTML={{ __html: product.descriptionHtml }} />
@@ -74,5 +74,10 @@ const ProductInfo = ({ product, setSelectedVariant, selectedVariant }) =>
   </div>
 
 export default compose(
-  withState('selectedVariant', 'setSelectedVariant', null)
+  withState('availableVariants', 'setAvailableVariants', ({ product }) => product.variants),
+  withProps(({ product, availableVariants }) => ({
+    selectedVariant: product.variants.edges.length === 1
+      ? product.variants.edges[0]
+      : availableVariants && availableVariants.edges.length === 1 && availableVariants.edges[0]
+  }))
 )(ProductInfo)
