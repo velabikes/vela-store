@@ -36,6 +36,15 @@ module.exports = async (req, res) => {
     },{
       googlePlace: 'ChIJeeiz-HFXzpQRGTOx8QZbpoQ',
       type: ['charger']
+    },{
+      googlePlace: 'ChIJy9BBJORWzpQReEuaiOtk0kU',
+      type: ['charger']
+    },{
+      googlePlace: 'ChIJ47W0GDdYzpQRGw-IqYoHn3k',
+      type: ['charger']
+    },{
+      googlePlace: 'ChIJixk9BXZXzpQRY2FAH25PxPU',
+      type: ['charger']
     }
   ]
 
