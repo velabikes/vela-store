@@ -19,7 +19,6 @@ const CustomHead = props =>
       <meta name='theme-color' content='#ffffff' />
     </Head>
     <FacebookPixel />
-    <Freshchat />
     <Heatmap />
     <style jsx global>{`
       body * {
