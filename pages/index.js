@@ -14,7 +14,7 @@ import VelaPoint from '../components/charge/VelaPoint'
 const HomePage = ({ images }) =>
   <div className='HomePage'>
     <Head>
-      <title>Vela : Bicicletas elétricas para cidades mais saudáveis.</title>
+      <title>Vela: Bicicletas elétricas para cidades mais saudáveis</title>
       <meta name='description' content='Conheça as bicicletas elétricas da Vela, desenvolvidas com design clássico e alta tecnologia. Feitas no Brasil.' />
       <meta property='og:url' content='https://velabikes.com.br' />
       <meta property='og:type' content='website' />

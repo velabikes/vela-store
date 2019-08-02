@@ -5,13 +5,18 @@ import VelaPointFigure from './VelaPointFigure'
 import Section from 'components/Section'
 import SectionHeader from 'components/SectionHeader'
 
+
 const VelaPoint = () =>
   <Section>
     <Grid template='1fr 1fr'>
       <div>
         <SectionHeader title='Ponto Vela' />
-        <p>A primeira Rede de Recarga Rápida para bicicletas elétricas, desenvolvida pela Vela, chegou em São Paulo.</p>
-        <p>Os pontos são distribuídos em estabelecimentos parceiros para todos os Velejadores aproveitarem.</p>
+        <div className="SectionBody">
+        <p>Desenvolvemos a primeira Rede de Recarga Rápida para bicicletas elétricas do Brasil!</p>
+        <p>Agora, pedalar pela cidade é uma experência ainda mais segura e conectada, com autonomia ilimitada pelo caminho.</p>
+        <p>Os pontos de carregamento são distribuídos por São Paulo, em diversos estabelecimentos parceiros, para todos os Velejadores aproveitarem.</p>
+        </div>
+
         <div>
           <Link href='/network/map' as='/rede/mapa'><a>
             <Button big>Onde encontrar</Button>
@@ -28,7 +33,11 @@ const VelaPoint = () =>
     </Grid>
     <style jsx>{`
       .figureWrapper :global(svg) {
-        max-height: 280px;
+        margin: 1em 0;
+      }
+
+      .SectionBody {
+        margin-bottom: 3em;
       }
     `}</style>
   </Section>
