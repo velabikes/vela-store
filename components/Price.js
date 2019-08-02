@@ -5,7 +5,7 @@ const Price = ({ formatedValue }) =>
     {formatedValue}
   </span>
 
-const intToBRL = n => parseInt(n).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', currencyDisplay: 'symbol' })
+const intToBRL = n => parseFloat(n).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', currencyDisplay: 'symbol' })
 
 export default compose(
   withProps(
