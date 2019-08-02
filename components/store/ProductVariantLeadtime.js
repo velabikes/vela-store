@@ -19,8 +19,8 @@ export default compose(
     const leadText = loading
       ? 'Consultando disponibilidade...'
       : leadtime === 0
-        ? 'Disponivel para envio imediato.'
-        : `Disponivel em ${leadtime} dias úteis.`
+        ? 'Disponível para envio imediato.'
+        : `Disponível para envio em ${leadtime} dias úteis.`
 
     return { leadText }
   })
