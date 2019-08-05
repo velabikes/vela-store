@@ -1,4 +1,4 @@
-import { velaGreen, offBlack, offWhite, velaBlue } from '../style/colors'
+import { velaGreen, offBlack, lightGray, offWhite, velaBlue } from '../style/colors'
 import { compose, withProps } from 'recompose';
 
 const Button = ({
@@ -19,6 +19,17 @@ const Button = ({
     <style jsx>{`
       button {
         width: 100%;
+        padding: .5rem 1rem;
+        font-size: .8rem;
+        background: none;
+        border: 1px solid ${lightGray};
+        background: ${lightGray};
+        border-radius: 2rem;
+        margin-bottom: 0.5em;
+        box-shadow: 0px 2px 2px rgba(0,0,0,0.1);
+        color: ${offBlack};
+        text-transform: uppercase;
+        font-weight: 500;
       }
     `}</style>
   </>
