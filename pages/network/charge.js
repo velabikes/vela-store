@@ -17,10 +17,10 @@ import MainHeader from 'components/MainHeader'
 const ChargePage = () =>
   <Main className='charge'>
     <Head>
-      <title>Vela: Rede de recarga rápida.</title>
+      <title>Vela: Rede de Recarga Rápida</title>
     </Head>
     <PaddedView>
-      <MainHeader title='Rede de recarga rápida' />
+      <MainHeader title='Rede de Recarga Rápida'/>
     </PaddedView>
     <Banner />
     <Inverter>

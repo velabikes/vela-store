@@ -11,13 +11,13 @@ const PaddedView = props =>
       }
       @media only screen and (min-width: 400px) {
         .PaddedViewWrapper {
-          padding: 0rem 2rem;
+          padding: 0rem 4rem;
         }
       }
-      @media only screen and (min-width: 1366px) {
+      @media only screen and (min-width: 1280px) {
         .PaddedViewWrapper {
           width: 100%;
-          max-width: 1300px;
+          max-width: 1214px;
           margin: 0 auto;
         }
       }
