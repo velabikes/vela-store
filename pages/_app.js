@@ -21,7 +21,7 @@ class MyApp extends App {
   }
 
   componentDidMount () {
-    //LogRocket.init('rishga/vela-store')
+    LogRocket.init('rishga/vela-store')
   }
 
   render () {
