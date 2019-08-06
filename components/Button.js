@@ -25,7 +25,7 @@ const Button = ({
         padding: .5rem 1rem;
         font-size: .8rem;
         background: none;
-        border: 1px solid ${color};
+        border: 2px solid ${color};
         background: ${bgColor};
         border-radius: 2rem;
         margin-bottom: 0.5em;

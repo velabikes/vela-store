@@ -11,13 +11,13 @@ const OptionButton = ({ selected, label, value, onClick, ...props }) =>
     <style jsx>{`
       span {
         background-color: ${label.match(/\s*\[.*?\]\s*/g) && label.match(/\[(.*?)\]/)[1]};
-        margin: 0 auto;
-        display: ${label.match(/\s*\[.*?\]\s*/g) ? 'block' : 'none'};
-        height: 2em;
-        margin-bottom: ${0.61 * 0.61}em;
-        width: 2em;
+        display: ${label.match(/\s*\[.*?\]\s*/g) ? 'inline-block' : 'none'};
+        height: 1em;
+        width: 1em;
         border: 2px solid white;
         border-radius: 50%;
+        margin-right: 0.5em;
+        margin-bottom: -2px;
       }
     `}</style>
   </Button>
@@ -34,18 +34,22 @@ const ProductVariantSelectItem = ({
       <label>{name}</label>
     </div>
     {disabled && <small></small>}
-    {!disabled && values.map(value =>
-      <OptionButton
-        key={value}
-        value={value}
-        label={value}
-        selected={value === selectedValue}
-        onClick={() => onSelect({[name]: value})}
-      />
-    )}
+    <div className='field'>
+      {!disabled && values.map(value =>
+        <OptionButton
+          key={value}
+          value={value}
+          label={value}
+          selected={value === selectedValue}
+          onClick={() => onSelect({[name]: value})}
+        />
+      )}
+    </div>
     <style jsx>{`
       label {
-        opacity: ${disabled && '0.5'}
+        opacity: ${disabled && '0.5'};
+        margin-bottom: .5rem;
+        display: block;
       }
       .product-variant > :global(.btn span) {
         font-style: normal;
