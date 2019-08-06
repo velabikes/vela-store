@@ -47,6 +47,6 @@ export default compose(
   defaultProps({ color: lightGray, textColor: offBlack, bgColor: lightGray }),
   withProps(({ primary }) => primary && ({ color: velaGreen, bgColor: velaGreen, textColor: offWhite })),
   withProps(({ secondary }) => secondary && ({ color: velaBlue, bgColor: velaBlue, textColor: offWhite })),
-  withProps(({ outline, color }) => outline && ({ bgColor: 'transparent', textColor: color })),
+  withProps(({ outline, color }) => outline && ({ bgColor: 'transparent', textColor: color === lightGray ? offBlack : color })),
   withProps(({ disabled }) => disabled && ({ bgColor: midGray, textColor: darkGray, color: midGray })),
 )(Button)

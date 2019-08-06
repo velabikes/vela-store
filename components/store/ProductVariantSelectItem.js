@@ -2,6 +2,7 @@ import Button from '../Button'
 
 const OptionButton = ({ selected, label, value, onClick, ...props }) =>
   <Button
+    outline
     secondary={selected}
     onClick={onClick}
     {...props}
