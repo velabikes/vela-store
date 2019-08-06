@@ -29,10 +29,16 @@ const Button = ({
         background: ${bgColor};
         border-radius: 2rem;
         margin-bottom: 0.5em;
-        ${!disabled && 'box-shadow: 0px 2px 3px -1px rgba(0,0,0,0.15)'};
+        ${!disabled && 'box-shadow: 0px 3px 3px -2px rgba(0,0,0,0.15)'};
         color: ${textColor};
         text-transform: uppercase;
         font-weight: 700;
+        transition: .2s transform, .2s box-shadow;
+        -webkit-tap-highlight-color: transparent;
+      }
+      button:active {
+        transform: translateY(2px);
+        box-shadow: none;
       }
     `}</style>
   </>
