@@ -13,6 +13,7 @@ import HeatMap from 'components/charge/HeatMap'
 import PaddedView from 'components/PaddedView'
 import Main from 'components/Main'
 import MainHeader from 'components/MainHeader'
+import Gray from '../../components/Gray';
 
 const ChargePage = () =>
   <Main className='charge'>
@@ -31,11 +32,13 @@ const ChargePage = () =>
     <PaddedView>
       <HowWorks />
     </PaddedView>
-    <PaddedView>
-      <Section>
-        <BePartOf />
-      </Section>
-    </PaddedView>
+    <Gray>
+      <PaddedView>
+        <Section>
+          <BePartOf />
+        </Section>
+      </PaddedView>
+    </Gray>
     <Statistics />
     <HeatMap />
   </Main>

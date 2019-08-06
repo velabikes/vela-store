@@ -6,19 +6,19 @@ const Statistics = () =>
     <PaddedView>
       <div className='items'>
         <div className='statistic'>
-          <h2>1.5K</h2>
-          <p>Velas circulando
+          <h3>1.6K</h3>
+          <p>Velejadores pedalando
           em São Paulo</p>
         </div>
 
         <div className='statistic'>
-          <h2>500</h2>
+          <h3>500</h3>
           <p>Ciclistas elétricos
           diários no mapa</p>
         </div>
 
         <div className='statistic price'>
-          <h2>R$0,05</h2>
+          <h3>R$0,05</h3>
           <p>Custo fixo por recarga
           para o estabelecimento</p>
         </div>
@@ -39,23 +39,24 @@ const Statistics = () =>
         padding: 3rem 0;
         min-width: 33%;
       }
-      .statistics .statistic h2 {
-        font-size: 4rem;
+      .statistics .statistic h3 {
+        font-size: 3rem;
         color: ${velaGreen};
         margin: 0;
 
         text-shadow:
-          -2px -2px 0 ${offWhite},
-          2px -2px 0 ${offWhite},
-          -2px 2px 0 ${offWhite},
-          2px 2px 0 ${offWhite};
+          -1px -1px 0 ${offWhite},
+          1px -1px 0 ${offWhite},
+          -1px 1px 0 ${offWhite},
+          1px 1px 0 ${offWhite};
       }
       .statistics .statistic p {
         margin: 0 auto;
-        max-width: 66%;
+        max-width: 50%;
         text-transform: uppercase;
         font-style: italic;
         line-height: 1;
+        font-size: 0.75rem;
       }
 
       @media only screen and (min-width: 768px) {
@@ -66,7 +67,15 @@ const Statistics = () =>
         .statistics .statistic.price {
           grid-column: 1 / span 2;
         }
+      }
 
+      @media only screen and (max-width: 768px) {
+        .statistics .statistic {
+          padding: 2rem 0;
+        }
+        .statistics .statistic p {
+          max-width: 60%;
+        }
       }
     `}</style>
   </div>

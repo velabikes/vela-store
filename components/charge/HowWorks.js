@@ -10,16 +10,15 @@ const HowWorks = () =>
       <div className='card'>
         <img src='/static/low-battery.png' />
         <div className='description'>
-          <h2>Ficou sem bateria?</h2>
-          <p>Fique tranquilo!<br />
-          Agora você pode recarregar pelo caminho.</p>
+          <h4>Acabou a bateria?</h4>
+          <p>Fique tranquilo! Agora você pode recarregar pelo caminho.</p>
         </div>
       </div>
 
       <div className='card'>
         <img src='/static/find-vela-point.png' />
         <div className='description'>
-          <h2>Procure um ponto Vela</h2>
+          <h4>Encontre um Ponto Vela</h4>
           <p>Basta conferir no mapa nossa rede de cafés parceiros.</p>
         </div>
       </div>
@@ -27,17 +26,16 @@ const HowWorks = () =>
       <div className='card last'>
         <img src='/static/wait.png' />
         <div className='description'>
-          <h2>Espere 10 minutos</h2>
-          <p>Relaxe, tome um café e aproveite o fim do percurso sem se preocupar.</p>
+          <h4>Espere 10 minutos</h4>
+          <p>Aproveite, tome um café e curta o percurso sem se preocupar.</p>
         </div>
       </div>
     </Grid>
 
     <style>{`
-      .card h2 {
+      .card h4 {
         margin-bottom: 0;
         margin-top: 1rem;
-        font-size: 1.5rem;
       }
       .card .description {
         text-align: center;

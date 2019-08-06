@@ -4,7 +4,7 @@ const SectionHeader = ({ title, tagline }) =>
     {tagline && <p>{tagline}</p>}
     <style jsx>{`
       .SectionHeader {
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
       }
       h1 {
         margin-bottom: 0;

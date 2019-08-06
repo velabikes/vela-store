@@ -22,17 +22,16 @@ const HeatMap = () =>
         height: fit-content;
       }
       .heat-map .map {
-        background-color: #d0d0d0;
+        background-color: #e8e8e8;
       }
       .heat-map-description {
         position: relative;
-        margin: 0 2rem;
-        padding: 2em;
-        background-color: rgba(208, 208, 208, 0.9);
+        padding: 3em;
+        background-color: rgb(232,232,232, 0.8);
       }
       .heat-map-description h1 {
         // font-size: 3rem;
-        margin: 0 0 2rem;
+        margin: 0 0 3rem;
       }
       .heat-map-description p {
         text-align: justify;
@@ -42,7 +41,7 @@ const HeatMap = () =>
         text-align: left;
         font-weight: bold;
         font-style: italic;
-        margin-bottom: 2em;
+        margin-bottom: 3em;
       }
       
       @media only screen and (min-width: 768px) {
