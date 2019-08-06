@@ -19,10 +19,10 @@ const VelaPoint = () =>
 
         <div>
           <Link href='/network/map' as='/rede/mapa'><a>
-            <Button big>Onde encontrar</Button>
+            <Button primary>Onde encontrar</Button>
           </a></Link>
           <Link href='https://velabikes.freshdesk.com/support/solutions/folders/43000558455tii'><a>
-            <Button big>Saiba mais</Button>
+            <Button primary outline>Saiba mais</Button>
           </a></Link>
         </div>
       </div>
