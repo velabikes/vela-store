@@ -2,9 +2,7 @@ import Button from '../Button'
 
 const OptionButton = ({ selected, label, value, onClick, ...props }) =>
   <Button
-  action
-    small
-    inverted={!selected}
+    secondary={selected}
     onClick={onClick}
     {...props}
   >

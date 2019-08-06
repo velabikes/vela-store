@@ -1,4 +1,4 @@
-import { velaGreen, offBlack, darkGray, lightGray, offWhite, velaBlue } from '../style/colors'
+import { velaGreen, offBlack, darkGray, midGray, lightGray, offWhite, velaBlue } from '../style/colors'
 import { compose, withProps, defaultProps } from 'recompose';
 
 const Button = ({
@@ -33,7 +33,7 @@ const Button = ({
         color: ${textColor};
         text-transform: uppercase;
         font-weight: 700;
-        transition: .2s transform, .2s box-shadow;
+        transition: .2s transform, .2s box-shadow, .3s background linear, .3s border linear;
         -webkit-tap-highlight-color: transparent;
       }
       button:active {
@@ -48,5 +48,5 @@ export default compose(
   withProps(({ primary }) => primary && ({ color: velaGreen, bgColor: velaGreen, textColor: offWhite })),
   withProps(({ secondary }) => secondary && ({ color: velaBlue, bgColor: velaBlue, textColor: offWhite })),
   withProps(({ outline, color }) => outline && ({ bgColor: 'transparent', textColor: color })),
-  withProps(({ disabled }) => disabled && ({ bgColor: lightGray, textColor: darkGray, color: lightGray })),
+  withProps(({ disabled }) => disabled && ({ bgColor: midGray, textColor: darkGray, color: midGray })),
 )(Button)
