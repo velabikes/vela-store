@@ -18,6 +18,7 @@ const Locations = ({ stores }) =>
       <p>
         Conheça todas as versões da Vela através de nossas lojas exclusivas. Oferecemos experiências personalizadas de test-ride, serviços, ampla gama de acessórios e café fresco, em ambiente confortável e inclusivo para o universo do ciclismo e da mobilidade urbana elétrica.
       </p>
+      <br />
       {stores && stores.map(({ photo, ...locationInfo }) =>
         <div
           className='store'

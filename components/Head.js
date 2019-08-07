@@ -92,10 +92,7 @@ const CustomHead = props =>
         line-height: 1.5em;
         font-family: neue-haas-grotesk-text, sans-serif;
         margin-top: 0;
-        margin-bottom: 1em;
-      }
-      p:last-child:not(:first-child) {
-        margin-bottom: 0
+        margin-bottom: .8em;
       }
       img {
         vertical-align: middle;
