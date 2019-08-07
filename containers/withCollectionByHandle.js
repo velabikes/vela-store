@@ -6,6 +6,10 @@ query collectionByHandleQuery($handle: String!) {
   shop {
     collectionByHandle(handle: $handle) {
       title
+      descriptionHtml
+      image(maxWidth: 2000) {
+        transformedSrc
+      }
       products(first: 32) {
         edges {
           node {
