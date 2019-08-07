@@ -26,10 +26,10 @@ const ProductForm = ({
     }
     <div className='actions'>
       <Button
-        action
         onClick={handleAddToCartClick}
         disabled={hasOptions ? !(selectedVariant && selectedVariant.edges.length === 1) : false}
         loading={isAddToCartLoading}
+        primary
       >
         { isAddToCartLoading ? 'Carregando...' : 'comprar' }
       </Button>
