@@ -6,6 +6,7 @@ import HomeImage from 'components/home/HomeImage'
 import HomeBikes from 'components/home/HomeBikes'
 import HomeAlbum from 'components/home/HomeAlbum'
 import PaddedView from 'components/PaddedView'
+import Grid from 'components/Grid'
 import Inverter from 'components/Inverter'
 import Section from 'components/Section'
 import Button from '../components/Button'
@@ -26,15 +27,18 @@ const HomePage = ({ images }) =>
     <div className='cover'>
       <HomeImage />
       <div className='cta'>
-        <div>
-          <div className='slogan'>
-            <h1>#VADEVELA</h1>
-            <h4>Bicicletas elétricas para cidades mais saudáveis</h4>
+        <div className='slogan'>
+          <p><strong>Bicicletas elétricas <br/> para cidades mais saudáveis</strong></p>
+          <div className='actions'>
+            <Link href='/store?handle=vela-1' as='/loja/vela-1'>
+              <Button primary>Compre a sua</Button>
+            </Link>
+            <Link href='/store?handle=vela-1' as='/loja/vela-1'>
+              <Button primary outline>Nossas lojas</Button>
+            </Link>
           </div>
-          <Link href='/store?handle=vela-1' as='/loja/vela-1'>
-            <Button primary outline>Monte a sua</Button>
-          </Link>
         </div>
+        <h1>#VADEVELA</h1>
       </div>
     </div>
     <PaddedView>
@@ -61,33 +65,36 @@ const HomePage = ({ images }) =>
         right: 0;
         bottom: 0;
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        background-color: rgba(231,231,233, 0.6);
+        flex-direction: column;
+        background-color: rgba(221,221,223, 0.2);
         padding: 2rem;
       }
-      .cta > div {
-        max-width: 520px;
-        margin: 0 auto;
+      .slogan > p {
+        font-size: 1.25em;
       }
-      .slogan {
-        margin-bottom: 1rem;
-      }
-      h1, h4 {
-        margin: 0
-      }
-      .promotion {
-        position: fixed;
-        bottom: 2em;
-        right: 2em;
+      h1 {
+        color: white;
       }
       @media only screen and (min-width: 768px) {
         h1 {
-          font-size: 4em;
+          font-size: 6em;
+          margin-bottom: 32vh;
         }
         h4 {
           font-size: 1.5em;
           font-weight: 600;
+        }
+        .slogan > p {
+          font-size: 1.5em;
+          padding: 0 2rem;
+        }
+        .actions {
+          display: flex;
+        }
+        .actions > :global(*) {
+          margin: 0 .25rem;
         }
         img {
           height: calc(100vh);
