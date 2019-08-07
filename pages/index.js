@@ -33,7 +33,7 @@ const HomePage = ({ images }) =>
             <Link href='/store?handle=vela-1' as='/loja/vela-1'>
               <Button primary>Compre a sua</Button>
             </Link>
-            <Link href='/store?handle=vela-1' as='/loja/vela-1'>
+            <Link href='/network/stores' as='/rede/lojas'>
               <Button primary outline>Nossas lojas</Button>
             </Link>
           </div>
