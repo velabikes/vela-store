@@ -4,7 +4,7 @@ const MainHeader = ({ title, tagline }) =>
     {tagline && <p>{tagline}</p>}
     <style jsx>{`
       .MainHeader {
-        margin-bottom: 2rem;
+        margin-bottom: 1.5rem;
       }
       h1 {
         margin-bottom: 0;

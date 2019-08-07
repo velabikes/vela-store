@@ -14,10 +14,14 @@ const Locations = ({ stores }) =>
       <meta name='description' content='Venha conhecer uma de nossas lojas oficiais, estamos em São Paulo, Brasilia, Curitiba e Rio de Janeiro' />
     </Head>
     <Main>
-      <MainHeader title='Nossas Lojas' />
+      <MainHeader
+        title='Nossas Lojas'
+        tagline='Conheça nossos produtos em uma loja Vela'
+      />
       <p>
-        Conheça todas as versões da Vela através de nossas lojas exclusivas. Oferecemos experiências personalizadas de test-ride, serviços, ampla gama de acessórios e café fresco, em ambiente confortável e inclusivo para o universo do ciclismo e da mobilidade urbana elétrica.
+        Oferecemos em nossas lojas experiências de test-ride, serviços, ampla gama de acessórios e café fresco, em ambiente confortável e inclusivo para o universo do ciclismo e da mobilidade urbana elétrica.
       </p>
+      <br />
       {stores && stores.map(({ photo, ...locationInfo }) =>
         <div
           className='store'

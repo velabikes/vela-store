@@ -17,7 +17,11 @@ const Store = ({
       <Head>
         <title>{collection && collection.title} - Vela Bikes</title>
       </Head>
-      <MainHeader title={collection && collection.title} />
+      <MainHeader
+         title={collection && collection.title}
+      />
+      <div dangerouslySetInnerHTML={{__html: collection.descriptionHtml}} />
+      <br />
       <ProductList products={collection && collection.products} loading={isCollectionLoading} />
     </Main>
   </PaddedView>

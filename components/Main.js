@@ -3,7 +3,7 @@ const Main = ({ children }) =>
     {children}
     <style jsx>{`
       main {
-        padding: 1rem 0
+        padding: 1.5rem 0
       }
     `}</style>
   </main>
