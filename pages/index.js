@@ -6,6 +6,7 @@ import HomeImage from 'components/home/HomeImage'
 import HomeBikes from 'components/home/HomeBikes'
 import HomeAlbum from 'components/home/HomeAlbum'
 import PaddedView from 'components/PaddedView'
+import Grid from 'components/Grid'
 import Inverter from 'components/Inverter'
 import Section from 'components/Section'
 import Button from '../components/Button'
@@ -23,15 +24,22 @@ const HomePage = ({ images }) =>
       <meta property='og:image' content='https://gallery.mailchimp.com/68a0cce7cc109d78a8b44d7a0/images/69c9e416-74cd-4be5-a8db-7a04763999cb.jpg' />
       <meta property='fb:app_id' content='373948403355114' />
     </Head>
-    <HomeImage />
-    <div className='cta'>
-      <div className='slogan'>
+    <div className='cover'>
+      <HomeImage />
+      <div className='cta'>
+        <div className='slogan'>
+          <p><strong>Bicicletas elétricas <br/> para cidades mais saudáveis</strong></p>
+          <div className='actions'>
+            <Link href='/store?handle=vela-1' as='/loja/vela-1'>
+              <Button primary>Compre a sua</Button>
+            </Link>
+            <Link href='/network/stores' as='/rede/lojas'>
+              <Button primary outline>Nossas lojas</Button>
+            </Link>
+          </div>
+        </div>
         <h1>#VADEVELA</h1>
-        <h4>Bicicletas elétricas para cidades mais saudáveis</h4>
       </div>
-      <Link href='/store?handle=vela-1' as='/loja/vela-1'>
-        <Button big action>Monte a sua</Button>
-      </Link>
     </div>
     <PaddedView>
       <HomeBikes />
@@ -46,33 +54,51 @@ const HomePage = ({ images }) =>
     </PaddedView>
 
     <style jsx>{`
-      .HomePage {
+      .cover {
          position: relative;
       }
       .cta {
-        text-align: right;
+        text-align: center;
         position: absolute;
-        right: 1rem;
-        top: 1rem;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        background-color: rgba(221,221,223, 0.2);
+        padding: 2rem;
       }
-      .slogan {
-        margin-bottom: 1rem;
+      .slogan > p {
+        font-size: 1.25em;
       }
-      h1, h4 {
-        margin: 0
-      }
-      .promotion {
-        position: fixed;
-        bottom: 2em;
-        right: 2em;
+      h1 {
+        color: white;
+        margin-bottom: 32vh;
+        font-size: 3rem;
       }
       @media only screen and (min-width: 768px) {
+        h1 {
+          font-size: 6em;
+        }
+        h4 {
+          font-size: 1.5em;
+          font-weight: 600;
+        }
+        .slogan > p {
+          font-size: 1.5em;
+          padding: 0 2rem;
+        }
+        .actions {
+          display: flex;
+        }
+        .actions > :global(*) {
+          margin: 0 .25rem;
+        }
         img {
           height: calc(100vh);
-        }
-        .cta {
-          top: calc(1% + 2rem);
-          right: calc(1% + 2rem);
         }
       }
     `}</style>

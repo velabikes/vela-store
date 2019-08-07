@@ -25,9 +25,9 @@ const MainMenu = () =>
       <li><Link href='https://velabikes.freshdesk.com/support/home'><a>
         Suporte
       </a></Link></li>
-      <li><Link href='/store?handle=outlet' as='/loja/outlet'>
+      {/* <li><Link href='/store?handle=outlet' as='/loja/outlet'>
         <a className='outlet'>Outlet</a>
-      </Link></li>
+      </Link></li> */}
     </ul>
     <style jsx>{`
       ul {
