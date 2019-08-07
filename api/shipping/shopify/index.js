@@ -79,6 +79,18 @@ module.exports = async (req, res) => {
         }]
       }))
     )
+  } else if (true) {
+    return (
+      res.end(JSON.stringify({
+        rates: [{
+          service_name: 'Frete Grátis - #PAIDEVELA',
+          service_code: 'FGPV',
+          total_price: '0',
+          description: '10 dias úteis',
+          currency: 'BRL'
+        }]
+      }))
+    )
   } else if (['SP', 'RJ'].some(v => v === destination.province)) {
     return (
       res.end(JSON.stringify({
