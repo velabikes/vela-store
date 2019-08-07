@@ -63,7 +63,7 @@ const HomePage = ({ images }) =>
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: rgba(220,220,220,0.4);
+        background-color: rgba(231,231,233, 0.6);
         padding: 2rem;
       }
       .cta > div {
