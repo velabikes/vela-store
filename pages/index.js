@@ -23,15 +23,19 @@ const HomePage = ({ images }) =>
       <meta property='og:image' content='https://gallery.mailchimp.com/68a0cce7cc109d78a8b44d7a0/images/69c9e416-74cd-4be5-a8db-7a04763999cb.jpg' />
       <meta property='fb:app_id' content='373948403355114' />
     </Head>
-    <HomeImage />
-    <div className='cta'>
-      <div className='slogan'>
-        <h1>#VADEVELA</h1>
-        <h4>Bicicletas elétricas para cidades mais saudáveis</h4>
+    <div className='cover'>
+      <HomeImage />
+      <div className='cta'>
+        <div>
+          <div className='slogan'>
+            <h1>#VADEVELA</h1>
+            <h4>Bicicletas elétricas para cidades mais saudáveis</h4>
+          </div>
+          <Link href='/store?handle=vela-1' as='/loja/vela-1'>
+            <Button primary outline>Monte a sua</Button>
+          </Link>
+        </div>
       </div>
-      <Link href='/store?handle=vela-1' as='/loja/vela-1'>
-        <Button big action>Monte a sua</Button>
-      </Link>
     </div>
     <PaddedView>
       <HomeBikes />
@@ -46,14 +50,25 @@ const HomePage = ({ images }) =>
     </PaddedView>
 
     <style jsx>{`
-      .HomePage {
+      .cover {
          position: relative;
       }
       .cta {
-        text-align: right;
+        text-align: center;
         position: absolute;
-        right: 1rem;
-        top: 1rem;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(220,220,220,0.4);
+        padding: 2rem;
+      }
+      .cta > div {
+        max-width: 520px;
+        margin: 0 auto;
       }
       .slogan {
         margin-bottom: 1rem;
@@ -67,12 +82,15 @@ const HomePage = ({ images }) =>
         right: 2em;
       }
       @media only screen and (min-width: 768px) {
+        h1 {
+          font-size: 4em;
+        }
+        h4 {
+          font-size: 1.5em;
+          font-weight: 600;
+        }
         img {
           height: calc(100vh);
-        }
-        .cta {
-          top: calc(1% + 2rem);
-          right: calc(1% + 2rem);
         }
       }
     `}</style>
