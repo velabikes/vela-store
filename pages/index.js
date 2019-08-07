@@ -76,11 +76,12 @@ const HomePage = ({ images }) =>
       }
       h1 {
         color: white;
+        margin-bottom: 32vh;
+        font-size: 3rem;
       }
       @media only screen and (min-width: 768px) {
         h1 {
           font-size: 6em;
-          margin-bottom: 32vh;
         }
         h4 {
           font-size: 1.5em;
