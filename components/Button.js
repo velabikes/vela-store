@@ -35,6 +35,8 @@ const Button = ({
         font-weight: 700;
         transition: .2s transform, .2s box-shadow, .3s background linear, .3s border linear;
         -webkit-tap-highlight-color: transparent;
+        cursor: pointer;
+        outline: none;
       }
       button:active {
         transform: translateY(2px);
