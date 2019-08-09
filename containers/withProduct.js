@@ -14,7 +14,7 @@ query productQuery($handle: String!) {
         name
         values
       }
-      images(first: 40, maxWidth: 1600) {
+      images(first: 40, maxWidth: 900) {
         edges {
           node {
             src
@@ -36,7 +36,7 @@ query productQuery($handle: String!) {
               name
               value
             }
-            image(maxWidth: 1600) {
+            image(maxWidth: 900) {
               src
             }
           }
