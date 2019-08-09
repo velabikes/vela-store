@@ -4,7 +4,8 @@ import CartPrice from 'components/store/Cart/Price'
 import Button from 'components/Button'
 
 const CartContent = ({ checkout }) =>
-  <div className='CartContent'>
+  <section className='CartContent'>
+    <h1>Carrinho</h1>
     <div className='items'>
       <table>
         <tbody>
@@ -18,13 +19,13 @@ const CartContent = ({ checkout }) =>
     </div>
     <div className='footer'>
       <small />
-      <Button action onClick={() => window.location.replace(checkout.webUrl)}>Finalizar</Button>
+      <Button primary onClick={() => window.location.replace(checkout.webUrl)}>Finalizar Compra</Button>
     </div>
     <style jsx>{`
       .CartContent {
-        flex: 1;
         display: flex;
         flex-direction: column;
+        height: 100%;
       }
       .items {
         flex: 1
@@ -39,7 +40,7 @@ const CartContent = ({ checkout }) =>
         align-items: center;
       }
     `}</style>
-  </div>
+  </section>
 
 export default compose(
   branch(

@@ -6,7 +6,7 @@ import { Provider } from 'react-redux'
 import withRedux from 'next-redux-wrapper'
 import { ApolloProvider } from 'react-apollo'
 import withGA from 'next-ga'
-import LogRocket from 'logrocket'
+// import LogRocket from 'logrocket'
 import Progress from 'components/navigation/Progress'
 import withShopify from '../lib/shopify'
 import Head from '../components/Head'
@@ -21,7 +21,7 @@ class MyApp extends App {
   }
 
   componentDidMount () {
-    LogRocket.init('rishga/vela-store')
+    // LogRocket.init('rishga/vela-store')
   }
 
   render () {

@@ -26,6 +26,7 @@ const CartItem = ({ item, handleMoreClick, handleLessClick }) =>
         width: 20%;
         padding-left: 0;
         position: relative;
+        min-width: 64px;
       }
       td:first-child span {
         position: absolute;
@@ -42,14 +43,15 @@ const CartItem = ({ item, handleMoreClick, handleLessClick }) =>
         color: white;
       }
       td.name {
-        white-space: nowrap;
+        //white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
         padding-right: 1rem;
         font-weight: 600;
       }
       td.quantity {
-        width: 1.5em;
+        min-width: 1.5em;
+        font-weight: bold;
       }
       td.quantity a {
         display: block;

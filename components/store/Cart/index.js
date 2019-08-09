@@ -10,10 +10,7 @@ import CartContent from 'components/store/Cart/Content'
 
 const Cart = ({ checkout, isCheckoutLoading }) =>
   <PaddedView className='Cart'>
-    <section>
-      <h1>Carrinho</h1>
-      <CartContent checkout={checkout} loading={isCheckoutLoading} />
-    </section>
+    <CartContent checkout={checkout} loading={isCheckoutLoading} />
     <style jsx>{`
       :global(.Cart) {
         display: flex;
