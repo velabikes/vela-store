@@ -2,18 +2,28 @@ import { BackIcon } from 'components/Icons'
 import PropTypes from 'prop-types'
 import { offWhite } from '../style/colors'
 
-const Card = ({ children, onBackClick }) =>
+const Card = ({ children, onBackClick, media }) =>
   <div className='Card'>
-    {children}
+    {children && <div className='content'>
+      {children}
+    </div>}
+    {media && <div className='media'>
+      {media}
+    </div>}
     {onBackClick && <a href='#' onClick={onBackClick}>
       <BackIcon />
     </a>}
     <style jsx>{`
       .Card {
-        padding: 2rem;
         box-shadow: 0px .75rem 1rem -1.25rem rgba(20,20,20, 0.8);
         position: relative;
         background: ${offWhite}
+      }
+      .content {
+        padding: 2rem;
+      }
+      .media {
+        position
       }
       a {
         position: absolute;
@@ -26,6 +36,7 @@ const Card = ({ children, onBackClick }) =>
 
 Card.propTypes = {
   children: PropTypes.node,
+  media: PropTypes.node,
   onBackClick: PropTypes.func
 }
 
