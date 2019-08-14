@@ -10,7 +10,7 @@ const Blog = () =>
         <title>Blog - Vela Bikes</title>
       </Head>
       <MainHeader
-        title={Blog}
+        title='Blog'
       />
     </Main>
   </PaddedView>
