@@ -75,6 +75,7 @@ module.exports = async (req, res) => {
   try {
     const placeArray = await Promise.all(locations.map(fetchLocationData))
     res.setHeader('Content-Type', 'application/json')
+    res.setHeader('Cache-Control', 's-maxage=86400')
     return res.end(JSON.stringify(placeArray))
   } catch (err) {
     res.statusCode = 500
