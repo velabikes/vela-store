@@ -4,8 +4,8 @@ import Main from 'components/Main'
 import MainHeader from 'components/MainHeader'
 import Grid from 'components/Grid'
 
-const post = [
-  {
+const post = {
+  paidevela: {
     title: '#PAIDEVELA',
     tagline: 'Bruno vê o futuro com uma maior cultura de ciclismo para seus filhos',
     date: 'Quarta-feira, 14 de agosto de 2019',
@@ -17,28 +17,28 @@ const post = [
     <p>Como pai, quando eles crescerem, sei que vão crescer em um meio totalmente diferente. Eu digo que a evolução vai ser rápida porque mesmo tendo demorado para essa consciência começar a ser criada, em pouco tempo, ela já é muito maior. Estamos bem longe ainda das cidades com a cultura de ciclismo, mas estamos no caminho certo. O sonho seria ter ciclofaixas espalhadas pela cidade inteira, antes vem as ciclofaixas, depois vem a consciência.</p>
     <p>Bruno Bianchini <a href="https://instagram.com/brunobcsb">@brunobcsb</a> - Pai, publicitário e Velejador </p>`
   }
-]
+}
 
-const BlogPostPaideVela = () =>
+const BlogPostPage = ({postContent}) =>
   <PaddedView>
     <Main>
       <Head>
         <title>Blog - Vela Bikes</title>
       </Head>
       <MainHeader
-        title={post[0].title}
+        title={postContent.title}
         tagline={<div>
-          <div>{post[0].tagline}</div>
-          <div><small>{post[0].date}</small></div>
+          <div>{postContent.tagline}</div>
+          <div><small>{postContent.date}</small></div>
         </div>}
       />
     </Main>
     
     <Grid template="1fr 1fr">
       <div className='PostImage'>
-        <img src={post[0].image}/>
+        <img src={postContent.image}/>
       </div>
-      <div className="SectionBody" dangerouslySetInnerHTML={{ __html: post[0].content}} />
+      <div className="SectionBody" dangerouslySetInnerHTML={{ __html: postContent.content}} />
     </Grid>
 
     <style jsx>{`
@@ -48,4 +48,11 @@ const BlogPostPaideVela = () =>
     `}</style>
   </PaddedView>
   
-export default BlogPostPaideVela
+  BlogPostPage.getInitialProps = ({ query }) => {
+    const { slug } = query  
+    const postContent = post[slug]  
+    
+    return { postContent }
+   }
+
+export default BlogPostPage
