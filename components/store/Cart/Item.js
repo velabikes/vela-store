@@ -23,7 +23,7 @@ const CartItem = ({ item, handleMoreClick, handleLessClick }) =>
     <td><Price value={item.node.variant && item.node.variant.price} /></td>
     <style jsx>{`
       td:first-child {
-        width: 20%;
+        width: 15%;
         padding-left: 0;
         position: relative;
         min-width: 64px;

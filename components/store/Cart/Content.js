@@ -28,7 +28,8 @@ const CartContent = ({ checkout }) =>
         height: 100%;
       }
       .items {
-        flex: 1
+        flex: 1;
+        overflow: scroll;
       }
       .items table {
         border-spacing: 0 1rem;

@@ -8,6 +8,7 @@ const PaddedView = props =>
     <style jsx>{`
       .PaddedViewWrapper {
         padding: 0 1rem;
+        max-height: 100%;
       }
       @media only screen and (min-width: 400px) {
         .PaddedViewWrapper {
