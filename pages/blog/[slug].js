@@ -16,11 +16,8 @@ const post = {
     <p>Como ciclista, se a gente quer respeito, nós temos que ser os mais conscientes no trânsito e propagar isso. A consciência tem que existir de todos os lados, mas quem tá de bike tem que conhecer seu espaço, tem que mostrar respeito e os benefícios para as pessoas no geral. Quem não respeita, furando faróis ou passando por pedestres, queima o filme de todos os ciclistas.</p>
     <p>Como pai, quando eles crescerem, sei que vão crescer em um meio totalmente diferente. Eu digo que a evolução vai ser rápida porque mesmo tendo demorado para essa consciência começar a ser criada, em pouco tempo, ela já é muito maior. Estamos bem longe ainda das cidades com a cultura de ciclismo, mas estamos no caminho certo. O sonho seria ter ciclofaixas espalhadas pela cidade inteira, antes vem as ciclofaixas, depois vem a consciência.</p>
     <p>Bruno Bianchini <a href="https://instagram.com/brunobcsb">@brunobcsb</a> - Pai, publicitário e Velejador </p>`
-  }
-}
-
-const post = {
-  velanashimano19: {
+  },
+  'vela-na-shimano-2019': {
     title: 'De bicicleta elétrica na Shimano Fest 2019 #vadevela',
     tagline: 'A Vela vai participar da Shimano Fest e você é nosso convidado especial',
     date: 'Terça-feira, 20 de agosto de 2019',
