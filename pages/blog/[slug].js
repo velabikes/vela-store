@@ -19,6 +19,28 @@ const post = {
   }
 }
 
+const post = {
+  velanashimano19: {
+    title: 'De bicicleta elétrica na Shimano Fest 2019 #vadevela',
+    tagline: 'A Vela vai participar da Shimano Fest e você é nosso convidado especial',
+    date: 'Terça-feira, 20 de agosto de 2019',
+    image: 'https://gallery.mailchimp.com/68a0cce7cc109d78a8b44d7a0/images/b78ef600-f60c-45d7-b39a-7abdf7d363d9.jpg',
+    content: `<p>A décima edição do evento vai rolar essa semana, no Memorial da América Latina em São Paulo. A Shimano acontece anualmente, reúne milhares de amantes de bicicletas e tem a intenção de levar o mundo do ciclismo para mais pessoas. São dois dias, 22 e 23 de agosto, dedicados ao mercado de bicicletas e os outros dois, 24 e 25, abertos ao público geral.</p>
+    <p>Convidamos todos: Velejadores, ciclistas e curiosos a conhecer o stand da Vela (nº 124) e acompanhar a gente nesse encontro incrível. Durante a feira, apresentaremos nossos modelos de bikes elétricas, além de contar mais sobre nossa história, valores e o que vem por aí!</p>
+    <p>A melhor parte é: você poderá realizar um test-ride com a Vela no cenário único do Memorial da América Latina e ainda concorrer a um GRUDI! Aproveite a programação e se encante ainda mais com o mundo das bicicletas. Vá na Shimano Fest 2019 e #vadevela</p>
+    <p><b>Horários:</b><br>
+    Quinta à sábado (22, 23 e 24/08) - 10h às 20h<br>
+    Domingo (25/08) - 10h às 17h
+    </p>
+    <p><b>Horários de test-ride:</b><br>
+    Quinta e sexta (22 e 23/08) - 10h às 17h30<br>
+    Sábado (24/08) - 12h30 às 15h e das 16h30 às 17h30<br>
+    Domingo (25/08) - 10h às 16h
+    </p>
+    <p>O stand da Vela fica no Lado A - Área Lojas (Cinza) e o local de testes no Lado A - Área Test-ride (Roxo). Confira o <a href="http://shimanofest.com.br/mapa/">mapa</a> da Shimano Fest 2019.</p>`
+  }
+}
+
 const BlogPostPage = ({postContent}) =>
   <PaddedView>
     <Main>
