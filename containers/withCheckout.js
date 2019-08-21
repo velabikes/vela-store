@@ -31,15 +31,16 @@ const checkout = gql`
 const withCheckout = graphql(checkout, {
   alias: 'withCheckout',
 
-  options ({ checkout, checkoutId, handleCheckoutCreation }) {
+  options ({ checkout, checkoutId, handleCheckoutCreation, isCheckoutLoading }) {
     const hoursPastCreation = checkout && dayjs().diff(dayjs(checkout.createdAt), 'hours')
     const withShippingRates = checkout && checkout.requiresShipping && checkout.shippingAddress
-    const isCheckoutExpired = hoursPastCreation > 72
+    const isCheckoutExpired = hoursPastCreation > 110
     const isCheckoutCompleted = checkout && checkout.completedAt
+    const isCheckoutNull = checkout === null && isCheckoutLoading === false
 
     return {
       variables: {
-        id: checkoutId && !isCheckoutExpired && !isCheckoutCompleted ? checkoutId : handleCheckoutCreation(),
+        id: (checkoutId && !isCheckoutExpired && !isCheckoutCompleted && !isCheckoutNull) ? checkoutId : handleCheckoutCreation(),
         withShippingRates: !!withShippingRates
       }
     }
