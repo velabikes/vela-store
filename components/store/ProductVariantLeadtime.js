@@ -1,8 +1,8 @@
 import { compose, withState, lifecycle, withProps, branch } from 'recompose'
 
-const ProductVariantLeadtime = ({ leadText, variant }) =>
+const ProductVariantLeadtime = ({ leadText }) =>
   <div>
-    { leadText } {variant.node.id}
+    { leadText }
   </div>
 
 export default compose(
