@@ -83,8 +83,8 @@ module.exports = async (req, res) => {
     return (
       res.end(JSON.stringify({
         rates: [{
-          service_name: 'Frete Grátis - #PAIDEVELA',
-          service_code: 'FGPV',
+          service_name: 'Frete Grátis',
+          service_code: 'FGN',
           total_price: '0',
           description: '10 dias úteis',
           currency: 'BRL'
