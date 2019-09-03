@@ -98,19 +98,6 @@ Locations.getInitialProps = () => {
       ['Sex', '09:00 - 18:00'],
       ['Sáb', '09:00 - 18:00']
     ]
-  }, {
-    name: 'Vela Rio',
-    address: ['Rua Aires de Saldanha, 28B', 'Copacabana'],
-    photo: 'https://gallery.mailchimp.com/68a0cce7cc109d78a8b44d7a0/images/3fac6c9a-2ee8-4040-9562-77d138901976.jpg',
-    hours: [
-      ['Dom', 'Fechado'],
-      ['Seg', '09:00 - 18:00'],
-      ['Ter', 'Fechado'],
-      ['Qua', '09:00 - 18:00'],
-      ['Qui', '09:00 - 18:00'],
-      ['Sex', '09:00 - 18:00'],
-      ['Sáb', '09:00 - 18:00']
-    ]
   }]
 
   return { stores }
