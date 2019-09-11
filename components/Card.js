@@ -1,14 +1,14 @@
 import { BackIcon } from 'components/Icons'
 import PropTypes from 'prop-types'
-import { offWhite } from '../style/colors'
+import { white } from '../style/colors'
 
 const Card = ({ children, onBackClick, media }) =>
   <div className='Card'>
-    {children && <div className='content'>
-      {children}
-    </div>}
     {media && <div className='media'>
       {media}
+    </div>}
+    {children && <div className='content'>
+      {children}
     </div>}
     {onBackClick && <a href='#' onClick={onBackClick}>
       <BackIcon />
@@ -17,7 +17,7 @@ const Card = ({ children, onBackClick, media }) =>
       .Card {
         box-shadow: 0px .75rem 1rem -1.25rem rgba(20,20,20, 0.8);
         position: relative;
-        background: ${offWhite}
+        background: ${white}
       }
       .content {
         padding: 2rem;
