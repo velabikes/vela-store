@@ -88,7 +88,7 @@ Locations.getInitialProps = () => {
   }, {
     name: 'Vela Curitiba',
     address: ['Alameda Prudente de Moraes 1071', 'Centro'],
-    photo: 'https://gallery.mailchimp.com/68a0cce7cc109d78a8b44d7a0/images/c9dd1978-6fad-484d-a4b5-8ad4b5d5fb06.jpg',
+    photo: 'https://gallery.mailchimp.com/68a0cce7cc109d78a8b44d7a0/images/f6dfc4d8-5992-453c-929a-5fe2f2c44010.jpg',
     hours: [
       ['Dom', 'Fechado'],
       ['Seg', 'Fechado'],
