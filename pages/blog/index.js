@@ -5,8 +5,10 @@ import MainHeader from 'components/MainHeader'
 import Prismic from 'prismic-javascript'
 import Grid from 'components/Grid'
 import Card from 'components/Card'
+import Button from 'components/Button'
+import { NextIcon } from 'components/Icons'
 
-const Blog = ({ posts }) =>
+const Blog = ({ posts, highlight }) =>
   <PaddedView>
     <Main>
       <Head>
@@ -16,6 +18,26 @@ const Blog = ({ posts }) =>
         title='Blog'
       />
       <section>
+        {[highlight].map(({ data: { cover, title, teaser }, uid }) => (
+          <Card
+            horizontal
+            media={<a href={`/blog/${uid}`}><img src={cover.url} alt={cover.alt} /></a>}
+          >
+            <a href={`/blog/${uid}`}><h2>{title[0].text}</h2></a>
+            <p>{teaser[0].text}</p>
+            <div className='actions'>
+              <Button
+                onClick={() => null}
+                primary
+              >
+                Ler mais <NextIcon />
+              </Button>
+            </div>
+          </Card>
+        ))}
+      </section>
+      <br />
+      <section>
         <Grid template='1fr 1fr 1fr'>
           {posts.map(({ data: { cover, title, teaser }, uid }) => (
             <Card
@@ -23,13 +45,23 @@ const Blog = ({ posts }) =>
             >
               <a href={`/blog/${uid}`}><h2>{title[0].text}</h2></a>
               <p>{teaser[0].text}</p>
+              <div className='actions'>
+                <a href={`/blog/${uid}`}>Ler mais  <NextIcon /></a>
+              </div>
             </Card>
           ))}
         </Grid>
       </section>
     </Main>
     <style jsx>{`
-
+      .actions {
+        position: absolute;
+        bottom: 24px;
+        right: 24px;
+      }
+      .actions svg {
+        transform: rotate(90deg);
+      }
     `}</style>
   </PaddedView>
 
@@ -37,8 +69,10 @@ Blog.getInitialProps = async ({ req }) => {
   const apiEndpoint = 'https://velabikes.prismic.io/api/v2'
   const api = await Prismic.getApi(apiEndpoint, { req })
   const { results } = await api.query('')
+  const posts = results.slice()
+  posts.shift()
 
-  return ({ posts: results })
+  return ({ posts: posts, highlight: results[0] })
 }
 
 export default Blog
