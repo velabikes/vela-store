@@ -30,7 +30,7 @@ const Blog = ({ posts, highlight }) =>
                 onClick={() => null}
                 primary
               >
-                Ler mais <NextIcon />
+                Ler mais <NextIcon fill='#FFFFFF' />
               </Button>
             </div>
           </Card>
@@ -46,7 +46,7 @@ const Blog = ({ posts, highlight }) =>
               <a href={`/blog/${uid}`}><h2>{title[0].text}</h2></a>
               <p>{teaser[0].text}</p>
               <div className='actions'>
-                <a href={`/blog/${uid}`}>Ler mais  <NextIcon /></a>
+                <a href={`/blog/${uid}`}>Ler mais  <NextIcon fill='#51776B' /></a>
               </div>
             </Card>
           ))}
@@ -58,9 +58,7 @@ const Blog = ({ posts, highlight }) =>
         position: absolute;
         bottom: 24px;
         right: 24px;
-      }
-      .actions svg {
-        transform: rotate(90deg);
+        display: flex;
       }
     `}</style>
   </PaddedView>
