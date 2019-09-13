@@ -1,6 +1,6 @@
 import { BackIcon } from 'components/Icons'
 import PropTypes from 'prop-types'
-import { white } from '../style/colors'
+import { white, offBlack } from '../style/colors'
 
 const Card = ({ children, onBackClick, media, horizontal }) =>
   <div className='Card'>
@@ -23,6 +23,13 @@ const Card = ({ children, onBackClick, media, horizontal }) =>
       }
       .content {
         padding: 2rem;
+      }
+      .content :global(h1),
+      .content :global(h2),
+      .content :global(h3) {
+        font-weight: 600;
+        text-transform: initial;
+        font-style: normal;
       }
       a {
         position: absolute;

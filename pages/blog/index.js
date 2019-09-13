@@ -20,15 +20,16 @@ const Blog = ({ posts, highlight }) =>
       <section>
         <PostHighlight post={highlight} />
       </section>
-      <br />
+      <br /><br />
       <section>
         <Grid template='1fr 1fr 1fr'>
           {posts.map(({ data: { cover, title, teaser }, uid }) => (
             <Card
               media={<a href={`/blog/${uid}`}><img src={cover.url} alt={cover.alt} /></a>}
             >
-              <a href={`/blog/${uid}`}><h2>{title[0].text}</h2></a>
+              <a href={`/blog/${uid}`}><h3>{title[0].text}</h3></a>
               <p>{teaser[0].text}</p>
+              <br />
               <div className='actions'>
                 <a href={`/blog/${uid}`}>Ler mais  <NextIcon fill='#51776B' /></a>
               </div>
