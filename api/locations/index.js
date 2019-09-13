@@ -46,13 +46,13 @@ module.exports = async (req, res) => {
       googlePlace: 'ChIJixk9BXZXzpQRY2FAH25PxPU',
       type: ['charger']
     },{
-      googlePlace: 'ChIJ_elqH0FXzpQRRoAPxQyLNvs',
+      googlePlace: 'ChIJ7-_Fxl1XzpQRDHUgRm86x9A',
       type: ['charger']
     },{
-      googlePlace: 'ChIJ47W0GDdYzpQRGw-IqYoHn3k',
+      googlePlace: 'ChIJF5K6jT5XzpQRrLPe9Tvg9os',
       type: ['charger']
     },{
-      googlePlace: 'ChIJixk9BXZXzpQRY2FAH25PxPU',
+      googlePlace: 'ChIJyUY7cy9XzpQRHUOkTVXkURY',
       type: ['charger']
     }
   ]
