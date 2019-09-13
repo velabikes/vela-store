@@ -45,6 +45,12 @@ module.exports = async (req, res) => {
     },{
       googlePlace: 'ChIJixk9BXZXzpQRY2FAH25PxPU',
       type: ['charger']
+    },{
+      googlePlace: 'ChIJF5K6jT5XzpQRrLPe9Tvg9os',
+      type: ['charger']
+    },{
+      googlePlace: 'ChIJyUY7cy9XzpQRHUOkTVXkURY',
+      type: ['charger']
     }
   ]
 
