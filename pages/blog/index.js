@@ -5,8 +5,8 @@ import MainHeader from 'components/MainHeader'
 import Prismic from 'prismic-javascript'
 import Grid from 'components/Grid'
 import Card from 'components/Card'
-import Button from 'components/Button'
 import { NextIcon } from 'components/Icons'
+import PostHighlight from 'components/blog/PostHighlight'
 
 const Blog = ({ posts, highlight }) =>
   <PaddedView>
@@ -18,23 +18,7 @@ const Blog = ({ posts, highlight }) =>
         title='Blog'
       />
       <section>
-        {[highlight].map(({ data: { cover, title, teaser }, uid }) => (
-          <Card
-            horizontal
-            media={<a href={`/blog/${uid}`}><img src={cover.url} alt={cover.alt} /></a>}
-          >
-            <a href={`/blog/${uid}`}><h2>{title[0].text}</h2></a>
-            <p>{teaser[0].text}</p>
-            <div className='actions'>
-              <Button
-                onClick={() => null}
-                primary
-              >
-                Ler mais <NextIcon fill='#FFFFFF' />
-              </Button>
-            </div>
-          </Card>
-        ))}
+        <PostHighlight post={highlight} />
       </section>
       <br />
       <section>

@@ -1,5 +1,5 @@
-import { velaGreen, offBlack, darkGray, midGray, lightGray, offWhite, velaBlue } from '../style/colors'
-import { compose, withProps, defaultProps } from 'recompose';
+import { velaGreen, offBlack, darkGray, midGray, lightGray, offWhite, velaBlue } from 'style/colors'
+import { compose, withProps, defaultProps } from 'recompose'
 
 const Button = ({
   children,
@@ -8,14 +8,12 @@ const Button = ({
   loading,
   color,
   bgColor,
-  textColor,
-  ...props
+  textColor
 }) =>
   <>
     <button
       onClick={!loading && onClick}
       disabled={disabled}
-      {...props}
     >
       {children}
     </button>
