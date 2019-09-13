@@ -5,7 +5,7 @@ const BePartOf = () =>
     </div>
 
     <div className='description'>
-      <p>Sabia que você pode aumentar as visitas ao seu estabelecimento sendo um Ponto Vela? Confira so benefícios abaixo e entre em contato com a gente!</p>
+      <p>Sabia que você pode aumentar as visitas ao seu estabelecimento sendo um Ponto Vela? Confira os benefícios abaixo e entre em contato com a gente!</p>
     </div>
 
     <style jsx>{`
