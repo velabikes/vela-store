@@ -30,7 +30,7 @@ const PostHightlight = ({ post: { data: { cover, title, teaser }, uid } }) =>
         min-height: 100%;
       }
       h2 {
-        min-width: 25vw;
+        min-width: 20vw;
       }
       .content {
         display: flex;
