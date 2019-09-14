@@ -1,4 +1,5 @@
 import { compose, withProps, withHandlers } from 'recompose'
+import PropTypes from 'prop-types'
 import Link from 'next/link'
 import PaddedView from 'components/PaddedView'
 import { toggleDrawer } from '../lib/redux'
@@ -121,6 +122,13 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
       }
     `}</style>
   </>
+
+Header.propTypes = {
+  children: PropTypes.node,
+  handleContentClick: PropTypes.func,
+  isMenuOpen: PropTypes.bool,
+  isCartOpen: PropTypes.bool
+}
 
 export default compose(
   withOpenDrawer,

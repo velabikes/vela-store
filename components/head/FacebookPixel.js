@@ -1,7 +1,7 @@
 import React from 'react'
 import Head from 'next/head'
 
-const FacebookPixel = () => (
+const FacebookPixel = () =>
   <Head>
     <script dangerouslySetInnerHTML={{
       __html: `!function(f,b,e,v,n,t,s)
@@ -20,6 +20,5 @@ const FacebookPixel = () => (
       src="https://www.facebook.com/tr?id=875099512610020&ev=PageView&noscript=1" />` }}
     />
   </Head>
-)
 
 export default FacebookPixel
