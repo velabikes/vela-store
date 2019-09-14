@@ -1,6 +1,7 @@
-import {offBlack} from 'style/colors'
+import PropTypes from 'prop-types'
+import { offBlack } from 'style/colors'
 
-const Inverter = ({children}) =>
+const Inverter = ({ children }) =>
   <div>
     {children}
     <style jsx>{`
@@ -24,5 +25,8 @@ const Inverter = ({children}) =>
     `}</style>
   </div>
 
-export default Inverter
+Inverter.propTypes = {
+  children: PropTypes.node
+}
 
+export default Inverter
