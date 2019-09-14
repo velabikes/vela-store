@@ -1,6 +1,7 @@
 import { compose, withHandlers, lifecycle } from 'recompose'
+import PropTypes from 'prop-types'
 import Router, { withRouter } from 'next/router'
-import { offWhite, lightGray } from '../style/colors'
+import { offWhite } from '../style/colors'
 import withOpenDrawer from '../containers/withOpenDrawer'
 import { toggleDrawer } from '../lib/redux'
 import { BackIcon } from '../components/Icons'
@@ -47,6 +48,12 @@ const HeaderDrawer = ({ children, visible, handleCloseClick }) =>
       }
     `}</style>
   </div>
+
+HeaderDrawer.propTypes = {
+  children: PropTypes.node,
+  handleCloseClick: PropTypes.func,
+  visible: PropTypes.bool
+}
 
 export default compose(
   withRouter,
