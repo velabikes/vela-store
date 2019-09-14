@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types'
 import Grid from 'components/Grid'
-import { velaGreen } from '../../style/colors'
 import Section from 'components/Section'
 import SectionHeader from 'components/SectionHeader'
+import { velaGreen } from '../../style/colors'
 
 const HomeAlbum = ({ images }) =>
   <div className='HomeAlbum'>

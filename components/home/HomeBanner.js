@@ -1,5 +1,5 @@
 import Card from 'components/Card'
-import { HideOnMobile, HideOnDesktop } from 'components/HideOn';
+import { HideOnMobile, HideOnDesktop } from 'components/HideOn'
 
 const HomeBikes = () =>
   <>
