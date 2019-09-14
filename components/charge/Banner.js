@@ -1,6 +1,11 @@
 const Banner = () =>
   <div className='banner'>
-    <iframe src='https://player.vimeo.com/video/344801026' frameborder='0' allow='autoplay; fullscreen' allowfullscreen />
+    <iframe src='https://player.vimeo.com/video/344801026'
+      frameBorder='0'
+      allow='autoplay; fullscreen'
+      allowFullScreen
+      title='Banner video'
+    />
     <style jsx>{`
       .banner {
         display: grid;
