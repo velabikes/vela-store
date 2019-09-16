@@ -1,9 +1,9 @@
+import { getPrismic } from 'lib/prismic'
 import Head from 'next/head'
 import PaddedView from 'components/PaddedView'
 import Main from 'components/Main'
 import MainHeader from 'components/MainHeader'
 import Grid from 'components/Grid'
-import Prismic from 'prismic-javascript'
 import { Date, RichText } from 'prismic-reactjs'
 import dayjs from 'dayjs'
 
@@ -40,10 +40,9 @@ const BlogPostPage = ({ cover, title, teaser, body, date }) =>
 
 BlogPostPage.getInitialProps = async ({ req, query }) => {
   const { slug } = query
-  const apiEndpoint = 'https://velabikes.prismic.io/api/v2'
-  const api = await Prismic.getApi(apiEndpoint, { req })
-  const { data, last_publication_date } = await api.getByUID('blog_post', slug)
-  console.log(data)
+  const prismic = await getPrismic(req)
+  const { data, last_publication_date } = await prismic.getByUID('blog_post', slug)
+
   return { ...data, date: last_publication_date }
 }
 

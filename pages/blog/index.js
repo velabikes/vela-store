@@ -1,8 +1,8 @@
+import { getPrismic } from 'lib/prismic'
 import Head from 'next/head'
 import PaddedView from 'components/PaddedView'
 import Main from 'components/Main'
 import MainHeader from 'components/MainHeader'
-import Prismic from 'prismic-javascript'
 import Grid from 'components/Grid'
 import Card from 'components/Card'
 import { NextIcon } from 'components/Icons'
@@ -53,8 +53,7 @@ const Blog = ({ posts, highlight }) =>
   </PaddedView>
 
 Blog.getInitialProps = async ({ req }) => {
-  const apiEndpoint = 'https://velabikes.prismic.io/api/v2'
-  const api = await Prismic.getApi(apiEndpoint, { req })
+  const api = await getPrismic(req)
   const { results } = await api.query('')
   const posts = results.slice()
   posts.shift()
