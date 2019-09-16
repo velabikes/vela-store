@@ -14,9 +14,7 @@ const Blog = ({ posts, highlight }) =>
       <Head>
         <title>Blog - Vela Bikes</title>
       </Head>
-      <MainHeader
-        title='Blog'
-      />
+      <MainHeader title='Blog' />
       <section>
         <PostHighlight post={highlight} />
       </section>
@@ -25,6 +23,7 @@ const Blog = ({ posts, highlight }) =>
         <Grid template='1fr 1fr 1fr'>
           {posts.map(({ data: { cover, title, teaser }, uid }) => (
             <Card
+              key={uid}
               media={<a href={`/blog/${uid}`}><img src={cover.url} alt={cover.alt} /></a>}
             >
               <a href={`/blog/${uid}`}><h3>{title[0].text}</h3></a>
