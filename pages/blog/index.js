@@ -7,6 +7,7 @@ import Grid from 'components/Grid'
 import Card from 'components/Card'
 import { NextIcon } from 'components/Icons'
 import PostHighlight from 'components/blog/PostHighlight'
+import Link from 'next/link'
 
 const Blog = ({ posts, highlight }) =>
   <PaddedView>
@@ -24,14 +25,18 @@ const Blog = ({ posts, highlight }) =>
           {posts.map(({ data: { cover, title, teaser }, uid }) => (
             <Card
               key={uid}
-              media={<a href={`/blog/${uid}`}><img src={cover.url} alt={cover.alt} /></a>}
+              media={<Link href={`/blog/${uid}`}><img src={cover.url} alt={cover.alt} /></Link>}
             >
-              <a href={`/blog/${uid}`}><h3>{title[0].text}</h3></a>
-              <p>{teaser[0].text}</p>
-              <br />
-              <div className='actions'>
-                <a href={`/blog/${uid}`}>Ler mais  <NextIcon fill='#51776B' /></a>
-              </div>
+              <Link href={`/blog/${uid}`}>
+                <div>
+                  <h3>{title[0].text}</h3>
+                  <p>{teaser[0].text}</p>
+                  <br />
+                  <div className='actions'>
+                    <a>Ler mais  <NextIcon fill='#51776B' /></a>
+                  </div>
+                </div>
+              </Link>
             </Card>
           ))}
         </Grid>
