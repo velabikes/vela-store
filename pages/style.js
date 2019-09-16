@@ -1,15 +1,20 @@
-import PaddedView from '../components/PaddedView'
-import Button from '../components/Button'
+import PropTypes from 'prop-types'
 import { withState } from 'recompose'
 import { compose } from 'redux'
-import { velaGreen, offWhite, offBlack, velaBlue } from '../style/colors'
+import PaddedView from '../components/PaddedView'
+import Button from '../components/Button'
 
 const ButtonsExamples = ({
-  loadPrim, setLoadPrim,
-  loadSec, setLoadSec,
-  loadAct, setLoadAct,
-  loadSecInv, setLoadSecInv,
-  loadActInv, setLoadActInv,
+  loadPrim,
+  setLoadPrim,
+  loadSec,
+  setLoadSec,
+  loadAct,
+  setLoadAct,
+  loadSecInv,
+  setLoadSecInv,
+  loadActInv,
+  setLoadActInv
 }) =>
   <>
     <div className='buttons-wrapper'>
@@ -43,7 +48,6 @@ const ButtonsExamples = ({
         </p>
       </div>
 
-
       <p>
         <Button disabled small>Disabled</Button>
         <Button disabled>Disabled</Button>
@@ -53,7 +57,7 @@ const ButtonsExamples = ({
     </div>
 
     <hr />
-    
+
     <div className='inverted-buttons-wrapper'>
       <h2>Loading Buttons</h2>
       <p>
@@ -130,12 +134,25 @@ const ButtonsExamples = ({
     `}</style>
   </>
 
+ButtonsExamples.propTypes = {
+  loadPrim: PropTypes.func,
+  setLoadPrim: PropTypes.func,
+  loadSec: PropTypes.func,
+  setLoadSec: PropTypes.func,
+  loadAct: PropTypes.func,
+  setLoadAct: PropTypes.func,
+  loadSecInv: PropTypes.func,
+  setLoadSecInv: PropTypes.func,
+  loadActInv: PropTypes.func,
+  setLoadActInv: PropTypes.func
+}
+
 const Buttons = compose(
   withState('loadPrim', 'setLoadPrim', false),
   withState('loadSec', 'setLoadSec', false),
   withState('loadSecInv', 'setLoadSecInv', false),
   withState('loadAct', 'setLoadAct', false),
-  withState('loadActInv', 'setLoadActInv', false),
+  withState('loadActInv', 'setLoadActInv', false)
 )(ButtonsExamples)
 
 const style = () =>

@@ -18,7 +18,7 @@ const ChargePage = () =>
       <title>Vela: Rede de Recarga Rápida</title>
     </Head>
     <PaddedView>
-      <MainHeader title='Rede de Recarga Rápida'/>
+      <MainHeader title='Rede de Recarga Rápida' />
     </PaddedView>
     <Banner />
     <Inverter>

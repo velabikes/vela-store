@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types'
+import fetch from 'isomorphic-fetch'
 import LocationsMap from 'components/locations/LocationsMap'
 
 const LocationsMapPage = ({ locations }) =>
@@ -21,11 +22,11 @@ LocationsMapPage.propTypes = {
 
 LocationsMapPage.getInitialProps = async ({ req }) => {
   const baseUrl = req
-    ? process.env.NODE_ENV === 'development' 
+    ? process.env.NODE_ENV === 'development'
       ? 'http://localhost:3000'
       : `https://${req.headers.host}`
     : ''
-  const response = await fetch(baseUrl + '/api/locations')
+  const response = await fetch(`${baseUrl}/api/locations`)
   const locations = await response.json()
 
   return { locations }
