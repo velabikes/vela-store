@@ -49,6 +49,9 @@ const Blog = ({ posts, highlight }) =>
         right: 24px;
         display: flex;
       }
+      img {
+        cursor: pointer;
+      }
     `}</style>
   </PaddedView>
 

@@ -20,15 +20,15 @@ const BlogPostPage = ({ cover, title, teaser, body, date }) =>
           <div><small>{dayjs(Date(date)).format('DD/MM/YYYY - HH:MM')}</small></div>
         </div>}
       />
+      <Grid template='1fr 1fr'>
+        <div className='PostImage'>
+          <img src={cover.url} alt={cover.alt} />
+        </div>
+        <div>
+          <RichText render={body} />
+        </div>
+      </Grid>
     </Main>
-    <Grid template='1fr 1fr'>
-      <div className='PostImage'>
-        <img src={cover.url} alt={cover.alt} />
-      </div>
-      <div>
-        <RichText render={body} />
-      </div>
-    </Grid>
     <style jsx>{`
         .SectionBody {
         margin-bottom: 3em;

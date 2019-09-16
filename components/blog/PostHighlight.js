@@ -29,6 +29,7 @@ const PostHightlight = ({ post: { data: { cover, title, teaser }, uid } }) =>
       img {
         object-fit: cover;
         min-height: 100%;
+        cursor:  pointer;
       }
       h2 {
         min-width: 20vw;
