@@ -20,7 +20,7 @@ const Blog = ({ posts, highlight }) =>
       </section>
       <br /><br />
       <section>
-        <Grid template='1fr 1fr 1fr'>
+        <Grid template='repeat(auto-fit, minmax(320px, 1fr))'>
           {posts.map(({ data: { cover, title, teaser }, uid }) => (
             <Card
               key={uid}
