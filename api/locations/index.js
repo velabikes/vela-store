@@ -45,6 +45,15 @@ module.exports = async (req, res) => {
     },{
       googlePlace: 'ChIJixk9BXZXzpQRY2FAH25PxPU',
       type: ['charger']
+    },{
+      googlePlace: 'ChIJ_elqH0FXzpQRRoAPxQyLNvs',
+      type: ['charger']
+    },{
+      googlePlace: 'ChIJ47W0GDdYzpQRGw-IqYoHn3k',
+      type: ['charger']
+    },{
+      googlePlace: 'ChIJixk9BXZXzpQRY2FAH25PxPU',
+      type: ['charger']
     }
   ]
 
@@ -75,6 +84,7 @@ module.exports = async (req, res) => {
   try {
     const placeArray = await Promise.all(locations.map(fetchLocationData))
     res.setHeader('Content-Type', 'application/json')
+    res.setHeader('Cache-Control', 's-maxage=86400')
     return res.end(JSON.stringify(placeArray))
   } catch (err) {
     res.statusCode = 500

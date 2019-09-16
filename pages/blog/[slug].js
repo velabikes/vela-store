@@ -21,7 +21,6 @@ const BlogPostPage = ({ cover, title, teaser, body, date }) =>
         </div>}
       />
     </Main>
-
     <Grid template='1fr 1fr'>
       <div className='PostImage'>
         <img src={cover.url} alt={cover.alt} />
@@ -30,7 +29,6 @@ const BlogPostPage = ({ cover, title, teaser, body, date }) =>
         <RichText render={body} />
       </div>
     </Grid>
-
     <style jsx>{`
         .SectionBody {
         margin-bottom: 3em;

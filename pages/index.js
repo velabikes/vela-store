@@ -3,7 +3,6 @@ import Link from 'next/link'
 import fetch from 'isomorphic-fetch'
 import PropTypes from 'prop-types'
 import HomeImage from 'components/home/HomeImage'
-import HomeBanner from 'components/home/HomeBanner'
 import HomeBikes from 'components/home/HomeBikes'
 import HomeAlbum from 'components/home/HomeAlbum'
 import PaddedView from 'components/PaddedView'
@@ -41,11 +40,6 @@ const HomePage = ({ images }) =>
         <h1>#VADEVELA</h1>
       </div>
     </div>
-    <PaddedView>
-      <Section>
-        <HomeBanner />
-      </Section>
-    </PaddedView>
     <PaddedView>
       <HomeBikes />
     </PaddedView>

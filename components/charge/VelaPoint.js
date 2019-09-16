@@ -1,20 +1,19 @@
 import Link from 'next/link'
 import Grid from 'components/Grid'
 import Button from 'components/Button'
-import VelaPointFigure from './VelaPointFigure'
 import Section from 'components/Section'
 import SectionHeader from 'components/SectionHeader'
-
+import VelaPointFigure from './VelaPointFigure'
 
 const VelaPoint = () =>
   <Section>
     <Grid template='1fr 1fr'>
       <div>
         <SectionHeader title='Ponto Vela' />
-        <div className="SectionBody">
-        <p>Desenvolvemos a primeira Rede de Recarga Rápida para bicicletas elétricas do Brasil!</p>
-        <p>Agora, pedalar pela cidade é uma experência ainda mais segura e conectada, com autonomia ilimitada pelo caminho.</p>
-        <p>Os pontos de carregamento são distribuídos por São Paulo, em diversos estabelecimentos parceiros, para todos os Velejadores aproveitarem.</p>
+        <div className='SectionBody'>
+          <p>Desenvolvemos a primeira Rede de Recarga Rápida para bicicletas elétricas do Brasil!</p>
+          <p>Agora, pedalar pela cidade é uma experiência ainda mais segura e conectada, com autonomia ilimitada pelo caminho.</p>
+          <p>Os pontos de carregamento são distribuídos por São Paulo, em diversos estabelecimentos parceiros, para todos os Velejadores aproveitarem.</p>
         </div>
 
         <div>

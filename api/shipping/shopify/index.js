@@ -37,7 +37,7 @@ module.exports = async (req, res) => {
   if (totalPrice > 6500 && totalGrams < 300) {
     res.end(JSON.stringify({
       rates: [{
-        service_name: 'Frete Gratis',
+        service_name: 'Frete Grátis',
         service_code: 'FG',
         total_price: '0',
         description: '5-10 dias úteis',
@@ -74,7 +74,7 @@ module.exports = async (req, res) => {
           service_name: 'Frete Gratis',
           service_code: 'FG',
           total_price: '0',
-          description: '3 - 5 dias úteis',
+          description: '5 - 10 dias úteis',
           currency: 'BRL'
         }]
       }))
@@ -83,8 +83,8 @@ module.exports = async (req, res) => {
     return (
       res.end(JSON.stringify({
         rates: [{
-          service_name: 'Frete Grátis - #PAIDEVELA',
-          service_code: 'FGPV',
+          service_name: 'Frete Grátis',
+          service_code: 'FGN',
           total_price: '0',
           description: '10 dias úteis',
           currency: 'BRL'
