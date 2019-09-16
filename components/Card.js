@@ -18,8 +18,6 @@ const Card = ({ children, onBackClick, media, horizontal }) =>
         box-shadow: 0px .75rem 1rem -1.25rem rgba(20,20,20, 0.8);
         position: relative;
         background: ${white};
-        display: flex;
-        flex-direction: ${horizontal ? 'row' : 'column'};
       }
       .content {
         padding: 2rem;
@@ -36,6 +34,12 @@ const Card = ({ children, onBackClick, media, horizontal }) =>
         right: 0;
         top: 0;
         padding: 1rem;
+      }
+      @media only screen and (min-width: 768px) {
+        .Card {
+          display: flex;
+          flex-direction: ${horizontal ? 'row' : 'column'};
+        }
       }
     `}</style>
   </div>
