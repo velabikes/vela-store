@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import { lightGray, velaBlue } from 'style/colors'
 
+/* eslint-disable */
 const Tag = ({ label, icon, selected, onClick, ...props }) =>
   <span
     className='Tag'
@@ -40,6 +41,7 @@ const Tag = ({ label, icon, selected, onClick, ...props }) =>
       }
     `}</style>
   </span>
+/* eslint-enable */
 
 Tag.propTypes = {
   label: PropTypes.string,

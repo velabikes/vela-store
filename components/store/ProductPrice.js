@@ -37,10 +37,10 @@ const ProductPrice = ({ baseValue, maxValue, compareAt, showInstallment }) =>
   </div>
 
 ProductPrice.propTypes = {
-  baseValue: PropTypes.any,
-  maxValue: PropTypes.any,
-  compareAt: PropTypes.any,
-  showInstallment: PropTypes.any
+  baseValue: PropTypes.number,
+  maxValue: PropTypes.number,
+  compareAt: PropTypes.bool,
+  showInstallment: PropTypes.bool
 }
 
 export default compose(

@@ -12,6 +12,7 @@ import MainMenu from './MainMenu'
 import Footer from './Footer'
 import SubscribeForm from './SubscribeForm'
 
+/* eslint-disable */
 const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
   <>
     <HeaderDrawer visible={isCartOpen}><Cart /></HeaderDrawer>
@@ -122,6 +123,8 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
       }
     `}</style>
   </>
+
+/* eslint-enable */
 
 Header.propTypes = {
   children: PropTypes.node,

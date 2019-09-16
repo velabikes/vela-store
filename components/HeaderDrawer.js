@@ -6,6 +6,7 @@ import withOpenDrawer from '../containers/withOpenDrawer'
 import { toggleDrawer } from '../lib/redux'
 import { BackIcon } from '../components/Icons'
 
+/* eslint-disable */
 const HeaderDrawer = ({ children, visible, handleCloseClick }) =>
   <div className='HeaderDrawer'>
     {children}
@@ -48,6 +49,7 @@ const HeaderDrawer = ({ children, visible, handleCloseClick }) =>
       }
     `}</style>
   </div>
+/* eslint-enable */
 
 HeaderDrawer.propTypes = {
   children: PropTypes.node,

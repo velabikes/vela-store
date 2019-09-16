@@ -17,6 +17,7 @@ UserAuth.propTypes = {
   handleRegisterSubmit: PropTypes.func
 }
 
+/* eslint-disable */
 export default compose(
   withCustomerCreate,
   withCustomerAccessTokenCreate,
@@ -40,3 +41,4 @@ export default compose(
     }
   })
 )(UserAuth)
+/* eslint-enable */

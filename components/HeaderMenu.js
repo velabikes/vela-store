@@ -5,6 +5,7 @@ import { toggleDrawer } from '../lib/redux'
 import withOpenDrawer from '../containers/withOpenDrawer'
 import { Logo, MenuIcon, CartIcon } from './Icons'
 
+/* eslint-disable */
 const HeaderMenu = ({ handleCartClick, handleMenuClick }) =>
   <>
     <div><Link href='/'><a>
@@ -17,6 +18,7 @@ const HeaderMenu = ({ handleCartClick, handleMenuClick }) =>
       <CartIcon />
     </a></div>
   </>
+/* eslint-enable */
 
 HeaderMenu.propTypes = {
   handleCartClick: PropTypes.func,

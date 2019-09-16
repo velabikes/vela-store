@@ -155,6 +155,7 @@ const Buttons = compose(
   withState('loadActInv', 'setLoadActInv', false)
 )(ButtonsExamples)
 
+/* eslint-disable */
 const style = () =>
   <PaddedView>
     <h1>This is a h1</h1>
@@ -188,5 +189,6 @@ const style = () =>
 
     <Buttons />
   </PaddedView>
+/* eslint-enable */
 
 export default style
