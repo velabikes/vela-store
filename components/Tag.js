@@ -1,6 +1,7 @@
-import { offWhite, lightGray, velaBlue } from 'style/colors'
+import PropTypes from 'prop-types'
+import { lightGray, velaBlue } from 'style/colors'
 
-const Tag = ({label, icon, selected, onClick, ...props}) =>
+const Tag = ({ label, icon, selected, onClick, ...props }) =>
   <span
     className='Tag'
     onClick={onClick}
@@ -39,5 +40,12 @@ const Tag = ({label, icon, selected, onClick, ...props}) =>
       }
     `}</style>
   </span>
+
+Tag.propTypes = {
+  label: PropTypes.string,
+  icon: PropTypes.any,
+  selected: PropTypes.any,
+  onClick: PropTypes.any
+}
 
 export default Tag
