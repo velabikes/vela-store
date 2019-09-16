@@ -1,4 +1,4 @@
-import { getPrismic } from 'lib/prismic'
+import { getPrismic, Predicates } from 'lib/prismic'
 import Head from 'next/head'
 import PaddedView from 'components/PaddedView'
 import Main from 'components/Main'
@@ -57,7 +57,10 @@ const Blog = ({ posts, highlight }) =>
 
 Blog.getInitialProps = async ({ req }) => {
   const api = await getPrismic(req)
-  const { results } = await api.query('')
+  const { results } = await api.query(
+    Predicates.at('document.type', 'blog_post'),
+    { orderings: '[my.blog_post.post_date desc]' }
+  )
   const posts = results.slice()
   posts.shift()
 
