@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types'
-import { compose, lifecycle, withHandlers } from 'recompose'
+import { compose, withHandlers } from 'recompose'
 import Price from 'components/Price'
 import withCheckoutId from 'containers/withCheckoutId'
 import withCheckoutLineItemsUpdate from 'containers/withCheckoutLineItemsUpdate'
-import { velaGreen, velaBlue, velaRed } from 'style/colors'
+import { velaBlue } from 'style/colors'
 import ProductImage from 'components/store/ProductImage'
 
 const CartItem = ({ item, handleMoreClick, handleLessClick }) =>
@@ -63,6 +63,12 @@ const CartItem = ({ item, handleMoreClick, handleLessClick }) =>
       }
     `}</style>
   </tr>
+
+CartItem.propTypes = {
+  item: PropTypes.object,
+  handleMoreClick: PropTypes.func,
+  handleLessClick: PropTypes.func
+}
 
 export default compose(
   withCheckoutId,

@@ -1,6 +1,6 @@
+import PropTypes from 'prop-types'
 import Price from 'components/Price'
 import InstallmentPrice from 'components/store/InstallmentPrice'
-import { lightGray } from 'style/colors'
 
 const CartPrice = ({ checkout }) =>
   <div className='CartPrice'>
@@ -36,5 +36,9 @@ const CartPrice = ({ checkout }) =>
       }
     `}</style>
   </div>
+
+CartPrice.propTypes = {
+  checkout: PropTypes.object
+}
 
 export default CartPrice

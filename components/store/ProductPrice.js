@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { compose, withProps } from 'recompose'
 import Price from 'components/Price'
 import InstallmentPrice from 'components/store/InstallmentPrice'
@@ -34,6 +35,13 @@ const ProductPrice = ({ baseValue, maxValue, compareAt, showInstallment }) =>
       }
     `}</style>
   </div>
+
+ProductPrice.propTypes = {
+  baseValue: PropTypes.any,
+  maxValue: PropTypes.any,
+  compareAt: PropTypes.any,
+  showInstallment: PropTypes.any
+}
 
 export default compose(
   withProps(

@@ -1,11 +1,15 @@
-import { compose, withHandlers, withState, withProps, withPropsOnChange, branch } from 'recompose'
+import PropTypes from 'prop-types'
+import ReactGA from 'react-ga'
+import { compose, withHandlers, withState, withProps } from 'recompose'
 import withCheckoutLineItemsAdd from '../../containers/withCheckoutLineItemsAdd'
 import withCheckoutId from '../../containers/withCheckoutId'
 import { toggleDrawer } from '../../lib/redux'
+import Button from '../Button'
 import ProductVariantLeadtime from './ProductVariantLeadtime'
 import ProductVariantSelect from './ProductVariantSelect'
-import Button from '../Button'
-import ReactGA from 'react-ga'
+
+// TO DO
+// Refactor propTypes validations and refactor props names
 
 const ProductForm = ({
   product,
@@ -47,6 +51,20 @@ const ProductForm = ({
       }
     `}</style>
   </div>
+
+// TO DO
+// Refactor propTypes validations and refactor props names
+
+ProductForm.propTypes = {
+  product: PropTypes.object,
+  handleAddToCartClick: PropTypes.any,
+  isAddToCartLoading: PropTypes.any,
+  onVariantSelect: PropTypes.any,
+  sVariant: PropTypes.any,
+  selectedVariant: PropTypes.any,
+  availableVariants: PropTypes.any,
+  hasOptions: PropTypes.any
+}
 
 const handleAddToCartClick = ({
   checkoutLineItemsAdd,
