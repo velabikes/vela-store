@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
-import ProductTeaser from './ProductTeaser'
 import Grid from 'components/Grid'
+import ProductTeaser from './ProductTeaser'
 
 const ProductListLoading = () =>
   <>
@@ -10,7 +10,7 @@ const ProductListLoading = () =>
   </>
 
 const ProductList = ({ products, loading }) =>
-  <Grid className='ProductList' template={ !loading && products && products.edges.length === 2 ? '1fr 1fr' : '1fr 1fr 1fr 1fr'} >
+  <Grid className='ProductList' template={!loading && products && products.edges.length === 2 ? '1fr 1fr' : '1fr 1fr 1fr 1fr'} >
     { loading && <ProductListLoading /> }
     { !loading && products && products.edges && products.edges.map(product => <ProductTeaser product={product.node} key={product.node.id} />) }
   </Grid>

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { compose, branch, renderComponent } from 'recompose'
 import CartItem from 'components/store/Cart/Item'
 import CartPrice from 'components/store/Cart/Price'
@@ -42,6 +43,10 @@ const CartContent = ({ checkout }) =>
       }
     `}</style>
   </section>
+
+CartContent.propTypes = {
+  checkout: PropTypes.object
+}
 
 export default compose(
   branch(

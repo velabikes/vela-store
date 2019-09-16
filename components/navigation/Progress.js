@@ -1,6 +1,5 @@
 import NProgress from 'nprogress'
 import Router from 'next/router'
-import { velaBlue } from 'style/colors'
 
 Router.events.on('routeChangeStart', url => {
   console.log(`Loading: ${url}`)

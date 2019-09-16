@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 export const HideOnMobile = ({ children }) =>
   <div className='hide-mobile'>
     {children}
@@ -10,6 +12,10 @@ export const HideOnMobile = ({ children }) =>
     `}</style>
   </div>
 
+HideOnMobile.propTypes = {
+  children: PropTypes.node
+}
+
 export const HideOnDesktop = ({ children }) =>
   <div className='hide-mobile'>
     {children}
@@ -21,6 +27,10 @@ export const HideOnDesktop = ({ children }) =>
       }
     `}</style>
   </div>
+
+HideOnDesktop.propTypes = {
+  children: PropTypes.node
+}
 
 export default {
   HideOnMobile,

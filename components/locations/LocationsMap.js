@@ -1,11 +1,19 @@
+import PropTypes from 'prop-types'
 import { compose, withState, withProps } from 'recompose'
 import Map from 'components/Map'
 import MapMarker from 'components/MapMarker'
 import LocationInfo from 'components/locations/LocationInfo'
 import Card from 'components/Card'
-import LocationFilter from './LocationFilter';
+import LocationFilter from './LocationFilter'
 
-const LocationsMap = ({ locations, filterLocations, setSelected, selected, setFilter, filter }) =>
+const LocationsMap = ({
+  locations,
+  filterLocations,
+  setSelected,
+  selected,
+  setFilter,
+  filter
+}) =>
   <div className='LocationsMap'>
     <Map onClick={e => e.event.target.nodeName === 'DIV' && setSelected(null)}>
       {locations.map(({ pos, type, googlePlace }, i) =>
@@ -30,7 +38,7 @@ const LocationsMap = ({ locations, filterLocations, setSelected, selected, setFi
         selectedFilter={filter}
       />
     </div>
-    { selected !== null &&
+    {selected !== null &&
       <div className='info'>
         <Card onBackClick={() => setSelected(null)}>
           <LocationInfo {...locations[selected]} />
@@ -62,12 +70,21 @@ const LocationsMap = ({ locations, filterLocations, setSelected, selected, setFi
     `}</style>
   </div>
 
+LocationsMap.propTypes = {
+  locations: PropTypes.object,
+  filterLocations: PropTypes.object,
+  setSelected: PropTypes.func,
+  selected: PropTypes.string,
+  setFilter: PropTypes.func,
+  filter: PropTypes.object
+}
+
 export default compose(
   withState('selected', 'setSelected', null),
   withState('filter', 'setFilter', null),
   withProps(
     ({ filter, locations }) => ({
-      filterLocations: filter ? locations.filter(({type}) => type.includes(filter)) : null
+      filterLocations: filter ? locations.filter(({ type }) => type.includes(filter)) : null
     })
   )
 )(LocationsMap)

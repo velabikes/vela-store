@@ -43,7 +43,7 @@ const customer = gql`
 `
 
 export default compose(
-  withCustomerAcessToken,
+  withCustomerAccessToken,
   graphql(customer, {
     alias: 'withCustomerAccessToken',
 

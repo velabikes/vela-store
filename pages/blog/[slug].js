@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import Head from 'next/head'
 import PaddedView from 'components/PaddedView'
 import Main from 'components/Main'
@@ -15,7 +16,7 @@ const post = {
     <p>Nos últimos 5 ou 6 anos, São Paulo vem criando uma consciência maior, que está bem longe de ser a ideal, mas foi uma mudança rápida. Com a constante ampliação das redes sociais, as pessoas acabam discutindo mais questões e a bicicleta como meio de transporte é uma delas.</p>
     <p>Como ciclista, se a gente quer respeito, nós temos que ser os mais conscientes no trânsito e propagar isso. A consciência tem que existir de todos os lados, mas quem tá de bike tem que conhecer seu espaço, tem que mostrar respeito e os benefícios para as pessoas no geral. Quem não respeita, furando faróis ou passando por pedestres, queima o filme de todos os ciclistas.</p>
     <p>Como pai, quando eles crescerem, sei que vão crescer em um meio totalmente diferente. Eu digo que a evolução vai ser rápida porque mesmo tendo demorado para essa consciência começar a ser criada, em pouco tempo, ela já é muito maior. Estamos bem longe ainda das cidades com a cultura de ciclismo, mas estamos no caminho certo. O sonho seria ter ciclofaixas espalhadas pela cidade inteira, antes vem as ciclofaixas, depois vem a consciência.</p>
-    <p>Bruno Bianchini <a href="https://instagram.com/brunobcsb">@brunobcsb</a> - Pai, publicitário e Velejador </p>`
+    <p>Bruno Bianchini <a href='https://instagram.com/brunobcsb'>@brunobcsb</a> - Pai, publicitário e Velejador </p>`
   },
   'vela-na-shimano-2019': {
     title: 'De bicicleta elétrica na Shimano Fest 2019 #vadevela',
@@ -34,11 +35,11 @@ const post = {
     Sábado (24/08) - 12h30 às 15h e das 16h30 às 17h30<br>
     Domingo (25/08) - 10h às 16h
     </p>
-    <p>O stand da Vela fica no Lado A - Área Lojas (Cinza) e o local de testes no Lado A - Área Test-ride (Roxo). Confira o <a href="http://shimanofest.com.br/mapa/">mapa</a> da Shimano Fest 2019.</p>`
+    <p>O stand da Vela fica no Lado A - Área Lojas (Cinza) e o local de testes no Lado A - Área Test-ride (Roxo). Confira o <a href='http://shimanofest.com.br/mapa/'>mapa</a> da Shimano Fest 2019.</p>`
   }
 }
 
-const BlogPostPage = ({postContent}) =>
+const BlogPostPage = ({ postContent }) =>
   <PaddedView>
     <Main>
       <Head>
@@ -52,12 +53,12 @@ const BlogPostPage = ({postContent}) =>
         </div>}
       />
     </Main>
-    
-    <Grid template="1fr 1fr">
+
+    <Grid template='1fr 1fr'>
       <div className='PostImage'>
-        <img src={postContent.image}/>
+        <img src={postContent.image} alt='' />
       </div>
-      <div className="SectionBody" dangerouslySetInnerHTML={{ __html: postContent.content}} />
+      <div className='SectionBody' dangerouslySetInnerHTML={{ __html: postContent.content }} />
     </Grid>
 
     <style jsx>{`
@@ -66,12 +67,16 @@ const BlogPostPage = ({postContent}) =>
       }
     `}</style>
   </PaddedView>
-  
-  BlogPostPage.getInitialProps = ({ query }) => {
-    const { slug } = query  
-    const postContent = post[slug]  
-    
-    return { postContent }
-   }
+
+BlogPostPage.propTypes = {
+  postContent: PropTypes.object
+}
+
+BlogPostPage.getInitialProps = ({ query }) => {
+  const { slug } = query
+  const postContent = post[slug]
+
+  return { postContent }
+}
 
 export default BlogPostPage

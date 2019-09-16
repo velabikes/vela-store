@@ -1,5 +1,5 @@
 import PaddedView from '../PaddedView'
-import { offBlack, offWhite, velaGreen } from '../../style/colors'
+import { offBlack, offWhite } from '../../style/colors'
 import Player from './Player'
 
 const About = () =>
@@ -16,15 +16,15 @@ const About = () =>
     <PaddedView>
       <div className='texts'>
         <div>
-          <img className='img-clock' src='/static/clock.png' />
+          <img className='img-clock' src='/static/clock.png' alt='' />
           <p>10 Minutos carregando</p>
         </div>
         <div>
-          <img className='img-plusten' src='/static/plusten.png' />
+          <img className='img-plusten' src='/static/plusten.png' alt='' />
           <p>Quilômetros para rodar</p>
         </div>
         <div className='bateries'>
-          <img className='img-bateries' src='/static/batteries.png' />
+          <img className='img-bateries' src='/static/batteries.png' alt='' />
           <p>Até três baterias simultâneas</p>
         </div>
       </div>
@@ -82,4 +82,4 @@ const About = () =>
     `}</style>
   </div>
 
-export default About;
+export default About

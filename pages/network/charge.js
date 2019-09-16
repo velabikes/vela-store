@@ -5,9 +5,7 @@ import Section from 'components/Section'
 import Banner from 'components/charge/Banner'
 import VelaPoint from 'components/charge/VelaPoint'
 import HowWorks from 'components/charge/HowWorks'
-import About from 'components/charge/About'
 import BePartOf from 'components/charge/BePartOf'
-import Features from 'components/charge/Features'
 import Statistics from 'components/charge/Statistics'
 import HeatMap from 'components/charge/HeatMap'
 import PaddedView from 'components/PaddedView'
@@ -20,7 +18,7 @@ const ChargePage = () =>
       <title>Vela: Rede de Recarga Rápida</title>
     </Head>
     <PaddedView>
-      <MainHeader title='Rede de Recarga Rápida'/>
+      <MainHeader title='Rede de Recarga Rápida' />
     </PaddedView>
     <Banner />
     <Inverter>
