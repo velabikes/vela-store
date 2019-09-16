@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 const MainHeader = ({ title, tagline }) =>
   <header className='MainHeader'>
     <h1>{title}</h1>
@@ -14,5 +16,10 @@ const MainHeader = ({ title, tagline }) =>
       }
     `}</style>
   </header>
+
+MainHeader.propTypes = {
+  title: PropTypes.string,
+  tagline: PropTypes.string
+}
 
 export default MainHeader

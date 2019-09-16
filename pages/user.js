@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { compose } from 'recompose'
 import PaddedView from '../components/PaddedView'
 import withCustomerAccessToken from '../containers/withCustomerAccessToken'
@@ -8,6 +9,13 @@ const UserPage = ({ customerCreate, customerAccessTokenCreate, customerAccessTok
     {customerAccessToken && customerAccessToken.accessToken}
     <UserAuth />
   </PaddedView>
+
+UserPage.propTypes = {
+  customerCreate: PropTypes.any,
+  customerAccessTokenCreate: PropTypes.any,
+  customerAccessToken: PropTypes.any,
+  dispatch: PropTypes.any
+}
 
 export default compose(
   withCustomerAccessToken

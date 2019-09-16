@@ -1,18 +1,18 @@
-import Button from '../Button'
 import Link from 'next/link'
+import Button from '../Button'
 
 const HeatMap = () =>
   <div className='heat-map'>
     <div className='map'>
-      <img src="/static/heatmap.jpg" />
+      <img src='/static/heatmap.jpg' alt='' />
     </div>
 
-		<div className='heat-map-description'>
+    <div className='heat-map-description'>
       <h1>Mapa de calor</h1>
       <p>Para entender melhor o trajeto diário dos Velejadores Urbanos, a Vela realizou uma pesquisa origem-destino, até chegar nas regiões com maior fluxo.</p>
       <p className='cta'>Seu estabelecimento está no nosso mapa de calor?</p>
       <Link href='https://forms.gle/Wb7DyMpQwUwqQL6F7'><a><Button big>Seja um parceiro</Button></a></Link>
-		</div>
+    </div>
 
     <style jsx>{`
       .heat-map {

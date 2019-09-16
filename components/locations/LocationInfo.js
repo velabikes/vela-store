@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import LocationTag from 'components/locations/LocationTag'
 
 const LocationsInfo = ({ name, address, hours, type }) =>
@@ -24,5 +25,12 @@ const LocationsInfo = ({ name, address, hours, type }) =>
       }
     `}</style>
   </article>
+
+LocationsInfo.propTypes = {
+  name: PropTypes.string,
+  address: PropTypes.object,
+  hours: PropTypes.object,
+  type: PropTypes.string
+}
 
 export default LocationsInfo

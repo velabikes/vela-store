@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import PropTypes from 'prop-types'
-import { offBlack, velaGreen } from '../../style/colors'
-import Button from '../Button'
 import Grid from 'components/Grid'
 import Section from 'components/Section'
 import SectionHeader from 'components/SectionHeader'
+import { offBlack } from '../../style/colors'
+import Button from '../Button'
 
 const bikes = [
   {
@@ -29,7 +29,7 @@ const BikeCard = ({ title, href, hrefAs, action, src, index }) =>
 
       <div className='CardsHome'>
         <Link href={href} as={hrefAs}>
-          <Button big secondary={true}>{action}</Button>
+          <Button big secondary>{action}</Button>
         </Link>
       </div>
     </div>

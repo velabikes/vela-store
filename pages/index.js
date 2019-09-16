@@ -7,7 +7,6 @@ import HomeBikes from 'components/home/HomeBikes'
 import HomeAlbum from 'components/home/HomeAlbum'
 import PaddedView from 'components/PaddedView'
 import Inverter from 'components/Inverter'
-import Section from 'components/Section'
 import Button from '../components/Button'
 import VelaPoint from '../components/charge/VelaPoint'
 
@@ -27,7 +26,7 @@ const HomePage = ({ images }) =>
       <HomeImage />
       <div className='cta'>
         <div className='slogan'>
-          <p><strong>Bicicletas elétricas <br/> para cidades mais saudáveis</strong></p>
+          <p><strong>Bicicletas elétricas <br /> para cidades mais saudáveis</strong></p>
           <div className='actions'>
             <Link href='/store?handle=vela-1' as='/loja/vela-1'>
               <Button primary>Compre a sua</Button>

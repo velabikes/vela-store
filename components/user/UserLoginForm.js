@@ -1,6 +1,7 @@
 import { Formik } from 'formik'
 import Button from '../Button'
 
+/* eslint-disable */
 const UserLoginForm = props =>
   <Formik
     initialValues={{ email: '' }}
@@ -32,5 +33,6 @@ const UserLoginForm = props =>
       </form>
     }
   </Formik>
+/* eslint-enable */
 
 export default UserLoginForm

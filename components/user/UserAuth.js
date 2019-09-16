@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { compose, withHandlers } from 'recompose'
 import { setCustomerAccessToken } from '../../lib/redux'
 import withCustomerCreate from '../../containers/withCustomerCreate'
@@ -11,6 +12,12 @@ const UserAuth = ({ handleLoginSubmit, handleRegisterSubmit }) =>
     <UserRegisterForm onSubmit={handleRegisterSubmit} />
   </div>
 
+UserAuth.propTypes = {
+  handleLoginSubmit: PropTypes.func,
+  handleRegisterSubmit: PropTypes.func
+}
+
+/* eslint-disable */
 export default compose(
   withCustomerCreate,
   withCustomerAccessTokenCreate,
@@ -34,3 +41,4 @@ export default compose(
     }
   })
 )(UserAuth)
+/* eslint-enable */

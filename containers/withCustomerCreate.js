@@ -1,6 +1,5 @@
 import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
-import CheckoutFragment from './inc/CheckoutFragment'
 
 export const customerCreate = gql`
   mutation customerCreate($input: CustomerCreateInput!) {

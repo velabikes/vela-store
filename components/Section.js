@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 const Section = ({ children }) =>
   <section className='Section'>
     {children}
@@ -7,5 +9,9 @@ const Section = ({ children }) =>
       }
     `}</style>
   </section>
+
+Section.propTypes = {
+  children: PropTypes.node
+}
 
 export default Section

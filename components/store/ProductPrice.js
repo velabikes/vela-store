@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { compose, withProps } from 'recompose'
 import Price from 'components/Price'
 import InstallmentPrice from 'components/store/InstallmentPrice'
@@ -35,6 +36,13 @@ const ProductPrice = ({ baseValue, maxValue, compareAt, showInstallment }) =>
     `}</style>
   </div>
 
+ProductPrice.propTypes = {
+  baseValue: PropTypes.number,
+  maxValue: PropTypes.number,
+  compareAt: PropTypes.bool,
+  showInstallment: PropTypes.bool
+}
+
 export default compose(
   withProps(
     ({ product, variant }) => {
@@ -42,7 +50,6 @@ export default compose(
       const comparePrices = product.variants.edges
         .map(({ node: { compareAtPriceV2 } }) => compareAtPriceV2 && compareAtPriceV2.amount)
         .filter(Boolean)
-      console.log(comparePrices)
       const minPrice = Math.min.apply(null, prices)
       const maxPrice = Math.max.apply(null, prices)
       const minCompare = !!comparePrices.length && Math.min.apply(null, comparePrices)

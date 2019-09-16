@@ -21,7 +21,7 @@ const instagramGetImages = async () => {
 module.exports = async (req, res) => {
   const images = await instagramGetImages()
   res.setHeader('Content-Type', 'application/json')
-  res.setHeader('Cache-Control', 's-maxage=10800')
+  res.setHeader('Cache-Control', 's-maxage=86400')
 
   return res.end(JSON.stringify(images))
 }

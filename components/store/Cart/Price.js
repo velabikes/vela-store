@@ -1,7 +1,8 @@
+import PropTypes from 'prop-types'
 import Price from 'components/Price'
 import InstallmentPrice from 'components/store/InstallmentPrice'
-import { lightGray } from 'style/colors'
 
+/* eslint-disable */
 const CartPrice = ({ checkout }) =>
   <div className='CartPrice'>
     { console.log(checkout) }
@@ -36,5 +37,10 @@ const CartPrice = ({ checkout }) =>
       }
     `}</style>
   </div>
+/* eslint-enable */
+
+CartPrice.propTypes = {
+  checkout: PropTypes.object
+}
 
 export default CartPrice

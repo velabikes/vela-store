@@ -1,9 +1,11 @@
 import Link from 'next/link'
-import { compose, withState, withHandlers } from 'recompose'
+import PropTypes from 'prop-types'
+import { compose, withHandlers } from 'recompose'
 import { toggleDrawer } from '../lib/redux'
 import withOpenDrawer from '../containers/withOpenDrawer'
-import { Logo, MenuIcon, UserIcon, CartIcon } from './Icons'
+import { Logo, MenuIcon, CartIcon } from './Icons'
 
+/* eslint-disable */
 const HeaderMenu = ({ handleCartClick, handleMenuClick }) =>
   <>
     <div><Link href='/'><a>
@@ -16,6 +18,12 @@ const HeaderMenu = ({ handleCartClick, handleMenuClick }) =>
       <CartIcon />
     </a></div>
   </>
+/* eslint-enable */
+
+HeaderMenu.propTypes = {
+  handleCartClick: PropTypes.func,
+  handleMenuClick: PropTypes.func
+}
 
 export default compose(
   withOpenDrawer,

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import Button from '../Button'
 
 const OptionButton = ({ selected, label, value, onClick, ...props }) =>
@@ -23,6 +24,13 @@ const OptionButton = ({ selected, label, value, onClick, ...props }) =>
     `}</style>
   </Button>
 
+OptionButton.propTypes = {
+  selected: PropTypes.bool,
+  label: PropTypes.string,
+  value: PropTypes.string,
+  onClick: PropTypes.func
+}
+
 const ProductVariantSelectItem = ({
   name,
   values,
@@ -34,7 +42,7 @@ const ProductVariantSelectItem = ({
     <div>
       <label>{name}</label>
     </div>
-    {disabled && <small></small>}
+    {disabled && <small />}
     <div className='field'>
       {!disabled && values.map(value =>
         <OptionButton
@@ -42,7 +50,7 @@ const ProductVariantSelectItem = ({
           value={value}
           label={value}
           selected={value === selectedValue}
-          onClick={() => onSelect({[name]: value})}
+          onClick={() => onSelect({ [name]: value })}
         />
       )}
     </div>
@@ -57,5 +65,13 @@ const ProductVariantSelectItem = ({
       }
     `}</style>
   </fieldset>
+
+ProductVariantSelectItem.propTypes = {
+  name: PropTypes.bool,
+  values: PropTypes.object,
+  selectedValue: PropTypes.string,
+  disabled: PropTypes.bool,
+  onSelect: PropTypes.func
+}
 
 export default ProductVariantSelectItem
