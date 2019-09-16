@@ -12,6 +12,10 @@ const MapMarkerIcon = ({ type }) => {
   }
 }
 
+MapMarkerIcon.propTypes = {
+  type: PropTypes.string
+}
+
 const MapMarker = ({ onClick, selected, disabled, type, hidden }) =>
   <div onClick={onClick}>
     <MapMarkerIcon type={type} />
