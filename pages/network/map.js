@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import LocationsMap from 'components/locations/LocationsMap'
 
 const LocationsMapPage = ({ locations }) =>
@@ -13,6 +14,10 @@ const LocationsMapPage = ({ locations }) =>
       }
     `}</style>
   </div>
+
+LocationsMapPage.propTypes = {
+  locations: PropTypes.object
+}
 
 LocationsMapPage.getInitialProps = async ({ req }) => {
   const baseUrl = req

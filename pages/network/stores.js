@@ -58,6 +58,10 @@ const Locations = ({ stores }) =>
     `}</style>
   </PaddedView>
 
+Locations.propTypes = {
+  stores: PropTypes.object
+}
+
 Locations.getInitialProps = () => {
   const stores = [{
     name: 'Vela São Paulo',
