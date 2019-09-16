@@ -4,7 +4,7 @@ import withShop from '../containers/withShop'
 import PaddedView from '../components/PaddedView'
 
 const LegalPage = ({
-  shop, isShopLoading
+  shop
 }) =>
   <PaddedView>
     <h1>Informações Legais</h1>
@@ -13,6 +13,10 @@ const LegalPage = ({
     <h2>Politica de devolução</h2>
     {shop && shop.refundPolicy.body.split('\n').map(paragraph => <p>{paragraph}</p>)}
   </PaddedView>
+
+LegalPage.propTypes = {
+  shop: PropTypes.object
+}
 
 export default compose(
   withShop
