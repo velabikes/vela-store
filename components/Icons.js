@@ -43,11 +43,11 @@ export const NextIcon = props =>
       />
     </svg>
     <style jsx>{`
-	  .NextIcon {
-      display: inline-block;
-      transform: rotate(180deg);
-	  }
-	`}</style>
+      .NextIcon {
+        display: inline-block;
+        transform: rotate(180deg);
+      }
+    `}</style>
   </div>
 
 export const MenuIcon = ({ ...props }) => (

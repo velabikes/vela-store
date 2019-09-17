@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { getPrismic, Predicates } from 'lib/prismic'
 import Head from 'next/head'
 import PaddedView from 'components/PaddedView'
@@ -65,6 +66,11 @@ Blog.getInitialProps = async ({ req }) => {
   posts.shift()
 
   return ({ posts: posts, highlight: results[0] })
+}
+
+Blog.propTypes = {
+  highlight: PropTypes.object,
+  posts: PropTypes.Array
 }
 
 export default Blog

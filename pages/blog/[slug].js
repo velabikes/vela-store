@@ -37,7 +37,6 @@ const BlogPostPage = ({ cover, title, teaser, body, post_date }) =>
     `}</style>
   </PaddedView>
 
-
 BlogPostPage.getInitialProps = async ({ req, query }) => {
   const { slug } = query
   const prismic = await getPrismic(req)
@@ -47,7 +46,11 @@ BlogPostPage.getInitialProps = async ({ req, query }) => {
 }
 
 BlogPostPage.propTypes = {
-  postContent: PropTypes.object
+  cover: PropTypes.object,
+  title: PropTypes.any,
+  teaser: PropTypes.any,
+  body: PropTypes.any,
+  post_date: PropTypes.any
 }
 
 export default BlogPostPage

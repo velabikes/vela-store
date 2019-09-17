@@ -1,6 +1,6 @@
 import { BackIcon } from 'components/Icons'
 import PropTypes from 'prop-types'
-import { white, offBlack } from '../style/colors'
+import { white } from '../style/colors'
 
 const Card = ({ children, onBackClick, media, horizontal }) =>
   <div className='Card'>
