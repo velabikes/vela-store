@@ -1,5 +1,14 @@
-import { velaGreen, offBlack, darkGray, midGray, lightGray, offWhite, velaBlue } from 'style/colors'
 import { compose, withProps, defaultProps } from 'recompose'
+import PropTypes from 'prop-types'
+import {
+  velaGreen,
+  offBlack,
+  darkGray,
+  midGray,
+  lightGray,
+  offWhite,
+  velaBlue
+} from '../style/colors'
 
 const Button = ({
   children,
@@ -43,10 +52,20 @@ const Button = ({
     `}</style>
   </>
 
+Button.propTypes = {
+  children: PropTypes.node,
+  onClick: PropTypes.func,
+  disabled: PropTypes.bool,
+  loading: PropTypes.bool,
+  color: PropTypes.string,
+  bgColor: PropTypes.string,
+  textColor: PropTypes.string
+}
+
 export default compose(
   defaultProps({ color: lightGray, textColor: offBlack, bgColor: lightGray }),
   withProps(({ primary }) => primary && ({ color: velaGreen, bgColor: velaGreen, textColor: offWhite })),
   withProps(({ secondary }) => secondary && ({ color: velaBlue, bgColor: velaBlue, textColor: offWhite })),
   withProps(({ outline, color }) => outline && ({ bgColor: 'transparent', textColor: color === lightGray ? offBlack : color })),
-  withProps(({ disabled }) => disabled && ({ bgColor: midGray, textColor: darkGray, color: midGray })),
+  withProps(({ disabled }) => disabled && ({ bgColor: midGray, textColor: darkGray, color: midGray }))
 )(Button)

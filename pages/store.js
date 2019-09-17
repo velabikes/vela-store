@@ -2,11 +2,11 @@ import PropTypes from 'prop-types'
 import Head from 'next/head'
 import { withRouter } from 'next/router'
 import { compose } from 'recompose'
+import Main from 'components/Main'
+import MainHeader from 'components/MainHeader'
 import ProductList from '../components/store/ProductList'
 import PaddedView from '../components/PaddedView'
 import withCollectionByHandle from '../containers/withCollectionByHandle'
-import Main from 'components/Main'
-import MainHeader from 'components/MainHeader'
 
 const Store = ({
   collection,
@@ -18,9 +18,9 @@ const Store = ({
         <title>{collection && collection.title} - Vela Bikes</title>
       </Head>
       <MainHeader
-         title={collection && collection.title}
+        title={collection && collection.title}
       />
-      <div dangerouslySetInnerHTML={{__html: collection.descriptionHtml}} />
+      <div dangerouslySetInnerHTML={{ __html: collection.descriptionHtml }} />
       <br />
       <ProductList products={collection && collection.products} loading={isCollectionLoading} />
     </Main>

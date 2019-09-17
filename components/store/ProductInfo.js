@@ -1,15 +1,18 @@
+import PropTypes from 'prop-types'
 import { compose, withState, withProps } from 'recompose'
-import withProduct from '../../containers/withProduct'
+import ProductPrice from 'components/store/ProductPrice'
 import { HideOnDesktop, HideOnMobile } from '../HideOn'
-import Price from '../Price'
 import ProductImage from './ProductImage'
 import ProductForm from './ProductForm'
-import ProductPrice from 'components/store/ProductPrice'
 
 const ProductVariantImage = ({ variant }) =>
   <ProductImage
     src={variant.node && variant.node.image.src}
   />
+
+ProductVariantImage.propTypes = {
+  variant: PropTypes.object
+}
 
 const ProductImageGallery = ({ product }) =>
   <div className='ProductImageGallery'>
@@ -23,6 +26,10 @@ const ProductImageGallery = ({ product }) =>
       }
     `}</style>
   </div>
+
+ProductImageGallery.propTypes = {
+  product: PropTypes.object
+}
 
 const ProductInfo = ({ product, setAvailableVariants, availableVariants, selectedVariant }) =>
   <div className='ProductInfo'>
@@ -74,6 +81,13 @@ const ProductInfo = ({ product, setAvailableVariants, availableVariants, selecte
       }
     `}</style>
   </div>
+
+ProductInfo.propTypes = {
+  product: PropTypes.object,
+  setAvailableVariants: PropTypes.any,
+  availableVariants: PropTypes.any,
+  selectedVariant: PropTypes.any
+}
 
 export default compose(
   withState('availableVariants', 'setAvailableVariants', ({ product }) => product.variants),

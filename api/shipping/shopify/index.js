@@ -3,7 +3,7 @@ const correios = require('node-correios')()
 
 const normalizeText = text => {
   const specialChars = 'àáäâãèéëêìíïîòóöôùúüûñçßÿœæŕśńṕẃǵǹḿǘẍźḧ'
-  const  normalChars = 'aaaaaeeeeiiiioooouuuuncsyoarsnpwgnmuxzh'
+  const normalChars = 'aaaaaeeeeiiiioooouuuuncsyoarsnpwgnmuxzh'
   const expression = new RegExp(specialChars.split('').join('|'), 'g')
 
   return text.toString().toLowerCase().trim()
@@ -79,7 +79,7 @@ module.exports = async (req, res) => {
         }]
       }))
     )
-  } else if (true) {
+  } else if (true) { // eslint-disable-line
     return (
       res.end(JSON.stringify({
         rates: [{
@@ -128,10 +128,10 @@ module.exports = async (req, res) => {
   }
 }
 
-const mapCorreiosResultToRate = (result) => result.map(r => ({ //map here or map out?
-  service_name: 'Correios - ' + r.Codigo,
+const mapCorreiosResultToRate = (result) => result.map(r => ({ // map here or map out?
+  service_name: `Correios -${r.Codigo}`,
   service_code: r.Codigo,
-  total_price: parseFloat(r.Valor.split(',').join('.'))*100,
-  description: r.PrazoEntrega + ' dias úteis',
-  currency: 'BRL'
+  total_price: parseFloat(r.Valor.split(',').join('.')) * 100,
+  description: `${r.PrazoEntrega} dias úteis`,
+  currency: `BRL`
 }))

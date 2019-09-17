@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import { compose, lifecycle, withState, withProps, withHandlers } from 'recompose'
 
 const Player = ({ handleRef, src }) =>
@@ -6,9 +7,9 @@ const Player = ({ handleRef, src }) =>
     <video
       src={src}
       ref={handleRef}
-      autobuffer="true"
-      preload="true"
-      muted="muted"
+      autobuffer='true'
+      preload='true'
+      muted
     />
     <style jsx>{`
       .player video {
@@ -17,6 +18,11 @@ const Player = ({ handleRef, src }) =>
       }
     `}</style>
   </div>
+
+Player.propTypes = {
+  handleRef: PropTypes.string,
+  src: PropTypes.string
+}
 
 export default compose(
   withState('windowHeight', 'setWindowHeight', 0),

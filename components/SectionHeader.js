@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types'
+
 const SectionHeader = ({ title, tagline }) =>
   <header className='SectionHeader'>
     <h1>{title}</h1>
@@ -14,5 +16,10 @@ const SectionHeader = ({ title, tagline }) =>
       }
     `}</style>
   </header>
+
+SectionHeader.propTypes = {
+  title: PropTypes.string,
+  tagline: PropTypes.string
+}
 
 export default SectionHeader

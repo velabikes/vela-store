@@ -1,6 +1,6 @@
 import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
-import { compose, withHandlers, withProps, branch, withPropsOnChange } from 'recompose'
+import { compose, withHandlers, branch } from 'recompose'
 import dayjs from 'dayjs'
 import { setCheckoutId } from '../lib/redux'
 import withCheckoutId from './withCheckoutId'

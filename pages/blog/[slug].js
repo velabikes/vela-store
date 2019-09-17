@@ -1,4 +1,5 @@
 import { getPrismic } from 'lib/prismic'
+import PropTypes from 'prop-types'
 import Head from 'next/head'
 import PaddedView from 'components/PaddedView'
 import Main from 'components/Main'
@@ -36,12 +37,17 @@ const BlogPostPage = ({ cover, title, teaser, body, post_date }) =>
     `}</style>
   </PaddedView>
 
+
 BlogPostPage.getInitialProps = async ({ req, query }) => {
   const { slug } = query
   const prismic = await getPrismic(req)
   const { data } = await prismic.getByUID('blog_post', slug)
 
   return { ...data }
+}
+
+BlogPostPage.propTypes = {
+  postContent: PropTypes.object
 }
 
 export default BlogPostPage

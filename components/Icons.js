@@ -1,7 +1,7 @@
 
 import { compose } from 'recompose'
 import withCheckout from '../containers/withCheckout'
-import { velaGreen, velaBlue, velaRed } from '../style/colors'
+import { velaGreen, velaBlue } from '../style/colors'
 
 export const UserIcon = props => (
   <svg viewBox='0 0 27.05 27.04' width='1em' height='1em' {...props}>
@@ -135,19 +135,15 @@ export const Logo = props =>
       </g>
     </svg>
     <style jsx>{`
-	  .Logo {
-            fill: ${velaGreen}
-          }
-          path {
-	    //animation: colorchange 1s infinite;
-          }
-	  @keyframes colorchange {
-	    0%  { transform: scale(1) }
-	    50% { transform: scale(0.9) }
-	    100% { transform: scale(1) }
-	  }
-
-	`}</style>
+    .Logo {
+      fill: ${velaGreen}
+    }
+    @keyframes colorchange {
+      0%  { transform: scale(1) }
+      50% { transform: scale(0.9) }
+      100% { transform: scale(1) }
+  }
+`}</style>
   </div>
 
 export const MarkerStoreIcon = props =>

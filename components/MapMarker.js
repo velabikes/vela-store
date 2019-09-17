@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import { MarkerStoreIcon, MarkerChargerIcon } from './Icons'
 
 const MapMarkerIcon = ({ type }) => {
@@ -11,6 +12,11 @@ const MapMarkerIcon = ({ type }) => {
   }
 }
 
+MapMarkerIcon.propTypes = {
+  type: PropTypes.string
+}
+
+/* eslint-disable */
 const MapMarker = ({ onClick, selected, disabled, type, hidden }) =>
   <div onClick={onClick}>
     <MapMarkerIcon type={type} />
@@ -32,5 +38,14 @@ const MapMarker = ({ onClick, selected, disabled, type, hidden }) =>
       }
     `}</style>
   </div>
+/* eslint-enable */
+
+MapMarker.propTypes = {
+  onClick: PropTypes.func,
+  selected: PropTypes.bool,
+  disabled: PropTypes.bool,
+  type: PropTypes.string,
+  hidden: PropTypes.string
+}
 
 export default MapMarker

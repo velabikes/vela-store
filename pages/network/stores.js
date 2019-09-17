@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import Head from 'next/head'
 // import fetch from 'isomorphic-fetch'
 import Main from 'components/Main'
@@ -57,6 +58,10 @@ const Locations = ({ stores }) =>
       }
     `}</style>
   </PaddedView>
+
+Locations.propTypes = {
+  stores: PropTypes.object
+}
 
 Locations.getInitialProps = () => {
   const stores = [{
