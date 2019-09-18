@@ -17,14 +17,12 @@ const Button = ({
   loading,
   color,
   bgColor,
-  textColor,
-  ...props
+  textColor
 }) =>
   <>
     <button
       onClick={!loading && onClick}
       disabled={disabled}
-      {...props}
     >
       {children}
     </button>

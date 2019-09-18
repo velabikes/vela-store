@@ -31,7 +31,7 @@ const SubscribeForm = () =>
                   <input type='text' name='b_950b7d190680648ed40ffbe84_dde7c564df' tabIndex='-1' defaultValue='' />
                 </div>
                 <div className='submit'>
-                  <Button action inverted type='submit'>Assinar</Button>
+                  <Button type='submit'>Assinar</Button>
                 </div>
               </form>
             }
