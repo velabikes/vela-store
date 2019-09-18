@@ -1,5 +1,5 @@
-const url = require('url')
-const { createClient } = require('@particular./shopify-request')
+import { URL } from 'url'
+import { createClient } from '@particular./shopify-request'
 
 const shopify = new createClient({ // eslint-disable-line
   store_name: 'vela-bikes-store',
