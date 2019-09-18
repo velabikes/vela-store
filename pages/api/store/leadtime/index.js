@@ -1,5 +1,5 @@
-const url = require('url')
-const { createClient } = require('@particular./shopify-request')
+import { URL } from 'url'
+import { createClient } from '@particular./shopify-request'
 
 const shopify = new createClient({ // eslint-disable-line
   store_name: 'vela-bikes-store',
@@ -8,8 +8,9 @@ const shopify = new createClient({ // eslint-disable-line
 })
 
 module.exports = async (req, res) => {
-  const { query } = await url.URL(req.url, true)
-  const variantUri = Buffer.from(query.variantId, 'base64').toString('ascii')
+  const { searchParams } = new URL(req.url, 'https://velabikes.com.br')
+  const variantBase = searchParams.get('variantId')
+  const variantUri = Buffer.from(variantBase, 'base64').toString('ascii')
   const variantId = variantUri.split('/').pop()
   const { variant } = await shopify.get(`/admin/variants/${variantId}.json`)
 
