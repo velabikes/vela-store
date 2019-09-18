@@ -1,5 +1,5 @@
 import { Form, withFormik } from 'formik'
-import { compose, withState } from 'recompose'
+import { compose } from 'recompose'
 import Field from 'components/form/Field'
 import FieldGroup from 'components/form/FieldGroup'
 import Button from 'components/Button'
@@ -37,11 +37,11 @@ const TestRideFrom = () =>
   </Form>
 
 const handleSubmit = (values, { setSubmitting, props }) => {
-  alert(JSON.stringify(values))
+  console.log(JSON.stringify(values))
+  // alert(JSON.stringify(values))
   setSubmitting(false)
 }
 
 export default compose(
-  withState('address', 'setAddress', ''),
   withFormik({ handleSubmit })
 )(TestRideFrom)
