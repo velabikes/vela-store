@@ -8,7 +8,7 @@ const shopify = new createClient({ // eslint-disable-line
 })
 
 module.exports = async (req, res) => {
-  const { query } = await url.URL(req.url, true)
+  const { query } = new URL(req.url)
   const variantUri = Buffer.from(query.variantId, 'base64').toString('ascii')
   const variantId = variantUri.split('/').pop()
   const { variant } = await shopify.get(`/admin/variants/${variantId}.json`)
