@@ -1,18 +1,17 @@
 import Head from 'next/head'
 import PaddedView from 'components/PaddedView'
-import Main from 'components/Main'
 import TestRideBanner from 'components/test-ride/TestRideBanner'
 import TestRideForm from 'components/test-ride/TestRideForm'
 
 const TestRide = () =>
-  <PaddedView>
-    <Main>
-      <Head>
-        <title>TestRide - Vela Bikes</title>
-      </Head>
+  <div>
+    <Head>
+      <title>TestRide - Vela Bikes</title>
+    </Head>
+    <PaddedView>
       <TestRideBanner />
-      <TestRideForm />
-    </Main>
-  </PaddedView>
+    </PaddedView>
+    <TestRideForm />
+  </div>
 
 export default TestRide
