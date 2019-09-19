@@ -13,7 +13,7 @@ const TestRideBanner = () =>
           <p>Quer testar? <br /> É gratuito, sem compromisso e você ainda ganha benefícios!</p>
         </div>
         <div className='BannerImage'>
-          <span>image</span>
+          <img src='/static/testride.png' alt='' />
         </div>
       </Grid>
     </Section>
