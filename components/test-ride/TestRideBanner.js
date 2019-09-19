@@ -25,6 +25,9 @@ const TestRideBanner = () =>
       }
       .BannerTitle {
         text-align: right;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
       }
     `}</style>
   </div>
