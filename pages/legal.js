@@ -9,9 +9,9 @@ const LegalPage = ({
   <PaddedView>
     <h1>Informações Legais</h1>
     <h2>Politica de privacidade</h2>
-    {shop && shop.privacyPolicy.body.split('\n').map(paragraph => <p>{paragraph}</p>)}
+    {shop && <div dangerouslySetInnerHTML={{ __html: shop.privacyPolicy.body }} />}
     <h2>Politica de devolução</h2>
-    {shop && shop.refundPolicy.body.split('\n').map(paragraph => <p>{paragraph}</p>)}
+    {shop && <div dangerouslySetInnerHTML={{ __html: shop.refundPolicy.body }} />}
   </PaddedView>
 
 LegalPage.propTypes = {
