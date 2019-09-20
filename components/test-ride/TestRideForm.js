@@ -22,23 +22,30 @@ const TestRideFrom = () =>
                 name='name'
                 type='text'
               />
-              <FieldGroup template='1fr 1fr'>
+              <FieldGroup template='2fr 1fr'>
                 <Field
                   label='E-mail'
                   name='email'
                   type='email'
                 />
                 <Field
+                  label='Altura'
+                  name='height'
+                  type='text'
+                />
+              </FieldGroup>
+              <FieldGroup template='1fr 1fr'>
+                <Field
                   label='Telefone'
                   name='phone'
                   type='text'
                 />
+                <Field
+                  label='Cidade'
+                  name='city'
+                  type='text'
+                />
               </FieldGroup>
-              <Field
-                label='Cidade'
-                name='city'
-                type='text'
-              />
               <Field
                 label='Eu aceito os termos de test-ride da Vela.'
                 name='height'
@@ -109,7 +116,7 @@ const TestRideFrom = () =>
 
 const handleSubmit = (values, { setSubmitting, props }) => {
   console.log(JSON.stringify(values))
-  // alert(JSON.stringify(values))
+  alert(JSON.stringify(values)) // eslint-disable-line
   setSubmitting(false)
 }
 
