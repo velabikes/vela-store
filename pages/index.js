@@ -39,9 +39,7 @@ const HomePage = ({ images }) =>
         <h1>#VADEVELA</h1>
       </div>
     </div>
-    <PaddedView>
-      <Highlight />
-    </PaddedView>
+    <Highlight />
     <Inverter>
       <PaddedView>
         <VelaPoint />
