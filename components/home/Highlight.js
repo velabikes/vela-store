@@ -23,11 +23,11 @@ const Highlight = () => {
           <Grid template='1fr 1fr'>
             <div className='detail'>
               <strong>até 40km</strong>
-              <div>Potencia do motor.</div>
+              <div>potência do motor</div>
             </div>
             <div className='detail'>
               <strong>350W</strong>
-              <div>Autonomia da bateria.</div>
+              <div>autonomia da bateria</div>
             </div>
           </Grid>
           <HideOnDesktop><br /><Button primary outline>Saiba +</Button></HideOnDesktop>
@@ -38,10 +38,10 @@ const Highlight = () => {
       </Grid>
       <style jsx>{`
         .teaser {
-          font-size: 1.5em;
+          font-size: 1.2em;
         }
         strong {
-          font-size: 1.5em;
+          font-size: 1.2em;
         }
         .detail {
           text-align: center;
@@ -52,6 +52,7 @@ const Highlight = () => {
         }
         .image {
           align-self: end;
+          overflow: hidden;
         }
       `}</style>
     </PaddedView>

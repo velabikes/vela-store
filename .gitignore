@@ -26,3 +26,6 @@ package-lock.json
 
 # next.js build output
 .next
+
+# OSX Thumbs
+.DS_Store
