@@ -4,14 +4,13 @@ import Field from 'components/form/Field'
 import FieldGroup from 'components/form/FieldGroup'
 import Button from 'components/Button'
 import PaddedView from 'components/PaddedView'
-import Grid from 'components/Grid'
 import Section from 'components/Section'
 import SectionHeader from 'components/SectionHeader'
 import Inverter from 'components/Inverter'
 
 const TestRideFrom = () =>
   <div className='TestRideForm'>
-    <Grid template='7fr 5fr'>
+    <div className='Form'>
       <PaddedView>
         <Section>
           <PaddedView>
@@ -59,6 +58,9 @@ const TestRideFrom = () =>
           </PaddedView>
         </Section>
       </PaddedView>
+    </div>
+
+    <div className='TestRideFormInfos'>
       <Inverter>
         <PaddedView>
           <Section>
@@ -66,27 +68,47 @@ const TestRideFrom = () =>
             <div className='SectionBody'>
               <div className='items'>
                 <span>1</span>
-                <p>Insira todas as informações nos campos ao lado e aguarde contato.</p>
+                <p>
+                  Insira todas as informações nos<br />
+                  campos ao lado e aguarde contato.
+                </p>
               </div>
               <div className='items'>
                 <span>2</span>
-                <p> Combine com o Amigo da Vela um horário disponível para o test-ride.</p>
+                <p>
+                  Combine com o Amigo da Vela um <br />
+                  horário disponível para o test-ride.
+                </p>
               </div>
               <div className='items'>
                 <span>3</span>
-                <p>Encontre o Amigo da Vela no dia e horário marcados. Ele irá te apresentar a bike elétrica pessoalmente, deixar você dar uma volta!</p>
+                <p>Encontre o Amigo da Vela no dia <br />
+                e horário marcados. Ele irá te <br />
+                apresentar a bike elétrica <br />
+                pessoalmente, deixar você dar <br />
+                uma volta e trocar sobre <br />
+                a experiência na sua cidade!</p>
               </div>
             </div>
           </Section>
         </PaddedView>
       </Inverter>
-    </Grid>
+
+    </div>
+    {/* </Grid> */}
     <style jsx>{`
         .TestRideForm {
           background-color: #E7E8E8;
           font-size: 20px;
           line-height: 1.2;
+          display: flex;
+          flex-direction: column-reverse;
         }
+
+        .TestRideFormInfos {
+          width: 100%;
+        }
+
         .items {
           display: flex;
           margin: 44px;
@@ -110,6 +132,19 @@ const TestRideFrom = () =>
           height: 55px;
           text-align: center;
           width: 55px;
+        }
+
+        @media only screen and (min-width: 768px) {
+          .TestRideForm {
+            flex-direction: row;
+          }
+          .TestRideFormInfos {
+            width: 45%;
+          }
+          .BannerTitle {
+            width: 50%;
+            text-align: right;
+          }
         }
     `}</style>
   </div>
