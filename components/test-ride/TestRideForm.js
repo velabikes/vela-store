@@ -134,12 +134,21 @@ const TestRideFrom = () =>
           width: 55px;
         }
 
+        .actions {
+          width: 100%;
+        }
+
         @media only screen and (min-width: 768px) {
           .TestRideForm {
             flex-direction: row;
           }
           .TestRideFormInfos {
             width: 45%;
+          }
+          .actions {
+            display: flex;
+            justify-content: flex-end;
+            width: 150px;
           }
           .BannerTitle {
             width: 50%;
