@@ -9,7 +9,7 @@ import { HideOnMobile, HideOnDesktop } from 'components/HideOn'
 const Highlight = () => {
   return (
     <PaddedView style={{ background: '#edeef2' }}>
-      <Grid template='2fr 3fr'>
+      <Grid template='repeat(auto-fit, minmax(320px, 1fr))'>
         <Section>
           <Grid template='1fr 1fr'>
             <SectionHeader title='Vela 1' />

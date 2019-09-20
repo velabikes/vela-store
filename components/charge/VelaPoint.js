@@ -7,7 +7,7 @@ import VelaPointFigure from './VelaPointFigure'
 
 const VelaPoint = () =>
   <Section>
-    <Grid template='1fr 1fr'>
+    <Grid template='repeat(auto-fit, minmax(320px, 1fr))'>
       <div>
         <SectionHeader title='Ponto Vela' />
         <div className='SectionBody'>
