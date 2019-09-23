@@ -46,7 +46,7 @@ ProductPrice.propTypes = {
 export default compose(
   withProps(
     ({ product, variant }) => {
-      const prices = product.variants.edges.map(({ node: { priceV2: { amount } } }) => amount)
+      const prices = product.variants && product.variants.edges.map(({ node: { priceV2: { amount } } }) => amount)
       const comparePrices = product.variants.edges
         .map(({ node: { compareAtPriceV2 } }) => compareAtPriceV2 && compareAtPriceV2.amount)
         .filter(Boolean)
