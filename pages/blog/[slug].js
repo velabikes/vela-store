@@ -21,7 +21,7 @@ const BlogPostPage = ({ cover, title, teaser, body, post_date }) =>
           <div><small>{dayjs(Date(post_date)).format('DD/MM/YYYY')}</small></div>
         </div>}
       />
-      <Grid template='1fr 1fr'>
+      <Grid template='repeat(auto-fit, minmax(320px, 1fr))'>
         <div className='PostImage'>
           <img src={cover.url} alt={cover.alt} />
         </div>

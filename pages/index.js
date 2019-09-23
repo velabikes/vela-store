@@ -3,7 +3,7 @@ import Link from 'next/link'
 import fetch from 'isomorphic-fetch'
 import PropTypes from 'prop-types'
 import HomeImage from 'components/home/HomeImage'
-import HomeBikes from 'components/home/HomeBikes'
+import Highlight from 'components/home/Highlight'
 import HomeAlbum from 'components/home/HomeAlbum'
 import PaddedView from 'components/PaddedView'
 import Inverter from 'components/Inverter'
@@ -39,9 +39,7 @@ const HomePage = ({ images }) =>
         <h1>#VADEVELA</h1>
       </div>
     </div>
-    <PaddedView>
-      <HomeBikes />
-    </PaddedView>
+    <Highlight />
     <Inverter>
       <PaddedView>
         <VelaPoint />
