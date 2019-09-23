@@ -22,11 +22,11 @@ const Highlight = () => {
             <Grid template='1fr 1fr'>
               <div className='detail'>
                 <strong>até 40km</strong>
-                <div>potência do motor</div>
+                <div>autonomia da bateria</div>
               </div>
               <div className='detail'>
                 <strong>350W</strong>
-                <div>autonomia da bateria</div>
+                <div>potência do motor</div>
               </div>
             </Grid>
             <HideOnDesktop><br /><Button primary outline>Saiba +</Button></HideOnDesktop>
