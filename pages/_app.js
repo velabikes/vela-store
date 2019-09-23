@@ -1,5 +1,5 @@
 import React from 'react'
-import App, { Container } from 'next/app'
+import App from 'next/app'
 import Router, { withRouter } from 'next/router'
 import { compose } from 'recompose'
 import { Provider } from 'react-redux'
@@ -28,7 +28,7 @@ class MyApp extends App {
     const { Component, pageProps, store, apollo, router } = this.props
 
     return (
-      <Container>
+      <>
         <Progress />
         <Head />
         <Provider store={store}>
@@ -38,7 +38,7 @@ class MyApp extends App {
             </Header>
           </ApolloProvider>
         </Provider>
-      </Container>
+      </>
     )
   }
 }
