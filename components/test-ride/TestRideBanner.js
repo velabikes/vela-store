@@ -1,13 +1,10 @@
-// import PropTypes from 'prop-types'
-// import Grid from 'components/Grid'
 import Section from 'components/Section'
-import SectionHeader from 'components/SectionHeader'
 
 const TestRideBanner = () =>
   <Section>
     <div className='TestRideBanner'>
       <div className='BannerTitle'>
-        <SectionHeader title='Test-ride' />
+        <h1 className='title'>Test-ride</h1>
         <p>
           Nós temos diversos Amigos da<br />
           Vela pelo Brasil pra você<br />
@@ -24,11 +21,15 @@ const TestRideBanner = () =>
       </div>
       <style jsx>{`
       .TestRideBanner {
-        font-size: 20px;
+        font-size: 1.2em;
         line-height: 1.2;
         position: relative;
         display: flex;
         flex-direction: column-reverse;
+      }
+
+      .title {
+        font-size: 2.5em;
       }
 
       .TestRideBanner h1 {
