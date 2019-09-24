@@ -96,7 +96,6 @@ const TestRideFrom = () =>
       </Inverter>
 
     </div>
-    {/* </Grid> */}
     <style jsx>{`
         .TestRideForm {
           background-color: #E7E8E8;
@@ -148,8 +147,11 @@ const TestRideFrom = () =>
           }
           .actions {
             display: flex;
+            flex-direction: column;
             justify-content: flex-end;
-            width: 150px;
+            width: 200px;
+            margin: auto;
+            margin-right: 0;
           }
           .BannerTitle {
             width: 50%;
