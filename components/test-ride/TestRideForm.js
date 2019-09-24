@@ -1,6 +1,7 @@
 import { Form, withFormik } from 'formik'
 import { compose } from 'recompose'
 import Field from 'components/form/Field'
+import FieldCheckbox from 'components/form/FieldCheckbox'
 import FieldGroup from 'components/form/FieldGroup'
 import Button from 'components/Button'
 import PaddedView from 'components/PaddedView'
@@ -45,9 +46,9 @@ const TestRideFrom = () =>
                   type='text'
                 />
               </FieldGroup>
-              <Field
+              <FieldCheckbox
                 label='Eu aceito os termos de test-ride da Vela.'
-                name='height'
+                name='accept-terms'
                 type='checkbox'
               />
               <br />
