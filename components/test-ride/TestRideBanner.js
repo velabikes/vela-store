@@ -6,13 +6,13 @@ const TestRideBanner = () =>
       <div className='BannerTitle'>
         <h1 className='title'>Test-ride</h1>
         <p>
-          Nós temos diversos Amigos da<br />
-          Vela pelo Brasil pra você<br />
+          Nós temos diversos Amigos da
+          Vela pelo Brasil pra você
           conhecer a Vela de perto.
         </p>
         <p>
-          Quer testar? <br />
-          É gratuito, sem compromisso e <br />
+          Quer testar?
+          É gratuito, sem compromisso e
           você ainda ganha benefícios!
         </p>
       </div>

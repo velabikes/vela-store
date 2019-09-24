@@ -72,24 +72,24 @@ const TestRideFrom = () =>
               <div className='items'>
                 <span>1</span>
                 <p>
-                  Insira todas as informações nos<br />
+                  Insira todas as informações nos
                   campos ao lado e aguarde contato.
                 </p>
               </div>
               <div className='items'>
                 <span>2</span>
                 <p>
-                  Combine com o Amigo da Vela um <br />
+                  Combine com o Amigo da Vela um
                   horário disponível para o test-ride.
                 </p>
               </div>
               <div className='items'>
                 <span>3</span>
-                <p>Encontre o Amigo da Vela no dia <br />
-                e horário marcados. Ele irá te <br />
-                apresentar a bike elétrica <br />
-                pessoalmente, deixar você dar <br />
-                uma volta e trocar sobre <br />
+                <p>Encontre o Amigo da Vela no dia
+                e horário marcados. Ele irá te
+                apresentar a bike elétrica
+                pessoalmente, deixar você dar
+                uma volta e trocar sobre
                 a experiência na sua cidade!</p>
               </div>
             </div>
