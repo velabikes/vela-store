@@ -16,6 +16,7 @@ const TestRideFrom = () =>
         <Section>
           <PaddedView>
             <p>Insira seus dados no formulário abaixo e aguarde nosso contato.</p>
+            <br />
             <Form>
               <Field
                 label='Nome'
@@ -66,6 +67,7 @@ const TestRideFrom = () =>
         <PaddedView>
           <Section>
             <SectionHeader align='center' title='Como funciona?' />
+            <br />
             <div className='SectionBody'>
               <div className='items'>
                 <span>1</span>
@@ -99,10 +101,14 @@ const TestRideFrom = () =>
     <style jsx>{`
         .TestRideForm {
           background-color: #E7E8E8;
-          font-size: 20px;
           line-height: 1.2;
+          font-size: 1.2em;
           display: flex;
           flex-direction: column-reverse;
+        }
+
+        .Form {
+          font-size: 1.1em;
         }
 
         .TestRideFormInfos {
@@ -136,6 +142,10 @@ const TestRideFrom = () =>
 
         .actions {
           width: 100%;
+        }
+
+        .actions button {
+          font-size: 1.3em!important;
         }
 
         @media only screen and (min-width: 768px) {
