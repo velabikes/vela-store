@@ -21,14 +21,13 @@ const BlogPostPage = ({ cover, title, teaser, body, post_date }) =>
           <div><small>{dayjs(Date(post_date)).format('DD/MM/YYYY')}</small></div>
         </div>}
       />
-      <Grid template='repeat(auto-fit, minmax(320px, 1fr))'>
-        <div className='PostImage'>
-          <img src={cover.url} alt={cover.alt} />
-        </div>
-        <div>
-          <RichText render={body} />
-        </div>
-      </Grid>
+      <div className='PostImage'>
+        <img src={cover.url} alt={cover.alt} />
+      </div>
+      <br />
+      <div>
+        <RichText render={body} />
+      </div>
     </Main>
     <style jsx>{`
         .SectionBody {
