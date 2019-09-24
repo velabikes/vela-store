@@ -6,7 +6,7 @@ const handle = async (req, res) => {
     name: 'teste da silva'
   })
 
-  const serviceOrder  = await createServiceOrder({
+  const serviceOrder = await createServiceOrder({
     customerId: customer.extId,
     extId: 17149242
   })
