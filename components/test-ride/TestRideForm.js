@@ -1,4 +1,4 @@
-import { Form, withFormik } from 'formik'
+import { Formik, Form, withFormik, ErrorMessage } from 'formik'
 import { compose } from 'recompose'
 import Field from 'components/form/Field'
 import FieldCheckbox from 'components/form/FieldCheckbox'
@@ -18,46 +18,102 @@ const TestRideFrom = () =>
           <PaddedView>
             <p>Insira seus dados no formulário abaixo e aguarde nosso contato.</p>
             <br />
-            <Form>
-              <Field
-                label='Nome'
-                name='name'
-                type='text'
-              />
-              <FieldGroup template='2fr 1fr'>
-                <Field
-                  label='E-mail'
-                  name='email'
-                  type='email'
-                />
-                <Field
-                  label='Altura'
-                  name='height'
-                  type='text'
-                />
-              </FieldGroup>
-              <FieldGroup template='1fr 1fr'>
-                <Field
-                  label='Telefone'
-                  name='phone'
-                  type='text'
-                />
-                <Field
-                  label='Cidade'
-                  name='city'
-                  type='text'
-                />
-              </FieldGroup>
-              <FieldCheckbox
-                label='Eu aceito os termos de test-ride da Vela.'
-                name='terms'
-                type='checkbox'
-              />
-              <br />
-              <div className='actions'>
-                <Button type='submit' primary>Quero testar</Button>
-              </div>
-            </Form>
+            <Formik
+              validate={(values, props) => {
+                let errors = {}
+
+                if (!values.name) { errors.name = 'Nome é requerido' }
+
+                if (!values.email) {
+                  errors.email = 'E-mail é requerido'
+                } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+                  errors.email = 'E-mail inválido'
+                }
+
+                if (!values.height) { errors.height = 'Altura é requerido' }
+
+                if (!values.phone) { errors.phone = 'Telefone é requerido' }
+
+                if (!values.city) { errors.city = 'Cidade é requerido' }
+
+                if (!values.terms) { errors.terms = 'É preciso concordar com os termos de uso' }
+
+                return errors
+              }}
+              initialValues={{ name: '', email: '', height: '', phone: '', city: '', terms: false }}
+              render={
+                ({ errors, status, touched }) => (
+                  <Form>
+                    <Field
+                      label='Nome'
+                      name='name'
+                      type='text'
+                      error={
+                        <div className='errors'>
+                          <ErrorMessage name='name' component='span' />
+                        </div>
+                      }
+                    />
+                    <FieldGroup template='2fr 1fr'>
+                      <Field
+                        label='E-mail'
+                        name='email'
+                        type='email'
+                        error={
+                          <div className='errors'>
+                            <ErrorMessage name='email' component='span' />
+                          </div>
+                        }
+                      />
+                      <Field
+                        label='Altura'
+                        name='height'
+                        type='text'
+                        error={
+                          <div className='errors'>
+                            <ErrorMessage name='height' component='span' />
+                          </div>
+                        }
+                      />
+                    </FieldGroup>
+                    <FieldGroup template='1fr 1fr'>
+                      <Field
+                        label='Telefone'
+                        name='phone'
+                        type='text'
+                        error={
+                          <div className='errors'>
+                            <ErrorMessage name='phone' component='span' />
+                          </div>
+                        }
+                      />
+                      <Field
+                        label='Cidade'
+                        name='city'
+                        type='text'
+                        error={
+                          <div className='errors'>
+                            <ErrorMessage name='city' component='span' />
+                          </div>
+                        }
+                      />
+                    </FieldGroup>
+                    <FieldCheckbox
+                      label='Eu aceito os termos de test-ride da Vela.'
+                      name='terms'
+                      type='checkbox'
+                    />
+                    <div className='actions'>
+                      <Button type='submit' primary>Quero testar</Button>
+                    </div>
+                    <div className='errors'>
+                      <ErrorMessage name='terms' component='span' />
+                    </div>
+                  </Form>
+                )
+              }
+            />
+
           </PaddedView>
         </Section>
       </PaddedView>
@@ -145,6 +201,14 @@ const TestRideFrom = () =>
           width: 100%;
         }
 
+        .errors {
+          text-align: right;
+        }
+
+        .errors :global(span) {
+          font-size: .7em;
+          color: red;
+        }
         .actions button {
           font-size: 1.3em!important;
         }
