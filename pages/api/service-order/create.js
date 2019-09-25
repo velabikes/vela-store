@@ -1,5 +1,5 @@
 import { createCustomer, createServiceOrder } from 'lib/omie'
-import pipefy from 'lib/pipefy'
+import { createCard } from 'lib/pipefy'
 
 const handle = async (req, res) => {
   const customer = await createCustomer({
@@ -12,7 +12,7 @@ const handle = async (req, res) => {
     extId: 17149242
   })
 
-  const card = await pipefy.createCard({
+  const card = await createCard({
     input: {
       pipe_id: '1053749',
       title: 'name',
