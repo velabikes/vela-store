@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulário</title>
+</head>
+
+<body>
+    <form form action="Endereço do Servidor Vela" method="POST">
+        <div>
+            <h1>
+                Formulário Ordem de Serviço
+            </h1>
+        </div>
+        <div>
+            <div>
+                <div>
+                    <label for="Cliente">Cliente:</label>
+                    <input type="text" name="Cliente" id="">
+                </div>
+                <div>
+                    <label for="CPF">CPF:</label>
+                    <input type="number" name="CPF" id="">
+                </div>
+                <div>
+                    <label for="Telefone">Telefone:</label>
+                    <input type="number" name="Telefone" id="">
+                </div>
+                <div>
+                    <label for="Email">Email:</label>
+                    <input type="email" name="Email" id="">
+                </div>
+            </div>
+            <div>
+                <div>
+                    <label for="CEP">CEP:</label>
+                    <input type="number" name="CEP" id="">
+                </div>
+                <div>
+                    <label for="Endereco">Endereço:</label>
+                    <input type="text" name="Endereco" disabled="disabled">
+                </div>
+                <div>
+                    <label for="cidade">Cidade:</label>
+                    <input type="text" name="Cidade" disabled="disabled">
+                </div>
+                <div>
+                    <label for="UF">UF:</label>
+                    <input type="text" name="UF" disabled="disabled">
+                </div>
+                <div>
+                    <label for="Numero">Número:</label>
+                    <input type="number" name="Numero">
+                </div>
+                <div>
+                    <label for="Complemento">Complemento:</label>
+                    <input type="text" name="Complemento">
+                </div>
+            </div>
+            <div>
+                <label for="Serviço">Serviço Solicitado:</label>
+                <textarea placeholder="Descreve o problema do cliente..."
+                    name="Servico"></textarea>
+            </div>
+        </div>
+        <div>
+            <div>
+                <button type="submit" onclick="">
+                    Cadastrar Serviço
+                </button>
+            </div>
+            <div>
+                <button type="reset" onclick="">
+                    Voltar
+                </button>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
