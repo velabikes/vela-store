@@ -55,7 +55,7 @@ const TestRideFrom = () =>
               />
               <br />
               <div className='actions'>
-                <Button primary>Quero testar</Button>
+                <Button type='submit' primary>Quero testar</Button>
               </div>
             </Form>
           </PaddedView>
@@ -176,9 +176,10 @@ const handleSubmit = async (values, { setSubmitting, props }) => {
   try {
     const response = await fetch(`/api/testride/subscribe`, {
       method: 'POST',
-      body: JSON.strinfiy(values)
+      body: JSON.stringify(values)
     })
     const json = await response.json()
+    console.log(json)
 
     return { response: json }
   } catch (error) {
