@@ -50,7 +50,7 @@ const TestRideFrom = () =>
               </FieldGroup>
               <FieldCheckbox
                 label='Eu aceito os termos de test-ride da Vela.'
-                name='accept-terms'
+                name='terms'
                 type='checkbox'
               />
               <br />
@@ -179,7 +179,6 @@ const handleSubmit = async (values, { setSubmitting, props }) => {
       body: JSON.stringify(values)
     })
     const json = await response.json()
-    console.log(json)
 
     return { response: json }
   } catch (error) {
