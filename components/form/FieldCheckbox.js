@@ -3,16 +3,21 @@ import PropTypes from 'prop-types'
 
 const FieldCheckbox = ({ label, ...props }) =>
   <fieldset>
-    <label><Field {...props} />{label}</label><style jsx>{`
-        input {
-          width: 25px;
-          height: 25px;
-          font-size: 16px;
-        }
-        label {
-          font-weight: 400!important;
-          font-size: 16px;
-        }
+    <label>
+      <Field type='checkbox' {...props} />
+      {label}
+    </label>
+    <style jsx>{`
+      label :global(input) {
+        -webkit-appearance: none;
+        padding-right: 1.5em;
+        background-color: white;
+        border: none;
+      }
+      label {
+        font-weight: 400 !important;
+        font-size: 16px;
+      }
     `}</style>
   </fieldset>
 
