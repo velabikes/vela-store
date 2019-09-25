@@ -8,6 +8,7 @@ import PaddedView from 'components/PaddedView'
 import Section from 'components/Section'
 import SectionHeader from 'components/SectionHeader'
 import Inverter from 'components/Inverter'
+import fetch from 'isomorphic-fetch'
 
 const TestRideFrom = () =>
   <div className='TestRideForm'>
@@ -171,8 +172,20 @@ const TestRideFrom = () =>
     `}</style>
   </div>
 
-const handleSubmit = (values, { setSubmitting, props }) => {
-  console.log(JSON.stringify(values))
+const handleSubmit = async (values, { setSubmitting, props }) => {
+  try {
+    const response = await fetch(`/api/testride/subscribe`, {
+      method: 'POST',
+      body: JSON.strinfiy(values)
+    })
+    const json = await response.json()
+
+    return { response: json }
+  } catch (error) {
+    console.log('error', error)
+
+    return { error }
+  }
   alert(JSON.stringify(values)) // eslint-disable-line
   setSubmitting(false)
 }
