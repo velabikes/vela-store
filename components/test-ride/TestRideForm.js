@@ -22,21 +22,30 @@ const TestRideFrom = () =>
               validate={(values, props) => {
                 let errors = {}
 
-                if (!values.name) { errors.name = 'Nome é requerido' }
+                const errorsMessege = {
+                  name: 'Nome é requerido',
+                  email: 'E-mail é requerido',
+                  height: 'Altura é requerido',
+                  phone: 'Telefone é requerido',
+                  city: 'Cidade é requerido',
+                  terms: 'É preciso concordar com os termos de uso'
+                }
+
+                if (!values.name) { errors.name = errorsMessege['name'] }
 
                 if (!values.email) {
-                  errors.email = 'E-mail é requerido'
+                  errors.email = errorsMessege['email']
                 } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
                   errors.email = 'E-mail inválido'
                 }
 
-                if (!values.height) { errors.height = 'Altura é requerido' }
+                if (!values.height) { errors.height = errorsMessege['height'] }
 
-                if (!values.phone) { errors.phone = 'Telefone é requerido' }
+                if (!values.phone) { errors.phone = errorsMessege['phone'] }
 
-                if (!values.city) { errors.city = 'Cidade é requerido' }
+                if (!values.city) { errors.city = errorsMessege['city'] }
 
-                if (!values.terms) { errors.terms = 'É preciso concordar com os termos de uso' }
+                if (!values.terms) { errors.terms = errorsMessege['terms'] }
 
                 return errors
               }}
