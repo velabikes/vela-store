@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
+    "dev": "now dev",
     "build": "next build",
     "start": "next start",
     "now-build": "next build",
@@ -36,6 +36,7 @@
     "formik": "^1.5.1",
     "google-map-react": "^1.1.4",
     "graphql": "^14.2.1",
+    "graphql-request": "^1.8.2",
     "isomorphic-fetch": "^2.2.1",
     "logrocket": "^1.0.1",
     "micro": "^9.3.4",
