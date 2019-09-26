@@ -23,7 +23,7 @@ const handle = async (req, res) => {
   const card = await createCard({
     input: {
       pipe_id: '1053749',
-      title: `asdfasdfasfsd`,
+      title: `#${serviceOrder.number} - ${name}`,
       fields_attributes: [
         { field_id: 'omie', field_value: serviceOrder.number },
         { field_id: 'nome', field_value: name },
