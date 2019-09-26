@@ -20,26 +20,18 @@ const handle = async (req, res) => {
     description
   })
 
-  console.log(serviceOrder)
-
   const card = await createCard({
     input: {
       pipe_id: '1053749',
       title: `asdfasdfasfsd`,
       fields_attributes: [
+        { field_id: 'omie', field_value: serviceOrder.number },
         { field_id: 'nome', field_value: name },
-        { field_id: 'cpf', field_value: 'document' },
-        { field_id: 'telefone', field_value: 'phone' },
-        { field_id: 'email', field_value: 'email' },
-        { field_id: 'cep', field_value: 'zip' },
-        { field_id: 'numero', field_value: 'number' },
-        { field_id: 'complemento', field_value: 'complement' },
-        { field_id: 'servico', field_value: 'service' }
+        { field_id: 'email', field_value: email },
+        { field_id: 'servico', field_value: description }
       ]
     }
   })
-
-  console.log(card)
 
   res.end('ok')
 }
