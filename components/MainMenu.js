@@ -22,6 +22,9 @@ const MainMenu = () =>
       <li><Link href='/network/charge' as='/rede/recarga'><a>
         Rede de Recarga Rápida
       </a></Link></li>
+      <li><Link href='/blog'><a>
+        Blog
+      </a></Link></li>
       <li><Link href='https://velabikes.freshdesk.com/support/home'><a>
         Suporte
       </a></Link></li>
