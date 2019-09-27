@@ -253,13 +253,11 @@ const handleSubmit = async (values, { setSubmitting, props }) => {
     })
     const json = await response.json()
 
-    return { response: json }
+    console.log({ response: json })
   } catch (error) {
-    console.log('error', error)
-
-    return { error }
+    console.log({ error })
   }
-  alert(JSON.stringify(values)) // eslint-disable-line
+
   setSubmitting(false)
 }
 
