@@ -1,4 +1,4 @@
-import { Formik, Form, withFormik, ErrorMessage } from 'formik'
+import { Formik, Form, withFormik } from 'formik'
 import { compose } from 'recompose'
 import Field from 'components/form/Field'
 import CheckboxField from 'components/form/CheckboxField'
