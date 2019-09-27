@@ -247,7 +247,7 @@ const TestRideFrom = () =>
 
 const handleSubmit = async (values, { setSubmitting, props }) => {
   try {
-    const response = await fetch(`/api/testride/subscribe`, {
+    const response = await fetch(`/api/test-ride/subscribe`, {
       method: 'POST',
       body: JSON.stringify(values)
     })
