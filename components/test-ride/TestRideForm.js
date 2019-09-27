@@ -9,6 +9,7 @@ import Section from 'components/Section'
 import SectionHeader from 'components/SectionHeader'
 import Inverter from 'components/Inverter'
 import fetch from 'isomorphic-fetch'
+import FieldEmail from 'components/form/FieldEmail'
 
 const TestRideFrom = () =>
   <div className='TestRideForm'>
@@ -33,11 +34,7 @@ const TestRideFrom = () =>
 
                 if (!values.name) { errors.name = errorsMessege['name'] }
 
-                if (!values.email) {
-                  errors.email = errorsMessege['email']
-                } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-                  errors.email = 'E-mail inválido'
-                }
+                if (!values.email) { errors.email = errorsMessege['email'] }
 
                 if (!values.height) { errors.height = errorsMessege['height'] }
 
@@ -64,10 +61,8 @@ const TestRideFrom = () =>
                       }
                     />
                     <FieldGroup template='2fr 1fr'>
-                      <Field
-                        label='E-mail'
+                      <FieldEmail
                         name='email'
-                        type='email'
                         error={
                           <div className='errors'>
                             <ErrorMessage name='email' component='span' />
@@ -109,8 +104,7 @@ const TestRideFrom = () =>
                     </FieldGroup>
                     <FieldCheckbox
                       label='Eu aceito os termos de test-ride da Vela.'
-                      name='terms'
-                      type='checkbox'
+                      name='text'
                     />
                     <div className='actions'>
                       <Button type='submit' primary>Quero testar</Button>
