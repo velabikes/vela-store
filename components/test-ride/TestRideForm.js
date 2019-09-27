@@ -9,7 +9,7 @@ import Section from 'components/Section'
 import SectionHeader from 'components/SectionHeader'
 import Inverter from 'components/Inverter'
 import fetch from 'isomorphic-fetch'
-import FieldEmail from 'components/form/FieldEmail'
+import EmailField from 'components/form/EmailField'
 
 const TestRideFrom = () =>
   <div className='TestRideForm'>
@@ -54,30 +54,15 @@ const TestRideFrom = () =>
                       label='Nome'
                       name='name'
                       type='text'
-                      error={
-                        <div className='errors'>
-                          <ErrorMessage name='name' component='span' />
-                        </div>
-                      }
                     />
                     <FieldGroup template='2fr 1fr'>
-                      <FieldEmail
+                      <EmailField
                         name='email'
-                        error={
-                          <div className='errors'>
-                            <ErrorMessage name='email' component='span' />
-                          </div>
-                        }
                       />
                       <Field
                         label='Altura'
                         name='height'
                         type='text'
-                        error={
-                          <div className='errors'>
-                            <ErrorMessage name='height' component='span' />
-                          </div>
-                        }
                       />
                     </FieldGroup>
                     <FieldGroup template='1fr 1fr'>
@@ -85,21 +70,11 @@ const TestRideFrom = () =>
                         label='Telefone'
                         name='phone'
                         type='text'
-                        error={
-                          <div className='errors'>
-                            <ErrorMessage name='phone' component='span' />
-                          </div>
-                        }
                       />
                       <Field
                         label='Cidade'
                         name='city'
                         type='text'
-                        error={
-                          <div className='errors'>
-                            <ErrorMessage name='city' component='span' />
-                          </div>
-                        }
                       />
                     </FieldGroup>
                     <FieldCheckbox
