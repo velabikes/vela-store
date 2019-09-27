@@ -1,12 +1,14 @@
 import { Field } from 'formik'
+import FieldError from 'components/form/FieldError'
 import PropTypes from 'prop-types'
 
-const FieldCheckbox = ({ label, ...props }) =>
+const CheckboxField = ({ label, name, ...props }) =>
   <fieldset>
-    <Field id='checkbox' type='checkbox' {...props} />
+    <Field id='checkbox' type='checkbox' name={name} {...props} />
     <label htmlFor='checkbox'>
       {label}
     </label>
+    <FieldError name={name} />
     <style jsx>{`
       fieldset {
         position: relative;
@@ -58,8 +60,8 @@ const FieldCheckbox = ({ label, ...props }) =>
     `}</style>
   </fieldset>
 
-FieldCheckbox.propTypes = {
+CheckboxField.propTypes = {
   label: PropTypes.string
 }
 
-export default FieldCheckbox
+export default CheckboxField

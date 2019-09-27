@@ -1,7 +1,7 @@
 import { Formik, Form, withFormik, ErrorMessage } from 'formik'
 import { compose } from 'recompose'
 import Field from 'components/form/Field'
-import FieldCheckbox from 'components/form/FieldCheckbox'
+import CheckboxField from 'components/form/CheckboxField'
 import FieldGroup from 'components/form/FieldGroup'
 import Button from 'components/Button'
 import PaddedView from 'components/PaddedView'
@@ -77,15 +77,12 @@ const TestRideFrom = () =>
                         type='text'
                       />
                     </FieldGroup>
-                    <FieldCheckbox
+                    <CheckboxField
                       label='Eu aceito os termos de test-ride da Vela.'
-                      name='text'
+                      name='terms'
                     />
                     <div className='actions'>
                       <Button type='submit' primary>Quero testar</Button>
-                    </div>
-                    <div className='errors'>
-                      <ErrorMessage name='terms' component='span' />
                     </div>
                   </Form>
                 )
