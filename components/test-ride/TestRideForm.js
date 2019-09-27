@@ -91,7 +91,6 @@ const TestRideFrom = () =>
                 )
               }
             />
-
           </PaddedView>
         </Section>
       </PaddedView>
@@ -102,7 +101,6 @@ const TestRideFrom = () =>
         <PaddedView>
           <Section>
             <SectionHeader align='center' title='Como funciona?' />
-            <br />
             <div className='SectionBody'>
               <div className='items'>
                 <span>1</span>
@@ -136,14 +134,8 @@ const TestRideFrom = () =>
     <style jsx>{`
         .TestRideForm {
           background-color: #E7E8E8;
-          line-height: 1.2;
-          font-size: 1.2em;
           display: flex;
           flex-direction: column-reverse;
-        }
-
-        .Form {
-          font-size: 1.1em;
         }
 
         .TestRideFormInfos {
@@ -161,7 +153,7 @@ const TestRideFrom = () =>
           width: 100%;
         }
         .SectionBody span {
-          font-size: 28px;
+          font-size: 1.5em;
           line-height: 1;
           border-radius: 3px;
           font-weight: bold;
