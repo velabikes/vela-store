@@ -1,5 +1,4 @@
-import { Formik, Form, withFormik } from 'formik'
-import { compose } from 'recompose'
+import { Formik, Form } from 'formik'
 import Field from 'components/form/Field'
 import CheckboxField from 'components/form/CheckboxField'
 import FieldGroup from 'components/form/FieldGroup'
@@ -11,7 +10,7 @@ import Inverter from 'components/Inverter'
 import fetch from 'isomorphic-fetch'
 import EmailField from 'components/form/EmailField'
 
-const TestRideFrom = () =>
+const TestRideForm = () =>
   <div className='TestRideForm'>
     <div className='Form'>
       <PaddedView>
@@ -47,8 +46,9 @@ const TestRideFrom = () =>
                 return errors
               }}
               initialValues={{ name: '', email: '', height: '', phone: '', city: '', terms: false }}
+              onSubmit={handleSubmit}
               render={
-                ({ errors, status, touched }) => (
+                ({ isSubmitting }) => (
                   <Form>
                     <Field
                       label='Nome'
@@ -84,6 +84,7 @@ const TestRideFrom = () =>
                     <div className='actions'>
                       <Button type='submit' primary>Quero testar</Button>
                     </div>
+                    {isSubmitting && 'enviando'}
                   </Form>
                 )
               }
@@ -205,9 +206,13 @@ const TestRideFrom = () =>
 
 const handleSubmit = async (values, { setSubmitting, props }) => {
   try {
+    const headers = {
+      'Content-Type': 'application/json'
+    }
     const response = await fetch(`/api/test-ride/subscribe`, {
       method: 'POST',
-      body: JSON.stringify(values)
+      body: JSON.stringify(values),
+      headers
     })
     const json = await response.json()
 
@@ -219,6 +224,4 @@ const handleSubmit = async (values, { setSubmitting, props }) => {
   setSubmitting(false)
 }
 
-export default compose(
-  withFormik({ handleSubmit })
-)(TestRideFrom)
+export default TestRideForm
