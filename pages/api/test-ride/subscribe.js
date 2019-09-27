@@ -1,4 +1,4 @@
-import { createCard } from 'lib/shopify'
+import { createCard } from 'lib/pipefy'
 
 const handle = (req, res) => {
   const { name, email, phone, city, height } = req.body
