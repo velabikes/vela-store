@@ -1,11 +1,12 @@
 import { ErrorMessage } from 'formik'
 
 const FieldError = ({ name }) =>
-  <p>
+  <div>
     <ErrorMessage name={name} />
     <style jsx>{`
       color: red;
+      font-size: 0.8em;
     `}</style>
-  </p>
+  </div>
 
 export default FieldError
