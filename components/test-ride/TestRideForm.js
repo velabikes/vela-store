@@ -9,6 +9,7 @@ import SectionHeader from 'components/SectionHeader'
 import Inverter from 'components/Inverter'
 import fetch from 'isomorphic-fetch'
 import EmailField from 'components/form/EmailField'
+import PhoneField from 'components/form/PhoneField'
 
 const TestRideForm = () =>
   <div className='TestRideForm'>
@@ -48,8 +49,9 @@ const TestRideForm = () =>
               initialValues={{ name: '', email: '', height: '', phone: '', city: '', terms: false }}
               onSubmit={handleSubmit}
               render={
-                ({ isSubmitting }) => (
+                ({ isSubmitting, values }) => (
                   <Form>
+                    {JSON.stringify(values)}
                     <Field
                       label='Nome'
                       name='name'
@@ -66,10 +68,8 @@ const TestRideForm = () =>
                       />
                     </FieldGroup>
                     <FieldGroup template='1fr 1fr'>
-                      <Field
-                        label='Telefone'
+                      <PhoneField
                         name='phone'
-                        type='text'
                       />
                       <Field
                         label='Cidade'

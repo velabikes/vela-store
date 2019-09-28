@@ -54,6 +54,7 @@
     "react": "^16.8.3",
     "react-apollo": "^2.5.5",
     "react-dom": "^16.8.3",
+    "react-input-mask": "^2.0.4",
     "react-mailchimp-subscribe": "^2.1.0",
     "react-redux": "^7.0.3",
     "recompose": "^0.30.0",
