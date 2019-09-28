@@ -49,9 +49,8 @@ const TestRideForm = () =>
               initialValues={{ name: '', email: '', height: '', phone: '', city: '', terms: false }}
               onSubmit={handleSubmit}
               render={
-                ({ isSubmitting, values }) => (
+                ({ isSubmitting, values, status }) => (
                   <Form>
-                    {JSON.stringify(values)}
                     <Field
                       label='Nome'
                       name='name'
@@ -84,7 +83,8 @@ const TestRideForm = () =>
                     <div className='actions'>
                       <Button type='submit' primary>Quero testar</Button>
                     </div>
-                    {isSubmitting && 'enviando'}
+                    {isSubmitting && 'Enviando...'}
+                    {status && (status.success || status.error)}
                   </Form>
                 )
               }
@@ -204,7 +204,7 @@ const TestRideForm = () =>
     `}</style>
   </div>
 
-const handleSubmit = async (values, { setSubmitting, props }) => {
+const handleSubmit = async (values, { setSubmitting, setStatus, resetForm, props }) => {
   try {
     const headers = {
       'Content-Type': 'application/json'
@@ -214,11 +214,10 @@ const handleSubmit = async (values, { setSubmitting, props }) => {
       body: JSON.stringify(values),
       headers
     })
-    const json = await response.json()
-
-    console.log({ response: json })
+    resetForm()
+    setStatus({ success: 'Formulario enviado com sucesso.' })
   } catch (error) {
-    console.log({ error })
+    setStatus({ error: 'Houve um erro ao enviar o formulario.' })
   }
 
   setSubmitting(false)
