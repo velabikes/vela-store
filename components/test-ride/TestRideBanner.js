@@ -6,8 +6,8 @@ const TestRideBanner = () =>
       <div className='BannerTitle'>
         <h1 className='title'>Test-ride</h1>
         <p>
-          Nós temos diversos Amigos da
-          Vela pelo Brasil pra você
+          Nós temos diversos Amigos
+          pelo Brasil pra você
           conhecer a Vela de perto.
         </p>
         <p>

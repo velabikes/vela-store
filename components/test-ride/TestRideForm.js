@@ -120,7 +120,7 @@ const TestRideForm = () =>
                 e horário marcados. Ele irá te
                 apresentar a bike elétrica
                 pessoalmente, deixar você dar
-                uma volta e trocar sobre
+                uma volta e trocar informações sobre
                 a experiência na sua cidade!</p>
               </div>
             </div>
