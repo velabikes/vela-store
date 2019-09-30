@@ -3,17 +3,21 @@ import Field from 'components/form/Field'
 import CheckboxField from 'components/form/CheckboxField'
 import FieldGroup from 'components/form/FieldGroup'
 import Button from 'components/Button'
-import Grid from 'components/Grid'
 import Section from 'components/Section'
 import SectionHeader from 'components/SectionHeader'
 import Inverter from 'components/Inverter'
 import fetch from 'isomorphic-fetch'
 import EmailField from 'components/form/EmailField'
 import PhoneField from 'components/form/PhoneField'
-import SelectField from '../form/SelectField'
+import SelectField from 'components/form/SelectField'
+import PaddedSplitView from 'components/PaddedSplitView'
+import FormInstructions from 'components/test-ride/FormInstructions'
 
 const TestRideForm = () =>
-  <Grid template='1fr 1fr' gap='4'>
+  <PaddedSplitView
+    leftBackground='#E7E8E8'
+    rightBackground='#3F5052'
+  >
     <Section>
       <p>Insira seus dados no formulário abaixo e aguarde nosso contato.</p>
       <br />
@@ -102,47 +106,17 @@ const TestRideForm = () =>
     </Section>
 
     <Inverter>
-      <Section>
-        <SectionHeader align='center' title='Como funciona?' />
-        <div className='SectionBody'>
-          <div className='items'>
-            <span>1</span>
-            <p>
-              Insira todas as informações nos
-              campos ao lado e aguarde contato.
-            </p>
-          </div>
-          <div className='items'>
-            <span>2</span>
-            <p>
-              Combine com o Amigo da Vela um
-              horário disponível para o test-ride.
-            </p>
-          </div>
-          <div className='items'>
-            <span>3</span>
-            <p>Encontre o Amigo da Vela no dia
-            e horário marcados. Ele irá te
-            apresentar a bike elétrica
-            pessoalmente, deixar você dar
-            uma volta e trocar informações sobre
-            a experiência na sua cidade!</p>
-          </div>
-        </div>
-      </Section>
+      <FormInstructions />
     </Inverter>
 
     <style jsx>{`
         .TestRideForm {
-          background-color: #E7E8E8;
           display: flex;
           flex-direction: column-reverse;
         }
-
         .TestRideFormInfos {
           width: 100%;
         }
-
         .items {
           display: flex;
           margin: 44px;
@@ -153,20 +127,7 @@ const TestRideForm = () =>
           font-weight: 100;
           width: 100%;
         }
-        .SectionBody span {
-          font-size: 1.5em;
-          line-height: 1;
-          border-radius: 3px;
-          font-weight: bold;
-          padding: 14px;
-          background-color: #51776B;
-          display: inline-block;
-          box-sizing: border-box;
-          margin-right: 20px;
-          height: 55px;
-          text-align: center;
-          width: 55px;
-        }
+
 
         .actions {
           width: 100%;
@@ -205,7 +166,7 @@ const TestRideForm = () =>
           }
         }
     `}</style>
-  </Grid>
+  </PaddedSplitView>
 
 const handleSubmit = async (values, { setSubmitting, setStatus, resetForm, props }) => {
   try {
