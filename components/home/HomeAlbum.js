@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types'
-import Grid from 'components/Grid'
 import Section from 'components/Section'
 import SectionHeader from 'components/SectionHeader'
 import { velaGreen } from '../../style/colors'
@@ -7,7 +6,7 @@ import { velaGreen } from '../../style/colors'
 const HomeAlbum = ({ images }) =>
   <div className='HomeAlbum'>
     <Section>
-      <Grid template='1fr 5fr'>
+      <div className='container'>
         <div className='AlbumTitle'>
           <SectionHeader title='Siga o movimento' />
         </div>
@@ -22,7 +21,7 @@ const HomeAlbum = ({ images }) =>
             </div>
           })}
         </div>
-      </Grid>
+      </div>
       <p className='Hashtag'>#vadevela</p>
     </Section>
     <style jsx>{`
@@ -49,11 +48,16 @@ const HomeAlbum = ({ images }) =>
         bottom: 0em;
       }
       @media only screen and (min-width: 768px) {
+        .container {
+          display: grid;
+          grid-template-columns: 1fr 5fr;
+        }
         .Album {
           grid-template-columns: 1fr 1fr 1fr 1fr;
         }
         .AlbumTitle {
           margin: auto 0;
+          padding-right: 2em;
         }
       }
     `}</style>

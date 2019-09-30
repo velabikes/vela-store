@@ -92,7 +92,7 @@ ProductInfo.propTypes = {
 export default compose(
   withState('availableVariants', 'setAvailableVariants', ({ product }) => product.variants),
   withProps(({ product, availableVariants }) => ({
-    selectedVariant: product.variants.edges.length === 1
+    selectedVariant: product.variants && product.variants.edges.length === 1
       ? product.variants.edges[0]
       : availableVariants && availableVariants.edges.length === 1 && availableVariants.edges[0]
   }))

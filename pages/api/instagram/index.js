@@ -19,9 +19,16 @@ const instagramGetImages = async () => {
 }
 
 module.exports = async (req, res) => {
-  const images = await instagramGetImages()
-  res.setHeader('Content-Type', 'application/json')
-  res.setHeader('Cache-Control', 's-maxage=86400')
+  try {
+    const images = await instagramGetImages()
+    res.setHeader('Content-Type', 'application/json')
+    res.setHeader('Cache-Control', 's-maxage=86400')
 
-  return res.end(JSON.stringify(images))
+    return res.end(JSON.stringify(images))
+  } catch (e) {
+    console.log(e)
+    res.statusCode = 500
+
+    return res.end()
+  }
 }

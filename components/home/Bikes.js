@@ -13,12 +13,6 @@ const bikes = [
     hrefAs: '/loja/produto/vela-1',
     action: 'Saiba +',
     src: 'https://gallery.mailchimp.com/68a0cce7cc109d78a8b44d7a0/images/e5ccde8d-a238-4990-9c9f-b343103e1ea7.jpg'
-  }, {
-    title: 'Vela S',
-    href: '/store/product?handle=vela-s',
-    hrefAs: '/loja/produto/vela-s',
-    action: 'Saiba +',
-    src: 'https://gallery.mailchimp.com/68a0cce7cc109d78a8b44d7a0/images/c175e185-cf82-4fd4-a03c-06263bbe6f28.jpg'
   }
 ]
 
@@ -53,6 +47,9 @@ const BikeCard = ({ title, href, hrefAs, action, src, index }) =>
         margin-top: 0;
       }
       @media only screen and (min-width: 768px) {
+        img {
+          max-width: 400px;
+        }
       }
     `}</style>
   </article>
@@ -69,7 +66,7 @@ BikeCard.propTypes = {
 const HomeBikes = () =>
   <Section className='HomeBikes'>
     <SectionHeader title='Nossas Bikes' />
-    <Grid template='1fr 1fr'>
+    <Grid template='1fr'>
       {bikes.map((bike, index) => <BikeCard key={bike.title} {...bike} index={index} />)}
     </Grid>
   </Section>
