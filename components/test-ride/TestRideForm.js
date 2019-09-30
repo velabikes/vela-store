@@ -3,7 +3,7 @@ import Field from 'components/form/Field'
 import CheckboxField from 'components/form/CheckboxField'
 import FieldGroup from 'components/form/FieldGroup'
 import Button from 'components/Button'
-import PaddedView from 'components/PaddedView'
+import Grid from 'components/Grid'
 import Section from 'components/Section'
 import SectionHeader from 'components/SectionHeader'
 import Inverter from 'components/Inverter'
@@ -13,140 +13,125 @@ import PhoneField from 'components/form/PhoneField'
 import SelectField from '../form/SelectField'
 
 const TestRideForm = () =>
-  <div className='TestRideForm'>
-    <div className='Form'>
-      <PaddedView>
-        <Section>
-          <PaddedView>
-            <p>Insira seus dados no formulário abaixo e aguarde nosso contato.</p>
-            <br />
-            <Formik
-              validate={(values, props) => {
-                let errors = {}
+  <Grid template='1fr 1fr' gap='4'>
+    <Section>
+      <p>Insira seus dados no formulário abaixo e aguarde nosso contato.</p>
+      <br />
+      <Formik
+        validate={(values, props) => {
+          let errors = {}
 
-                const errorsMessege = {
-                  name: 'Nome é requerido',
-                  email: 'E-mail é requerido',
-                  height: 'Altura é requerido',
-                  phone: 'Telefone é requerido',
-                  city: 'Cidade é requerido',
-                  terms: 'É preciso concordar com os termos de uso'
-                }
+          const errorsMessege = {
+            name: 'Nome é requerido',
+            email: 'E-mail é requerido',
+            height: 'Altura é requerido',
+            phone: 'Telefone é requerido',
+            city: 'Cidade é requerido',
+            terms: 'É preciso concordar com os termos de uso'
+          }
 
-                if (!values.name) { errors.name = errorsMessege['name'] }
+          if (!values.name) { errors.name = errorsMessege['name'] }
+          if (!values.email) { errors.email = errorsMessege['email'] }
+          if (!values.height) { errors.height = errorsMessege['height'] }
+          if (!values.phone) { errors.phone = errorsMessege['phone'] }
+          if (!values.city) { errors.city = errorsMessege['city'] }
+          if (!values.terms) { errors.terms = errorsMessege['terms'] }
 
-                if (!values.email) { errors.email = errorsMessege['email'] }
-
-                if (!values.height) { errors.height = errorsMessege['height'] }
-
-                if (!values.phone) { errors.phone = errorsMessege['phone'] }
-
-                if (!values.city) { errors.city = errorsMessege['city'] }
-
-                if (!values.terms) { errors.terms = errorsMessege['terms'] }
-
-                return errors
-              }}
-              initialValues={{ name: '', email: '', height: '', phone: '', city: '', terms: false }}
-              onSubmit={handleSubmit}
-              render={
-                ({ isSubmitting, status, values }) => (
-                  <Form>
-                    <Field
-                      label='Nome'
-                      name='name'
-                      type='text'
-                    />
-                    <FieldGroup template='2fr 1fr'>
-                      <EmailField
-                        name='email'
-                      />
-                      <Field
-                        label='Altura'
-                        name='height'
-                        type='text'
-                      />
-                    </FieldGroup>
-                    <FieldGroup template='1fr 1fr'>
-                      <PhoneField
-                        name='phone'
-                      />
-                      <SelectField label='Cidade' name='city'>
-                        <option value='' />
-                        <option value='DF - Brasília'>DF - Brasília</option>
-                        <option value='ES - Vitória'>ES - Vitória</option>
-                        <option value='GO - Goiânia'>GO - Goiânia</option>
-                        <option value='MG - Belo Horizonte'>MG - Belo Horizonte</option>
-                        <option value='MG - Viçosa'>MG - Viçosa</option>
-                        <option value='PR - Guaíra'>PR - Guaíra</option>
-                        <option value='PR - Curitiba'>PR - Curitiba</option>
-                        <option value='PR - Londrina'>PR - Londrina</option>
-                        <option value='PR - Palotina'>PR - Palotina</option>
-                        <option value='RJ - Rio de Janeiro'>RJ - Rio de Janeiro</option>
-                        <option value='RS - Porto Alegre'>RS - Porto Alegre</option>
-                        <option value='SP - Bauru'>SP - Bauru</option>
-                        <option value='SP - Mairinque'>SP - Mairinque</option>
-                        <option value='SP - Mogi das Cruzes'>SP - Mogi das Cruzes</option>
-                        <option value='SP - Ribeirão Preto'>SP - Ribeirão Preto</option>
-                        <option value='SP - Santos'>SP - Santos</option>
-                        <option value='SP - São Bernardo do Campo'>SP - São Bernardo do Campo</option>
-                        <option value='SP - São José dos Campos'>SP - São José dos Campos</option>
-                        <option value='SP - São Paulo'>SP - São Paulo</option>
-                      </SelectField>
-                    </FieldGroup>
-                    <CheckboxField
-                      label='Eu aceito os termos de test-ride da Vela.'
-                      name='terms'
-                    />
-                    <div className='actions'>
-                      <Button type='submit' primary>Quero testar</Button>
-                    </div>
-                    {isSubmitting && 'Enviando...'}
-                    {status && (status.success || status.error)}
-                  </Form>
-                )
-              }
-            />
-          </PaddedView>
-        </Section>
-      </PaddedView>
-    </div>
-
-    <div className='TestRideFormInfos'>
-      <Inverter>
-        <PaddedView>
-          <Section>
-            <SectionHeader align='center' title='Como funciona?' />
-            <div className='SectionBody'>
-              <div className='items'>
-                <span>1</span>
-                <p>
-                  Insira todas as informações nos
-                  campos ao lado e aguarde contato.
-                </p>
+          return errors
+        }}
+        initialValues={{ name: '', email: '', height: '', phone: '', city: '', terms: false }}
+        onSubmit={handleSubmit}
+        render={
+          ({ isSubmitting, status, values }) => (
+            <Form>
+              <Field
+                label='Nome'
+                name='name'
+                type='text'
+              />
+              <FieldGroup template='2fr 1fr'>
+                <EmailField
+                  name='email'
+                />
+                <Field
+                  label='Altura'
+                  name='height'
+                  type='text'
+                />
+              </FieldGroup>
+              <FieldGroup template='1fr 1fr'>
+                <PhoneField
+                  name='phone'
+                />
+                <SelectField label='Cidade' name='city'>
+                  <option value='' />
+                  <option value='DF - Brasília'>DF - Brasília</option>
+                  <option value='ES - Vitória'>ES - Vitória</option>
+                  <option value='GO - Goiânia'>GO - Goiânia</option>
+                  <option value='MG - Belo Horizonte'>MG - Belo Horizonte</option>
+                  <option value='MG - Viçosa'>MG - Viçosa</option>
+                  <option value='PR - Guaíra'>PR - Guaíra</option>
+                  <option value='PR - Curitiba'>PR - Curitiba</option>
+                  <option value='PR - Londrina'>PR - Londrina</option>
+                  <option value='PR - Palotina'>PR - Palotina</option>
+                  <option value='RJ - Rio de Janeiro'>RJ - Rio de Janeiro</option>
+                  <option value='RS - Porto Alegre'>RS - Porto Alegre</option>
+                  <option value='SP - Bauru'>SP - Bauru</option>
+                  <option value='SP - Mairinque'>SP - Mairinque</option>
+                  <option value='SP - Mogi das Cruzes'>SP - Mogi das Cruzes</option>
+                  <option value='SP - Ribeirão Preto'>SP - Ribeirão Preto</option>
+                  <option value='SP - Santos'>SP - Santos</option>
+                  <option value='SP - São Bernardo do Campo'>SP - São Bernardo do Campo</option>
+                  <option value='SP - São José dos Campos'>SP - São José dos Campos</option>
+                  <option value='SP - São Paulo'>SP - São Paulo</option>
+                </SelectField>
+              </FieldGroup>
+              <CheckboxField
+                label='Eu aceito os termos de test-ride da Vela.'
+                name='terms'
+              />
+              <div className='actions'>
+                <Button type='submit' primary>Quero testar</Button>
               </div>
-              <div className='items'>
-                <span>2</span>
-                <p>
-                  Combine com o Amigo da Vela um
-                  horário disponível para o test-ride.
-                </p>
-              </div>
-              <div className='items'>
-                <span>3</span>
-                <p>Encontre o Amigo da Vela no dia
-                e horário marcados. Ele irá te
-                apresentar a bike elétrica
-                pessoalmente, deixar você dar
-                uma volta e trocar informações sobre
-                a experiência na sua cidade!</p>
-              </div>
-            </div>
-          </Section>
-        </PaddedView>
-      </Inverter>
+              {isSubmitting && 'Enviando...'}
+              {status && (status.success || status.error)}
+            </Form>
+          )
+        }
+      />
+    </Section>
 
-    </div>
+    <Inverter>
+      <Section>
+        <SectionHeader align='center' title='Como funciona?' />
+        <div className='SectionBody'>
+          <div className='items'>
+            <span>1</span>
+            <p>
+              Insira todas as informações nos
+              campos ao lado e aguarde contato.
+            </p>
+          </div>
+          <div className='items'>
+            <span>2</span>
+            <p>
+              Combine com o Amigo da Vela um
+              horário disponível para o test-ride.
+            </p>
+          </div>
+          <div className='items'>
+            <span>3</span>
+            <p>Encontre o Amigo da Vela no dia
+            e horário marcados. Ele irá te
+            apresentar a bike elétrica
+            pessoalmente, deixar você dar
+            uma volta e trocar informações sobre
+            a experiência na sua cidade!</p>
+          </div>
+        </div>
+      </Section>
+    </Inverter>
+
     <style jsx>{`
         .TestRideForm {
           background-color: #E7E8E8;
@@ -220,7 +205,7 @@ const TestRideForm = () =>
           }
         }
     `}</style>
-  </div>
+  </Grid>
 
 const handleSubmit = async (values, { setSubmitting, setStatus, resetForm, props }) => {
   try {
