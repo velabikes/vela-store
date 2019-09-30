@@ -10,6 +10,7 @@ import Inverter from 'components/Inverter'
 import fetch from 'isomorphic-fetch'
 import EmailField from 'components/form/EmailField'
 import PhoneField from 'components/form/PhoneField'
+import SelectField from '../form/SelectField'
 
 const TestRideForm = () =>
   <div className='TestRideForm'>
@@ -49,7 +50,7 @@ const TestRideForm = () =>
               initialValues={{ name: '', email: '', height: '', phone: '', city: '', terms: false }}
               onSubmit={handleSubmit}
               render={
-                ({ isSubmitting, status }) => (
+                ({ isSubmitting, status, values }) => (
                   <Form>
                     <Field
                       label='Nome'
@@ -70,11 +71,28 @@ const TestRideForm = () =>
                       <PhoneField
                         name='phone'
                       />
-                      <Field
-                        label='Cidade'
-                        name='city'
-                        type='text'
-                      />
+                      <SelectField label='Cidade' name='city'>
+                        <option value='' />
+                        <option value='DF - Brasília'>DF - Brasília</option>
+                        <option value='ES - Vitória'>ES - Vitória</option>
+                        <option value='GO - Goiânia'>GO - Goiânia</option>
+                        <option value='MG - Belo Horizonte'>MG - Belo Horizonte</option>
+                        <option value='MG - Viçosa'>MG - Viçosa</option>
+                        <option value='PR - Guaíra'>PR - Guaíra</option>
+                        <option value='PR - Curitiba'>PR - Curitiba</option>
+                        <option value='PR - Londrina'>PR - Londrina</option>
+                        <option value='PR - Palotina'>PR - Palotina</option>
+                        <option value='RJ - Rio de Janeiro'>RJ - Rio de Janeiro</option>
+                        <option value='RS - Porto Alegre'>RS - Porto Alegre</option>
+                        <option value='SP - Bauru'>SP - Bauru</option>
+                        <option value='SP - Mairinque'>SP - Mairinque</option>
+                        <option value='SP - Mogi das Cruzes'>SP - Mogi das Cruzes</option>
+                        <option value='SP - Ribeirão Preto'>SP - Ribeirão Preto</option>
+                        <option value='SP - Santos'>SP - Santos</option>
+                        <option value='SP - São Bernardo do Campo'>SP - São Bernardo do Campo</option>
+                        <option value='SP - São José dos Campos'>SP - São José dos Campos</option>
+                        <option value='SP - São Paulo'>SP - São Paulo</option>
+                      </SelectField>
                     </FieldGroup>
                     <CheckboxField
                       label='Eu aceito os termos de test-ride da Vela.'
