@@ -9,7 +9,8 @@
   "env": {
     "GOOGLE_SERVER_KEY": "@google-server-key",
     "SHOPIFY_API_KEY": "@shopify-api-key",
-    "SHOPIFY_API_PASS": "@shopify-api-pass"
+    "SHOPIFY_API_PASS": "@shopify-api-pass",
+    "PIPEFY_KEY": "@pipefy-key"
   },
   "routes": [
     { "src": "/favicon.ico", "dest": "/static/fav/favicon.ico" },
@@ -19,6 +20,7 @@
     { "src": "/rede/recarga", "dest": "/network/charge" },
     { "src": "/loja/(?<handle>[^/]+)$", "dest": "/store?handle=$handle" },
     { "src": "/loja/produto/(?<handle>[^/]+)$", "dest": "/store/product?handle=$handle" },
+    { "src": "/testride", "dest": "/test-ride" },
 
     {
       "src": "/lugares",
