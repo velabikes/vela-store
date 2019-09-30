@@ -18,10 +18,10 @@ const MainMenu = () =>
       <li><Link href='/about' as='/sobre'><a>
         Sobre nós
       </a></Link></li>
-      */}
       <li><Link href='/test-ride'><a>
         Test-Ride
       </a></Link></li>
+      */}
       <li><Link href='/network/charge' as='/rede/recarga'><a>
         Rede de Recarga Rápida
       </a></Link></li>
