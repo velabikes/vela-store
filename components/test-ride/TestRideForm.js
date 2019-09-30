@@ -49,7 +49,7 @@ const TestRideForm = () =>
               initialValues={{ name: '', email: '', height: '', phone: '', city: '', terms: false }}
               onSubmit={handleSubmit}
               render={
-                ({ isSubmitting, values, status }) => (
+                ({ isSubmitting, status }) => (
                   <Form>
                     <Field
                       label='Nome'
