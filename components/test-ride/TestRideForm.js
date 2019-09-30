@@ -108,64 +108,6 @@ const TestRideForm = () =>
     <Inverter>
       <FormInstructions />
     </Inverter>
-
-    <style jsx>{`
-        .TestRideForm {
-          display: flex;
-          flex-direction: column-reverse;
-        }
-        .TestRideFormInfos {
-          width: 100%;
-        }
-        .items {
-          display: flex;
-          margin: 44px;
-        }
-        p {
-          font-size: 19px;
-          line-height: 1.2;
-          font-weight: 100;
-          width: 100%;
-        }
-
-
-        .actions {
-          width: 100%;
-        }
-
-        .errors {
-          text-align: right;
-        }
-
-        .errors :global(span) {
-          font-size: .7em;
-          color: red;
-        }
-        .actions button {
-          font-size: 1.3em!important;
-        }
-
-        @media only screen and (min-width: 768px) {
-          .TestRideForm {
-            flex-direction: row;
-          }
-          .TestRideFormInfos {
-            width: 45%;
-          }
-          .actions {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            width: 200px;
-            margin: auto;
-            margin-right: 0;
-          }
-          .BannerTitle {
-            width: 50%;
-            text-align: right;
-          }
-        }
-    `}</style>
   </PaddedSplitView>
 
 const handleSubmit = async (values, { setSubmitting, setStatus, resetForm, props }) => {
