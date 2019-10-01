@@ -19,6 +19,8 @@ const typeToLabel = type => {
       return 'Carga Rápida'
     case 'store':
       return 'Loja'
+    case 'service':
+      return 'Autorizada'
     default:
       return '?'
   }
