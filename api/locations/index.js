@@ -1,7 +1,6 @@
 const GoogleMaps = require('@google/maps')
 
 module.exports = async (req, res) => {
-  res.end(process.env.GOOGLE_SERVER_KEY)
   const googleMapsClient = GoogleMaps.createClient({
     key: process.env.GOOGLE_SERVER_KEY
   })
