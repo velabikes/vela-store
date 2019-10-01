@@ -91,7 +91,7 @@ const TestRideForm = () =>
                 </SelectField>
               </FieldGroup>
               <CheckboxField
-                label='Eu aceito os termos de test-ride da Vela.'
+                label={<>Eu aceito os <a href='/legal'>termos de test-ride da Vela.</a></>}
                 name='terms'
               />
               <div className='actions'>
