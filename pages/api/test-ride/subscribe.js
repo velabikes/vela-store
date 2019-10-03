@@ -1,9 +1,9 @@
 import { createCard } from 'lib/pipefy'
 
-const handle = (req, res) => {
+const handle = async (req, res) => {
   const { name, email, phone, city, height } = req.body
   console.log(name)
-  const card = createCard({
+  const card = await createCard({
     pipe: '968118',
     title: `${name}`,
     fields: [

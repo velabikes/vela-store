@@ -3,30 +3,25 @@ import FieldError from 'components/form/FieldError'
 import PropTypes from 'prop-types'
 
 const CheckboxField = ({ label, name, ...props }) =>
-  <fieldset>
+  <div>
     <Field id='checkbox' type='checkbox' name={name} {...props} />
     <label htmlFor='checkbox'>
       {label}
     </label>
     <FieldError name={name} />
     <style jsx>{`
-      fieldset {
+      div {
         position: relative;
+        margin-bottom: 1em;
       }
-
+      label {
+        vertical-align: super;
+      }
       :global(input[type="checkbox"]) {
         -webkit-appearance: none;
         padding-right: 1.5em;
         background-color: white;
         border: none;
-      }
-
-      label {
-        font-weight: 400 !important;
-        font-size: 16px;
-        top: 0;
-        position: absolute;
-        padding-top: 4px;
       }
 
       @supports(-webkit-appearance: none) {
@@ -58,7 +53,7 @@ const CheckboxField = ({ label, name, ...props }) =>
         }
       }
     `}</style>
-  </fieldset>
+  </div>
 
 CheckboxField.propTypes = {
   label: PropTypes.string

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 
-const Section = ({ children }) =>
-  <section className='Section'>
+const Section = ({ children, ...props }) =>
+  <section className='Section' {...props}>
     {children}
     <style jsx>{`
       section {
