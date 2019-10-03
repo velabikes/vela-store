@@ -6,7 +6,7 @@ import TestRideForm from 'components/test-ride/TestRideForm'
 const TestRide = () =>
   <div>
     <Head>
-      <title>TestRide - Vela Bikes</title>
+      <title>Test-ride: Faça um teste com nossa bike elétrica na sua cidade - Vela Bikes</title>
     </Head>
     <PaddedView>
       <TestRideBanner />
