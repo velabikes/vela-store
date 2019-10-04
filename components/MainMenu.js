@@ -23,7 +23,10 @@ const MainMenu = () =>
       </a></Link></li>
       */}
       <li><Link href='/network/charge' as='/rede/recarga'><a>
-        Rede de Recarga Rápida
+        Recarga Rápida
+      </a></Link></li>
+      <li><Link href='/network/map' as='/rede/mapa'><a>
+        Onde Encontrar
       </a></Link></li>
       <li><Link href='/blog'><a>
         Blog
