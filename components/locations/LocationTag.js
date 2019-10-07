@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import Tag from 'components/Tag'
-import { MarkerChargerIcon, MarkerStoreIcon } from 'components/Icons'
+import { MarkerChargerIcon, MarkerStoreIcon, MarkerServiceIcon } from 'components/Icons'
 
 const LocationTag = ({ type, ...props }) =>
   <Tag
@@ -19,6 +19,8 @@ const typeToLabel = type => {
       return 'Carga Rápida'
     case 'store':
       return 'Loja'
+    case 'service':
+      return 'Autorizada'
     default:
       return '?'
   }
@@ -30,6 +32,8 @@ const typeToIcon = type => {
       return <MarkerChargerIcon />
     case 'store':
       return <MarkerStoreIcon />
+    case 'service':
+      return <MarkerServiceIcon />
     default:
       return '?'
   }

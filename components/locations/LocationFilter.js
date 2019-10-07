@@ -15,6 +15,11 @@ const LocationFilter = ({ onFilterSelect, selectedFilter }) =>
       selected={selectedFilter === 'charger'}
       type='charger'
     />
+    <LocationTag
+      onClick={() => onFilterSelect('service')}
+      selected={selectedFilter === 'service'}
+      type='service'
+    />
     <style jsx>{`
       div {
         background: ${offWhite};
