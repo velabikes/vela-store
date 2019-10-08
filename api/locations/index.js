@@ -86,7 +86,7 @@ module.exports = async (req, res) => {
     },
     {
       googlePlace: 'ChIJk6zVqYYDzpQRsZpUOCLGA8s',
-      type: ['service']
+      type: ['service', 'charger']
     }
   ]
 
