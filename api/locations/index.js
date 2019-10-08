@@ -83,6 +83,10 @@ module.exports = async (req, res) => {
     {
       googlePlace: 'ChIJiQg_EPkXuAARDOheZGROQDY',
       type: ['service']
+    },
+    {
+      googlePlace: 'ChIJk6zVqYYDzpQRsZpUOCLGA8s',
+      type: ['service', 'charger']
     }
   ]
 
