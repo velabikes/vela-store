@@ -23,6 +23,11 @@
     { "src": "/testride", "dest": "/test-ride" },
 
     {
+      "src": "/live",
+      "status": 301,
+      "headers": { "Location": "https://mailchi.mp/velabikes/live" }
+    },
+    {
       "src": "/lugares",
       "status": 301,
       "headers": { "Location": "/rede/lojas" }
