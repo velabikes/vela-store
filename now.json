@@ -10,7 +10,9 @@
     "GOOGLE_SERVER_KEY": "@google-server-key",
     "SHOPIFY_API_KEY": "@shopify-api-key",
     "SHOPIFY_API_PASS": "@shopify-api-pass",
-    "PIPEFY_KEY": "@pipefy-key"
+    "PIPEFY_KEY": "@pipefy-key",
+    "OMIE_KEY": "@omie-key",
+    "OMIE_SECRET": "@omie-secret"
   },
   "routes": [
     { "src": "/favicon.ico", "dest": "/static/fav/favicon.ico" },
