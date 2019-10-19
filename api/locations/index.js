@@ -73,6 +73,22 @@ module.exports = async (req, res) => {
       type: ['charger']
     },
     {
+      googlePlace: 'ChIJc7C0To9ZzpQRxI8xZGKRSRM',
+      type: ['charger']
+    },
+    {
+      googlePlace: 'ChIJM6Ei0whXzpQR2CeApInducA',
+      type: ['charger']
+    },
+    {
+      googlePlace: 'ChIJDdNzek5XzpQRcaNlJ3QxKoY',
+      type: ['charger']
+    },
+    {
+      googlePlace: 'ChIJAQCU4gNazpQRgrm7yhcWeKU',
+      type: ['charger']
+    },
+    {
       googlePlace: 'ChIJ340zClZ4GZURu2Yy8ZXSSl4',
       type: ['service']
     },
@@ -82,6 +98,10 @@ module.exports = async (req, res) => {
     },
     {
       googlePlace: 'ChIJiQg_EPkXuAARDOheZGROQDY',
+      type: ['service']
+    },
+    {
+      googlePlace: 'ChIJ_fqvTp06WpMR1dgVjHcw6Js',
       type: ['service']
     },
     {
