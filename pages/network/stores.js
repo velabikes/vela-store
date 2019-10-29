@@ -78,19 +78,6 @@ Locations.getInitialProps = () => {
       ['Sáb', '09:00 - 18:00']
     ]
   }, {
-    name: 'Vela Brasília',
-    address: ['SCLN 310 Bloco D Loja 5', 'Asa Norte'],
-    photo: 'https://gallery.mailchimp.com/68a0cce7cc109d78a8b44d7a0/images/c0b721d3-760d-4da0-a561-784d786a5801.jpg',
-    hours: [
-      ['Dom', 'Fechado'],
-      ['Seg', 'Fechado'],
-      ['Ter', '09:00 - 18:00'],
-      ['Qua', '09:00 - 18:00'],
-      ['Qui', '09:00 - 18:00'],
-      ['Sex', '09:00 - 18:00'],
-      ['Sáb', '09:00 - 18:00']
-    ]
-  }, {
     name: 'Vela Curitiba',
     address: ['Alameda Prudente de Moraes 1071', 'Centro'],
     photo: 'https://gallery.mailchimp.com/68a0cce7cc109d78a8b44d7a0/images/f6dfc4d8-5992-453c-929a-5fe2f2c44010.jpg',
