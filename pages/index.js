@@ -57,7 +57,7 @@ const HomePage = ({ images }) =>
         right: 0;
         bottom: 0;
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         align-items: center;
         flex-direction: column;
         background-color: rgba(221,221,223, 0.2);
@@ -102,6 +102,9 @@ const HomePage = ({ images }) =>
         h4 {
           font-size: 1.5em;
           font-weight: 600;
+        }
+        .cta {
+          justify-content: center;
         }
         .slogan > p {
           font-size: 1.5em;
