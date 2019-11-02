@@ -29,7 +29,7 @@ const HomePage = ({ images }) =>
           <p><strong>Tecnologia e design<br />nunca estiveram tão próximos</strong></p>
           <div className='actions'>
             <Link href='/live' as='/live'>
-              <Button primary outline>Inscreva-se na live</Button>
+              <div className='button'>Inscreva-se na live</div>
             </Link>
           </div>
         </div>
@@ -72,6 +72,29 @@ const HomePage = ({ images }) =>
         margin-bottom: 32vh;
         font-size: 3rem;
       }
+
+      .button {
+        width: 100%;
+        padding: .5rem 1rem;
+        font-size: .8rem;
+        background-color: transparent;
+        border: 2px solid #f5f5f5;
+        background: none;
+        border-radius: 2rem;
+        margin-bottom: 0.5em;
+        color: #f5f5f5;
+        text-transform: uppercase;
+        font-weight: 700;
+        transition: .2s transform, .2s box-shadow, .3s background linear, .3s border linear;
+        -webkit-tap-highlight-color: transparent;
+        cursor: pointer;
+        outline: none;
+      }
+      .button:active {
+        transform: translateY(2px);
+        box-shadow: none;
+      }
+    
       @media only screen and (min-width: 768px) {
         h1 {
           font-size: 6em;
