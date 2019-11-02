@@ -26,17 +26,13 @@ const HomePage = ({ images }) =>
       <HomeImage />
       <div className='cta'>
         <div className='slogan'>
-          <p><strong>Bicicletas elétricas <br /> para cidades mais saudáveis</strong></p>
+          <p><strong>Tecnologia e design<br />nunca estiveram tão próximos</strong></p>
           <div className='actions'>
-            <Link href='/store?handle=vela-1' as='/loja/vela-1'>
-              <Button primary>Compre a sua</Button>
-            </Link>
-            <Link href='/network/stores' as='/rede/lojas'>
-              <Button primary outline>Nossas lojas</Button>
+            <Link href='/live' as='/live'>
+              <div className='button'>Inscreva-se na live</div>
             </Link>
           </div>
         </div>
-        <h1>#VADEVELA</h1>
       </div>
     </div>
     <Highlight />
@@ -69,12 +65,36 @@ const HomePage = ({ images }) =>
       }
       .slogan > p {
         font-size: 1.25em;
+        color: #f5f5f5;
       }
       h1 {
         color: white;
         margin-bottom: 32vh;
         font-size: 3rem;
       }
+
+      .button {
+        width: 100%;
+        padding: .5rem 1rem;
+        font-size: .8rem;
+        background-color: transparent;
+        border: 2px solid #f5f5f5;
+        background: none;
+        border-radius: 2rem;
+        margin-bottom: 0.5em;
+        color: #f5f5f5;
+        text-transform: uppercase;
+        font-weight: 700;
+        transition: .2s transform, .2s box-shadow, .3s background linear, .3s border linear;
+        -webkit-tap-highlight-color: transparent;
+        cursor: pointer;
+        outline: none;
+      }
+      .button:active {
+        transform: translateY(2px);
+        box-shadow: none;
+      }
+    
       @media only screen and (min-width: 768px) {
         h1 {
           font-size: 6em;
