@@ -24,10 +24,10 @@
     { "src": "/loja/produto/(?<handle>[^/]+)$", "dest": "/store/product?handle=$handle" },
     { "src": "/testride", "dest": "/test-ride" },
 
-    { "src": "/vela/", "dest": "/static/v2landing/index.js" },
+    { "src": "/vela/", "dest": "/static/v2landing/index.html" },
     { "src": "/vela/(.*)", "dest": "/static/v2landing/$1" },
     { "src": "/vela", "status": 301, "headers": { "Location": "/vela/" } },
-    
+
     {
       "src": "/live",
       "status": 301,
