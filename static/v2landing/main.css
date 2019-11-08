@@ -417,7 +417,9 @@ video {
 
 .model {
 	position: relative;
-	overflow: visible;
+    overflow: visible;
+    max-width: 125vh;
+    margin: 0 auto;
 }
 
 .model-slider {
