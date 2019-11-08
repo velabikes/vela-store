@@ -23,7 +23,7 @@
     { "src": "/loja/(?<handle>[^/]+)$", "dest": "/store?handle=$handle" },
     { "src": "/loja/produto/(?<handle>[^/]+)$", "dest": "/store/product?handle=$handle" },
     { "src": "/testride", "dest": "/test-ride" },
-    { "src": "/vela", "dest": "/static/v2landing" }
+    { "src": "/vela", "dest": "/static/v2landing" },
 
     {
       "src": "/live",
