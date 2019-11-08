@@ -123,7 +123,7 @@ video {
 .conect-features {
     position: relative;
     align-self: flex-start;
-    margin: 5vw;
+    margin: 5em;
     padding: 0 2vw;
     border-right: 2px solid rgba(225, 225, 225, 0.5);;
 }
@@ -139,17 +139,17 @@ video {
 .app-section {
     position: relative;
     display: flex;
-    height: 100vh;
     flex-direction: column;
+    padding: 1em;
 }
+
 .app-screen {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .app-screen > img {
-    max-height: 72vh;
+
 }
 
 .app-content {
@@ -173,7 +173,7 @@ video {
     color: #f5f5f5;
     width: 30vw;
     text-align: center;
-    padding: 5vw;
+    padding: 5em;
     margin: 0 auto;
     font-size: 1em;
     line-height: 1.5em;
@@ -201,7 +201,7 @@ video {
 
 .security-content {
     width: 40vw;
-    padding: 5vw;
+    padding: 5em;
     text-align: left;
     align-self: flex-end;
     display: flex;
@@ -391,6 +391,7 @@ video {
 .model-content {
     align-self: center;
     text-align: center;
+    margin-top: -3em;
 }
 
 .model-title {
@@ -550,7 +551,7 @@ video {
     align-items: flex-end;
     text-align: right;
     align-self: flex-end;
-    padding: 6vw 5vw 5vw 5vw;
+    padding: 5em;
 }
 
 .battery-video {
@@ -587,7 +588,7 @@ video {
 .battery-features {
     position: relative;
     align-self: flex-start;
-    margin: 5vw;
+    margin: 5em;
     padding: 0 2vw;
     border-left: 2px solid rgba(225, 225, 225, 0.5);;
 }
