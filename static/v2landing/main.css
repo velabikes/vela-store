@@ -743,11 +743,15 @@ video {
 
 .specs-video {
     position: absolute;
-    left: 60%;
+    left: 700px;
     top: 0;
+    right: 0;
     height: 100vh;
+    width: calc(100vw - 700px);
     z-index: 0;
     overflow: visible;
+    object-fit: contain;
+    background: #d4d5d6;
 }
 
 .specs-content {
