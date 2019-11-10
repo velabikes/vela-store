@@ -14,7 +14,7 @@ p {
     position: relative;
     width: 100%;
     display: flex;
-    height: 100vh;
+    height: 100%;
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
@@ -27,7 +27,7 @@ p {
     right: 0;
     top: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     z-index: -1;
 }
 
@@ -73,7 +73,7 @@ video {
 .conect-section {
     position: relative;
     display: flex;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -97,7 +97,7 @@ video {
     right: 0;
     top: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     z-index: -1;
 }
 
@@ -186,7 +186,7 @@ video {
 .security-section {
     position: relative;
     display: flex;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     flex-direction: column;
     justify-content: flex-end;
@@ -197,7 +197,8 @@ video {
     left: 0;
     top: 0;
     width: 40vw;
-    height: 100vh;
+    bottom: 0;
+    object-fit: cover;
     z-index: -1;
     overflow: visible;
 }
@@ -252,7 +253,7 @@ video {
 .tech-section {
     position: relative;
     display: flex;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -263,7 +264,8 @@ video {
     right: 0;
     top: 0;
     width: 50vw;
-    height: 100vh;
+    height: 100%;
+    bottom: 0;
     z-index: -1;
 }
 
@@ -317,7 +319,7 @@ video {
 .design-section {
     position: relative;
     display: flex;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     flex-direction: column;
     background-color: #f5f5f5;
@@ -539,7 +541,7 @@ video {
 .battery-section {
     position: relative;
     display: flex;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     flex-direction: column;
     justify-content: space-between;
@@ -562,7 +564,8 @@ video {
     right: 0;
     top: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    bottom: 0;
     z-index: -1;
 }
 
@@ -607,7 +610,6 @@ video {
 .production-section {
     position: relative;
     display: flex;
-    height: 100vh;
     width: 100%;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -623,7 +625,7 @@ video {
     flex-wrap: nowrap;
     align-items: flex-start;
     text-align: left;
-    padding: 6vw 5vw 5vw 5vw;
+    padding: 5em;
 }
 
 .production-video {
@@ -631,8 +633,10 @@ video {
     right: 0;
     top: 0;
     width: 59vw;
-    height: 100vh;
+    bottom: 0;
+    height: 100%;
     z-index: 1;
+    object-fit: cover;
 }
 
 .production-title {
@@ -681,7 +685,7 @@ video {
 .specs-tech-section {
     position: relative;
     display: flex;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -693,7 +697,7 @@ video {
     left: 0;
     top: 0;
     width: 40vw;
-    height: 100vh;
+    height: 100%;
     z-index: -1;
     overflow: visible;
 }
@@ -733,7 +737,7 @@ video {
 .specs-section {
     position: relative;
     display: flex;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -746,7 +750,7 @@ video {
     left: 700px;
     top: 0;
     right: 0;
-    height: 100vh;
+    height: 100%;
     width: calc(100vw - 700px);
     z-index: 0;
     overflow: visible;
@@ -835,7 +839,7 @@ tr:hover {
     display: flex;
     flex-direction: column;
     background-color: #f5f5f5;
-    height: 100vh;
+    height: 100%;
     box-sizing: border-box;
 }
 
@@ -990,9 +994,9 @@ tr:hover {
 
 .reserve-section {
     background-color:#f5f5f5;
-    height: 100vh;
     display: flex;
     flex-direction: column;
+    height: 100%
 }
 .reserve-section-types {
     display: flex;
@@ -1033,7 +1037,7 @@ tr:hover {
     align-items: center;
     flex: 1;
     flex-direction: column;
-    padding: 5em;
+    padding: 1em;
     text-align: center;
     background: #e1e1e1;
 
