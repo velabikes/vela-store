@@ -1094,3 +1094,22 @@ tr:hover {
     align-self: flex-start;
     text-align: center;
 }
+
+@media (orientation: portrait) {
+    .fp-section > div {
+        min-height: 100vh;
+    }
+    .security-content {
+        padding: 5em 2em;
+        width: auto;
+    }
+    .security-text {
+        width: auto;
+    }
+    .tech-content {
+        width: auto;
+    }
+    .tech-text {
+        width: auto;
+    }
+}
