@@ -149,10 +149,13 @@ video {
 .app-screen {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    height: calc(100vh - 12em);
+    justify-items: center;
+    align-items: center;
 }
 
 .app-screen > img {
-    
+  max-height: 100%; 
 }
 
 .app-content {
@@ -176,7 +179,7 @@ video {
     color: #f5f5f5;
     width: 30vw;
     text-align: center;
-    padding: 5em;
+    padding: 0em 5em 5em;
     margin: 0 auto;
     font-size: 1em;
     line-height: 1.5em;
@@ -189,7 +192,7 @@ video {
     height: 100%;
     width: 100%;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .security-video {
@@ -201,6 +204,7 @@ video {
     object-fit: cover;
     z-index: -1;
     overflow: visible;
+    height: 100%;
 }
 
 .security-content {
@@ -237,7 +241,7 @@ video {
 
 .security-features {
     position: relative;
-    margin: 5vw 5vw 5vw 0;
+    margin: 5vw 5vw 0 0;
     padding: 0 2vw;
     border-left: 2px solid rgba(225, 225, 225, 0.5);;
 }
@@ -303,7 +307,7 @@ video {
 
 .tech-features {
     position: relative;
-    margin: 5vw 0 5vw 5vw;
+    margin: 5vw 0 0 5vw;
     padding: 0 2vw;
     border-right: 2px solid rgba(225, 225, 225, 0.5);;
 }
@@ -320,6 +324,7 @@ video {
     position: relative;
     display: flex;
     height: 100%;
+    max-height: 100vh;
     width: 100vw;
     flex-direction: column;
     background-color: #f5f5f5;
@@ -357,9 +362,9 @@ video {
     margin: 0;
 }
 
-.design-main-target {
+.design-main-target h1 {
     width: 100vw;
-    padding: 0 3vw 3vw 0;
+    padding: 5rem;
 }
 
 .design-main-target-title {
@@ -391,6 +396,7 @@ video {
     background-color: #f5f5f5;
     overflow: hidden;
     padding: 5em;
+    height: 100%;
 }
 
 .model-content {
@@ -413,18 +419,18 @@ video {
 }
 
 .model-text {
-    width: 25vw;
+    width: 320px;
     color: #333333;
     font-size: 1em;
     line-height: 1.5em;
     font-family: helvetica, sans-serif;
-    margin: 2em 0;
+    margin-bottom: 0;
 }
 
 .model {
     position: relative;
     overflow: visible;
-    max-width: 125vh;
+    max-width: 115vh;
     margin: 0 auto;
 }
 
@@ -592,11 +598,13 @@ video {
 }
 
 .battery-features {
-    position: relative;
+    position: absolute;
     align-self: flex-start;
     margin: 5em;
     padding: 0 2vw;
     border-left: 2px solid rgba(225, 225, 225, 0.5);;
+    bottom: 0;
+    left: 0;
 }
 
 .battery-features-text {
@@ -611,6 +619,7 @@ video {
     position: relative;
     display: flex;
     width: 100%;
+    height: 100%;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-start;
@@ -743,6 +752,7 @@ video {
     flex-wrap: nowrap;
     justify-content: flex-start;
     background-color: #f5f5f5;
+    padding: 5em;
 }
 
 .specs-video {
@@ -760,13 +770,15 @@ video {
 
 .specs-content {
     width: 50vw;
-    padding: 5vw;
     text-align: left;
     align-self: center;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     z-index: 2;
+    box-sizing: border-box;
+    max-height: calc(100vh - 10rem);
+    overflow: hidden;
 }
 
 .specs-title {
@@ -785,6 +797,7 @@ video {
 .table-specs {
     border-collapse: collapse;
     margin: 2em 0;
+    font-size: 12px;
 }
 
 .th-specs {
