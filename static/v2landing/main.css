@@ -351,7 +351,6 @@ video {
 
 
 .design-content {
-    width: 100vw;
     padding: 5em 5em 3em;
     align-self: flex-start;
 }
@@ -1103,13 +1102,67 @@ tr:hover {
         padding: 5em 2em;
         width: auto;
     }
-    .security-text {
-        width: auto;
-    }
     .tech-content {
         width: auto;
     }
+    .tech-video {
+        width: 100vw;
+    }
+    .security-text,
+    .design-text,
     .tech-text {
         width: auto;
     }
-}
+    .app-screen {
+        grid-template-columns: 1fr
+    }
+    .battery-content {
+        padding: 5em 2em;
+    }
+    .battery-text {
+        width: auto
+    }
+    .battery-features {
+        position: static;
+        margin: 0 2em 5em;
+    }
+    .design-section {
+        max-height: none !important;
+    }
+    .specs-section,
+    .model-section,
+    .design-content {
+        padding: 2em;
+    }
+    .design-images {
+        grid-template-columns: 1fr !important;
+    }
+    .design-images img {
+        position: static !important;
+    }
+    .reserve-section-types,
+    .plans-sale-conditions {
+        display: block
+    }
+    .app-screen {
+        height: auto;
+    }
+    .battery-video,
+    .conect-video {
+        position: relative;
+        height: 90vh;
+    }
+    .app-section,
+    .model-section {
+        flex-direction: column-reverse;
+    }
+    .model-content {
+        margin-top: 0;
+    }
+    .plans-sale-conditions {
+        display: block
+    }
+    .model-slider {
+        display: block;
+    }
+}  
