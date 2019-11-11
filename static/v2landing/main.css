@@ -81,7 +81,7 @@ video {
 
 .arrow-scroll {
     display: block;
-    width: 2vw;
+    width: 64px;
     margin: 0 auto;
     padding: 3em 0;
     align-self: auto;
