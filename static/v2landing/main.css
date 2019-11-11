@@ -13,6 +13,11 @@ p {
     line-height: 1.5em;
 }
 
+input {
+    outline: none;
+    border: none;
+}
+
 button {
     font-weight: 600;
     padding: 1em 2em;
@@ -1049,6 +1054,18 @@ tr:hover {
 
 .reserve-section-cta p {
     max-width: 60%;
+}
+
+.reserve-section .qtd {
+    font-size: 1em;
+    line-height: 1.5em;
+    color: #666666;
+    display: block;
+    width: 100%;
+    background: #f5f5f5;
+    border-radius: 2em;
+    padding: 1em 2em;
+    margin: 1em 0;
 }
 
 .terms {
