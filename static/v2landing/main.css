@@ -10,7 +10,7 @@ small,
 p {
     font-family: helvetica, sans-serif;
     color: #333333;
-    line-height: 1.5rem;
+    line-height: 1.5em;
 }
 table {
     font-size: 13px
@@ -335,6 +335,7 @@ video {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     flex: 1;
+    max-height: 65vh;
 }
 .design-section .design-images > div {
     position: relative
