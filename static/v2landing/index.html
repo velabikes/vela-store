@@ -241,7 +241,7 @@
                     <div class="reserve-section-cta">
                         <div class="title">Garanta a sua!</div>
                         <div class="subtitle">Reserve sua Vela 2 por R$ 500 e aproveite as condições exclusivas.</div>
-                        <div><button>Reservar</button></div>
+                        <div><button class="buy">Reservar</button></div>
                         <p>Você poderá escolher entre compra ou assinatura, assim como cor e plano da sua Vela após a reserva. Entraremos em contato por email.</p>
                         <small>Entrega estimada: março de 2020.</small>
                     </div>
@@ -496,7 +496,7 @@
             domain: 'vela-bikes-store.myshopify.com',
             storefrontAccessToken: '952655b7618da7c0ea8472837ccc5076'
         })
-        
+        const buyButtonNodeList = document.querySelectorAll(".buy")
         client.checkout.create().then((checkout) => {
             // Do something with the checkout
 
@@ -513,6 +513,9 @@
                 });
                 const buyButtons = document.querySelectorAll(".js-buy")
             }
+            Array.prototype.map.call(buyButtonNodeList, (node, i) => {
+                node.addEventListener("click", buy)
+            })
         });
     </script>
 </body>
