@@ -2,7 +2,6 @@ body {
     margin: 0 auto;
     background-color: #000000;
     font-family: neue-haas-grotesk-display, sans-serif;
-    min-width: 600px;
 }
 img {
     max-width: 100%;
@@ -1095,7 +1094,7 @@ tr:hover {
     text-align: center;
 }
 
-/* @media (orientation: portrait) {
+@media (orientation: portrait) {
     .fp-section > div {
         min-height: 100vh;
     }
@@ -1103,11 +1102,18 @@ tr:hover {
         padding: 5em 2em;
         width: auto;
     }
+    .production-video,
+    .security-video {
+        position: relative;
+        width: auto;
+    }
     .tech-content {
         width: auto;
     }
     .tech-video {
         width: 100vw;
+        position: relative;
+        height: auto;
     }
     .security-text,
     .design-text,
@@ -1119,6 +1125,7 @@ tr:hover {
     }
     .battery-content {
         padding: 5em 2em;
+        width: auto;
     }
     .battery-text {
         width: auto
@@ -1148,6 +1155,9 @@ tr:hover {
     .app-screen {
         height: auto;
     }
+    .app-text {
+        width: auto;
+    }
     .battery-video,
     .conect-video {
         position: relative;
@@ -1166,4 +1176,18 @@ tr:hover {
     .model-slider {
         display: block;
     }
-}   */
+    .production-section,
+    .conect-section {
+        flex-direction: column;
+    }
+    .design-main-target-title,
+    .production-content,
+    .conect-content {
+        padding: 2rem !important;
+        width: auto !important;
+    }
+    .production-text,
+    .conect-text {
+        width: auto;
+    }
+}  

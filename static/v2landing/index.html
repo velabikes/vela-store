@@ -24,14 +24,14 @@
         
         <div class="fp-section">
             <div class="conect-section">
-                <video data-autoplay playsinline autoplay muted class="conect-video">
-                    <source src="videos/conect.mp4" type="video/mp4" />
-                </video>
                 <div class="conect-content">
                     <h1 class="conect-title">Conectada.</h1>
                     <p class="conect-target">Com seu celular. Com você.</p>
                     <p class="conect-text">Nosso aplicativo te acompanha pelo caminho, mostrando em tempo real as informações essenciais para velejar com tranquilidade. </p>
                 </div>
+                <video data-autoplay playsinline autoplay muted class="conect-video">
+                    <source src="videos/conect.mp4" type="video/mp4" />
+                </video>
                 <div class="conect-features">
                     <p class="conect-features-text">
                         Nível de bateria<br>
@@ -484,22 +484,13 @@
         }
         const isPortrait = () => window.innerWidth / window.innerHeight < 0.9
         
-        //if (!isPortrait()) {
+        if (!isPortrait()) {
             new fullpage('#fp', {
                 //options here
                 //autoScrolling:true,
                 //scrollHorizontally: true
             })
-        //}
-        $(window).resize(function() {
-            var mobileWidth =  (window.innerWidth > 0) ? 
-            window.innerWidth : 
-            screen.width;
-            var viewport = (mobileWidth > 480) ?
-            'width=device-width, initial-scale=1.0' :
-            'width=600';
-            $("meta[name=viewport]").attr('content', viewport);
-        }).resize(); 
+        }
         //methods
         //fullpage_api.setAllowScrolling(false);
     </script>
