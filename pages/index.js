@@ -28,7 +28,7 @@ const HomePage = ({ images }) =>
         <div className='slogan'>
           <p><strong>Tecnologia e design<br />nunca estiveram tão próximos</strong></p>
           <div className='actions'>
-            <Link href='/live' as='/live'>
+            <Link href='/' as='/'>
               <div className='button'>Inscreva-se na live</div>
             </Link>
           </div>
