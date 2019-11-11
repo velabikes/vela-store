@@ -484,13 +484,13 @@
         }
         const isPortrait = () => window.innerWidth / window.innerHeight < 0.9
         
-        if (!isPortrait()) {
+        //if (!isPortrait()) {
             new fullpage('#fp', {
                 //options here
                 //autoScrolling:true,
                 //scrollHorizontally: true
             })
-        }
+        //}
         $(window).resize(function() {
             var mobileWidth =  (window.innerWidth > 0) ? 
             window.innerWidth : 

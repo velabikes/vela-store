@@ -1095,7 +1095,7 @@ tr:hover {
     text-align: center;
 }
 
-@media (orientation: portrait) {
+/* @media (orientation: portrait) {
     .fp-section > div {
         min-height: 100vh;
     }
@@ -1166,4 +1166,4 @@ tr:hover {
     .model-slider {
         display: block;
     }
-}  
+}   */
