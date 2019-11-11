@@ -19,7 +19,14 @@
                 </video>
                 <h1 class="header-title">V2</h1>
                 <p class="header-target">A geração smart de bicicletas elétricas da Vela</p>
-                
+                <a href="https://www.youtube.com/watch?v=iaBfgQevF5w">
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"  width="64" height="64">
+                        <path d="M256,0C114.617,0,0,114.615,0,256s114.617,256,256,256s256-114.615,256-256S397.383,0,256,0z M344.48,269.57l-128,80
+                        c-2.59,1.617-5.535,2.43-8.48,2.43c-2.668,0-5.34-0.664-7.758-2.008C195.156,347.172,192,341.82,192,336V176
+                        c0-5.82,3.156-11.172,8.242-13.992c5.086-2.836,11.305-2.664,16.238,0.422l128,80c4.676,2.93,7.52,8.055,7.52,13.57
+                        S349.156,266.641,344.48,269.57z" fill="white" />
+                    </svg>
+                </a>
                 <a href="#smart"><img src="images/arrow-down.svg" class="arrow-scroll" loading="lazy"></a>
             </div>
         </div>
@@ -223,7 +230,7 @@
                             Impacto ambiental e social                        
                         </p>
                     </div>
-                    <img src="images/tree.png" loading="lazy" Alt="Na compra de 1 Vela você doa 3 mudas">
+                    <img src="images/tree.png" loading="lazy" alt="Na compra de 1 Vela você doa 3 mudas">
                     <p class="production-text">A cada unidade da Vela 2 vendida, contribuímos para que a Associação Copaíba faça o plantio de 3 árvores em zonas desmatadas da Mata Atlântica.</p>
                 </div>
             </div>
@@ -243,34 +250,32 @@
         </div>
         
         <div class="fp-section">
-                <div class="reserve-section">
-                    <div class="reserve-section-types">
-                        <div class="reserve-section-buy">
-                            <div class="title">Compra</div>
-                            <div class="price cut">R$ 6.890</div>
-                            <div class="price">R$ 5.390</div>
-                            <div class="desc">Em 12x sem juros</div>
-                        </div>
-                        <div class="reserve-section-rent">
-                            <div class="title">Assinatura</div>
-                            <div class="price cut">R$ 489</div>
-                            <div class="price">R$ 349/mês</div>
-                            <div class="desc">Com plano Vela Mais completo</div>
-                        </div>
+            <div class="reserve-section">
+                <div class="reserve-section-types">
+                    <div class="reserve-section-buy">
+                        <div class="title">Compra</div>
+                        <div class="price cut">R$ 6.890</div>
+                        <div class="price">R$ 5.390</div>
+                        <div class="desc">Em 12x sem juros</div>
                     </div>
-                    <div class="reserve-section-cta">
-                        <form action="">
-                            <input type="number" name="qtd" step="1" placeholder="Quantidade">
-                        </form>
-                        
-                        <div><button class="buy">Reservar</button></div>
-                        <div class="subtitle">Reserve sua Vela 2 por R$ 500 e aproveite as condições exclusivas.</div>
-                        <p>Você poderá escolher entre compra ou assinatura, assim como cor e plano da sua Vela após a reserva. Entraremos em contato por email.</p>
-                        <small>Entrega estimada: março de 2020.</small>
+                    <div class="reserve-section-rent">
+                        <div class="title">Assinatura</div>
+                        <div class="price cut">R$ 489</div>
+                        <div class="price">R$ 349/mês</div>
+                        <div class="desc">Com plano Vela Mais completo</div>
                     </div>
                 </div>
+                <div class="reserve-section-cta">
+                    <input type="number" name="qtd" class="qtd" step="1" placeholder="Quantidade" value="1">
+                    
+                    <div><button class="buy">Reservar</button></div>
+                    <div class="subtitle">Reserve sua Vela 2 por R$ 500 e aproveite as condições exclusivas.</div>
+                    <p>Você poderá escolher entre compra ou assinatura, assim como cor e plano da sua Vela após a reserva. Entraremos em contato por email.</p>
+                    <small>Entrega estimada: março de 2020.</small>
+                </div>
             </div>
-
+        </div>
+        
         <div class="fp-section">
             <div class="plans-section">
                 <div class="header">
@@ -499,15 +504,13 @@
             storefrontAccessToken: '952655b7618da7c0ea8472837ccc5076'
         })
         const buyButtonNodeList = document.querySelectorAll(".buy")
+        
         client.checkout.create().then((checkout) => {
-            // Do something with the checkout
-
-            
-            // Add an item to the checkout
             const buy = () => {
+                const qtyNodeList = document.querySelectorAll(".qtd")
                 const lineItemsToAdd = [{
                     variantId: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTE1Mjg0NTU1MzcxOQ==',
-                    quantity: 1
+                    quantity: parseInt(qtyNodeList[0].value)
                 }]
                 client.checkout.addLineItems(checkout.id, lineItemsToAdd).then((checkout) => {
                     // Do something with the updated checkout
