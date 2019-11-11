@@ -2,6 +2,7 @@ body {
     margin: 0 auto;
     background-color: #000000;
     font-family: neue-haas-grotesk-display, sans-serif;
+    min-width: 600px;
 }
 img {
     max-width: 100%;

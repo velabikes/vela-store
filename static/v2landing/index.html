@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/lyl7jng.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.css" />
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.js"></script>
+    <meta name="viewport" content="width=device-width, user-scalable=no">
 </header>
 <body>
     <div id="fp">
@@ -482,7 +483,7 @@
             return check;
         }
         const isPortrait = () => window.innerWidth / window.innerHeight < 0.9
-
+        
         if (!isPortrait()) {
             new fullpage('#fp', {
                 //options here
@@ -490,7 +491,15 @@
                 //scrollHorizontally: true
             })
         }
-        
+        $(window).resize(function() {
+            var mobileWidth =  (window.innerWidth > 0) ? 
+            window.innerWidth : 
+            screen.width;
+            var viewport = (mobileWidth > 480) ?
+            'width=device-width, initial-scale=1.0' :
+            'width=600';
+            $("meta[name=viewport]").attr('content', viewport);
+        }).resize(); 
         //methods
         //fullpage_api.setAllowScrolling(false);
     </script>
