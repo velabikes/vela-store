@@ -1116,6 +1116,7 @@ tr:hover {
     }
     .design-images {
         grid-template-columns: 1fr !important;
+        max-height: none !important;
     }
     .design-images img {
         position: static !important;
