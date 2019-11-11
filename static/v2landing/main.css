@@ -1095,8 +1095,12 @@ tr:hover {
 }
 
 @media (orientation: portrait) {
+    #fp {
+        max-width: 100vw;
+        overflow: hidden;
+    }
     .fp-section > div {
-        min-height: 100vh;
+        min-height: 90vh;
     }
     .security-content {
         padding: 5em 2em;
@@ -1137,11 +1141,6 @@ tr:hover {
     .design-section {
         max-height: none !important;
     }
-    .specs-section,
-    .model-section,
-    .design-content {
-        padding: 2em;
-    }
     .design-images {
         grid-template-columns: 1fr !important;
     }
@@ -1155,13 +1154,17 @@ tr:hover {
     .app-screen {
         height: auto;
     }
-    .app-text {
-        width: auto;
+    .specs-tech-content,
+    .app-text,
+    .specs-content {
+        width: auto
     }
     .battery-video,
-    .conect-video {
+    .conect-video,
+    .specs-tech-video {
         position: relative;
         height: 90vh;
+        width: auto;
     }
     .app-section,
     .model-section {
@@ -1169,6 +1172,7 @@ tr:hover {
     }
     .model-content {
         margin-top: 0;
+        margin-bottom: 5rem;
     }
     .plans-sale-conditions {
         display: block
@@ -1176,18 +1180,31 @@ tr:hover {
     .model-slider {
         display: block;
     }
+    .tech-section,
     .production-section,
-    .conect-section {
+    .conect-section,
+    .specs-tech-section {
         flex-direction: column;
     }
+    .specs-section,
+    .model-section,
+    .design-content,
     .design-main-target-title,
     .production-content,
-    .conect-content {
-        padding: 2rem !important;
+    .conect-content,
+    .plans-section .header,
+    .reserve-section-cta {
+        padding: 5rem 2rem !important;
         width: auto !important;
     }
     .production-text,
     .conect-text {
         width: auto;
+    }
+    .plans-sale-target {
+        margin-top: 2rem;
+    }
+    .reserve-section-types > div {
+        padding: 0 2rem 5rem
     }
 }  
