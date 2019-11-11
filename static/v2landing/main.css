@@ -9,6 +9,11 @@ img {
 small,
 p {
     font-family: helvetica, sans-serif;
+    color: #333333;
+    line-height: 1.5rem;
+}
+table {
+    font-size: 13px
 }
 .header-content {
     position: relative;
@@ -123,22 +128,6 @@ video {
     margin: 2em 0 0 0;
 }
 
-.conect-features {
-    position: relative;
-    align-self: flex-start;
-    margin: 5em;
-    padding: 0 2vw;
-    border-right: 2px solid rgba(225, 225, 225, 0.5);;
-}
-
-.conect-features-text {
-    color: #f5f5f5;
-    font-size: 1em;
-    line-height: 2.5em;
-    font-family: helvetica, sans-serif;
-    text-align: right;
-}
-
 .app-section {
     position: relative;
     display: flex;
@@ -239,21 +228,6 @@ video {
     margin: 2em 0 0 0;
 }
 
-.security-features {
-    position: relative;
-    margin: 5vw 5vw 0 0;
-    padding: 0 2vw;
-    border-left: 2px solid rgba(225, 225, 225, 0.5);;
-}
-
-.security-features-text {
-    color: #f5f5f5;
-    font-size: 1em;
-    line-height: 2.5em;
-    font-family: helvetica, sans-serif;
-    text-align: left;
-}
-
 .tech-section {
     position: relative;
     display: flex;
@@ -305,19 +279,36 @@ video {
     margin: 2em 0 0 0;
 }
 
-.tech-features {
+.conect-features,
+.tech-features,
+.security-features,
+.battery-features {
     position: relative;
-    margin: 5vw 0 0 5vw;
-    padding: 0 2vw;
-    border-right: 2px solid rgba(225, 225, 225, 0.5);;
+    border-right: 2px solid rgba(225, 225, 225, 0.5);
+    border-left: 2px solid rgba(225, 225, 225, 0.5);
+    margin-top: 2rem;
+    text-align: right;
 }
 
-.tech-features-text {
+.conect-features-text,
+.tech-features-text,
+.security-features-text,
+.battery-features-text {
     color: #f5f5f5;
     font-size: 1em;
-    line-height: 2.5em;
+    line-height: 2em;
     font-family: helvetica, sans-serif;
-    text-align: right;
+    margin: 1rem;
+}
+
+.conect-features,
+.tech-features {
+    border-left: none;
+}
+.battery-features,
+.security-features {
+    text-align: left;
+    border-right: none;
 }
 
 .design-section {
@@ -596,22 +587,18 @@ video {
     margin: 2em 0 0 0;
 }
 
+.conect-features,
 .battery-features {
     position: absolute;
-    align-self: flex-start;
-    margin: 5em;
-    padding: 0 2vw;
-    border-left: 2px solid rgba(225, 225, 225, 0.5);;
     bottom: 0;
     left: 0;
+    margin: 5rem;
 }
-
-.battery-features-text {
-    color: #f5f5f5;
-    font-size: 1em;
-    line-height: 2.5em;
-    font-family: helvetica, sans-serif;
-    text-align: left;
+.conect-features {
+    bottom: auto;
+    top: 0;
+    right: 0;
+    left: auto;
 }
 
 .production-section {
@@ -1106,18 +1093,8 @@ tr:hover {
         padding: 5em 2em;
         width: auto;
     }
-    .production-video,
-    .security-video {
-        position: relative;
-        width: auto;
-    }
     .tech-content {
         width: auto;
-    }
-    .tech-video {
-        width: 100vw;
-        position: relative;
-        height: auto;
     }
     .security-text,
     .design-text,
@@ -1131,12 +1108,10 @@ tr:hover {
         padding: 5em 2em;
         width: auto;
     }
-    .battery-text {
-        width: auto
-    }
-    .battery-features {
+    .battery-features,
+    .conect-features {
         position: static;
-        margin: 0 2em 5em;
+        margin: 0em 2em 5em;
     }
     .design-section {
         max-height: none !important;
@@ -1154,17 +1129,24 @@ tr:hover {
     .app-screen {
         height: auto;
     }
+    .app-text {
+        padding: 5rem 2rem;
+    }
     .specs-tech-content,
     .app-text,
-    .specs-content {
+    .specs-content,
+    .battery-text {
         width: auto
     }
     .battery-video,
     .conect-video,
-    .specs-tech-video {
+    .specs-tech-video,
+    .tech-video,
+    .production-video,
+    .security-video {
         position: relative;
         height: 90vh;
-        width: auto;
+        width: 100vw;
     }
     .app-section,
     .model-section {
@@ -1193,7 +1175,8 @@ tr:hover {
     .production-content,
     .conect-content,
     .plans-section .header,
-    .reserve-section-cta {
+    .reserve-section-cta,
+    .tech-content {
         padding: 5rem 2rem !important;
         width: auto !important;
     }
@@ -1206,5 +1189,8 @@ tr:hover {
     }
     .reserve-section-types > div {
         padding: 0 2rem 5rem
+    }
+    .reserve-section-cta p {
+        max-width: none;
     }
 }  
