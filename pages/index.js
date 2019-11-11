@@ -25,14 +25,18 @@ const HomePage = ({ images }) =>
     <div className='cover'>
       <HomeImage />
       <div className='cta'>
-        <div className='slogan'>
-          <p><strong>Tecnologia e design<br />nunca estiveram tão próximos</strong></p>
-          <div className='actions'>
-            <Link href='/' as='/'>
-              <div className='button'>Inscreva-se na live</div>
-            </Link>
-          </div>
-        </div>
+        <div className='slogan'>		         <div className='slogan'>
+         <p><strong>Bicicletas elétricas <br /> para cidades mais saudáveis</strong></p>		           <p><strong>Tecnologia e design<br />nunca estiveram tão próximos</strong></p>
+         <div className='actions'>		           <div className='actions'>
+           <Link href='/store?handle=vela-1' as='/loja/vela-1'>		             <Link href='/live' as='/live'>
+             <Button primary>Compre a sua</Button>		               <Button primary outline>Inscreva-se na live</Button>
+           </Link>		
+           <Link href='/network/stores' as='/rede/lojas'>		
+             <Button primary outline>Nossas lojas</Button>		
+           </Link>
+           </div>
+         </div>
+         <h1>#VADEVELA</h1>
       </div>
     </div>
     <Highlight />
