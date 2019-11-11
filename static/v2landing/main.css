@@ -13,15 +13,6 @@ p {
     line-height: 1.5em;
 }
 
-button {
-    font-size: 2em;
-    font-weight: 600;
-    padding: 2em;
-    background-color: #f27966;
-    color: #f5f5f5;
-    border-radius: 2em;
-    
-}
 
 .header-content {
     position: relative;
@@ -826,7 +817,6 @@ tr:hover {
     box-sizing: border-box;
 }
 
-
 .plans-section .header {
     padding: 5em 5em 3em;
 }
@@ -1038,12 +1028,13 @@ tr:hover {
     margin: 0.2em 0 1em;
 }
 .reserve-section-cta button {
-    padding: 16px 64px;
-    font-size: 16px;
-    background: green;
+    font-size: 2em;
+    font-weight: 600;
+    padding: 2em;
+    background-color: #f27966;
+    color: #f5f5f5;
+    border-radius: 2em;
     border: 0px solid transparent;
-    border-radius: 99px;
-    text-transform: uppercase;
 }
 
 .reserve-section-cta .price {
