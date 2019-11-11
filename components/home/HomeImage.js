@@ -1,7 +1,7 @@
 const HomeImage = () =>
   <>
-    <img src='https://gallery.mailchimp.com/68a0cce7cc109d78a8b44d7a0/images/044a15e1-8b62-4da8-b8c9-c2a916c24c58.jpg' className='desktop' alt='' />
-    <img src='https://gallery.mailchimp.com/68a0cce7cc109d78a8b44d7a0/images/466089ba-19e7-4a1b-8d05-35810dc89e4d.jpg' className='mobile' alt='' />
+    <img src='https://gallery.mailchimp.com/68a0cce7cc109d78a8b44d7a0/images/e03025c0-147c-4613-88a4-820cdbaafb64.jpg' className='desktop' alt='' />
+    <img src='https://gallery.mailchimp.com/68a0cce7cc109d78a8b44d7a0/images/e03025c0-147c-4613-88a4-820cdbaafb64.jpg' className='mobile' alt='' />
     <style jsx>{`
       img {
         height: calc(100vh - 4rem);
