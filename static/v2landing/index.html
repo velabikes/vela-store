@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.css" />
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.js"></script>
     <meta name="viewport" content="width=device-width, user-scalable=no">
-    <link rel="preload" as="video" href="videos/vela2.mp4">
+    <link rel="preload" href="videos/vela2.mp4" as="video" type="video/mp4">
 </header>
 <body>
     <div id="fp">
@@ -141,15 +141,9 @@
                     <div class="model-slider">
                         <div class="qb">
                             <div class="colors">
-                                <s id="b1"></s> 
-                                <s id="b2"></s>
-                                <s id="b3"></s>
-                                <s id="b4"></s>
-                                <s id="b5"></s>
-                                
-                                <div class="b-color-slider">
+                                 <div class="color-slider">
                                     <div class="b1">
-                                        <img loading="lazy" src="images/colors/490coral.png" alt="Quadro baixo coral">
+                                        <img src="images/colors/490coral.png" alt="Quadro baixo coral">
                                     </div>
                                     <div class="b2">
                                         <img loading="lazy" src="images/colors/490vermelha.png" alt="Quadro baixo vermelho">
@@ -175,16 +169,10 @@
                         </div>
                         
                         <div class="qr">
-                            <div class="colors">
-                                <s id="r1"></s> 
-                                <s id="r2"></s>
-                                <s id="r3"></s>
-                                <s id="r4"></s>
-                                <s id="r5"></s>
-                                
-                                <div class="r-color-slider">
+                            <div class="colors">                                
+                                <div class="color-slider">
                                     <div class="r1">
-                                        <img loading="lazy" src="images/colors/590coral.png" alt="Quadro reto coral">
+                                        <img src="images/colors/590coral.png" alt="Quadro reto coral">
                                     </div>
                                     <div class="r2">
                                         <img loading="lazy" src="images/colors/590vermelha.png" alt="Quadro reto vermelho">
@@ -488,6 +476,19 @@
         }
         //methods
         //fullpage_api.setAllowScrolling(false);
+
+        //slider
+        const linkNodeList = document.querySelectorAll(".bullets-color > a")
+        const imageNodeList = document.querySelectorAll(".color-slider > div")
+
+        Array.prototype.map.call(linkNodeList, (node, i) => {
+            node.addEventListener("click", e => {
+                Array.prototype.map.call(imageNodeList, (node, i2) => {
+                    node.classList.remove("active")
+                    if (i == i2) node.classList.add("active")
+                })
+            })
+        })
     </script>
 </body>
 </html>

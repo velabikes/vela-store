@@ -364,7 +364,6 @@ video {
 }
 
 .design-main-target h1 {
-    width: 100vw;
     padding: 5rem;
 }
 
@@ -450,56 +449,49 @@ video {
     position: relative;
 }
 
-.colors .b-color-slider {
+.colors .color-slider {
     white-space: nowrap;
     transition: 0.8s;
     background-color: #e1e1e1;
 }
 
-.colors > .b-color-slider > .b1 {
-    position: relative;
-    opacity: 1;
-}
-
-.colors > .b-color-slider > .b2, .b3, .b4, .b5 {
+.colors > .color-slider > div {
     position: absolute;
     top: 0;
     opacity: 0;
 }
 
-.colors > .b-color-slider > * {
+.colors > .color-slider > div:first-child {
+    position: relative;
+    opacity: 1;
+}
+
+.colors > .color-slider > * {
     transition: .5s opacity;
 }
 
-.colors > .b-color-slider > * > img {
+.colors > .color-slider > * > img {
     width: 100%;
     margin: 10vh auto;
 }
 
-.colors .r-color-slider {
+.colors .color-slider:last-child {
     white-space: nowrap;
     transition: 0.8s;
     background-color: #e1e1e1;
 }
 
-.colors > .r-color-slider > .r1 {
-    position: relative;
-    opacity: 1;
-}
-
-.colors > .r-color-slider > .r2, .r3, .r4, .r5 {
-    position: absolute;
-    top: 0;
-    opacity: 0;
-}
-
-.colors > .r-color-slider > * {
+.colors > .color-slider:last-child > * {
     transition: .5s opacity;
 }
 
-.colors > .r-color-slider > * > img {
+.colors > .color-slider:last-child > * > img {
     width: 100%;
     margin: 10vh auto;
+}
+
+.color-slider > .active {
+    opacity: 1 !important
 }
 
 .bullets-color {
@@ -533,17 +525,6 @@ video {
 }
 
 /* Animations */
-#b1:target ~ .b-color-slider > *:nth-child(1) {opacity: 1;}
-#b2:target ~ .b-color-slider > *:nth-child(2) {opacity: 1;}
-#b3:target ~ .b-color-slider > *:nth-child(3) {opacity: 1;}
-#b4:target ~ .b-color-slider > *:nth-child(4) {opacity: 1;}
-#b5:target ~ .b-color-slider > *:nth-child(5) {opacity: 1;}
-
-#r1:target ~ .r-color-slider >*:nth-child(1) {opacity: 1;}
-#r2:target ~ .r-color-slider >*:nth-child(2) {opacity: 1;}
-#r3:target ~ .r-color-slider >*:nth-child(3) {opacity: 1;}
-#r4:target ~ .r-color-slider >*:nth-child(4) {opacity: 1;}
-#r5:target ~ .r-color-slider >*:nth-child(5) {opacity: 1;}
 
 .battery-section {
     position: relative;
