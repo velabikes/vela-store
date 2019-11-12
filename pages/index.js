@@ -28,7 +28,7 @@ const HomePage = ({ images }) =>
         <div className='slogan'>
          <p><strong>Tecnologia e design<br />nunca estiveram tão próximos</strong></p>
          <div className='actions'>
-           <Link href='/vela>
+           <Link href='/vela'>
              <Button primary outline>Conheça a Vela 2</Button>
            </Link>
            </div>
