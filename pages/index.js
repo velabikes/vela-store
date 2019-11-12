@@ -26,13 +26,10 @@ const HomePage = ({ images }) =>
       <HomeImage />
       <div className='cta'>
         <div className='slogan'>
-         <p><strong>Bicicletas elétricas <br /> para cidades mais saudáveis</strong></p>
+         <p><strong>Tecnologia e design<br />nunca estiveram tão próximos</strong></p>
          <div className='actions'>
-           <Link href='/store?handle=vela-1' as='/loja/vela-1'>
-             <Button primary>Compre a sua</Button>
-           </Link>		
-           <Link href='/network/stores' as='/rede/lojas'>		
-             <Button primary outline>Nossas lojas</Button>		
+           <Link href='/vela>
+             <Button primary outline>Conheça a Vela 2</Button>
            </Link>
            </div>
          </div>
