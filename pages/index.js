@@ -29,7 +29,7 @@ const HomePage = ({ images }) =>
          <p><strong>Tecnologia e design<br />nunca estiveram tão próximos</strong></p>
          <div className='actions'>
            <Link href='/vela'>
-             <Button primary outline>Conheça a Vela 2</Button>
+             <Button className='button'>Conheça a Vela 2</Button>
            </Link>
            </div>
          </div>
