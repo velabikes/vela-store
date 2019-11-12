@@ -26,17 +26,13 @@ const HomePage = ({ images }) =>
       <HomeImage />
       <div className='cta'>
         <div className='slogan'>
-         <p><strong>Bicicletas elétricas <br /> para cidades mais saudáveis</strong></p>
+         <p><strong>Tecnologia e design<br />nunca estiveram tão próximos</strong></p>
          <div className='actions'>
-           <Link href='/store?handle=vela-1' as='/loja/vela-1'>
-             <Button primary>Compre a sua</Button>
-           </Link>		
-           <Link href='/network/stores' as='/rede/lojas'>		
-             <Button primary outline>Nossas lojas</Button>		
+           <Link href='/vela'>
+             <Button className='button'>Conheça a Vela 2</Button>
            </Link>
            </div>
          </div>
-         <h1>#VADEVELA</h1>
       </div>
     </div>
     <Highlight />
@@ -69,6 +65,7 @@ const HomePage = ({ images }) =>
       }
       .slogan > p {
         font-size: 1.25em;
+        color: #f5f5f5;
       }
       h1 {
         color: white;
