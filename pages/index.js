@@ -65,6 +65,7 @@ const HomePage = ({ images }) =>
       }
       .slogan > p {
         font-size: 1.25em;
+        color: #f5f5f5;
       }
       h1 {
         color: white;
