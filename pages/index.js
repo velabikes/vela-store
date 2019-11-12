@@ -33,7 +33,6 @@ const HomePage = ({ images }) =>
            </Link>
            </div>
          </div>
-         <h1>#VADEVELA</h1>
       </div>
     </div>
     <Highlight />
