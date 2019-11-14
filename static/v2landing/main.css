@@ -120,6 +120,7 @@ video {
     width: 100%;
     height: 100%;
     z-index: -1;
+    object-fit: contain;
 }
 
 .conect-title {
@@ -1149,6 +1150,9 @@ tr:hover {
         height: 90vh;
         width: 100vw;
     }
+    .conect-video {
+        object-fit: cover;
+    }
     .app-section,
     .model-section {
         flex-direction: column-reverse;
@@ -1194,8 +1198,9 @@ tr:hover {
     .reserve-section-cta p {
         max-width: none;
     }
-    span.arrow-scroll {
+    svg.arrow-scroll {
         pointer-events: none;
+        display: none;
     }
 }  
 
