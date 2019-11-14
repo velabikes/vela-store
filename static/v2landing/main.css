@@ -41,13 +41,18 @@ button {
     justify-content: flex-end;
 }
 
-.main-video {
+.main-video,
+.full-video {
     position: absolute;
     right: 0;
     top: 0;
     width: 100%;
     height: 100%;
     z-index: -1;
+}
+
+.full-video {
+    
 }
 
 video {
@@ -158,7 +163,7 @@ video {
 }
 
 .app-screen > img {
-  max-height: 100%; 
+    max-height: 100%; 
 }
 
 .app-content {
@@ -332,7 +337,7 @@ video {
     border-color: #333
 }
 .production-features-text {
-  color: #333
+    color: #333
 }
 
 .design-section {
@@ -1029,7 +1034,7 @@ tr:hover {
     padding: 1em;
     text-align: center;
     background: #e1e1e1;
-
+    
 }
 .reserve-section-cta .title {
     color: #333333;
@@ -1193,3 +1198,38 @@ tr:hover {
         max-width: none;
     }
 }  
+
+.hidden-anim .main-video {
+    transition: 1s opacity 1s;
+}
+.hidden-anim h1 {
+    transition: 1s all .2s;
+}
+.hidden-anim p {
+    transition: 1s all .2s;
+}
+.hidden-anim a {
+    transition: 1s all .6s;
+}
+.hidden .main-video,
+.hidden h1,
+.hidden p,
+.hidden a {
+    opacity: 0;
+    transform: translateY(30px);
+}
+.playing h1,
+.playing p,
+.playing a,
+.playing .main-video {
+    opacity: 0;
+    pointer-events: none;
+}
+.full-video {
+    opacity: 0;
+    transition: 1s all .6s
+}
+.playing .full-video {
+    z-index: 1;
+    opacity: 1;
+}

@@ -4,14 +4,14 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62942263-12"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-62942263-12');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'UA-62942263-12');
     </script>
-
-
+    
+    
     <link rel="stylesheet" type="text/css" href="main.css" />
     <link rel="stylesheet" href="https://use.typekit.net/lyl7jng.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.css" />
@@ -27,13 +27,17 @@
 <body>
     <div id="fp">
         <div class="fp-section">
-            <div class="header-content">
+            <div class="header-content hidden hidden-anim">
+                <video controls class="full-video">
+                    <source src="videos/vela2_full.mp4" type="video/mp4" />
+                </video>
                 <video data-autoplay playsinline autoplay muted loop class="main-video">
                     <source src="videos/vela2.mp4" type="video/mp4" />
                 </video>
+                
                 <h1 class="header-title">V2</h1>
                 <p class="header-target">A geração smart de bicicletas elétricas da Vela</p>
-                <a class="arrow-scroll" href="https://www.youtube.com/watch?v=iaBfgQevF5w" target="_blank">
+                <a class="arrow-scroll" href="#">
                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"  width="64" height="64">
                         <path d="M256,0C114.617,0,0,114.615,0,256s114.617,256,256,256s256-114.615,256-256S397.383,0,256,0z M344.48,269.57l-128,80
                         c-2.59,1.617-5.535,2.43-8.48,2.43c-2.668,0-5.34-0.664-7.758-2.008C195.156,347.172,192,341.82,192,336V176
@@ -535,6 +539,20 @@
                 node.addEventListener("click", buy)
             })
         });
+        
+        // Home fade
+        const hiddenNode = document.querySelectorAll(".header-content")[0]
+        setTimeout(() => hiddenNode.classList.remove("hidden"), 200)
+        
+
+        //full video
+        const playNode = document.querySelectorAll(".header-content a")[0]
+        const videoNode = document.querySelectorAll(".header-content .full-video")[0]
+        playNode.addEventListener("click", e => {
+            hiddenNode.classList.add("playing")
+            videoNode.play()
+        })
+
     </script>
 </body>
 </html>
