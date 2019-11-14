@@ -51,10 +51,6 @@ button {
     z-index: -1;
 }
 
-.full-video {
-    
-}
-
 video {
     object-fit: cover;
     object-position: center;
@@ -92,6 +88,7 @@ video {
     align-self: auto;
     order: 0;
     flex: 0 auto;
+    cursor: pointer;
 }
 
 .conect-section {
@@ -1196,6 +1193,9 @@ tr:hover {
     }
     .reserve-section-cta p {
         max-width: none;
+    }
+    span.arrow-scroll {
+        pointer-events: none;
     }
 }  
 

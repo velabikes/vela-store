@@ -45,6 +45,7 @@
                         S349.156,266.641,344.48,269.57z" fill="white" />
                     </svg>
                 </a>
+                <span><svg class="arrow-scroll" xmlns="http://www.w3.org/2000/svg" height="25" viewbox="0 0 100 57.1"><defs><style>.cls-1{fill:#f5f5f5;}</style></defs><title>Ativo 1</title><g id="Camada_2" data-name="Camada 2"><g id="Camada_1-2" data-name="Camada 1"><path class="cls-1" d="M100,5.1a4.69,4.69,0,0,1-1.5,3.5L50,57.1,1.5,8.6a5,5,0,0,1,0-7.1,5,5,0,0,1,7.1,0L50,43,91.5,1.5a5,5,0,0,1,7.1,0A5.43,5.43,0,0,1,100,5.1Z"/></g></g></svg></span>
             </div>
         </div>
         
@@ -553,6 +554,10 @@
             videoNode.play()
         })
 
+        const scrollNode = document.querySelectorAll(".header-content span")[0]
+        scrollNode.addEventListener("click", e => {
+            fullpage_api.moveSectionDown();
+        })
     </script>
 </body>
 </html>
