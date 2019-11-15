@@ -4,14 +4,14 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-62942263-12"></script>
     <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-62942263-12');
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        
+        gtag('config', 'UA-62942263-12');
     </script>
-
-
+    
+    
     <link rel="stylesheet" type="text/css" href="main.css" />
     <link rel="stylesheet" href="https://use.typekit.net/lyl7jng.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.7/fullpage.css" />
@@ -27,13 +27,17 @@
 <body>
     <div id="fp">
         <div class="fp-section">
-            <div class="header-content">
+            <div class="header-content hidden hidden-anim">
+                <video controls class="full-video">
+                    <source src="videos/vela2_full.mp4" type="video/mp4" />
+                </video>
                 <video data-autoplay playsinline autoplay muted loop class="main-video">
                     <source src="videos/vela2.mp4" type="video/mp4" />
                 </video>
+                
                 <h1 class="header-title">V2</h1>
                 <p class="header-target">A geração smart de bicicletas elétricas da Vela</p>
-                <a class="arrow-scroll" href="https://www.youtube.com/watch?v=iaBfgQevF5w" target="_blank">
+                <a class="arrow-scroll" href="#">
                     <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"  width="64" height="64">
                         <path d="M256,0C114.617,0,0,114.615,0,256s114.617,256,256,256s256-114.615,256-256S397.383,0,256,0z M344.48,269.57l-128,80
                         c-2.59,1.617-5.535,2.43-8.48,2.43c-2.668,0-5.34-0.664-7.758-2.008C195.156,347.172,192,341.82,192,336V176
@@ -41,6 +45,7 @@
                         S349.156,266.641,344.48,269.57z" fill="white" />
                     </svg>
                 </a>
+                <span><svg class="arrow-scroll" xmlns="http://www.w3.org/2000/svg" height="25" viewbox="0 0 100 57.1"><defs><style>.cls-1{fill:#f5f5f5;}</style></defs><title>Ativo 1</title><g id="Camada_2" data-name="Camada 2"><g id="Camada_1-2" data-name="Camada 1"><path class="cls-1" d="M100,5.1a4.69,4.69,0,0,1-1.5,3.5L50,57.1,1.5,8.6a5,5,0,0,1,0-7.1,5,5,0,0,1,7.1,0L50,43,91.5,1.5a5,5,0,0,1,7.1,0A5.43,5.43,0,0,1,100,5.1Z"/></g></g></svg></span>
             </div>
         </div>
         
@@ -535,6 +540,24 @@
                 node.addEventListener("click", buy)
             })
         });
+        
+        // Home fade
+        const hiddenNode = document.querySelectorAll(".header-content")[0]
+        setTimeout(() => hiddenNode.classList.remove("hidden"), 200)
+        
+
+        //full video
+        const playNode = document.querySelectorAll(".header-content a")[0]
+        const videoNode = document.querySelectorAll(".header-content .full-video")[0]
+        playNode.addEventListener("click", e => {
+            hiddenNode.classList.add("playing")
+            videoNode.play()
+        })
+
+        const scrollNode = document.querySelectorAll(".header-content span")[0]
+        scrollNode.addEventListener("click", e => {
+            fullpage_api.moveSectionDown();
+        })
     </script>
 </body>
 </html>
