@@ -78,15 +78,12 @@ const TestRideForm = () =>
                   <option value='PR - Curitiba'>PR - Curitiba</option>
                   <option value='PR - Londrina'>PR - Londrina</option>
                   <option value='PR - Palotina'>PR - Palotina</option>
-                  <option value='RJ - Rio de Janeiro'>RJ - Rio de Janeiro</option>
                   <option value='RS - Porto Alegre'>RS - Porto Alegre</option>
                   <option value='SP - Araraquara'>SP - Araraquara</option>
                   <option value='SP - Bauru'>SP - Bauru</option>
                   <option value='SP - Mairinque'>SP - Mairinque</option>
                   <option value='SP - Mogi das Cruzes'>SP - Mogi das Cruzes</option>
-                  <option value='SP - Ribeirão Preto'>SP - Ribeirão Preto</option>
                   <option value='SP - Santos'>SP - Santos</option>
-                  <option value='SP - São Bernardo do Campo'>SP - São Bernardo do Campo</option>
                   <option value='SP - São Carlos'>SP - São Carlos</option>
                   <option value='SP - São José dos Campos'>SP - São José dos Campos</option>
                   <option value='SP - São Paulo'>SP - São Paulo</option>
