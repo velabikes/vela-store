@@ -31,6 +31,9 @@ const MainMenu = () =>
       <li><Link href='/blog'><a>
         Blog
       </a></Link></li>
+      <li><a href='mailto:queroinvestir@velabikes.com.br'>
+        Quero Investir
+      </a></li>
       <li><Link href='https://velabikes.freshdesk.com/support/home'><a>
         Suporte
       </a></Link></li>
