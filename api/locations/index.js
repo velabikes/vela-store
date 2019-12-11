@@ -101,6 +101,10 @@ module.exports = async (req, res) => {
       type: ['charger']
     },
     {
+      googlePlace: 'ChIJ_elqH0FXzpQRRoAPxQyLNvs',
+      type: ['charger']
+    },
+    {
       googlePlace: 'ChIJ340zClZ4GZURu2Yy8ZXSSl4',
       type: ['service']
     },
@@ -119,6 +123,14 @@ module.exports = async (req, res) => {
     {
       googlePlace: 'ChIJk6zVqYYDzpQRsZpUOCLGA8s',
       type: ['service', 'charger']
+    },
+    {
+      googlePlace: 'ChIJWz5XtfAYqwcRPowRixw4slA',
+      type: ['service']
+    },
+    {
+      googlePlace: 'ChIJgc6RhsabpgARbQ40-IY0OK8',
+      type: ['service']
     }
   ]
 
