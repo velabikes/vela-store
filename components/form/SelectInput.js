@@ -1,4 +1,4 @@
-import { white } from 'style/colors'
+import { offWhite } from 'style/colors'
 import PropTypes from 'prop-types'
 
 const SelectInput = ({ children, field, ...props }) =>
@@ -26,7 +26,7 @@ const SelectInput = ({ children, field, ...props }) =>
         font-size: 1rem;
         font-family: neue-haas-grotesk-display, sans-serif;
         box-sizing: border-box;
-        background: ${white};
+        background: ${offWhite};
         box-shadow: 0 2px 3px rgba(0,0,0,0.05), 0 2px 3px rgba(0,0,0,0.05);
       }
       span {
