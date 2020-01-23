@@ -11,19 +11,21 @@ const MainMenu = () =>
       <li><Link href='/store' as='/loja'><a>
         Acessórios
       </a></Link></li>
-{/*<li><Link href='/network/stores' as='/rede/lojas'><a>
+      {/* <li><Link href='/network/stores' as='/rede/lojas'><a>
         Nossas lojas
-      </a></Link></li>*/}
+      </a></Link></li> */}
       {/*
       <li><Link href='/about' as='/sobre'><a>
         Sobre nós
       </a></Link></li>
       */}
-      <li><Link href='/test-ride'><a>
-        Test-Ride
-      </a></Link></li>
-      <li><Link href='/network/charge' as='/rede/recarga'><a>
+      {/*
+      <li><Link href='/about' as='/network/charge'><a>
         Recarga Rápida
+      </a></Link></li>
+      */}
+      <li><Link href='/test-ride'><a>
+        Test-ride
       </a></Link></li>
       <li><Link href='/network/map' as='/rede/mapa'><a>
         Onde Encontrar
@@ -31,11 +33,8 @@ const MainMenu = () =>
       <li><Link href='/blog'><a>
         Blog
       </a></Link></li>
-      <li><a href='mailto:queroinvestir@velabikes.com.br'>
-        Quero Investir
-      </a></li>
-      <li><Link href='https://velabikes.freshdesk.com/support/home'><a>
-        Suporte
+      <li><Link href='/contact'><a>
+        Contato
       </a></Link></li>
       {/* <li><Link href='/store?handle=outlet' as='/loja/outlet'>
         <a className='outlet'>Outlet</a>
