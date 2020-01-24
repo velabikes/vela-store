@@ -22,7 +22,7 @@ const Contact = () =>
       <br />
       <p>Precisa de serviços nas nossas oficinas? Pedimos para realizar o agendamento antes, através dos canais mencionados, para garantir uma experiência completa e eficiente.</p>
       <h2>FAQ</h2>
-      <p>Muitas vezes, sua dúvida é similar a de outros clientes que já visitaram nosso site. Consulte nossas perguntas frequentes para uma resposta imediata!</p>
+      <p>Muitas vezes, sua dúvida é similar a de outros clientes que já visitaram nosso site. Consulte nossas <a href="https://velabikes.freshdesk.com/support/home">perguntas frequentes</a> para uma resposta imediata!</p>
       <h2>Investimentos</h2>
       <p>Você acredita no desenvolvimento da mobilidade urbana no Brasil? Nossa principal missão é promover cidades mais saudáveis. Ajude-nos a conquistar novos caminhos e invista na Vela: <a href='mailto:queroinvestir@velabikes.com.br'>queroinvestir@velabikes.com.br</a></p>
     </PaddedView>
