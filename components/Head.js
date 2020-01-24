@@ -4,6 +4,7 @@ import { velaGreen, offBlack, darkGray, offWhite, white } from 'style/colors'
 import FacebookPixel from 'components/head/FacebookPixel'
 import Freshchat from 'components/head/Freshchat'
 import Heatmap from 'components/head/Heatmap'
+import { lightGray } from '../style/colors'
 
 const CustomHead = props =>
   <>
@@ -38,12 +39,11 @@ const CustomHead = props =>
         font-family: neue-haas-grotesk-display, sans-serif;
         margin-top: 0;
         margin-bottom: .5rem;
+        text-transform: none;
       }
       h1, h2, h3 {
-        font-weight: 900;
+        font-weight: 700;
         color: ${velaGreen};
-        text-transform: uppercase;
-        font-style: italic;
         line-height: 1.25em;
       }
       h4, h5, h6 {
@@ -58,13 +58,13 @@ const CustomHead = props =>
         font-size: 2rem;
       }
       h2 {
-        font-size: 1.75rem;
-      }
-      h3 {
         font-size: 1.5rem;
       }
-      h4 {
+      h3 {
         font-size: 1.25rem;
+      }
+      h4 {
+        font-size: 1rem;
       }
       h5 {
         font-size: 1rem;
@@ -139,7 +139,7 @@ const CustomHead = props =>
         font-size: 1rem;
         font-family: neue-haas-grotesk-display, sans-serif;
         box-sizing: border-box;
-        background: ${white};
+        background: ${offWhite};
         box-shadow: 0 2px 3px rgba(0,0,0,0.05), 0 2px 3px rgba(0,0,0,0.05);
       }
       input[type='radio'] {
