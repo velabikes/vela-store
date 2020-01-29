@@ -10,23 +10,6 @@ const normalizeText = text => {
     .replace(expression, index => normalChars.charAt(specialChars.indexOf(index)))
 }
 
-const isCityFreeShipping = ({ city }) => {
-  const freeCitiesAvailable = [
-    'São Paulo',
-    'Diadema',
-    'São Caetano do Sul',
-    'São Bernardo do Campo',
-    'Santo André',
-    'Barueri',
-    'Santana de Parnaíba',
-    'Guarulhos',
-    'Osasco',
-    'Mauá'
-  ]
-
-  return freeCitiesAvailable.some(cityAvailable => normalizeText(cityAvailable) === normalizeText(city))
-}
-
 module.exports = async (req, res) => {
   res.setHeader('Content-Type', 'application/json')
 
@@ -67,63 +50,21 @@ module.exports = async (req, res) => {
         rates: mapCorreiosResultToRate(result)
       }))
     })
-  } else if (isCityFreeShipping({ city: destination.city })) {
-    return (
-      res.end(JSON.stringify({
-        rates: [{
-          service_name: 'Frete Gratis',
-          service_code: 'FG',
-          total_price: '0',
-          description: '5 - 10 dias úteis',
-          currency: 'BRL'
-        }]
-      }))
-    )
-  } else if (true) { // eslint-disable-line
+  } else if (['SP', 'RJ', 'PR', 'SC', 'RS', 'ES', 'MG', 'DF', 'PB'].some(v => v === destination.province)) { // eslint-disable-line
     return (
       res.end(JSON.stringify({
         rates: [{
           service_name: 'Frete Grátis',
           service_code: 'FGN',
           total_price: '0',
-          description: '10 dias úteis',
-          currency: 'BRL'
-        }]
-      }))
-    )
-  } else if (['SP', 'RJ'].some(v => v === destination.province)) {
-    return (
-      res.end(JSON.stringify({
-        rates: [{
-          service_name: 'Transportadora',
-          service_code: 'TR',
-          total_price: '12000',
-          description: '6 dias úteis',
-          currency: 'BRL'
-        }]
-      }))
-    )
-  } else if (['DF', 'RS', 'SC', 'MT', 'MG', 'PR', 'MS', 'BA'].some(v => v === destination.province)) {
-    return (
-      res.end(JSON.stringify({
-        rates: [{
-          service_name: 'Transportadora',
-          service_code: 'TR',
-          total_price: '23000',
-          description: '7 dias úteis',
+          description: 'Produção + 12 dias úteis',
           currency: 'BRL'
         }]
       }))
     )
   } else {
     return res.end(JSON.stringify({
-      rates: [{
-        service_name: 'Transportadora',
-        service_code: 'TR',
-        total_price: '28000',
-        description: '8 dias úteis',
-        currency: 'BRL'
-      }]
+      rates: []
     }))
   }
 }
