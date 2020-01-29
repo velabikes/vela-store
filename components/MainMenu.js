@@ -33,7 +33,7 @@ const MainMenu = () =>
       <li><Link href='/blog'><a>
         Blog
       </a></Link></li>
-      <li><Link href='/contact'><a>
+      <li><Link href='/contato'><a>
         Contato
       </a></Link></li>
       {/* <li><Link href='/store?handle=outlet' as='/loja/outlet'>
