@@ -131,6 +131,46 @@ module.exports = async (req, res) => {
     {
       googlePlace: 'ChIJgc6RhsabpgARbQ40-IY0OK8',
       type: ['service']
+    },
+    {
+      googlePlace: 'ChIJcVxJBsxZzpQRFMJ_Q7lID8w',
+      type: ['parking']
+    },
+    {
+      googlePlace: 'ChIJ40wX2AFazpQRwDbHK9M_DdI',
+      type: ['parking']
+    },
+    {
+      googlePlace: 'EktBbGFtZWRhIENhbXBpbmFzLCA0NDUgLSBKYXJkaW0gUGF1bGlzdGEsIFPDo28gUGF1bG8gLSBTUCwgMDE0MDQtMTAwLCBCcmF6aWwiMRIvChQKEgn3URm5x1nOlBHTNM9i0wEJ6BC9AyoUChIJJfBwmsZZzpQRNLtDV3SchRM',
+      type: ['parking']
+    },
+    {
+      googlePlace: 'ChIJTQw8QQtXzpQRqC3spwDZMOI',
+      type: ['parking']
+    },
+    {
+      googlePlace: 'ChIJyQilm8tQzpQRt2fiotym1BA',
+      type: ['parking']
+    },
+    {
+      googlePlace: 'ChIJ7Vo9d0tYzpQRYEXmgBCMtic',
+      type: ['parking']
+    },
+    {
+      googlePlace: 'ChIJ3Sy3J7pXzpQR7l-ZefxvsmY',
+      type: ['parking']
+    },
+    {
+      googlePlace: 'ChIJeTz9-VBXzpQRKiyUmAofCoc',
+      type: ['parking']
+    },
+    {
+      googlePlace: 'ChIJhXdZkkVYzpQRiLOGttP33AI',
+      type: ['parking']
+    },
+    {
+      googlePlace: 'ChIJb5SfPHpXzpQRNSE_pMCnJM4',
+      type: ['parking']
     }
   ]
 
