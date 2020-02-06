@@ -22,6 +22,7 @@ const LocationsInfo = ({ name, address, hours, type }) =>
       }
       tr {
         text-transform: capitalize;
+        font-size: 0.75em;
       }
     `}</style>
   </article>

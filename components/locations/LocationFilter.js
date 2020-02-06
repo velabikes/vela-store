@@ -4,7 +4,6 @@ import { offWhite } from '../../style/colors'
 
 const LocationFilter = ({ onFilterSelect, selectedFilter }) =>
   <div>
-    <span>Filtrar por:</span>
     <LocationTag
       onClick={() => onFilterSelect('store')}
       selected={selectedFilter === 'store'}
@@ -20,14 +19,16 @@ const LocationFilter = ({ onFilterSelect, selectedFilter }) =>
       selected={selectedFilter === 'service'}
       type='service'
     />
+    <LocationTag
+      onClick={() => onFilterSelect('parking')}
+      selected={selectedFilter === 'parking'}
+      type='parking'
+    />
     <style jsx>{`
       div {
         background: ${offWhite};
         padding: 1rem;
         white-space: nowrap;
-      }
-      div > span {
-        margin-right: .5em;
       }
     `}</style>
   </div>
