@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import LocationTag from 'components/locations/LocationTag'
+import ParkingButton from 'components/locations/ParkingButton'
 
 const LocationsInfo = ({ name, address, hours, type }) =>
   <article className='LocationsInfo'>
@@ -16,12 +17,19 @@ const LocationsInfo = ({ name, address, hours, type }) =>
         </tr>
       )}
     </table>
+    {
+      {
+        'parking': <ParkingButton />,
+        default: ('')
+      }[type]
+    }
     <style jsx>{`
       .tags, address {
         margin-bottom: 1rem;
       }
       tr {
         text-transform: capitalize;
+        font-size: 0.75em;
       }
     `}</style>
   </article>

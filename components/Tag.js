@@ -18,26 +18,24 @@ const Tag = ({ label, icon, selected, onClick, ...props }) =>
         font-weight: 500;
         border-radius: 2em;
         padding: 0.5em 1em;
-        margin-right: 0.75rem;
+        margin-right: 0.25rem;
         display: inline-block;
         transition: .2s box-shadow ease-in;
         ${selected ? `box-shadow: 0 0 0 2px ${velaBlue};` : ''}
         ${onClick ? 'cursor: pointer;' : ''}
       }
       .Tag:last-child {
-        margin-right: 0;
-      }
-      .icon {
-        padding-left: .25em;
+        margin-right: 0.25em;
       }
       .icon > :global(*) {
-        font-size: 1.25em;
+        font-size: 1em;
         position: absolute;
-        left: 0.375em; top: 0.375em;
+        width: 32px;
+        left: 0em; top: 0px;
+        margin-right: 1em;
       }
       .label {
-        padding-left: .75em;
-        //font-size: 0px;
+        margin-left: 1.5em;
       }
     `}</style>
   </span>
