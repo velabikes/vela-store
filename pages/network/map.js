@@ -1,10 +1,13 @@
 import PropTypes from 'prop-types'
 import fetch from 'isomorphic-fetch'
+import Head from 'next/head'
 import LocationsMap from 'components/locations/LocationsMap'
 
 const LocationsMapPage = ({ locations }) =>
-  <div>
-    <title>Onde encontrar: Descubra nossa rede de lojas, serviços e recarga pela cidade - Vela Bikes</title>
+  <div className='map'>
+    <Head>
+      <title>Onde encontrar: Nossa rede de lojas, serviços e pontos de recarga - Vela Bikes</title>
+    </Head>
     <LocationsMap locations={locations} />
     <style jsx>{`
       div {
