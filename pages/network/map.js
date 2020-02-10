@@ -4,6 +4,7 @@ import LocationsMap from 'components/locations/LocationsMap'
 
 const LocationsMapPage = ({ locations }) =>
   <div>
+    <title>Onde encontrar: Descubra nossa rede de lojas, serviços e recarga pela cidade - Vela Bikes</title>
     <LocationsMap locations={locations} />
     <style jsx>{`
       div {
