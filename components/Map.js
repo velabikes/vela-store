@@ -1,18 +1,20 @@
 import { compose, lifecycle, withState } from 'recompose'
 import GoogleMapReact from 'google-map-react'
+import styles from 'components/MapStyles'
 
 const Map = ({ children, initialCenter, isLoading, ...props }) =>
   !isLoading && <GoogleMapReact
     bootstrapURLKeys={{ key: 'AIzaSyDPIMs29240aTRj5izYnWSRfmKucLR0cwY' }}
     defaultZoom={13}
     defaultCenter={initialCenter || { lat: -23.5350, lng: -46.7053 }}
-    options={gmaps => ({
+    options={{
+      styles: styles,
       mapTypeControl: false,
       streetViewControl: false,
-      fullscreenControl: false,
       zoomControl: false,
+      fullscreenControl: false,
       gestureHandling: 'greedy'
-    })}
+    }}
     {...props}
   >
     {children}
