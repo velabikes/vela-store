@@ -672,7 +672,7 @@ video {
 .specs-tech-section {
     position: relative;
     display: flex;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     flex-direction: row;
     flex-wrap: nowrap;
