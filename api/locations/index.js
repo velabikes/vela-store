@@ -45,10 +45,6 @@ module.exports = async (req, res) => {
       type: ['charger']
     },
     {
-      googlePlace: 'ChIJeeiz-HFXzpQRGTOx8QZbpoQ',
-      type: ['charger']
-    },
-    {
       googlePlace: 'ChIJy9BBJORWzpQReEuaiOtk0kU',
       type: ['charger']
     },
@@ -86,6 +82,10 @@ module.exports = async (req, res) => {
     },
     {
       googlePlace: 'ChIJAQCU4gNazpQRgrm7yhcWeKU',
+      type: ['charger']
+    },
+    {
+      googlePlace: 'ChIJ8zgq6hrVmwARf6ihPDuvaac',
       type: ['charger']
     },
     {
@@ -130,6 +130,18 @@ module.exports = async (req, res) => {
     },
     {
       googlePlace: 'ChIJgc6RhsabpgARbQ40-IY0OK8',
+      type: ['service']
+    },
+    {
+      googlePlace: 'ChIJ-21CUWYyWpMRY86ecoW0fuA',
+      type: ['service']
+    },
+    {
+      googlePlace: 'ChIJKcPVzHI7WpMRaU9RkzCJHTY',
+      type: ['service']
+    },
+    {
+      googlePlace: 'ChIJKcPVzHI7WpMRaU9RkzCJHTY',
       type: ['service']
     },
     {
