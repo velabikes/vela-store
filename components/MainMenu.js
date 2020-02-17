@@ -36,9 +36,9 @@ const MainMenu = () =>
       <li><Link href='/contato'><a>
         Contato
       </a></Link></li>
-      {/* <li><Link href='/store?handle=outlet' as='/loja/outlet'>
+      <li><Link href='/store?handle=outlet' as='/loja/outlet'>
         <a className='outlet'>Outlet</a>
-      </Link></li> */}
+      </Link></li>
     </ul>
     <style jsx>{`
       ul {
