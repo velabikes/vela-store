@@ -29,7 +29,7 @@ module.exports = async (req, res) => {
     }))
   }
 
-  if (totalPrice < 400000) {
+  if (totalPrice < 3500 * 100) {
     const queryArgs = {
       nCdServico: '40010,41106',
       sCepOrigem: origin.postal_code.replace('-', ''),
