@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Link from 'next/link'
 import PaddedView from 'components/PaddedView'
 import { toggleDrawer } from '../lib/redux'
-import { velaGreen, offWhite } from '../style/colors'
+import { offBlack, offWhite, velaGreen } from '../style/colors'
 import withOpenDrawer from '../containers/withOpenDrawer'
 import Cart from './store/Cart'
 import HeaderDrawer from './HeaderDrawer'
@@ -11,6 +11,7 @@ import HeaderMenu from './HeaderMenu'
 import MainMenu from './MainMenu'
 import Footer from './Footer'
 import SubscribeForm from './SubscribeForm'
+import { Logo } from './Icons'
 
 /* eslint-disable */
 const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
@@ -21,19 +22,32 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
       <PaddedView><SubscribeForm /></PaddedView>
       <PaddedView><Footer /></PaddedView>
     </HeaderDrawer>
-    <header className='Header'>
+    <header className='header'>
       <div className='top'>
-        <HeaderMenu />
+        <div className='logo'><Link href='/'><a>
+          <Logo />
+        </a></Link></div>
+        <div className='left'><Link href='/vela'><a>
+          Vela 2
+        </a></Link></div>
+        <div className='left'><Link href='/store' as='/loja'><a>
+          Acessórios
+        </a></Link></div>
+        <div className='left'><Link href='/network/map' as='/rede/mapa'><a>
+          Rede
+        </a></Link></div>
+        <div className='left'><Link href='/network/map' as='/rede/mapa'><a>
+          Contato
+        </a></Link></div>
       </div>
-      <div className='bottom'>
-        <div><Link href='/store' as='/loja'><a>acessórios</a></Link></div>
-        <div><Link href='/store?handle=vela-1' as='/loja/vela-1'><a>monte sua vela</a></Link></div>
+      <div className='right'>
+        <HeaderMenu />
       </div>
     </header>
     <div className='app-content' onClick={handleContentClick}>
       {children}
       <div className='copyright'>
-        <small>COPYRIGHT (C) 2019 VELA BIKES. TODOS DIREITOS RESERVADOS</small>
+        <small>Copyright (C) 2020. Vela Bikes. Todos os direito reservados.</small>
       </div>
     </div>
     <style jsx>{`
@@ -41,19 +55,19 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
         display: flex;
         background-color: ${offWhite};
         justify-content: space-between;
-        color: ${velaGreen};
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
         z-index: 1001;
         box-shadow: 0px 0px 9px 0px rgba(100,100,100,0.3);
+        width: 100%;
       }
       .app-content {
         margin-top: 4em;
         position: relative;
-        min-height: calc(100vh - 4rem);
-        min-height: calc(var(--vh, 1vh) * 100 - 4rem);
+        min-width: calc(100vw - 4rem);
+        min-width: calc(var(--vw, 1vw) * 100 - 4rem);
       }
       .copyright {
         text-align: center;
@@ -68,57 +82,50 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
         align-items: center;
         min-width: 4rem;
         min-height: 4rem;
+        color: ${offBlack};
+        font-weight: 500;
       }
       .top :global(.Logo) {
-        width: 2.59rem;
-        height: 2.59rem;
-      }
-      .bottom > div > a {
-        text-transform: uppercase;
-        font-family: neue-haas-grotesk-display, sans;
-        font-weight: 700;
-        font-style: italic;
-        padding: 1.5em 1em;
-        box-sizing: border-box;
-        display: none;
-        font-size: 1rem;
-        line-height: 1rem;
-      }
-      .bottom > div:last-child > a {
-        background-color: ${velaGreen};
+        width: 2rem;
+        height: 2rem;
         display: block;
-        white-space: nowrap;
-        color: ${offWhite};
       }
+      .top .left {
+        display: none;
+        margin-right: 1.5em;
+      } 
+      .right {
+        right: 0;
+      }
+
       @media only screen and (min-width: 768px) {
         header {
-          flex-direction: column;
-          width: 5em;
+          flex-direction: row;
+          height: 4em;
           bottom: 0;
-          rught: inital;
+          right: initial;
         }
         .app-content {
-          margin-left: 5em;
-          margin-top: 0;
+          margin-top: 4em;
+          margin-left: 0;
           min-height: calc(100vh);
         }
         header > div {
-          flex-direction: column;
+          flex-direction: row;
         }
         header > div :global(a) {
-          min-height: 5rem;
-          min-width: 5rem;
+          min-height: 4rem;
+          min-width: 4rem;
         }
-        .top {
-          margin-top: 0.28em;
+        .top .left {
+          display: flex;
+        } 
+        .right {
+          right: 0;
+          background-color: ${velaGreen};
         }
-        .bottom > div > a {
-          writing-mode: vertical-rl;
-          text-orientation: sideways;
-          transform: rotate(180deg);
-          display: block;
-          padding: 2rem;
-          font-size: 1.25rem
+        .right :global(.CartIcon) {
+          fill: ${offWhite};
         }
       }
     `}</style>
