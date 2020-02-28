@@ -1,7 +1,7 @@
 
 import { compose } from 'recompose'
 import withCheckout from '../containers/withCheckout'
-import { velaGreen, velaBlue } from '../style/colors'
+import { velaBlue, velaGreen, offBlack, offWhite, darkGray } from '../style/colors'
 
 export const UserIcon = props => (
   <svg viewBox='0 0 27.05 27.04' width='1em' height='1em' {...props}>
@@ -51,40 +51,20 @@ export const NextIcon = props =>
   </div>
 
 export const MenuIcon = ({ ...props }) => (
-  <svg viewBox='0 0 28.44 20.07' width='1em' height='1em' {...props}>
-    <title>Menu Icon</title>
-    <g id='prefix__Camada_2' data-name='Camada 2'>
-      <g id='prefix__Camada_1-2' data-name='Camada 1'>
-        <g id='prefix__Grupo_2' data-name='Grupo 2'>
-          <g id='prefix__Grupo_2-2' data-name='Grupo 2-2'>
-            <path
-              id='prefix__Caminho_5'
-              data-name='Caminho 5'
-              className='prefix__cls-1'
-              style={{ fill: '#51776b' }}
-              d='M27.58 2.2H.86A1.13 1.13 0 0 1 0 .82 1.12 1.12 0 0 1 .86 0h26.72a1.13 1.13 0 0 1 .82 1.38 1.12 1.12 0 0 1-.82.82z'
-            />
-          </g>
-          <g id='prefix__Grupo_3' data-name='Grupo 3'>
-            <path
-              id='prefix__Caminho_6'
-              data-name='Caminho 6'
-              style={{ fill: '#51776b' }}
-              d='M27.58 11.14H.86A1.13 1.13 0 0 1 0 9.76a1.1 1.1 0 0 1 .82-.82h26.76a1.14 1.14 0 0 1 0 2.2z'
-            />
-          </g>
-          <g id='prefix__Grupo_4' data-name='Grupo 4'>
-            <path
-              id='prefix__Caminho_7'
-              data-name='Caminho 7'
-              style={{ fill: '#51776b' }}
-              d='M27.58 20.07H.86A1.12 1.12 0 0 1 0 18.7a1.1 1.1 0 0 1 .82-.82h26.76a1.12 1.12 0 0 1 .82 1.37 1.1 1.1 0 0 1-.82.82z'
-            />
-          </g>
-        </g>
-      </g>
-    </g>
-  </svg>
+  <div>
+    <svg width={24} height={24} viewBox='0 0 24 24' fill='none' {...props}>
+      <path d='M0 0h24v24H0z' />
+      <path className='MenuIcon'
+        d='M6.2 8.5h12.6c.7 0 1.2-.5 1.2-1.2S19.5 6 18.8 6H6.2C5.5 6 5 6.5 5 7.2s.5 1.3 1.2 1.3zM18.8 11.4H6.2c-.7 0-1.2.6-1.2 1.3 0 .7.5 1.2 1.2 1.2h12.6c.7 0 1.2-.5 1.2-1.2s-.5-1.3-1.2-1.3zM18.8 16.9H6.2c-.7 0-1.2.5-1.2 1.2s.5 1.2 1.2 1.2h12.6c.7 0 1.2-.5 1.2-1.2s-.5-1.2-1.2-1.2z'
+      />
+    </svg>
+    <style jsx>{`
+      .MenuIcon {
+        fill: ${darkGray}
+      }
+    `}
+    </style>
+  </div>
 )
 
 export const CartIcon = compose(
@@ -92,24 +72,24 @@ export const CartIcon = compose(
 )(({ checkout, width, height, ...props }) => (
   <div className='CartIcon'>
     <div className='count'>{checkout && checkout.lineItems.edges.length}</div>
-    <svg viewBox='0 0 26.01 26' width={width || '1em'} height={height || '1em'}>
+    <svg viewBox='0 0 24 24' width={width || '1.5em'} height={height || '1.5em'}>
       <title>Cart Icon</title>
       <path
-        d='M7.8 20.8a2.6 2.6 0 1 0 2.6 2.6 2.6 2.6 0 0 0-2.6-2.6zM0 1.3a1.31 1.31 0 0 0 1.3 1.3h1.3l4.68 9.87-1.75 3.17A2.6 2.6 0 0 0 7.8 19.5h14.3a1.3 1.3 0 0 0 0-2.6H7.8l1.43-2.6h9.69a2.58 2.58 0 0 0 2.27-1.3l4.65-8.44a1.29 1.29 0 0 0-1.13-1.96H5.47L4.6.74A1.29 1.29 0 0 0 3.43 0H1.3A1.31 1.31 0 0 0 0 1.3zm20.8 19.5a2.6 2.6 0 1 0 2.6 2.6 2.6 2.6 0 0 0-2.6-2.6z'
+        d="M8.2 17c-1 0-1.7.8-1.7 1.7 0 .9.8 1.7 1.7 1.7.9 0 1.8-.7 1.8-1.7S9.2 17 8.2 17zM3 3.9c0 .5.4.9.9.9h.9l3.1 6.6-1.2 2.1c-.5.8-.2 1.9.7 2.4.3.1.6.2.8.2h9.6c.5 0 .9-.4.9-.9s-.4-.9-.9-.9H8.2l1-1.7h6.5c.6 0 1.2-.3 1.5-.9L20.3 6c.2-.4.1-.9-.3-1.2-.1-.1-.3-.1-.5-.1H6.7l-.6-1.2C6 3.2 5.6 3 5.3 3H3.9c-.5 0-.9.4-.9.9zM17 17c-1 0-1.7.8-1.7 1.7 0 .9.8 1.7 1.7 1.7.9 0 1.7-.8 1.7-1.7 0-.9-.7-1.7-1.7-1.7z"
       />
     </svg>
     <style jsx>{`
       .CartIcon {
         transition: .3s all;
         position: relative;
-        fill: ${checkout && checkout.lineItems.edges.length ? velaBlue : velaGreen};
+        fill: ${checkout && checkout.lineItems.edges.length ? darkGray : velaGreen};
       }
       .count {
         transition: .5s all;
         position: absolute;
-        top: -1em;
-        right: -1em;
-        background: white;
+        top: -0.5em;
+        right: -0.5em;
+        background: ${velaBlue};
         border-radius: 1em;
         width: 1.5em;
         height: 1.5em;
@@ -117,7 +97,7 @@ export const CartIcon = compose(
         text-align: center;
         font-size: 0.6em;
         font-weight: 700;
-        color: ${velaBlue};
+        color: ${offWhite};
         opacity: ${checkout && checkout.lineItems.edges.length ? 1 : 0};
       }
     `}</style>
