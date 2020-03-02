@@ -75,7 +75,7 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
       }
       .bottom > div > a {
         text-transform: uppercase;
-        font-family: neue-haas-grotesk-display, sans;
+        font-family: Barlow, sans;
         font-weight: 700;
         font-style: italic;
         padding: 1.5em 1em;

@@ -1,10 +1,9 @@
 import Head from 'next/head'
 import { compose, lifecycle } from 'recompose'
-import { velaGreen, offBlack, darkGray, offWhite, white } from 'style/colors'
+import { velaGreen, offBlack, darkGray, offWhite } from 'style/colors'
 import FacebookPixel from 'components/head/FacebookPixel'
 import Freshchat from 'components/head/Freshchat'
 import Heatmap from 'components/head/Heatmap'
-import { lightGray } from '../style/colors'
 
 const CustomHead = props =>
   <>
@@ -12,7 +11,7 @@ const CustomHead = props =>
       <script dangerouslySetInnerHTML={{ __html: "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-K9555FS');" }} />
       <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0' />
       <meta charSet='utf-8' />
-      <link rel='stylesheet' href='https://use.typekit.net/sho3jmj.css' />
+      <link href='https://fonts.googleapis.com/css?family=Barlow:400,500,600,700&display=swap' rel='stylesheet' />
       <link rel='icon' type='image/png' sizes='32x32' href='/static/fav/favicon-32x32.png' />
       <link rel='icon' type='image/png' sizes='96x96' href='/static/fav/favicon-96x96.png' />
       <link rel='icon' type='image/png' sizes='16x16' href='/static/fav/favicon-16x16.png' />
@@ -33,10 +32,10 @@ const CustomHead = props =>
         width: 100%;
         color: ${offBlack};
         background-color: ${offWhite};
-        font-family: neue-haas-grotesk-text, sans-serif;
+        font-family: Barlow, sans-serif;
       }
       h1, h2, h3, h4, h5, h6 {
-        font-family: neue-haas-grotesk-display, sans-serif;
+        font-family: Barlow, sans-serif;
         margin-top: 0;
         margin-bottom: .5rem;
         text-transform: none;
@@ -90,7 +89,7 @@ const CustomHead = props =>
       }
       p {
         line-height: 1.5em;
-        font-family: neue-haas-grotesk-text, sans-serif;
+        font-family: Barlow, sans-serif;
         margin-top: 0;
         margin-bottom: .8em;
       }
@@ -105,7 +104,7 @@ const CustomHead = props =>
         line-height: 1.5em;
         color: ${offBlack};
         margin: 0.37em;
-        font-family: neue-haas-grotesk-text, sans-serif;
+        font-family: Barlow, sans-serif;
       }
       table {
         width: 100%;
@@ -137,7 +136,7 @@ const CustomHead = props =>
         border-radius: 5px;
         display: block;
         font-size: 1rem;
-        font-family: neue-haas-grotesk-display, sans-serif;
+        font-family: Barlow, sans-serif;
         box-sizing: border-box;
         background: ${offWhite};
         box-shadow: 0 2px 3px rgba(0,0,0,0.05), 0 2px 3px rgba(0,0,0,0.05);
