@@ -27,6 +27,9 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
         <div className='logo'><Link href='/'><a>
           <Logo />
         </a></Link></div>
+        <div className='left'><Link href='/vela'><a>
+          Vela 2
+        </a></Link></div>
         <div className='left'><Link href='/store?handle=vela-1' as='/loja/vela-1'><a>
           Vela 1
         </a></Link></div>
@@ -35,6 +38,9 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
         </a></Link></div>
         <div className='left'><Link href='/network/map' as='/rede/mapa'><a>
           Rede
+        </a></Link></div>
+        <div className='left'><Link href='/blog'><a>
+          Blog
         </a></Link></div>
         <div className='left'><Link href='/contact' as='/contato'><a>
           Contato
