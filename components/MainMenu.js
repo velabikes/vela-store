@@ -6,7 +6,7 @@ const MainMenu = () =>
     <h1>Menu</h1>
     <ul className='items'>
       <li><Link href='/store?handle=vela-1' as='/loja/vela-1'><a>
-        Monte sua Vela
+        Vela 1
       </a></Link></li>
       <li><Link href='/store' as='/loja'><a>
         Acessórios
@@ -33,7 +33,7 @@ const MainMenu = () =>
       <li><Link href='/blog'><a>
         Blog
       </a></Link></li>
-      <li><Link href='/contato'><a>
+      <li><Link href='/contact' as='/contato'><a>
         Contato
       </a></Link></li>
       <li><Link href='/store?handle=outlet' as='/loja/outlet'>
