@@ -1,0 +1,20 @@
+import { createCard } from 'lib/pipefy'
+
+const handle = async (req, res) => {
+  const { name, email, message } = req.body
+  console.log(name)
+  const card = await createCard({
+    pipe_id: '1228252',
+    title: `${name}`,
+    fields_attributes: [
+      { field_id: 'what_s_the_customer_s_name', field_value: name },
+      { field_id: 'what_s_the_customer_s_email', field_value: email },
+      { field_id: 'do_you_have_any_additional_information', field_value: message }
+    ]
+  })
+
+  console.log(card)
+  res.end('OK')
+}
+
+export default handle
