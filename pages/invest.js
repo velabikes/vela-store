@@ -3,6 +3,7 @@ import Head from 'next/head'
 import PaddedView from '../components/PaddedView'
 import InvestImage from '../components/invest/InvestImage'
 import { offBlack, offWhite, lightGray, darkGray } from '../style/colors'
+import InvestForm from '../components/invest/InvestForm'
 
 const Invest = () =>
   <>
@@ -56,6 +57,7 @@ const Invest = () =>
         <div className='invest-fields'>
           <h2>Investir</h2>
           <p>Entre em contato conosco para entendermos juntos qual modelo se encaixa melhor no seu perfil de investidor:</p>
+          <InvestForm />
         </div>
       </div>
     </div>
@@ -182,7 +184,7 @@ const Invest = () =>
           max-width: 40vw;
         }
         .invest-img {
-          max-width: 20vw;
+          max-width: 26vw;
           margin: 2em 0;
           z-index: 1;
         }
