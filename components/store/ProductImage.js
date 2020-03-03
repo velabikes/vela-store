@@ -1,5 +1,5 @@
 import Image from '../Image'
-import { offWhite } from '../../style/colors'
+import { lightGray } from '../../style/colors'
 
 const ProductImage = props =>
   <div className='ProductImage'>
@@ -14,7 +14,7 @@ const ProductImage = props =>
       .content {
         position: absolute;
         top: 0px; bottom: 0px; right: 0px; left: 0px;
-        background: ${offWhite};
+        background: ${lightGray};
         justify-content: center;
         align-items: center;
         display: flex;

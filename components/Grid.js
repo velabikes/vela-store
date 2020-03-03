@@ -4,7 +4,7 @@ const Grid = ({ children, template, gap }) =>
   <div className='Grid'>
     {children}
     <style jsx>{`
-    div {
+    .Grid {
       display: grid;
       grid-column-gap: ${gap || 2}rem;
       grid-row-gap: ${gap || 2}rem;
@@ -15,7 +15,8 @@ const Grid = ({ children, template, gap }) =>
 
 Grid.propTypes = {
   children: PropTypes.node,
-  template: PropTypes.string
+  template: PropTypes.string,
+  gap: PropTypes.string
 }
 
 export default Grid

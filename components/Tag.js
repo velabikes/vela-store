@@ -14,7 +14,7 @@ const Tag = ({ label, icon, selected, onClick, ...props }) =>
       .Tag {
         background: ${lightGray};
         position: relative;
-        font-size: 0.8125em;
+        font-size: 0.8em;
         font-weight: 500;
         border-radius: 2em;
         padding: 0.5em 1em;
@@ -31,7 +31,8 @@ const Tag = ({ label, icon, selected, onClick, ...props }) =>
         font-size: 1em;
         position: absolute;
         width: 32px;
-        left: 0em; top: 0px;
+        left: 0em; 
+        bottom: -1px;
         margin-right: 1em;
       }
       .label {

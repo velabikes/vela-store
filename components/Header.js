@@ -45,6 +45,9 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
         <div className='left'><Link href='/contact' as='/contato'><a>
           Contato
         </a></Link></div>
+        <div className='left'><Link href='/invest' as='/contact'><a>
+          Investir
+        </a></Link></div>
         <div className='left'><Link href='/store?handle=outlet' as='/loja/outlet'><a>
           Outlet
         </a></Link></div>
@@ -75,8 +78,7 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
       .app-content {
         margin-top: 4em;
         position: relative;
-        min-width: calc(100vw - 4rem);
-        min-width: calc(var(--vw, 1vw) * 100 - 4rem);
+        min-height: calc(100vh - 4rem);
       }
       .copyright {
         text-align: center;
@@ -120,7 +122,8 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
         .app-content {
           margin-top: 4em;
           margin-left: 0;
-          min-height: calc(100vh);
+          min-height: calc(100vh - 4rem);
+          min-height: calc(var(--vh, 1vh) * 100 - 4rem);
         }
         header > div {
           flex-direction: row;

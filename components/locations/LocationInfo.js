@@ -26,10 +26,11 @@ const LocationsInfo = ({ name, address, hours, type }) =>
     <style jsx>{`
       .tags, address {
         margin-bottom: 1rem;
+        font-style: normal;
       }
       tr {
         text-transform: capitalize;
-        font-size: 0.75em;
+        font-size: 0.8em;
       }
     `}</style>
   </article>
