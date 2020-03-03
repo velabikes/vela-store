@@ -89,24 +89,27 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
         display: flex;
         justify-content: center;
         align-items: center;
-        min-width: 4rem;
-        min-height: 4rem;
         color: ${offBlack};
         font-weight: 500;
+        min-height: 4rem;
       }
       .top :global(.Logo) {
         width: 2rem;
         height: 2rem;
         display: block;
       }
+      .top .logo {
+        min-width: 4rem;
+      }
       .top .left {
         display: none;
-        margin-right: 1.5em;
       } 
       .right {
         right: 0;
       }
-
+      .right :global(a) {
+        min-width: 4rem;
+      }
       @media only screen and (min-width: 768px) {
         header {
           flex-direction: row;
@@ -122,12 +125,9 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
         header > div {
           flex-direction: row;
         }
-        header > div :global(a) {
-          min-height: 4rem;
-          min-width: 4rem;
-        }
         .top .left {
           display: flex;
+          padding: 0 1em;
         } 
         .right {
           right: 0;
