@@ -30,7 +30,9 @@ const CartContent = ({ checkout }) =>
       }
       .items {
         flex: 1;
-        overflow: scroll;
+        overflow: auto;
+        min-height: 0;
+        max-width: 100%;
       }
       .items table {
         border-spacing: 0 1rem;

@@ -24,7 +24,7 @@ const SelectInput = ({ children, field, ...props }) =>
         border-radius: 5px;
         width: 100%;
         font-size: 1rem;
-        font-family: neue-haas-grotesk-display, sans-serif;
+        font-family: Barlow, sans-serif;
         box-sizing: border-box;
         background: ${offWhite};
         box-shadow: 0 2px 3px rgba(0,0,0,0.05), 0 2px 3px rgba(0,0,0,0.05);
@@ -46,7 +46,8 @@ const SelectInput = ({ children, field, ...props }) =>
 
 SelectInput.propTypes = {
   children: PropTypes.any,
-  label: PropTypes.any
+  label: PropTypes.any,
+  field: PropTypes.any
 }
 
 export default SelectInput

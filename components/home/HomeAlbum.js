@@ -35,7 +35,7 @@ const HomeAlbum = ({ images }) =>
         grid-column-gap: 1rem;
       }
       .Hashtag {
-        font-family: neue-haas-grotesk-display, sans-serif;
+        font-family: Barlow, sans-serif;
         font-size: 3.63em;
         font-style: italic;
         font-weight: 900;

@@ -26,13 +26,13 @@ const HomePage = ({ images }) =>
       <HomeImage />
       <div className='cta'>
         <div className='slogan'>
-         <p><strong>Tecnologia e design<br />nunca estiveram tão próximos</strong></p>
-         <div className='actions'>
-           <Link href='/vela'>
-             <Button className='button'>Conheça a Vela 2</Button>
-           </Link>
-           </div>
-         </div>
+          <p><strong>Tecnologia e design<br />nunca estiveram tão próximos</strong></p>
+          <div className='actions'>
+            <Link href='/vela'>
+              <Button className='button'>Conheça a Vela 2</Button>
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
     <Highlight />
@@ -60,7 +60,6 @@ const HomePage = ({ images }) =>
         justify-content: flex-end;
         align-items: center;
         flex-direction: column;
-        background-color: rgba(221,221,223, 0.2);
         padding: 2rem;
       }
       .slogan > p {
