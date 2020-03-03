@@ -99,13 +99,7 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
         height: 2rem;
         display: block;
       }
-      .bottom > div > a {
-        text-transform: uppercase;
-        font-family: Barlow, sans;
-        font-weight: 700;
-        font-style: italic;
-        padding: 1.5em 1em;
-        box-sizing: border-box;
+      .top .left {
         display: none;
         margin-right: 1.5em;
       } 
