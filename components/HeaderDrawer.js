@@ -14,9 +14,10 @@ const HeaderDrawer = ({ children, visible, handleCloseClick }) =>
     <style jsx>{`
       .HeaderDrawer {
         position: fixed;
-        transform: translateX(${visible ? '0' : '-100%'});
+        transform: translateX(${visible ? '0' : '100%'});
         transition: ${visible ? '.5s all ease-out' : '.3s all ease-in'};
         top: 4em;
+        right: 0;
         bottom: 0;
         background-color: ${offWhite};
         box-shadow: 0px 0px ${visible ? '8' : '0'}px 0px rgba(100,100,100,0.3);
@@ -41,8 +42,8 @@ const HeaderDrawer = ({ children, visible, handleCloseClick }) =>
       }
       @media only screen and (min-width: 768px) {
         .HeaderDrawer {
-          left: 5em;
-          top: 0;
+          right: 0;
+          top: 4em;
           max-width: 600px;
           min-width: 480px;
         }
