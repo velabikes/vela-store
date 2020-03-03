@@ -9,41 +9,46 @@ import Card from 'components/Card'
 import { NextIcon } from 'components/Icons'
 import PostHighlight from 'components/blog/PostHighlight'
 import Link from 'next/link'
+import { lightGray } from '../../style/colors'
 
 const Blog = ({ posts, highlight }) =>
-  <PaddedView>
-    <Main>
-      <Head>
-        <title>Blog - Vela Bikes</title>
-      </Head>
-      <MainHeader title='Blog' />
-      <section>
-        <PostHighlight post={highlight} />
-      </section>
-      <br /><br />
-      <section>
-        <Grid template='repeat(auto-fit, minmax(320px, 1fr))'>
-          {posts.map(({ data: { cover, title, teaser }, uid }) => (
-            <Card
-              key={uid}
-              media={<Link href={`/blog/${uid}`}><img src={cover.url} alt={cover.alt} /></Link>}
-            >
-              <Link href={`/blog/${uid}`}>
-                <div>
-                  <h3>{title[0].text}</h3>
-                  <p>{teaser[0].text}</p>
-                  <br />
-                  <div className='actions'>
-                    <a>Ler mais  <NextIcon fill='#51776B' /></a>
+  <div className='blog'>
+    <PaddedView>
+      <Main>
+        <Head>
+          <title>Blog - Vela Bikes</title>
+        </Head>
+        <MainHeader title='Blog' />
+        <section>
+          <PostHighlight post={highlight} />
+        </section>
+        <br /><br />
+        <section>
+          <Grid template='repeat(auto-fit, minmax(320px, 1fr))'>
+            {posts.map(({ data: { cover, title, teaser }, uid }) => (
+              <Card
+                key={uid}
+                media={<Link href={`/blog/${uid}`}><img src={cover.url} alt={cover.alt} /></Link>}
+              >
+                <Link href={`/blog/${uid}`}>
+                  <div>
+                    <h3>{title[0].text}</h3>
+                    <p>{teaser[0].text}</p>
+                    <br />
+                    <div className='actions'>
+                      <a>Ler mais  <NextIcon fill='#3D9771' /></a>
+                    </div>
                   </div>
-                </div>
-              </Link>
-            </Card>
-          ))}
-        </Grid>
-      </section>
-    </Main>
-    <style jsx>{`
+                </Link>
+              </Card>
+            ))}
+          </Grid>
+        </section>
+      </Main>
+      <style jsx>{`
+      .blog :global(html, body) {
+        background-color: ${lightGray} !important;
+      }
       .actions {
         position: absolute;
         bottom: 24px;
@@ -54,7 +59,8 @@ const Blog = ({ posts, highlight }) =>
         cursor: pointer;
       }
     `}</style>
-  </PaddedView>
+    </PaddedView>
+  </div>
 
 Blog.getInitialProps = async ({ req }) => {
   const api = await getPrismic(req)

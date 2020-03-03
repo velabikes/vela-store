@@ -110,6 +110,7 @@ const Invest = () =>
         margin: 2em 0;
         padding: 3em;
         background-color: ${offWhite};
+        box-shadow: 0px .75rem 1rem -1.25rem rgba(20,20,20, 0.8);
       }
       .invest-content {
         background-color: ${offBlack};

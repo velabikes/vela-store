@@ -45,7 +45,6 @@ const Highlight = () => {
           }
           .detail strong {
             font-size: 1.5em;
-            font-style: italic;
           }
           .image {
             align-self: end;

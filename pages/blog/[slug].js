@@ -4,7 +4,6 @@ import Head from 'next/head'
 import PaddedView from 'components/PaddedView'
 import Main from 'components/Main'
 import MainHeader from 'components/MainHeader'
-import Grid from 'components/Grid'
 import { Date, RichText } from 'prismic-reactjs'
 import dayjs from 'dayjs'
 
@@ -25,13 +24,30 @@ const BlogPostPage = ({ cover, title, teaser, body, post_date }) =>
         <img src={cover.url} alt={cover.alt} />
       </div>
       <br />
-      <div>
+      <div className='PostBody'>
         <RichText render={body} />
       </div>
     </Main>
     <style jsx>{`
-        .SectionBody {
+      .SectionBody {
         margin-bottom: 3em;
+      }
+
+      .PostImage {
+        margin-bottom: 1em;
+      }
+
+      @media only screen and (min-width: 768px) {
+      .PostBody {
+        margin: 0 auto;
+        max-width: 60%;
+      }
+      .PostBody :global(img) {
+          margin: 1em 0;
+        }
+      .PostBody :global(p) {
+          font-size: 1.2em;
+        }
       }
     `}</style>
   </PaddedView>
