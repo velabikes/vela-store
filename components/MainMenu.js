@@ -40,6 +40,9 @@ const MainMenu = () =>
       <li><Link href='/contact' as='/contato'><a>
         Contato
       </a></Link></li>
+      <li><Link href='/invest' as='/investir'><a>
+        Investir
+      </a></Link></li>
       <hr />
       <li><Link href='/store?handle=outlet' as='/loja/outlet'>
         <a className='outlet'>Outlet</a>

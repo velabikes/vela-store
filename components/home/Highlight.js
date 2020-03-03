@@ -21,7 +21,7 @@ const Highlight = () => {
             <br />
             <Grid template='1fr 1fr'>
               <div className='detail'>
-                <strong>até 40km</strong>
+                <strong>até 30km</strong>
                 <div>autonomia da bateria</div>
               </div>
               <div className='detail'>
@@ -41,10 +41,10 @@ const Highlight = () => {
           }
           .detail {
             text-align: center;
+            padding: 1rem;
           }
           .detail strong {
             font-size: 1.5em;
-            font-style: italic;
           }
           .image {
             align-self: end;
