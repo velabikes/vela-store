@@ -9,7 +9,6 @@ import Card from 'components/Card'
 import { NextIcon } from 'components/Icons'
 import PostHighlight from 'components/blog/PostHighlight'
 import Link from 'next/link'
-import { lightGray } from '../../style/colors'
 
 const Blog = ({ posts, highlight }) =>
   <div className='blog'>
@@ -46,9 +45,6 @@ const Blog = ({ posts, highlight }) =>
         </section>
       </Main>
       <style jsx>{`
-      .blog :global(html, body) {
-        background-color: ${lightGray} !important;
-      }
       .actions {
         position: absolute;
         bottom: 24px;
