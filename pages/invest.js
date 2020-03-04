@@ -2,7 +2,7 @@ import { compose } from 'recompose'
 import Head from 'next/head'
 import PaddedView from '../components/PaddedView'
 import InvestImage from '../components/invest/InvestImage'
-import { offBlack, offWhite, lightGray, darkGray, midGray } from '../style/colors'
+import { offBlack, offWhite, lightGray, darkGray } from '../style/colors'
 import InvestForm from '../components/invest/InvestForm'
 
 const Invest = () =>
@@ -88,7 +88,7 @@ const Invest = () =>
       .values {
         display: flex;
         flex-direction: column;
-        background-color: ${midGray};
+        background-color: ${lightGray};
       }
       .left {
         padding: 2em;
@@ -120,7 +120,7 @@ const Invest = () =>
       }
       .invest-fields {
         padding: 2em;
-        background-color: ${lightGray};
+        background-color: ${offWhite};
       }
       .invest-fields p{
         font-size: 0.8em;
