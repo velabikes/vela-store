@@ -1,4 +1,4 @@
-import { Field } from 'formik'
+import { Field, ErrorMessage } from 'formik'
 import PropTypes from 'prop-types'
 import FieldError from 'components/form/FieldError'
 
@@ -12,8 +12,7 @@ const CustomField = ({ label, name, ...props }) =>
 
 CustomField.propTypes = {
   error: PropTypes.func,
-  label: PropTypes.string,
-  name: PropTypes.string
+  label: PropTypes.string
 }
 
 export default CustomField
