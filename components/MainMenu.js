@@ -43,10 +43,6 @@ const MainMenu = () =>
       <li><Link href='/invest' as='/investir'><a>
         Investir
       </a></Link></li>
-      <hr />
-      <li><Link href='/store?handle=outlet' as='/loja/outlet'>
-        <a className='outlet'>Outlet</a>
-      </Link></li>
     </ul>
     <style jsx>{`
       ul {

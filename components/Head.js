@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { compose, lifecycle } from 'recompose'
-import { velaGreen, offBlack, darkGray, offWhite } from 'style/colors'
+import { velaGreen, offBlack, darkGray, lightGray, offWhite } from 'style/colors'
 import FacebookPixel from 'components/head/FacebookPixel'
 import Freshchat from 'components/head/Freshchat'
 import Heatmap from 'components/head/Heatmap'
@@ -31,7 +31,7 @@ const CustomHead = props =>
         position: relative;
         width: 100%;
         color: ${offBlack};
-        background-color: ${offWhite};
+        background-color: ${lightGray};;
         font-family: Barlow, sans-serif;
       }
       h1, h2, h3, h4, h5, h6 {
