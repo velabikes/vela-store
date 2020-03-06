@@ -47,7 +47,7 @@ module.exports = async (req, res) => {
       if (err) return
 
       return res.end(JSON.stringify({
-        rates: mapCorreiosResultToRate(result)
+        rates: result ? mapCorreiosResultToRate(result) : []
       }))
     })
   } else if (['SP', 'RJ', 'PR', 'SC', 'RS', 'ES', 'MG', 'DF', 'PB'].some(v => v === destination.province)) { // eslint-disable-line
