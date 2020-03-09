@@ -7,7 +7,6 @@ jspm_packages/
 .npm
 npm-debug.log
 yarn-error.log
-package-lock.json
 
 # Optional eslint cache
 .eslintcache
