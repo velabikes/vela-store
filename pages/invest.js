@@ -2,7 +2,7 @@ import { compose } from 'recompose'
 import Head from 'next/head'
 import PaddedView from '../components/PaddedView'
 import InvestImage from '../components/invest/InvestImage'
-import { offBlack, offWhite, lightGray, darkGray } from '../style/colors'
+import { offBlack, offWhite, lightGray, darkGray, velaGreen } from '../style/colors'
 import InvestForm from '../components/invest/InvestForm'
 
 const Invest = () =>
@@ -31,35 +31,37 @@ const Invest = () =>
           <p>A Vela tem como base uma comunicação digital transparente, empática e que respeita a privacidade. Acreditamos no desenvolvimento urbano colaborativo, que aproxima as pessoas e fortalece relações.</p>
         </div>
       </div>
+      <div className='models-content'>
+        <h2>Modelos de aporte</h2>
+        <div className='models'>
+          <div className='m1'>
+            <h3>Investimento</h3>
+            <p>Seja sócio com ações percentuais definidas e participe da nossa jornada de crescimento.</p>
+          </div>
+          <div className='m2'>
+            <h3>Mútuo conversível</h3>
+            <p>A segurança da aplicação financeira, com a possibilidade de conversão do valor corrigido em ações da Vela.</p>
+          </div>
+          <div className='m3'>
+            <h3>Aplicação financeira</h3>
+            <p>Contribua para o nosso desenvolvimento e tenha retorno financeiro mensal acima da média do mercado.</p>
+          </div>
+        </div>
+      </div>
     </PaddedView>
-    <div className='models-content'>
-      <h2>Modelos de aporte</h2>
-      <div className='models'>
-        <div className='m1'>
-          <h3>Investimento</h3>
-          <p>Seja sócio com ações percentuais definidas e participe da nossa jornada de crescimento.</p>
-        </div>
-        <div className='m2'>
-          <h3>Mútuo conversível</h3>
-          <p>A segurança da aplicação financeira, com a possibilidade de conversão do valor corrigido em ações da Vela.</p>
-        </div>
-        <div className='m3'>
-          <h3>Aplicação financeira</h3>
-          <p>Contribua para o nosso desenvolvimento e tenha retorno financeiro mensal acima da média do mercado.</p>
-        </div>
-      </div>
-    </div>
     <div className='invest-content'>
-      <div className='invest-form'>
-        <div className='invest-img'>
-          <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/20fc6f70-6068-4c12-81ab-f94456de2ea5.png' alt='Mulher andando de bicicleta em quadra azul' />
+      <PaddedView>
+        <div className='invest-form'>
+          <div className='invest-img'>
+            <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/20fc6f70-6068-4c12-81ab-f94456de2ea5.png' alt='Mulher andando de bicicleta em quadra azul' />
+          </div>
+          <div className='invest-fields'>
+            <h2>Investir</h2>
+            <p>Entre em contato para entendermos juntos qual modelo se encaixa melhor no seu perfil de investidor:</p>
+            <InvestForm />
+          </div>
         </div>
-        <div className='invest-fields'>
-          <h2>Investir</h2>
-          <p>Entre em contato para entendermos juntos qual modelo se encaixa melhor no seu perfil de investidor:</p>
-          <InvestForm />
-        </div>
-      </div>
+      </PaddedView>
     </div>
     <style jsx>{`
       p {
@@ -88,19 +90,19 @@ const Invest = () =>
       .values {
         display: flex;
         flex-direction: column;
-        background-color: ${lightGray};
       }
       .left {
         padding: 2em;
+        border-left: solid 1px ${offBlack};
       }
       .right {
         text-align: right;
         padding: 2em;
+        border-right: solid 1px ${offBlack};
       }
       .models-content {
         background-color: ${lightGray};
         padding: 2em;
-        margin-top: 2em;
       }
       .models {
         display: flex;
@@ -108,7 +110,7 @@ const Invest = () =>
       }
       .models > * {
         margin: 2em 0;
-        padding: 3em;
+        padding: 2em;
         background-color: ${offWhite};
         box-shadow: 0px .75rem 1rem -1.25rem rgba(20,20,20, 0.8);
       }
@@ -116,14 +118,14 @@ const Invest = () =>
         background-color: ${offBlack};
         display: flex;
         flex-direction: column;
-        padding: 2em;
+        padding: 3em 0;
       }
       .invest-fields {
         padding: 2em;
-        background-color: ${offWhite};
+        background-color: ${lightGray};
       }
       .invest-fields p{
-        font-size: 0.8em;
+        font-size: 1em;
       }
       .invest-fields h2{
         color: ${darkGray};
@@ -152,13 +154,7 @@ const Invest = () =>
         .values {
           flex-direction: row;
           padding: 2em 4em;
-          margin-top: 4em;
-        }
-        .right {
-          border-left: 1px solid ${offWhite}
-        }
-        .models-content {
-          margin-top: 4em;
+          margin-top: 2em;
         }
         .models {
           flex-direction: row;
@@ -183,6 +179,9 @@ const Invest = () =>
           padding-left: 10em;
           margin-left: -8em;
           max-width: 40vw;
+        }
+        .invest-fields p{
+          font-size: 0.8em;
         }
         .invest-img {
           max-width: 26vw;
