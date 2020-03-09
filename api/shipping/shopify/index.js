@@ -31,7 +31,7 @@ module.exports = async (req, res) => {
 
   if (totalPrice < 3500 * 100) {
     const queryArgs = {
-      nCdServico: '40010,41106',
+      nCdServico: '40010',
       sCepOrigem: origin.postal_code.replace('-', ''),
       sCepDestino: destination.postal_code.replace('-', ''),
       nVlPeso: 1,
@@ -71,7 +71,7 @@ module.exports = async (req, res) => {
 }
 
 const mapCorreiosResultToRate = (result) => result.map(r => ({ // map here or map out?
-  service_name: `Correios -${r.Codigo}`,
+  service_name: `Sedex`,
   service_code: r.Codigo,
   total_price: parseFloat(r.Valor.split(',').join('.')) * 100,
   description: `${r.PrazoEntrega} dias úteis`,
