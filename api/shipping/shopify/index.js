@@ -45,9 +45,10 @@ module.exports = async (req, res) => {
 
     return correios.calcPrecoPrazo(queryArgs, (err, result) => {
       if (err) return
-
+      console.log(result)
+      console.log("\n")
       return res.end(JSON.stringify({
-        rates: result[0].Codigo ? mapCorreiosResultToRate(result) : []
+        rates: mapCorreiosResultToRate(result)
       }))
     })
   } else if (['SP', 'RJ', 'PR', 'SC', 'RS', 'ES', 'MG', 'DF', 'PB'].some(v => v === destination.province)) { // eslint-disable-line
