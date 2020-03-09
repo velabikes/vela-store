@@ -45,7 +45,7 @@ module.exports = async (req, res) => {
 
     return correios.calcPrecoPrazo(queryArgs, (err, result) => {
       if (err) return
-      console.log(result)
+      console.log(items)
       console.log("\n")
       return res.end(JSON.stringify({
         rates: mapCorreiosResultToRate(result)
