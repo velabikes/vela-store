@@ -27,7 +27,7 @@
     { "src": "/investir", "dest": "/invest" },
     { "src": "/vela/", "dest": "/static/v2landing/index.html" },
     { "src": "/vela/(.*)", "dest": "/static/v2landing/$1" },
-    { "src": "/blog/(.*)", "dest": "/blog/slug.js?slug=$1" },
+    { "src": "/blog/(.*)", "dest": "/blog/slug?slug=$1" },
     { "src": "/vela", "status": 301, "headers": { "Location": "/vela/" } },
 
     {
