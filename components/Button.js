@@ -3,11 +3,11 @@ import PropTypes from 'prop-types'
 import {
   velaGreen,
   offBlack,
-  darkGray,
   midGray,
   lightGray,
-  offWhite,
-  velaBlue
+  white,
+  velaBlue,
+  offWhite
 } from '../style/colors'
 
 const Button = ({
@@ -28,18 +28,15 @@ const Button = ({
     </button>
     <style jsx>{`
       button {
-        width: 100%;
-        padding: .5rem 1rem;
-        font-size: .8rem;
-        background: none;
+        padding: 0.8em 1.2em;
+        margin: 0 0.5em 0.5em 0;
+        font-size: 0.8em;
         border: 2px solid ${color};
         background: ${bgColor};
-        border-radius: 2rem;
-        margin-bottom: 0.5em;
+        border-radius: 0.5em;
         ${!disabled && 'box-shadow: 0px 3px 3px -2px rgba(0,0,0,0.15)'};
         color: ${textColor};
-        text-transform: uppercase;
-        font-weight: 700;
+        font-weight: 600;
         transition: .2s transform, .2s box-shadow, .3s background linear, .3s border linear;
         -webkit-tap-highlight-color: transparent;
         cursor: pointer;
@@ -48,6 +45,7 @@ const Button = ({
       button:active {
         transform: translateY(2px);
         box-shadow: none;
+        color: ${bgColor};
       }
     `}</style>
   </>
@@ -63,9 +61,9 @@ Button.propTypes = {
 }
 
 export default compose(
-  defaultProps({ color: lightGray, textColor: offBlack, bgColor: lightGray }),
-  withProps(({ primary }) => primary && ({ color: velaGreen, bgColor: velaGreen, textColor: offWhite })),
-  withProps(({ secondary }) => secondary && ({ color: velaBlue, bgColor: velaBlue, textColor: offWhite })),
-  withProps(({ outline, color }) => outline && ({ bgColor: 'transparent', textColor: color === lightGray ? offBlack : color })),
-  withProps(({ disabled }) => disabled && ({ bgColor: midGray, textColor: darkGray, color: midGray }))
+  defaultProps({ color: offWhite, textColor: offBlack, bgColor: offWhite }),
+  withProps(({ primary }) => primary && ({ color: velaGreen, bgColor: velaGreen, textColor: white })),
+  withProps(({ secondary }) => secondary && ({ color: velaBlue, bgColor: velaBlue, textColor: white })),
+  withProps(({ outline, color }) => outline && ({ bgColor: 'transparent', textColor: color === offWhite ? offBlack : color })),
+  withProps(({ disabled }) => disabled && ({ bgColor: lightGray, textColor: midGray, color: lightGray }))
 )(Button)
