@@ -1,4 +1,4 @@
-import { velaGreen, offWhite } from '../../style/colors'
+import { velaGreen, white } from '../../style/colors'
 import PaddedView from '../PaddedView'
 
 const Statistics = () =>
@@ -8,19 +8,19 @@ const Statistics = () =>
         <div className='statistic'>
           <h2>1.5K</h2>
           <p>Velas circulando
-          em São Paulo</p>
+            em São Paulo</p>
         </div>
 
         <div className='statistic'>
           <h2>500</h2>
           <p>Ciclistas elétricos
-          diários no mapa</p>
+            diários no mapa</p>
         </div>
 
         <div className='statistic price'>
           <h2>R$0,05</h2>
           <p>Custo fixo por recarga
-          para o estabelecimento</p>
+            para o estabelecimento</p>
         </div>
       </div>
     </PaddedView>
@@ -34,7 +34,7 @@ const Statistics = () =>
         outline-color: ${velaGreen};
       }
       .statistics .statistic {
-        color: ${offWhite};
+        color: ${white};
         text-align: center;
         padding: 3rem 0;
         min-width: 33%;
@@ -45,10 +45,10 @@ const Statistics = () =>
         margin: 0;
 
         text-shadow:
-          -2px -2px 0 ${offWhite},
-          2px -2px 0 ${offWhite},
-          -2px 2px 0 ${offWhite},
-          2px 2px 0 ${offWhite};
+          -2px -2px 0 ${white},
+          2px -2px 0 ${white},
+          -2px 2px 0 ${white},
+          2px 2px 0 ${white};
       }
       .statistics .statistic p {
         margin: 0 auto;

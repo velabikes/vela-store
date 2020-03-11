@@ -2,7 +2,7 @@ import { compose } from 'recompose'
 import Head from 'next/head'
 import PaddedView from '../components/PaddedView'
 import InvestImage from '../components/invest/InvestImage'
-import { offBlack, offWhite, lightGray, darkGray, velaGreen } from '../style/colors'
+import { offBlack, white, offWhite, darkGray } from '../style/colors'
 import InvestForm from '../components/invest/InvestForm'
 
 const Invest = () =>
@@ -77,12 +77,12 @@ const Invest = () =>
       }
       .main-title {
         background-color: ${offBlack};
-        color: ${offWhite};
+        color: ${white};
         padding: 2em;
         text-align: center;
       }
       .main-title h1 {
-        color: ${offWhite};
+        color: ${white};
       }
       .main-subtitle {
         padding: 2em;
@@ -90,6 +90,7 @@ const Invest = () =>
       .values {
         display: flex;
         flex-direction: column;
+        background-color: ${offWhite};
       }
       .left {
         padding: 2em;
@@ -101,7 +102,7 @@ const Invest = () =>
         border-right: solid 1px ${offBlack};
       }
       .models-content {
-        background-color: ${lightGray};
+        background-color: ${offWhite};
         padding: 2em;
       }
       .models {
@@ -110,8 +111,8 @@ const Invest = () =>
       }
       .models > * {
         margin: 2em 0;
-        padding: 2em;
-        background-color: ${offWhite};
+        padding: 3em;
+        background-color: ${white};
         box-shadow: 0px .75rem 1rem -1.25rem rgba(20,20,20, 0.8);
       }
       .invest-content {
@@ -122,7 +123,7 @@ const Invest = () =>
       }
       .invest-fields {
         padding: 2em;
-        background-color: ${lightGray};
+        background-color: ${white};
       }
       .invest-fields p{
         font-size: 1em;
@@ -154,7 +155,13 @@ const Invest = () =>
         .values {
           flex-direction: row;
           padding: 2em 4em;
-          margin-top: 2em;
+          margin-top: 4em;
+        }
+        .right {
+          border-left: 1px solid ${white}
+        }
+        .models-content {
+          margin-top: 4em;
         }
         .models {
           flex-direction: row;

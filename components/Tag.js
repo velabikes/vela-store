@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import { lightGray, velaBlue } from 'style/colors'
+import { offWhite, velaBlue } from 'style/colors'
 
 /* eslint-disable */
 const Tag = ({ label, icon, selected, onClick, ...props }) =>
@@ -12,7 +12,7 @@ const Tag = ({ label, icon, selected, onClick, ...props }) =>
     <span className='label'>{label}</span>
     <style jsx>{`
       .Tag {
-        background: ${lightGray};
+        background: ${offWhite};
         position: relative;
         font-size: 0.8em;
         font-weight: 500;

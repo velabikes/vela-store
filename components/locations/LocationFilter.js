@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import LocationTag from 'components/locations/LocationTag'
-import { offWhite } from '../../style/colors'
+import { white } from '../../style/colors'
 
 const LocationFilter = ({ onFilterSelect, selectedFilter }) =>
   <div>
@@ -26,7 +26,7 @@ const LocationFilter = ({ onFilterSelect, selectedFilter }) =>
     />
     <style jsx>{`
       div {
-        background: ${offWhite};
+        background: ${white};
         padding: 1rem;
         white-space: nowrap;
       }

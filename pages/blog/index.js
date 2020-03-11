@@ -9,9 +9,10 @@ import Card from 'components/Card'
 import { NextIcon } from 'components/Icons'
 import PostHighlight from 'components/blog/PostHighlight'
 import Link from 'next/link'
+import { offWhite } from '../../style/colors'
 
 const Blog = ({ posts, highlight }) =>
-  <div className='blog'>
+  <div className='blog' style={{ background: `${offWhite}` }}>
     <PaddedView>
       <Main>
         <Head>

@@ -1,7 +1,7 @@
 import { Field } from 'formik'
 import FieldError from 'components/form/FieldError'
 import PropTypes from 'prop-types'
-import { offWhite } from 'style/colors'
+import { white } from 'style/colors'
 
 const CheckboxField = ({ label, name, ...props }) =>
   <div>
@@ -21,7 +21,7 @@ const CheckboxField = ({ label, name, ...props }) =>
       :global(input[type="checkbox"]) {
         -webkit-appearance: none;
         padding-right: 1.5em;
-        background-color: ${offWhite};
+        background-color: ${white};
         border: none;
       }
 
@@ -32,7 +32,7 @@ const CheckboxField = ({ label, name, ...props }) =>
           height: 1.2rem;
           box-sizing: border-box;
           margin-right: 6px;
-          background: ${offWhite};
+          background: ${white};
           box-shadow: 0 2px 3px rgba(0,0,0,0.05), 0 2px 3px rgba(0,0,0,0.05);
         }
 

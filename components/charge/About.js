@@ -1,5 +1,5 @@
 import PaddedView from '../PaddedView'
-import { offBlack, offWhite } from '../../style/colors'
+import { offBlack, white } from '../../style/colors'
 import Player from './Player'
 
 const About = () =>
@@ -49,7 +49,7 @@ const About = () =>
         display: none;
       }
       .about .made-by p {
-        color: ${offWhite};
+        color: ${white};
         font-weight: bold;
         font-style: italic;
         text-transform: uppercase;
