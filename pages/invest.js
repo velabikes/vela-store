@@ -7,20 +7,20 @@ import InvestForm from '../components/invest/InvestForm'
 
 const Invest = () =>
   <>
-    <Head>
+    <Head >
       <title>Investir</title>
     </Head>
     <InvestImage />
-    <div className='main'>
-      <div className='main-title'>
-        <h1>Tecnologia na mobilidade</h1>
-        <p>Você acredita no desenvolvimento da mobilidade urbana no Brasil?</p>
+    <PaddedView style={{ background: `${offWhite}` }}>
+      <div className='main'>
+        <div className='main-title'>
+          <h1>Tecnologia na mobilidade</h1>
+          <p>Você acredita no desenvolvimento da mobilidade urbana no Brasil?</p>
+        </div>
+        <div className='main-subtitle'>
+          <p>A bicicleta elétrica cria uma vivência mais qualificada, um aproveitamento mais efetivo do espaço público e permite que as pessoas pedalem de forma mais inteligente pela cidade.</p>
+        </div>
       </div>
-      <div className='main-subtitle'>
-        <p>A bicicleta elétrica cria uma vivência mais qualificada, um aproveitamento mais efetivo do espaço público e permite que as pessoas pedalem de forma mais inteligente pela cidade.</p>
-      </div>
-    </div>
-    <PaddedView>
       <div className='values'>
         <div className='left'>
           <h3>Sustentabilidade</h3>
@@ -38,12 +38,8 @@ const Invest = () =>
             <h3>Investimento</h3>
             <p>Seja sócio com ações percentuais definidas e participe da nossa jornada de crescimento.</p>
           </div>
-          <div className='m2'>
-            <h3>Mútuo conversível</h3>
-            <p>A segurança da aplicação financeira, com a possibilidade de conversão do valor corrigido em ações da Vela.</p>
-          </div>
           <div className='m3'>
-            <h3>Aplicação financeira</h3>
+            <h3>Aplicação</h3>
             <p>Contribua para o nosso desenvolvimento e tenha retorno financeiro mensal acima da média do mercado.</p>
           </div>
         </div>
@@ -80,6 +76,9 @@ const Invest = () =>
         color: ${white};
         padding: 2em;
         text-align: center;
+        margin-top: -5em;
+        z-index: 2;
+        position: relative;
       }
       .main-title h1 {
         color: ${white};
@@ -90,7 +89,6 @@ const Invest = () =>
       .values {
         display: flex;
         flex-direction: column;
-        background-color: ${offWhite};
       }
       .left {
         padding: 2em;
@@ -102,8 +100,7 @@ const Invest = () =>
         border-right: solid 1px ${offBlack};
       }
       .models-content {
-        background-color: ${offWhite};
-        padding: 2em;
+        padding: 1em;
       }
       .models {
         display: flex;
@@ -119,7 +116,7 @@ const Invest = () =>
         background-color: ${offBlack};
         display: flex;
         flex-direction: column;
-        padding: 3em 0;
+        padding: 1em 0;
       }
       .invest-fields {
         padding: 2em;
@@ -145,30 +142,20 @@ const Invest = () =>
         .main-title {
           max-width: 24em;
           text-align: right;
-          margin-top: -5em;
-          z-index: 2;
-          position: relative
         }
         .main-title h1 {
           font-size: 2.5em;
         }
         .values {
           flex-direction: row;
-          padding: 2em 4em;
-          margin-top: 4em;
-        }
-        .right {
-          border-left: 1px solid ${white}
-        }
-        .models-content {
-          margin-top: 4em;
+          padding: 2em 4em 0 4em;
         }
         .models {
           flex-direction: row;
           justify-content: center;
         }
         .models > * {
-          width: 25vw;
+          width: 30vw;
           margin: 2em;
         }
         .models > * > p {
@@ -185,15 +172,33 @@ const Invest = () =>
         .invest-fields {
           padding-left: 10em;
           margin-left: -8em;
-          max-width: 40vw;
+          max-width: 60vw;
         }
         .invest-fields p{
           font-size: 0.8em;
         }
         .invest-img {
-          max-width: 26vw;
+          max-width: 36vw;
           margin: 2em 0;
           z-index: 1;
+        }
+        @media only screen and (min-width: 1200px) {
+          .models > * {
+            width: 25vw;
+          }
+          .invest-fields {
+            padding-left: 10em;
+            margin-left: -8em;
+            max-width: 40vw;
+          }
+          .invest-fields p{
+            font-size: 0.8em;
+          }
+          .invest-img {
+            max-width: 26vw;
+            margin: 2em 0;
+            z-index: 1;
+          }
         }
       }
     `}</style>
