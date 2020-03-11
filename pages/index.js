@@ -29,7 +29,7 @@ const HomePage = ({ images }) =>
           <p><strong>Tecnologia e design<br />nunca estiveram tão próximos</strong></p>
           <div className='actions'>
             <Link href='/vela'>
-              <Button className='button'>Conheça a Vela 2</Button>
+              <Button className='button'>Reservar</Button>
             </Link>
           </div>
         </div>
@@ -110,7 +110,7 @@ const HomePage = ({ images }) =>
           padding: 0 2rem;
         }
         .actions {
-          display: flex;
+          align-self: center;
         }
         .actions > :global(*) {
           margin: 0 .25rem;

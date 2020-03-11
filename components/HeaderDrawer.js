@@ -1,7 +1,7 @@
 import { compose, withHandlers, lifecycle } from 'recompose'
 import PropTypes from 'prop-types'
 import Router, { withRouter } from 'next/router'
-import { offWhite } from '../style/colors'
+import { white } from '../style/colors'
 import withOpenDrawer from '../containers/withOpenDrawer'
 import { toggleDrawer } from '../lib/redux'
 import { BackIcon } from '../components/Icons'
@@ -19,7 +19,7 @@ const HeaderDrawer = ({ children, visible, handleCloseClick }) =>
         top: 4em;
         right: 0;
         bottom: 0;
-        background-color: ${offWhite};
+        background-color: ${white};
         box-shadow: 0px 0px ${visible ? '8' : '0'}px 0px rgba(100,100,100,0.3);
         display: flex;
         flex-direction: column;

@@ -32,7 +32,7 @@
     <div id="fp">
         <div class="fp-section">
             <div class="header-content hidden hidden-anim">
-                <video controls class="full-video">
+                <video data-autoplay playsinline autoplay muted loop class="full-video">
                     <source src="videos/vela2_full.mp4" type="video/mp4" />
                 </video>
                 <video data-autoplay playsinline autoplay muted loop class="main-video">
@@ -41,10 +41,9 @@
                 
                 <h1 class="header-title">V2</h1>
                 <p class="header-target">A geração smart de bicicletas elétricas da Vela</p>
-                <a class="arrow-scroll" href="#">
+                <a class="arrow-scroll">
                     <div><button class="buy">Reservar</button></div>
                 </a>
-                <span><svg class="arrow-scroll" xmlns="http://www.w3.org/2000/svg" height="25" viewbox="0 0 100 57.1"><defs><style>.cls-1{fill:#f5f5f5;}</style></defs><title>Ativo 1</title><g id="Camada_2" data-name="Camada 2"><g id="Camada_1-2" data-name="Camada 1"><path class="cls-1" d="M100,5.1a4.69,4.69,0,0,1-1.5,3.5L50,57.1,1.5,8.6a5,5,0,0,1,0-7.1,5,5,0,0,1,7.1,0L50,43,91.5,1.5a5,5,0,0,1,7.1,0A5.43,5.43,0,0,1,100,5.1Z"/></g></g></svg></span>
             </div>
         </div>
         
@@ -278,14 +277,15 @@
                     <div class="reserve-section-rent">
                         <div class="title">Aluguel</div>
                         <div class="price cut">R$ 489</div>
-                        <div class="price">R$ 600 na reserva<br>+ R$ 349/mês</div>
+                        <div class="price">R$ 600 na reserva +<br> R$ 349/mês na entrega</div>
                         <div class="desc">Plano Vela Mais completo incluso</div>
                     </div>
                 </div>
                 <div class="reserve-section-cta">
-                    <input type="number" name="qtd" class="qtd" step="1" placeholder="Quantidade" value="1">
-                    
-                    <div><button class="buy">Reservar</button></div>
+                    <div>
+                        <input type="number" name="qtd" class="qtd" step="1" placeholder="Quantidade" value="1">
+                        <button class="buy">Reservar</button>
+                    </div>
                     <div class="subtitle">Reserve sua Vela 2 por R$ 600 e aproveite as condições exclusivas.</div>
                     <p>Você poderá escolher entre compra ou aluguel, assim como cor e plano da sua Vela após a reserva. Entraremos em contato por email.</p>
                     <small>Entrega estimada: maio de 2020.</small>

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Link from 'next/link'
 import PaddedView from 'components/PaddedView'
 import { toggleDrawer } from '../lib/redux'
-import { offBlack, offWhite, velaGreen } from '../style/colors'
+import { offBlack, white, velaGreen } from '../style/colors'
 import withOpenDrawer from '../containers/withOpenDrawer'
 import Cart from './store/Cart'
 import HeaderDrawer from './HeaderDrawer'
@@ -62,7 +62,7 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
     <style jsx>{`
       header {
         display: flex;
-        background-color: ${offWhite};
+        background-color: ${white};
         justify-content: space-between;
         position: fixed;
         top: 0;
@@ -134,7 +134,7 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
           background-color: ${velaGreen};
         }
         .right :global(.CartIcon) {
-          fill: ${offWhite};
+          fill: ${white};
         }
       }
     `}</style>

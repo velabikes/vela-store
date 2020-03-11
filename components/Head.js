@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { compose, lifecycle } from 'recompose'
-import { velaGreen, offBlack, darkGray, lightGray, offWhite } from 'style/colors'
+import { velaGreen, offBlack, darkGray, white } from 'style/colors'
 import FacebookPixel from 'components/head/FacebookPixel'
 import Freshchat from 'components/head/Freshchat'
 import Heatmap from 'components/head/Heatmap'
@@ -31,7 +31,7 @@ const CustomHead = props =>
         position: relative;
         width: 100%;
         color: ${offBlack};
-        background-color: ${lightGray};;
+        background-color: ${white};
         font-family: Barlow, sans-serif;
       }
       h1, h2, h3, h4, h5, h6 {
@@ -138,7 +138,7 @@ const CustomHead = props =>
         font-size: 1rem;
         font-family: Barlow, sans-serif;
         box-sizing: border-box;
-        background: ${offWhite};
+        background: ${white};
         box-shadow: 0 2px 3px rgba(0,0,0,0.05), 0 2px 3px rgba(0,0,0,0.05);
       }
       input[type='radio'] {
