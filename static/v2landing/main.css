@@ -20,11 +20,14 @@ input {
 
 button {
     font-weight: 600;
-    padding: 1em 2em;
+    padding: 0.8em 1.2em;
+    font-size: 0.8em;
     background-color: #f27966;
     color: #f5f5f5;
-    border-radius: 2em;
-    border: 0px solid transparent;
+    border-radius: 0.5em;
+    transition: .2s transform, .2s box-shadow, .3s background linear, .3s border linear;
+    -webkit-tap-highlight-color: transparent;
+    border: 2px solid #f27966;
     cursor: pointer;
 }
 
@@ -65,10 +68,11 @@ video {
     align-self: auto;
     order: 0;
     flex: 0 auto;
-    font-size: 8em;
+    font-size: 14em;
     font-weight: 900;
     text-align: center;
     color: #f5f5f5;
+    font-style: italic;
 }
 
 .header-target {
@@ -526,8 +530,8 @@ video {
 }
 
 .bullets-color > a {
-    padding: 0.2em;
-    border-radius: 2em;
+    padding: 0 0.2em;
+    border-radius: 3em;
     text-decoration: none;
     text-align: center;
     background: rgba(255, 255, 255, 1);
@@ -536,7 +540,7 @@ video {
 }
 
 .bullets-color > a > img {
-    width: 1em;
+    width: 0.8em;
 }
 
 /* Animations */
@@ -1030,7 +1034,6 @@ tr:hover {
     padding: 0.8em;
     text-align: center;
     background: #e1e1e1;
-    
 }
 .reserve-section-cta .title {
     color: #333333;
@@ -1045,7 +1048,7 @@ tr:hover {
     margin: 1em 0 0.2em;
 }
 .reserve-section-cta button {
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 .reserve-section-cta .price {
@@ -1061,13 +1064,11 @@ tr:hover {
     font-size: 1em;
     line-height: 1.5em;
     color: #666666;
-    display: block;
-    width: 100%;
+    width: 2em;
     background: #f5f5f5;
-    border-radius: 2em;
-    padding: 1em 2em;
-    margin: 1em 0;
-    width: 50px
+    border-radius: 0.5em;
+    padding: 1em 1em;
+    margin: 1em 0.5em;
 }
 
 .terms {
