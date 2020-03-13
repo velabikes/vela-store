@@ -18,17 +18,21 @@ const InvestForm = () =>
           name: 'Nome é requerido',
           email: 'E-mail é requerido',
           phone: 'Telefone é requerido',
-          profile: 'Seu perfil é requerido'
+          message: 'A pergunta é requerida',
+          value: 'O valor é requerido',
+          profile: 'O perfil é requerido'
         }
 
         if (!values.name) { errors.name = errorsMessage['name'] }
         if (!values.email) { errors.email = errorsMessage['email'] }
         if (!values.phone) { errors.phone = errorsMessage['phone'] }
+        if (!values.message) { errors.message = errorsMessage['message'] }
+        if (!values.value) { errors.value = errorsMessage['value'] }
         if (!values.profile) { errors.profile = errorsMessage['profile'] }
 
         return errors
       }}
-      initialValues={{ name: '', email: '', phone: '', profile: '', message: '', value: 'R$ ' }}
+      initialValues={{ name: '', email: '', phone: '', profile: '', message: '', value: '' }}
       onSubmit={handleSubmit}
       render={
         ({ isSubmitting, status, values }) => (
@@ -46,6 +50,11 @@ const InvestForm = () =>
                 name='email'
               />
             </FieldGroup>
+            <Field
+              label='Por que você quer investir na Vela?'
+              name='message'
+              type='text'
+            />
             <FieldGroup template='1fr 1fr'>
               <SelectField label='Qual o seu perfil?' name='profile'>
                 <option value='' />
@@ -58,11 +67,6 @@ const InvestForm = () =>
                 type='text'
               />
             </FieldGroup>
-            <Field
-              label='Por que você quer investir na Vela?'
-              name='message'
-              type='text'
-            />
             <div className='status'>
               {isSubmitting && 'Enviando...'}
               {status && (status.success || status.error)}
