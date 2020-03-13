@@ -55,7 +55,7 @@ const Invest = () =>
           </div>
           <div className='invest-fields'>
             <h2>Investir</h2>
-            <p>Como você deseja se envolver com a rodada de investimentos da Vela? Deixe sua mensagem sem compromisso para entendermos juntos e seguirmos pedalando:</p>
+            <p>Como você deseja se envolver com a rodada de investimentos da Vela? Deixe sua mensagem, sem compromisso, para entendermos juntos e seguirmos pedalando:</p>
             <InvestForm />
           </div>
         </div>
@@ -177,16 +177,16 @@ const Invest = () =>
           justify-content: center;
         }
         .invest-fields {
-          padding-left: 10em;
-          margin-left: -8em;
-          max-width: 70vw;
+          padding-left: 12em;
+          margin-left: -10em;
+          max-width: 60vw;
         }
         .invest-fields p{
           font-size: 0.8em;
         }
         .invest-img {
-          max-width: 30vw;
-          margin-top: 10em;
+          max-width: 40vw;
+          margin-top: 5em;
           z-index: 1;
         }
         @media only screen and (min-width: 1200px) {
@@ -211,7 +211,7 @@ const Invest = () =>
             font-size: 0.8em;
           }
           .invest-img {
-            max-width: 34vw;
+            max-width: 30vw;
             margin-top: 4em;
             z-index: 1;
           }

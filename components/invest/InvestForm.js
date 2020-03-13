@@ -19,7 +19,6 @@ const InvestForm = () =>
           email: 'E-mail é requerido',
           phone: 'Telefone é requerido',
           message: 'A pergunta é requerida',
-          value: 'O valor é requerido',
           profile: 'O perfil é requerido'
         }
 
@@ -27,27 +26,33 @@ const InvestForm = () =>
         if (!values.email) { errors.email = errorsMessage['email'] }
         if (!values.phone) { errors.phone = errorsMessage['phone'] }
         if (!values.message) { errors.message = errorsMessage['message'] }
-        if (!values.value) { errors.value = errorsMessage['value'] }
         if (!values.profile) { errors.profile = errorsMessage['profile'] }
 
         return errors
       }}
-      initialValues={{ name: '', email: '', phone: '', profile: '', message: '', value: '' }}
+      initialValues={{ name: '', email: '', phone: '', profile: '', message: '' }}
       onSubmit={handleSubmit}
       render={
         ({ isSubmitting, status, values }) => (
           <Form>
-            <Field
-              label='Nome'
-              name='name'
-              type='text'
-            />
             <FieldGroup template='1fr 1fr'>
-              <PhoneField
-                name='phone'
+              <Field
+                label='Nome'
+                name='name'
+                type='text'
               />
+              <SelectField label='Qual o seu perfil?' name='profile'>
+                <option value='' />
+                <option value='Sócio'>Sócio - Perfil arrojado</option>
+                <option value='Credor'>Credor - Perfil cauteloso</option>
+              </SelectField>
+            </FieldGroup>
+            <FieldGroup template='1fr 1fr'>
               <EmailField
                 name='email'
+              />
+              <PhoneField
+                name='phone'
               />
             </FieldGroup>
             <Field
@@ -55,18 +60,6 @@ const InvestForm = () =>
               name='message'
               type='text'
             />
-            <FieldGroup template='1fr 1fr'>
-              <SelectField label='Qual o seu perfil?' name='profile'>
-                <option value='' />
-                <option value='Sócio'>Sócio - Perfil arrojado</option>
-                <option value='Credor'>Credor - Perfil cauteloso</option>
-              </SelectField>
-              <Field
-                label='Quanto pretende investir?'
-                name='value'
-                type='text'
-              />
-            </FieldGroup>
             <div className='status'>
               {isSubmitting && 'Enviando...'}
               {status && (status.success || status.error)}
