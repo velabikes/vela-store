@@ -28,7 +28,7 @@ const InvestForm = () =>
 
         return errors
       }}
-      initialValues={{ name: '', email: '', phone: '', profile: '', message: '' }}
+      initialValues={{ name: '', email: '', phone: '', profile: '', message: '', value: 'R$ ' }}
       onSubmit={handleSubmit}
       render={
         ({ isSubmitting, status, values }) => (
@@ -38,7 +38,7 @@ const InvestForm = () =>
               name='name'
               type='text'
             />
-            <FieldGroup template='1fr 2fr'>
+            <FieldGroup template='1fr 1fr'>
               <PhoneField
                 name='phone'
               />
@@ -46,11 +46,18 @@ const InvestForm = () =>
                 name='email'
               />
             </FieldGroup>
-            <SelectField label='Qual perfil você mais se identifica?' name='profile'>
-              <option value='' />
-              <option value='Sócio'>Sócio - Perfil arrojado</option>
-              <option value='Credor'>Credor - Perfil cauteloso</option>
-            </SelectField>
+            <FieldGroup template='1fr 1fr'>
+              <SelectField label='Qual o seu perfil?' name='profile'>
+                <option value='' />
+                <option value='Sócio'>Sócio - Perfil arrojado</option>
+                <option value='Credor'>Credor - Perfil cauteloso</option>
+              </SelectField>
+              <Field
+                label='Quanto pretende investir?'
+                name='value'
+                type='text'
+              />
+            </FieldGroup>
             <Field
               label='Por que você quer investir na Vela?'
               name='message'
