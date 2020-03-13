@@ -18,7 +18,7 @@ const Invest = () =>
           <p>Vamos juntos mudar o desenvolvimento da mobilidade urbana no Brasil!</p>
         </div>
         <div className='main-subtitle'>
-          <p>Nascemos de um financiamento coletivo em 2014, em que alguns apoiadores vieram a se tornar sócios e credores. Hoje abrimos espaço à todos que se identificam com o propósito de contribuir para cidades mais saudáveis. O coletivo está no DNA da Vela.</p>
+          <p>Nascemos de um financiamento coletivo em 2014, do qual alguns apoiadores vieram a se tornar sócios e credores. Hoje abrimos espaço à todos que se identificam com o propósito de contribuir para cidades mais saudáveis. O coletivo está no DNA da Vela.</p>
         </div>
       </div>
       <div className='values'>
