@@ -35,7 +35,7 @@ const ProductForm = ({
         loading={isAddToCartLoading}
         primary
       >
-        { isAddToCartLoading ? 'Carregando...' : 'comprar' }
+        { isAddToCartLoading ? 'Carregando...' : 'Comprar' }
       </Button>
     </div>
     { false && sVariant && <div className='leadtime'>
