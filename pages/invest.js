@@ -35,8 +35,8 @@ const Invest = () =>
         <h2>Modelos de aporte</h2>
         <div className='models'>
           <div className='m1'>
-            <h3>Seja sócio</h3>
-            <p>Invista em ações com percentual definido e participe ativamente da nossa jornada de transformação da mobilidade.</p>
+            <h3>Seja acionista</h3>
+            <p>Invista em ações com percentual definido e participe da nossa jornada pela transformação da mobilidade.</p>
             <p><b>Perfil arrojado:</b> aceita assumir um risco maior, atrelado ao maior potencial de retorno do investimento.</p>
           </div>
           <div className='m2'>
