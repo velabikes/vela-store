@@ -55,7 +55,7 @@ const Invest = () =>
           </div>
           <div className='invest-fields'>
             <h2>Investir</h2>
-            <p>Como você deseja se envolver com a rodada de investimentos da Vela? Deixe sua mensagem, sem compromisso, para entendermos juntos e seguirmos pedalando:</p>
+            <p>Como você deseja se envolver na rodada de investimentos da Vela? Deixe sua mensagem, sem compromisso, para entendermos o melhor modelo juntos e seguirmos pedalando:</p>
             <InvestForm />
           </div>
         </div>
