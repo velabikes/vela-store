@@ -15,7 +15,7 @@ const Invest = () =>
       <div className='main'>
         <div className='main-title'>
           <h1>Pedale para o futuro com a Vela</h1>
-          <p>Vamos juntos mudar desenvolvimento da mobilidade urbana no Brasil!</p>
+          <p>Vamos juntos mudar o desenvolvimento da mobilidade urbana no Brasil!</p>
         </div>
         <div className='main-subtitle'>
           <p>Nascemos de um financiamento coletivo em 2014, em que alguns apoiadores vieram a se tornar sócios e credores. Hoje abrimos espaço à todos que se identificam com o propósito de contribuir para cidades mais saudáveis. O coletivo está no DNA da Vela.</p>
@@ -37,12 +37,12 @@ const Invest = () =>
           <div className='m1'>
             <h3>Seja sócio</h3>
             <p>Invista em ações com percentual definido e participe ativamente da nossa jornada de transformação da mobilidade.</p>
-            <p><b>Perfil arrojado:</b> aceito assumir um risco maior, atrelado também ao maior potencial de retorno do meu investimento.</p>
+            <p><b>Perfil arrojado:</b> aceita assumir um risco maior, atrelado ao maior potencial de retorno do investimento.</p>
           </div>
           <div className='m2'>
             <h3>Seja credor</h3>
             <p>Contribua com a nutrição para o nosso desenvolvimento e tenha um retorno mensal acima da média do mercado.</p>
-            <p><b>Perfil cauteloso:</b> se tratando de investimentos, prefiro mitigar riscos. Escolho um retorno seguro e constante. </p>
+            <p><b>Perfil cauteloso:</b> se tratando de investimentos, prefere mitigar riscos e escolher um retorno seguro. </p>
           </div>
         </div>
       </div>
@@ -55,7 +55,7 @@ const Invest = () =>
           </div>
           <div className='invest-fields'>
             <h2>Investir</h2>
-            <p>Como você quer se envolver com a rodada de investimentos da Vela? Entre em contato para entendermos melhor e seguirmos pedalando:</p>
+            <p>Como você quer se envolver com a rodada de investimentos da Vela? Entre em contato para entendermos juntos e seguirmos pedalando:</p>
             <InvestForm />
           </div>
         </div>
