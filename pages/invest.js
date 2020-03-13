@@ -14,33 +14,35 @@ const Invest = () =>
     <PaddedView style={{ background: `${offWhite}` }}>
       <div className='main'>
         <div className='main-title'>
-          <h1>Tecnologia na mobilidade</h1>
-          <p>Você acredita no desenvolvimento da mobilidade urbana no Brasil?</p>
+          <h1>Pedale para o futuro com a Vela</h1>
+          <p>Vamos juntos mudar desenvolvimento da mobilidade urbana no Brasil!</p>
         </div>
         <div className='main-subtitle'>
-          <p>A bicicleta elétrica cria uma vivência mais qualificada, um aproveitamento mais efetivo do espaço público e permite que as pessoas pedalem de forma mais inteligente pela cidade.</p>
+          <p>Nascemos de um financiamento coletivo em 2014, em que alguns apoiadores vieram a se tornar sócios e credores. Hoje abrimos espaço à todos que se identificam com o propósito de contribuir para cidades mais saudáveis. O coletivo está no DNA da Vela.</p>
         </div>
       </div>
       <div className='values'>
         <div className='left'>
-          <h3>Sustentabilidade</h3>
-          <p>Pensar em uma cidade sustentável, significa abraçar novas formas de transporte, agilizar o tempo de deslocamento e trazer experiências mais ricas para quem diariamente se locomove pelas vias urbanas.</p>
+          <h3>Inovação</h3>
+          <p>Crescemos no ambiente digital e somos verticalmente integrados. A Vela vive em constante evolução, desde o desenvolvimento dos produtos até a experiência de uso para os clientes.</p>
         </div>
         <div className='right'>
           <h3>Transparência</h3>
-          <p>A Vela tem como base uma comunicação digital transparente, empática e que respeita a privacidade. Acreditamos no desenvolvimento urbano colaborativo, que aproxima as pessoas e fortalece relações.</p>
+          <p>Temos como base uma comunicação empática, transparente e que respeita a privacidade. Acreditamos em um espaço urbano mais colaborativo, que aproxima as pessoas e fortalece relações.</p>
         </div>
       </div>
       <div className='models-content'>
         <h2>Modelos de aporte</h2>
         <div className='models'>
           <div className='m1'>
-            <h3>Investimento</h3>
-            <p>Seja sócio com ações percentuais definidas e participe da nossa jornada de crescimento.</p>
+            <h3>Seja sócio</h3>
+            <p>Invista em ações com percentual definido e participe ativamente da nossa jornada de transformação da mobilidade.</p>
+            <p><b>Perfil arrojado:</b> aceito assumir um risco maior, atrelado também ao maior potencial de retorno do meu investimento.</p>
           </div>
-          <div className='m3'>
-            <h3>Aplicação</h3>
-            <p>Contribua para o nosso desenvolvimento e tenha retorno financeiro mensal acima da média do mercado.</p>
+          <div className='m2'>
+            <h3>Seja credor</h3>
+            <p>Contribua com a nutrição para o nosso desenvolvimento e tenha um retorno mensal acima da média do mercado.</p>
+            <p><b>Perfil cauteloso:</b> se tratando de investimentos, prefiro mitigar riscos. Escolho um retorno seguro e constante. </p>
           </div>
         </div>
       </div>
@@ -53,7 +55,7 @@ const Invest = () =>
           </div>
           <div className='invest-fields'>
             <h2>Investir</h2>
-            <p>Entre em contato para entendermos juntos qual modelo se encaixa melhor no seu perfil de investidor:</p>
+            <p>Como você quer se envolver com a rodada de investimentos da Vela? Entre em contato para entendermos melhor e seguirmos pedalando:</p>
             <InvestForm />
           </div>
         </div>
@@ -91,13 +93,14 @@ const Invest = () =>
         flex-direction: column;
       }
       .left {
-        padding: 2em;
-        border-left: solid 1px ${offBlack};
+        padding: 1em 1em 0 2em;
+        border-left: 1px solid ${darkGray};
       }
       .right {
         text-align: right;
-        padding: 2em;
-        border-right: solid 1px ${offBlack};
+        padding: 1em 2em 0 1em;
+        margin: 2em 0;
+        border-right: 1px solid ${darkGray};
       }
       .models-content {
         padding: 1em;
@@ -108,7 +111,7 @@ const Invest = () =>
       }
       .models > * {
         margin: 2em 0;
-        padding: 3em;
+        padding: 2em;
         background-color: ${white};
         box-shadow: 0px .75rem 1rem -1.25rem rgba(20,20,20, 0.8);
       }
@@ -136,8 +139,8 @@ const Invest = () =>
           justify-content: center;
         }
         .main-subtitle {
-          max-width: 26em;
-          padding: 2em 2em 0 2em;
+          max-width: 28em;
+          padding: 2em 0 0 2em;
         }
         .main-title {
           max-width: 24em;
@@ -148,14 +151,18 @@ const Invest = () =>
         }
         .values {
           flex-direction: row;
-          padding: 2em 4em 0 4em;
+          padding: 2em;
+          margin-top: 1em;
+        }
+        .right {
+          margin: 0;
         }
         .models {
           flex-direction: row;
           justify-content: center;
         }
         .models > * {
-          width: 30vw;
+          width: 35vw;
           margin: 2em;
         }
         .models > * > p {
@@ -170,33 +177,42 @@ const Invest = () =>
           justify-content: center;
         }
         .invest-fields {
-          padding-left: 10em;
-          margin-left: -8em;
-          max-width: 60vw;
+          padding-left: 12em;
+          margin-left: -10em;
+          max-width: 64vw;
         }
         .invest-fields p{
           font-size: 0.8em;
         }
         .invest-img {
-          max-width: 36vw;
-          margin: 2em 0;
+          max-width: 38vw;
+          margin-top: 9em;
           z-index: 1;
         }
         @media only screen and (min-width: 1200px) {
+          .main-subtitle {
+            max-width: 36em;
+            padding: 2em 0 0 2em;
+          }
+          .main-title {
+            max-width: 24em;
+            text-align: right;
+          }
           .models > * {
-            width: 25vw;
+            width: 35vw;
+            padding: 3em;
           }
           .invest-fields {
             padding-left: 10em;
             margin-left: -8em;
-            max-width: 40vw;
+            max-width: 48vw;
           }
           .invest-fields p{
             font-size: 0.8em;
           }
           .invest-img {
-            max-width: 26vw;
-            margin: 2em 0;
+            max-width: 34vw;
+            margin-top: 2em;
             z-index: 1;
           }
         }
