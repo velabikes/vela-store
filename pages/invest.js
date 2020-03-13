@@ -7,44 +7,42 @@ import InvestForm from '../components/invest/InvestForm'
 
 const Invest = () =>
   <>
-    <Head>
+    <Head >
       <title>Investir</title>
     </Head>
     <InvestImage />
-    <div className='main'>
-      <div className='main-title'>
-        <h1>Tecnologia na mobilidade</h1>
-        <p>Você acredita no desenvolvimento da mobilidade urbana no Brasil?</p>
+    <PaddedView style={{ background: `${offWhite}` }}>
+      <div className='main'>
+        <div className='main-title'>
+          <h1>Pedale para o futuro com a Vela</h1>
+          <p>Vamos juntos mudar o desenvolvimento da mobilidade urbana no Brasil!</p>
+        </div>
+        <div className='main-subtitle'>
+          <p>Nascemos de um financiamento coletivo em 2014, do qual alguns apoiadores vieram a se tornar sócios e credores. Hoje abrimos espaço à todos que se identificam com o propósito de contribuir para cidades mais saudáveis. O coletivo está no DNA da Vela.</p>
+        </div>
       </div>
-      <div className='main-subtitle'>
-        <p>A bicicleta elétrica cria uma vivência mais qualificada, um aproveitamento mais efetivo do espaço público e permite que as pessoas pedalem de forma mais inteligente pela cidade.</p>
-      </div>
-    </div>
-    <PaddedView>
       <div className='values'>
         <div className='left'>
-          <h3>Sustentabilidade</h3>
-          <p>Pensar em uma cidade sustentável, significa abraçar novas formas de transporte, agilizar o tempo de deslocamento e trazer experiências mais ricas para quem diariamente se locomove pelas vias urbanas.</p>
+          <h3>Inovação</h3>
+          <p>Crescemos no ambiente digital e somos verticalmente integrados. A Vela vive em constante evolução, desde o desenvolvimento dos produtos até a experiência de uso para os clientes.</p>
         </div>
         <div className='right'>
           <h3>Transparência</h3>
-          <p>A Vela tem como base uma comunicação digital transparente, empática e que respeita a privacidade. Acreditamos no desenvolvimento urbano colaborativo, que aproxima as pessoas e fortalece relações.</p>
+          <p>Temos como base uma comunicação empática, transparente e que respeita a privacidade. Acreditamos em um espaço urbano mais colaborativo, que aproxima as pessoas e fortalece relações.</p>
         </div>
       </div>
       <div className='models-content'>
         <h2>Modelos de aporte</h2>
         <div className='models'>
           <div className='m1'>
-            <h3>Investimento</h3>
-            <p>Seja sócio com ações percentuais definidas e participe da nossa jornada de crescimento.</p>
+            <h3>Seja sócio</h3>
+            <p>Invista em ações com percentual definido e participe ativamente da nossa jornada de transformação da mobilidade.</p>
+            <p><b>Perfil arrojado:</b> aceita assumir um risco maior, atrelado ao maior potencial de retorno do investimento.</p>
           </div>
           <div className='m2'>
-            <h3>Mútuo conversível</h3>
-            <p>A segurança da aplicação financeira, com a possibilidade de conversão do valor corrigido em ações da Vela.</p>
-          </div>
-          <div className='m3'>
-            <h3>Aplicação financeira</h3>
-            <p>Contribua para o nosso desenvolvimento e tenha retorno financeiro mensal acima da média do mercado.</p>
+            <h3>Seja credor</h3>
+            <p>Contribua com a nutrição para o nosso desenvolvimento e tenha um retorno mensal acima da média do mercado.</p>
+            <p><b>Perfil cauteloso:</b> se tratando de investimentos, prefere mitigar riscos e escolher um retorno seguro. </p>
           </div>
         </div>
       </div>
@@ -57,7 +55,7 @@ const Invest = () =>
           </div>
           <div className='invest-fields'>
             <h2>Investir</h2>
-            <p>Entre em contato para entendermos juntos qual modelo se encaixa melhor no seu perfil de investidor:</p>
+            <p>Como você deseja se envolver com a rodada de investimentos da Vela? Deixe sua mensagem sem compromisso para entendermos juntos e seguirmos pedalando:</p>
             <InvestForm />
           </div>
         </div>
@@ -80,6 +78,9 @@ const Invest = () =>
         color: ${white};
         padding: 2em;
         text-align: center;
+        margin-top: -5em;
+        z-index: 2;
+        position: relative;
       }
       .main-title h1 {
         color: ${white};
@@ -90,20 +91,19 @@ const Invest = () =>
       .values {
         display: flex;
         flex-direction: column;
-        background-color: ${offWhite};
       }
       .left {
-        padding: 2em;
-        border-left: solid 1px ${offBlack};
+        padding: 1em 1em 0 2em;
+        border-left: 1px solid ${darkGray};
       }
       .right {
         text-align: right;
-        padding: 2em;
-        border-right: solid 1px ${offBlack};
+        padding: 1em 2em 0 1em;
+        margin: 2em 0;
+        border-right: 1px solid ${darkGray};
       }
       .models-content {
-        background-color: ${offWhite};
-        padding: 2em;
+        padding: 1em;
       }
       .models {
         display: flex;
@@ -111,7 +111,7 @@ const Invest = () =>
       }
       .models > * {
         margin: 2em 0;
-        padding: 3em;
+        padding: 2em;
         background-color: ${white};
         box-shadow: 0px .75rem 1rem -1.25rem rgba(20,20,20, 0.8);
       }
@@ -119,7 +119,7 @@ const Invest = () =>
         background-color: ${offBlack};
         display: flex;
         flex-direction: column;
-        padding: 3em 0;
+        padding: 1em 0;
       }
       .invest-fields {
         padding: 2em;
@@ -139,36 +139,30 @@ const Invest = () =>
           justify-content: center;
         }
         .main-subtitle {
-          max-width: 26em;
-          padding: 2em 2em 0 2em;
+          max-width: 28em;
+          padding: 2em 0 0 2em;
         }
         .main-title {
           max-width: 24em;
           text-align: right;
-          margin-top: -5em;
-          z-index: 2;
-          position: relative
         }
         .main-title h1 {
           font-size: 2.5em;
         }
         .values {
           flex-direction: row;
-          padding: 2em 4em;
-          margin-top: 4em;
+          padding: 2em;
+          margin-top: 1em;
         }
         .right {
-          border-left: 1px solid ${white}
-        }
-        .models-content {
-          margin-top: 4em;
+          margin: 0;
         }
         .models {
           flex-direction: row;
           justify-content: center;
         }
         .models > * {
-          width: 25vw;
+          width: 40vw;
           margin: 2em;
         }
         .models > * > p {
@@ -185,15 +179,42 @@ const Invest = () =>
         .invest-fields {
           padding-left: 10em;
           margin-left: -8em;
-          max-width: 40vw;
+          max-width: 70vw;
         }
         .invest-fields p{
           font-size: 0.8em;
         }
         .invest-img {
-          max-width: 26vw;
-          margin: 2em 0;
+          max-width: 30vw;
+          margin-top: 10em;
           z-index: 1;
+        }
+        @media only screen and (min-width: 1200px) {
+          .main-subtitle {
+            max-width: 36em;
+            padding: 2em 0 0 2em;
+          }
+          .main-title {
+            max-width: 24em;
+            text-align: right;
+          }
+          .models > * {
+            width: 35vw;
+            padding: 3em;
+          }
+          .invest-fields {
+            padding-left: 10em;
+            margin-left: -8em;
+            max-width: 48vw;
+          }
+          .invest-fields p{
+            font-size: 0.8em;
+          }
+          .invest-img {
+            max-width: 34vw;
+            margin-top: 4em;
+            z-index: 1;
+          }
         }
       }
     `}</style>

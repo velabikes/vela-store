@@ -3,7 +3,7 @@ import PhoneInput from 'components/form/PhoneInput'
 
 const isPhone = value => value.length > 10
 
-const validate = value => !isPhone(value) && 'Telefone invalido.'
+const validate = value => !isPhone(value) && 'Telefone inválido.'
 
 const PhoneField = (props) =>
   <Field
