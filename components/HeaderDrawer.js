@@ -16,7 +16,7 @@ const HeaderDrawer = ({ children, visible, handleCloseClick }) =>
         position: fixed;
         transform: translateX(${visible ? '0' : '100%'});
         transition: ${visible ? '.5s all ease-out' : '.3s all ease-in'};
-        top: 4em;
+        top: 3em;
         right: 0;
         bottom: 0;
         background-color: ${white};
@@ -26,7 +26,7 @@ const HeaderDrawer = ({ children, visible, handleCloseClick }) =>
         max-width: 100%;
         min-width: 100%;
         z-index: 1000;
-        padding: 1rem 0;
+        padding: 1em 2em;
       }
       .HeaderDrawer :global(div:first-child) {
         flex: 1;
@@ -43,7 +43,7 @@ const HeaderDrawer = ({ children, visible, handleCloseClick }) =>
       @media only screen and (min-width: 768px) {
         .HeaderDrawer {
           right: 0;
-          top: 4em;
+          top: 3em;
           max-width: 600px;
           min-width: 480px;
         }

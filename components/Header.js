@@ -1,7 +1,6 @@
 import { compose, withProps, withHandlers } from 'recompose'
 import PropTypes from 'prop-types'
 import Link from 'next/link'
-import PaddedView from 'components/PaddedView'
 import { toggleDrawer } from '../lib/redux'
 import { offBlack, white, velaGreen } from '../style/colors'
 import withOpenDrawer from '../containers/withOpenDrawer'
@@ -18,9 +17,11 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
   <>
     <HeaderDrawer visible={isCartOpen}><Cart /></HeaderDrawer>
     <HeaderDrawer visible={isMenuOpen}>
-      <PaddedView><MainMenu /></PaddedView>
-      <PaddedView><SubscribeForm /></PaddedView>
-      <PaddedView><Footer /></PaddedView>
+      <MainMenu />
+      <div className='bottom'>
+        <SubscribeForm />
+        <Footer />
+      </div>
     </HeaderDrawer>
     <header className='header'>
       <div className='top'>
@@ -60,26 +61,26 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
       </div>
     </div>
     <style jsx>{`
-      header {
+      .header {
         display: flex;
-        background-color: ${white};
         justify-content: space-between;
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
         z-index: 1001;
-        box-shadow: 0px 0px 9px 0px rgba(100,100,100,0.3);
         width: 100%;
+        background-color: ${white};
+        box-shadow: 0px 0px 9px 0px rgba(100,100,100,0.3);
       }
       .app-content {
-        margin-top: 4em;
+        margin-top: 3rem;
         position: relative;
-        min-height: calc(100vh - 4rem);
+        min-height: calc(100vh - 3rem);
       }
       .copyright {
         text-align: center;
-        padding: 1em 0;
+        padding: 1rem 0;
       }
       header > div {
         display: flex;
@@ -90,15 +91,16 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
         align-items: center;
         color: ${offBlack};
         font-weight: 500;
-        min-height: 4rem;
+        min-height: 3rem;
+        font-size: 0.8rem;
       }
       .top :global(.Logo) {
-        width: 2rem;
-        height: 2rem;
+        width: 1.5rem;
+        height: 1.5rem;
         display: block;
       }
       .top .logo {
-        min-width: 4rem;
+        min-width: 3rem;
       }
       .top .left {
         display: none;
@@ -107,31 +109,37 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
         right: 0;
       }
       .right :global(a) {
-        min-width: 4rem;
+        min-width: 3rem;
+      }
+      .bottom {
+        position: absolute;
+        bottom: 2em;
       }
       @media only screen and (min-width: 768px) {
         header {
           flex-direction: row;
-          height: 4em;
+          height: 3rem;
           bottom: 0;
           right: initial;
         }
         .app-content {
-          margin-top: 4em;
+          margin-top: 3rem;
           margin-left: 0;
-          min-height: calc(100vh - 4rem);
-          min-height: calc(var(--vh, 1vh) * 100 - 4rem);
+          min-height: calc(100vh - 3rem);
+          min-height: calc(var(--vh, 1vh) * 100 - 3rem);
         }
         header > div {
           flex-direction: row;
         }
         .top .left {
           display: flex;
-          padding: 0 1em;
+          padding: 0 1rem;
         } 
         .right {
           right: 0;
+          padding-left: 0.5rem;
           background-color: ${velaGreen};
+          border-radius: 3rem 0 0 3rem;
         }
         .right :global(.CartIcon) {
           fill: ${white};
@@ -139,8 +147,6 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
       }
     `}</style>
   </>
-
-/* eslint-enable */
 
 Header.propTypes = {
   children: PropTypes.node,

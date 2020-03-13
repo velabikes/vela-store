@@ -6,7 +6,7 @@ import Freshchat from 'components/head/Freshchat'
 import Heatmap from 'components/head/Heatmap'
 
 const CustomHead = props =>
-  <>
+  <div className='Head'>
     <Head>
       <script dangerouslySetInnerHTML={{ __html: "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-K9555FS');" }} />
       <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0' />
@@ -162,7 +162,7 @@ const CustomHead = props =>
         transition: opacity 300ms;
       }
     `}</style>
-  </>
+  </div>
 
 export default compose(
   lifecycle({
