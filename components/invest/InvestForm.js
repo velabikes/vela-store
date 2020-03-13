@@ -43,7 +43,7 @@ const InvestForm = () =>
               />
               <SelectField label='Qual o seu perfil?' name='profile'>
                 <option value='' />
-                <option value='Sócio'>Sócio - Perfil arrojado</option>
+                <option value='Acionista'>Acionista - Perfil arrojado</option>
                 <option value='Credor'>Credor - Perfil cauteloso</option>
               </SelectField>
             </FieldGroup>
