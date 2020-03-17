@@ -1,6 +1,6 @@
 import PaddedView from 'components/PaddedView'
 import Link from 'next/link'
-import { offWhite, offBlack, midGray } from '../../style/colors'
+import { offWhite, offBlack, midGray, white } from '../../style/colors'
 import Button from '../Button'
 
 const Highlight = () => {
@@ -66,7 +66,7 @@ const Highlight = () => {
           }
           .models p {
             padding: 2rem;
-            background-color: ${offWhite};
+            background-color: ${white};
             text-align: center;
             box-shadow: 0px .75rem 1rem -1.25rem rgba(20,20,20, 0.8);
           }
