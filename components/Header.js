@@ -9,7 +9,6 @@ import HeaderDrawer from './HeaderDrawer'
 import HeaderMenu from './HeaderMenu'
 import MainMenu from './MainMenu'
 import Footer from './Footer'
-import SubscribeForm from './SubscribeForm'
 import { Logo } from './Icons'
 
 /* eslint-disable */
@@ -18,10 +17,6 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
     <HeaderDrawer visible={isCartOpen}><Cart /></HeaderDrawer>
     <HeaderDrawer visible={isMenuOpen}>
       <MainMenu />
-      <div className='bottom'>
-        <SubscribeForm />
-        <Footer />
-      </div>
     </HeaderDrawer>
     <header className='header'>
       <div className='top'>
@@ -56,10 +51,8 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
     </header>
     <div className='app-content' onClick={handleContentClick}>
       {children}
-      <div className='copyright'>
-        <small>Copyright (C) 2020. Vela Bikes. Todos os direito reservados.</small>
-      </div>
     </div>
+    <Footer />
     <style jsx>{`
       .header {
         display: flex;
@@ -77,10 +70,6 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
         margin-top: 3rem;
         position: relative;
         min-height: calc(100vh - 3rem);
-      }
-      .copyright {
-        text-align: center;
-        padding: 1rem 0;
       }
       header > div {
         display: flex;
@@ -110,10 +99,6 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
       }
       .right :global(a) {
         min-width: 3rem;
-      }
-      .bottom {
-        position: absolute;
-        bottom: 2em;
       }
       @media only screen and (min-width: 768px) {
         header {
