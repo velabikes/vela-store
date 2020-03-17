@@ -11,7 +11,7 @@ import Inverter from 'components/Inverter'
 const Locations = ({ stores }) =>
   <PaddedView className='Stores'>
     <Head>
-      <title>Conheça nossas bikes em uma loja Vela</title>
+      <title>Nossas lojas: Conheça nossas bikes em uma loja Vela - Vela Bikes</title>
       <meta name='description' content='Venha conhecer uma de nossas lojas oficiais, estamos em São Paulo, Brasilia, Curitiba e Rio de Janeiro' />
     </Head>
     <Main>

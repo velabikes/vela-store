@@ -6,7 +6,7 @@ import PaddedView from '../components/PaddedView'
 const Contact = () =>
   <Main className='contact'>
     <Head>
-      <title>Contato</title>
+      <title>Contato - Vela Bikes</title>
     </Head>
     <PaddedView>
       <h1>Contato</h1>
