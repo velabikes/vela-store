@@ -20,7 +20,7 @@ const VelaPoint = () =>
     </div>
     <style jsx>{`
       .FigureWrapper {
-        padding: 2em 0 0;
+        padding: 2em 1em;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -31,7 +31,7 @@ const VelaPoint = () =>
       .Point {
         display: flex;
         justify-content: center;
-        padding: 2em 0 0 0;
+        padding: 2em 1em;
       }
       .PointContent {
         text-align: center;
