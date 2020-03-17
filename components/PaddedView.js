@@ -7,12 +7,12 @@ const PaddedView = props =>
     </div>
     <style jsx>{`
       .PaddedViewWrapper {
-        padding: 0 1rem;
+        padding: 0 2rem 2rem 2rem;
         max-height: 100%;
       }
       @media only screen and (min-width: 400px) {
         .PaddedViewWrapper {
-          padding: 0rem 3rem;
+          padding: 0rem 1rem 2rem 1rem;
         }
       }
       @media only screen and (min-width: 1280px) {
@@ -20,6 +20,7 @@ const PaddedView = props =>
           width: 100%;
           max-width: 1200px;
           margin: 0 auto;
+          padding-bottom: 3rem;
         }
       }
     `}</style>

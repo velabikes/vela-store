@@ -47,7 +47,9 @@ const LocationsMap = ({
     }
     <style jsx>{`
       .LocationsMap {
-        height: 100%
+        position: relative;
+        height: 100%;
+        z-index: 1;
       }
       .info {
         position: absolute;
@@ -56,7 +58,8 @@ const LocationsMap = ({
       }
       .filter {
         position: absolute;
-        top: 1rem; left: 50%;
+        top: 0rem;
+        left: 50%;
         transform: translateX(-50%);
       }
       @media only screen and (min-width: 768px) {

@@ -103,7 +103,7 @@ const CustomHead = props =>
       li {
         line-height: 1.5em;
         color: ${offBlack};
-        margin: 0.37em;
+        margin: 0.2em;
         font-family: Barlow, sans-serif;
       }
       table {
@@ -133,7 +133,7 @@ const CustomHead = props =>
         padding: 10px;
         margin-bottom: 0.61em;
         margin-top: 0.61em;
-        border-radius: 5px;
+        border-radius: 0.5em;
         display: block;
         font-size: 1rem;
         font-family: Barlow, sans-serif;

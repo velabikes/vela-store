@@ -5,7 +5,7 @@ const Section = ({ children, ...props }) =>
     {children}
     <style jsx>{`
       section {
-        padding: 4rem 0;
+        padding-top: 2rem;
       }
     `}</style>
   </section>
