@@ -7,6 +7,7 @@ import Highlight from 'components/home/Highlight'
 import HomeAlbum from 'components/home/HomeAlbum'
 import PaddedView from 'components/PaddedView'
 import Button from '../components/Button'
+import VelaPoint from '../components/charge/VelaPoint'
 import { offBlack, offWhite, darkGray } from '../style/colors'
 
 const HomePage = ({ images }) =>
@@ -44,6 +45,7 @@ const HomePage = ({ images }) =>
     <br />
     <PaddedView>
       {images && <HomeAlbum images={images} />}
+      <VelaPoint />
     </PaddedView>
     <br />
     <style jsx>{`
@@ -84,6 +86,9 @@ const HomePage = ({ images }) =>
         background-color: ${offWhite};
         padding: 1em 2em;
         margin-bottom: -2em;
+      }
+      .actions :global(button) {
+        margin: 0;
       }
       @media only screen and (min-width: 768px) {
         h1 {

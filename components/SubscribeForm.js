@@ -7,7 +7,7 @@ const url = 'https://velabikes.us19.list-manage.com/subscribe/post?u=68a0cce7cc1
 
 const SubscribeForm = () =>
   <div className='SubscribeForm'>
-    <h3>Newsletter</h3>
+    <h3>Vamos nos conectar?</h3>
     <MailchimpSubscribe
       url={url}
       render={({ subscribe, status }) =>
