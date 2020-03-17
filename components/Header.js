@@ -81,7 +81,7 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
         color: ${offBlack};
         font-weight: 500;
         min-height: 3rem;
-        font-size: 0.8rem;
+        font-size: 1rem;
       }
       .top :global(.Logo) {
         width: 1.8rem;
