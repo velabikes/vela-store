@@ -84,8 +84,8 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
         font-size: 0.8rem;
       }
       .top :global(.Logo) {
-        width: 1.5rem;
-        height: 1.5rem;
+        width: 1.8rem;
+        height: 1.8rem;
         display: block;
       }
       .top .logo {
@@ -122,9 +122,7 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
         } 
         .right {
           right: 0;
-          padding-left: 0.5rem;
           background-color: ${velaGreen};
-          border-radius: 3rem 0 0 3rem;
         }
         .right :global(.CartIcon) {
           fill: ${white};
