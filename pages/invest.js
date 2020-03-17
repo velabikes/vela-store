@@ -2,13 +2,13 @@ import { compose } from 'recompose'
 import Head from 'next/head'
 import PaddedView from '../components/PaddedView'
 import InvestImage from '../components/invest/InvestImage'
-import { offBlack, white, offWhite, darkGray } from '../style/colors'
+import { offBlack, white, offWhite, darkGray, midGray } from '../style/colors'
 import InvestForm from '../components/invest/InvestForm'
 
 const Invest = () =>
   <>
     <Head >
-      <title>Investir</title>
+      <title>Investir - Vela Bikes</title>
     </Head>
     <InvestImage />
     <PaddedView style={{ background: `${offWhite}` }}>
@@ -75,7 +75,7 @@ const Invest = () =>
       }
       .main-title {
         background-color: ${offBlack};
-        color: ${white};
+        color: ${offWhite};
         padding: 2em;
         text-align: center;
         margin-top: -5em;
@@ -83,7 +83,7 @@ const Invest = () =>
         position: relative;
       }
       .main-title h1 {
-        color: ${white};
+        color: ${offWhite};
       }
       .main-subtitle {
         padding: 2em;
@@ -94,13 +94,13 @@ const Invest = () =>
       }
       .left {
         padding: 1em 1em 0 2em;
-        border-left: 1px solid ${darkGray};
+        border-left: 1px solid ${midGray};
       }
       .right {
         text-align: right;
         padding: 1em 2em 0 1em;
         margin: 2em 0;
-        border-right: 1px solid ${darkGray};
+        border-right: 1px solid ${midGray};
       }
       .models-content {
         padding: 1em;

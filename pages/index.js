@@ -7,7 +7,7 @@ import Highlight from 'components/home/Highlight'
 import HomeAlbum from 'components/home/HomeAlbum'
 import PaddedView from 'components/PaddedView'
 import Button from '../components/Button'
-import { offBlack, offWhite } from '../style/colors'
+import { offBlack, offWhite, darkGray } from '../style/colors'
 
 const HomePage = ({ images }) =>
   <div className='HomePage'>
@@ -67,24 +67,23 @@ const HomePage = ({ images }) =>
         font-size: 1em;
       }
       h1 {
-        color: ${offBlack};
+        color: ${darkGray};
         font-size: 2rem;
         font-weight: 700;
       }
       h2 {
-        color: ${offBlack};
+        color: ${darkGray};
       }
       .home-store {
         background-color: #1D1D1D;
-        padding: 2em;
         display: flex;
         justify-content: center;
-        margin-bottom: 4em;
+        margin-bottom: 2em;
       }
       .store-title {
         background-color: ${offWhite};
         padding: 1em 2em;
-        margin-bottom: -4em;
+        margin-bottom: -2em;
       }
       @media only screen and (min-width: 768px) {
         h1 {

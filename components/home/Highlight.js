@@ -1,6 +1,6 @@
 import PaddedView from 'components/PaddedView'
 import Link from 'next/link'
-import { white, offBlack, offWhite } from '../../style/colors'
+import { offWhite, offBlack, midGray } from '../../style/colors'
 import Button from '../Button'
 
 const Highlight = () => {
@@ -52,7 +52,7 @@ const Highlight = () => {
             margin-bottom: 1rem;
           }
           .content p, .color p {
-            color: ${white};
+            color: ${offWhite};
             text-align: center;
           }
           .models {
@@ -66,7 +66,7 @@ const Highlight = () => {
           }
           .models p {
             padding: 2rem;
-            background-color: ${white};
+            background-color: ${offWhite};
             text-align: center;
             box-shadow: 0px .75rem 1rem -1.25rem rgba(20,20,20, 0.8);
           }
@@ -80,25 +80,34 @@ const Highlight = () => {
           .price {
             display: flex;
             flex-direction: column;
-            color: ${white};
+            color: ${offWhite};
             padding: 2em;
+            justify-content: center;
+          }
+          .price > * {
+            min-width: 25%;
           }
           .price h3{
-            color: ${white};
+            color: ${offWhite};
           }
           .actions {
-            align-self: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          .actions :global(button) {
+            margin: 0;
           }
           .left {
             padding: 2em;
             align-self: flex-start;
-            border-left: 1px solid ${white};
+            border-left: 1px solid ${midGray};
           }
           .right {
             text-align: right;
             padding: 2em;
             align-self: flex-end;
-            border-right: 1px solid ${white};
+            border-right: 1px solid ${midGray};
           }
           @media only screen and (min-width: 768px) {
             .content {
@@ -149,7 +158,7 @@ const Highlight = () => {
             }
             .price {
               flex-direction: row;
-              padding: 2em 8em;
+              padding: 2em
               justify-content: space-between;
             }
             @media only screen and (min-width: 1200px) {
