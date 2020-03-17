@@ -55,13 +55,13 @@ const Footer = () =>
         <nav className='social'>
           <h3>Social</h3>
           <ul className='social-items'>
-            <li><Link href='https://www.instagram.com/velabikes/' target='_blank'><a>
+            <li><Link href='https://www.instagram.com/velabikes/'><a target='_blank'>
               Instagram
             </a></Link></li>
-            <li><Link href='https://www.facebook.com/velabikes' target='_blank'><a>
+            <li><Link href='https://www.facebook.com/velabikes'><a target='_blank'>
               Facebook
             </a></Link></li>
-            <li><Link href='https://www.youtube.com/channel/UCa9GuqmiV3VbulKx9T2rjCw' target='_blank'><a>
+            <li><Link href='https://www.youtube.com/channel/UCa9GuqmiV3VbulKx9T2rjCw'><a target='_blank'>
               YouTube
             </a></Link></li>
           </ul>
