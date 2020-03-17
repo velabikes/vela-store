@@ -85,7 +85,7 @@ const Highlight = () => {
             justify-content: center;
           }
           .price > * {
-            min-width: 25%;
+            min-width: 33%;
           }
           .price h3{
             color: ${offWhite};

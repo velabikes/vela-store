@@ -51,7 +51,7 @@ const CustomHead = props =>
         text-transform: none;
         font-style: normal;
         line-height: 1.5em;
-        margin-bottom: 1.5rem;
+        padding-bottom: 1rem;
       }
       h1 {
         font-size: 2rem;
@@ -60,7 +60,7 @@ const CustomHead = props =>
         font-size: 1.5rem;
       }
       h3 {
-        font-size: 1.25rem;
+        font-size: 1.2rem;
       }
       h4 {
         font-size: 1rem;
