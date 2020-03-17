@@ -12,20 +12,20 @@ import { offBlack, offWhite, darkGray } from '../style/colors'
 const HomePage = ({ images }) =>
   <div className='HomePage'>
     <Head>
-      <title>Vela: Bicicletas elétricas para cidades mais saudáveis</title>
-      <meta name='description' content='Conheça as bicicletas elétricas da Vela, desenvolvidas com design clássico e alta tecnologia. Feitas no Brasil.' />
+      <title>Vela Bikes</title>
+      <meta name='description' content='Conheça a smartbike Vela 2. A única bicicleta elétrica conectada com as ruas, com seu celular e com você.' />
       <meta property='og:url' content='https://velabikes.com.br' />
       <meta property='og:type' content='website' />
-      <meta property='og:title' content='Vela : Bicicletas elétricas para cidades mais saudáveis.' />
-      <meta property='og:description' content='Conheça as bicicletas elétricas da Vela, desenvolvidas com design clássico e alta tecnologia. Feitas no Brasil.' />
-      <meta property='og:image' content='https://gallery.mailchimp.com/68a0cce7cc109d78a8b44d7a0/images/69c9e416-74cd-4be5-a8db-7a04763999cb.jpg' />
+      <meta property='og:title' content='Vela Bikes' />
+      <meta property='og:description' content='Conheça a smartbike Vela 2. A única bicicleta elétrica conectada com as ruas, com seu celular e com você.' />
+      <meta property='og:image' content='https://gallery.mailchimp.com/68a0cce7cc109d78a8b44d7a0/images/d66ce503-f59e-40d2-ab4b-24bf92587e6d.png' />
       <meta property='fb:app_id' content='373948403355114' />
     </Head>
     <div className='cover'>
       <HomeImage />
       <div className='cta'>
         <div className='slogan'>
-          <h1>Smartbike</h1>
+          <h1>Vela 2</h1>
           <p>A única bicicleta elétrica conectada com as ruas, com seu celular e com <b>você</b>.</p>
           <div className='actions'>
             <Link href='/vela'>
