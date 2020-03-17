@@ -15,7 +15,7 @@ const Invest = () =>
       <div className='main'>
         <div className='main-title'>
           <h1>Pedale para o futuro com a Vela</h1>
-          <p>Vamos juntos mudar o desenvolvimento da mobilidade urbana no Brasil!</p>
+          <p>Vamos mudar o desenvolvimento da mobilidade urbana no Brasil!</p>
         </div>
         <div className='main-subtitle'>
           <p>Nascemos de um financiamento coletivo em 2014, do qual alguns apoiadores vieram a se tornar sócios e credores. Hoje abrimos espaço à todos que se identificam com o propósito de contribuir para cidades mais saudáveis. O coletivo está no DNA da Vela.</p>
@@ -36,13 +36,13 @@ const Invest = () =>
         <div className='models'>
           <div className='m1'>
             <h3>Seja acionista</h3>
-            <p>Invista em ações com percentual definido e participe da nossa jornada pela transformação da mobilidade.</p>
-            <p><b>Perfil arrojado:</b> aceita assumir um risco maior, atrelado ao maior potencial de retorno do investimento.</p>
+            <p>Invista em ações com percentual definido e participe da nossa jornada pela transformação da mobilidade urbana.</p>
+            <p className='profile'><b>Perfil arrojado:</b> aceita assumir um risco maior, atrelado ao maior potencial de retorno do investimento.</p>
           </div>
           <div className='m2'>
             <h3>Seja credor</h3>
             <p>Contribua com a nutrição para o nosso desenvolvimento e tenha um retorno mensal acima da média do mercado.</p>
-            <p><b>Perfil cauteloso:</b> se tratando de investimentos, prefere mitigar riscos e escolher um retorno seguro. </p>
+            <p className='profile'><b>Perfil cauteloso:</b> se tratando de investimentos, prefere mitigar riscos e escolher um retorno seguro. </p>
           </div>
         </div>
       </div>
@@ -55,7 +55,7 @@ const Invest = () =>
           </div>
           <div className='invest-fields'>
             <h2>Investir</h2>
-            <p>Como você deseja se envolver na rodada de investimentos da Vela? Deixe sua mensagem, sem compromisso, para entendermos o melhor modelo juntos e seguirmos pedalando:</p>
+            <p>Como você deseja se envolver na rodada de investimentos da Vela? Deixe sua mensagem, sem compromisso, para seguirmos contato:</p>
             <InvestForm />
           </div>
         </div>
@@ -64,11 +64,10 @@ const Invest = () =>
     <style jsx>{`
       p {
         position: relative;
+        padding-bottom: 1em;
       }
       h3 {
         color: ${darkGray};
-        padding-bottom: 1em;
-        font-size: 1.2em;
       }
       h2 {
         text-align: center;
@@ -84,6 +83,10 @@ const Invest = () =>
       }
       .main-title h1 {
         color: ${offWhite};
+      }
+      .main-title p {
+        font-size: 1.2em;
+        padding-bottom: 0;
       }
       .main-subtitle {
         padding: 2em;
@@ -114,6 +117,9 @@ const Invest = () =>
         padding: 2em;
         background-color: ${white};
         box-shadow: 0px .75rem 1rem -1.25rem rgba(20,20,20, 0.8);
+      }
+      .models > * > .profile {
+        padding-bottom: 0;
       }
       .invest-content {
         background-color: ${offBlack};
@@ -165,7 +171,7 @@ const Invest = () =>
           width: 40vw;
           margin: 2em;
         }
-        .models > * > p {
+        .models > * > .profile {
           font-size: 0.8em;
         }
         .invest-content {
@@ -180,9 +186,6 @@ const Invest = () =>
           padding-left: 12em;
           margin-left: -10em;
           max-width: 60vw;
-        }
-        .invest-fields p{
-          font-size: 0.8em;
         }
         .invest-img {
           max-width: 40vw;
@@ -206,9 +209,6 @@ const Invest = () =>
             padding-left: 10em;
             margin-left: -8em;
             max-width: 48vw;
-          }
-          .invest-fields p{
-            font-size: 0.8em;
           }
           .invest-img {
             max-width: 30vw;
