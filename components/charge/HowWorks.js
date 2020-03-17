@@ -1,25 +1,24 @@
 import Section from 'components/Section'
 import SectionHeader from 'components/SectionHeader'
-import Grid from 'components/Grid'
+import { darkGray } from '../../style/colors'
 
 const HowWorks = () =>
   <Section className='how-works'>
-    <SectionHeader title='Como funciona?' />
+    <SectionHeader title='Como funciona?' align='center' tagline='Descubra como utilizar nossa rede de recarga rápida:' />
 
-    <Grid template='1fr 1fr 1fr'>
+    <div className='steps'>
       <div className='card'>
         <img src='/static/low-battery.png' alt='' />
         <div className='description'>
-          <h2>Ficou sem bateria?</h2>
-          <p>Fique tranquilo!<br />
-          Agora você pode recarregar pelo caminho.</p>
+          <h3>Ficou sem bateria?</h3>
+          <p>Fique tranquilo! Agora você pode recarregar pelo caminho.</p>
         </div>
       </div>
 
       <div className='card'>
         <img src='/static/find-vela-point.png' alt='' />
         <div className='description'>
-          <h2>Procure um ponto Vela</h2>
+          <h3>Procure um ponto Vela</h3>
           <p>Basta conferir no mapa nossa rede de cafés parceiros.</p>
         </div>
       </div>
@@ -27,22 +26,32 @@ const HowWorks = () =>
       <div className='card last'>
         <img src='/static/wait.png' alt='' />
         <div className='description'>
-          <h2>Espere 10 minutos</h2>
+          <h3>Espere 10 minutos</h3>
           <p>Relaxe, tome um café e aproveite o fim do percurso sem se preocupar.</p>
         </div>
       </div>
-    </Grid>
+    </div>
 
     <style>{`
-      .card h2 {
-        margin-bottom: 0;
-        margin-top: 1rem;
-        font-size: 1.5rem;
+      .steps {
+        display: flex;
+        flex-direction: column;
+      }
+      .card h3 {
+        color: ${darkGray};
+      }
+      .card img {
+        padding: 2em 0;
       }
       .card .description {
         text-align: center;
         margin: 0 auto;
         max-width: 250px
+      }
+      @media only screen and (min-width: 768px) {
+        .steps {
+          flex-direction: row;
+        }
       }
     `}</style>
   </Section>
