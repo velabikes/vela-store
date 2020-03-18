@@ -67,9 +67,9 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
         box-shadow: 0px 0px 9px 0px rgba(100,100,100,0.3);
       }
       .app-content {
-        margin-top: 3rem;
+        margin-top: 3.5rem;
         position: relative;
-        min-height: calc(100vh - 3rem);
+        min-height: calc(100vh - 3.5rem);
       }
       header > div {
         display: flex;
@@ -84,18 +84,20 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
         font-size: 1rem;
       }
       .top :global(.Logo) {
-        width: 1.8rem;
-        height: 1.8rem;
+        width: 2rem;
+        height: 2rem;
         display: block;
       }
       .top .logo {
         min-width: 3rem;
+        padding: 0.25rem;
       }
       .top .left {
         display: none;
       } 
       .right {
         right: 0;
+        padding: 0.25rem;
       }
       .right :global(a) {
         min-width: 3rem;
@@ -103,15 +105,15 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
       @media only screen and (min-width: 768px) {
         header {
           flex-direction: row;
-          height: 3rem;
+          height: 3.5rem;
           bottom: 0;
           right: initial;
         }
         .app-content {
-          margin-top: 3rem;
+          margin-top: 3.5rem;
           margin-left: 0;
-          min-height: calc(100vh - 3rem);
-          min-height: calc(var(--vh, 1vh) * 100 - 3rem);
+          min-height: calc(100vh - 3.5rem);
+          min-height: calc(var(--vh, 1vh) * 100 - 3.5rem);
         }
         header > div {
           flex-direction: row;

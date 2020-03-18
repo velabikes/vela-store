@@ -51,7 +51,7 @@ CartContent.propTypes = {
 export default compose(
   branch(
     ({ checkout }) => checkout && !checkout.lineItems.edges.length,
-    renderComponent(props => <div>Seu carrinho de compras está vazio.</div>)
+    renderComponent(props => <div>O carrinho de compras está vazio.</div>)
   ),
   branch(
     ({ checkout, loading }) => !checkout,

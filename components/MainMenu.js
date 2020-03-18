@@ -45,6 +45,9 @@ const MainMenu = () =>
       </a></Link></li>
     </ul>
     <style jsx>{`
+      nav {
+      padding: 0.5rem 1rem;
+      }
       ul {
         padding: 0;
       }

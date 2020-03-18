@@ -18,7 +18,7 @@ const HomeAlbum = ({ images }) =>
     <style jsx>{`
       .HomeAlbum {
         position: relative;
-        padding: 2em;
+        padding: 1em;
       }
       .Album {
         display: grid;
