@@ -91,9 +91,9 @@ export const CartIcon = compose(
         right: -0.5em;
         background: ${velaBlue};
         border-radius: 1em;
-        width: 1.5rem;
-        height: 1.5rem;
-        line-height: 1.5em;
+        width: 1rem;
+        height: 1rem;
+        line-height: 1.75em;
         text-align: center;
         font-size: 0.6em;
         font-weight: 700;
