@@ -15,6 +15,11 @@ const shop = gql`
         title
         url
       }
+      termsOfService {
+        body
+        title
+        url
+      }
     }
   }
 `

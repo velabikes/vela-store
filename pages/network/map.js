@@ -6,7 +6,7 @@ import LocationsMap from 'components/locations/LocationsMap'
 const LocationsMapPage = ({ locations }) =>
   <div className='map'>
     <Head>
-      <title>Onde encontrar: Nossa rede de lojas, serviços e pontos de recarga - Vela Bikes</title>
+      <title>Onde Encontrar - Vela Bikes</title>
     </Head>
     <LocationsMap locations={locations} />
     <style jsx>{`

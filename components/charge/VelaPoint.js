@@ -1,44 +1,55 @@
 import Link from 'next/link'
-import Grid from 'components/Grid'
 import Button from 'components/Button'
-import Section from 'components/Section'
 import SectionHeader from 'components/SectionHeader'
 import VelaPointFigure from './VelaPointFigure'
 
 const VelaPoint = () =>
-  <Section>
-    <Grid template='repeat(auto-fit, minmax(320px, 1fr))'>
-      <div>
-        <SectionHeader title='Ponto Vela' />
-        <div className='SectionBody'>
-          <p>Desenvolvemos a primeira Rede de Recarga Rápida para bicicletas elétricas do Brasil!</p>
-          <p>Agora, pedalar pela cidade é uma experiência ainda mais segura e conectada, com autonomia ilimitada pelo caminho.</p>
-          <p>Os pontos de carregamento são distribuídos por São Paulo, em diversos estabelecimentos parceiros, para todos os Velejadores aproveitarem.</p>
-        </div>
-
-        <div>
-          <Link href='/network/map' as='/rede/mapa'><a>
-            <Button primary>Onde encontrar</Button>
-          </a></Link>
-          <Link href='https://velabikes.freshdesk.com/support/solutions/folders/43000558455tii'><a>
-            <Button primary outline>Saiba mais</Button>
-          </a></Link>
-        </div>
+  <>
+    <div className='Point'>
+      <div className='PointContent'>
+        <SectionHeader title='Rede' tagline='Confira o mapa de serviços da Vela e dos nossos parceiros para sempre contar com apoio pelo caminho. ' />
+        <Link href='/network/map' as='/rede/mapa'><a>
+          <Button primary>Encontrar</Button>
+        </a></Link>
       </div>
-
-      <div className='figureWrapper'>
+    </div>
+    <div className='PointFigure'>
+      <div className='FigureWrapper'>
         <VelaPointFigure />
       </div>
-    </Grid>
+    </div>
     <style jsx>{`
-      .figureWrapper :global(svg) {
-        margin: 1em 0;
+      .FigureWrapper {
+        padding: 2em 1em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
-
-      .SectionBody {
-        margin-bottom: 3em;
+      .FigureWrapper :global(svg) {
+        max-width: 100%;
+      }
+      .Point {
+        display: flex;
+        justify-content: center;
+        padding: 2em 1em;
+      }
+      .PointContent {
+        text-align: center;
+      }
+      .PointContent :global(button) {
+        margin: 0;
+      }
+      @media only screen and (min-width: 768px) {
+        .FigureWrapper {
+          padding: 3em 0 0 0;
+        }
+        .FigureWrapper :global(svg) {
+          max-width: 60%;
+        }
+        .PointContent {
+          max-width: 16rem;
+        }
       }
     `}</style>
-  </Section>
-
+  </>
 export default VelaPoint

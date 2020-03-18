@@ -20,7 +20,7 @@ const CartContent = ({ checkout }) =>
     </div>
     <div className='footer'>
       <small />
-      <Button primary onClick={() => window.location.replace(checkout.webUrl)}>Finalizar Compra</Button>
+      <Button primary onClick={() => window.location.replace(checkout.webUrl)}>Finalizar compra</Button>
     </div>
     <style jsx>{`
       .CartContent {
@@ -39,9 +39,7 @@ const CartContent = ({ checkout }) =>
       }
       .footer {
         padding-top: 1em;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        align-self: flex-start;
       }
     `}</style>
   </section>
@@ -53,7 +51,7 @@ CartContent.propTypes = {
 export default compose(
   branch(
     ({ checkout }) => checkout && !checkout.lineItems.edges.length,
-    renderComponent(props => <div>Seu carrinho de compras está vazio.</div>)
+    renderComponent(props => <div>O carrinho de compras está vazio.</div>)
   ),
   branch(
     ({ checkout, loading }) => !checkout,

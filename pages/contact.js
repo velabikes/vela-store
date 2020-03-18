@@ -6,7 +6,7 @@ import PaddedView from '../components/PaddedView'
 const Contact = () =>
   <Main className='contact'>
     <Head>
-      <title>Contato</title>
+      <title>Contato - Vela Bikes</title>
     </Head>
     <PaddedView>
       <h1>Contato</h1>
@@ -23,8 +23,6 @@ const Contact = () =>
       <p>Precisa de serviços nas nossas oficinas? Pedimos para realizar o agendamento antes, através dos canais mencionados, para garantir uma experiência completa e eficiente.</p>
       <h2>FAQ</h2>
       <p>Muitas vezes, sua dúvida é similar a de outros clientes que já visitaram nosso site. Consulte nossas <a href='https://velabikes.freshdesk.com/support/home'>perguntas frequentes</a> para uma resposta imediata!</p>
-      <h2>Investimentos</h2>
-      <p>Você acredita no desenvolvimento da mobilidade urbana no Brasil? Nossa principal missão é promover cidades mais saudáveis. Ajude-nos a conquistar novos caminhos e invista na Vela: <a href='mailto:queroinvestir@velabikes.com.br'>queroinvestir@velabikes.com.br</a></p>
     </PaddedView>
 
     <style jsx>{`
@@ -36,6 +34,11 @@ const Contact = () =>
         font-style: normal;
         font-weight: 600;
         padding-top: 1em;
+      }
+      @media only screen and (min-width: 768px) {
+        :global(.PaddedViewWraper){
+          max-width: 50vw;
+        }
       }
     `}</style>
   </Main>

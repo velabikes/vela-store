@@ -1,7 +1,6 @@
 import { compose, withProps, withHandlers } from 'recompose'
 import PropTypes from 'prop-types'
 import Link from 'next/link'
-import PaddedView from 'components/PaddedView'
 import { toggleDrawer } from '../lib/redux'
 import { offBlack, white, velaGreen } from '../style/colors'
 import withOpenDrawer from '../containers/withOpenDrawer'
@@ -10,7 +9,6 @@ import HeaderDrawer from './HeaderDrawer'
 import HeaderMenu from './HeaderMenu'
 import MainMenu from './MainMenu'
 import Footer from './Footer'
-import SubscribeForm from './SubscribeForm'
 import { Logo } from './Icons'
 
 /* eslint-disable */
@@ -18,9 +16,7 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
   <>
     <HeaderDrawer visible={isCartOpen}><Cart /></HeaderDrawer>
     <HeaderDrawer visible={isMenuOpen}>
-      <PaddedView><MainMenu /></PaddedView>
-      <PaddedView><SubscribeForm /></PaddedView>
-      <PaddedView><Footer /></PaddedView>
+      <MainMenu />
     </HeaderDrawer>
     <header className='header'>
       <div className='top'>
@@ -55,31 +51,25 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
     </header>
     <div className='app-content' onClick={handleContentClick}>
       {children}
-      <div className='copyright'>
-        <small>Copyright (C) 2020. Vela Bikes. Todos os direito reservados.</small>
-      </div>
     </div>
+    <Footer />
     <style jsx>{`
-      header {
+      .header {
         display: flex;
-        background-color: ${white};
         justify-content: space-between;
         position: fixed;
         top: 0;
         left: 0;
         right: 0;
         z-index: 1001;
-        box-shadow: 0px 0px 9px 0px rgba(100,100,100,0.3);
         width: 100%;
+        background-color: ${white};
+        box-shadow: 0px 0px 9px 0px rgba(100,100,100,0.3);
       }
       .app-content {
-        margin-top: 4em;
+        margin-top: 3.5rem;
         position: relative;
-        min-height: calc(100vh - 4rem);
-      }
-      .copyright {
-        text-align: center;
-        padding: 1em 0;
+        min-height: calc(100vh - 3.5rem);
       }
       header > div {
         display: flex;
@@ -90,7 +80,8 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
         align-items: center;
         color: ${offBlack};
         font-weight: 500;
-        min-height: 4rem;
+        min-height: 3rem;
+        font-size: 1rem;
       }
       .top :global(.Logo) {
         width: 2rem;
@@ -98,36 +89,38 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
         display: block;
       }
       .top .logo {
-        min-width: 4rem;
+        min-width: 3rem;
+        padding: 0.25rem;
       }
       .top .left {
         display: none;
       } 
       .right {
         right: 0;
+        padding: 0.25rem;
       }
       .right :global(a) {
-        min-width: 4rem;
+        min-width: 3rem;
       }
       @media only screen and (min-width: 768px) {
         header {
           flex-direction: row;
-          height: 4em;
+          height: 3.5rem;
           bottom: 0;
           right: initial;
         }
         .app-content {
-          margin-top: 4em;
+          margin-top: 3.5rem;
           margin-left: 0;
-          min-height: calc(100vh - 4rem);
-          min-height: calc(var(--vh, 1vh) * 100 - 4rem);
+          min-height: calc(100vh - 3.5rem);
+          min-height: calc(var(--vh, 1vh) * 100 - 3.5rem);
         }
         header > div {
           flex-direction: row;
         }
         .top .left {
           display: flex;
-          padding: 0 1em;
+          padding: 0 1rem;
         } 
         .right {
           right: 0;
@@ -139,8 +132,6 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
       }
     `}</style>
   </>
-
-/* eslint-enable */
 
 Header.propTypes = {
   children: PropTypes.node,

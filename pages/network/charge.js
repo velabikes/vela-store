@@ -1,42 +1,25 @@
 import Head from 'next/head'
 import { compose } from 'recompose'
-import Inverter from 'components/Inverter'
-import Section from 'components/Section'
 import Banner from 'components/charge/Banner'
 import VelaPoint from 'components/charge/VelaPoint'
 import HowWorks from 'components/charge/HowWorks'
-import BePartOf from 'components/charge/BePartOf'
-import Statistics from 'components/charge/Statistics'
-import HeatMap from 'components/charge/HeatMap'
 import PaddedView from 'components/PaddedView'
 import Main from 'components/Main'
-import MainHeader from 'components/MainHeader'
 
 const ChargePage = () =>
-  <Main className='charge'>
-    <Head>
-      <title>Vela: Rede de Recarga Rápida</title>
-    </Head>
-    <PaddedView>
-      <MainHeader title='Rede de Recarga Rápida' />
-    </PaddedView>
+  <>
     <Banner />
-    <Inverter>
+    <Main className='charge'>
+      <Head>
+        <title>Recarga Rápida - Vela Bikes</title>
+      </Head>
       <PaddedView>
         <VelaPoint />
       </PaddedView>
-    </Inverter>
-    <PaddedView>
-      <HowWorks />
-    </PaddedView>
-    <PaddedView>
-      <Section>
-        <BePartOf />
-      </Section>
-    </PaddedView>
-    <Statistics />
-    <HeatMap />
-  </Main>
-
+      <PaddedView>
+        <HowWorks />
+      </PaddedView>
+    </Main>
+  </>
 export default compose(
 )(ChargePage)

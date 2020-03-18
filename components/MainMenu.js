@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { velaBlue, velaRed } from '../style/colors'
+import { velaRed } from '../style/colors'
 
 const MainMenu = () =>
   <nav className='MainMenu'>
@@ -45,6 +45,9 @@ const MainMenu = () =>
       </a></Link></li>
     </ul>
     <style jsx>{`
+      nav {
+      padding: 0.5rem 1rem;
+      }
       ul {
         padding: 0;
       }
@@ -53,8 +56,6 @@ const MainMenu = () =>
         line-height: 2em;
         font-weight: 600;
         font-size: 1em;
-        color: ${velaBlue};
-        text-transform: uppercase;
       }
       li .outlet {
         color: ${velaRed}
