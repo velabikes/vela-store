@@ -25,11 +25,6 @@ const HomeImage = () =>
         .desktop {
           display: initial;
         }
-        @media only screen and (min-width: 1200px) {
-          img {
-            width: 90%;
-            margin-top: 2em;
-          }
         }
       }
     `}</style>

@@ -6,29 +6,31 @@ import Button from '../Button'
 const Highlight = () => {
   return (
     <PaddedView style={{ background: '#1D1D1D' }}>
-      <div className='content'>
-        <p>O melhor desempenho para a cidade, em dois modelos diferentes</p>
-      </div>
-      <div className='models'>
-        <div className='qr'>
-          <img alt='Vela 2 Quadro reto' src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/38f52e38-046a-4b9a-b38b-652ea463ddbd.png' />
-          <p>
-            <h3>Quadro reto</h3>
-            <span>3 tamanhos</span>
-            <span>1,60m até 2m</span>
-          </p>
+      <div className='Highlight'>
+        <div className='content'>
+          <p>O melhor desempenho para a cidade, em dois modelos diferentes</p>
         </div>
-        <div className='qb'>
-          <img alt='Vela 2 Quadro reto' src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/0aed083a-3ee3-41db-9acf-fa78afb7010f.png' />
-          <p>
-            <h3>Quadro baixo</h3>
-            <span>2 tamanhos</span>
-            <span>1,58m até 1,90m</span>
-          </p>
+        <div className='models'>
+          <div className='qr'>
+            <img alt='Vela 2 Quadro reto' src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/38f52e38-046a-4b9a-b38b-652ea463ddbd.png' />
+            <p>
+              <h3>Quadro reto</h3>
+              <span>3 tamanhos</span>
+              <span>1,60m até 2m</span>
+            </p>
+          </div>
+          <div className='qb'>
+            <img alt='Vela 2 Quadro reto' src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/0aed083a-3ee3-41db-9acf-fa78afb7010f.png' />
+            <p>
+              <h3>Quadro baixo</h3>
+              <span>2 tamanhos</span>
+              <span>1,58m até 1,90m</span>
+            </p>
+          </div>
         </div>
-      </div>
-      <div className='color'>
-        <p>Com cinco cores exclusivas para você escolher.</p>
+        <div className='color'>
+          <p>Com cinco cores exclusivas para você escolher.</p>
+        </div>
       </div>
       <div className='price'>
         <div className='left'>
@@ -83,6 +85,7 @@ const Highlight = () => {
             color: ${offWhite};
             padding: 2em;
             justify-content: center;
+            margin-top: 1em;
           }
           .price > * {
             min-width: 33%;
@@ -112,8 +115,8 @@ const Highlight = () => {
           @media only screen and (min-width: 768px) {
             .content {
               width: 30vw;
-              height: 35vh;
-              position:absolute;
+              height: 15em;
+              position: absolute;
               display: flex;
               left: 30%;
               justify-content: flex-start;
@@ -142,14 +145,14 @@ const Highlight = () => {
             }
             .color {
               width: 30vw;
-              height: 35vh;
-              position: relative;
+              height: 15em;
+              position: absolute;
               display: flex;
               left: 40%;
-              margin-top: -15rem;
               justify-content: flex-end;
               z-index: 0;
               padding: 2rem;
+              margin-top: -13em;
             }
             .color p {
               max-width: 16vw;
@@ -160,11 +163,8 @@ const Highlight = () => {
               flex-direction: row;
               padding: 2em
               justify-content: space-between;
+              margin-top: 2em;
             }
-            @media only screen and (min-width: 1200px) {
-              .color {
-                margin-top: -13rem;
-              }
             }
           }
         `}</style>
