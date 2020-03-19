@@ -16,7 +16,7 @@ const Pop = () => {
       <h3>Fique em casa</h3>
       <p>Alteração de funcionamento e medidas adotadas em prevenção ao COVID-19</p>
       <div className='action'>
-        <Link href='https://velabikes.com.br/blog/medidas-preventivas-contra-o-coronavirus'><Button secundary>Saiba mais</Button></Link>
+        <Link href='/blog/medidas-preventivas-contra-o-coronavirus'><a><Button>Saiba mais</Button></a></Link>
       </div>
       <style jsx>{`
     .Pop {
