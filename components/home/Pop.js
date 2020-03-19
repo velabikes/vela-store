@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useState } from 'react'
-import { lightGray, offWhite, offBlack, velaYellow } from '../../style/colors'
+import { offBlack, velaYellow } from '../../style/colors'
 import Button from '../Button'
 import { CloseIcon } from '../Icons'
 
