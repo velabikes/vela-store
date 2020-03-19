@@ -25,7 +25,7 @@ const Pop = () => {
         position: fixed;
         left: 1.5em;
         bottom: 1.5em;
-        z-index: 1;
+        z-index: 3;
         max-width: 16.4em;
     }
     h3 {
