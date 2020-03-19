@@ -32,7 +32,7 @@ const SubscribeForm = () =>
                   <input type='text' name='b_950b7d190680648ed40ffbe84_dde7c564df' tabIndex='-1' defaultValue='' />
                 </div>
                 <div className='submit'>
-                  <Button primary type='submit'>Assinar</Button>
+                  <Button primary type='submit'>Inscrever-se</Button>
                 </div>
               </form>
             }

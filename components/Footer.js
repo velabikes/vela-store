@@ -33,8 +33,8 @@ const Footer = () =>
             <li><Link href='/blog'><a>
               Blog
             </a></Link></li>
-            <li><Link href='/legal'><a>
-              Termos
+            <li><Link href='/invest' as='/investir'><a>
+              Investir
             </a></Link></li>
           </ul>
         </nav>
@@ -47,8 +47,8 @@ const Footer = () =>
             <li><Link href='https://velabikes.freshdesk.com/support/home'><a>
               FAQ
             </a></Link></li>
-            <li><Link href='/invest' as='/investir'><a>
-              Investir
+            <li><Link href='/legal'><a>
+              Termos
             </a></Link></li>
           </ul>
         </nav>
