@@ -6,7 +6,6 @@ import HomeImage from 'components/home/HomeImage'
 import Highlight from 'components/home/Highlight'
 import HomeAlbum from 'components/home/HomeAlbum'
 import PaddedView from 'components/PaddedView'
-import Pop from 'components/home/Pop'
 import Button from '../components/Button'
 import VelaPoint from '../components/charge/VelaPoint'
 import { offBlack, offWhite, darkGray } from '../style/colors'
@@ -23,7 +22,6 @@ const HomePage = ({ images }) =>
       <meta property='og:image' content='https://gallery.mailchimp.com/68a0cce7cc109d78a8b44d7a0/images/d66ce503-f59e-40d2-ab4b-24bf92587e6d.png' />
       <meta property='fb:app_id' content='373948403355114' />
     </Head>
-    <Pop />
     <div className='cover'>
       <HomeImage />
       <div className='cta'>
