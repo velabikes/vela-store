@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useState } from 'react'
-import { lightGray, offWhite, offBlack } from '../../style/colors'
+import { lightGray, offWhite, offBlack, velaYellow } from '../../style/colors'
 import Button from '../Button'
 import { CloseIcon } from '../Icons'
 
@@ -16,29 +16,29 @@ const Pop = () => {
       <h3>Fique em casa</h3>
       <p>Alteração de funcionamento e medidas adotadas em prevenção ao COVID-19</p>
       <div className='action'>
-        <Link href='https://velabikes.com.br/blog/medidas-preventivas-contra-o-coronavirus'><Button primary>Saiba mais</Button></Link>
+        <Link href='https://velabikes.com.br/blog/medidas-preventivas-contra-o-coronavirus'><Button secundary>Saiba mais</Button></Link>
       </div>
       <style jsx>{`
     .Pop {
-        background-color: ${offBlack};
+        background-color: ${velaYellow};
         padding: 2em;
-        position: absolute;
-        left: 2em;
-        top: 55vh;
+        position: fixed;
+        left: 1.5em;
+        bottom: 1.5em;
         z-index: 1;
         max-width: 16.4em;
     }
     h3 {
-        color: ${lightGray};
+        color: ${offBlack};
     }
     p {
-        color: ${offWhite};
+        color: ${offBlack};
     }
     .close {
-      width: 1.5em;
+      width: 1.2em;
       position: absolute;
-      right: 1.5em;
-      top: 1.5em;
+      right: 1.2em;
+      top: 1.2em;
       cursor: pointer;
     }
     `}
