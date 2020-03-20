@@ -51,22 +51,18 @@ module.exports = async (req, res) => {
         rates: mapCorreiosResultToRate(result)
       }))
     })
-  } else if (['SP', 'RJ', 'PR', 'SC', 'RS', 'ES', 'MG', 'DF', 'PB'].some(v => v === destination.province)) { // eslint-disable-line
+  } else { // eslint-disable-line
     return (
       res.end(JSON.stringify({
         rates: [{
-          service_name: 'Frete Grátis',
+          service_name: 'Transportadora',
           service_code: 'FGN',
-          total_price: '0',
-          description: 'Produção + 12 dias úteis',
+          total_price: '89',
+          description: 'Produção + 18 dias úteis',
           currency: 'BRL'
         }]
       }))
     )
-  } else {
-    return res.end(JSON.stringify({
-      rates: []
-    }))
   }
 }
 
