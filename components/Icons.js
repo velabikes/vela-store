@@ -27,6 +27,14 @@ export const UserIcon = props => (
   </svg>
 )
 
+export const CloseIcon = props =>
+  <svg viewBox='0 0 24 24' {...props}>
+    <path
+      d='M19.571 17.95l-5.523-5.8 5.333-5.6a1.5 1.5 0 000-2.1c-.572-.6-1.429-.6-2 0l-5.333 5.7-5.334-5.7c-.571-.6-1.428-.6-2 0-.285.3-.476.7-.476 1.1 0 .4.095.8.381 1.1l5.333 5.6-5.523 5.8a1.5 1.5 0 000 2.1c.285.3.666.4 1.047.4.381 0 .762-.1 1.048-.4l5.524-5.8 5.523 5.8c.572.6 1.429.6 2 0 .572-.6.572-1.6 0-2.2z'
+      fill={darkGray}
+    />
+  </svg>
+
 export const BackIcon = props =>
   <svg width='1em' height='1em' viewBox='0 0 15.583 15.175' {...props}>
     <path

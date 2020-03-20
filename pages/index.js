@@ -103,6 +103,7 @@ const HomePage = ({ images }) =>
         }
         .slogan > p {
           font-size: 1.2em;
+          max-width: 20em;
         }
         .actions {
           right: 0;
