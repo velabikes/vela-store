@@ -57,7 +57,7 @@ module.exports = async (req, res) => {
         rates: [{
           service_name: 'Transportadora',
           service_code: 'FGN',
-          total_price: '89',
+          total_price: '8900',
           description: 'Produção + 18 dias úteis',
           currency: 'BRL'
         }]
