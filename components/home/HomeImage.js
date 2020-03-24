@@ -1,7 +1,7 @@
 const HomeImage = () =>
   <div>
-    <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/9429484c-ea48-4f6f-845e-76a2b2f6fcbd.png' className='desktop' alt='' />
-    <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/9429484c-ea48-4f6f-845e-76a2b2f6fcbd.png' className='mobile' alt='' />
+    <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/4efb1b48-99ef-42e2-b078-3dfec4c95cd4.jpg' className='desktop' alt='' />
+    <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/4efb1b48-99ef-42e2-b078-3dfec4c95cd4.jpg' className='mobile' alt='' />
     <style jsx>{`
       img {
         min-height: calc(100vh - 4rem);

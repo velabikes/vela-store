@@ -5,7 +5,7 @@ import Button from '../Button'
 
 const Highlight = () => {
   return (
-    <PaddedView style={{ background: '#1D1D1D' }}>
+    <PaddedView style={{ background: '#272727' }}>
       <div className='Highlight'>
         <div className='content'>
           <p>O melhor desempenho para a cidade, em dois modelos diferentes</p>

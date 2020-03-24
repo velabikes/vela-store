@@ -8,7 +8,7 @@ import SubscribeForm from './SubscribeForm'
 
 const Footer = () =>
   <footer>
-    <PaddedView style={{ background: `#1D1D1D` }}>
+    <PaddedView style={{ background: `#272727` }}>
       <div className='footer-navigation'>
         <nav className='store'>
           <h3>Loja</h3>
@@ -68,7 +68,6 @@ const Footer = () =>
         </nav>
         <div className='news'>
           <SubscribeForm />
-
         </div>
       </div>
       <div className='copyright'>
