@@ -56,17 +56,32 @@ const Display = () => {
             padding: 2em 4em 0 4em;
         }
         .content h1 {
-            font-size: 7rem;
+            font-size: 5rem;
         }
         .Display img {
-            width: 50%;
+            width: 80%;
             position: absolute;
-            top: 6em;
+            top: 7em;
+            margin-left: -3em;
           }
         .slider {
             position: absolute;
             bottom: 6em;
           }
+        }
+        @media only screen and (min-width: 1200px) {
+          .Display {
+            width: 36%;
+            min-height: calc(100vh - 8rem);
+          }
+          .Display img {
+            width: 50%;
+            position: absolute;
+            top: 6em;
+          }
+          .content h1 {
+            font-size: 7rem;
+        }
         }
       }
     `}</style>
