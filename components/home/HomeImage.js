@@ -7,7 +7,7 @@ const HomeImage = () =>
         min-height: calc(100vh - 4rem);
         object-fit: cover;
         width: 100%;
-        margin-top: 14rem;
+        margin-top: 9rem;
         object-position: 50% 50%;
       }
       .desktop {
