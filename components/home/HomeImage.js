@@ -8,14 +8,14 @@ const HomeImage = () =>
         object-fit: cover;
         width: 100%;
         margin-top: 14rem;
-        object-position: 55% 45%;
+        object-position: 50% 50%;
       }
       .desktop {
         display: none;
       }
       @media only screen and (min-width: 768px) {
         img {
-          margin-top: 2rem;
+          margin-top: -2rem;
           width: 100%;
           object-fit: cover;
         }
