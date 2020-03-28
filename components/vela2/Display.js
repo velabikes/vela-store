@@ -1,6 +1,6 @@
 import { lightGray, darkGray, offWhite } from '../../style/colors.js'
 
-const Display = () => {
+const Display = ({model}) => {
   return (
     <div className='Display'>
       <h1>Vela 2</h1>
@@ -8,6 +8,7 @@ const Display = () => {
         src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/c5558f25-3db0-4376-bae2-668f6eb6374e.png'
         alt='Vela 2'
       />
+      {JSON.stringify(model)}
       <div className='slider'>
         <div className='s1'>
           <img src='' alt='' />
