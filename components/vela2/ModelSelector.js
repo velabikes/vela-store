@@ -3,8 +3,8 @@ import ControlField from '../form/ControlField'
 
 const ModelSelector = () => {
   return (
-    <Formik initialValues={{test: 'a'}}>
-      <ControlField options={['a', 'b', 'c']} name="test" />
+    <Formik initialValues={{ test: 'P' }}>
+      <ControlField options={['P', 'M', 'G']} name='test' label='Tamanho:' />
     </Formik>
 
   )
