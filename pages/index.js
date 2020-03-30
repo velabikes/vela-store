@@ -51,7 +51,7 @@ const HomePage = ({ images }) =>
     <style jsx>{`
       .cover {
          position: relative;
-         background-color: #d2d2d2;
+         background-color: ${offWhite};
       }
       .cta {
         text-align: center;
@@ -77,7 +77,7 @@ const HomePage = ({ images }) =>
         color: ${darkGray};
       }
       .home-store {
-        background-color: #272727;
+        background-color: #232323;
         display: flex;
         justify-content: center;
         margin-bottom: 2em;
