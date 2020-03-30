@@ -10,11 +10,11 @@ const Control = ({ field, options }) => {
       <style jsx>{`
         div {
           flex: 1;
-          padding: 0.8em;
           border-radius: 2em;
           font-weight: 600;
           text-align: center;
           transition: 1s;
+          padding: 1em;
           ${value === option && `
           color: white;
           background-color: ${velaBlue}
@@ -27,6 +27,7 @@ const Control = ({ field, options }) => {
       {options.map(renderOption)}
       <style jsx>{`
         div {
+          margin: 0.5em 0;
           border-radius: 2em;
           border: 1px solid ${midGray};
           display: flex;
