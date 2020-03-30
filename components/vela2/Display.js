@@ -1,14 +1,17 @@
 import { lightGray, darkGray, offWhite } from '../../style/colors.js'
+import ModelData from './ModelData.js'
 
-const Display = ({model}) => {
+const Display = ({ model }) => {
+  const defaultPhoto = 'https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/c5558f25-3db0-4376-bae2-668f6eb6374e.png'
+  const selectedModelData = ModelData[JSON.stringify(model)] || {}
+
   return (
     <div className='Display'>
       <h1>Vela 2</h1>
       <img
-        src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/c5558f25-3db0-4376-bae2-668f6eb6374e.png'
+        src={(selectedModelData.photos && selectedModelData.photos[0]) || defaultPhoto}
         alt='Vela 2'
       />
-      {JSON.stringify(model)}
       <div className='slider'>
         <div className='s1'>
           <img src='' alt='' />
