@@ -13,7 +13,7 @@ const Vela2 = () => {
         <title>Vela 2 - Vela Bikes</title>
       </Head>
       <Display model={selectedModel} />
-      <ModelSelector onModelChange={setSelectedModel} />
+      <ModelSelector onModelChange={setSelectedModel} model={selectedModel} />
       <Bar model={selectedModel} />
     </div>
   )
