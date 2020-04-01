@@ -1,19 +1,24 @@
-import { velaBlue, midGray } from 'style/colors'
+import { velaBlue, offWhite } from 'style/colors'
 import PropTypes from 'prop-types'
 
 const Control = ({ field, options }) => {
   const { value, onChange, name } = field
   const setValue = onChange(name)
   const renderOption = option =>
-    <div onClick={() => setValue(option)} onKeyDown={() => setValue(option)} role='button' tabIndex={0}>
+    <div onClick={() => setValue(option)} onKeyDown={() => setValue(option)} >
       {option}
       <style jsx>{`
         div {
-          flex: 1;
-          border-radius: 2em;
+          display: flex;
+          flex-direction: row;
           font-weight: 600;
+          border-radius: 1em;
           text-align: center;
           transition: 1s;
+          min-width: 45%;
+          max-width: 45%;
+          margin: 0.2em;
+          background-color: ${offWhite};
           padding: 1em;
           ${value === option && `
           color: white;
@@ -27,13 +32,11 @@ const Control = ({ field, options }) => {
       {options.map(renderOption)}
       <style jsx>{`
         div {
-          margin: 0.5em 0;
-          border-radius: 2em;
-          border: 1px solid ${midGray};
           display: flex;
-          color: ${midGray};
+          margin: 0.5em 0;
+          flex-wrap: wrap;
+          border-radius: 2em;
         }
-
       `}</style>
     </div>
   )
