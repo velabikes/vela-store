@@ -1,25 +1,9 @@
 export default {
-  '{"frame":"Baixo","tire":"","color":""}': {
+  '{"frame":"Baixo","color":"", "tire":"Creme"}': {
     sku: 'xxxxx',
     photos: ['static/vela2/models/VEL-V2-BAIXO-NAO-SELECIONADO.png']
   },
-  '{"frame":"Reto","tire":"","color":""}': {
-    sku: 'xxxxx',
-    photos: ['static/vela2/models/VEL-V2-RETO-NAO-SELECIONADO.png']
-  },
-  '{"frame":"Baixo","tire":"Creme","color":""}': {
-    sku: 'xxxxx',
-    photos: ['static/vela2/models/VEL-V2-BAIXO-NAO-SELECIONADO.png']
-  },
-  '{"frame":"Baixo","tire":"Preto","color":""}': {
-    sku: 'xxxxx',
-    photos: ['static/vela2/models/VEL-V2-BAIXO-NAO-SELECIONADO.png']
-  },
-  '{"frame":"Reto","tire":"Creme","color":""}': {
-    sku: 'xxxxx',
-    photos: ['static/vela2/models/VEL-V2-RETO-NAO-SELECIONADO.png']
-  },
-  '{"frame":"Reto","tire":"Preto","color":""}': {
+  '{"frame":"Reto","color":"", "tire":"Creme"}': {
     sku: 'xxxxx',
     photos: ['static/vela2/models/VEL-V2-RETO-NAO-SELECIONADO.png']
   },

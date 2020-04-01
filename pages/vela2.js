@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import { useState } from 'react'
 import Head from 'next/head'
 import Display from '../components/vela2/Display'
 import Bar from '../components/vela2/Bar'
@@ -16,11 +16,11 @@ const Vela2 = () => {
         <title>Vela 2 - Vela Bikes</title>
       </Head>
       <Display model={selectedModel} />
-      <Tab step={step} onStep={setStep}>
+      <Tab step={step} onStep={setStep} >
         <ModelSelector onModelChange={setSelectedModel} model={selectedModel} />
         <ExtraSelector />
       </Tab>
-      <Bar model={selectedModel} onContinue={() => setStep(2)}/>
+      <Bar model={selectedModel} onContinue={() => setStep(2)} />
     </div>
   )
 }

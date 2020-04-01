@@ -1,29 +1,39 @@
 import Price from '../Price'
 
-const ExtraData = [
+const data = [
   {
-    sku: 'teste1',
-    title: 'acessorio 1',
-    image: 'http://asdf',
-    price: 123123
+    sku: 'VEL-BD-20',
+    title: 'Bagageiro Dianteiro',
+    image: '',
+    price: 389
+  },
+  {
+    sku: 'VEL-BAT19',
+    title: 'Bagageiro Traseiro',
+    image: '',
+    price: 169
+  },
+  {
+    sku: 'VEL-RTV19',
+    title: 'Retrovisor',
+    image: '',
+    price: 39
   }
 ]
 
-const Item = () => {
+const Item = ({ title, price, image }) => {
   return (
     <div>
-      <img src="" />
-      <h2>Titulo</h2>
-      <Price value={123} />
+      <img src={image} alt={title} />
+      <h3>{title}</h3>
+      <Price value={price} />
     </div>
   )
 }
 
 const ExtraSelector = () => {
   return (
-    <div>
-      <Item />
-    </div>
+    data.map(Item)
   )
 }
 

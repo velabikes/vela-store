@@ -1,14 +1,13 @@
 import { lightGray, darkGray, offWhite } from '../../style/colors.js'
 import ModelData from './ModelData.js'
 
-const Display = ({ model: {frame, tire, color} }) => {
+const Display = ({ model: { frame, color, tire } }) => {
   const defaultPhoto = '../../static/vela2/models/VEL-V2-RETO-NAO-SELECIONADO.png'
-  const selectedModelData = ModelData[JSON.stringify({frame, tire, color})] || {}
+  const selectedModelData = ModelData[JSON.stringify({ frame, tire, color })] || {}
 
   return (
     <div className='Display'>
       <h1>Vela 2</h1>
-      {JSON.stringify({frame, tire, color})}
       <img
         src={(selectedModelData.photos && selectedModelData.photos[0]) || defaultPhoto}
         alt='Vela 2'
