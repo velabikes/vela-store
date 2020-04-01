@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { lightGray, darkGray } from '../../style/colors'
 import Button from '../Button'
 
-const Bar = () => {
+const Bar = ({onContinue}) => {
   return (
     <div className='Bar'>
       <div className='bottom'>
@@ -15,9 +15,7 @@ const Bar = () => {
           <p>Em até 12x sem juros no cartão</p>
         </div>
         <div className='actions'>
-          <Link href='/vela'>
-            <Button primary>Continuar</Button>
-          </Link>
+          <Button primary onClick={onContinue}>Continuar</Button>
         </div>
       </div>
       <style jsx>{`

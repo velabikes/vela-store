@@ -5,8 +5,10 @@ import Bar from '../components/vela2/Bar'
 import ModelSelector from '../components/vela2/ModelSelector'
 import ExtraSelector from '../components/vela2/ExtraSelector'
 import Tab from '../components/vela2/Tab'
+
 const Vela2 = () => {
   const [selectedModel, setSelectedModel] = useState({})
+  const [step, setStep] = useState(1)
 
   return (
     <div className='vela2'>
@@ -14,11 +16,11 @@ const Vela2 = () => {
         <title>Vela 2 - Vela Bikes</title>
       </Head>
       <Display model={selectedModel} />
-      <Tab>
+      <Tab step={step} onStep={setStep}>
         <ModelSelector onModelChange={setSelectedModel} model={selectedModel} />
         <ExtraSelector />
       </Tab>
-      <Bar model={selectedModel} />
+      <Bar model={selectedModel} onContinue={() => setStep(2)}/>
     </div>
   )
 }

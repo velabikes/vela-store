@@ -1,13 +1,13 @@
-const Tab = ({children}) => {
+const Tab = ({children, step, onStep}) => {
   return (
     <div>
       <div>
-        <div>1. Passo</div>
+        <div onClick={() => onStep(1)}>1. Passo</div>
         <div>1. Acessorios</div>
         <div>1. Pagamento</div>
       </div>
-      {children[0]}
-      {children[1]}
+      {step === 1 && children[0]}
+      {step === 2 && children[1]}
     </div>
   )
 }
