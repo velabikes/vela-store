@@ -1,4 +1,5 @@
 import Price from '../Price'
+import withCollectionByHandle from '../../containers/withCollectionByHandle'
 
 const data = [
   {
@@ -21,20 +22,20 @@ const data = [
   }
 ]
 
-const Item = ({ title, price, image }) => {
+const Item = ({node: {title, images, variants}}) => {
   return (
     <div>
-      <img src={image} alt={title} />
+      <img src={images && images.edges[0].node.src} alt={title} />
       <h3>{title}</h3>
-      <Price value={price} />
+      <Price value={variants.edges[0].node.priceV2.amount} />
     </div>
   )
 }
 
-const ExtraSelector = () => {
-  return (
-    data.map(Item)
-  )
+const ExtraSelector = ({collection}) => {
+  if (!collection) return <p />
+  if (!collection.products) return <p />
+  return collection.products.edges.map(Item)
 }
 
-export default ExtraSelector
+export default withCollectionByHandle('acessorios', { filterUnavailable: true })(ExtraSelector)
