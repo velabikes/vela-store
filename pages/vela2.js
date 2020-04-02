@@ -6,7 +6,6 @@ import Bar from '../components/vela2/Bar'
 import ModelSelector from '../components/vela2/ModelSelector'
 import ExtraSelector from '../components/vela2/ExtraSelector'
 import Tab from '../components/vela2/Tab'
-import { lightGray } from '../style/colors'
 import withCheckoutLineItemsAdd from '../containers/withCheckoutLineItemsAdd'
 import withCheckoutId from '../containers/withCheckoutId'
 import withCheckout from '../containers/withCheckout'
@@ -40,21 +39,29 @@ const Vela2 = ({ checkout, checkoutId, checkoutLineItemsAdd }) => {
       <Head>
         <title>Vela 2 - Vela Bikes</title>
       </Head>
-      <Display model={selectedModel} />
-      <Tab step={step} onStep={setStep}>
-        <ModelSelector onModelChange={setSelectedModel} model={selectedModel} />
-        <ExtraSelector
-          selected={selectedExtra}
-          onSelect={id =>
-            setSelectedExtra(
-              selectedExtra.includes(id)
-                ? selectedExtra.filter(item => item !== id)
-                : [...selectedExtra, id]
-            )
-          }
-        />
-      </Tab>
+      <div className='content'>
+        <Display model={selectedModel} />
+        <Tab step={step} onStep={setStep}>
+          <ModelSelector onModelChange={setSelectedModel} model={selectedModel} />
+          <ExtraSelector
+            selected={selectedExtra}
+            onSelect={id =>
+              setSelectedExtra(
+                selectedExtra.includes(id)
+                  ? selectedExtra.filter(item => item !== id)
+                  : [...selectedExtra, id]
+              )
+            }
+          />
+        </Tab>
+      </div>
       <Bar model={selectedModel} extra={selectedExtra} onContinue={handleNext} />
+      <style jsx>{`
+        .content {
+          display: flex;
+          flex-direction: row;
+        }
+      `}</style>
     </div>
   )
 }

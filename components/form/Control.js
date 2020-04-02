@@ -1,4 +1,4 @@
-import { velaBlue, white } from 'style/colors'
+import { velaBlue, offWhite } from 'style/colors'
 import PropTypes from 'prop-types'
 import { midGray } from '../../style/colors'
 
@@ -17,14 +17,14 @@ const Control = ({ field, options }) => {
           font-weight: 600;
           border-radius: 0.6em;
           transition: 0.5s;
+          font-size: 0.8em;
           min-width: 30%;
           max-width: 30%;
           margin: 0.3em 0.6em 0.3em 0;
           cursor: pointer;
           color: ${midGray};
-          background-color: ${white};
-          box-shadow: 0 2px 3px rgba(0,0,0,0.03), 0 2px 3px rgba(0,0,0,0.03);
-          padding: 1.5em;
+          background-color: ${offWhite};
+          padding: 1em;
           ${value === option && `
           color: white;
           cursor: default;

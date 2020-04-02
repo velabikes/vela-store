@@ -1,8 +1,8 @@
-import { lightGray, velaGreen } from '../../style/colors'
+import { lightGray, velaGreen, offWhite, white } from '../../style/colors'
 
 const Tab = ({ children, step, onStep }) => {
   return (
-    <div className='Tab'> 
+    <div className='Tab'>
       <div className='TabSelector'>
         <div onClick={() => onStep(1)} className={step === 1 && 'active'}>
           1. Monte a sua
@@ -12,8 +12,10 @@ const Tab = ({ children, step, onStep }) => {
         <span>></span>
         <div>3. Pagamento</div>
       </div>
-      {step === 1 && children[0]}
-      {step === 2 && children[1]}
+      <div className='TabContent'>
+        {step === 1 && children[0]}
+        {step === 2 && children[1]}
+      </div>
       <style jsx>{`
         .TabSelector {
           display: flex;
@@ -23,14 +25,28 @@ const Tab = ({ children, step, onStep }) => {
           padding: 1em;
           border-bottom: 1px solid ${lightGray};
           text-align: center;
+          background-color: ${white};
         }
         .active {
           color: ${velaGreen};
         }
+        .TabContent {
+          background-color: ${white};
+          padding: 1em;
+        }
         @media only screen and (min-width: 768px) {
           .Tab {
-            width: 60%;
-            margin-left: 40%;
+            min-width: 60%;
+            max-width: 60%;
+          }
+          .TabSelector {
+            justify-content: flex-start;
+          }
+          .TabSelector > * {
+            margin-right: 0.5em;
+          }
+          .TabContent {
+            padding: 2em;
           }
         }
     `}</style>

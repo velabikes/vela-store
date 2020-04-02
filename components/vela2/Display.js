@@ -1,4 +1,4 @@
-import { lightGray, darkGray, offWhite } from '../../style/colors.js'
+import { offWhite, darkGray } from '../../style/colors.js'
 import ModelData from './ModelData.js'
 
 const Display = ({ model: { frame, color, tire, size } }) => {
@@ -7,16 +7,19 @@ const Display = ({ model: { frame, color, tire, size } }) => {
   return (
     <div className='Display'>
       <h1>Vela 2</h1>
-      <div className='model'>
-        <p className='sentence'>Quadro {frame} {size},<br /> {color} com pneu {tire}.</p>
-      </div>
       <img
         src={(selectedModelData.photos && selectedModelData.photos[0])}
         alt='Vela 2'
       />
+      <div className='model'>
+        <p><b>Quadro:</b> {frame}</p>
+        <p><b>Cor:</b> {color}</p>
+        <p><b>Pneu:</b> {tire}</p>
+        <p><b>Tamanho:</b> {size}</p>
+      </div>
       <style jsx>{`
       .Display {
-        background-color: ${lightGray};
+        background-color: ${offWhite};
         padding: 1.5em 1em 0 1em;
         display: flex;
         align-items: center;
@@ -35,26 +38,22 @@ const Display = ({ model: { frame, color, tire, size } }) => {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        background-color: ${offWhite};
-        padding: 1.5em 1.5em 1em 1.5em;
-        margin: 1em 0 1.5em 0;
-        min-width: 60%;
-        max-width: 60%;
+        padding: 1em;
+        margin-bottom: 1.5em;
+        min-width: 10em;
+        max-width: 10em;
       }
-      .model > .sentence {
+      .model > p {
+        margin: 0;
         font-size: 0.8em;
-        text-transform: lowercase;
+        line-height: 1.5em;
         text-align: center;
-      }
-      .sentence:first-letter {
-        text-transform: capitalize;
       }
 
       @media only screen and (min-width: 768px) {
         .Display {
-          width: 40%;
-          height: 100%;
-          position: absolute;
+          min-width: 40%;
+          max-width: 40%;
         }
         h1 {
           font-size: 5rem;

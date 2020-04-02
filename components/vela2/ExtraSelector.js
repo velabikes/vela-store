@@ -16,9 +16,15 @@ const Item = ({ node: { title, images, variants }, onSelect, selected }) => {
       <style jsx>{`
       div {
         max-width: 45%;
-        margin: 0.5em 0;
+        margin: 0.5em;
         display: flex;
         flex-direction: column;
+      }
+      @media only screen and (min-width: 768px) {
+        div {
+          max-width: 20%;
+          margin: 0.5em 1.5em 0.5em 0em;
+        }
       }
       img {
         width: 100%;
@@ -55,23 +61,25 @@ const ExtraSelector = ({ collection, onSelect, selected }) => {
 
   return (
     <div>
-      {collection.products.edges.map(product => (
-        <Item
-          onSelect={onSelect}
-          selected={selected.includes(product.node.variants.edges[0].node)}
-          {...product}
-        />
-      ))}
-      <style jsx>{`
-        div {
+      <p>Adicione também os acessórios essenciais para a cidade:</p>
+      <div className='Items'>
+        {collection.products.edges.map(product => (
+          <Item
+            onSelect={onSelect}
+            selected={selected.includes(product.node.variants.edges[0].node)}
+            {...product}
+          />
+        ))}
+        <style jsx>{`
+        .Items {
           display: flex;
           flex-direction: row;
-          justify-content: space-between;
+          justify-content: flex-start;
           max-width: 100%;
           flex-wrap: wrap;
-          padding: 0.5em 1.5em 1em 1.5em;
         }
       `}</style>
+      </div>
     </div>
   )
 }
