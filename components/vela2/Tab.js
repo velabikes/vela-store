@@ -8,7 +8,7 @@ const Tab = ({ children, step, onStep }) => {
           1. Monte a sua
         </div>
         <span>></span>
-        <div>2. Acessórios</div>
+        <div className={step === 2 && 'active'}>2. Acessórios</div>
         <span>></span>
         <div>3. Pagamento</div>
       </div>
@@ -22,6 +22,9 @@ const Tab = ({ children, step, onStep }) => {
           padding: 1em;
           border-bottom: 1px solid ${lightGray};
           text-align: center;
+        }
+        .active {
+          color: red;
         }
     `}</style>
     </div>
