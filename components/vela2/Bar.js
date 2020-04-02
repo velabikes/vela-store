@@ -6,7 +6,7 @@ const Bar = ({ onContinue, extra }) => {
   return (
     <div className='Bar'>
       <div className='bottom'>
-        <p>Especificações técnicas</p>
+        <p><a href='/vela'>Especificações técnicas</a></p>
         <p className='right'>Entrega em três meses</p>
       </div>
       <div className='top'>
@@ -20,7 +20,7 @@ const Bar = ({ onContinue, extra }) => {
       </div>
       <style jsx>{`
       .Bar {
-        border: 1px solid ${lightGray};
+        border-top: 1px solid ${lightGray};
         padding: 1em;
         display: flex;
         flex-direction: column;
@@ -63,12 +63,8 @@ const Bar = ({ onContinue, extra }) => {
       }
       @media only screen and (min-width: 768px) {
         .Bar {
-          position: relative;
-          width: 100%;
-          bottom: 0;
           flex-direction: row;
           justify-content: space-between;
-          z-index: 2;
         }
         .top {
           width: 50%;

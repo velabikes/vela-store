@@ -2,7 +2,7 @@ import { lightGray, velaGreen } from '../../style/colors'
 
 const Tab = ({ children, step, onStep }) => {
   return (
-    <div>
+    <div className='Tab'> 
       <div className='TabSelector'>
         <div onClick={() => onStep(1)} className={step === 1 && 'active'}>
           1. Monte a sua
@@ -26,6 +26,12 @@ const Tab = ({ children, step, onStep }) => {
         }
         .active {
           color: ${velaGreen};
+        }
+        @media only screen and (min-width: 768px) {
+          .Tab {
+            width: 60%;
+            margin-left: 40%;
+          }
         }
     `}</style>
     </div>

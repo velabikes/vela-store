@@ -5,6 +5,7 @@ import Bar from '../components/vela2/Bar'
 import ModelSelector from '../components/vela2/ModelSelector'
 import ExtraSelector from '../components/vela2/ExtraSelector'
 import Tab from '../components/vela2/Tab'
+import { lightGray } from '../style/colors'
 
 const Vela2 = () => {
   const [selectedModel, setSelectedModel] = useState({})

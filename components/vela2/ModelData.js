@@ -1,12 +1,4 @@
 export default {
-  '{"frame":"Baixo","color":"", "tire":"Creme"}': {
-    sku: 'xxxxx',
-    photos: ['static/vela2/models/VEL-V2-BAIXO-NAO-SELECIONADO.png']
-  },
-  '{"frame":"Reto","color":"", "tire":"Creme"}': {
-    sku: 'xxxxx',
-    photos: ['static/vela2/models/VEL-V2-RETO-NAO-SELECIONADO.png']
-  },
   '{"frame":"Baixo","tire":"Creme","color":"Vermelho"}': {
     sku: 'xxxxx',
     photos: ['/static/vela2/models/VEL-V2-BAIXO-VERMELHO-CREME.png']
