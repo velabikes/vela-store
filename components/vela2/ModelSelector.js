@@ -1,7 +1,6 @@
 import { Formik } from 'formik'
 import { useEffect } from 'react'
 import ControlField from '../form/ControlField'
-import { offWhite } from '../../style/colors'
 
 const initialValues = {
   frame: 'Baixo',

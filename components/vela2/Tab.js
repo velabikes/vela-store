@@ -23,6 +23,7 @@ const Tab = ({ children, step, onStep }) => {
           font-size: 0.9em;
           justify-content: space-between;
           padding: 1em;
+          cursor: pointer;
           border-bottom: 1px solid ${lightGray};
           text-align: center;
           background-color: ${white};

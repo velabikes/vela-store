@@ -2,7 +2,7 @@ import { offWhite, darkGray } from '../../style/colors.js'
 import ModelData from './ModelData.js'
 
 const Display = ({ model: { frame, color, tire, size } }) => {
-  const selectedModelData = ModelData[JSON.stringify({ frame, tire, color })] || {}
+  const selectedModelData = ModelData[JSON.stringify({ frame, color, tire, size })] || {}
 
   return (
     <div className='Display'>
@@ -20,7 +20,6 @@ const Display = ({ model: { frame, color, tire, size } }) => {
         justify-content: center;
         flex-direction: column;
         flex: 1;
-        overflow: hidden;
       }
       h1 {
         color: ${darkGray};
@@ -28,10 +27,9 @@ const Display = ({ model: { frame, color, tire, size } }) => {
         text-align: center;
       }
       .Display img {
-        width: auto;
         position: relative;
-        max-width: 800px;
-        max-height: 100vh;
+        width: auto;
+        max-height: 60vh;
       }
 
       @media only screen and (min-width: 768px) {
