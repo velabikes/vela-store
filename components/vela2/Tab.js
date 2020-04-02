@@ -1,4 +1,4 @@
-import { lightGray, velaGreen, offWhite, white } from '../../style/colors'
+import { lightGray, velaGreen, white } from '../../style/colors'
 
 const Tab = ({ children, step, onStep }) => {
   return (
