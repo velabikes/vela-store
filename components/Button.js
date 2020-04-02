@@ -1,10 +1,10 @@
 import { compose, withProps, defaultProps } from 'recompose'
 import PropTypes from 'prop-types'
 import {
-  velaGreen,
   offBlack,
   midGray,
   lightGray,
+  lightGreen,
   white,
   velaBlue,
   offWhite
@@ -62,7 +62,7 @@ Button.propTypes = {
 
 export default compose(
   defaultProps({ color: offWhite, textColor: offBlack, bgColor: offWhite }),
-  withProps(({ primary }) => primary && ({ color: velaGreen, bgColor: velaGreen, textColor: white })),
+  withProps(({ primary }) => primary && ({ color: lightGreen, bgColor: lightGreen, textColor: white })),
   withProps(({ secondary }) => secondary && ({ color: velaBlue, bgColor: velaBlue, textColor: white })),
   withProps(({ outline, color }) => outline && ({ bgColor: 'transparent', textColor: color === offWhite ? offBlack : color })),
   withProps(({ disabled }) => disabled && ({ bgColor: lightGray, textColor: midGray, color: lightGray }))
