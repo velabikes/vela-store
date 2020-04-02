@@ -1,4 +1,4 @@
-import { lightGray } from '../../style/colors'
+import { lightGray, velaGreen } from '../../style/colors'
 
 const Tab = ({ children, step, onStep }) => {
   return (
@@ -18,13 +18,14 @@ const Tab = ({ children, step, onStep }) => {
         .TabSelector {
           display: flex;
           flex-direction: row;
+          font-size: 0.9em;
           justify-content: space-between;
           padding: 1em;
           border-bottom: 1px solid ${lightGray};
           text-align: center;
         }
         .active {
-          color: red;
+          color: ${velaGreen};
         }
     `}</style>
     </div>

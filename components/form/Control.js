@@ -13,7 +13,7 @@ const Control = ({ field, options }) => {
           display: flex;
           flex-direction: row;
           justify-content: center;
-          font-size: 0.8em;
+          font-size: 1em;
           font-weight: 600;
           border-radius: 0.6em;
           transition: 0.5s;
@@ -41,8 +41,6 @@ const Control = ({ field, options }) => {
           display: flex;
           margin: 0.5em 0;
           flex-wrap: wrap;
-          border-radius: 2em;
-          text-align: center;
         }
       `}</style>
     </div>

@@ -1,7 +1,7 @@
 import { lightGray, darkGray, offWhite } from '../../style/colors.js'
 import ModelData from './ModelData.js'
 
-const Display = ({ model: { frame, color, tire } }) => {
+const Display = ({ model: { frame, color, tire, size } }) => {
   const defaultPhoto = '../../static/vela2/models/VEL-V2-RETO-NAO-SELECIONADO.png'
   const selectedModelData = ModelData[JSON.stringify({ frame, tire, color })] || {}
 
@@ -12,21 +12,19 @@ const Display = ({ model: { frame, color, tire } }) => {
         src={(selectedModelData.photos && selectedModelData.photos[0]) || defaultPhoto}
         alt='Vela 2'
       />
-      {/* <div className='slider'>
-        <div className='s1'>
-          <img src='' alt='' />
-        </div>
-        <div className='s2'>
-          <img src='' alt='' />
-        </div>
-        <div className='s3'>
-          <img src='' alt='' />
-        </div>
-      </div> */}
+      <div className='model'>
+        <p><b>Quadro: </b>{frame}</p>
+        <p><b>Cor: </b>{color}</p>
+        <p><b>Pneu: </b>{tire}</p>
+        <p><b>Tamanho: </b>{size}</p>
+      </div>
       <style jsx>{`
       .Display {
         background-color: ${lightGray};
         padding: 1.5em 1em 0 1em;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
       }
       h1 {
         color: ${darkGray};
@@ -37,17 +35,21 @@ const Display = ({ model: { frame, color, tire } }) => {
         width: 100%;
         position: relative;
       }
-      .slider {
+      .model {
         display: flex;
-        flew-direction: row;
-        justify-content: center;
-      }
-      .slider > * {
-        width: 4em;
-        height: 4em;
+        flex-direction: column;
+        justify-content: space-between;
         background-color: ${offWhite};
-        margin: 1em 0.5em;
+        padding: 1.5em 2em 1em 2em;
+        margin-bottom: 1.5em;
+        min-width: 50%;
       }
+      .model > p {
+        display: flex;
+        flex-direction: row;
+        font-size: 0.8em;
+      }
+
       @media only screen and (min-width: 768px) {
         .Display {
         }
