@@ -8,6 +8,7 @@ import Tab from '../components/vela2/Tab'
 
 const Vela2 = () => {
   const [selectedModel, setSelectedModel] = useState({})
+  const [selectedExtra, setSelectedExtra] = useState([])
   const [step, setStep] = useState(1)
 
   return (
@@ -18,7 +19,7 @@ const Vela2 = () => {
       <Display model={selectedModel} />
       <Tab step={step} onStep={setStep} >
         <ModelSelector onModelChange={setSelectedModel} model={selectedModel} />
-        <ExtraSelector />
+        <ExtraSelector selected={selectedExtra} onSelect={id => setSelectedExtra(selectedExtra.includes(id) ? selectedExtra.filter(item => item !== id) : [...selectedExtra, id])} />
       </Tab>
       <Bar model={selectedModel} onContinue={() => setStep(2)} />
     </div>

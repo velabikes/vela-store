@@ -22,9 +22,10 @@ const data = [
   }
 ]
 
-const Item = ({node: {title, images, variants}}) => {
+const Item = ({ node: { title, images, variants }, onSelect, selected }) => {
   return (
-    <div>
+    <div onClick={() => onSelect(variants.edges[0].node.id)}>
+      <div>{JSON.stringify(selected)}</div>
       <img src={images && images.edges[0].node.src} alt={title} />
       <h3>{title}</h3>
       <Price value={variants.edges[0].node.priceV2.amount} />
@@ -32,10 +33,28 @@ const Item = ({node: {title, images, variants}}) => {
   )
 }
 
-const ExtraSelector = ({collection}) => {
+const ExtraSelector = ({ collection, onSelect, selected }) => {
   if (!collection) return <p />
   if (!collection.products) return <p />
-  return collection.products.edges.map(Item)
+
+  return (
+    <div>
+      {collection.products.edges.map(product => (
+        <Item
+          onSelect={onSelect}
+          selected={selected.includes(product.node.variants.edges[0].node.id)}
+          {...product}
+        />
+      ))}
+      <style jsx>{`
+        div {
+          display: flex;
+        }
+      `}</style>
+    </div>
+  )
 }
 
-export default withCollectionByHandle('acessorios', { filterUnavailable: true })(ExtraSelector)
+export default withCollectionByHandle('acessorios', {
+  filterUnavailable: true
+})(ExtraSelector)
