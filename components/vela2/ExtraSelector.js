@@ -3,12 +3,27 @@ import withCollectionByHandle from '../../containers/withCollectionByHandle'
 import { offWhite, lightGreen, white, velaRed } from '../../style/colors'
 import { AddIcon, CloseIcon } from '../Icons'
 
-const Item = ({ node: { title, images, variants }, onSelect, selected }) => {
+const rackmap = {
+  Reto: {
+    Pequeno: 0,
+    Médio: 2,
+    Grande: 1
+  },
+  Baixo: {
+    Pequeno: 0,
+    Médio: 0
+  }
+}
+
+const Item = ({ node: { title, images, variants, handle }, onSelect, selected, model }) => {
+  const variantIndex = handle === 'bagageiro-traseiro' ? rackmap[model.frame][model.size] : 0
+  const isSelected = selected.includes(variants.edges[variantIndex].node)
+
   return (
-    <div onClick={() => onSelect(variants.edges[0].node)}>
+    <div onClick={() => onSelect(variants.edges[variantIndex].node)}>
       <div className='selector'>
-        {selected === false && <AddIcon fill={white} />}
-        {selected === true && <CloseIcon fill={white} />}
+        {isSelected === false && <AddIcon fill={white} />}
+        {isSelected === true && <CloseIcon fill={white} />}
       </div>
       <img src={images && images.edges[0].node.src} alt={title} />
       <h4>{title}</h4>
@@ -40,7 +55,7 @@ const Item = ({ node: { title, images, variants }, onSelect, selected }) => {
           margin-bottom: -1em;
           margin-right: -0.5em;
           background-color: ${lightGreen};
-          ${selected === true &&
+          ${isSelected === true &&
             `
           background-color: ${velaRed};
         `}
@@ -65,12 +80,13 @@ const ExtraSelector = ({ collection, onSelect, selected, model }) => {
                 ? 'bagageiro-dianteiro-1'
                 : 'bagageiro-dianteiro-bambu'
 
-              return product.node.handle !== filter
+            return product.node.handle !== filter
           })
           .map(product => (
             <Item
               onSelect={onSelect}
-              selected={selected.includes(product.node.variants.edges[0].node)}
+              selected={selected}
+              model={model}
               {...product}
             />
           ))}
