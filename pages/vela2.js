@@ -17,9 +17,18 @@ const Vela2 = () => {
         <title>Vela 2 - Vela Bikes</title>
       </Head>
       <Display model={selectedModel} />
-      <Tab step={step} onStep={setStep} >
+      <Tab step={step} onStep={setStep}>
         <ModelSelector onModelChange={setSelectedModel} model={selectedModel} />
-        <ExtraSelector selected={selectedExtra} onSelect={id => setSelectedExtra(selectedExtra.includes(id) ? selectedExtra.filter(item => item !== id) : [...selectedExtra, id])} />
+        <ExtraSelector
+          selected={selectedExtra}
+          onSelect={id =>
+            setSelectedExtra(
+              selectedExtra.includes(id)
+                ? selectedExtra.filter(item => item !== id)
+                : [...selectedExtra, id]
+            )
+          }
+        />
       </Tab>
       <Bar model={selectedModel} onContinue={() => setStep(2)} />
     </div>
