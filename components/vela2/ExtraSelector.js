@@ -20,12 +20,6 @@ const Item = ({ node: { title, images, variants }, onSelect, selected }) => {
         display: flex;
         flex-direction: column;
       }
-      @media only screen and (min-width: 768px) {
-        div {
-          max-width: 20%;
-          margin: 0.5em 1.5em 0.5em 0em;
-        }
-      }
       img {
         width: 100%;
         background-color: ${offWhite};
@@ -71,6 +65,12 @@ const ExtraSelector = ({ collection, onSelect, selected }) => {
           />
         ))}
         <style jsx>{`
+        @media only screen and (min-width: 768px) {
+          div {
+            max-height: 100vh;
+            overflow-y: scroll;
+          }
+        }
         .Items {
           display: flex;
           flex-direction: row;

@@ -36,8 +36,8 @@ const Tab = ({ children, step, onStep }) => {
         }
         @media only screen and (min-width: 768px) {
           .Tab {
-            min-width: 60%;
-            max-width: 60%;
+            min-width: 500px;
+            max-width: 500px;
           }
           .TabSelector {
             justify-content: flex-start;

@@ -18,8 +18,8 @@ const Control = ({ field, options }) => {
           border-radius: 0.6em;
           transition: 0.5s;
           font-size: 0.8em;
-          min-width: 30%;
-          max-width: 30%;
+          min-width: 45%;
+          max-width: 45%;
           margin: 0.3em 0.6em 0.3em 0;
           cursor: pointer;
           color: ${midGray};

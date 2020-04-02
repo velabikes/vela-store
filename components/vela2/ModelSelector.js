@@ -30,11 +30,6 @@ const ModelSelector = ({ onModelChange, model }) => {
         </form>
       </Formik>
       <style jsx>{`
-        @media only screen and (min-width: 768px) {
-          div {
-            max-width: 100%;
-          }
-        }
       `}</style>
     </div>
   )

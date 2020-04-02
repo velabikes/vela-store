@@ -51,10 +51,6 @@ const Display = ({ model: { frame, color, tire, size } }) => {
       }
 
       @media only screen and (min-width: 768px) {
-        .Display {
-          min-width: 40%;
-          max-width: 40%;
-        }
         h1 {
           font-size: 5rem;
         }

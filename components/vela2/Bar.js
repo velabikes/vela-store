@@ -63,24 +63,24 @@ const Bar = ({ onContinue, extra }) => {
         .Bar {
           width: 100%;
           flex-direction: row;
-          justify-content: space-between;
         }
         .bottom {
           padding: 0 6em 0 0;
           border: 0;
-          align-items: flex-start;
         }
         .top {
           font-size: 0.8em;
           display: flex;
-          align-items: center;
-          padding: 0 0 0 3em;
-          max-width: 36%;
+          justify-content: flex-start;
+          padding: 0 0 0 6em;
         }
         .top p{
           max-width: 5rem;
           text-align: center;
           margin: 0;
+        }
+        .right {
+          padding-left: 12em;
         }
         .left {
           flex-direction: column;

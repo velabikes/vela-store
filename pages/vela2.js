@@ -57,10 +57,12 @@ const Vela2 = ({ checkout, checkoutId, checkoutLineItemsAdd }) => {
       </div>
       <Bar model={selectedModel} extra={selectedExtra} onContinue={handleNext} />
       <style jsx>{`
+      @media only screen and (min-width: 768px) {
         .content {
           display: flex;
           flex-direction: row;
         }
+      }
       `}</style>
     </div>
   )
