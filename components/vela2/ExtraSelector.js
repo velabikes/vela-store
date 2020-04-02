@@ -16,7 +16,7 @@ const data = [
   },
   {
     sku: 'VEL-RTV19',
-    title: 'Retrovisor',
+    title: 'Retrovvisor',
     image: '',
     price: 39
   }
