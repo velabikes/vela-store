@@ -1,6 +1,7 @@
 import { Formik } from 'formik'
 import { useEffect } from 'react'
 import ControlField from '../form/ControlField'
+import { offWhite } from '../../style/colors'
 
 const initialValues = {
   frame: 'Baixo',
@@ -30,7 +31,8 @@ const ModelSelector = ({ onModelChange, model }) => {
       </Formik>
       <style jsx>{`
         div {
-          padding: 1em;
+          padding: 1.5em 1.25em 0 1.25em;
+          background-color: ${offWhite}
         }
       `}</style>
     </div>

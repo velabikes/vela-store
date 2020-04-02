@@ -1,18 +1,17 @@
-import Link from 'next/link'
 import { lightGray, darkGray } from '../../style/colors'
 import Button from '../Button'
 import Price from '../Price'
 
-const Bar = ({onContinue, extra}) => {
+const Bar = ({ onContinue, extra }) => {
   return (
     <div className='Bar'>
       <div className='bottom'>
         <p>Especificações técnicas</p>
-        <p className='right'>Entrega em 120 dias úteis</p>
+        <p className='right'>Entrega em três meses</p>
       </div>
       <div className='top'>
         <div className='left'>
-          <Price value={6890 + extra.reduce((a, b) => a + parseInt(b.priceV2.amount), 0)} />
+          <h1><Price value={6890 + extra.reduce((a, b) => a + parseInt(b.priceV2.amount), 0)} /></h1>
           <p>Em até 12x sem juros no cartão</p>
         </div>
         <div className='actions'>
@@ -34,7 +33,7 @@ const Bar = ({onContinue, extra}) => {
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-end;
-        padding 1em 0;
+        padding 1em 0.5em;
         border-top: 1px solid ${lightGray};
       }
       .bottom {
@@ -42,7 +41,7 @@ const Bar = ({onContinue, extra}) => {
         flex-direction: row;
         justify-content: space-between;
         width: 100%;
-        padding: 0.5em 0;
+        padding: 0.5em;
       }
       .bottom p {
         max-width: 6rem;
@@ -60,7 +59,7 @@ const Bar = ({onContinue, extra}) => {
         margin-bottom: 0;
       }
       .actions :global(button) {
-        margin: 0 1em;
+        margin: 0;
       }
       @media only screen and (min-width: 768px) {
         .Bar {

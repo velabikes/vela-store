@@ -12,7 +12,7 @@ const Display = ({ model: { frame, color, tire } }) => {
         src={(selectedModelData.photos && selectedModelData.photos[0]) || defaultPhoto}
         alt='Vela 2'
       />
-      <div className='slider'>
+      {/* <div className='slider'>
         <div className='s1'>
           <img src='' alt='' />
         </div>
@@ -22,10 +22,11 @@ const Display = ({ model: { frame, color, tire } }) => {
         <div className='s3'>
           <img src='' alt='' />
         </div>
-      </div>
+      </div> */}
       <style jsx>{`
       .Display {
         background-color: ${lightGray};
+        padding: 1.5em 1em 0 1em;
       }
       h1 {
         color: ${darkGray};

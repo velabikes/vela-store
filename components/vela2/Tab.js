@@ -1,4 +1,4 @@
-import { midGray } from '../../style/colors'
+import { lightGray } from '../../style/colors'
 
 const Tab = ({ children, step, onStep }) => {
   return (
@@ -20,10 +20,10 @@ const Tab = ({ children, step, onStep }) => {
           flex-direction: row;
           justify-content: space-between;
           padding: 1em;
-          border-bottom: 1px solid ${midGray};
+          border-bottom: 1px solid ${lightGray};
           text-align: center;
         }
-      `}</style>
+    `}</style>
     </div>
   )
 }
