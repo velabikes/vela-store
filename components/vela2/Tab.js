@@ -4,7 +4,9 @@ const Tab = ({ children, step, onStep }) => {
   return (
     <div>
       <div className='TabSelector'>
-        <div onClick={() => onStep(1)}>1. Monte a sua</div>
+        <div onClick={() => onStep(1)} className={step === 1 && 'active'}>
+          1. Monte a sua
+        </div>
         <span>></span>
         <div>2. Acessórios</div>
         <span>></span>
@@ -20,7 +22,7 @@ const Tab = ({ children, step, onStep }) => {
           padding: 1em;
           border-bottom: 1px solid ${midGray};
           text-align: center;
-        } 
+        }
       `}</style>
     </div>
   )
