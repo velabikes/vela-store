@@ -27,14 +27,17 @@ const Display = ({ model: { frame, color, tire, size } }) => {
         text-align: center;
       }
       .Display img {
-        position: relative;
-        width: auto;
-        max-height: 60vh;
+        width: 100%
       }
 
       @media only screen and (min-width: 768px) {
         h1 {
           font-size: 5rem;
+        }
+        .Display img {
+          position: relative;
+          width: auto;
+          max-height: 60vh;
         }
       }
     `}</style>
