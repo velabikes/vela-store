@@ -22,6 +22,7 @@ const ProductForm = ({
   hasOptions
 }) =>
   <div className='ProductForm'>
+    {JSON.stringify(sVariant)}
     { hasOptions &&
       <ProductVariantSelect
         product={product}
