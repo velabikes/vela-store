@@ -18,6 +18,7 @@ const Display = ({ model: { frame, color, tire, size } }) => {
         display: flex;
         align-items: center;
         flex-direction: column;
+        flex: 1;
       }
       h1 {
         color: ${darkGray};
@@ -27,6 +28,7 @@ const Display = ({ model: { frame, color, tire, size } }) => {
       .Display img {
         width: 90%;
         position: relative;
+        max-width: 800px;
       }
 
       @media only screen and (min-width: 768px) {
