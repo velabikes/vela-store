@@ -36,8 +36,8 @@ const Tab = ({ children, step, onStep }) => {
         }
         @media only screen and (min-width: 768px) {
           .Tab {
-            min-width: 500px;
-            max-width: 500px;
+            width: 500px;
+            overflow-y: auto;
           }
           .TabSelector {
             justify-content: flex-start;
@@ -48,6 +48,13 @@ const Tab = ({ children, step, onStep }) => {
           .TabContent {
             padding: 2em;
           }
+          /* Hide scrollbar for Chrome, Safari and Opera */
+            .Tab::-webkit-scrollbar {
+              display: none;
+          }/* Hide scrollbar for IE and Edge */
+            .Tab {
+              -ms-overflow-style: none;
+            }
         }
     `}</style>
     </div>

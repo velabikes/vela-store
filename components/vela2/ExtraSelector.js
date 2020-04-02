@@ -15,7 +15,7 @@ const Item = ({ node: { title, images, variants }, onSelect, selected }) => {
       <Price value={variants.edges[0].node.priceV2.amount} />
       <style jsx>{`
       div {
-        max-width: 45%;
+        max-width: 40%;
         margin: 0.5em;
         display: flex;
         flex-direction: column;
@@ -65,12 +65,6 @@ const ExtraSelector = ({ collection, onSelect, selected }) => {
           />
         ))}
         <style jsx>{`
-        @media only screen and (min-width: 768px) {
-          div {
-            max-height: 100vh;
-            overflow-y: scroll;
-          }
-        }
         .Items {
           display: flex;
           flex-direction: row;

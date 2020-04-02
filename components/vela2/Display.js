@@ -11,12 +11,6 @@ const Display = ({ model: { frame, color, tire, size } }) => {
         src={(selectedModelData.photos && selectedModelData.photos[0])}
         alt='Vela 2'
       />
-      <div className='model'>
-        <p><b>Quadro:</b> {frame}</p>
-        <p><b>Cor:</b> {color}</p>
-        <p><b>Pneu:</b> {tire}</p>
-        <p><b>Tamanho:</b> {size}</p>
-      </div>
       <style jsx>{`
       .Display {
         background-color: ${offWhite};
@@ -31,23 +25,8 @@ const Display = ({ model: { frame, color, tire, size } }) => {
         text-align: center;
       }
       .Display img {
-        width: 100%;
+        width: 90%;
         position: relative;
-      }
-      .model {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding: 1em;
-        margin-bottom: 1.5em;
-        min-width: 10em;
-        max-width: 10em;
-      }
-      .model > p {
-        margin: 0;
-        font-size: 0.8em;
-        line-height: 1.5em;
-        text-align: center;
       }
 
       @media only screen and (min-width: 768px) {
