@@ -30,7 +30,7 @@ const Vela2 = () => {
           }
         />
       </Tab>
-      <Bar model={selectedModel} onContinue={() => setStep(2)} />
+      <Bar model={selectedModel} extra={selectedExtra} onContinue={() => setStep(2)} />
     </div>
   )
 }

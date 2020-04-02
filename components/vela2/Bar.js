@@ -1,8 +1,9 @@
 import Link from 'next/link'
 import { lightGray, darkGray } from '../../style/colors'
 import Button from '../Button'
+import Price from '../Price'
 
-const Bar = ({onContinue}) => {
+const Bar = ({onContinue, extra}) => {
   return (
     <div className='Bar'>
       <div className='bottom'>
@@ -11,7 +12,7 @@ const Bar = ({onContinue}) => {
       </div>
       <div className='top'>
         <div className='left'>
-          <h1>R$ 6.890</h1>
+          <Price value={6890 + extra.reduce((a, b) => a + parseInt(b.priceV2.amount), 0)} />
           <p>Em até 12x sem juros no cartão</p>
         </div>
         <div className='actions'>

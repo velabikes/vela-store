@@ -24,7 +24,7 @@ const data = [
 
 const Item = ({ node: { title, images, variants }, onSelect, selected }) => {
   return (
-    <div onClick={() => onSelect(variants.edges[0].node.id)}>
+    <div onClick={() => onSelect(variants.edges[0].node)}>
       <div>{JSON.stringify(selected)}</div>
       <img src={images && images.edges[0].node.src} alt={title} />
       <h3>{title}</h3>
@@ -42,7 +42,7 @@ const ExtraSelector = ({ collection, onSelect, selected }) => {
       {collection.products.edges.map(product => (
         <Item
           onSelect={onSelect}
-          selected={selected.includes(product.node.variants.edges[0].node.id)}
+          selected={selected.includes(product.node.variants.edges[0].node)}
           {...product}
         />
       ))}
