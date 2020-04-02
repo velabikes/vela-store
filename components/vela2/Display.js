@@ -17,8 +17,10 @@ const Display = ({ model: { frame, color, tire, size } }) => {
         padding: 1.5em 1em 0 1em;
         display: flex;
         align-items: center;
+        justify-content: center;
         flex-direction: column;
         flex: 1;
+        overflow: hidden;
       }
       h1 {
         color: ${darkGray};
@@ -26,9 +28,10 @@ const Display = ({ model: { frame, color, tire, size } }) => {
         text-align: center;
       }
       .Display img {
-        width: 90%;
+        width: auto;
         position: relative;
         max-width: 800px;
+        max-height: 100vh;
       }
 
       @media only screen and (min-width: 768px) {

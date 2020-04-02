@@ -60,7 +60,7 @@ const Vela2 = ({ checkout, checkoutId, checkoutLineItemsAdd }) => {
       @media only screen and (min-width: 768px) {
         .content {
           display: flex;
-          max-height: 100vh;
+          height: calc(100vh - 130px);
           flex-direction: row;
         }
       }
