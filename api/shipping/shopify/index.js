@@ -30,9 +30,10 @@ module.exports = async (req, res) => {
   const totalPrice = items.map(item => item.price).reduce((b, a) => b + a, 0)
 
   const cepAvailable = destination.postal_code.replace('-', '').padEnd(8, '0')
+  let response
   let cityName
   try {
-    const response = await fetch(`http://www.cepaberto.com/api/v3/cep?cep=${cepAvailable}`, {
+    response = await fetch(`http://www.cepaberto.com/api/v3/cep?cep=${cepAvailable}`, {
       headers: {
         'Authorization': `Token token=${process.env.CEP_ABERTO_TOKEN}`
       }
