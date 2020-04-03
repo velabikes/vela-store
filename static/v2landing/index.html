@@ -41,8 +41,8 @@
                 
                 <h1 class="header-title">V2</h1>
                 <p class="header-target">A geração smart de bicicletas elétricas da Vela</p>
-                <a class="arrow-scroll">
-                    <div><button class="buy">Reservar</button></div>
+                <a class="arrow-scroll" href="/vela2">
+                    <div><button>Comprar</button></div>
                 </a>
             </div>
         </div>
@@ -261,34 +261,6 @@
                 </div>
                 <div class="design-main-target">
                     <h1 class="design-main-target-title">Tecnologia e design nunca estiveram tão próximos</h1>
-                </div>
-            </div>
-        </div>
-        
-        <div class="fp-section">
-            <div class="reserve-section">
-                <div class="reserve-section-types">
-                    <div class="reserve-section-buy">
-                        <div class="title">Compra</div>
-                        <div class="price cut">R$ 6.890</div>
-                        <div class="price">R$ 600 na reserva +<br> R$ 5.890 na entrega</div>
-                        <div class="desc">Em 12x sem juros</div>
-                    </div>
-                    <div class="reserve-section-rent">
-                        <div class="title">Aluguel</div>
-                        <div class="price cut">R$ 489</div>
-                        <div class="price">R$ 600 na reserva +<br> R$ 349/mês na entrega</div>
-                        <div class="desc">Plano Vela Mais completo incluso</div>
-                    </div>
-                </div>
-                <div class="reserve-section-cta">
-                    <div>
-                        <input type="number" name="qtd" class="qtd" step="1" placeholder="Quantidade" value="1">
-                        <button class="buy">Reservar</button>
-                    </div>
-                    <div class="subtitle">Reserve sua Vela 2 por R$ 600 e aproveite as condições exclusivas.</div>
-                    <p>Você poderá escolher entre compra ou aluguel, assim como cor e plano da sua Vela após a reserva. Entraremos em contato por email.</p>
-                    <small>Entrega estimada: maio de 2020.</small>
                 </div>
             </div>
         </div>
@@ -514,31 +486,6 @@
                 })
             })
         })
-        
-        const Client = ShopifyBuy
-        const client = Client.buildClient({
-            domain: 'vela-bikes-store.myshopify.com',
-            storefrontAccessToken: '952655b7618da7c0ea8472837ccc5076'
-        })
-        const buyButtonNodeList = document.querySelectorAll(".buy")
-        
-        client.checkout.create().then((checkout) => {
-            const buy = () => {
-                const qtyNodeList = document.querySelectorAll(".qtd")
-                const lineItemsToAdd = [{
-                    variantId: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTE1Mjg0NTU1MzcxOQ==',
-                    quantity: parseInt(qtyNodeList[0].value)
-                }]
-                client.checkout.addLineItems(checkout.id, lineItemsToAdd).then((checkout) => {
-                    // Do something with the updated checkout
-                    window.location.href = checkout.webUrl
-                });
-                const buyButtons = document.querySelectorAll(".js-buy")
-            }
-            Array.prototype.map.call(buyButtonNodeList, (node, i) => {
-                node.addEventListener("click", buy)
-            })
-        });
         
         // Home fade
         const hiddenNode = document.querySelectorAll(".header-content")[0]

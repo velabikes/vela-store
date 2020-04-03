@@ -2,13 +2,15 @@ import { compose } from 'recompose'
 import withCheckout from '../../containers/withCheckout'
 import CartItem from '../store/Cart/Item'
 import Button from '../Button'
+import { velaBlue } from '../../style/colors'
 
 const AddedToCart = ({ checkout, onStep }) => {
   return (
     <div>
-      <p>Items adicionados ao carrinho. Finalize seu pedido ou confira mais acessórios, como bolsas e alforges, e continue comprando em nossa <a href='/loja'>loja</a>.</p>
+      <p><b>Items adicionados ao carrinho!</b></p>
+      <p>Finalize seu pedido ou confira mais acessórios, como bolsas e alforges, e continue comprando em nossa <a href='/loja'>loja</a>.</p>
       <p>Aceitamos pagamentos via PayPal, com opção de 12x sem juros no cartão de crédito, cartão de débito ou boleto bancário.</p>
-      <Button onClick={() => onStep(1)}>Configurar novamente</Button>
+      <div className='another' onClick={() => onStep(1)}>Adicionar outra unidade</div>
       <div className='items'>
         <table>
           <tbody>
@@ -25,6 +27,10 @@ const AddedToCart = ({ checkout, onStep }) => {
       }
       .items table {
         border-spacing: 0 1rem;
+      }
+      .another {
+        color: ${velaBlue};
+        cursor: pointer;
       }
       `}</style>
     </div>
