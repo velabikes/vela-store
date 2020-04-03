@@ -1,5 +1,17 @@
 const { json } = require('micro')
 const correios = require('node-correios')()
+const fetch = require('node-fetch')
+
+const freeShippingArray = [
+  'Osasco',
+  'Curitiba',
+  'São Paulo',
+  'Guarulhos',
+  'Diadema',
+  'Santo André',
+  'São Caetano',
+  'São Bernardo do Campo'
+]
 
 const normalizeText = text => {
   const specialChars = 'àáäâãèéëêìíïîòóöôùúüûñçßÿœæŕśńṕẃǵǹḿǘẍźḧ'
@@ -17,13 +29,22 @@ module.exports = async (req, res) => {
   const totalGrams = items.map(item => item.grams).reduce((b, a) => b + a, 0)
   const totalPrice = items.map(item => item.price).reduce((b, a) => b + a, 0)
 
+  const cepAvailable = destination.postal_code.replace('-', '')
+  const response = await fetch(`http://www.cepaberto.com/api/v3/cep?cep=${cepAvailable}`, {
+    headers: {
+      'Authorization': `Token token=${process.env.CEP_ABERTO_TOKEN}`
+    }
+  })
+  const info = await response.json()
+  const cityName = info.cidade.nome
+
   if (totalPrice > 6500 && totalGrams < 300) {
     res.end(JSON.stringify({
       rates: [{
         service_name: 'Frete Grátis',
         service_code: 'FG',
         total_price: '0',
-        description: '5-10 dias úteis',
+        description: '6-11 dias úteis',
         currency: 'BRL'
       }]
     }))
@@ -52,17 +73,32 @@ module.exports = async (req, res) => {
       }))
     })
   } else { // eslint-disable-line
-    return (
-      res.end(JSON.stringify({
-        rates: [{
-          service_name: 'Transportadora',
-          service_code: 'FGN',
-          total_price: '8900',
-          description: 'Produção + 18 dias úteis',
-          currency: 'BRL'
-        }]
-      }))
-    )
+    if (freeShippingArray.includes(cityName)) {
+      return (
+        res.end(JSON.stringify({
+          rates: [{
+            service_name: 'Frete Grátis',
+            service_code: 'FG',
+            total_price: '0',
+            description: 'Produção + 18 dias úteis',
+            currency: 'BRL'
+          }]
+        }))
+      )
+    }
+    else {
+      return (
+        res.end(JSON.stringify({
+          rates: [{
+            service_name: 'Transportadora',
+            service_code: 'FGN',
+            total_price: '8900',
+            description: 'Produção + 18 dias úteis',
+            currency: 'BRL'
+          }]
+        }))
+      )
+    }
   }
 }
 

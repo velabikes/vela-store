@@ -48,6 +48,7 @@
     "next-with-apollo": "^3.4.0",
     "node-cache": "^4.2.0",
     "node-correios": "^2.2.0",
+    "node-fetch": "^2.6.0",
     "nprogress": "^0.2.0",
     "prismic-javascript": "^2.1.1",
     "prismic-reactjs": "^1.1.0",
@@ -77,8 +78,8 @@
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-react": "^7.12.4",
     "eslint-plugin-standard": "^4.0.0",
-    "pre-commit": "^1.2.2",
-    "now": "^17.0.4"
+    "now": "^17.1.1",
+    "pre-commit": "^1.2.2"
   },
   "engines": {
     "node": "10.x"
