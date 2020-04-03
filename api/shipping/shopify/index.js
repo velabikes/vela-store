@@ -1,5 +1,6 @@
 const { json } = require('micro')
 const correios = require('node-correios')()
+const fetch = require('node-fetch')
 
 const normalizeText = text => {
   const specialChars = 'àáäâãèéëêìíïîòóöôùúüûñçßÿœæŕśńṕẃǵǹḿǘẍźḧ'
@@ -16,6 +17,15 @@ module.exports = async (req, res) => {
   const { rate: { origin, destination, items } } = await json(req)
   const totalGrams = items.map(item => item.grams).reduce((b, a) => b + a, 0)
   const totalPrice = items.map(item => item.price).reduce((b, a) => b + a, 0)
+
+  const cepAvailable = destination.postal_code.replace('-', '')
+  const response = await fetch(`http://www.cepaberto.com/api/v3/cep?cep=${cepAvailable}`, {
+    headers: {
+      'Authorization': `Token token=${process.env.CEP_ABERTO_TOKEN}`
+    }
+  })
+  const info = await response.json()
+  const cityName = info.cidade.nome
 
   if (totalPrice > 6500 && totalGrams < 300) {
     res.end(JSON.stringify({
@@ -52,17 +62,32 @@ module.exports = async (req, res) => {
       }))
     })
   } else { // eslint-disable-line
-    return (
-      res.end(JSON.stringify({
-        rates: [{
-          service_name: 'Transportadora',
-          service_code: 'FGN',
-          total_price: '8900',
-          description: 'Produção + 18 dias úteis',
-          currency: 'BRL'
-        }]
-      }))
-    )
+    if (cityName === 'São Paulo' || cityName === 'Curitiba') {
+      return (
+        res.end(JSON.stringify({
+          rates: [{
+            service_name: 'Frete Grátis',
+            service_code: 'FG',
+            total_price: '0',
+            description: 'Produção + 18 dias úteis',
+            currency: 'BRL'
+          }]
+        }))
+      )
+    }
+    else {
+      return (
+        res.end(JSON.stringify({
+          rates: [{
+            service_name: 'Transportadora',
+            service_code: 'FGN',
+            total_price: '8900',
+            description: 'Produção + 18 dias úteis',
+            currency: 'BRL'
+          }]
+        }))
+      )
+    }
   }
 }
 
