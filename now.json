@@ -11,7 +11,8 @@
     "SHOPIFY_API_PASS": "@shopify-api-pass",
     "PIPEFY_KEY": "@pipefy-key",
     "OMIE_KEY": "@omie-key",
-    "OMIE_SECRET": "@omie-secret"
+    "OMIE_SECRET": "@omie-secret",
+    "CEP_ABERTO_TOKEN": "@cepaberto-key"
   },
   "routes": [
     { "src": "/favicon.ico", "dest": "/static/fav/favicon.ico" },
