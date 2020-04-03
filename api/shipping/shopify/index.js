@@ -29,14 +29,21 @@ module.exports = async (req, res) => {
   const totalGrams = items.map(item => item.grams).reduce((b, a) => b + a, 0)
   const totalPrice = items.map(item => item.price).reduce((b, a) => b + a, 0)
 
-  const cepAvailable = destination.postal_code.replace('-', '')
-  const response = await fetch(`http://www.cepaberto.com/api/v3/cep?cep=${cepAvailable}`, {
-    headers: {
-      'Authorization': `Token token=${process.env.CEP_ABERTO_TOKEN}`
-    }
-  })
-  const info = await response.json()
-  const cityName = info.cidade.nome
+  const cepAvailable = destination.postal_code.replace('-', '').padEnd(8, '0')
+  let cityName
+  try {
+    const response = await fetch(`http://www.cepaberto.com/api/v3/cep?cep=${cepAvailable}`, {
+      headers: {
+        'Authorization': `Token token=${process.env.CEP_ABERTO_TOKEN}`
+      }
+    })
+    const info = await response.json()
+    cityName = info.cidade.nome
+  } catch(e) {
+    console.warn(e)
+    response.text().then(console.warn)
+    cityName = 'N/A'
+  }
 
   if (totalPrice > 6500 && totalGrams < 300) {
     res.end(JSON.stringify({
