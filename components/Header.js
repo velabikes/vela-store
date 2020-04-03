@@ -69,7 +69,6 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
       .app-content {
         margin-top: 3.5rem;
         position: relative;
-        min-height: calc(100vh - 3.5rem);
       }
       header > div {
         display: flex;
@@ -112,8 +111,6 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
         .app-content {
           margin-top: 3.5rem;
           margin-left: 0;
-          min-height: calc(100vh - 3.5rem);
-          min-height: calc(var(--vh, 1vh) * 100 - 3.5rem);
         }
         header > div {
           flex-direction: row;

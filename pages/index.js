@@ -30,7 +30,7 @@ const HomePage = ({ images }) =>
           <p>A única bicicleta elétrica conectada com as ruas, com seu celular e com <b>você</b>.</p>
           <div className='actions'>
             <Link href='/vela'>
-              <Button primary>Reservar</Button>
+              <Button primary>Comprar</Button>
             </Link>
           </div>
         </div>

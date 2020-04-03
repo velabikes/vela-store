@@ -129,7 +129,7 @@ const Invest = () =>
       }
       .invest-fields {
         padding: 2em;
-        background-color: ${white};
+        background-color: ${offWhite};
       }
       .invest-fields p{
         font-size: 1em;
