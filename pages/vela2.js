@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { compose } from 'recompose'
 import Display from '../components/vela2/Display'
 import Bar from '../components/vela2/Bar'
+import AddedToCart from '../components/vela2/AddedToCart'
 import ModelSelector from '../components/vela2/ModelSelector'
 import ExtraSelector from '../components/vela2/ExtraSelector'
 import Tab from '../components/vela2/Tab'
@@ -21,6 +22,10 @@ const Vela2 = ({ checkout, checkoutId, checkoutLineItemsAdd }) => {
     ModelData[JSON.stringify({ frame, color, tire, size })] || {}
 
   const handleNext = async () => {
+    if (step === 1) {
+      setStep(2)
+    }
+
     if (step === 2) {
       await checkoutLineItemsAdd({
         variables: {
@@ -37,10 +42,12 @@ const Vela2 = ({ checkout, checkoutId, checkoutLineItemsAdd }) => {
           ]
         }
       })
-      window.location.replace(checkout.webUrl)
+      setStep(3)
     }
 
-    setStep(2)
+    if (step === 3) {
+      window.location.replace(checkout.webUrl)
+    }
   }
 
   return (
@@ -50,7 +57,7 @@ const Vela2 = ({ checkout, checkoutId, checkoutLineItemsAdd }) => {
       </Head>
       <div className='content'>
         <Display model={selectedModel} />
-        <Tab step={step} onStep={setStep}>
+        <Tab step={step}>
           <ModelSelector
             onModelChange={setSelectedModel}
             model={selectedModel}
@@ -66,12 +73,14 @@ const Vela2 = ({ checkout, checkoutId, checkoutLineItemsAdd }) => {
               )
             }
           />
+          <AddedToCart onStep={setStep} />
         </Tab>
       </div>
       <Bar
         model={selectedModel}
         extra={selectedExtra}
         onContinue={handleNext}
+        step={step}
       />
       <style jsx>{`
         @media only screen and (min-width: 768px) {

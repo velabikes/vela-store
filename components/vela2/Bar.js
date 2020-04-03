@@ -1,8 +1,10 @@
+import { compose } from 'recompose'
 import { lightGray, darkGray } from '../../style/colors'
+import withCheckout from '../../containers/withCheckout'
 import Button from '../Button'
 import Price from '../Price'
 
-const Bar = ({ onContinue, extra }) => {
+const Bar = ({ onContinue, extra, step, checkout }) => {
   return (
     <div className='Bar'>
       <div className='top'>
@@ -11,10 +13,18 @@ const Bar = ({ onContinue, extra }) => {
       </div>
       <div className='bottom'>
         <div className='left'>
-          <h1><Price value={6890 + extra.reduce((a, b) => a + parseInt(b.priceV2.amount), 0)} /></h1>
+          <h1>
+            {step === 1 && <Price value={6890} />}
+            {step === 2 && <Price value={6890 + extra.reduce((a, b) => a + parseInt(b.priceV2.amount), 0)} />}
+            {step === 3 && 'Total:' && <Price value={checkout.totalPrice} />}
+          </h1>
         </div>
         <div className='actions'>
-          <Button primary onClick={onContinue}>Continuar</Button>
+          <Button primary onClick={onContinue}>
+            {step === 1 && 'Continuar'}
+            {step === 2 && 'Continuar'}
+            {step === 3 && 'Finalizar'}
+          </Button>
         </div>
       </div>
       <style jsx>{`
@@ -31,7 +41,7 @@ const Bar = ({ onContinue, extra }) => {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: flex-end;
+        align-items: center;
         padding 1em 0.5em;
         border-top: 1px solid ${lightGray};
       }
@@ -50,7 +60,7 @@ const Bar = ({ onContinue, extra }) => {
       }
       .left {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
       }
       .left h1 {
@@ -94,4 +104,6 @@ const Bar = ({ onContinue, extra }) => {
   )
 }
 
-export default Bar
+export default compose(
+  withCheckout
+)(Bar)

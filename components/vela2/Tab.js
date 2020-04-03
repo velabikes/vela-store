@@ -1,20 +1,21 @@
 import { lightGray, velaGreen, white } from '../../style/colors'
 
-const Tab = ({ children, step, onStep }) => {
+const Tab = ({ children, step }) => {
   return (
     <div className='Tab'>
       <div className='TabSelector'>
-        <div onClick={() => onStep(1)} className={step === 1 && 'active'}>
+        <div className={step === 1 && 'active'}>
           1. Monte a sua
         </div>
         <span>></span>
         <div className={step === 2 && 'active'}>2. Acessórios</div>
         <span>></span>
-        <div>3. Pagamento</div>
+        <div className={step === 3 && 'active'}>3. Pagamento</div>
       </div>
       <div className='TabContent'>
         {step === 1 && children[0]}
         {step === 2 && children[1]}
+        {step === 3 && children[2]}
       </div>
       <style jsx>{`
         .TabSelector {
@@ -23,13 +24,13 @@ const Tab = ({ children, step, onStep }) => {
           font-size: 0.9em;
           justify-content: space-between;
           padding: 1em;
-          cursor: pointer;
           border-bottom: 1px solid ${lightGray};
           text-align: center;
           background-color: ${white};
         }
         .active {
           color: ${velaGreen};
+          font-weight: 600;
         }
         .TabContent {
           background-color: ${white};
@@ -49,13 +50,6 @@ const Tab = ({ children, step, onStep }) => {
           .TabContent {
             padding: 2em;
           }
-          /* Hide scrollbar for Chrome, Safari and Opera */
-            .Tab::-webkit-scrollbar {
-              display: none;
-          }/* Hide scrollbar for IE and Edge */
-            .Tab {
-              -ms-overflow-style: none;
-            }
         }
     `}</style>
     </div>
