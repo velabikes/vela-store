@@ -2,6 +2,17 @@ const { json } = require('micro')
 const correios = require('node-correios')()
 const fetch = require('node-fetch')
 
+const freeShippingArray = [
+  'Osasco',
+  'Curitiba',
+  'São Paulo',
+  'Guarulhos',
+  'Diadema',
+  'Santo André',
+  'São Caetano',
+  'São Bernardo do Campo'
+]
+
 const normalizeText = text => {
   const specialChars = 'àáäâãèéëêìíïîòóöôùúüûñçßÿœæŕśńṕẃǵǹḿǘẍźḧ'
   const normalChars = 'aaaaaeeeeiiiioooouuuuncsyoarsnpwgnmuxzh'
@@ -33,7 +44,7 @@ module.exports = async (req, res) => {
         service_name: 'Frete Grátis',
         service_code: 'FG',
         total_price: '0',
-        description: '5-10 dias úteis',
+        description: '6-11 dias úteis',
         currency: 'BRL'
       }]
     }))
@@ -62,7 +73,7 @@ module.exports = async (req, res) => {
       }))
     })
   } else { // eslint-disable-line
-    if (cityName === 'São Paulo' || cityName === 'Curitiba') {
+    if (freeShippingArray.includes(cityName)) {
       return (
         res.end(JSON.stringify({
           rates: [{
