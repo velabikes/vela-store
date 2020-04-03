@@ -35,16 +35,16 @@ const Highlight = () => {
       <div className='price'>
         <div className='left'>
           <h3>Compra</h3>
-          <p>R$ 600 na reserva +<br /> R$ 5.890 na entrega</p>
+          <p>R$ 6.890<br>Entrega em 3 meses</p>
         </div>
         <div className='actions'>
           <Link href='/vela'>
-            <Button primary>Reservar</Button>
+            <Button primary>Comprar</Button>
           </Link>
         </div>
         <div className='right'>
           <h3>Aluguel</h3>
-          <p>R$ 600 na reserva +<br /> R$ 349/mês na entrega</p>
+          <p>R$ 489/mês<br>Disponível em junho</p>
         </div>
       </div>
       <style jsx>{`
