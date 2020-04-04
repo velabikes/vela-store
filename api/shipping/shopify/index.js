@@ -10,7 +10,8 @@ const freeShippingArray = [
   'Diadema',
   'Santo André',
   'São Caetano',
-  'São Bernardo do Campo'
+  'São Bernardo do Campo',
+  'Itupeva'
 ]
 
 const normalizeText = text => {
