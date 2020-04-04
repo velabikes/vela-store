@@ -42,7 +42,6 @@ module.exports = async (req, res) => {
     cityName = info.cidade.nome
   } catch(e) {
     console.warn(e)
-    response.text().then(console.warn)
     cityName = 'N/A'
   }
 
