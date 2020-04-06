@@ -16,6 +16,20 @@ const freeShippingArray = [
   'Mogi das Cruzes'
 ]
 
+/**
+* Timeout function
+* @param {Integer} time (miliseconds)
+* @param {Promise} promise
+*/
+const timeout = (time, promise) => {
+  return new Promise(function(resolve, reject) {
+    setTimeout(() => {
+      reject(new Error('Request timed out.'))
+    }, time);
+    promise.then(resolve, reject);
+  });
+}
+
 const normalizeText = text => {
   const specialChars = 'àáäâãèéëêìíïîòóöôùúüûñçßÿœæŕśńṕẃǵǹḿǘẍźḧ'
   const normalChars = 'aaaaaeeeeiiiioooouuuuncsyoarsnpwgnmuxzh'
@@ -36,11 +50,11 @@ module.exports = async (req, res) => {
   let response
   let cityName
   try {
-    response = await fetch(`http://www.cepaberto.com/api/v3/cep?cep=${cepAvailable}`, {
+    response = await timeout(5000, fetch(`http://www.cepaberto.com/api/v3/cep?cep=${cepAvailable}`, {
       headers: {
         'Authorization': `Token token=${process.env.CEP_ABERTO_TOKEN}`
       }
-    })
+    }))
     const info = await response.json()
     cityName = info.cidade.nome
   } catch(e) {
