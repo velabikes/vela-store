@@ -9,9 +9,11 @@ const freeShippingArray = [
   'Guarulhos',
   'Diadema',
   'Santo André',
-  'São Caetano',
+  'São Caetano do Sul',
   'São Bernardo do Campo',
-  'Itupeva'
+  'Itupeva',
+  'Suzano',
+  'Mogi das Cruzes'
 ]
 
 const normalizeText = text => {
