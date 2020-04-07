@@ -4,13 +4,14 @@ import Head from 'next/head'
 import LocationsMap from 'components/locations/LocationsMap'
 
 const LocationsMapPage = ({ locations }) =>
-  <div className='map'>
+  <div>
     <Head>
       <title>Onde Encontrar - Vela Bikes</title>
     </Head>
     <LocationsMap locations={locations} />
     <style jsx>{`
       div {
+        min-height: calc(100vh - 3em);
         position: absolute;
         top: 0;
         right: 0;
