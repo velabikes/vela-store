@@ -16,15 +16,15 @@ const LegalPage = ({
     <PaddedView>
       <h1>Informações Legais</h1>
       <Section>
-        <h2>Politica de privacidade</h2>
+        <h2>Politica de Privacidade</h2>
         {shop && <div dangerouslySetInnerHTML={{ __html: shop.privacyPolicy.body }} />}
       </Section>
       <Section>
-        <h2>Politica de devolução</h2>
+        <h2>Politica de Devolução</h2>
         {shop && <div dangerouslySetInnerHTML={{ __html: shop.refundPolicy.body }} />}
       </Section>
       <Section>
-        <h2>Termos de serviço</h2>
+        <h2>Termos de Serviço</h2>
         {shop && <div dangerouslySetInnerHTML={{ __html: shop.termsOfService.body }} />}
       </Section>
     </PaddedView>
