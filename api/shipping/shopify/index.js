@@ -62,7 +62,7 @@ module.exports = async (req, res) => {
     cityName = 'N/A'
   }
 
-  if (totalPrice > 6500 && totalGrams < 300) {
+  if (totalPrice > 5500 && totalGrams < 300) {
     res.end(JSON.stringify({
       rates: [{
         service_name: 'Frete Grátis',
