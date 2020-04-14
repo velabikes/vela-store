@@ -5,7 +5,7 @@ const productList = gql`
 {
   shop {
     collectionByHandle(handle: "frontpage") {
-      products(first: 20) {
+      products(first: 25) {
         edges {
           node {
             id
