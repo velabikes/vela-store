@@ -10,7 +10,7 @@ query collectionByHandleQuery($handle: String!) {
       image(maxWidth: 2000) {
         transformedSrc
       }
-      products(first: 32) {
+      products(first: 36) {
         edges {
           node {
             id
