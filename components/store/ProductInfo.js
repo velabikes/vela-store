@@ -58,9 +58,8 @@ const ProductInfo = ({ product, setAvailableVariants, availableVariants, selecte
         availableVariants={availableVariants}
         onVariantSelect={setAvailableVariants}
       />
-      <hr />
       <div dangerouslySetInnerHTML={{ __html: product.descriptionHtml }} />
-
+      <br />
       <HideOnDesktop>
         <ProductImageGallery product={product} />
       </HideOnDesktop>
@@ -76,7 +75,7 @@ const ProductInfo = ({ product, setAvailableVariants, availableVariants, selecte
         .ProductInfo > div { flex: 1 }
         .ProductInfo > div:first-child { flex: 1.61; padding-right: 2em }
         .ProductInfo :global(.ProductImage) {
-          margin-bottom: 2em;
+          margin: 1em auto;
         }
       }
     `}</style>

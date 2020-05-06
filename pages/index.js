@@ -27,7 +27,7 @@ const HomePage = ({ images }) =>
       <div className='cta'>
         <div className='slogan'>
           <h1>Vela 2</h1>
-          <p>A única bicicleta elétrica conectada com as ruas, com seu celular e com <b>você</b>.</p>
+          <h4>Conheça a primeira smartbike do Brasil. Faça parte do futuro. Agora.</h4>
           <div className='actions'>
             <Link href='/vela'>
               <Button primary>Comprar</Button>
@@ -55,29 +55,26 @@ const HomePage = ({ images }) =>
       }
       .cta {
         text-align: center;
-        position: absolute;
-        top: 0;
         display: flex;
         justify-content: flex-end;
         align-items: center;
         flex-direction: column;
-        padding: 1rem 2rem;
-      }
-      .slogan > p {
-        color: ${offBlack};
-        align-self: flex-end;
-        font-size: 1em;
+        padding: 1rem 3rem;
+        background-color: #272727;
+        margin-top: -4rem;
       }
       h1 {
-        color: ${darkGray};
-        font-size: 2rem;
-        font-weight: 700;
+        color: ${offWhite};
+        font-size: 3rem;
       }
       h2 {
-        color: ${darkGray};
+        color: ${offBlack};
+      }
+      h4 {
+        color: ${offWhite};
       }
       .home-store {
-        background-color: #232323;
+        background-color: #272727;
         display: flex;
         justify-content: center;
         margin-bottom: 2em;
@@ -92,18 +89,21 @@ const HomePage = ({ images }) =>
       }
       @media only screen and (min-width: 768px) {
         h1 {
-          font-size: 4em;
+          color: ${darkGray};
+          font-size: 4rem;
+        }
+        h4 {
+          color: ${darkGray};
         }
         .cta {
+          position: absolute;
           justify-content: center;
-          max-width: 30vw;
+          max-width: 25em;
           right: 2em;
           top: 2em;
           text-align: right;
-        }
-        .slogan > p {
-          font-size: 1.2em;
-          max-width: 20em;
+          background-color: transparent;
+          margin-top: 0rem;
         }
         .actions {
           right: 0;

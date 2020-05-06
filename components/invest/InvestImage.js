@@ -6,6 +6,7 @@ const InvestImage = () =>
       img {
         height: calc(60vh);
         object-fit: cover;
+        object-position: 60% 30%;
         width: 100%;
       }
       .desktop {

@@ -5,6 +5,7 @@ import Link from 'next/link'
 import { offWhite, lightGray, midGray } from '../style/colors'
 import PaddedView from './PaddedView'
 import SubscribeForm from './SubscribeForm'
+import { Instagram, Facebook, YouTube } from './Icons'
 
 const Footer = () =>
   <footer>
@@ -16,11 +17,11 @@ const Footer = () =>
             <li><Link href='/vela'><a>
               Vela 2
             </a></Link></li>
-            <li><Link href='/store?handle=vela-1' as='/loja/vela-1'><a>
-              Vela 1
-            </a></Link></li>
             <li><Link href='/store' as='/loja'><a>
               Acessórios
+            </a></Link></li>
+            <li><Link href='/store/parts' as='/loja/pecas'><a>
+              Peças
             </a></Link></li>
           </ul>
         </nav>
@@ -52,26 +53,24 @@ const Footer = () =>
             </a></Link></li>
           </ul>
         </nav>
-        <nav className='social'>
-          <h3>Social</h3>
-          <ul className='social-items'>
-            <li><Link href='https://www.instagram.com/velabikes/'><a target='_blank'>
-              Instagram
-            </a></Link></li>
-            <li><Link href='https://www.facebook.com/velabikes'><a target='_blank'>
-              Facebook
-            </a></Link></li>
-            <li><Link href='https://www.youtube.com/channel/UCa9GuqmiV3VbulKx9T2rjCw'><a target='_blank'>
-              YouTube
-            </a></Link></li>
-          </ul>
-        </nav>
+        <div className='social'>
+          <h3>+</h3>
+            <Link href='https://www.instagram.com/velabikes/'><a>
+              <div className='social-icon'><Instagram/></div>
+            </a></Link>
+            <Link href='https://www.facebook.com/velabikes'><a>
+              <div className='social-icon'><Facebook /></div>
+            </a></Link>
+            <Link href='https://www.youtube.com/channel/UCa9GuqmiV3VbulKx9T2rjCw'><a>
+              <div className='social-icon'><YouTube /></div>
+            </a></Link>
+        </div>
         <div className='news'>
           <SubscribeForm />
         </div>
       </div>
       <div className='copyright'>
-        <small>Copyright (C) 2020. Vela Bikes. CNPJ 20.430.806/0001-27. Todos os direito reservados.</small>
+        <small>Copyright (C) 2020. Vela Bikes. Todos os direito reservados. CNPJ 20.430.806/0001-27.</small>
       </div>
       <style jsx>{`
       footer {
@@ -81,7 +80,9 @@ const Footer = () =>
       .footer-navigation {
         display: flex;
         padding: 1rem;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
       }
       .footer-navigation h3 {
         color: ${lightGray};
@@ -90,8 +91,12 @@ const Footer = () =>
       .footer-navigation > * {
         padding-top: 2em;
       }
+      .footer-navigation > nav {
+        min-width: 8em;
+      }
       .footer-navigation > * > ul {
-        padding: 0em;
+        padding: 0;
+        margin: 0;
       }
       .footer-navigation > * > ul > li {
         list-style: none;
@@ -99,14 +104,15 @@ const Footer = () =>
         font-weight: 500;
         font-size: 0.8em;
         min-width: 100%;
-        text-align: center;
         margin: 0em;
+        text-align: center;
       }
       .footer-navigation > * > ul > li > a {
         color: ${offWhite};
       }
       .copyright {
-        padding: 1.5rem 0 0 0;
+        padding: 1.5rem 0 1.5em 0;
+        text-align: center;
         border-top: 1px solid ${midGray};
       }
       .copyright small{
@@ -115,26 +121,43 @@ const Footer = () =>
       .footer-navigation .news {
         width: 100%;
       }
+      .footer-navigation .social {
+        width: 8em;
+      }
+      .footer-navigation .social .social-icon {
+        max-width: 1.5em;
+        margin: 0 auto 0.2em auto;
+      }
       @media only screen and (min-width: 768px) {
         .footer-navigation {
           flex-direction: row;
-          padding: 2rem;
+          padding: 1rem;
+          justify-content: flex-start;
         }
         .footer-navigation h3 {
           text-align: left;
         }
+        .footer-navigation > nav {
+          min-width: 8em;
+        }
         .footer-navigation > * > ul > li {
-          min-width: 12em;
           text-align: left;
         }
         .footer-navigation .news {
-          width: 30%;
-          margin-left: auto;
+          width: 24em;
         }
         .copyright {
           text-align: center;
           margin-bottom: -1rem;
         }
+        .footer-navigation .social {
+          width: 4em;
+          margin-left: auto;
+        }
+        .footer-navigation  .social h3 {
+          text-align: right;
+        }
+      }
     `}</style>
     </PaddedView>
   </footer>

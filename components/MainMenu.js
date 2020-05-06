@@ -3,16 +3,16 @@ import { velaRed } from '../style/colors'
 
 const MainMenu = () =>
   <nav className='MainMenu'>
-    <h1>Menu</h1>
+    <h1>Loja</h1>
     <ul className='items'>
       <li><Link href='/vela'><a>
         Vela 2
       </a></Link></li>
-      <li><Link href='/store?handle=vela-1' as='/loja/vela-1'><a>
-        Vela 1
-      </a></Link></li>
       <li><Link href='/store' as='/loja'><a>
         Acessórios
+      </a></Link></li>
+      <li><Link href='/store/parts' as='/loja/pecas'><a>
+        Peças
       </a></Link></li>
       {/* <li><Link href='/network/stores' as='/rede/lojas'><a>
         Nossas lojas

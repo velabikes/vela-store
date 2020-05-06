@@ -26,11 +26,11 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
         <div className='left'><Link href='/vela'><a>
           Vela 2
         </a></Link></div>
-        <div className='left'><Link href='/store?handle=vela-1' as='/loja/vela-1'><a>
-          Vela 1
-        </a></Link></div>
         <div className='left'><Link href='/store' as='/loja'><a>
           Acessórios
+        </a></Link></div>
+        <div className='left'><Link href='/store/parts' as='/loja/pecas'><a>
+          Peças
         </a></Link></div>
         <div className='left'><Link href='/network/map' as='/rede/mapa'><a>
           Rede

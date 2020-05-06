@@ -7,9 +7,9 @@ const VelaPoint = () =>
   <>
     <div className='Point'>
       <div className='PointContent'>
-        <SectionHeader title='Rede' tagline='Confira o mapa de serviços da Vela e dos nossos parceiros para sempre contar com apoio pelo caminho. ' />
+        <SectionHeader title='Rede' tagline='Confira o mapa para encontrar lojas da Vela, recarregar em pontos parceiros e procurar assistência autorizada.' />
         <Link href='/network/map' as='/rede/mapa'><a>
-          <Button primary>Encontrar</Button>
+          <Button primary>Onde encontrar</Button>
         </a></Link>
       </div>
     </div>
@@ -47,7 +47,7 @@ const VelaPoint = () =>
           max-width: 60%;
         }
         .PointContent {
-          max-width: 16rem;
+          max-width: 25rem;
         }
       }
     `}</style>
