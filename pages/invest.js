@@ -191,9 +191,11 @@ const Invest = () =>
         }
         .left img {
           max-width: 100%;
+          object-fit: contain;
         }
         .right img {
           max-width: 100%;
+          object-fit: contain;
         }
         .left-content {
           padding: 4em;

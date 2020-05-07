@@ -80,6 +80,7 @@ const Contact = () =>
       }
       .left img {
         max-width: 100%;
+        object-fit: contain;
       }
       .left-content {
         padding: 2em 2em 1em 2em;
@@ -92,6 +93,7 @@ const Contact = () =>
       }
       .right img {
         max-width: 100%;
+        object-fit: contain;
       }
       .right-content {
         padding: 2em 2em 1em 2em;
