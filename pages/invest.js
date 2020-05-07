@@ -23,7 +23,7 @@ const Invest = () =>
       </div>
       <div className='values'>
         <div className='left'>
-          <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/04b8d52c-77bd-4f8f-9db1-a3ac0cb7cb77.jpg' />
+          <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/dae5968e-1ec7-457a-86f7-ae082ca4c460.jpg' />
           <div className='left-content'>
             <h2>Inovação</h2>
             <h4>Crescemos no ambiente digital e somos verticalmente integrados</h4>
@@ -36,7 +36,7 @@ const Invest = () =>
             <h4>Temos como base uma comunicação empática, transparente e que respeita a privacidade</h4>
             <p>Acreditamos em um espaço urbano mais colaborativo, que aproxima as pessoas e fortalece relações.</p>
           </div>
-          <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/0ccd4acd-f17c-453c-8048-522b76642b39.jpg' />
+          <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/53cd5397-c076-4ab5-9145-0294c31873da.jpg' />
         </div>
       </div>
     </PaddedView>

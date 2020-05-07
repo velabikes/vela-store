@@ -33,12 +33,12 @@ const Vela = () =>
             <h4>Conectada com as ruas, com seu celular e com você</h4>
             <p>Nosso aplicativo te acompanha pelo caminho, mostrando em tempo real as informações essenciais para velejar com tranquilidade.</p>
           </div>
-          <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/e3a28fde-abd9-45a4-9218-5eb691d9e089.jpg' alt='Smartbike' />
+          <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/7130ce6f-5e4c-4472-bfc8-9855e17f0a92.jpg' alt='Smartbike' />
         </div>
       </div>
     </PaddedView>
     <div className='image-cut'>
-      <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/4c7d7806-85db-4c1a-b7fb-67cd2f630049.png' alt='Bike elétrica' />
+      <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/43aee021-e0ee-4215-8633-b23d2501b3f0.png' alt='Bike elétrica' />
       <div className='tagline'>
         <h2>Tecnologia e design nunca estiveram tão próximos</h2>
         <div className='actions'>
@@ -60,7 +60,7 @@ const Vela = () =>
           </div>
         </div>
         <div className='app-img'>
-          <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/5e7d0697-426c-4b83-8999-94c328754839.png' alt='App Vela 2' />
+          <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/55068f24-1c81-4bdc-bec3-3f9d0e586a79.png' alt='App Vela 2' />
         </div>
         <div className='app-bottom'>
           <div className='app-features'>
@@ -103,10 +103,10 @@ const Vela = () =>
             <h4>Sensores de pedal com alta percepção de movimento, para você pedalar com agilidade e confiança</h4>
             <p>Ao iniciar seu trajeto, com o assistente de partida da Vela 2, a resposta do motor é ainda mais rápida e intensa.</p>
           </div>
-          <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/ba0a2156-5584-4806-8c7c-48e47cc670c4.jpg' alt='Sensor de pedal' />
+          <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/a142d80a-87e5-47b5-90ce-c76978dbd3a0.jpg' alt='Sensor de pedal' />
         </div>
         <div className='left'>
-          <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/95fd9074-45b9-49b1-a378-528663e9ef0d.jpg' alt='Bateria impermeável' />
+          <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/e2f0d9af-8587-429c-956c-1aa6c902b398.jpg' alt='Bateria impermeável' />
           <div className='left-content'>
             <h2>Impermeável</h2>
             <h4>Conecte o carregador diretamente na bike ou retire a bateria para carregar onde e quando precisar</h4>
@@ -124,11 +124,11 @@ const Vela = () =>
               </Link>
             </div>
           </div>
-          <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/31fe79c8-b877-47b4-a404-1aa65801049a.jpg' alt='Freio regenerativo' />
+          <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/c9f6a1b6-4dba-4bfb-a8de-129a47036d9b.jpg' alt='Freio regenerativo' />
         </div>
       </div>
       <div className='bfunction-content'>
-        <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/7c334ed2-6d6a-4f67-9893-792c9d0c2e88.png' />
+        <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/38f776ca-ba8a-41c8-9452-fe132d492fa0.png' />
         <h2>Botão multifunções</h2>
         <h4>Integrado ao guidão da Vela 2, o acionador em aço inox é totalmente à prova d'água e resistente a impactos</h4>
         <div className='bfunctions'>
@@ -148,7 +148,7 @@ const Vela = () =>
       </div>
       <div className='section'>
         <div className='left'>
-          <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/4a4e1121-733b-407a-baa3-08539e201028.jpg' alt='Design urbano' />
+          <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/d72b6886-6e78-40ff-a8d9-0e2d12fe5974.jpg' alt='Design urbano' />
           <div className='left-content'>
             <h2>Design atemporal</h2>
             <h4>Cada detalhe é pensado para oferecer muito conforto, com acabamento artesanal e uma paleta de cores exclusivas</h4>
@@ -166,7 +166,7 @@ const Vela = () =>
               </Link>
             </div>
           </div>
-          <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/1733ae4d-b955-4b4d-b97e-038439ab0c1c.jpg' alt='Bike clássica' />
+          <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/9492947f-35ff-4f66-a9a2-4e6f8e8ea776.jpg' alt='Bike clássica' />
         </div>
       </div>
     </PaddedView>
@@ -230,7 +230,7 @@ const Vela = () =>
         </div>
       </PaddedView>
       <div className='specs'>
-        <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/678bae65-8563-4358-a89f-e67ee095754a.jpg' alt='Especificações técnicas' />
+        <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/4bb2a891-d7dd-4934-8625-259d8c2c1df2.jpg' alt='Especificações técnicas' />
         <div className='specs-content'>
           <h2>Especificações</h2>
           <table className='table-specs'>

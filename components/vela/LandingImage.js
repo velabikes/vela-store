@@ -1,7 +1,7 @@
 const LandingImage = () =>
   <div className='cover'>
-    <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/7eb486f0-1f91-47cf-ba9c-987b7f7efaab.jpg' className='desktop' alt='Vela 2' />
-    <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/bcf7e612-c3e8-49ce-a80d-24223f70b459.jpg' className='mobile' alt='Vela 2' />
+    <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/75a7b9b6-3a54-425d-8bfd-b07ca27f3fa4.jpg' className='desktop' alt='Vela 2' />
+    <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/41e5ead0-a560-4bf9-9c72-f2cdf0c9ec5d.jpg' className='mobile' alt='Vela 2' />
     <style jsx>{`
       img {
         max-height: 100vh;

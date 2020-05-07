@@ -9,7 +9,7 @@ const Contact = () =>
       <title>Contato - Vela Bikes</title>
     </Head>
     <div className='main'>
-      <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/26521735-4d77-450a-8133-8e390568d5cb.jpg' />
+      <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/b5d58fc8-ad62-4d65-89b8-1e59f4473d0b.jpg' />
       <div className='content'>
         <h1>Contato</h1>
         <p>Confira os canais de atendimento oficiais da Vela e entre em contato com sua solicitação.</p>
@@ -35,7 +35,7 @@ const Contact = () =>
     <PaddedView>
     <div className='values'>
         <div className='left'>
-          <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/a7eb5d2f-cebf-4e6e-b794-f1a3001649c0.png' />
+          <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/e28953c8-5547-4bf1-8acf-521f38934af8.png' />
           <div className='left-content'>
             <h2>FAQ</h2>
             <h4>Confira nosso banco de informações para uma solução rápida</h4>
@@ -48,7 +48,7 @@ const Contact = () =>
             <h4>Conhece alguma bicicletaria de confiança? Um café bike-friendly que pode virar um ponto de recarga?</h4>
             <p>Conte pra nós! Estamos sempre à procura de novas parcerias e confiamos na sua <a href='https://forms.gle/ak7SmCqumKLRQiyr5'>indicação</a>.</p>
           </div>
-          <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/16e82f28-14c7-40bd-b4ab-6a31c8528b21.png' />
+          <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/c28856bb-d9b0-4ca8-88c8-c54fbe711803.png' />
         </div>
       </div>
     </PaddedView>
@@ -95,7 +95,7 @@ const Contact = () =>
         img {
           max-width: 30em;
           min-width: 0em;
-          max-height: 100vh;
+          max-height: 40em;
         }
         .content {
           text-align: left;
