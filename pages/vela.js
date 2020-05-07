@@ -19,10 +19,10 @@ const Vela = () =>
           <h4>A geração smart de bikes elétricas da Vela</h4>
         </div>
         <div className='actions'>
-            <Link href='/vela2'>
-              <Button primary >Monte a sua</Button>
-            </Link>
-          </div>
+          <Link href='/vela2'>
+            <Button primary >Monte a sua</Button>
+          </Link>
+        </div>
       </div>
     </div>
     <PaddedView>
@@ -42,53 +42,53 @@ const Vela = () =>
       <div className='tagline'>
         <h2>Tecnologia e design nunca estiveram tão próximos</h2>
         <div className='actions'>
-            <Link href='/vela2'>
-              <Button primary >Monte a sua</Button>
-            </Link>
+          <Link href='/vela2'>
+            <Button primary >Monte a sua</Button>
+          </Link>
         </div>
       </div>
     </div>
     <div className='app-content'>
       <PaddedView>
-      <div className='section'>
-        <div className='right'>
-          <div className='right-content'>
-            <h2>App companheiro</h2>
-            <h4>Conte com auxílio e muito mais tranquilidade nas pedaladas</h4>
-            <p>Utilize o bloqueio eletromagnético, receba notificações de atividades suspeitas e consulte o mapa para se localizar pela cidade com eficiência.</p>
+        <div className='section'>
+          <div className='right'>
+            <div className='right-content'>
+              <h2>App companheiro</h2>
+              <h4>Conte com auxílio e muito mais tranquilidade nas pedaladas</h4>
+              <p>Utilize o bloqueio eletromagnético, receba notificações de atividades suspeitas e consulte o mapa para se localizar pela cidade com eficiência.</p>
+            </div>
           </div>
         </div>
-      </div>
-      <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/ed4c1b5f-ef18-4808-8355-d8f6b1423f13.png' alt='App Vela 2' />
-      <div className='app-features'>
-        <div className='app-class'>
-          <div className='app-icon'>
-            <Battery />
+        <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/ed4c1b5f-ef18-4808-8355-d8f6b1423f13.png' alt='App Vela 2' />
+        <div className='app-features'>
+          <div className='app-class'>
+            <div className='app-icon'>
+              <Battery />
+            </div>
+            <p>Nível da bateria</p>
           </div>
-          <p>Nível da bateria</p>
-        </div>
-        <div className='app-class'>
-          <div className='app-icon'>
-            <Navigation />
+          <div className='app-class'>
+            <div className='app-icon'>
+              <Navigation />
+            </div>
+            <p>Localização GPS</p>
           </div>
-        <p>Localização GPS</p>
-        </div>
-        <div className='app-class'>
-          <div className='app-icon'>
-            <Charge />
-          </div>
-        <p>Controle de potência</p>
-        </div>
-      </div>
-      <div className='section'>
-        <div className='left'>
-          <div className='left-content'>
-            <h2>Sempre visível</h2>
-            <h4>O rastreamento GPS garante que sua bicicleta esteja sempre ao alcance</h4>
-            <p>Observe sua Vela de qualquer distância, em qualquer lugar. Cuidamos da sua segurança, para um deslocamento sem preocupações.</p>
+          <div className='app-class'>
+            <div className='app-icon'>
+              <Charge />
+            </div>
+            <p>Controle de potência</p>
           </div>
         </div>
-      </div>
+        <div className='section'>
+          <div className='left'>
+            <div className='left-content'>
+              <h2>Sempre visível</h2>
+              <h4>O rastreamento GPS garante que sua bicicleta esteja sempre ao alcance</h4>
+              <p>Observe sua Vela de qualquer distância, em qualquer lugar. Cuidamos da sua segurança, para um deslocamento sem preocupações.</p>
+            </div>
+          </div>
+        </div>
       </PaddedView>
     </div>
     <PaddedView>
@@ -102,7 +102,7 @@ const Vela = () =>
           <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/ba0a2156-5584-4806-8c7c-48e47cc670c4.jpg' alt='Sensor de pedal' />
         </div>
         <div className='left'>
-        <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/95fd9074-45b9-49b1-a378-528663e9ef0d.jpg' alt='Bateria impermeável' />
+          <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/95fd9074-45b9-49b1-a378-528663e9ef0d.jpg' alt='Bateria impermeável' />
           <div className='left-content'>
             <h2>Impermeável</h2>
             <h4>Conecte o carregador diretamente na bike ou retire a bateria para carregar onde e quando precisar</h4>
@@ -145,26 +145,26 @@ const Vela = () =>
       <div className='section'>
         <div className='left'>
           <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/4a4e1121-733b-407a-baa3-08539e201028.jpg' alt='Design urbano' />
-            <div className='left-content'>
-              <h2>Design atemporal</h2>
-              <h4>Cada detalhe é pensado para oferecer muito conforto, com acabamento artesanal e uma paleta de cores exclusivas</h4>
-              <p>Escolher a Vela é adotar uma nova forma de transporte, agilizar o tempo no trânsito e se aventurar por melhores experiências na cidade.</p>
-            </div>
-          </div>
-          <div className='right'>
-            <div className='right-content'>
-              <h2>Clássica & urbana</h2>
-              <h4>Equipada com todos os acessórios essenciais para o dia a dia</h4>
-              <p>A tranquilidade de pedalar com faróis automáticos integrados, conjunto completo de paralamas, manoplas ergonômicas e mudflaps.</p>
-              <div className='actions'>
-                <Link href='/vela2'>
-                  <Button primary >Monte a sua</Button>
-                </Link>
-              </div>
-            </div>
-            <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/1733ae4d-b955-4b4d-b97e-038439ab0c1c.jpg' alt='Bike clássica' />
+          <div className='left-content'>
+            <h2>Design atemporal</h2>
+            <h4>Cada detalhe é pensado para oferecer muito conforto, com acabamento artesanal e uma paleta de cores exclusivas</h4>
+            <p>Escolher a Vela é adotar uma nova forma de transporte, agilizar o tempo no trânsito e se aventurar por melhores experiências na cidade.</p>
           </div>
         </div>
+        <div className='right'>
+          <div className='right-content'>
+            <h2>Clássica & urbana</h2>
+            <h4>Equipada com todos os acessórios essenciais para o dia a dia</h4>
+            <p>A tranquilidade de pedalar com faróis automáticos integrados, conjunto completo de paralamas, manoplas ergonômicas e mudflaps.</p>
+            <div className='actions'>
+              <Link href='/vela2'>
+                <Button primary >Monte a sua</Button>
+              </Link>
+            </div>
+          </div>
+          <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/1733ae4d-b955-4b4d-b97e-038439ab0c1c.jpg' alt='Bike clássica' />
+        </div>
+      </div>
     </PaddedView>
     <div className='plans'>
       <PaddedView>
@@ -173,52 +173,52 @@ const Vela = () =>
         <div className='plans-content'>
           <div className='free'>
             <h3>Simples</h3>
-            <br/>
+            <br />
             <p>
-             Primeira revisão gratuita<br/>
-             Acesso à rede de recarga rápida<br/>
-             Aplicativo companheiro<br/>
-             Bloqueio Bluetooth<br/>
-             Atualizações básicas<br/>
-             </p>
-             <br/>
-             <div className='plans-price'>
+              Primeira revisão gratuita<br />
+              Acesso à rede de recarga rápida<br />
+              Aplicativo companheiro<br />
+              Bloqueio Bluetooth<br />
+              Atualizações básicas<br />
+            </p>
+            <br />
+            <div className='plans-price'>
               <h3>Grátis</h3>
-             </div>
+            </div>
           </div>
           <div className='basic'>
             <h3>Básico</h3>
-            <br/>
+            <br />
             <p>
-              Primeira revisão gratuita<br/>
-              Acesso à rede de recarga rápida<br/>
-              Aplicativo companheiro<br/>
-              Bloqueio remoto<br/>
-              Atualizações exclusivas<br/>
-              Proteção contra roubo e furto<br/>
-              Rastreamento GPS<br/>
-              Vela reserva<br/>
+              Primeira revisão gratuita<br />
+              Acesso à rede de recarga rápida<br />
+              Aplicativo companheiro<br />
+              Bloqueio remoto<br />
+              Atualizações exclusivas<br />
+              Proteção contra roubo e furto<br />
+              Rastreamento GPS<br />
+              Vela reserva<br />
             </p>
-            <br/>
+            <br />
             <div className='plans-price'>
               <h3>R$ 49,90/mês</h3>
             </div>
           </div>
           <div className='full'>
             <h3>Completo</h3>
-            <br/>
+            <br />
             <p>
-              Primeira revisão gratuita<br/>
-              Acesso à rede de recarga rápida<br/>
-              Aplicativo companheiro<br/>
-              Bloqueio remoto<br/>
-              Atualizações exclusivas<br/>
-              Proteção contra roubo e furto<br/>
-              Rastreamento GPS<br/>
-              Vela reserva<br/>
-              Peças consumíveis e de reposição<br/>
+              Primeira revisão gratuita<br />
+              Acesso à rede de recarga rápida<br />
+              Aplicativo companheiro<br />
+              Bloqueio remoto<br />
+              Atualizações exclusivas<br />
+              Proteção contra roubo e furto<br />
+              Rastreamento GPS<br />
+              Vela reserva<br />
+              Peças consumíveis e de reposição<br />
             </p>
-            <br/>
+            <br />
             <div className='plans-price'>
               <h3>R$ 89,90/mês</h3>
             </div>
@@ -226,123 +226,123 @@ const Vela = () =>
         </div>
       </PaddedView>
       <div className='specs'>
-          <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/678bae65-8563-4358-a89f-e67ee095754a.jpg' alt='Especificações técnicas' />
-          <div className="specs-content">
-                    <h2>Especificações</h2>
-                    <table className="table-specs">
-                        <thead>
-                            <tr>
-                                <th className="th-specs">Estrutura</th>
-                                <th className="th-specs">Descrição</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr className="tr-specs">
-                                <td className="td-specs">Quadro</td>
-                                <td className="td-specs">Aço liga 4130 CrMo - Chromoly - Total de 5 geometrias diferentes.</td>
-                            </tr>
-                            <tr className="tr-specs">
-                                <td className="td-specs">Pintura</td>
-                                <td className="td-specs">Eletrostática, verniz fosco ou brilhante. 5 cores exclusivas da Vela 2.</td>
-                            </tr>
-                            <tr className="tr-specs">
-                                <td className="td-specs">Tamanhos (quadro reto)</td>
-                                <td className="td-specs">510-26": 1,54 à 1,68 | 550-700C: 1,69 à 1,82 | 590-700C: 1,83 à 2,00</td>
-                            </tr>
-                            <tr className="tr-specs">
-                                <td className="td-specs">Tamanhos (quadro baixo)</td>
-                                <td className="td-specs">490-26": 1,50 à 1,70 | 490-700C: 1,71 à 1,90</td>
-                            </tr>
-                            <tr className="tr-specs">
-                                <td className="td-specs">Peso</td>
-                                <td className="td-specs">19-23kg</td>
-                            </tr>
-                            <tr className="tr-specs">
-                                <td className="td-specs">Aros</td>
-                                <td className="td-specs">Parede dupla de alumínio. Alex Rims.</td>
-                            </tr>
-                            <tr className="tr-specs">
-                                <td className="td-specs">Pneus</td>
-                                <td className="td-specs">Perfil 50mm (2''), urbanos com proteção antifuro.</td>
-                            </tr>
-                            <tr className="tr-specs">
-                                <td className="td-specs">Luzes</td>
-                                <td className="td-specs">Conjunto integrado em LED, acionamento automático.</td>
-                            </tr>
-                            <tr className="tr-specs">
-                                <td className="td-specs">Relação</td>
-                                <td className="td-specs">Single speed: 46x18.</td>
-                            </tr>
-                            <tr className="tr-specs">
-                                <td className="td-specs">Freios</td>
-                                <td className="td-specs">V-brake + Regenerativo do motor.</td>
-                            </tr>
-                            <tr className="tr-specs">
-                                <td className="td-specs">Manoplas</td>
-                                <td className="td-specs">Ergonômicas, com trava e costuradas em couro sintético.</td>
-                            </tr>
-                            <tr className="tr-specs">
-                                <td className="td-specs">Corrente</td>
-                                <td className="td-specs">KMC, inoxidável com powerlink.</td>
-                            </tr>
-                            <tr className="tr-specs">
-                                <td className="td-specs">Selim</td>
-                                <td className="td-specs">Ergonômico, couro sintético com molas cromadas.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-          <div className="specs-tech-content">
-                    <h2>Tecnologia</h2>
-                    
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Tech</th>
-                                <th>Descrição</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Velocidade máxima</td>
-                                <td>25 km/h no modo Super.</td>
-                            </tr>
-                            <tr>
-                                <td>Autonomia</td>
-                                <td>Até 60 km no modo Econômico. Média de 25km no modo Super.</td>
-                            </tr>
-                            <tr>
-                                <td>Bateria</td>
-                                <td>Integrada de lítio e removível | 378Wh de capacidade | Tensão nominal 36V.</td>
-                            </tr>
-                            <tr>
-                                <td>Carregador</td>
-                                <td>126W | Recarga completa em até 3h | Compatível com recarga rápida.</td>
-                            </tr>
-                            <tr>
-                                <td>Conectividade</td>
-                                <td>Bluetooth 4.2, WiFi, GPS e GSM</td>
-                            </tr>
-                            <tr>
-                                <td>Segurança</td>
-                                <td>Alarme com sensor de movimento | Bloqueio eletromagnético | Notificações no app | Rastreamento GPS.</td>
-                            </tr>
-                            <tr>
-                                <td>Aplicativo</td>
-                                <td>Vela 2: iOS + Android | Configuração da Vela, mapa, faróis, modos de condução e atualizações de performance.</td>
-                            </tr>
-                            <tr>
-                                <td>Motor</td>
-                                <td>350W traseiro com frenagem regenerativa | Bafang </td>
-                            </tr>
-                            <tr>
-                                <td>Garantia</td>
-                                <td>Acessórios: 1 ano | Bateria: 2 anos | Quadro: 3 anos | Legal: 90 dias de acordo com o Código de Defesa do Consumidor (lei 8078/1990).  </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+        <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/678bae65-8563-4358-a89f-e67ee095754a.jpg' alt='Especificações técnicas' />
+        <div className='specs-content'>
+          <h2>Especificações</h2>
+          <table className='table-specs'>
+            <thead>
+              <tr>
+                <th className='th-specs'>Estrutura</th>
+                <th className='th-specs'>Descrição</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className='tr-specs'>
+                <td className='td-specs'>Quadro</td>
+                <td className='td-specs'>Aço liga 4130 CrMo - Chromoly - Total de 5 geometrias diferentes.</td>
+              </tr>
+              <tr className='tr-specs'>
+                <td className='td-specs'>Pintura</td>
+                <td className='td-specs'>Eletrostática, verniz fosco ou brilhante. 5 cores exclusivas da Vela 2.</td>
+              </tr>
+              <tr className='tr-specs'>
+                <td className='td-specs'>Tamanhos (quadro reto)</td>
+                <td className='td-specs'>510-26": 1,54 à 1,68 | 550-700C: 1,69 à 1,82 | 590-700C: 1,83 à 2,00</td>
+              </tr>
+              <tr className='tr-specs'>
+                <td className='td-specs'>Tamanhos (quadro baixo)</td>
+                <td className='td-specs'>490-26": 1,50 à 1,70 | 490-700C: 1,71 à 1,90</td>
+              </tr>
+              <tr className='tr-specs'>
+                <td className='td-specs'>Peso</td>
+                <td className='td-specs'>19-23kg</td>
+              </tr>
+              <tr className='tr-specs'>
+                <td className='td-specs'>Aros</td>
+                <td className='td-specs'>Parede dupla de alumínio. Alex Rims.</td>
+              </tr>
+              <tr className='tr-specs'>
+                <td className='td-specs'>Pneus</td>
+                <td className='td-specs'>Perfil 50mm (2''), urbanos com proteção antifuro.</td>
+              </tr>
+              <tr className='tr-specs'>
+                <td className='td-specs'>Luzes</td>
+                <td className='td-specs'>Conjunto integrado em LED, acionamento automático.</td>
+              </tr>
+              <tr className='tr-specs'>
+                <td className='td-specs'>Relação</td>
+                <td className='td-specs'>Single speed: 46x18.</td>
+              </tr>
+              <tr className='tr-specs'>
+                <td className='td-specs'>Freios</td>
+                <td className='td-specs'>V-brake + Regenerativo do motor.</td>
+              </tr>
+              <tr className='tr-specs'>
+                <td className='td-specs'>Manoplas</td>
+                <td className='td-specs'>Ergonômicas, com trava e costuradas em couro sintético.</td>
+              </tr>
+              <tr className='tr-specs'>
+                <td className='td-specs'>Corrente</td>
+                <td className='td-specs'>KMC, inoxidável com powerlink.</td>
+              </tr>
+              <tr className='tr-specs'>
+                <td className='td-specs'>Selim</td>
+                <td className='td-specs'>Ergonômico, couro sintético com molas cromadas.</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
+        <div className='specs-tech-content'>
+          <h2>Tecnologia</h2>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Tech</th>
+                <th>Descrição</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Velocidade máxima</td>
+                <td>25 km/h no modo Super.</td>
+              </tr>
+              <tr>
+                <td>Autonomia</td>
+                <td>Até 60 km no modo Econômico. Média de 25km no modo Super.</td>
+              </tr>
+              <tr>
+                <td>Bateria</td>
+                <td>Integrada de lítio e removível | 378Wh de capacidade | Tensão nominal 36V.</td>
+              </tr>
+              <tr>
+                <td>Carregador</td>
+                <td>126W | Recarga completa em até 3h | Compatível com recarga rápida.</td>
+              </tr>
+              <tr>
+                <td>Conectividade</td>
+                <td>Bluetooth 4.2, WiFi, GPS e GSM</td>
+              </tr>
+              <tr>
+                <td>Segurança</td>
+                <td>Alarme com sensor de movimento | Bloqueio eletromagnético | Notificações no app | Rastreamento GPS.</td>
+              </tr>
+              <tr>
+                <td>Aplicativo</td>
+                <td>Vela 2: iOS + Android | Configuração da Vela, mapa, faróis, modos de condução e atualizações de performance.</td>
+              </tr>
+              <tr>
+                <td>Motor</td>
+                <td>350W traseiro com frenagem regenerativa | Bafang </td>
+              </tr>
+              <tr>
+                <td>Garantia</td>
+                <td>Acessórios: 1 ano | Bateria: 2 anos | Quadro: 3 anos | Legal: 90 dias de acordo com o Código de Defesa do Consumidor (lei 8078/1990).  </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
     <style jsx>{`
       .cover {
