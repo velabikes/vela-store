@@ -126,6 +126,7 @@ const Contact = () =>
         .values img {
           max-width: 32em;
           min-width: 10em;
+          height: auto;
           object-fit: contain;
         }
         .values p, .values h4 {
