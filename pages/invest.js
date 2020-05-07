@@ -180,7 +180,7 @@ const Invest = () =>
         .values img {
           max-width: 32em;
           min-width: 10em;
-          object-fit: cover;
+          object-fit: contain;
         }
         .values p, .values h4 {
           width: 16em;
@@ -188,14 +188,6 @@ const Invest = () =>
         .right {
           flex-direction: row-reverse;
           align-self: start;
-        }
-        .left img {
-          max-width: 100%;
-          object-fit: contain;
-        }
-        .right img {
-          max-width: 100%;
-          object-fit: contain;
         }
         .left-content {
           padding: 4em;

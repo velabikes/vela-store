@@ -392,10 +392,6 @@ const Vela = () =>
         flex-direction: column;
         margin: 1em 0;
       }
-      .left img {
-        max-width: 100%;
-        object-fit: contain;
-      }
       .left-content {
         padding: 2em 2em 1em 2em;
         text-align: center;
@@ -404,10 +400,6 @@ const Vela = () =>
         margin: 1em 0;
         display: flex;
         flex-direction: column-reverse;
-      }
-      .right img {
-        max-width: 100%;
-        object-fit: contain;
       }
       .right-content {
         padding: 2em 2em 1em 2em;
@@ -656,7 +648,7 @@ const Vela = () =>
         .section img {
           max-width: 32em;
           min-width: 10em;
-          object-fit: cover;
+          object-fit: contain;
         }
         .section p, .section h4 {
           width: 16em;

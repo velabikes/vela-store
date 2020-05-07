@@ -78,10 +78,6 @@ const Contact = () =>
         flex-direction: column;
         margin: 1em 0;
       }
-      .left img {
-        max-width: 100%;
-        object-fit: contain;
-      }
       .left-content {
         padding: 2em 2em 1em 2em;
         text-align: center;
@@ -90,10 +86,6 @@ const Contact = () =>
         display: flex;
         margin: 1em 0;
         flex-direction: column-reverse;
-      }
-      .right img {
-        max-width: 100%;
-        object-fit: contain;
       }
       .right-content {
         padding: 2em 2em 1em 2em;
@@ -134,7 +126,7 @@ const Contact = () =>
         .values img {
           max-width: 32em;
           min-width: 10em;
-          object-fit: cover;
+          object-fit: contain;
         }
         .values p, .values h4 {
           width: 16em;
