@@ -4,20 +4,19 @@ const HomeImage = () =>
     <img src='../../static/home.png' className='mobile' alt='' />
     <style jsx>{`
       img {
-        min-height: calc(100vh - 4rem);
+        min-height: 60vh;
         object-fit: cover;
-        width: 100%;
-        margin-top: 12rem;
-        object-position: 55% 45%;
+        object-position: 46% 54%;
+        margin-top: 1em;
       }
       .desktop {
         display: none;
       }
       @media only screen and (min-width: 768px) {
         img {
-          margin-top: 2rem;
-          width: 100%;
-          object-fit: cover;
+          margin-top: 0em;
+          max-width: 100vw;
+          object-fit: contain;
         }
         .mobile {
           display: none;

@@ -32,13 +32,14 @@ const SubscribeForm = () =>
                   <input type='text' name='b_950b7d190680648ed40ffbe84_dde7c564df' tabIndex='-1' defaultValue='' />
                 </div>
                 <div className='submit'>
-                  <Button primary type='submit'>Inscrever-se</Button>
+                  <Button primary type='submit'>Assinar</Button>
                 </div>
               </form>
             }
           </Formik>
       }
     />
+    <p>Fique por dentro de novidades da Vela!</p>
     <style jsx>{`
       h3 {
         color: ${lightGray};
@@ -62,11 +63,14 @@ const SubscribeForm = () =>
         margin: 0px;
       }
       p{
-        font-size: 0.8rem;
         color: ${offWhite};
+        text-align: center;
       }
       @media only screen and (min-width: 768px) {
         h3 {
+          text-align: left;
+        }
+        p {
           text-align: left;
         }
       }

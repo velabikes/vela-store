@@ -7,9 +7,7 @@ const Tab = ({ children, step }) => {
         <div className={step === 1 && 'active'}>
           1. Monte a sua
         </div>
-        <span>></span>
         <div className={step === 2 && 'active'}>2. Acessórios</div>
-        <span>></span>
         <div className={step === 3 && 'active'}>3. Pagamento</div>
       </div>
       <div className='TabContent'>
@@ -18,15 +16,23 @@ const Tab = ({ children, step }) => {
         {step === 3 && children[2]}
       </div>
       <style jsx>{`
+        .Tab {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+        }
         .TabSelector {
           display: flex;
           flex-direction: row;
+          width: 100%;
           font-size: 0.9em;
-          justify-content: space-between;
-          padding: 1em;
-          border-bottom: 1px solid ${lightGray};
           text-align: center;
           background-color: ${white};
+        }
+        .TabSelector > div {
+          border: 1px solid ${lightGray};
+          padding: 1em;
+          flex: 1;
         }
         .active {
           color: ${velaGreen};
@@ -34,18 +40,12 @@ const Tab = ({ children, step }) => {
         }
         .TabContent {
           background-color: ${white};
-          padding: 1em;
+          padding: 1.5em;
         }
         @media only screen and (min-width: 768px) {
           .Tab {
-            width: 500px;
+            width: 25.3em;
             overflow-y: auto;
-          }
-          .TabSelector {
-            justify-content: flex-start;
-          }
-          .TabSelector > * {
-            margin-right: 0.5em;
           }
           .TabContent {
             padding: 2em;

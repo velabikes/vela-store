@@ -5,7 +5,7 @@ import Button from '../Button'
 
 const Highlight = () => {
   return (
-    <PaddedView style={{ background: '#232323' }}>
+    <PaddedView style={{ background: '#272727' }}>
       <div className='Highlight'>
         <div className='content'>
           <p>O melhor desempenho para a cidade, em dois modelos diferentes</p>
@@ -35,7 +35,8 @@ const Highlight = () => {
       <div className='price'>
         <div className='left'>
           <h3>Compra</h3>
-          <p>R$ 6.890<br />Entrega em 3 meses</p>
+          <h2>R$ 6.890</h2>
+          <p>Até 12x sem juros</p>
         </div>
         <div className='actions'>
           <Link href='/vela'>
@@ -44,13 +45,17 @@ const Highlight = () => {
         </div>
         <div className='right'>
           <h3>Aluguel</h3>
-          <p>R$ 489/mês<br />Disponível em junho</p>
+          <h2>R$ 489/mês</h2>
+          <p>Disponível em junho</p>
         </div>
       </div>
       <style jsx>{`
+          .Highlight {
+            padding: 2em 1em;
+          }
           .content{
             background-color: ${offBlack};
-            padding: 1rem;
+            padding: 1rem 1rem;
             margin-bottom: 1rem;
           }
           .content p, .color p {
@@ -83,12 +88,11 @@ const Highlight = () => {
             display: flex;
             flex-direction: column;
             color: ${offWhite};
-            padding: 2em;
+            padding: 0em 2em 1em 2em;
             justify-content: center;
-            margin-top: 1em;
           }
-          .price > * {
-            min-width: 33%;
+          .price h2{
+            color: ${offWhite};
           }
           .price h3{
             color: ${offWhite};
@@ -97,34 +101,27 @@ const Highlight = () => {
             display: flex;
             align-items: center;
             justify-content: center;
+            min-width: 10em;
           }
           .actions :global(button) {
             margin: 0;
           }
-          .left {
+          .left, .right {
             padding: 2em;
-            align-self: flex-start;
-            border-left: 1px solid ${midGray};
-          }
-          .right {
-            text-align: right;
-            padding: 2em;
-            align-self: flex-end;
-            border-right: 1px solid ${midGray};
+            text-align: center;
           }
           @media only screen and (min-width: 768px) {
             .content {
-              width: 30vw;
+              width: 30em;
               height: 15em;
-              position: absolute;
               display: flex;
-              left: 30%;
               justify-content: flex-start;
               z-index: 0;
               padding: 2rem;
+              margin: 0 auto;
             }
             .content p {
-              max-width: 16vw;
+              max-width: 14em;
               text-align: left;
             }
             .models {
@@ -134,28 +131,25 @@ const Highlight = () => {
               z-index: 1;
             }
             img {
-              max-width: 30vw;
+              max-width: 21em;
             }
             .qr {
-              margin-top: 8rem;
-              margin-right: 2rem;
+              margin: -6em 2em 0 2em;
             }
             .qb {
-              margin-top: 2rem;
+              margin: -10em 2em 0 2em;
             }
             .color {
-              width: 30vw;
+              width: 30em;
               height: 15em;
-              position: absolute;
               display: flex;
-              left: 40%;
               justify-content: flex-end;
               z-index: 0;
               padding: 2rem;
-              margin-top: -13em;
+              margin: -10em auto 0 auto;
             }
             .color p {
-              max-width: 16vw;
+              max-width: 12em;
               text-align: right;
               align-self: flex-end;
             }

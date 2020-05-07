@@ -1,11 +1,12 @@
 const InvestImage = () =>
   <div className='cover'>
-    <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/5b2adc54-09c8-4a13-ad7a-744bc364427a.jpeg' className='desktop' alt='' />
-    <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/5b2adc54-09c8-4a13-ad7a-744bc364427a.jpeg' className='mobile' alt='' />
+    <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/47ff67fa-48d6-4539-9a69-daf428127c64.jpeg' className='desktop' alt='' />
+    <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/47ff67fa-48d6-4539-9a69-daf428127c64.jpeg' className='mobile' alt='' />
     <style jsx>{`
       img {
         height: calc(60vh);
         object-fit: cover;
+        object-position: 60% 30%;
         width: 100%;
       }
       .desktop {
