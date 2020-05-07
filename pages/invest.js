@@ -189,6 +189,12 @@ const Invest = () =>
           flex-direction: row-reverse;
           align-self: start;
         }
+        .left img {
+          max-width: 100%;
+        }
+        .right img {
+          max-width: 100%;
+        }
         .left-content {
           padding: 4em;
           text-align: right;

@@ -78,6 +78,9 @@ const Contact = () =>
         flex-direction: column;
         margin: 1em 0;
       }
+      .left img {
+        max-width: 100%;
+      }
       .left-content {
         padding: 2em 2em 1em 2em;
         text-align: center;
@@ -86,6 +89,9 @@ const Contact = () =>
         display: flex;
         margin: 1em 0;
         flex-direction: column-reverse;
+      }
+      .right img {
+        max-width: 100%;
       }
       .right-content {
         padding: 2em 2em 1em 2em;

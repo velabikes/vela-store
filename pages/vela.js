@@ -59,33 +59,37 @@ const Vela = () =>
             </div>
           </div>
         </div>
-        <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/ed4c1b5f-ef18-4808-8355-d8f6b1423f13.png' alt='App Vela 2' />
-        <div className='app-features'>
-          <div className='app-class'>
-            <div className='app-icon'>
-              <Battery />
-            </div>
-            <p>Nível da bateria</p>
-          </div>
-          <div className='app-class'>
-            <div className='app-icon'>
-              <Navigation />
-            </div>
-            <p>Localização GPS</p>
-          </div>
-          <div className='app-class'>
-            <div className='app-icon'>
-              <Charge />
-            </div>
-            <p>Controle de potência</p>
-          </div>
+        <div className='app-img'>
+          <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/5e7d0697-426c-4b83-8999-94c328754839.png' alt='App Vela 2' />
         </div>
-        <div className='section'>
-          <div className='left'>
-            <div className='left-content'>
-              <h2>Sempre visível</h2>
-              <h4>O rastreamento GPS garante que sua bicicleta esteja sempre ao alcance</h4>
-              <p>Observe sua Vela de qualquer distância, em qualquer lugar. Cuidamos da sua segurança, para um deslocamento sem preocupações.</p>
+        <div className='app-bottom'>
+          <div className='app-features'>
+            <div className='app-class'>
+              <div className='app-icon'>
+                <Battery />
+              </div>
+              <p>Nível da bateria</p>
+            </div>
+            <div className='app-class'>
+              <div className='app-icon'>
+                <Navigation />
+              </div>
+              <p>Localização por GPS</p>
+            </div>
+            <div className='app-class'>
+              <div className='app-icon'>
+                <Charge />
+              </div>
+              <p>Controle de potência</p>
+            </div>
+          </div>
+          <div className='section'>
+            <div className='left'>
+              <div className='left-content'>
+                <h2>Sempre visível</h2>
+                <h4>O rastreamento GPS garante que sua bicicleta esteja sempre ao alcance</h4>
+                <p>Observe sua Vela de qualquer distância, em qualquer lugar. Cuidamos da sua segurança, para um deslocamento sem preocupações.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -388,6 +392,9 @@ const Vela = () =>
         flex-direction: column;
         margin: 1em 0;
       }
+      .left img {
+        max-width: 100%;
+      }
       .left-content {
         padding: 2em 2em 1em 2em;
         text-align: center;
@@ -396,6 +403,9 @@ const Vela = () =>
         margin: 1em 0;
         display: flex;
         flex-direction: column-reverse;
+      }
+      .right img {
+        max-width: 100%;
       }
       .right-content {
         padding: 2em 2em 1em 2em;
@@ -427,10 +437,10 @@ const Vela = () =>
         background-color: ${offWhite};
       }
       .app-content img {
-        margin-bottom: 2em;
+        margin: 0 auto 2em auto;
       }
       .app-content .section {
-        padding-top: 0em;
+        padding: 2em;
       }
       .app-features {
         display: flex;
@@ -478,7 +488,7 @@ const Vela = () =>
       .plans {
         background-color: ${offWhite};
         display: flex;
-        padding: 2em;
+        padding: 3em 0em 0em 0em;
         justify-content: center;
         text-align: center;
         flex-direction: column;
@@ -487,6 +497,7 @@ const Vela = () =>
         max-width: 16em;
         margin-left: auto;
         margin-right: auto;
+        margin-bottom: 2em;
       }
       .plans-content {
         display: flex;
@@ -520,7 +531,7 @@ const Vela = () =>
         color: ${offWhite};
       }
       .specs {
-        margin: 2em auto;
+        margin: 0 auto;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -530,6 +541,7 @@ const Vela = () =>
       }
       .specs img {
         margin-top: 2em;
+        max-width: 100%;
       }
       .specs-content {
         background-color: ${white};
@@ -616,7 +628,7 @@ const Vela = () =>
           position: absolute;
           justify-content: flex-end;
           align-items: flex-start;
-          left: 8em;
+          left: 4em;
           bottom: 4em;
         }
         .cta .actions {
@@ -663,10 +675,10 @@ const Vela = () =>
           width:100%;
           height: 100%;
           object-fit: cover;
+          margin-top: 4em;
         }
         .image-cut {
           position: relative;
-          z-index: 0;
         }
         .tagline {
           justify-content: flex-end;
@@ -678,27 +690,41 @@ const Vela = () =>
           max-width: 30em;
           background-color: transparent;
         }
+        .app-img {
+          display: flex;
+          align-items: flex-end;
+          justify-content: flex-start;
+          flex-direction: column;
+          margin-top: -6em;
+        }
         .app-content .section .right {
-          margin-top: -20em;
+          margin-top: -6em;
           position: relative;
-          z-index: 1;
         }
         .app-content .section .left {
-          margin-top: -18em;
-          margin-bottom: -8em;
+          margin: 0;
         }
-        .app-content img{
-          position: relative;
-          max-width: 75%;
-          margin-top: -10em;
-          margin-left: 10em;
+        .app-content .section .right .right-content,  .app-content .section .left .left-content {
+          padding: 2em;
+          margin: 0;
+        }
+        .app-content img {
+          max-width: 70%;
+          margin-bottom: 0;
+        }
+        .app-bottom {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: flex-end;
+          margin-top: -4em;
         }
         .app-features {
-          justify-content: space-around;
-          max-width: 25em;
+          flex-direction: column;
+          margin-bottom: 2em;
         }
         .app-class {
-          margin: 4em 0 0 0;
+          margin: 1em 4em;
         }
         .bfunctions {
           flex-direction: row;
@@ -714,15 +740,14 @@ const Vela = () =>
           margin-top: 2em;
         }
         .basic, .free, .full {
-          padding: 5em;
+          padding: 4em;
         }
         .specs {
           margin: 2em auto;
           max-width: 45em;
         }
         .specs-content, .specs-tech-content {
-          min-width: 45em;
-          max-width: 45em;
+          width: 100%
         }
         @media only screen and (min-width: 1200px) {
           .plans-content{
