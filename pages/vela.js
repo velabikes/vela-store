@@ -3,7 +3,7 @@ import Link from 'next/link'
 import LandingImage from 'components/vela/LandingImage'
 import Button from '../components/Button'
 import PaddedView from '../components/PaddedView'
-import { offWhite, darkGray, offBlack, white } from '../style/colors'
+import { offWhite, darkGray, offBlack, white, midGray, lightGray } from '../style/colors'
 import { Navigation, Charge, Battery } from '../components/Icons'
 
 const Vela = () =>
@@ -106,7 +106,7 @@ const Vela = () =>
           <div className='left-content'>
             <h2>Impermeável</h2>
             <h4>Conecte o carregador diretamente na bike ou retire a bateria para carregar onde e quando precisar</h4>
-            <p>A bateria possui formato cilíndrico, feita com células de lítio e acabamento  completamente impermeabilizado. É projetada para encaixar no tubo do selim e ficar protegida no quadro.</p>
+            <p>A bateria possui formato cilíndrico, feita com células de lítio e acabamento impermeabilizado. É projetada para encaixar no tubo do selim e ficar protegida no quadro.</p>
           </div>
         </div>
         <div className='right'>
@@ -126,7 +126,7 @@ const Vela = () =>
       <div className='bfunction-content'>
         <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/7c334ed2-6d6a-4f67-9893-792c9d0c2e88.png' />
         <h2>Botão multifunções</h2>
-        <h4>Integrado ao guidão da Vela 2, o acionador em aço inox é totalmente à prova d'água e resistente à impactos</h4>
+        <h4>Integrado ao guidão da Vela 2, o acionador em aço inox é totalmente à prova d'água e resistente a impactos</h4>
         <div className='bfunctions'>
           <div className='bleft'>
             <h3>Assist</h3>
@@ -155,7 +155,7 @@ const Vela = () =>
             <div className='right-content'>
               <h2>Clássica & urbana</h2>
               <h4>Equipada com todos os acessórios essenciais para o dia a dia</h4>
-              <p>A tranquilidade de pedalar com faróis automáticos integrados, conjunto completo de paralamas, manoplas ergonômicas e mudflaps</p>
+              <p>A tranquilidade de pedalar com faróis automáticos integrados, conjunto completo de paralamas, manoplas ergonômicas e mudflaps.</p>
               <div className='actions'>
                 <Link href='/vela2'>
                   <Button primary >Monte a sua</Button>
@@ -166,6 +166,184 @@ const Vela = () =>
           </div>
         </div>
     </PaddedView>
+    <div className='plans'>
+      <PaddedView>
+        <h2>Plano Vela+</h2>
+        <h4>Obtenha a assinatura mensal da Vela para uma experiência ainda mais segura e completa.</h4>
+        <div className='plans-content'>
+          <div className='free'>
+            <h3>Simples</h3>
+            <br/>
+            <p>
+             Primeira revisão gratuita<br/>
+             Acesso à rede de recarga rápida<br/>
+             Aplicativo companheiro<br/>
+             Bloqueio Bluetooth<br/>
+             Atualizações básicas<br/>
+             </p>
+             <br/>
+             <div className='plans-price'>
+              <h3>Grátis</h3>
+             </div>
+          </div>
+          <div className='basic'>
+            <h3>Básico</h3>
+            <br/>
+            <p>
+              Primeira revisão gratuita<br/>
+              Acesso à rede de recarga rápida<br/>
+              Aplicativo companheiro<br/>
+              Bloqueio remoto<br/>
+              Atualizações exclusivas<br/>
+              Proteção contra roubo e furto<br/>
+              Rastreamento GPS<br/>
+              Vela reserva<br/>
+            </p>
+            <br/>
+            <div className='plans-price'>
+              <h3>R$ 49,90/mês</h3>
+            </div>
+          </div>
+          <div className='full'>
+            <h3>Completo</h3>
+            <br/>
+            <p>
+              Primeira revisão gratuita<br/>
+              Acesso à rede de recarga rápida<br/>
+              Aplicativo companheiro<br/>
+              Bloqueio remoto<br/>
+              Atualizações exclusivas<br/>
+              Proteção contra roubo e furto<br/>
+              Rastreamento GPS<br/>
+              Vela reserva<br/>
+              Peças consumíveis e de reposição<br/>
+            </p>
+            <br/>
+            <div className='plans-price'>
+              <h3>R$ 89,90/mês</h3>
+            </div>
+          </div>
+        </div>
+      </PaddedView>
+      <div className='specs'>
+          <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/678bae65-8563-4358-a89f-e67ee095754a.jpg' alt='Especificações técnicas' />
+          <div className="specs-content">
+                    <h2>Especificações</h2>
+                    <table className="table-specs">
+                        <thead>
+                            <tr>
+                                <th className="th-specs">Estrutura</th>
+                                <th className="th-specs">Descrição</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr className="tr-specs">
+                                <td className="td-specs">Quadro</td>
+                                <td className="td-specs">Aço liga 4130 CrMo - Chromoly - Total de 5 geometrias diferentes.</td>
+                            </tr>
+                            <tr className="tr-specs">
+                                <td className="td-specs">Pintura</td>
+                                <td className="td-specs">Eletrostática, verniz fosco ou brilhante. 5 cores exclusivas da Vela 2.</td>
+                            </tr>
+                            <tr className="tr-specs">
+                                <td className="td-specs">Tamanhos (quadro reto)</td>
+                                <td className="td-specs">510-26": 1,54 à 1,68 | 550-700C: 1,69 à 1,82 | 590-700C: 1,83 à 2,00</td>
+                            </tr>
+                            <tr className="tr-specs">
+                                <td className="td-specs">Tamanhos (quadro baixo)</td>
+                                <td className="td-specs">490-26": 1,50 à 1,70 | 490-700C: 1,71 à 1,90</td>
+                            </tr>
+                            <tr className="tr-specs">
+                                <td className="td-specs">Peso</td>
+                                <td className="td-specs">19-23kg</td>
+                            </tr>
+                            <tr className="tr-specs">
+                                <td className="td-specs">Aros</td>
+                                <td className="td-specs">Parede dupla de alumínio. Alex Rims.</td>
+                            </tr>
+                            <tr className="tr-specs">
+                                <td className="td-specs">Pneus</td>
+                                <td className="td-specs">Perfil 50mm (2''), urbanos com proteção antifuro.</td>
+                            </tr>
+                            <tr className="tr-specs">
+                                <td className="td-specs">Luzes</td>
+                                <td className="td-specs">Conjunto integrado em LED, acionamento automático.</td>
+                            </tr>
+                            <tr className="tr-specs">
+                                <td className="td-specs">Relação</td>
+                                <td className="td-specs">Single speed: 46x18.</td>
+                            </tr>
+                            <tr className="tr-specs">
+                                <td className="td-specs">Freios</td>
+                                <td className="td-specs">V-brake + Regenerativo do motor.</td>
+                            </tr>
+                            <tr className="tr-specs">
+                                <td className="td-specs">Manoplas</td>
+                                <td className="td-specs">Ergonômicas, com trava e costuradas em couro sintético.</td>
+                            </tr>
+                            <tr className="tr-specs">
+                                <td className="td-specs">Corrente</td>
+                                <td className="td-specs">KMC, inoxidável com powerlink.</td>
+                            </tr>
+                            <tr className="tr-specs">
+                                <td className="td-specs">Selim</td>
+                                <td className="td-specs">Ergonômico, couro sintético com molas cromadas.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+          <div className="specs-tech-content">
+                    <h2>Tecnologia</h2>
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tech</th>
+                                <th>Descrição</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Velocidade máxima</td>
+                                <td>25 km/h no modo Super.</td>
+                            </tr>
+                            <tr>
+                                <td>Autonomia</td>
+                                <td>Até 60 km no modo Econômico. Média de 25km no modo Super.</td>
+                            </tr>
+                            <tr>
+                                <td>Bateria</td>
+                                <td>Integrada de lítio e removível | 378Wh de capacidade | Tensão nominal 36V.</td>
+                            </tr>
+                            <tr>
+                                <td>Carregador</td>
+                                <td>126W | Recarga completa em até 3h | Compatível com recarga rápida.</td>
+                            </tr>
+                            <tr>
+                                <td>Conectividade</td>
+                                <td>Bluetooth 4.2, WiFi, GPS e GSM</td>
+                            </tr>
+                            <tr>
+                                <td>Segurança</td>
+                                <td>Alarme com sensor de movimento | Bloqueio eletromagnético | Notificações no app | Rastreamento GPS.</td>
+                            </tr>
+                            <tr>
+                                <td>Aplicativo</td>
+                                <td>Vela 2: iOS + Android | Configuração da Vela, mapa, faróis, modos de condução e atualizações de performance.</td>
+                            </tr>
+                            <tr>
+                                <td>Motor</td>
+                                <td>350W traseiro com frenagem regenerativa | Bafang </td>
+                            </tr>
+                            <tr>
+                                <td>Garantia</td>
+                                <td>Acessórios: 1 ano | Bateria: 2 anos | Quadro: 3 anos | Legal: 90 dias de acordo com o Código de Defesa do Consumidor (lei 8078/1990).  </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+        </div>
+    </div>
     <style jsx>{`
       .cover {
         position: relative;
@@ -203,17 +381,19 @@ const Vela = () =>
       .section {
         display: flex;
         flex-direction: column;
-        padding-top: 2em;
+        padding: 1em 0;
       }
       .left {
         display: flex;
         flex-direction: column;
+        margin: 1em 0;
       }
       .left-content {
         padding: 2em 2em 1em 2em;
         text-align: center;
       }
       .right {
+        margin: 1em 0;
         display: flex;
         flex-direction: column-reverse;
       }
@@ -271,14 +451,14 @@ const Vela = () =>
       .bfunction-content {
         background-color: ${offWhite};
         max-width: 45em;
-        padding: 3em 0;
-        margin: 2em auto;
+        padding: 3em 0 0 0;
+        margin: 1em auto;
         display: flex;
         flex-direction: column;
         align-items: center;
       }
       .bfunction-content h4{
-        max-width: 20em;
+        max-width: 18em;
         text-align: center;
       }
       .bfunctions {
@@ -295,11 +475,143 @@ const Vela = () =>
         text-align: center;
         max-width: 10em;
       }
+      .plans {
+        background-color: ${offWhite};
+        display: flex;
+        padding: 2em;
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+      }
+      .plans h4 {
+        max-width: 16em;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .plans-content {
+        display: flex;
+        flex-direction: column;
+      }
+      .basic {
+        padding: 2em;
+        background-color: ${white};
+        display: flex;
+        flex-direction: column;
+      }
+      .free {
+        padding: 2em;
+        background-color: ${lightGray};
+        display: flex;
+        flex-direction: column;
+      }
+      .full {
+        padding: 2em;
+        background-color: ${offBlack};
+        display: flex;
+        flex-direction: column;
+      }
+      .plans-price {
+        margin-top: auto;
+      }
+      .basic h3, .free h3 {
+        color: ${offBlack};
+      }
+      .full h3, .full p {
+        color: ${offWhite};
+      }
+      .specs {
+        margin: 2em auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .specs-tech-content h2 {
+        color: ${offWhite}
+      }
+      .specs img {
+        margin-top: 2em;
+      }
+      .specs-content {
+        background-color: ${white};
+        padding: 2em 2em 0 2em;
+        text-align: left;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+      .specs-tech-content {
+        background-color: ${offBlack};
+        padding: 2em 2em 0 2em;
+        text-align: left;
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+      }
+      .table-specs {
+        border-collapse: collapse;
+        margin: 2em 0;
+        font-size: 0.8em;
+      }
+    
+      .th-specs {
+        background: ${lightGray};
+        text-align: left;
+        color: ${offBlack};
+      }
+    
+      .th-specs, .td-specs {
+        padding: 1em;
+        font-size: 0.8em;
+        color: ${offBlack};
+      }
+    
+      .tr-specs:nth-child(even) {
+        background: ${lightGray};
+      }
+    
+      .tr-specs:hover {
+        background: ${lightGray};
+      }
+    
+      table {
+        border-collapse: collapse;
+        margin: 2em 0;
+        font-size: 0.8em;
+      }
+    
+      th {
+        background: ${darkGray};
+        text-align: left;
+        color: ${offWhite};
+      }
+      table tr td:last-child {
+        text-align: left;
+      }
+      th, td {
+        padding: 1em;
+        font-family: helvetica, sans-serif;
+        font-size: 0.8em;
+        color: ${offWhite};
+        text-align: left;
+      }
+    
+      tr:nth-child(even) {
+        background: ${darkGray};
+      }
+    
+      tr:hover {
+        background: ${darkGray};
+      }
+    
+
       @media only screen and (min-width: 768px) {
         h1 {
           font-size: 8em;
         }
-        
         .cta {
           position: absolute;
           justify-content: flex-end;
@@ -319,7 +631,7 @@ const Vela = () =>
         }
         .section {
           flex-direction: column;
-          padding-top: 4em;
+          padding-top: 2em;
           padding-bottom: 2em;
           align-items: stretch;
         }
@@ -372,8 +684,8 @@ const Vela = () =>
           z-index: 1;
         }
         .app-content .section .left {
-          margin-top: -20em;
-          margin-bottom: -10em;
+          margin-top: -18em;
+          margin-bottom: -8em;
         }
         .app-content img{
           position: relative;
@@ -393,6 +705,36 @@ const Vela = () =>
           padding: 2em
           justify-content: space-between;
           margin-top: 2em;
+        }
+        .plans {
+          padding: 4em;
+        }
+        .plans-content {
+          flex-direction: column;
+          margin-top: 2em;
+        }
+        .basic, .free, .full {
+          padding: 5em;
+        }
+        .specs {
+          margin: 2em auto;
+          max-width: 45em;
+        }
+        .specs-content, .specs-tech-content {
+          min-width: 45em;
+          max-width: 45em;
+        }
+        @media only screen and (min-width: 1200px) {
+          .plans-content{
+            flex-direction: row;
+          }
+          .basic {
+            margin: 0 2em;
+            padding: 4em;
+          }
+          .full, .free {
+            padding: 4em;
+          }
         }
       }
     `}</style>

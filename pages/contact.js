@@ -1,6 +1,7 @@
 import { compose } from 'recompose'
 import Head from 'next/head'
 import { offWhite, darkGray } from '../style/colors'
+import PaddedView from '../components/PaddedView'
 
 const Contact = () =>
   <div className='contact'>
@@ -31,6 +32,26 @@ const Contact = () =>
         <p><b>Problemas com o pedido?</b><br /> Avise-nos imediatamente para entendermos e avaliarmos o ocorrido.</p>
       </div>
     </div>
+    <PaddedView>
+    <div className='values'>
+        <div className='left'>
+          <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/a7eb5d2f-cebf-4e6e-b794-f1a3001649c0.png' />
+          <div className='left-content'>
+            <h2>FAQ</h2>
+            <h4>Confira nosso banco de informações para uma solução rápida</h4>
+            <p>Muitas vezes, sua dúvida é similar a de outros clientes que já visitaram nosso site. Veja quais são os <a href='https://velabikes.freshdesk.com/support/home'>tópicos</a> mais comentados.</p>
+          </div>
+        </div>
+        <div className='right'>
+          <div className='right-content'>
+            <h2>Parcerias</h2>
+            <h4>Conhece alguma bicicletaria de confiança? Um café bike-friendly que pode virar um ponto de recarga?</h4>
+            <p>Conte pra nós! Estamos sempre à procura de novas parcerias e confiamos na sua <a href='https://forms.gle/ak7SmCqumKLRQiyr5'>indicação</a>.</p>
+          </div>
+          <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/16e82f28-14c7-40bd-b4ab-6a31c8528b21.png' />
+        </div>
+      </div>
+    </PaddedView>
     <style jsx>{`
       h3 {
         color: ${darkGray};
@@ -47,6 +68,28 @@ const Contact = () =>
         background-color: ${offWhite};
         padding: 2em;
         margin: 0 auto;
+      }
+      .values {
+        display: flex;
+        flex-direction: column;
+      }
+      .left {
+        display: flex;
+        flex-direction: column;
+        margin: 1em 0;
+      }
+      .left-content {
+        padding: 2em 2em 1em 2em;
+        text-align: center;
+      }
+      .right {
+        display: flex;
+        margin: 1em 0;
+        flex-direction: column-reverse;
+      }
+      .right-content {
+        padding: 2em 2em 1em 2em;
+        text-align: center;
       }
       @media only screen and (min-width: 768px) {
         img {
@@ -68,6 +111,37 @@ const Contact = () =>
         .main {
           display: flex;
           flex-direction: row;
+          justify-content: space-between;
+        }
+        .values {
+          flex-direction: column;
+          padding-top: 2em;
+          padding-bottom: 2em;
+          align-items: stretch;
+        }
+        .left {
+          flex-direction: row-reverse;
+          margin-bottom: 2em;
+        }
+        .values img {
+          max-width: 32em;
+          min-width: 10em;
+          object-fit: cover;
+        }
+        .values p, .values h4 {
+          width: 16em;
+        }
+        .right {
+          flex-direction: row-reverse;
+          align-self: start;
+        }
+        .left-content {
+          padding: 4em;
+          text-align: right;
+        }
+        .right-content {
+          padding: 4em;
+          text-align: left;
         }
       }
     `}</style>

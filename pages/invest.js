@@ -105,6 +105,7 @@ const Invest = () =>
       .left {
         display: flex;
         flex-direction: column;
+        margin: 1em 0;
       }
       .left-content {
         padding: 2em 2em 1em 2em;
@@ -112,6 +113,7 @@ const Invest = () =>
       }
       .right {
         display: flex;
+        margin: 1em 0;
         flex-direction: column-reverse;
       }
       .right-content {
@@ -167,7 +169,7 @@ const Invest = () =>
         }
         .values {
           flex-direction: column;
-          padding-top: 4em;
+          padding-top: 2em;
           padding-bottom: 2em;
           align-items: stretch;
         }
