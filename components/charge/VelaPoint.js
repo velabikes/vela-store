@@ -4,7 +4,7 @@ import SectionHeader from 'components/SectionHeader'
 import VelaPointFigure from './VelaPointFigure'
 
 const VelaPoint = () =>
-  <>
+  <div className='content'>
     <div className='Point'>
       <div className='PointContent'>
         <SectionHeader title='Rede' tagline='Confira o mapa para encontrar lojas da Vela, recarregar em pontos parceiros e procurar assistência autorizada.' />
@@ -40,6 +40,9 @@ const VelaPoint = () =>
         margin: 0;
       }
       @media only screen and (min-width: 768px) {
+        .content {
+          padding: 2em;
+        }
         .FigureWrapper {
           padding: 3em 0 0 0;
         }
@@ -51,5 +54,5 @@ const VelaPoint = () =>
         }
       }
     `}</style>
-  </>
+  </div>
 export default VelaPoint

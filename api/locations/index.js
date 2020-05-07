@@ -145,15 +145,15 @@ module.exports = async (req, res) => {
       type: ['service']
     },
     {
-      googlePlace: 'ChIJ-21CUWYyWpMRY86ecoW0fuA',
-      type: ['service']
-    },
-    {
       googlePlace: 'ChIJKcPVzHI7WpMRaU9RkzCJHTY',
       type: ['service']
     },
     {
       googlePlace: 'ChIJKcPVzHI7WpMRaU9RkzCJHTY',
+      type: ['service']
+    },
+    {
+      googlePlace: 'ChIJkx4WygPXv5QR4Xyde_WDwps',
       type: ['service']
     },
     {

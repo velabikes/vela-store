@@ -3,13 +3,10 @@ import PropTypes from 'prop-types'
 const SectionHeader = ({ align, title, tagline }) =>
   <header className='SectionHeader'>
     <h2>{title}</h2>
-    {tagline && <p>{tagline}</p>}
+    {tagline && <h4>{tagline}</h4>}
     <style jsx>{`
       .SectionHeader {
         text-align: ${align};
-      }
-      p {
-        font-size: 1rem;
       }
     `}</style>
   </header>

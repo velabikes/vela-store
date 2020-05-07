@@ -9,7 +9,7 @@ import Card from 'components/Card'
 import { NextIcon } from 'components/Icons'
 import PostHighlight from 'components/blog/PostHighlight'
 import Link from 'next/link'
-import { offWhite } from '../../style/colors'
+import { offWhite, velaGreen } from '../../style/colors'
 
 const Blog = ({ posts, highlight }) =>
   <div className='blog' style={{ background: `${offWhite}` }}>
@@ -36,7 +36,7 @@ const Blog = ({ posts, highlight }) =>
                     <p>{teaser[0].text}</p>
                     <br />
                     <div className='actions'>
-                      <a>Ler mais  <NextIcon fill='#3D9771' /></a>
+                      <a>Ler mais  <NextIcon fill={velaGreen} /></a>
                     </div>
                   </div>
                 </Link>
