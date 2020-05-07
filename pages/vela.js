@@ -647,8 +647,7 @@ const Vela = () =>
         }
         .section img {
           max-width: 32em;
-          min-width: 10em;
-          height: auto;
+          max-height: 25em;
           object-fit: contain;
         }
         .section p, .section h4 {
