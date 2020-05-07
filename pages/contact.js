@@ -95,7 +95,7 @@ const Contact = () =>
         img {
           max-width: 30em;
           min-width: 0em;
-          max-height: 100%;
+          max-height: 100vh;
         }
         .content {
           text-align: left;
