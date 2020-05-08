@@ -38,7 +38,7 @@ const Vela = () =>
       </div>
     </PaddedView>
     <div className='image-cut'>
-      <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/43aee021-e0ee-4215-8633-b23d2501b3f0.png' alt='Bike elétrica' />
+      <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/3c631a0b-eef5-4bcc-9a70-3d94dbd6f56e.png' alt='Bike elétrica' />
       <div className='tagline'>
         <h2>Tecnologia e design nunca estiveram tão próximos</h2>
         <div className='actions'>
