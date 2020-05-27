@@ -30,7 +30,7 @@ const HomePage = ({ images }) =>
           <h4>Conheça a primeira smartbike do Brasil. Faça parte do futuro. Agora.</h4>
           <div className='actions'>
             <Link href='/vela'>
-              <Button primary>Comprar</Button>
+              <Button primary>Saiba mais</Button>
             </Link>
           </div>
         </div>

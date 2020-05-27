@@ -40,7 +40,7 @@ const Highlight = () => {
         </div>
         <div className='actions'>
           <Link href='/vela'>
-            <Button primary>Comprar</Button>
+            <Button primary>Saiba mais</Button>
           </Link>
         </div>
         <div className='right'>
