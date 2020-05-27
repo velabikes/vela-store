@@ -26,8 +26,7 @@ const LegalPage = ({
         <p>A Vela contempla Frete Grátis para algumas regiões do Brasil. Confira abaixo se o seu estado está entre as localidades:</p>
         <p>1.1 Estados com frete grátis para compras a partir de R$ 4.500,00:</p>
         <p>
-          <li>São Paulo</li>
-          <li>Paraná</li>
+          <li>Grande São Paulo</li>
         </p>
         <p>1.2 Outras localidades:</p>
         <p>Outras localidades não são elegíveis ao frete grátis. Consultar as taxas diretamente na finalização do pedido, ao inserir o endereço de entrega.</p>
