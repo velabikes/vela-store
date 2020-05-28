@@ -113,10 +113,6 @@ module.exports = async (req, res) => {
       type: ['charger']
     },
     {
-      googlePlace: 'ChIJn1n3d3Tl3JQRTfhvF4WzCxc', // Nos Camisetas - Curitiba
-      type: ['charger']
-    },
-    {
       googlePlace: 'ChIJ340zClZ4GZURu2Yy8ZXSSl4', // Maiss Bike Storie - Porto Alegre/RS
       type: ['service']
     },
