@@ -622,7 +622,7 @@ const Vela = () =>
           position: absolute;
           justify-content: flex-end;
           align-items: flex-start;
-          left: 4em;
+          left: 20em;
           bottom: 4em;
         }
         .cta .actions {
@@ -689,10 +689,10 @@ const Vela = () =>
           align-items: flex-end;
           justify-content: flex-start;
           flex-direction: column;
-          margin-top: -10em;
+          margin-top: -8em;
         }
         .app-content .section .right {
-          margin-top: -10em;
+          margin-top: -8em;
           position: relative;
         }
         .app-content .section .left {
