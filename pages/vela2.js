@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { useState } from 'react'
 import Head from 'next/head'
 import { compose } from 'recompose'

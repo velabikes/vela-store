@@ -3,7 +3,7 @@ import Link from 'next/link'
 import LandingImage from 'components/vela/LandingImage'
 import Button from '../components/Button'
 import PaddedView from '../components/PaddedView'
-import { offWhite, darkGray, offBlack, white, midGray, lightGray } from '../style/colors'
+import { offWhite, darkGray, offBlack, white, lightGray } from '../style/colors'
 import { Navigation, Charge, Battery } from '../components/Icons'
 
 const Vela = () =>
@@ -128,7 +128,7 @@ const Vela = () =>
         </div>
       </div>
       <div className='bfunction-content'>
-        <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/38f776ca-ba8a-41c8-9452-fe132d492fa0.png' />
+        <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/38f776ca-ba8a-41c8-9452-fe132d492fa0.png' alt='Botão multifunções' />
         <h2>Botão multifunções</h2>
         <h4>Integrado ao guidão da Vela 2, o acionador em aço inox é totalmente à prova d'água e resistente a impactos</h4>
         <div className='bfunctions'>
@@ -157,7 +157,7 @@ const Vela = () =>
         </div>
         <div className='right'>
           <div className='right-content'>
-            <h2>Clássica & urbana</h2>
+            <h2>Clássica & Urbana</h2>
             <h4>Equipada com todos os acessórios essenciais para o dia a dia</h4>
             <p>A tranquilidade de pedalar com faróis automáticos integrados, conjunto completo de paralamas, manoplas ergonômicas e mudflaps.</p>
             <div className='actions'>
@@ -689,10 +689,10 @@ const Vela = () =>
           align-items: flex-end;
           justify-content: flex-start;
           flex-direction: column;
-          margin-top: -6em;
+          margin-top: -10em;
         }
         .app-content .section .right {
-          margin-top: -6em;
+          margin-top: -10em;
           position: relative;
         }
         .app-content .section .left {

@@ -57,7 +57,7 @@ module.exports = async (req, res) => {
       type: ['charger']
     },
     {
-      googlePlace: 'ChIJc7C0To9ZzpQRxI8xZGKRSRM', //SOW Cake Lounge - SP
+      googlePlace: 'ChIJc7C0To9ZzpQRxI8xZGKRSRM', // SOW Cake Lounge - SP
       type: ['charger']
     },
     {
@@ -126,7 +126,7 @@ module.exports = async (req, res) => {
     },
     {
       googlePlace: 'ChIJ_fqvTp06WpMR1dgVjHcw6Js', // Super Bike 101 - Brasília/DF
-      type: ['service']
+      type: ['service', 'charger']
     },
     {
       googlePlace: 'ChIJk6zVqYYDzpQRsZpUOCLGA8s', // Moto7Mobility - Santos/SP
@@ -150,11 +150,11 @@ module.exports = async (req, res) => {
     },
     {
       googlePlace: 'ChIJcexbQKAbHJURcWBerIApvFI', // Magrela Oficina Café - Carlos Barbosa/RS
-      type: ['service']
+      type: ['service', 'charger']
     },
     {
       googlePlace: 'ChIJHd72H1jh3JQRTBA9mMMznpg', // Bike4U - Curiitiba/PR
-      type: ['service','charger']
+      type: ['service', 'charger']
     },
     {
       googlePlace: 'ChIJbYBYc6bLyZQRR_tQCYahjaE', // Bicicletaria Cross Bike - SJBV/SP
