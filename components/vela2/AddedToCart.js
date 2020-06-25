@@ -10,7 +10,8 @@ const AddedToCart = ({ checkout, onStep }) => {
       <p><b>Itens adicionados ao carrinho!</b></p>
       <p>Finalize seu pedido ou confira mais acessórios, como cadeirinhas, caixotes e alforges, e continue comprando em nossa <a href='/loja'>loja</a>.</p>
       <p>Aceitamos pagamentos via PayPal, com opção de 12x sem juros no cartão de crédito, cartão de débito ou boleto bancário.</p>
-      <div className='another' onClick={() => onStep(1)}>Adicionar outra unidade</div>
+      <div className='another' onClick={() => onStep(1)}><Button secondary>Adicionar outra Vela 2</Button></div>
+      <p><b>Confira e revise os itens do seu pedido para finalizar:</b></p>
       <div className='items'>
         <table>
           <tbody>

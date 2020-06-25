@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { compose } from 'recompose'
 import { lightGray, darkGray } from '../../style/colors'
 import withCheckout from '../../containers/withCheckout'
@@ -8,8 +9,7 @@ const Bar = ({ onContinue, extra, step, checkout }) => {
   return (
     <div className='Bar'>
       <div className='top'>
-        <p><a href='/vela'>Especificações técnicas</a></p>
-        <p className='right'>Entrega em três meses</p>
+        <p className='right'>Entrega em três meses</p><small>Por conta do COVID-19, o prazo de entrega se encontra estendido e pode sofrer alterações.</small>
       </div>
       <div className='bottom'>
         <div className='left'>
@@ -56,7 +56,7 @@ const Bar = ({ onContinue, extra, step, checkout }) => {
         max-width: 6rem;
       }
       .right {
-        text-align: right;
+        text-align: left;
       }
       .left {
         display: flex;
@@ -68,6 +68,9 @@ const Bar = ({ onContinue, extra, step, checkout }) => {
       }
       .actions :global(button) {
         margin: 0;
+      }
+      small {
+        max-width: 15em;
       }
       @media only screen and (min-width: 768px) {
         .Bar {
@@ -81,7 +84,7 @@ const Bar = ({ onContinue, extra, step, checkout }) => {
         .top {
           font-size: 0.8em;
           display: flex;
-          justify-content: flex-start;
+          justify-content: center;
           padding: 0 0 0 6em;
         }
         .top p{
@@ -89,14 +92,15 @@ const Bar = ({ onContinue, extra, step, checkout }) => {
           text-align: center;
           margin: 0;
         }
-        .right {
-          padding-left: 12em;
-        }
         .left {
           flex-direction: column;
         }
         .left h1 {
           padding-right: 1.5em;
+        }
+        small {
+          border-left: 1px ${lightGray} solid;
+          padding-left: 1em;
         }
       }
     `}</style>
