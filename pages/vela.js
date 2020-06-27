@@ -176,7 +176,7 @@ const Vela = () =>
         <h4>Obtenha a assinatura mensal da Vela para uma experiência ainda mais segura e completa.</h4>
         <div className='plans-content'>
           <div className='free'>
-            <h3>Simples</h3>
+            <h3>Livre</h3>
             <br />
             <p>
               Primeira revisão gratuita<br />
@@ -191,7 +191,7 @@ const Vela = () =>
             </div>
           </div>
           <div className='basic'>
-            <h3>Básico</h3>
+            <h3>Simples</h3>
             <br />
             <p>
               Primeira revisão gratuita<br />
