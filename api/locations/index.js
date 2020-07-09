@@ -165,43 +165,35 @@ module.exports = async (req, res) => {
       type: ['service']
     },
     {
-      googlePlace: 'ChIJcVxJBsxZzpQRFMJ_Q7lID8w',
+      googlePlace: 'ChIJD_bw-FBXzpQRD8qQzh95so0', // CarPark
       type: ['parking']
     },
     {
-      googlePlace: 'ChIJ40wX2AFazpQRwDbHK9M_DdI',
+      googlePlace: 'ChIJ40wX2AFazpQRwDbHK9M_DdI', // Born to Crossfit
       type: ['parking']
     },
     {
-      googlePlace: 'EktBbGFtZWRhIENhbXBpbmFzLCA0NDUgLSBKYXJkaW0gUGF1bGlzdGEsIFPDo28gUGF1bG8gLSBTUCwgMDE0MDQtMTAwLCBCcmF6aWwiMRIvChQKEgn3URm5x1nOlBHTNM9i0wEJ6BC9AyoUChIJJfBwmsZZzpQRNLtDV3SchRM',
+      googlePlace: 'ChIJ7Vo9d0tYzpQRYEXmgBCMtic', // Augusta
       type: ['parking']
     },
     {
-      googlePlace: 'ChIJTQw8QQtXzpQRqC3spwDZMOI',
+      googlePlace: 'ChIJcVxJBsxZzpQRFMJ_Q7lID8w', // Blue Treee Paulista
       type: ['parking']
     },
     {
-      googlePlace: 'ChIJyQilm8tQzpQRt2fiotym1BA',
+      googlePlace: 'EktBbGFtZWRhIENhbXBpbmFzLCA0NDUgLSBKYXJkaW0gUGF1bGlzdGEsIFPDo28gUGF1bG8gLSBTUCwgMD', // Campinas
       type: ['parking']
     },
     {
-      googlePlace: 'ChIJ7Vo9d0tYzpQRYEXmgBCMtic',
+      googlePlace: 'ChIJXWxlQAtXzpQR6x5y20r-0KQ', // Brasil Park Faria Lima
       type: ['parking']
     },
     {
-      googlePlace: 'ChIJ3Sy3J7pXzpQR7l-ZefxvsmY',
+      googlePlace: 'ChIJKWFFmstQzpQRprSSUcZ4ztI', // Brasil Park Berrini
       type: ['parking']
     },
     {
-      googlePlace: 'ChIJeTz9-VBXzpQRKiyUmAofCoc',
-      type: ['parking']
-    },
-    {
-      googlePlace: 'ChIJhXdZkkVYzpQRiLOGttP33AI',
-      type: ['parking']
-    },
-    {
-      googlePlace: 'ChIJb5SfPHpXzpQRNSE_pMCnJM4',
+      googlePlace: 'CChIJrxP7kkVYzpQRTmy9zVVFKrs', // Brasil Park Arouche
       type: ['parking']
     },
     {
