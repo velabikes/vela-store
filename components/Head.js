@@ -22,6 +22,7 @@ const CustomHead = props =>
     <FacebookPixel />
     <Freshchat />
     <Heatmap />
+    <Pop />
     <style jsx global>{`
       body * {
         //outline: 1px solid rgba(200,0,0,0.1)
