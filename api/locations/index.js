@@ -963,7 +963,7 @@ module.exports = async (req, res) => {
       {
         name: 'Born To Crossfit',
         address: [
-          'R. Diogo Jacomé, 661',
+          'R. Diogo Jacome, 661',
           'Moema, São Paulo',
           'SP, 04511, Brasil'
         ],
@@ -976,7 +976,7 @@ module.exports = async (req, res) => {
         type: ['parking']
       },
       {
-        name: 'Alameda Campinas',
+        name: 'Alameda Campinas, 445',
         address: [
           'Alameda Campinas, 445',
           'Jardim Paulista, São Paulo',
@@ -991,7 +991,7 @@ module.exports = async (req, res) => {
         type: ['parking']
       },
       {
-        name: 'Av. Faria Lima',
+        name: 'Condomínio Edifício Barão De Rothschild',
         address: [
           'Av. Brg. Faria Lima, 1572',
           'Jardim Paulistano, São Paulo',
@@ -1016,7 +1016,7 @@ module.exports = async (req, res) => {
         type: ['parking']
       },
       {
-        name: 'Av. Berrini',
+        name: 'BrasilPark - Ed. Itamambuca',
         address: [
           'Rua André Ampére, 65',
           'Cidade Monções, São Paulo',

@@ -325,7 +325,7 @@ const Vela = () =>
         align-items: flex-end;
         flex-direction: column;
         top: 1em;
-        right: 3em;
+        right: 2em;
         text-align: right
       }
       .slogan h1 {
@@ -579,7 +579,7 @@ const Vela = () =>
           align-items: flex-start;
           text-align: left;
           left: 4em;
-          top: 6em;
+          top: 4em;
         }
         .cta .actions {
           margin-top: 0em;

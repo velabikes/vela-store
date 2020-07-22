@@ -108,7 +108,7 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
           right: initial;
         }
         .app-content {
-          margin-top: 0rem;
+          margin-top: 3.5rem;
           margin-left: 0;
         }
         header > div {
