@@ -1,68 +1,108 @@
-import { compose } from 'recompose'
-import Head from 'next/head'
-import PaddedView from '../components/PaddedView'
-import InvestImage from '../components/invest/InvestImage'
-import { offBlack, white, offWhite, darkGray, midGray } from '../style/colors'
-import InvestForm from '../components/invest/InvestForm'
+import { compose } from "recompose";
+import Head from "next/head";
+import PaddedView from "../components/PaddedView";
+import InvestImage from "../components/invest/InvestImage";
+import { offBlack, white, offWhite, darkGray } from "../style/colors";
+import InvestForm from "../components/invest/InvestForm";
 
-const Invest = () =>
+const Invest = () => (
   <>
-    <Head >
+    <Head>
       <title>Investir - Vela Bikes</title>
     </Head>
     <InvestImage />
     <PaddedView style={{ background: `${white}` }}>
-      <div className='main'>
-        <div className='main-title'>
+      <div className="main">
+        <div className="main-title">
           <h1>Pedale para o futuro com a Vela</h1>
           <h4>Vamos mudar o desenvolvimento da mobilidade urbana no Brasil!</h4>
         </div>
-        <div className='main-subtitle'>
-          <p>Nascemos de um financiamento coletivo em 2014, do qual alguns apoiadores vieram a se tornar sócios e credores. Hoje abrimos espaço à todos que se identificam com o propósito de contribuir para cidades mais saudáveis. O coletivo está no DNA da Vela.</p>
+        <div className="main-subtitle">
+          <p>
+            Nascemos de um financiamento coletivo em 2014, do qual alguns
+            apoiadores vieram a se tornar sócios e credores. Hoje abrimos espaço
+            à todos que se identificam com o propósito de contribuir para
+            cidades mais saudáveis. O coletivo está no DNA da Vela.
+          </p>
         </div>
       </div>
-      <div className='values'>
-        <div className='left'>
-          <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/dae5968e-1ec7-457a-86f7-ae082ca4c460.jpg' />
-          <div className='left-content'>
+      <div className="values">
+        <div className="left">
+          <img
+            src="https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/dae5968e-1ec7-457a-86f7-ae082ca4c460.jpg"
+            alt="Inovação Vela"
+          />
+          <div className="left-content">
             <h2>Inovação</h2>
-            <h4>Crescemos no ambiente digital e somos verticalmente integrados</h4>
-            <p>A Vela vive em constante evolução, desde o desenvolvimento dos produtos até a experiência de uso para os clientes.</p>
+            <h4>
+              Crescemos no ambiente digital e somos verticalmente integrados
+            </h4>
+            <p>
+              A Vela vive em constante evolução, desde o desenvolvimento dos
+              produtos até a experiência de uso para os clientes.
+            </p>
           </div>
         </div>
-        <div className='right'>
-          <div className='right-content'>
+        <div className="right">
+          <div className="right-content">
             <h2>Transparência</h2>
-            <h4>Temos como base uma comunicação empática, transparente e que respeita a privacidade</h4>
-            <p>Acreditamos em um espaço urbano mais colaborativo, que aproxima as pessoas e fortalece relações.</p>
+            <h4>
+              Temos como base uma comunicação empática, transparente e que
+              respeita a privacidade
+            </h4>
+            <p>
+              Acreditamos em um espaço urbano mais colaborativo, que aproxima as
+              pessoas e fortalece relações.
+            </p>
           </div>
-          <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/53cd5397-c076-4ab5-9145-0294c31873da.jpg' />
+          <img
+            src="https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/53cd5397-c076-4ab5-9145-0294c31873da.jpg"
+            alt="Transparência Vela"
+          />
         </div>
       </div>
     </PaddedView>
-    <div className='models-content'>
-        <div className='models'>
-          <div className='m1'>
-            <h3>Seja acionista</h3>
-            <p>Invista em ações com percentual definido e participe da nossa jornada pela transformação da mobilidade urbana.</p>
-            <p className='profile'><b>Perfil arrojado:</b> aceita assumir um risco maior, atrelado ao maior potencial de retorno do investimento.</p>
-          </div>
-          <div className='m2'>
-            <h3>Seja credor</h3>
-            <p>Contribua com a nutrição para o nosso desenvolvimento e tenha um retorno mensal acima da média do mercado.</p>
-            <p className='profile'><b>Perfil cauteloso:</b> se tratando de investimentos, prefere mitigar riscos e escolher um retorno seguro. </p>
-          </div>
+    <div className="models-content">
+      <div className="models">
+        <div className="m1">
+          <h3>Seja acionista</h3>
+          <p>
+            Invista em ações com percentual definido e participe da nossa
+            jornada pela transformação da mobilidade urbana.
+          </p>
+          <p className="profile">
+            <b>Perfil arrojado:</b> aceita assumir um risco maior, atrelado ao
+            maior potencial de retorno do investimento.
+          </p>
+        </div>
+        <div className="m2">
+          <h3>Seja credor</h3>
+          <p>
+            Contribua com a nutrição para o nosso desenvolvimento e tenha um
+            retorno mensal acima da média do mercado.
+          </p>
+          <p className="profile">
+            <b>Perfil cauteloso:</b> se tratando de investimentos, prefere
+            mitigar riscos e escolher um retorno seguro.{" "}
+          </p>
         </div>
       </div>
-    <div className='invest-content'>
+    </div>
+    <div className="invest-content">
       <PaddedView>
-        <div className='invest-form'>
-          <div className='invest-img'>
-            <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/20fc6f70-6068-4c12-81ab-f94456de2ea5.png' alt='Mulher andando de bicicleta em quadra azul' />
+        <div className="invest-form">
+          <div className="invest-img">
+            <img
+              src="https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/20fc6f70-6068-4c12-81ab-f94456de2ea5.png"
+              alt="Mulher andando de bicicleta em quadra azul"
+            />
           </div>
-          <div className='invest-fields'>
+          <div className="invest-fields">
             <h2>Investir</h2>
-            <p>Como você deseja se envolver na rodada de investimentos da Vela? Deixe sua mensagem para seguirmos contato:</p>
+            <p>
+              Como você deseja se envolver na rodada de investimentos da Vela?
+              Deixe sua mensagem para seguirmos contato:
+            </p>
             <InvestForm />
           </div>
         </div>
@@ -245,6 +285,6 @@ const Invest = () =>
     }
     `}</style>
   </>
+);
 
-export default compose(
-)(Invest)
+export default compose()(Invest);

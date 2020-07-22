@@ -963,7 +963,7 @@ module.exports = async (req, res) => {
       {
         name: 'Born To Crossfit',
         address: [
-          'R. Diogo Jacome, 661',
+          'R. Diogo Jacomé, 661',
           'Moema, São Paulo',
           'SP, 04511, Brasil'
         ],
@@ -976,7 +976,7 @@ module.exports = async (req, res) => {
         type: ['parking']
       },
       {
-        name: 'Alameda Campinas, 445',
+        name: 'Alameda Campinas',
         address: [
           'Alameda Campinas, 445',
           'Jardim Paulista, São Paulo',
@@ -991,7 +991,7 @@ module.exports = async (req, res) => {
         type: ['parking']
       },
       {
-        name: 'Condomínio Edifício Barão De Rothschild',
+        name: 'Av. Faria Lima',
         address: [
           'Av. Brg. Faria Lima, 1572',
           'Jardim Paulistano, São Paulo',
@@ -1016,7 +1016,7 @@ module.exports = async (req, res) => {
         type: ['parking']
       },
       {
-        name: 'BrasilPark - Ed. Itamambuca',
+        name: 'Av. Berrini',
         address: [
           'Rua André Ampére, 65',
           'Cidade Monções, São Paulo',
@@ -1041,7 +1041,7 @@ module.exports = async (req, res) => {
         type: ['parking']
       },
       {
-        name: 'R. Augusta, 101',
+        name: 'R. Augusta',
         address: [
           'R. Augusta, 101',
           'Consolação, São Paulo',
@@ -1052,20 +1052,6 @@ module.exports = async (req, res) => {
           lng: -46.64716380000001
         },
         googlePlace: 'ChIJ7Vo9d0tYzpQRYEXmgBCMtic',
-        type: ['parking']
-      },
-      {
-        name: 'Grow Mobility',
-        address: [
-          'Rua Tabapuã, 743',
-          'Itaim Bibi, São Paulo',
-          'SP, 04533-012, Brasil'
-        ],
-        pos: {
-          lat: -23.5837346,
-          lng: -46.67770909999999
-        },
-        googlePlace: 'ChIJ3Sy3J7pXzpQR7l-ZefxvsmY',
         type: ['parking']
       },
       {
@@ -1116,31 +1102,6 @@ module.exports = async (req, res) => {
           lng: -46.64494800000001
         },
         googlePlace: 'ChIJhXdZkkVYzpQRiLOGttP33AI',
-        type: ['parking']
-      },
-      {
-        name: 'Itaú',
-        address: [
-          'Av. Pres. Juscelino Kubitschek, 1300',
-          'Itaim Bibi, São Paulo',
-          'SP, 04543-000, Brasil'
-        ],
-        phone: '4004-4828',
-        open: true,
-        hours: [
-          ['segunda-feira', ' 10:00 – 14:00'],
-          ['terça-feira', ' 10:00 – 14:00'],
-          ['quarta-feira', ' 10:00 – 14:00'],
-          ['quinta-feira', ' 10:00 – 14:00'],
-          ['sexta-feira', ' 10:00 – 14:00'],
-          ['sábado', ' Fechado'],
-          ['domingo', ' Fechado']
-        ],
-        pos: {
-          lat: -23.5900821,
-          lng: -46.6812214
-        },
-        googlePlace: 'ChIJb5SfPHpXzpQRNSE_pMCnJM4',
         type: ['parking']
       },
       {

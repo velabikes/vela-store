@@ -1,6 +1,6 @@
 import PaddedView from 'components/PaddedView'
 import Link from 'next/link'
-import { offWhite, offBlack, midGray, white } from '../../style/colors'
+import { offWhite, offBlack, white } from '../../style/colors'
 import Button from '../Button'
 
 const Highlight = () => {
@@ -15,7 +15,7 @@ const Highlight = () => {
             <img alt='Vela 2 Quadro reto' src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/38f52e38-046a-4b9a-b38b-652ea463ddbd.png' />
             <p>
               <h3>Quadro reto</h3>
-              <span>3 tamanhos</span>
+              <span>2 tamanhos</span>
               <span>1,60m até 2m</span>
             </p>
           </div>
@@ -39,14 +39,14 @@ const Highlight = () => {
           <p>Até 12x sem juros</p>
         </div>
         <div className='actions'>
-          <Link href='/vela'>
-            <Button primary>Saiba mais</Button>
+          <Link href='/vela2'>
+            <Button primary>Monte a sua</Button>
           </Link>
         </div>
         <div className='right'>
           <h3>Aluguel</h3>
           <h2>R$ 489/mês</h2>
-          <p>Disponível em julho</p>
+          <p>Disponível em agosto</p>
         </div>
       </div>
       <style jsx>{`
@@ -111,6 +111,9 @@ const Highlight = () => {
             text-align: center;
           }
           @media only screen and (min-width: 768px) {
+            .Highlight {
+              padding: 4em 2em;
+            }
             .content {
               width: 30em;
               height: 15em;
@@ -131,7 +134,7 @@ const Highlight = () => {
               z-index: 1;
             }
             img {
-              max-width: 21em;
+              max-width: 30em;
             }
             .qr {
               margin: -6em 2em 0 2em;

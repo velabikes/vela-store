@@ -4,7 +4,6 @@ import { velaGreen, offBlack, darkGray, white } from 'style/colors'
 import FacebookPixel from 'components/head/FacebookPixel'
 import Freshchat from 'components/head/Freshchat'
 import Heatmap from 'components/head/Heatmap'
-import Pop from 'components/home/Pop'
 
 const CustomHead = props =>
   <div className='Head'>
@@ -22,7 +21,6 @@ const CustomHead = props =>
     <FacebookPixel />
     <Freshchat />
     <Heatmap />
-    <Pop />
     <style jsx global>{`
       body * {
         //outline: 1px solid rgba(200,0,0,0.1)

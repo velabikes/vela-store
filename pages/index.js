@@ -27,7 +27,7 @@ const HomePage = ({ images }) =>
       <div className='cta'>
         <div className='slogan'>
           <h1>Vela 2</h1>
-          <h4>Conheça a primeira smartbike do Brasil. Faça parte do futuro. Agora.</h4>
+          <h4>A única bicicleta elétrica smart do Brasil. Faça parte do futuro. Agora.</h4>
           <div className='actions'>
             <Link href='/vela'>
               <Button primary>Saiba mais</Button>
@@ -61,7 +61,6 @@ const HomePage = ({ images }) =>
         flex-direction: column;
         padding: 1rem 3rem;
         background-color: #272727;
-        margin-top: -4rem;
       }
       h1 {
         color: ${offWhite};
@@ -89,19 +88,17 @@ const HomePage = ({ images }) =>
       }
       @media only screen and (min-width: 768px) {
         h1 {
-          color: ${darkGray};
           font-size: 4rem;
-        }
-        h4 {
-          color: ${darkGray};
+          font-weight: 900;
+          margin-left: -0.1em;
         }
         .cta {
           position: absolute;
           justify-content: center;
-          max-width: 25em;
-          right: 2em;
-          top: 2em;
-          text-align: right;
+          max-width: 18em;
+          left: 6em;
+          top: 6em;
+          text-align: left;
           background-color: transparent;
           margin-top: 0rem;
         }

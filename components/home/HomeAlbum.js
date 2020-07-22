@@ -27,6 +27,10 @@ const HomeAlbum = ({ images }) =>
         grid-column-gap: 1rem;
       }
       @media only screen and (min-width: 768px) {
+        .HomeAlbum {
+          position: relative;
+          padding: 2em;
+        }
         .container {
           display: grid;
           grid-template-columns: 1fr;

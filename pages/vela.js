@@ -4,7 +4,6 @@ import LandingImage from 'components/vela/LandingImage'
 import Button from '../components/Button'
 import PaddedView from '../components/PaddedView'
 import { offWhite, darkGray, offBlack, white, lightGray } from '../style/colors'
-import { Navigation, Charge, Battery } from '../components/Icons'
 
 const Vela = () =>
   <div className='HomePage'>
@@ -16,7 +15,7 @@ const Vela = () =>
       <div className='cta'>
         <div className='slogan'>
           <h1>V2</h1>
-          <h4>A geração smart de bikes elétricas da Vela</h4>
+          <h2>A geração smart de bikes elétricas</h2>
         </div>
         <div className='actions'>
           <Link href='/vela2'>
@@ -38,7 +37,7 @@ const Vela = () =>
       </div>
     </PaddedView>
     <div className='image-cut'>
-      <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/3c631a0b-eef5-4bcc-9a70-3d94dbd6f56e.png' alt='Bike elétrica' />
+      <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FTecnologiaVela.jpg?alt=media&token=cbc383ae-f943-422b-a99d-e03021db7157' alt='Bike elétrica' />
       <div className='tagline'>
         <h2>Tecnologia e design nunca estiveram tão próximos</h2>
         <div className='actions'>
@@ -63,31 +62,11 @@ const Vela = () =>
           <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/55068f24-1c81-4bdc-bec3-3f9d0e586a79.png' alt='App Vela 2' />
         </div>
         <div className='app-bottom'>
-          <div className='app-features'>
-            <div className='app-class'>
-              <div className='app-icon'>
-                <Battery />
-              </div>
-              <p>Nível da bateria</p>
-            </div>
-            <div className='app-class'>
-              <div className='app-icon'>
-                <Navigation />
-              </div>
-              <p>Localização por GPS</p>
-            </div>
-            <div className='app-class'>
-              <div className='app-icon'>
-                <Charge />
-              </div>
-              <p>Controle de potência</p>
-            </div>
-          </div>
           <div className='section'>
             <div className='left'>
               <div className='left-content'>
                 <h2>Sempre visível</h2>
-                <h4>O rastreamento GPS garante que sua bicicleta esteja sempre ao alcance</h4>
+                <h4>Com o rastreamento GPS sua bicicleta está sempre ao alcance</h4>
                 <p>Observe sua Vela de qualquer distância, em qualquer lugar. Cuidamos da sua segurança, para um deslocamento sem preocupações.</p>
               </div>
             </div>
@@ -234,16 +213,10 @@ const Vela = () =>
         <div className='specs-content'>
           <h2>Especificações</h2>
           <table className='table-specs'>
-            <thead>
-              <tr>
-                <th className='th-specs'>Estrutura</th>
-                <th className='th-specs'>Descrição</th>
-              </tr>
-            </thead>
             <tbody>
               <tr className='tr-specs'>
                 <td className='td-specs'>Quadro</td>
-                <td className='td-specs'>Aço liga 4130 CrMo - Chromoly - Total de 5 geometrias diferentes.</td>
+                <td className='td-specs'>Aço liga 4130 CrMo - Chromoly - Total de 4 geometrias diferentes.</td>
               </tr>
               <tr className='tr-specs'>
                 <td className='td-specs'>Pintura</td>
@@ -251,11 +224,11 @@ const Vela = () =>
               </tr>
               <tr className='tr-specs'>
                 <td className='td-specs'>Tamanhos (quadro reto)</td>
-                <td className='td-specs'>510-26": 1,54 à 1,68 | 550-700C: 1,69 à 1,82 | 590-700C: 1,83 à 2,00</td>
+                <td className='td-specs'>55-700C: 1,69 à 1,82 | 59-700C: 1,83 à 2,00</td>
               </tr>
               <tr className='tr-specs'>
                 <td className='td-specs'>Tamanhos (quadro baixo)</td>
-                <td className='td-specs'>490-26": 1,50 à 1,70 | 490-700C: 1,71 à 1,90</td>
+                <td className='td-specs'>49-26": 1,50 à 1,70 | 49-700C: 1,71 à 1,90</td>
               </tr>
               <tr className='tr-specs'>
                 <td className='td-specs'>Peso</td>
@@ -298,22 +271,15 @@ const Vela = () =>
         </div>
         <div className='specs-tech-content'>
           <h2>Tecnologia</h2>
-
           <table>
-            <thead>
-              <tr>
-                <th>Tech</th>
-                <th>Descrição</th>
-              </tr>
-            </thead>
             <tbody>
               <tr>
                 <td>Velocidade máxima</td>
-                <td>25 km/h no modo Super.</td>
+                <td>25 km/h no modo Boost.</td>
               </tr>
               <tr>
                 <td>Autonomia</td>
-                <td>Até 60 km no modo Econômico. Média de 25km no modo Super.</td>
+                <td>Até 60 km no modo Econômico. Média de 25km no modo Boost.</td>
               </tr>
               <tr>
                 <td>Bateria</td>
@@ -333,7 +299,7 @@ const Vela = () =>
               </tr>
               <tr>
                 <td>Aplicativo</td>
-                <td>Vela 2: iOS + Android | Configuração da Vela, mapa, faróis, modos de condução e atualizações de performance.</td>
+                <td>Vela 2: iOS + Android | Configuração da Vela, mapa, modos de condução e atualizações de performance.</td>
               </tr>
               <tr>
                 <td>Motor</td>
@@ -351,41 +317,38 @@ const Vela = () =>
     <style jsx>{`
       .cover {
         position: relative;
-        background-color: ${offWhite};
       }
       .cta {
         display: flex;
         position: absolute;
-        justify-content: center;
-        align-items: center;
+        justify-content: flex-end;
+        align-items: flex-end;
         flex-direction: column;
-        top: 4em;
-        left:0;
-        right:0;
-        margin-left:auto;
-        margin-right:auto;
-        text-align: center;
-      }
-      h1 {
-        font-size: 6em;
-        color: ${offWhite};
-        font-weight: 900;
-      }
-      .slogan {
-        background-color: ${white};
-        padding: 1rem 2rem;
-        max-width: 15em;
+        top: 1em;
+        right: 3em;
+        text-align: right
       }
       .slogan h1 {
-        color: ${darkGray};
+        font-size: 5em;
+        font-weight: 900;
+        color: ${offWhite};
+        line-height: 1em;
       }
-      .cta .actions {
-        margin-top: -1.2em;
+      h2 {
+        font-size: 1.3em;
+      }
+      .slogan {
+        padding: 1rem 0 0 0;
+        max-width: 14em;
+        text-align: right;
+      }
+      .slogan h2 {
+        color: ${offWhite};
       }
       .section {
         display: flex;
         flex-direction: column;
-        padding: 1em 0;
+        padding-top: 1em;
       }
       .left {
         display: flex;
@@ -410,8 +373,9 @@ const Vela = () =>
         overflow: hidden;
       }
       .image-cut img {
-        height: 20em;
+        height: 25em;
         object-fit: cover;
+        max-width: 100%;
         object-position: 50% 50%;
       }
       .tagline {
@@ -420,8 +384,7 @@ const Vela = () =>
         align-items: center;
         flex-direction: column;
         text-align: center;
-        padding: 2em 4em;
-        background-color: ${offWhite};
+        padding: 2em 4em 3em 4em;
       }
       .tagline h2 {
         margin-bottom: 1em;
@@ -430,27 +393,17 @@ const Vela = () =>
       .app-content{
         background-color: ${offWhite};
       }
-      .app-content img {
-        margin: 0 auto 2em auto;
-      }
       .app-content .section {
-        padding: 2em;
+        padding: 0em;
+      }
+      .app-content .section .right .right-content{
+        padding: 1em 2em;
+        margin: 0;
       }
       .app-features {
         display: flex;
         flex-direction: row;
         justify-content: center;
-      }
-      .app-class {
-        max-width: 5em;
-        margin: 1em;
-      }
-      .app-icon {
-        max-width: 2em;
-        margin: 0 auto;
-      }
-      .app-class p {
-        text-align: center;
       }
       .bfunction-content {
         background-color: ${offWhite};
@@ -613,26 +566,36 @@ const Vela = () =>
         background: ${darkGray};
       }
     
-
+      .actions :global(button) {
+        margin: 1em 0 0 0;
+      }
       @media only screen and (min-width: 768px) {
         h1 {
           font-size: 8em;
         }
         .cta {
           position: absolute;
-          justify-content: flex-end;
+          justify-content: flex-start;
           align-items: flex-start;
-          left: 20em;
-          bottom: 4em;
+          text-align: left;
+          left: 4em;
+          top: 6em;
         }
         .cta .actions {
-          margin-left: 4em;
           margin-top: 0em;
+          align-self: flex-start;
          }
         .slogan {
           background-color: transparent;
+          padding: 0;
+          max-width: 14em;
+          text-align: left;
         }
-        .cta .slogan h4, .cta .slogan h1 {
+        .cta .slogan h2 {
+          color: ${offWhite};
+          margin-bottom: 1em;
+        }
+        .cta .slogan h1 {
           color: ${offWhite};
         }
         .section {
@@ -640,6 +603,7 @@ const Vela = () =>
           padding-top: 2em;
           padding-bottom: 2em;
           align-items: stretch;
+          margin-top: 2em;
         }
         .left {
           flex-direction: row-reverse;
@@ -666,10 +630,9 @@ const Vela = () =>
           text-align: left;
         }
         .image-cut img {
-          width:100%;
-          height: 100%;
+          width: 100%;
+          height: 100vh;
           object-fit: cover;
-          margin-top: 4em;
         }
         .image-cut {
           position: relative;
@@ -677,48 +640,42 @@ const Vela = () =>
         .tagline {
           justify-content: flex-end;
           align-items: flex-end;
-          top: 0em;
-          right: 2em;
+          top: 4em;
+          right: 4em;
           text-align: right;
           position: absolute;
-          max-width: 30em;
+          max-width: 25em;
           background-color: transparent;
+        }
+        .tagline h2 {
+          margin-bottom: 1em;
+          color: ${offWhite};          
         }
         .app-img {
           display: flex;
           align-items: flex-end;
           justify-content: flex-start;
           flex-direction: column;
-          margin-top: -8em;
-        }
-        .app-content .section .right {
-          margin-top: -8em;
           position: relative;
         }
-        .app-content .section .left {
-          margin: 0;
-        }
-        .app-content .section .right .right-content,  .app-content .section .left .left-content {
-          padding: 2em;
-          margin: 0;
-        }
         .app-content img {
-          max-width: 70%;
-          margin-bottom: 0;
+          max-width: 50%;
+          right: 25%;
+          top: -16em;
+          position: absolute;
         }
         .app-bottom {
           display: flex;
           flex-direction: row;
-          justify-content: space-between;
+          justify-content: flex-end;
           align-items: flex-end;
-          margin-top: -4em;
         }
         .app-features {
           flex-direction: column;
-          margin-bottom: 2em;
         }
-        .app-class {
-          margin: 1em 4em;
+        .app-content .section .left .left-content{
+          padding: 0;
+          margin: 0;
         }
         .bfunctions {
           flex-direction: row;

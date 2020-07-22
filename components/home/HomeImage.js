@@ -1,13 +1,12 @@
 const HomeImage = () =>
   <div>
-    <img src='../../static/home.png' className='desktop' alt='' />
-    <img src='../../static/home.png' className='mobile' alt='' />
+    <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FBikeEletrica.jpg?alt=media&token=3b628e6d-0c61-4647-8ab5-08bb74c958d8' className='desktop' alt='' />
+    <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FBikeEletrica.jpg?alt=media&token=3b628e6d-0c61-4647-8ab5-08bb74c958d8' className='mobile' alt='' />
     <style jsx>{`
       img {
         min-height: 60vh;
         object-fit: cover;
-        object-position: 46% 54%;
-        margin-top: 1em;
+        object-position: 55% 90%;
       }
       .desktop {
         display: none;
@@ -16,7 +15,9 @@ const HomeImage = () =>
         img {
           margin-top: 0em;
           max-width: 100vw;
-          object-fit: contain;
+          object-fit: cover;
+          max-height: 100vh;
+          object-position: 98% 2%;
         }
         .mobile {
           display: none;
