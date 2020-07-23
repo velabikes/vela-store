@@ -15,7 +15,7 @@ const Vela = () =>
       <div className='cta'>
         <div className='slogan'>
           <h1>V2</h1>
-          <h2>A geração smart de bikes elétricas</h2>
+          <h4>Conheça a geração smart de bikes elétricas da Vela</h4>
         </div>
         <div className='actions'>
           <Link href='/vela2'>
@@ -334,15 +334,12 @@ const Vela = () =>
         color: ${offWhite};
         line-height: 1em;
       }
-      h2 {
-        font-size: 1.3em;
-      }
       .slogan {
         padding: 1rem 0 0 0;
         max-width: 14em;
         text-align: right;
       }
-      .slogan h2 {
+      .slogan h4 {
         color: ${offWhite};
       }
       .section {
@@ -513,7 +510,7 @@ const Vela = () =>
       .table-specs {
         border-collapse: collapse;
         margin: 2em 0;
-        font-size: 0.8em;
+        font-size: 1em;
       }
     
       .th-specs {
@@ -524,7 +521,7 @@ const Vela = () =>
     
       .th-specs, .td-specs {
         padding: 1em;
-        font-size: 0.8em;
+        font-size: 1em;
         color: ${offBlack};
       }
     
@@ -539,7 +536,7 @@ const Vela = () =>
       table {
         border-collapse: collapse;
         margin: 2em 0;
-        font-size: 0.8em;
+        font-size: 1em;
       }
     
       th {
@@ -552,8 +549,7 @@ const Vela = () =>
       }
       th, td {
         padding: 1em;
-        font-family: helvetica, sans-serif;
-        font-size: 0.8em;
+        font-size: 1em;
         color: ${offWhite};
         text-align: left;
       }
@@ -591,12 +587,13 @@ const Vela = () =>
           max-width: 14em;
           text-align: left;
         }
-        .cta .slogan h2 {
+        .cta .slogan h4 {
           color: ${offWhite};
-          margin-bottom: 1em;
+          padding: 0;
         }
         .cta .slogan h1 {
           color: ${offWhite};
+          margin-left: -0.2em;
         }
         .section {
           flex-direction: column;
@@ -661,7 +658,7 @@ const Vela = () =>
         .app-content img {
           max-width: 50%;
           right: 25%;
-          top: -16em;
+          top: -18em;
           position: absolute;
         }
         .app-bottom {
@@ -695,10 +692,12 @@ const Vela = () =>
         }
         .specs {
           margin: 2em auto;
-          max-width: 45em;
         }
         .specs-content, .specs-tech-content {
           width: 100%
+        }
+        .specs-tech-content td {
+          min-width: 275px;
         }
         @media only screen and (min-width: 1200px) {
           .plans-content{

@@ -9,7 +9,7 @@ const Bar = ({ onContinue, extra, step, checkout }) => {
   return (
     <div className='Bar'>
       <div className='top'>
-        <p className='right'>Entrega em três meses</p><small>Por conta do COVID-19, o prazo de entrega se encontra estendido e pode sofrer alterações.</small>
+        <p className='right'>Entrega em 2 meses</p><small>Por conta do COVID-19, o prazo de entrega se encontra estendido e pode sofrer alterações.</small>
       </div>
       <div className='bottom'>
         <div className='left'>
@@ -88,9 +88,13 @@ const Bar = ({ onContinue, extra, step, checkout }) => {
           padding: 0 0 0 6em;
         }
         .top p{
-          max-width: 5rem;
+          max-width: 4.5rem;
           text-align: center;
           margin: 0;
+        }
+        .top .right {
+          text-align: right;
+          margin-right: 0.7em;
         }
         .left {
           flex-direction: column;
