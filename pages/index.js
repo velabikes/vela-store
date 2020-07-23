@@ -27,7 +27,7 @@ const HomePage = ({ images }) =>
       <div className='cta'>
         <div className='slogan'>
           <h1>Vela 2</h1>
-          <h4>A única bicicleta elétrica smart do Brasil. Faça parte do futuro. Agora.</h4>
+          <h4>A bicicleta elétrica smart do Brasil. Faça parte do futuro. Agora.</h4>
           <div className='actions'>
             <Link href='/vela'>
               <Button primary>Saiba mais</Button>

@@ -11,22 +11,26 @@ const Highlight = () => {
           <p>O melhor desempenho para a cidade, em dois modelos diferentes</p>
         </div>
         <div className='models'>
-          <div className='qr'>
-            <img alt='Vela 2 Quadro reto' src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/38f52e38-046a-4b9a-b38b-652ea463ddbd.png' />
-            <p>
-              <h3>Quadro reto</h3>
-              <span>2 tamanhos</span>
-              <span>1,60m até 2m</span>
-            </p>
-          </div>
-          <div className='qb'>
-            <img alt='Vela 2 Quadro reto' src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/0aed083a-3ee3-41db-9acf-fa78afb7010f.png' />
-            <p>
-              <h3>Quadro baixo</h3>
-              <span>2 tamanhos</span>
-              <span>1,58m até 1,90m</span>
-            </p>
-          </div>
+            <div className='qr'>
+              <a href="/vela2">
+                <img alt='Vela 2 Quadro reto' src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/38f52e38-046a-4b9a-b38b-652ea463ddbd.png' />
+                <p>
+                  <h3>Quadro reto</h3>
+                  <span>2 tamanhos</span>
+                  <span>1,60m até 2m</span>
+                </p>
+              </a>
+            </div>
+            <div className='qb'>
+              <a href="/vela2">
+                <img alt='Vela 2 Quadro reto' src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/0aed083a-3ee3-41db-9acf-fa78afb7010f.png' />
+                <p>
+                  <h3>Quadro baixo</h3>
+                  <span>2 tamanhos</span>
+                  <span>1,58m até 1,90m</span>
+                </p>
+              </a>
+            </div>
         </div>
         <div className='color'>
           <p>Com cinco cores exclusivas para você escolher.</p>
