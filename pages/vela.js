@@ -341,6 +341,7 @@ const Vela = () =>
       }
       .slogan h4 {
         color: ${offWhite};
+        padding-bottom: 0.5em;
       }
       .section {
         display: flex;
@@ -561,7 +562,9 @@ const Vela = () =>
       tr:hover {
         background: ${darkGray};
       }
-    
+      .cta .actions :global(button) {
+        margin: 0;
+      }
       .actions :global(button) {
         margin: 1em 0 0 0;
       }
