@@ -2,7 +2,7 @@ import { compose, withProps, withHandlers } from 'recompose'
 import PropTypes from 'prop-types'
 import Link from 'next/link'
 import { toggleDrawer } from '../lib/redux'
-import { offBlack, white, velaGreen } from '../style/colors'
+import { white, offWhite, lightGreen } from '../style/colors'
 import withOpenDrawer from '../containers/withOpenDrawer'
 import Cart from './store/Cart'
 import HeaderDrawer from './HeaderDrawer'
@@ -63,8 +63,7 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
         right: 0;
         z-index: 1001;
         width: 100%;
-        background-color: ${white};
-        box-shadow: 0px 0px 9px 0px rgba(100,100,100,0.3);
+        background-color: rgba(45, 45, 45, 0.9)
       }
       .app-content {
         margin-top: 3.5rem;
@@ -77,8 +76,8 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
         display: flex;
         justify-content: center;
         align-items: center;
-        color: ${offBlack};
-        font-weight: 500;
+        color: ${offWhite};
+        font-weight: 600;
         min-height: 3rem;
         font-size: 1rem;
       }
@@ -121,7 +120,7 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
         } 
         .right {
           right: 0;
-          background-color: ${velaGreen};
+          background-color: ${lightGreen};
         }
         .right :global(.CartIcon) {
           fill: ${white};

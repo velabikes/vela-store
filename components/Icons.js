@@ -1,7 +1,7 @@
 
 import { compose } from 'recompose'
 import withCheckout from '../containers/withCheckout'
-import { velaBlue, velaGreen, white, darkGray, velaRed, offWhite } from '../style/colors'
+import { velaBlue, velaGreen, lightGreen, white, darkGray, velaRed, offWhite } from '../style/colors'
 
 export const UserIcon = props => (
   <svg viewBox='0 0 27.05 27.04' width='1em' height='1em' {...props}>
@@ -75,7 +75,7 @@ export const MenuIcon = ({ ...props }) => (
     </svg>
     <style jsx>{`
       .MenuIcon {
-        fill: ${darkGray}
+        fill: ${offWhite};
       }
     `}
     </style>
@@ -97,7 +97,7 @@ export const CartIcon = compose(
       .CartIcon {
         transition: .3s all;
         position: relative;
-        fill: ${checkout && checkout.lineItems.edges.length ? darkGray : velaGreen};
+        fill: ${checkout && checkout.lineItems.edges.length ? darkGray : lightGreen};
       }
       .count {
         transition: .5s all;
@@ -131,7 +131,7 @@ export const Logo = props =>
     </svg>
     <style jsx>{`
     .Logo {
-      fill: ${velaGreen}
+      fill: ${lightGreen}
     }
     @keyframes colorchange {
       0%  { transform: scale(1) }
