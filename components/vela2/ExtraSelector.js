@@ -4,19 +4,14 @@ import { offWhite, lightGreen, white, velaRed } from '../../style/colors'
 import { AddIcon, CloseIcon } from '../Icons'
 
 const rackmap = {
-  Reto: {
-    Pequeno: 0,
-    Médio: 2,
-    Grande: 1
-  },
-  Baixo: {
-    Pequeno: 0,
-    Médio: 0
-  }
+    P: 0,
+    M: 0,
+    G: 2,
+    GG: 1
 }
 
 const Item = ({ node: { title, images, variants, handle }, onSelect, selected, model }) => {
-  const variantIndex = handle === 'bagageiro-traseiro' ? rackmap[model.frame][model.size] : 0
+  const variantIndex = handle === 'bagageiro-traseiro' ? rackmap[model.size] : 0
   const isSelected = selected.includes(variants.edges[variantIndex].node)
 
   return (
@@ -71,7 +66,7 @@ const ExtraSelector = ({ collection, onSelect, selected, model }) => {
 
   return (
     <div>
-      <p>Adicione também os acessórios essenciais para a cidade:</p>
+      <p>Adicione também os acessórios extras essenciais para a cidade:</p>
       <div className='Items'>
         {collection.products.edges
           .filter(product => {
