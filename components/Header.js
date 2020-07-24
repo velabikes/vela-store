@@ -10,6 +10,7 @@ import HeaderMenu from './HeaderMenu'
 import MainMenu from './MainMenu'
 import Footer from './Footer'
 import { Logo } from './Icons'
+import Button from './Button'
 
 /* eslint-disable */
 const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
