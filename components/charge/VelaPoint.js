@@ -15,13 +15,11 @@ const VelaPoint = () => (
           velejar com tranquilidade.
         </p>
         <Link href="/network/map" as="/rede/mapa">
-          <a>
-            <Button primary>Onde encontrar</Button>
-          </a>
+          <Button primary>Onde encontrar</Button>
         </Link>
       </div>
       <div className="FigureWrapper">
-        <a href="/network/map">
+        <a href="/network/map" as="/rede/mapa">
           <img
             src="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FRedeVela.png?alt=media&token=d63d5018-1ab5-4874-b5f3-7cc623619a41"
             alt="Rede Vela"

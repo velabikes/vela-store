@@ -1,9 +1,9 @@
 import Link from 'next/link'
-import { velaRed } from '../style/colors'
+import { velaRed, offBlack } from '../style/colors'
 
 const MainMenu = () =>
   <nav className='MainMenu'>
-    <h1>Loja</h1>
+    <h2>Loja</h2>
     <ul className='items'>
       <li><Link href='/vela'><a>
         Vela 2
@@ -45,6 +45,9 @@ const MainMenu = () =>
       </a></Link></li>
     </ul>
     <style jsx>{`
+      h2 {
+        color: ${offBlack};
+      }
       nav {
       padding: 0.5rem 1rem;
       }
