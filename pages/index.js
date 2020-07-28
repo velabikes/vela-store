@@ -10,7 +10,7 @@ import PostHighlight from 'components/blog/PostHighlight'
 import PaddedView from 'components/PaddedView'
 import Button from '../components/Button'
 import VelaPoint from '../components/charge/VelaPoint'
-import { offBlack, offWhite } from '../style/colors'
+import { offBlack, offWhite, white } from '../style/colors'
 
 const HomePage = ({ highlight }) =>
   <div className='HomePage'>
@@ -42,19 +42,24 @@ const HomePage = ({ highlight }) =>
     </div>
     <Highlight />
     <div className='home-store'>
-      <div className='store-title'>
-        <h2>Bons Ventos</h2>
-      </div>
+      <a href='/blog'>
+        <div className='store-title'>
+          <h2>Bons Ventos</h2>
+        </div>
+      </a>
     </div>
     <br />
-    <PaddedView>
+    <PaddedView style={{backgroundColor: '#EFEFEF'}}> 
       {/* {images && <HomeAlbum images={images} />} */}
       <PostHighlight post={highlight} />
       <HomeBanner />
-      <VelaPoint />
     </PaddedView>
+    <VelaPoint />
     <br />
     <style jsx>{`
+      .HomePage {
+        background-color: ${offWhite};
+      }
       .cover {
          position: relative;
          background-color: ${offWhite};
@@ -85,7 +90,7 @@ const HomePage = ({ highlight }) =>
         margin-bottom: 2em;
       }
       .store-title {
-        background-color: ${offWhite};
+        background-color: ${white};
         padding: 1em 2em;
         margin-bottom: -2em;
       }

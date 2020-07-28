@@ -30,6 +30,9 @@ const VelaPoint = () => (
       </div>
     </div>
     <style jsx>{`
+      .content {
+        background-color: #ffffff;
+      }
       .FigureWrapper {
         display: flex;
         flex-direction: column;
@@ -59,7 +62,7 @@ const VelaPoint = () => (
         .PointFigure {
           flex-direction: row;
           justify-content: flex-end;
-          padding: 2em 0 0 0;
+          padding: 1em 0 1em 0;
         }
         .PointContent {
           max-width: 20rem;

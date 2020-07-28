@@ -32,16 +32,6 @@ const HomeCards = () =>
       />
     </a>
     <a 
-      href='https://www.youtube.com/watch?v=bSm9BcdXkAs'
-      target='_blank'
-    >
-      <img
-        src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FBicicletaEletricaSuperInteressante.png?alt=media&token=1f20576c-f651-4072-9d0e-c03af7c17695'
-        alt='Vela Bikes a bicicleta elétrica escolhida pela Super Interessante'
-        style={{marginTop: '0.5em'}}
-      />
-    </a>
-    <a 
       href='https://www.youtube.com/watch?v=Y__53nLLV6s'
       target='_blank'
     >
@@ -67,7 +57,7 @@ const HomeCards = () =>
           display: flex; 
           flex-direction: row;
           justify-content: space-between;
-          padding: 2em 2em 0em 2em;
+          padding: 2em;
         }
         img {
           max-width: 150px;
