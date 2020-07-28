@@ -54,7 +54,16 @@ const Vela2 = ({ checkout, checkoutId, checkoutLineItemsAdd }) => {
   return (
     <div className='vela2'>
       <Head>
-        <title>Vela 2 - Vela Bikes</title>
+        <title>Vela 2: Monte a sua - Vela Bikes</title>
+        <meta http-equiv='content-language' content='pt-br' />
+        <meta name='application-name' content='Vela Bikes Store' />
+        <meta name='description' content='Monte sua Vela 2 e aproveite para pedalar smart!' />
+        <meta property='og:url' content='https://velabikes.com.br' />
+        <meta property='og:type' content='website' />
+        <meta property='og:title' content='Vela Bikes' />
+        <meta property='og:locale' content='pt_BR' />
+        <meta property='og:description' content='Monte sua Vela 2 e aproveite para pedalar smart!' />
+        <meta property='og:image' content='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FSmartbike.jpg?alt=media&token=db783cf6-c08e-49ae-98d8-3816c3d06ddf' />
       </Head>
       <div className='content'>
         <Display model={selectedModel} />

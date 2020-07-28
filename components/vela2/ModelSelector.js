@@ -29,7 +29,7 @@ const ModelSelector = ({ onModelChange }) => {
       <p>Em dúvida de qual tamanho escolher? Siga as recomendações de acordo com sua altura:</p>
       <h4>• Quadro baixo</h4>
       <p>→ P: 1,50m à 1,70m - Quadro 49 Aro 26"</p>
-      <p>→ M: 1,71m à 1,90m - Quadro 48 Aro 700C</p>
+      <p>→ M: 1,71m à 1,90m - Quadro 49 Aro 700C</p>
       <br/>
       <h4>• Quadro reto</h4>
       <p>→ G: 1,68m à 1,82m - Quadro 55 Aro 700C</p>

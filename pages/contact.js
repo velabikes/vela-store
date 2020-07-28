@@ -7,6 +7,15 @@ const Contact = () => (
   <div className="contact">
     <Head>
       <title>Contato - Vela Bikes</title>
+      <meta http-equiv='content-language' content='pt-br' />
+      <meta name='application-name' content='Vela Bikes Store' />
+      <meta name='description' content='Vela Bikes: Entre em contato com nosso atendimento, estamos sempre felizes em ajudar!' />
+      <meta property='og:url' content='https://velabikes.com.br' />
+      <meta property='og:type' content='website' />
+      <meta property='og:title' content='Vela Bikes' />
+      <meta property='og:locale' content='pt_BR' />
+      <meta property='og:description' content='Vela Bikes: Entre em contato com nosso atendimento, estamos sempre felizes em ajudar!' />
+      <meta property='og:image' content='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/b5d58fc8-ad62-4d65-89b8-1e59f4473d0b.jpg' />
     </Head>
     <div className="main">
       <img
