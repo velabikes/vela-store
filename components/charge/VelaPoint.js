@@ -5,14 +5,6 @@ import SectionHeader from "components/SectionHeader";
 const VelaPoint = () => (
   <div className="content">
     <div className="PointFigure">
-      <div className="FigureWrapper">
-        <a href="/network/map">
-          <img
-            src="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FRedeVela.png?alt=media&token=d63d5018-1ab5-4874-b5f3-7cc623619a41"
-            alt="Rede Vela"
-          />
-          </a>
-      </div>
       <div className="PointContent">
         <SectionHeader
           title="Rede"
@@ -27,6 +19,14 @@ const VelaPoint = () => (
             <Button primary>Onde encontrar</Button>
           </a>
         </Link>
+      </div>
+      <div className="FigureWrapper">
+        <a href="/network/map">
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FRedeVela.png?alt=media&token=d63d5018-1ab5-4874-b5f3-7cc623619a41"
+            alt="Rede Vela"
+          />
+          </a>
       </div>
     </div>
     <style jsx>{`
@@ -58,6 +58,7 @@ const VelaPoint = () => (
         }
         .PointFigure {
           flex-direction: row;
+          justify-content: flex-end;
           padding: 2em 0 0 0;
         }
         .PointContent {
