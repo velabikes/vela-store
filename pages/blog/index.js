@@ -3,7 +3,6 @@ import { getPrismic, Predicates } from 'lib/prismic'
 import Head from 'next/head'
 import PaddedView from 'components/PaddedView'
 import Main from 'components/Main'
-import MainHeader from 'components/MainHeader'
 import Grid from 'components/Grid'
 import Card from 'components/Card'
 import { NextIcon } from 'components/Icons'
@@ -18,11 +17,11 @@ const Blog = ({ posts, highlight }) =>
         <Head>
           <title>Blog - Vela Bikes</title>
         </Head>
-        <MainHeader title='Blog' />
         <section>
           <PostHighlight post={highlight} />
         </section>
-        <br /><br />
+        <br/>
+        <br/>
         <section>
           <Grid template='repeat(auto-fit, minmax(320px, 1fr))'>
             {posts.map(({ data: { cover, title, teaser }, uid }) => (
@@ -63,11 +62,10 @@ Blog.getInitialProps = async ({ req }) => {
   const api = await getPrismic(req)
   const { results } = await api.query(
     Predicates.at('document.type', 'blog_post'),
-    { orderings: '[my.blog_post.post_date desc]' }
+    { pageSize: 30, orderings: '[my.blog_post.post_date desc]' }
   )
   const posts = results.slice()
   posts.shift()
-
   return ({ posts: posts, highlight: results[0] })
 }
 
