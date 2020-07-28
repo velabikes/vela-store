@@ -46,7 +46,7 @@ const HomeCards = () =>
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 2em 2em 0em 2em;
+      padding: 2em 2em 1em 2em;
     }
     img {
       max-width: 180px;

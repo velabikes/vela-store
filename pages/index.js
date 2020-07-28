@@ -55,7 +55,6 @@ const HomePage = ({ highlight }) =>
       <HomeBanner />
     </PaddedView>
     <VelaPoint />
-    <br />
     <style jsx>{`
       .HomePage {
         background-color: ${offWhite};
