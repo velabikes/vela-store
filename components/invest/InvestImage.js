@@ -1,7 +1,7 @@
 const InvestImage = () =>
   <div className='cover'>
-    <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/47ff67fa-48d6-4539-9a69-daf428127c64.jpeg' className='desktop' alt='' />
-    <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/47ff67fa-48d6-4539-9a69-daf428127c64.jpeg' className='mobile' alt='' />
+    <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/47ff67fa-48d6-4539-9a69-daf428127c64.jpeg' className='desktop' alt='Investir - Vela Bikes' />
+    <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/47ff67fa-48d6-4539-9a69-daf428127c64.jpeg' className='mobile' alt='Investir - Vela Bikes' />
     <style jsx>{`
       img {
         height: calc(60vh);

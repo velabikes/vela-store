@@ -23,7 +23,7 @@ const Highlight = () => {
             </div>
             <div className='qb'>
               <a href="/vela2">
-                <img alt='Vela 2 Quadro reto' src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/0aed083a-3ee3-41db-9acf-fa78afb7010f.png' />
+                <img alt='Vela 2 Quadro baixo' src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/0aed083a-3ee3-41db-9acf-fa78afb7010f.png' />
                 <p>
                   <h3>Quadro baixo</h3>
                   <span>2 tamanhos</span>
@@ -162,9 +162,7 @@ const Highlight = () => {
             }
             .price {
               flex-direction: row;
-              padding: 2em
-              justify-content: space-between;
-              margin-top: 2em;
+              padding: 0 2em 2em 2em;  
             }
             }
           }

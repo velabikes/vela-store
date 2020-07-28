@@ -9,6 +9,15 @@ const Vela = () =>
   <div className='HomePage'>
     <Head>
       <title>Vela 2 - Vela Bikes</title>
+      <meta http-equiv='content-language' content='pt-br' />
+      <meta name='application-name' content='Vela Bikes Store' />
+      <meta name='description' content='Conheça a geração smart de bikes elétricas da Vela.' />
+      <meta property='og:url' content='https://velabikes.com.br' />
+      <meta property='og:type' content='website' />
+      <meta property='og:title' content='Vela Bikes' />
+      <meta property='og:locale' content='pt_BR' />
+      <meta property='og:description' content='Conheça a geração smart de bikes elétricas da Vela.' />
+      <meta property='og:image' content='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FSmartbike.jpg?alt=media&token=db783cf6-c08e-49ae-98d8-3816c3d06ddf' />
     </Head>
     <div className='cover'>
       <LandingImage />
@@ -33,14 +42,14 @@ const Vela = () =>
             <p>Nosso aplicativo te acompanha pelo caminho, mostrando em tempo real as informações essenciais para velejar com tranquilidade.</p>
           </div>
           <a href="/vela2">
-            <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/7130ce6f-5e4c-4472-bfc8-9855e17f0a92.jpg' alt='Smartbike' />
+            <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/7130ce6f-5e4c-4472-bfc8-9855e17f0a92.jpg' alt='Smartbike Vela 2' />
           </a>
         </div>
       </div>
     </PaddedView>
     <div className='image-cut'>
       <a href="/vela2">
-        <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FTecnologiaVela2.jpg?alt=media&token=c8699709-d160-42bc-bc1c-c2c6a9310838' alt='Bike elétrica' />
+        <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FTecnologiaVela2.jpg?alt=media&token=c8699709-d160-42bc-bc1c-c2c6a9310838' alt='Vela Bikes' />
       </a>
       <div className='tagline'>
         <h2>Tecnologia e design nunca estiveram tão próximos</h2>
@@ -89,12 +98,12 @@ const Vela = () =>
             <p>Ao iniciar seu trajeto, com o assistente de partida da Vela 2, a resposta do motor é ainda mais rápida e intensa.</p>
           </div>
           <a href="/vela2">
-            <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/a142d80a-87e5-47b5-90ce-c76978dbd3a0.jpg' alt='Sensor de pedal' />
+            <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/a142d80a-87e5-47b5-90ce-c76978dbd3a0.jpg' alt='Sensor de pedal bike elétrica' />
           </a>
         </div>
         <div className='left'>
           <a href="/vela2">
-            <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/e2f0d9af-8587-429c-956c-1aa6c902b398.jpg' alt='Bateria impermeável' />
+            <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/e2f0d9af-8587-429c-956c-1aa6c902b398.jpg' alt='Bateria impermeável bicicleta elétrica' />
           </a>
           <div className='left-content'>
             <h2>Impermeável</h2>
@@ -114,12 +123,12 @@ const Vela = () =>
             </div>
           </div>
           <a href="/vela2">
-            <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/c9f6a1b6-4dba-4bfb-a8de-129a47036d9b.jpg' alt='Freio regenerativo' />
+            <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/c9f6a1b6-4dba-4bfb-a8de-129a47036d9b.jpg' alt='Freio regenerativo bike' />
           </a>
         </div>
       </div>
       <div className='bfunction-content'>
-        <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/38f776ca-ba8a-41c8-9452-fe132d492fa0.png' alt='Botão multifunções' />
+        <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/38f776ca-ba8a-41c8-9452-fe132d492fa0.png' alt='Botão multifunções smartbike' />
         <h2>Botão multifunções</h2>
         <h4>Integrado ao guidão da Vela 2, o acionador em aço inox é totalmente à prova d'água e resistente a impactos</h4>
         <div className='bfunctions'>
@@ -140,7 +149,7 @@ const Vela = () =>
       <div className='section'>
         <div className='left'>
           <a href="/vela2">
-            <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/d72b6886-6e78-40ff-a8d9-0e2d12fe5974.jpg' alt='Design urbano' />
+            <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/d72b6886-6e78-40ff-a8d9-0e2d12fe5974.jpg' alt='Design urbano bike elétrica' />
           </a>
           <div className='left-content'>
             <h2>Design atemporal</h2>
@@ -160,7 +169,7 @@ const Vela = () =>
             </div>
           </div>
           <a href="/vela2">
-            <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/9492947f-35ff-4f66-a9a2-4e6f8e8ea776.jpg' alt='Bike clássica' />
+            <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/9492947f-35ff-4f66-a9a2-4e6f8e8ea776.jpg' alt='Bike clássica elétrica' />
           </a>
         </div>
       </div>
@@ -225,7 +234,7 @@ const Vela = () =>
         </div>
       </PaddedView>
       <div className='specs'>
-        <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/4bb2a891-d7dd-4934-8625-259d8c2c1df2.jpg' alt='Especificações técnicas' />
+        <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/4bb2a891-d7dd-4934-8625-259d8c2c1df2.jpg' alt='Especificações técnicas bike' />
         <div className='specs-content'>
           <h2>Especificações</h2>
           <table className='table-specs'>

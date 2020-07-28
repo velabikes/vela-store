@@ -1,26 +1,30 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import fetch from 'isomorphic-fetch'
+import { getPrismic, Predicates } from 'lib/prismic'
 import PropTypes from 'prop-types'
 import HomeImage from 'components/home/HomeImage'
+import HomeBanner from 'components/home/HomeBanner'
 import Highlight from 'components/home/Highlight'
-import HomeAlbum from 'components/home/HomeAlbum'
+import PostHighlight from 'components/blog/PostHighlight'
 import PaddedView from 'components/PaddedView'
 import Button from '../components/Button'
 import VelaPoint from '../components/charge/VelaPoint'
-import { offBlack, offWhite, darkGray } from '../style/colors'
+import { offBlack, offWhite, white } from '../style/colors'
 
-const HomePage = ({ images }) =>
+const HomePage = ({ highlight }) =>
   <div className='HomePage'>
     <Head>
       <title>Vela Bikes</title>
-      <meta name='description' content='Conheça a smartbike Vela 2. A única bicicleta elétrica conectada com as ruas, com seu celular e com você.' />
+      <meta http-equiv='content-language' content='pt-br' />
+      <meta name='application-name' content='Vela Bikes Store' />
+      <meta name='description' content='Conheça a Vela 2. A bicicleta elétrica smart do Brasil.' />
       <meta property='og:url' content='https://velabikes.com.br' />
       <meta property='og:type' content='website' />
       <meta property='og:title' content='Vela Bikes' />
-      <meta property='og:description' content='Conheça a smartbike Vela 2. A única bicicleta elétrica conectada com as ruas, com seu celular e com você.' />
-      <meta property='og:image' content='https://gallery.mailchimp.com/68a0cce7cc109d78a8b44d7a0/images/d66ce503-f59e-40d2-ab4b-24bf92587e6d.png' />
-      <meta property='fb:app_id' content='373948403355114' />
+      <meta property='og:locale' content='pt_BR' />
+      <meta property='og:description' content='Conheça a Vela 2. A bicicleta elétrica smart do Brasil.' />
+      <meta property='og:image' content='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FBikeEletricaSmart.jpg?alt=media&token=3f8618f9-981e-4ae4-9b43-a00210184e6e' />
     </Head>
     <div className='cover'>
       <HomeImage />
@@ -38,17 +42,23 @@ const HomePage = ({ images }) =>
     </div>
     <Highlight />
     <div className='home-store'>
-      <div className='store-title'>
-        <h2>#vadevela</h2>
-      </div>
+      <a href='/blog'>
+        <div className='store-title'>
+          <h2>Bons Ventos</h2>
+        </div>
+      </a>
     </div>
     <br />
-    <PaddedView>
-      {images && <HomeAlbum images={images} />}
-      <VelaPoint />
+    <PaddedView style={{backgroundColor: '#EFEFEF'}}> 
+      {/* {images && <HomeAlbum images={images} />} */}
+      <PostHighlight post={highlight} />
+      <HomeBanner />
     </PaddedView>
-    <br />
+    <VelaPoint />
     <style jsx>{`
+      .HomePage {
+        background-color: ${offWhite};
+      }
       .cover {
          position: relative;
          background-color: ${offWhite};
@@ -79,7 +89,7 @@ const HomePage = ({ images }) =>
         margin-bottom: 2em;
       }
       .store-title {
-        background-color: ${offWhite};
+        background-color: ${white};
         padding: 1em 2em;
         margin-bottom: -2em;
       }
@@ -110,10 +120,19 @@ const HomePage = ({ images }) =>
   </div>
 
 HomePage.propTypes = {
-  images: PropTypes.array
+  highlight: PropTypes.object
 }
 
 HomePage.getInitialProps = async ({ req }) => {
+  const api = await getPrismic(req)
+  const { results } = await api.query(
+    Predicates.at('document.type', 'blog_post'),
+    { pageSize: 30, orderings: '[my.blog_post.post_date desc]' }
+  )
+  return ({ highlight: results[0] })
+}
+
+/* HomePage.getInitialProps = async ({ req }) => {
   try {
     const baseUrl = req
       ? process.env.NODE_ENV === 'development'
@@ -129,6 +148,6 @@ HomePage.getInitialProps = async ({ req }) => {
 
     return { images: [], from: 'error' }
   }
-}
+} */
 
 export default HomePage
