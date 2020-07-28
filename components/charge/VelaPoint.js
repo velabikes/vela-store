@@ -15,9 +15,7 @@ const VelaPoint = () => (
           velejar com tranquilidade.
         </p>
         <Link href="/network/map" as="/rede/mapa">
-          <a>
-            <Button primary>Onde encontrar</Button>
-          </a>
+          <Button primary>Onde encontrar</Button>
         </Link>
       </div>
       <div className="FigureWrapper">

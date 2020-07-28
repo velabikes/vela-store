@@ -15,15 +15,18 @@ import { offBlack, offWhite, white } from '../style/colors'
 const HomePage = ({ highlight }) =>
   <div className='HomePage'>
     <Head>
-      <title>Vela Bikes</title>
+      <title>Smartbike Vela 2 - Vela Bikes</title>
+      <link rel='alternate' hreflang='pt-br' href='https://www.velabikes.com.br' />
       <meta http-equiv='content-language' content='pt-br' />
       <meta name='application-name' content='Vela Bikes Store' />
-      <meta name='description' content='Conheça a Vela 2. A bicicleta elétrica smart do Brasil.' />
+      <meta name='description' content='Conheça a Vela 2. A bicicleta elétrica smart do Brasil: rastreamento GPS, freio regenerativo, app companheiro e muito mais!' />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:site" content="@velabikes" /> 
       <meta property='og:url' content='https://velabikes.com.br' />
       <meta property='og:type' content='website' />
       <meta property='og:title' content='Vela Bikes' />
       <meta property='og:locale' content='pt_BR' />
-      <meta property='og:description' content='Conheça a Vela 2. A bicicleta elétrica smart do Brasil.' />
+      <meta property='og:description' content='Conheça a Vela 2. A bicicleta elétrica smart do Brasil: rastreamento GPS, freio regenerativo, app companheiro e muito mais!' />
       <meta property='og:image' content='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FBikeEletricaSmart.jpg?alt=media&token=3f8618f9-981e-4ae4-9b43-a00210184e6e' />
     </Head>
     <div className='cover'>
