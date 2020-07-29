@@ -20,7 +20,7 @@ const Store = ({
       <MainHeader
         title={collection && collection.title}
       />
-      <div dangerouslySetInnerHTML={{ __html: collection.descriptionHtml }} />
+      <h2>{collection && collection.descriptionHtml}</h2>
       <br />
       <ProductList products={collection && collection.products} loading={isCollectionLoading} />
     </Main>

@@ -11,7 +11,7 @@ const LocationsMapPage = ({ locations }) =>
     <LocationsMap locations={locations} />
     <style jsx>{`
       div {
-        min-height: calc(100vh - 3em);
+        min-height: calc(100vh - 3.5em);
         position: absolute;
         top: 0;
         right: 0;

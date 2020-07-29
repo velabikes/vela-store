@@ -9,10 +9,11 @@ const Vela = () =>
   <div className='HomePage'>
     <Head>
       <title>Smartbike Vela 2 - Vela Bikes</title>
-      <meta http-equiv='content-language' content='pt-br' />
+      <meta httpEquiv='content-language' content='pt-br' />
+      <link rel='alternate' hrefLang='pt-br' href='https://velabikes.com.br/vela' />
       <meta name='application-name' content='Vela Bikes Store' />
       <meta name='description' content='Conheça a geração smart de bikes elétricas da Vela. Conectada com as ruas, com seu celular e com você.' />
-      <meta property='og:url' content='https://velabikes.com.br' />
+      <meta property='og:url' content='https://velabikes.com.br/vela' />
       <meta property='og:type' content='website' />
       <meta property='og:title' content='Smartbike Vela 2 - Vela Bikes' />
       <meta property='og:locale' content='pt_BR' />
