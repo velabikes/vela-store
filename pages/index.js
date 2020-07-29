@@ -15,26 +15,31 @@ import { offBlack, offWhite, white } from '../style/colors'
 const HomePage = ({ highlight }) =>
   <div className='HomePage'>
     <Head>
-      <title>Smartbike Vela 2 - Vela Bikes</title>
-      <link rel='alternate' hreflang='pt-br' href='https://www.velabikes.com.br' />
-      <meta http-equiv='content-language' content='pt-br' />
+      <title>Vela 2: A bicicleta elétrica smart do Brasil - Vela  Bikes</title>
+      <link rel='alternate' hrefLang='pt-br' href='https://velabikes.com.br' />
+      <meta httpEquiv='content-language' content='pt-br' />
       <meta name='application-name' content='Vela Bikes Store' />
-      <meta name='description' content='Conheça a Vela 2. A bicicleta elétrica smart do Brasil: rastreamento GPS, freio regenerativo, app companheiro e muito mais!' />
+      <meta name='description' content='Uma bicicleta elétrica & smart para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes sem abrir mão de estilo.' />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content="@velabikes" /> 
+      <meta name="twitter:title" content="Vela 2: A bicicleta elétrica smart do Brasil - Vela  Bikes" />
+      <meta name="twitter:description" content="Uma bicicleta elétrica & smart para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes sem abrir mão de estilo." />
+      <meta name="twitter:image" content="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FBikeEletricaSmart.jpg?alt=media&token=3f8618f9-981e-4ae4-9b43-a00210184e6e" />
       <meta property='og:url' content='https://velabikes.com.br' />
       <meta property='og:type' content='website' />
-      <meta property='og:title' content='Vela Bikes' />
+      <meta property='og:title' content='Vela 2: A bicicleta elétrica smart do Brasil - Vela  Bikes' />
       <meta property='og:locale' content='pt_BR' />
-      <meta property='og:description' content='Conheça a Vela 2. A bicicleta elétrica smart do Brasil: rastreamento GPS, freio regenerativo, app companheiro e muito mais!' />
+      <meta property='og:description' content='Uma bicicleta elétrica & smart para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes sem abrir mão de estilo.' />
       <meta property='og:image' content='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FBikeEletricaSmart.jpg?alt=media&token=3f8618f9-981e-4ae4-9b43-a00210184e6e' />
     </Head>
     <div className='cover'>
       <HomeImage />
       <div className='cta'>
         <div className='slogan'>
-          <h1>Vela 2</h1>
-          <h4>A bicicleta elétrica smart do Brasil. Faça parte do futuro. Agora.</h4>
+          <h1>A bicicleta elétrica smart do Brasil</h1>
+          <h4>Para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes sem abrir mão de estilo.</h4>
+          <p>Faça parte da comunidade disruptiva de Velejadores e seja a mudança na história da mobilidade urbana em nosso país.</p>
+          <h4>Construa o futuro. Agora.</h4>
           <div className='actions'>
             <Link href='/vela'>
               <Button primary>Saiba mais</Button>
@@ -77,13 +82,17 @@ const HomePage = ({ highlight }) =>
       }
       h1 {
         color: ${offWhite};
-        font-size: 3rem;
+        font-size: 2rem;
       }
       h2 {
         color: ${offBlack};
       }
       h4 {
         color: ${offWhite};
+        padding-bottom: 0em;
+      }
+      .cta p {
+        color: ${offWhite}
       }
       .home-store {
         background-color: #272727;
@@ -97,26 +106,36 @@ const HomePage = ({ highlight }) =>
         margin-bottom: -2em;
       }
       .actions :global(button) {
-        margin: 0;
+        margin: 1em 0 0 0;
       }
       @media only screen and (min-width: 768px) {
         h1 {
-          font-size: 4rem;
-          font-weight: 900;
-          margin-left: -0.1em;
+          font-size: 2.5rem;
+          font-weight: 800;
+          color: ${offBlack}
+        }
+        h4, .cta p {
+          color: ${offBlack};
         }
         .cta {
           position: absolute;
           justify-content: center;
-          max-width: 18em;
-          left: 6em;
-          top: 6em;
+          max-width: 20em;
+          left: 2em;
+          top: 2em;
           text-align: left;
-          background-color: transparent;
+          background-color: ${white};
           margin-top: 0rem;
+          padding: 2em;
         }
         .actions {
           right: 0;
+        }
+        @media only screen and (min-width: 1280px) {
+          .cta {
+            left: 4em;
+            top: 4em;
+          }
         }
       }
     `}</style>

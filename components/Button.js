@@ -47,6 +47,11 @@ const Button = ({
         box-shadow: none;
         color: ${bgColor};
       }
+      @media only screen and (min-width: 768px) {
+        button {
+          font-size: 0.9em;
+        }
+      }
     `}</style>
   </>
 

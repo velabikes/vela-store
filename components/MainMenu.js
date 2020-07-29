@@ -3,7 +3,7 @@ import { velaRed, offBlack } from '../style/colors'
 
 const MainMenu = () =>
   <nav className='MainMenu'>
-    <h2>Loja</h2>
+    <h2>Menu</h2>
     <ul className='items'>
       <li><Link href='/vela'><a>
         Vela 2

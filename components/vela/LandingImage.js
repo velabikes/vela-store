@@ -6,6 +6,7 @@ const LandingImage = () =>
       img {
         height: 100vh;
         object-fit: cover;
+        object-position: 40% 60%;
       }
       .desktop {
         display: none;

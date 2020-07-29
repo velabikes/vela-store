@@ -8,23 +8,29 @@ import { offWhite, darkGray, offBlack, white, lightGray } from '../style/colors'
 const Vela = () =>
   <div className='HomePage'>
     <Head>
-      <title>Vela 2 - Vela Bikes</title>
+      <title>Smartbike Vela 2 - Vela Bikes</title>
       <meta http-equiv='content-language' content='pt-br' />
       <meta name='application-name' content='Vela Bikes Store' />
-      <meta name='description' content='Conheça a geração smart de bikes elétricas da Vela.' />
+      <meta name='description' content='Conheça a geração smart de bikes elétricas da Vela. Conectada com as ruas, com seu celular e com você.' />
       <meta property='og:url' content='https://velabikes.com.br' />
       <meta property='og:type' content='website' />
-      <meta property='og:title' content='Vela Bikes' />
+      <meta property='og:title' content='Smartbike Vela 2 - Vela Bikes' />
       <meta property='og:locale' content='pt_BR' />
-      <meta property='og:description' content='Conheça a geração smart de bikes elétricas da Vela.' />
+      <meta property='og:description' content='Conheça a geração smart de bikes elétricas da Vela. Conectada com as ruas, com seu celular e com você.' />
       <meta property='og:image' content='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FSmartbike.jpg?alt=media&token=db783cf6-c08e-49ae-98d8-3816c3d06ddf' />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:site" content="@velabikes" /> 
+      <meta name="twitter:title" content="Smartbike Vela 2 - Vela Bikes" />
+      <meta name="twitter:description" content="Conheça a geração smart de bikes elétricas da Vela. Conectada com as ruas, com seu celular e com você." />
+      <meta name="twitter:image" content="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FSmartbike.jpg?alt=media&token=db783cf6-c08e-49ae-98d8-3816c3d06ddf" />
     </Head>
     <div className='cover'>
       <LandingImage />
       <div className='cta'>
         <div className='slogan'>
           <h1>V2</h1>
-          <h4>Conheça a geração smart de bikes elétricas da Vela</h4>
+          <h2>Smartbike Vela 2</h2>
+          <h4>Conheça a geração smart de bikes elétricas da Vela!</h4>
         </div>
         <div className='actions'>
           <Link href='/vela2'>
@@ -32,62 +38,6 @@ const Vela = () =>
           </Link>
         </div>
       </div>
-    </div>
-    <PaddedView>
-      <div className='section'>
-        <div className='right'>
-          <div className='right-content'>
-            <h2>Elétrica & smart</h2>
-            <h4>Conectada com as ruas, com seu celular e com você</h4>
-            <p>Nosso aplicativo te acompanha pelo caminho, mostrando em tempo real as informações essenciais para velejar com tranquilidade.</p>
-          </div>
-          <a href="/vela2">
-            <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/7130ce6f-5e4c-4472-bfc8-9855e17f0a92.jpg' alt='Smartbike Vela 2' />
-          </a>
-        </div>
-      </div>
-    </PaddedView>
-    <div className='image-cut'>
-      <a href="/vela2">
-        <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FTecnologiaVela2.jpg?alt=media&token=c8699709-d160-42bc-bc1c-c2c6a9310838' alt='Vela Bikes' />
-      </a>
-      <div className='tagline'>
-        <h2>Tecnologia e design nunca estiveram tão próximos</h2>
-        <div className='actions'>
-          <Link href='/vela2'>
-            <Button primary >Monte a sua</Button>
-          </Link>
-        </div>
-      </div>
-    </div>
-    <div className='app-content'>
-      <PaddedView>
-        <div className='section'>
-          <div className='right'>
-            <div className='right-content'>
-              <h2>App companheiro</h2>
-              <h4>Conte com auxílio e muito mais tranquilidade nas pedaladas</h4>
-              <p>Utilize o bloqueio eletromagnético, receba notificações de atividades suspeitas e consulte o mapa para se localizar pela cidade com eficiência.</p>
-            </div>
-          </div>
-        </div>
-        <div className='app-img'>
-          <a href="/vela2">
-            <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/55068f24-1c81-4bdc-bec3-3f9d0e586a79.png' alt='App Vela 2' />
-          </a>
-        </div>
-        <div className='app-bottom'>
-          <div className='section'>
-            <div className='left'>
-              <div className='left-content'>
-                <h2>Sempre visível</h2>
-                <h4>Com o rastreamento GPS sua bicicleta está sempre ao alcance</h4>
-                <p>Observe sua Vela de qualquer distância, em qualquer lugar. Cuidamos da sua segurança, para um deslocamento sem preocupações.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </PaddedView>
     </div>
     <PaddedView>
       <div className='section'>
@@ -106,15 +56,15 @@ const Vela = () =>
             <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/e2f0d9af-8587-429c-956c-1aa6c902b398.jpg' alt='Bateria impermeável bicicleta elétrica' />
           </a>
           <div className='left-content'>
-            <h2>Impermeável</h2>
+            <h2>Removível e impermeável</h2>
             <h4>Conecte o carregador diretamente na bike ou retire a bateria para carregar onde e quando precisar</h4>
             <p>A bateria possui formato cilíndrico, feita com células de lítio e acabamento impermeabilizado. É projetada para encaixar no tubo do selim e ficar protegida no quadro.</p>
           </div>
         </div>
         <div className='right'>
           <div className='right-content'>
-            <h2>Desempenho inédito</h2>
-            <h4>Freio regenerativo que recupera energia para a bateria nas descidas, com até <b>60km</b> de autonomia em trajetos</h4>
+            <h2>Freio regenerativo</h2>
+            <h4>Recupera energia para a bateria nas descidas, com até <b>60km</b> de autonomia em trajetos</h4>
             <p>Tenha toda a assistência necessária para pedalar sem qualquer esforço, mesmo nas maiores inclinações.</p>
             <div className='actions'>
               <Link href='/vela2'>
@@ -124,6 +74,63 @@ const Vela = () =>
           </div>
           <a href="/vela2">
             <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/c9f6a1b6-4dba-4bfb-a8de-129a47036d9b.jpg' alt='Freio regenerativo bike' />
+          </a>
+        </div>
+      </div>
+    </PaddedView>
+    <div className='image-cut'>
+      <a href="/vela2">
+        <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FTecnologiaVela2.jpg?alt=media&token=c8699709-d160-42bc-bc1c-c2c6a9310838' alt='Vela Bikes' />
+      </a>
+      <div className='tagline'>
+        <h2>Tecnologia e design nunca estiveram tão próximos</h2>
+        <h4>O design minimalista da Vela é a prova de que bikes elétricas podem reunir tecnologia de ponta, usabilidade e beleza. </h4>
+        <div className='actions'>
+          <Link href='/vela2'>
+            <Button primary >Monte a sua</Button>
+          </Link>
+        </div>
+      </div>
+    </div>
+    <div className='app-content'>
+      <PaddedView>
+        <div className='section'>
+          <div className='right'>
+            <div className='right-content'>
+              <h2>App companheiro</h2>
+              <h4>Conte com auxílio e muito mais tranquilidade nas pedaladas</h4>
+              <p>Utilize o bloqueio eletromagnético, receba notificações de atividades suspeitas e consulte o mapa para se deslocar pela cidade com o melhor que uma bicicleta elétrica tem a oferecer: eficiência.</p>
+            </div>
+          </div>
+        </div>
+        <div className='app-img'>
+          <a href="/vela2">
+            <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/55068f24-1c81-4bdc-bec3-3f9d0e586a79.png' alt='App Vela 2' />
+          </a>
+        </div>
+        <div className='app-bottom'>
+          <div className='section'>
+            <div className='left'>
+              <div className='left-content'>
+                <h2>Rastreamento GPS</h2>
+                <h4>Observe sua Vela de qualquer distância, em qualquer lugar.</h4>
+                <p>Sua smartbike sempre visível e ao seu alcance. Cuidamos da sua segurança, para um deslocamento sem preocupações.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </PaddedView>
+    </div>
+    <PaddedView>
+      <div className='section'>
+        <div className='right'>
+          <div className='right-content'>
+            <h2>Elétrica & smart</h2>
+            <h4>A smartbike conectada com as ruas, com seu celular e com você</h4>
+            <p>O aplicativo da Vela te acompanha pelo caminho, mostrando em tempo real as informações essenciais para velejar com tranquilidade.</p>
+          </div>
+          <a href="/vela2">
+            <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/7130ce6f-5e4c-4472-bfc8-9855e17f0a92.jpg' alt='Smartbike Vela 2' />
           </a>
         </div>
       </div>
@@ -346,26 +353,30 @@ const Vela = () =>
       .cta {
         display: flex;
         position: absolute;
-        justify-content: flex-end;
-        align-items: flex-end;
+        justify-content: flex-start;
+        align-items: flex-start;
         flex-direction: column;
         top: 0em;
-        right: 2em;
-        text-align: right
+        left: 2em;
+        text-align: left;
       }
       .slogan h1 {
         font-size: 6em;
         font-weight: 900;
-        color: ${offWhite};
+        color: ${offBlack};
         line-height: 1em;
+        margin-left: -0.1em;
+      }
+      .slogan h2 {
+        color: ${offBlack};
       }
       .slogan {
         padding: 1rem 0 0 0;
         max-width: 14em;
-        text-align: right;
+        text-align: left;
       }
       .slogan h4 {
-        color: ${offWhite};
+        color: ${offBlack};
         padding-bottom: 0em;
       }
       .section {
@@ -600,7 +611,7 @@ const Vela = () =>
           align-items: flex-start;
           text-align: left;
           left: 4em;
-          top: 4em;
+          top: 2em;
         }
         .cta .actions {
           margin-top: 0em;
@@ -613,19 +624,15 @@ const Vela = () =>
           text-align: left;
         }
         .cta .slogan h4 {
-          color: ${offWhite};
           padding: 0;
         }
         .cta .slogan h1 {
-          color: ${offWhite};
           margin-left: -0.15em;
         }
         .section {
+          padding: 2em;
           flex-direction: column;
-          padding-top: 2em;
-          padding-bottom: 2em;
           align-items: stretch;
-          margin-top: 2em;
         }
         .left {
           flex-direction: row-reverse;
@@ -644,11 +651,11 @@ const Vela = () =>
           align-self: start;
         }
         .left-content {
-          padding: 4em;
+          padding: 3em 4em 2em 2em;
           text-align: right;
         }
         .right-content {
-          padding: 4em;
+          padding: 3em 2em 2em 4em;
           text-align: left;
         }
         .image-cut img {
@@ -662,16 +669,12 @@ const Vela = () =>
         .tagline {
           justify-content: flex-end;
           align-items: flex-end;
-          top: 4em;
-          right: 4em;
+          top: 1em;
+          right: 0;
           text-align: right;
           position: absolute;
-          max-width: 25em;
+          max-width: 28em;
           background-color: transparent;
-        }
-        .tagline h2 {
-          margin-bottom: 1em;
-          color: ${offWhite};          
         }
         .app-img {
           display: flex;
@@ -683,7 +686,7 @@ const Vela = () =>
         .app-content img {
           max-width: 50%;
           right: 25%;
-          top: -18em;
+          top: -20em;
           position: absolute;
         }
         .app-bottom {
@@ -695,8 +698,12 @@ const Vela = () =>
         .app-features {
           flex-direction: column;
         }
+        .app-content .section .right .right-content{
+          padding: 2em;
+          margin: 0;
+        }
         .app-content .section .left .left-content{
-          padding: 0;
+          padding: 2em 2em 0 2em; 
           margin: 0;
         }
         .bfunctions {
@@ -706,7 +713,7 @@ const Vela = () =>
           margin-top: 2em;
         }
         .plans {
-          padding: 4em;
+          padding: 3em 4em 4em 4em;
         }
         .plans-content {
           flex-direction: column;
@@ -716,7 +723,7 @@ const Vela = () =>
           padding: 4em;
         }
         .specs {
-          margin: 2em auto;
+          margin: 1em auto 0 auto;
         }
         .specs-content, .specs-tech-content {
           width: 100%
@@ -727,13 +734,14 @@ const Vela = () =>
         @media only screen and (min-width: 1200px) {
           .plans-content{
             flex-direction: row;
+            justify-content: space-between;
           }
           .basic {
             margin: 0 2em;
-            padding: 4em;
+            padding: 2em;
           }
           .full, .free {
-            padding: 4em;
+            padding: 2em;
           }
         }
       }

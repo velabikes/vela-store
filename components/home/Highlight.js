@@ -8,14 +8,14 @@ const Highlight = () => {
     <PaddedView style={{ background: '#272727' }}>
       <div className='Highlight'>
         <div className='content'>
-          <p>O melhor desempenho para a cidade, em dois modelos diferentes</p>
+          <p>A smartbike que oferece o melhor desempenho para a cidade, em dois modelos diferentes.</p>
         </div>
         <div className='models'>
             <div className='qr'>
               <a href="/vela2">
                 <img alt='Vela 2 Quadro reto' src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/38f52e38-046a-4b9a-b38b-652ea463ddbd.png' />
                 <p>
-                  <h3>Quadro reto</h3>
+                  <h2>Quadro reto</h2>
                   <span>2 tamanhos</span>
                   <span>1,60m até 2m</span>
                 </p>
@@ -25,7 +25,7 @@ const Highlight = () => {
               <a href="/vela2">
                 <img alt='Vela 2 Quadro baixo' src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/0aed083a-3ee3-41db-9acf-fa78afb7010f.png' />
                 <p>
-                  <h3>Quadro baixo</h3>
+                  <h2>Quadro baixo</h2>
                   <span>2 tamanhos</span>
                   <span>1,58m até 1,90m</span>
                 </p>
@@ -33,7 +33,7 @@ const Highlight = () => {
             </div>
         </div>
         <div className='color'>
-          <p>Com cinco cores exclusivas para você escolher.</p>
+          <p>A Vela possui uma paleta única, com cinco cores exclusivas para você escolher.</p>
         </div>
       </div>
       <div className='price'>
@@ -141,7 +141,7 @@ const Highlight = () => {
               max-width: 30em;
             }
             .qr {
-              margin: -6em 2em 0 2em;
+              margin: -5em 2em 0 2em;
             }
             .qb {
               margin: -10em 2em 0 2em;

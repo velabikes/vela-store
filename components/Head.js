@@ -25,7 +25,7 @@ const CustomHead = props =>
         "brand": "Vela Bikes",
         "email": "contato@velabikes.com.br",
         "alternateName": "Vela Bikes Store",
-        "description": "Loja online das bicicletas elétricas da Vela.",
+        "description": "Loja online das bicicletas elétricas da Vela."
       }`}} />
       <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0' />
       <meta charSet='utf-8' />
