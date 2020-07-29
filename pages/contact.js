@@ -29,7 +29,7 @@ const Contact = () => (
         alt="Contato"
       />
       <div className="content">
-        <h1>Contato - Vela Bikes</h1>
+        <h1>Contato</h1>
         <p>
           Confira os canais de atendimento oficiais da Vela e entre em contato com sua solicitação.
         </p>

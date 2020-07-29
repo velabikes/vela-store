@@ -34,7 +34,7 @@ const Bar = ({ onContinue, extra, step, checkout }) => {
         display: flex;
         flex-direction: column;
       }
-      h1 { 
+      h2 { 
         color: ${darkGray};
       }
       .bottom {
@@ -99,7 +99,7 @@ const Bar = ({ onContinue, extra, step, checkout }) => {
         .left {
           flex-direction: column;
         }
-        .left h1 {
+        .left h2 {
           padding-right: 1.5em;
         }
         small {
