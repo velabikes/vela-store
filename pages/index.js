@@ -19,17 +19,17 @@ const HomePage = ({ highlight }) =>
       <link rel='alternate' hrefLang='pt-br' href='https://velabikes.com.br' />
       <meta httpEquiv='content-language' content='pt-br' />
       <meta name='application-name' content='Vela Bikes Store' />
-      <meta name='description' content='Uma bicicleta elétrica & smart para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes sem abrir mão de estilo.' />
+      <meta name='description' content='Uma bicicleta elétrica & smart para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes, sem abrir mão do estilo.' />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content="@velabikes" /> 
       <meta name="twitter:title" content="Vela 2: A bicicleta elétrica smart do Brasil - Vela  Bikes" />
-      <meta name="twitter:description" content="Uma bicicleta elétrica & smart para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes sem abrir mão de estilo." />
+      <meta name="twitter:description" content="Uma bicicleta elétrica & smart para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes, sem abrir mão do estilo." />
       <meta name="twitter:image" content="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FBikeEletricaSmart.jpg?alt=media&token=3f8618f9-981e-4ae4-9b43-a00210184e6e" />
       <meta property='og:url' content='https://velabikes.com.br' />
       <meta property='og:type' content='website' />
       <meta property='og:title' content='Vela 2: A bicicleta elétrica smart do Brasil - Vela  Bikes' />
       <meta property='og:locale' content='pt_BR' />
-      <meta property='og:description' content='Uma bicicleta elétrica & smart para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes sem abrir mão de estilo.' />
+      <meta property='og:description' content='Uma bicicleta elétrica & smart para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes, sem abrir mão do estilo.' />
       <meta property='og:image' content='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FBikeEletricaSmart.jpg?alt=media&token=3f8618f9-981e-4ae4-9b43-a00210184e6e' />
     </Head>
     <div className='cover'>
@@ -37,9 +37,8 @@ const HomePage = ({ highlight }) =>
       <div className='cta'>
         <div className='slogan'>
           <h1>A bicicleta elétrica smart do Brasil</h1>
-          <h4>Para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes sem abrir mão de estilo.</h4>
-          <p>Faça parte da comunidade disruptiva de Velejadores e seja a mudança na história da mobilidade urbana em nosso país.</p>
-          <h4>Construa o futuro. Agora.</h4>
+          <p>Uma bike para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes, sem abrir mão do estilo.</p>
+          <h4>Faça parte do futuro. Agora.</h4>
           <div className='actions'>
             <Link href='/vela'>
               <Button primary>Saiba mais</Button>
