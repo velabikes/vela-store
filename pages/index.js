@@ -130,7 +130,7 @@ const HomePage = ({ highlight }) =>
         .actions {
           right: 0;
         }
-        @media only screen and (min-width: 1280px) {
+        @media only screen and (min-width: 1300px) {
           .cta {
             left: 4em;
             top: 4em;
