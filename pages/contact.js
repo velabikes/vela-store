@@ -7,14 +7,20 @@ const Contact = () => (
   <div className="contact">
     <Head>
       <title>Contato - Vela Bikes</title>
-      <meta http-equiv='content-language' content='pt-br' />
+      <link rel='alternate' hrefLang='pt-br' href='https://velabikes.com.br/contato' />
+      <meta httpEquiv='content-language' content='pt-br' />
       <meta name='application-name' content='Vela Bikes Store' />
-      <meta name='description' content='Vela Bikes: Entre em contato com nosso atendimento, estamos sempre felizes em ajudar!' />
-      <meta property='og:url' content='https://velabikes.com.br' />
+      <meta name='description' content='Entre em contato com nosso atendimento, estamos sempre felizes em ajudar!' />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:site" content="@velabikes" /> 
+      <meta name="twitter:title" content="Contato - Vela Bikes" />
+      <meta name="twitter:description" content="Entre em contato com nosso atendimento, estamos sempre felizes em ajudar!" />
+      <meta name="twitter:image" content="https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/b5d58fc8-ad62-4d65-89b8-1e59f4473d0b.jpg" />
+      <meta property='og:url' content='https://velabikes.com.br/contato' />
       <meta property='og:type' content='website' />
-      <meta property='og:title' content='Vela Bikes' />
+      <meta property='og:title' content='Contato - Vela Bikes' />
       <meta property='og:locale' content='pt_BR' />
-      <meta property='og:description' content='Vela Bikes: Entre em contato com nosso atendimento, estamos sempre felizes em ajudar!' />
+      <meta property='og:description' content='Entre em contato com nosso atendimento, estamos sempre felizes em ajudar!' />
       <meta property='og:image' content='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/b5d58fc8-ad62-4d65-89b8-1e59f4473d0b.jpg' />
     </Head>
     <div className="main">
@@ -25,8 +31,7 @@ const Contact = () => (
       <div className="content">
         <h1>Contato</h1>
         <p>
-          Confira os canais de atendimento oficiais da Vela e entre em contato
-          com sua solicitação.
+          Confira os canais de atendimento oficiais da Vela e entre em contato com sua solicitação.
         </p>
         <br />
         <h3>Horário:</h3>

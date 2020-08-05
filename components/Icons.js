@@ -5,7 +5,6 @@ import { velaBlue, velaGreen, lightGreen, white, velaRed, offWhite } from '../st
 
 export const UserIcon = props => (
   <svg viewBox='0 0 27.05 27.04' width='1em' height='1em' {...props}>
-    <title>User Icon</title>
     <g id='prefix__Camada_2' data-name='Camada 2'>
       <g id='prefix__Camada_1-2' data-name='Camada 1'>
         <g id='prefix__Grupo_39' data-name='Grupo 39'>
@@ -88,7 +87,6 @@ export const CartIcon = compose(
   <div className='CartIcon'>
     <div className='count'>{checkout && checkout.lineItems.edges.length}</div>
     <svg viewBox='0 0 24 24' width={width || '1.5rem'} height={height || '1.5rem'}>
-      <title>Cart Icon</title>
       <path
         d='M8.2 17c-1 0-1.7.8-1.7 1.7 0 .9.8 1.7 1.7 1.7.9 0 1.8-.7 1.8-1.7S9.2 17 8.2 17zM3 3.9c0 .5.4.9.9.9h.9l3.1 6.6-1.2 2.1c-.5.8-.2 1.9.7 2.4.3.1.6.2.8.2h9.6c.5 0 .9-.4.9-.9s-.4-.9-.9-.9H8.2l1-1.7h6.5c.6 0 1.2-.3 1.5-.9L20.3 6c.2-.4.1-.9-.3-1.2-.1-.1-.3-.1-.5-.1H6.7l-.6-1.2C6 3.2 5.6 3 5.3 3H3.9c-.5 0-.9.4-.9.9zM17 17c-1 0-1.7.8-1.7 1.7 0 .9.8 1.7 1.7 1.7.9 0 1.7-.8 1.7-1.7 0-.9-.7-1.7-1.7-1.7z'
       />

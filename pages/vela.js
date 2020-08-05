@@ -9,10 +9,11 @@ const Vela = () =>
   <div className='HomePage'>
     <Head>
       <title>Smartbike Vela 2 - Vela Bikes</title>
-      <meta http-equiv='content-language' content='pt-br' />
+      <meta httpEquiv='content-language' content='pt-br' />
+      <link rel='alternate' hrefLang='pt-br' href='https://velabikes.com.br/vela' />
       <meta name='application-name' content='Vela Bikes Store' />
       <meta name='description' content='Conheça a geração smart de bikes elétricas da Vela. Conectada com as ruas, com seu celular e com você.' />
-      <meta property='og:url' content='https://velabikes.com.br' />
+      <meta property='og:url' content='https://velabikes.com.br/vela' />
       <meta property='og:type' content='website' />
       <meta property='og:title' content='Smartbike Vela 2 - Vela Bikes' />
       <meta property='og:locale' content='pt_BR' />
@@ -29,7 +30,7 @@ const Vela = () =>
       <div className='cta'>
         <div className='slogan'>
           <h1>V2</h1>
-          <h2>Smartbike Vela 2</h2>
+          <h3>Conectada com as ruas, com seu celular e com você.</h3>
           <h4>Conheça a geração smart de bikes elétricas da Vela!</h4>
         </div>
         <div className='actions'>
@@ -352,28 +353,24 @@ const Vela = () =>
       }
       .cta {
         display: flex;
-        position: absolute;
-        justify-content: flex-start;
-        align-items: flex-start;
+        justify-content: center;
+        align-items: center;
         flex-direction: column;
-        top: 0em;
-        left: 2em;
-        text-align: left;
+        text-align: center;
       }
       .slogan h1 {
-        font-size: 6em;
+        font-size: 8em;
         font-weight: 900;
         color: ${offBlack};
         line-height: 1em;
         margin-left: -0.1em;
       }
-      .slogan h2 {
+      .slogan h3 {
         color: ${offBlack};
       }
       .slogan {
-        padding: 1rem 0 0 0;
         max-width: 14em;
-        text-align: left;
+        text-align: center
       }
       .slogan h4 {
         color: ${offBlack};
@@ -603,31 +600,31 @@ const Vela = () =>
       }
       @media only screen and (min-width: 768px) {
         .slogan h1 {
-          font-size: 10em;
+          font-size: 8em;
+          font-weight: 900;
         }
         .cta {
           position: absolute;
-          justify-content: flex-start;
-          align-items: flex-start;
-          text-align: left;
-          left: 4em;
+          justify-content: flex-end;
+          align-items: flex-end;
+          text-align: right;
+          right: 2em;
           top: 2em;
+          padding: 1em 2em 2em 1em;
+          background-color: ${white};
         }
         .cta .actions {
           margin-top: 0em;
-          align-self: flex-start;
+          align-self: flex-end;
          }
         .slogan {
           background-color: transparent;
           padding: 0;
-          max-width: 14em;
-          text-align: left;
+          max-width: 12em;
+          text-align: right;
         }
         .cta .slogan h4 {
           padding: 0;
-        }
-        .cta .slogan h1 {
-          margin-left: -0.15em;
         }
         .section {
           padding: 2em;

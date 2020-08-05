@@ -13,11 +13,11 @@ const Bar = ({ onContinue, extra, step, checkout }) => {
       </div>
       <div className='bottom'>
         <div className='left'>
-          <h1>
+          <h2>
             {step === 1 && <Price value={6890} />}
             {step === 2 && <Price value={6890 + extra.reduce((a, b) => a + parseInt(b.priceV2.amount), 0)} />}
             {step === 3 && 'Total:' && <Price value={checkout.totalPrice} />}
-          </h1>
+          </h2>
         </div>
         <div className='actions'>
           <Button primary onClick={onContinue}>
@@ -34,7 +34,7 @@ const Bar = ({ onContinue, extra, step, checkout }) => {
         display: flex;
         flex-direction: column;
       }
-      h1 { 
+      h2 { 
         color: ${darkGray};
       }
       .bottom {
@@ -99,7 +99,7 @@ const Bar = ({ onContinue, extra, step, checkout }) => {
         .left {
           flex-direction: column;
         }
-        .left h1 {
+        .left h2 {
           padding-right: 1.5em;
         }
         small {

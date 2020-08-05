@@ -9,14 +9,20 @@ const Invest = () => (
   <>
     <Head>
       <title>Investir - Vela Bikes</title>
-      <meta http-equiv='content-language' content='pt-br' />
+      <meta httpEquiv='content-language' content='pt-br' />
+      <link rel='alternate' hrefLang='pt-br' href='https://velabikes.com.br/investir' />
       <meta name='application-name' content='Vela Bikes Store' />
-      <meta name='description' content='Vela Bikes: Vamos mudar o desenvolvimento da mobilidade urbana no Brasil!' />
-      <meta property='og:url' content='https://velabikes.com.br' />
+      <meta name='description' content='Vamos mudar o desenvolvimento da mobilidade urbana no Brasil!' />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:site" content="@velabikes" /> 
+      <meta name="twitter:title" content="Investir - Vela  Bikes" />
+      <meta name="twitter:description" content="UVamos mudar o desenvolvimento da mobilidade urbana no Brasil!" />
+      <meta name="twitter:image" content="https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/47ff67fa-48d6-4539-9a69-daf428127c64.jpeg" />
+      <meta property='og:url' content='https://velabikes.com.br/investir' />
       <meta property='og:type' content='website' />
-      <meta property='og:title' content='Vela Bikes' />
+      <meta property='og:title' content='Investir - Vela Bikes' />
       <meta property='og:locale' content='pt_BR' />
-      <meta property='og:description' content='Vela Bikes: Vamos mudar o desenvolvimento da mobilidade urbana no Brasil!' />
+      <meta property='og:description' content='Vamos mudar o desenvolvimento da mobilidade urbana no Brasil!' />
       <meta property='og:image' content='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/47ff67fa-48d6-4539-9a69-daf428127c64.jpeg' />
     </Head>
     <InvestImage />
