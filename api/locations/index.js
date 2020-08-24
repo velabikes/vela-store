@@ -11,16 +11,6 @@ module.exports = async (req, res) => {
           'SP, 01424-002, Brasil'
         ],
         phone: '(11) 3064-6570',
-        open: true,
-        hours: [
-          ['segunda-feira', ' 10:00 – 16:00'],
-          ['terça-feira', ' 10:00 – 16:00'],
-          ['quarta-feira', ' 10:00 – 16:00'],
-          ['quinta-feira', ' 10:00 – 16:00'],
-          ['sexta-feira', ' 10:00 – 16:00'],
-          ['sábado', ' 10:00 – 16:00'],
-          ['domingo', ' 10:00 – 16:00']
-        ],
         pos: {
           lat: -23.5625497,
           lng: -46.6677741
@@ -51,16 +41,6 @@ module.exports = async (req, res) => {
           'SP, 01414-000, Brasil'
         ],
         phone: '(11) 3796-6230',
-        open: true,
-        hours: [
-          ['segunda-feira', ' 08:30 – 18:00'],
-          ['terça-feira', ' 08:30 – 18:00'],
-          ['quarta-feira', ' 08:30 – 18:00'],
-          ['quinta-feira', ' 08:30 – 18:00'],
-          ['sexta-feira', ' 08:30 – 18:00'],
-          ['sábado', ' 10:00 – 18:00'],
-          ['domingo', ' Fechado']
-        ],
         pos: {
           lat: -23.554589,
           lng: -46.658292
@@ -76,16 +56,6 @@ module.exports = async (req, res) => {
           'SP, 05429-040, Brasil'
         ],
         phone: '(11) 3031-1092',
-        open: false,
-        hours: [
-          ['segunda-feira', ' 12:00 – 20:00'],
-          ['terça-feira', ' 12:00 – 20:00'],
-          ['quarta-feira', ' 12:00 – 20:00'],
-          ['quinta-feira', ' 12:00 – 20:00'],
-          ['sexta-feira', ' 12:00 – 20:00'],
-          ['sábado', ' 12:00 – 20:00'],
-          ['domingo', ' 12:00 – 20:00']
-        ],
         pos: {
           lat: -23.5600874,
           lng: -46.6971429
@@ -101,16 +71,6 @@ module.exports = async (req, res) => {
           'SP, 01535-000, Brasil'
         ],
         phone: '(11) 3271-8331',
-        open: false,
-        hours: [
-          ['segunda-feira', ' Fechado'],
-          ['terça-feira', ' Fechado'],
-          ['quarta-feira', ' Fechado'],
-          ['quinta-feira', ' Fechado'],
-          ['sexta-feira', ' Fechado'],
-          ['sábado', ' 13:00 – 17:00'],
-          ['domingo', ' 13:00 – 17:00']
-        ],
         pos: {
           lat: -23.5728727,
           lng: -46.6254545
@@ -156,16 +116,6 @@ module.exports = async (req, res) => {
           'SP, 05409-011, Brasil'
         ],
         phone: '(11) 3294-2799',
-        open: true,
-        hours: [
-          ['segunda-feira', ' 10:00 – 22:00'],
-          ['terça-feira', ' 10:00 – 22:00'],
-          ['quarta-feira', ' 10:00 – 22:00'],
-          ['quinta-feira', ' 10:00 – 22:00'],
-          ['sexta-feira', ' 10:00 – 22:00'],
-          ['sábado', ' 10:00 – 18:00'],
-          ['domingo', ' Fechado']
-        ],
         pos: {
           lat: -23.555822,
           lng: -46.675354
@@ -181,16 +131,6 @@ module.exports = async (req, res) => {
           'SP, 05615-190, Brasil'
         ],
         phone: '(11) 2935-0886',
-        open: false,
-        hours: [
-          ['segunda-feira', ' 11:30 – 17:30'],
-          ['terça-feira', ' 11:30 – 17:30'],
-          ['quarta-feira', ' 11:30 – 17:30'],
-          ['quinta-feira', ' 11:30 – 17:30'],
-          ['sexta-feira', ' 11:30 – 17:30'],
-          ['sábado', ' 11:30 – 17:30'],
-          ['domingo', ' 11:30 – 17:30']
-        ],
         pos: {
           lat: -23.590182,
           lng: -46.715656
@@ -206,16 +146,6 @@ module.exports = async (req, res) => {
           'SP, 01239-011, Brasil'
         ],
         phone: '(11) 2306-9755',
-        open: false,
-        hours: [
-          ['segunda-feira', ' 11:30 – 17:30'],
-          ['terça-feira', ' 11:30 – 17:30'],
-          ['quarta-feira', ' 11:30 – 17:30'],
-          ['quinta-feira', ' 11:30 – 17:30'],
-          ['sexta-feira', ' 11:30 – 17:30'],
-          ['sábado', ' 11:30 – 17:30'],
-          ['domingo', ' 11:30 – 17:30']
-        ],
         pos: {
           lat: -23.5484736,
           lng: -46.6554557
@@ -231,16 +161,6 @@ module.exports = async (req, res) => {
           'SP, 05416-010, Brasil'
         ],
         phone: '(11) 4306-6918',
-        open: true,
-        hours: [
-          ['segunda-feira', ' 10:00 – 18:00'],
-          ['terça-feira', ' 10:00 – 18:00'],
-          ['quarta-feira', ' 10:00 – 18:00'],
-          ['quinta-feira', ' 10:00 – 18:00'],
-          ['sexta-feira', ' 10:00 – 18:00'],
-          ['sábado', ' 10:00 – 18:00'],
-          ['domingo', ' 11:30 – 16:30']
-        ],
         pos: {
           lat: -23.5660344,
           lng: -46.6846147
@@ -256,16 +176,6 @@ module.exports = async (req, res) => {
           'SP, 04533-002, Brasil'
         ],
         phone: '(11) 2361-9936',
-        open: false,
-        hours: [
-          ['segunda-feira', ' 11:30 – 22:00'],
-          ['terça-feira', ' 11:30 – 22:00'],
-          ['quarta-feira', ' 11:30 – 22:00'],
-          ['quinta-feira', ' 11:30 – 22:00'],
-          ['sexta-feira', ' 11:30 – 22:00'],
-          ['sábado', ' 12:00 – 20:00'],
-          ['domingo', ' Fechado']
-        ],
         pos: {
           lat: -23.5832047,
           lng: -46.6763248
@@ -281,16 +191,6 @@ module.exports = async (req, res) => {
           'SP, 05435-001, Brasil'
         ],
         phone: '(11) 99693-1212',
-        open: false,
-        hours: [
-          ['segunda-feira', ' Fechado'],
-          ['terça-feira', ' 15:00 – 18:00'],
-          ['quarta-feira', ' 15:00 – 18:00'],
-          ['quinta-feira', ' 15:00 – 18:00'],
-          ['sexta-feira', ' 15:00 – 18:00'],
-          ['sábado', ' 09:00 – 12:00'],
-          ['domingo', ' 09:00 – 12:00']
-        ],
         pos: {
           lat: -23.5486881,
           lng: -46.69166939999999
@@ -306,16 +206,6 @@ module.exports = async (req, res) => {
           'SP, 04014-001, Brasil'
         ],
         phone: '(11) 4328-0008',
-        open: true,
-        hours: [
-          ['segunda-feira', ' 11:00 – 17:00'],
-          ['terça-feira', ' 11:00 – 17:00'],
-          ['quarta-feira', ' 11:00 – 17:00'],
-          ['quinta-feira', ' 11:00 – 17:00'],
-          ['sexta-feira', ' 11:00 – 17:00'],
-          ['sábado', ' 11:00 – 17:00'],
-          ['domingo', ' 11:00 – 17:00']
-        ],
         pos: {
           lat: -23.5839645,
           lng: -46.6424742
@@ -344,16 +234,6 @@ module.exports = async (req, res) => {
           'R. Oscar Freire, 1149',
           'Cerqueira César, São Paulo',
           'SP, 01426-003, Brasil'
-        ],
-        open: true,
-        hours: [
-          ['segunda-feira', ' 09:00 – 18:00'],
-          ['terça-feira', ' 09:00 – 18:00'],
-          ['quarta-feira', ' 09:00 – 18:00'],
-          ['quinta-feira', ' 09:00 – 18:00'],
-          ['sexta-feira', ' 09:00 – 18:00'],
-          ['sábado', ' 10:00 – 16:00'],
-          ['domingo', ' 10:00 – 16:00']
         ],
         pos: {
           lat: -23.561599,
@@ -384,16 +264,6 @@ module.exports = async (req, res) => {
           'SP, 04522-031, Brasil'
         ],
         phone: '(11) 3063-2084',
-        open: true,
-        hours: [
-          ['segunda-feira', ' 11:00 – 20:00'],
-          ['terça-feira', ' 11:00 – 20:00'],
-          ['quarta-feira', ' 11:00 – 20:00'],
-          ['quinta-feira', ' 11:00 – 20:00'],
-          ['sexta-feira', ' 11:00 – 20:00'],
-          ['sábado', ' 11:00 – 20:00'],
-          ['domingo', ' 11:00 – 20:00']
-        ],
         pos: {
           lat: -23.6011841,
           lng: -46.6656548
@@ -409,16 +279,6 @@ module.exports = async (req, res) => {
           'RJ, 22420-040, Brasil'
         ],
         phone: '(21) 3083-5031',
-        open: true,
-        hours: [
-          ['segunda-feira', ' Atendimento 24 horas'],
-          ['terça-feira', ' Atendimento 24 horas'],
-          ['quarta-feira', ' Atendimento 24 horas'],
-          ['quinta-feira', ' Atendimento 24 horas'],
-          ['sexta-feira', ' Atendimento 24 horas'],
-          ['sábado', ' Atendimento 24 horas'],
-          ['domingo', ' Atendimento 24 horas']
-        ],
         pos: {
           lat: -22.98523339999999,
           lng: -43.2023853
@@ -434,16 +294,6 @@ module.exports = async (req, res) => {
           'SP, 05422-000, Brasil'
         ],
         phone: '(11) 3064-0827',
-        open: false,
-        hours: [
-          ['segunda-feira', ' 12:00 – 20:00'],
-          ['terça-feira', ' 12:00 – 20:00'],
-          ['quarta-feira', ' 12:00 – 20:00'],
-          ['quinta-feira', ' 12:00 – 20:00'],
-          ['sexta-feira', ' 12:00 – 20:00'],
-          ['sábado', ' 12:00 – 20:00'],
-          ['domingo', ' 12:00 – 20:00']
-        ],
         pos: {
           lat: -23.5651858,
           lng: -46.6821703
@@ -459,16 +309,6 @@ module.exports = async (req, res) => {
           'SP, 05303-000, Brasil'
         ],
         phone: '(11) 3628-8209',
-        open: true,
-        hours: [
-          ['segunda-feira', ' 09:00 – 13:00'],
-          ['terça-feira', ' 09:00 – 13:00'],
-          ['quarta-feira', ' 09:00 – 13:00'],
-          ['quinta-feira', ' 09:00 – 13:00'],
-          ['sexta-feira', ' 09:00 – 13:00'],
-          ['sábado', ' 09:00 – 13:00'],
-          ['domingo', ' Fechado']
-        ],
         pos: {
           lat: -23.5334425,
           lng: -46.7255175
@@ -484,16 +324,6 @@ module.exports = async (req, res) => {
           'PR, 80730-360, Brasil'
         ],
         phone: '(41) 3342-4576',
-        open: false,
-        hours: [
-          ['segunda-feira', ' 15:00 – 19:00'],
-          ['terça-feira', ' 15:00 – 19:00'],
-          ['quarta-feira', ' 15:00 – 19:00'],
-          ['quinta-feira', ' 15:00 – 19:00'],
-          ['sexta-feira', ' 15:00 – 19:00'],
-          ['sábado', ' Fechado'],
-          ['domingo', ' Fechado']
-        ],
         pos: {
           lat: -25.4389499,
           lng: -49.29604529999999
@@ -509,16 +339,6 @@ module.exports = async (req, res) => {
           'SP, 01407-200, Brasil'
         ],
         phone: '(11) 3168-7187',
-        open: false,
-        hours: [
-          ['segunda-feira', ' 12:00 – 22:00'],
-          ['terça-feira', ' 12:00 – 22:00'],
-          ['quarta-feira', ' 12:00 – 22:00'],
-          ['quinta-feira', ' 12:00 – 22:00'],
-          ['sexta-feira', ' 12:00 – 22:00'],
-          ['sábado', ' 12:00 – 22:00'],
-          ['domingo', ' 12:00 – 22:00']
-        ],
         pos: {
           lat: -23.5811913,
           lng: -46.6798443
@@ -534,16 +354,6 @@ module.exports = async (req, res) => {
           'PR, 80430-234, Brasil'
         ],
         phone: '(41) 3044-6682',
-        open: true,
-        hours: [
-          ['segunda-feira', ' Fechado'],
-          ['terça-feira', ' 10:00 – 20:00'],
-          ['quarta-feira', ' 10:00 – 20:00'],
-          ['quinta-feira', ' 10:00 – 20:00'],
-          ['sexta-feira', ' 10:00 – 20:00'],
-          ['sábado', ' 12:00 – 20:00'],
-          ['domingo', ' 10:00 – 18:00']
-        ],
         pos: {
           lat: -25.431196,
           lng: -49.281841
@@ -559,21 +369,11 @@ module.exports = async (req, res) => {
           'DF, 70316-102, Brasil'
         ],
         phone: '(61) 99303-8196',
-        open: true,
-        hours: [
-          ['segunda-feira', ' Fechado'],
-          ['terça-feira', ' Fechado'],
-          ['quarta-feira', ' Fechado'],
-          ['quinta-feira', ' Fechado'],
-          ['sexta-feira', ' 10:00 – 13:00, 14:00 – 16:00'],
-          ['sábado', ' 10:00 – 13:00, 14:00 – 16:00'],
-          ['domingo', ' 10:00 – 13:00, 14:00 – 16:00']
-        ],
         pos: {
           lat: -15.7933051,
           lng: -47.8930601
         },
-        googlePlace: 'ChIJbxoCUgrk3JQRRmffu3l-VCo',
+        googlePlace: 'ChIJlZr18bE7WpMRB_hHg-ImCzc',
         type: ['charger']
       },
       {
@@ -584,16 +384,6 @@ module.exports = async (req, res) => {
           'PR, 80730-290, Brasil'
         ],
         phone: '(41) 3018-1701',
-        open: true,
-        hours: [
-          ['segunda-feira', ' 08:00 – 19:00'],
-          ['terça-feira', ' 08:00 – 19:00'],
-          ['quarta-feira', ' 08:00 – 19:00'],
-          ['quinta-feira', ' 08:00 – 19:00'],
-          ['sexta-feira', ' 08:00 – 19:00'],
-          ['sábado', ' Fechado'],
-          ['domingo', ' Fechado']
-        ],
         pos: {
           lat: -25.439504,
           lng: -49.300724
@@ -609,16 +399,6 @@ module.exports = async (req, res) => {
           'SP, 01232-010, Brasil'
         ],
         phone: '(11) 2872-5852',
-        open: true,
-        hours: [
-          ['segunda-feira', ' 10:00 – 18:00'],
-          ['terça-feira', ' 10:00 – 18:00'],
-          ['quarta-feira', ' 10:00 – 18:00'],
-          ['quinta-feira', ' 10:00 – 18:00'],
-          ['sexta-feira', ' 10:00 – 18:00'],
-          ['sábado', ' 10:00 – 15:00'],
-          ['domingo', ' Fechado']
-        ],
         pos: {
           lat: -23.5328478,
           lng: -46.659321
@@ -647,11 +427,12 @@ module.exports = async (req, res) => {
           'Centro, Curitiba',
           'PR, 80430-180, Brasil'
         ],
+        phone: '(41) 3242-9999',
         pos: {
           lat: -25.4335544,
           lng: -49.2817704
         },
-        googlePlace: 'ChIJnzOe4Rfl3JQRkkbNTZnH4K0',
+        googlePlace: 'ChIJ0WMwKQvk3JQRKscraBW4ma0',
         type: ['charger']
       },
       {
@@ -662,16 +443,6 @@ module.exports = async (req, res) => {
           'RS, 90050-020, Brasil'
         ],
         phone: '(51) 3372-5240',
-        open: true,
-        hours: [
-          ['segunda-feira', ' 10:00 – 18:30'],
-          ['terça-feira', ' 10:00 – 18:30'],
-          ['quarta-feira', ' 10:00 – 18:30'],
-          ['quinta-feira', ' 10:00 – 18:30'],
-          ['sexta-feira', ' 10:00 – 18:30'],
-          ['sábado', ' 10:00 – 17:00'],
-          ['domingo', ' Fechado']
-        ],
         pos: {
           lat: -30.04319,
           lng: -51.2202641
@@ -687,16 +458,6 @@ module.exports = async (req, res) => {
           'SP, 04570-140, Brasil'
         ],
         phone: '(11) 95874-5326',
-        open: true,
-        hours: [
-          ['segunda-feira', ' 09:00 – 18:00'],
-          ['terça-feira', ' 09:00 – 18:00'],
-          ['quarta-feira', ' 09:00 – 18:00'],
-          ['quinta-feira', ' 09:00 – 18:00'],
-          ['sexta-feira', ' 09:00 – 18:00'],
-          ['sábado', ' 10:00 – 14:00'],
-          ['domingo', ' Fechado']
-        ],
         pos: {
           lat: -23.6002339,
           lng: -46.68690119999999
@@ -715,15 +476,6 @@ module.exports = async (req, res) => {
         ],
         phone: '(27) 3024-6755',
         open: true,
-        hours: [
-          ['segunda-feira', ' 09:00 – 18:00'],
-          ['terça-feira', ' 09:00 – 18:00'],
-          ['quarta-feira', ' 09:00 – 18:00'],
-          ['quinta-feira', ' 09:00 – 18:00'],
-          ['sexta-feira', ' 09:00 – 18:00'],
-          ['sábado', ' 09:00 – 13:00'],
-          ['domingo', ' Fechado']
-        ],
         pos: {
           lat: -20.2792453,
           lng: -40.2953256
@@ -741,15 +493,6 @@ module.exports = async (req, res) => {
         ],
         phone: '(61) 3344-8042',
         open: true,
-        hours: [
-          ['segunda-feira', ' 08:00 – 20:00'],
-          ['terça-feira', ' 08:00 – 20:00'],
-          ['quarta-feira', ' 08:00 – 20:00'],
-          ['quinta-feira', ' 08:00 – 20:00'],
-          ['sexta-feira', ' 08:00 – 20:00'],
-          ['sábado', ' 08:00 – 20:00'],
-          ['domingo', ' 09:00 – 14:00']
-        ],
         pos: {
           lat: -15.7986565,
           lng: -47.9209296
@@ -765,16 +508,6 @@ module.exports = async (req, res) => {
           'SP, 11030-400, Brasil'
         ],
         phone: '(13) 99727-5470',
-        open: true,
-        hours: [
-          ['segunda-feira', ' 10:00 – 18:00'],
-          ['terça-feira', ' 09:00 – 18:00'],
-          ['quarta-feira', ' 09:00 – 18:00'],
-          ['quinta-feira', ' 09:00 – 18:00'],
-          ['sexta-feira', ' 09:00 – 18:00'],
-          ['sábado', ' 09:00 – 15:00'],
-          ['domingo', ' Fechado']
-        ],
         pos: {
           lat: -23.989678,
           lng: -46.29947199999999
@@ -793,15 +526,6 @@ module.exports = async (req, res) => {
         ],
         phone: '(81) 3048-4050',
         open: true,
-        hours: [
-          ['segunda-feira', ' 08:00 – 14:00'],
-          ['terça-feira', ' 08:00 – 14:00'],
-          ['quarta-feira', ' 08:00 – 14:00'],
-          ['quinta-feira', ' 08:00 – 14:00'],
-          ['sexta-feira', ' 08:00 – 14:00'],
-          ['sábado', ' 08:00 – 14:00'],
-          ['domingo', ' Fechado']
-        ],
         pos: {
           lat: -8.0366288,
           lng: -34.8920891
@@ -833,15 +557,6 @@ module.exports = async (req, res) => {
         ],
         phone: '(61) 3202-2775',
         open: true,
-        hours: [
-          ['segunda-feira', ' 09:00 – 19:00'],
-          ['terça-feira', ' 09:00 – 19:00'],
-          ['quarta-feira', ' 09:00 – 19:00'],
-          ['quinta-feira', ' 09:00 – 19:00'],
-          ['sexta-feira', ' 09:00 – 19:00'],
-          ['sábado', ' 09:00 – 15:00'],
-          ['domingo', ' Fechado']
-        ],
         pos: {
           lat: -15.7669266,
           lng: -47.8786118
@@ -857,16 +572,6 @@ module.exports = async (req, res) => {
           'SP, 14514-411, Brasil'
         ],
         phone: '(14) 99833-2323',
-        open: true,
-        hours: [
-          ['segunda-feira', ' 09:00 – 21:00'],
-          ['terça-feira', ' 09:00 – 21:00'],
-          ['quarta-feira', ' 09:00 – 21:00'],
-          ['quinta-feira', ' 09:00 – 21:00'],
-          ['sexta-feira', ' 09:00 – 21:00'],
-          ['sábado', ' 09:00 – 21:00'],
-          ['domingo', ' Fechado']
-        ],
         pos: {
           lat: -22.191865,
           lng: -49.9330992
@@ -882,16 +587,6 @@ module.exports = async (req, res) => {
           'RS, 95185-000, Brasil'
         ],
         phone: '(54) 99184-0145',
-        open: true,
-        hours: [
-          ['segunda-feira', ' 09:00 – 11:45, 14:00 – 19:00'],
-          ['terça-feira', ' 09:00 – 11:45, 14:00 – 19:00'],
-          ['quarta-feira', ' 09:00 – 11:45, 14:00 – 19:00'],
-          ['quinta-feira', ' 09:00 – 11:45, 14:00 – 19:00'],
-          ['sexta-feira', ' 09:00 – 11:45, 14:00 – 19:00'],
-          ['sábado', ' 08:00 – 11:30'],
-          ['domingo', ' Fechado']
-        ],
         pos: {
           lat: -29.3096603,
           lng: -51.49419049999999
@@ -907,16 +602,6 @@ module.exports = async (req, res) => {
           'PR, 80810-002, Brasil'
         ],
         phone: '(41) 3014-5762',
-        open: true,
-        hours: [
-          ['segunda-feira', ' 09:00 – 18:30'],
-          ['terça-feira', ' 09:00 – 18:30'],
-          ['quarta-feira', ' 09:00 – 18:30'],
-          ['quinta-feira', ' 09:00 – 18:30'],
-          ['sexta-feira', ' 09:00 – 18:30'],
-          ['sábado', ' 09:00 – 17:00'],
-          ['domingo', ' 10:30 – 15:00']
-        ],
         pos: {
           lat: -25.4176432,
           lng: -49.2944859
@@ -932,16 +617,6 @@ module.exports = async (req, res) => {
           'SP, 13875-031, Brasil'
         ],
         phone: '(19) 3631-0034',
-        open: true,
-        hours: [
-          ['segunda-feira', ' 08:00 – 18:00'],
-          ['terça-feira', ' 08:00 – 18:00'],
-          ['quarta-feira', ' 08:00 – 18:00'],
-          ['quinta-feira', ' 08:00 – 18:00'],
-          ['sexta-feira', ' 08:00 – 18:00'],
-          ['sábado', ' 08:00 – 13:00'],
-          ['domingo', ' Fechado']
-        ],
         pos: {
           lat: -21.986355,
           lng: -46.781424
@@ -957,21 +632,41 @@ module.exports = async (req, res) => {
           'MG, 38408-311, Brasil'
         ],
         phone: '(34) 3229-6664',
-        open: true,
-        hours: [
-          ['segunda-feira', ' 09:00 – 18:30'],
-          ['terça-feira', ' 09:00 – 18:30'],
-          ['quarta-feira', ' 09:00 – 18:30'],
-          ['quinta-feira', ' 09:00 – 18:30'],
-          ['sexta-feira', ' 09:00 – 18:30'],
-          ['sábado', ' 08:00 – 13:00'],
-          ['domingo', ' Fechado']
-        ],
         pos: {
           lat: -18.9388577,
           lng: -48.224602
         },
         googlePlace: 'ChIJb_VMpotPpJQREA-m3334ZD8',
+        type: ['service']
+      },
+      {
+        name: 'Bicicletaria Recreio',
+        address: [
+          'R. Rebouças, 250',
+          'Vitoria, Londrina',
+          'PR, 86060-680, Brasil'
+        ],
+        phone: '(43) 3327-6295',
+        pos: {
+          lat: -23.3037226,
+          lng: -51.178016
+        },
+        googlePlace: 'ChIJu8ETGbNE65QRo_9GRkhKXio',
+        type: ['service']
+      },
+      {
+        name: 'Mega Bike Salvador',
+        address: [
+          'Av. Engenheiro Raymundo Carlos Nery, n20',
+          'Cajazeiras 10, Salvador',
+          'BA, 41339-060, Brasil'
+        ],
+        phone: '(71) 3238-4590',
+        pos: {
+          lat: -12.8933411,
+          lng: -38.4089588
+        },
+        googlePlace: 'ChIJgxXdVTARFgcRC8UVwCss3xo',
         type: ['service']
       },
       {
@@ -982,16 +677,6 @@ module.exports = async (req, res) => {
           'SP, 01409-001, Brasil'
         ],
         phone: '(11) 3147-7000',
-        open: true,
-        hours: [
-          ['segunda-feira', ' Atendimento 24 horas'],
-          ['terça-feira', ' Atendimento 24 horas'],
-          ['quarta-feira', ' Atendimento 24 horas'],
-          ['quinta-feira', ' Atendimento 24 horas'],
-          ['sexta-feira', ' Atendimento 24 horas'],
-          ['sábado', ' Atendimento 24 horas'],
-          ['domingo', ' Atendimento 24 horas']
-        ],
         pos: {
           lat: -23.5602798,
           lng: -46.6559448
@@ -1037,16 +722,6 @@ module.exports = async (req, res) => {
           'SP, 01451-001, Brasil'
         ],
         phone: '(11) 3812-1866',
-        open: true,
-        hours: [
-          ['segunda-feira', ' Atendimento 24 horas'],
-          ['terça-feira', ' Atendimento 24 horas'],
-          ['quarta-feira', ' Atendimento 24 horas'],
-          ['quinta-feira', ' Atendimento 24 horas'],
-          ['sexta-feira', ' Atendimento 24 horas'],
-          ['sábado', ' Atendimento 24 horas'],
-          ['domingo', ' Atendimento 24 horas']
-        ],
         pos: {
           lat: -23.5715012,
           lng: -46.69091
@@ -1062,16 +737,6 @@ module.exports = async (req, res) => {
           'SP, 04562-080, Brasil'
         ],
         phone: '(11) 3812-2002',
-        open: true,
-        hours: [
-          ['segunda-feira', ' 07:00 – 20:30'],
-          ['terça-feira', ' 07:00 – 20:30'],
-          ['quarta-feira', ' 07:00 – 20:30'],
-          ['quinta-feira', ' 07:00 – 20:30'],
-          ['sexta-feira', ' 07:00 – 20:30'],
-          ['sábado', ' Fechado'],
-          ['domingo', ' Fechado']
-        ],
         pos: {
           lat: -23.60974839999999,
           lng: -46.69388430000001
@@ -1101,16 +766,6 @@ module.exports = async (req, res) => {
           'SP, 04537-082, Brasil'
         ],
         phone: '(11) 2397-0099',
-        open: false,
-        hours: [
-          ['segunda-feira', ' 12:00 – 17:00'],
-          ['terça-feira', ' 12:00 – 17:00'],
-          ['quarta-feira', ' 12:00 – 17:00'],
-          ['quinta-feira', ' 12:00 – 17:00'],
-          ['sexta-feira', ' 12:00 – 17:00'],
-          ['sábado', ' 12:00 – 17:00'],
-          ['domingo', ' 12:00 – 17:00']
-        ],
         pos: {
           lat: -23.5936534,
           lng: -46.677633
@@ -1126,16 +781,6 @@ module.exports = async (req, res) => {
           'SP, 01219-011, Brasil'
         ],
         phone: '(11) 94140-2116',
-        open: true,
-        hours: [
-          ['segunda-feira', ' Atendimento 24 horas'],
-          ['terça-feira', ' Atendimento 24 horas'],
-          ['quarta-feira', ' Atendimento 24 horas'],
-          ['quinta-feira', ' Atendimento 24 horas'],
-          ['sexta-feira', ' Atendimento 24 horas'],
-          ['sábado', ' Atendimento 24 horas'],
-          ['domingo', ' Atendimento 24 horas']
-        ],
         pos: {
           lat: -23.5417054,
           lng: -46.64494800000001
@@ -1154,11 +799,11 @@ module.exports = async (req, res) => {
         open: true,
         hours: [
           ['segunda-feira', ' Fechado'],
-          ['terça-feira', ' Fechado'],
-          ['quarta-feira', ' 10:00 – 18:00'],
-          ['quinta-feira', ' Fechado'],
-          ['sexta-feira', ' Fechado'],
-          ['sábado', ' 10:00 – 18:00'],
+          ['terça-feira', ' 09:00 – 18:00'],
+          ['quarta-feira', ' 09:00 – 18:00'],
+          ['quinta-feira', ' 09:00 – 18:00'],
+          ['sexta-feira', ' 09:00 – 18:00'],
+          ['sábado', ' 09:00 – 18:00'],
           ['domingo', ' Fechado']
         ],
         pos: {
@@ -1179,10 +824,10 @@ module.exports = async (req, res) => {
         open: true,
         hours: [
           ['segunda-feira', ' Fechado'],
-          ['terça-feira', ' Fechado'],
-          ['quarta-feira', ' 09:30 – 18:30'],
-          ['quinta-feira', ' Fechado'],
-          ['sexta-feira', ' Fechado'],
+          ['terça-feira', ' 09:00 – 18:00'],
+          ['quarta-feira', ' 09:00 – 18:00'],
+          ['quinta-feira', ' 09:00 – 18:00'],
+          ['sexta-feira', ' 09:00 – 18:00'],
           ['sábado', ' 09:00 – 18:00'],
           ['domingo', ' Fechado']
         ],
