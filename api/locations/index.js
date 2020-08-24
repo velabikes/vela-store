@@ -552,6 +552,31 @@ module.exports = async (req, res) => {
         type: ['charger']
       },
       {
+        name: 'Camelo Bike Tour Brasília',
+        address: [
+          'SHS Quadra 06 Conjunto A, Bloco A, Loja 17',
+          'Centro Empresarial Brasil 21 - Asa Sul, Brasília',
+          'DF, 70316-102, Brasil'
+        ],
+        phone: '(61) 99303-8196',
+        open: true,
+        hours: [
+          ['segunda-feira', ' Fechado'],
+          ['terça-feira', ' Fechado'],
+          ['quarta-feira', ' Fechado'],
+          ['quinta-feira', ' Fechado'],
+          ['sexta-feira', ' 10:00 – 13:00, 14:00 – 16:00'],
+          ['sábado', ' 10:00 – 13:00, 14:00 – 16:00'],
+          ['domingo', ' 10:00 – 13:00, 14:00 – 16:00']
+        ],
+        pos: {
+          lat: -15.7933051,
+          lng: -47.8930601
+        },
+        googlePlace: 'ChIJbxoCUgrk3JQRRmffu3l-VCo',
+        type: ['charger']
+      },
+      {
         name: 'Luiz Volpato Arq',
         address: [
           'R. Jerônimo Durski, 897',
@@ -616,6 +641,20 @@ module.exports = async (req, res) => {
         type: ['charger']
       },
       {
+        name: 'Rause Café + Vinho',
+        address: [
+          'Alameda Dr. Carlos de Carvalho, 696',
+          'Centro, Curitiba',
+          'PR, 80430-180, Brasil'
+        ],
+        pos: {
+          lat: -25.4335544,
+          lng: -49.2817704
+        },
+        googlePlace: 'ChIJnzOe4Rfl3JQRkkbNTZnH4K0',
+        type: ['charger']
+      },
+      {
         name: 'Maiss Bike Store',
         address: [
           'Praça Garibaldi, 78',
@@ -638,7 +677,7 @@ module.exports = async (req, res) => {
           lng: -51.2202641
         },
         googlePlace: 'ChIJ340zClZ4GZURu2Yy8ZXSSl4',
-        type: ['service']
+        type: ['service', 'charger']
       },
       {
         name: 'Oficina Small Hill de bicicletas elétricas',
@@ -768,7 +807,7 @@ module.exports = async (req, res) => {
           lng: -34.8920891
         },
         googlePlace: 'ChIJWz5XtfAYqwcRPowRixw4slA',
-        type: ['service']
+        type: ['service','charger']
       },
       {
         name: 'Atelier Bicicine',
@@ -808,7 +847,7 @@ module.exports = async (req, res) => {
           lng: -47.8786118
         },
         googlePlace: 'ChIJKcPVzHI7WpMRaU9RkzCJHTY',
-        type: ['service']
+        type: ['service', 'charger']
       },
       {
         name: 'MUUVE - Bicicletas elétricas',
