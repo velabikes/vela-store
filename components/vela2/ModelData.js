@@ -127,7 +127,7 @@ export default {
     id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTcyNjk0NjQxODc0Mw==',
     photos: ['/static/vela2/models/VEL-V2-BAIXO-VERDE-PRETO.png']
   },
-  '{"color":"Verde","tire":"Preto","size":"GG"}': {
+  '{"color":"Verde","tire":"Preto","size":"G"}': {
     id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTcyNjk0NTQzNTcwMw==',
     photos: ['/static/vela2/models/VEL-V2-RETO-VERDE-PRETO.png']
   },
