@@ -62,6 +62,8 @@ module.exports = async (req, res) => {
     cityName = 'N/A'
   }
 
+  console.log('Editar frete duplicado...')
+
   if (totalPrice > 5500 && totalGrams < 300) {
     res.end(JSON.stringify({
       rates: [{
@@ -111,12 +113,13 @@ module.exports = async (req, res) => {
       )
     }
     else {
+      const totalShippingPrice = 23000 * Math.round(totalGrams / 20000)
       return (
         res.end(JSON.stringify({
           rates: [{
             service_name: 'Transportadora',
             service_code: 'FGN',
-            total_price: '23000',
+            total_price: totalShippingPrice.toString(),
             description: 'Produção + 18 dias úteis',
             currency: 'BRL'
           }]
