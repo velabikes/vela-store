@@ -62,6 +62,8 @@ module.exports = async (req, res) => {
     cityName = 'N/A'
   }
 
+  console.log('Editar frete duplicado...')
+
   if (totalPrice > 5500 && totalGrams < 300) {
     res.end(JSON.stringify({
       rates: [{
