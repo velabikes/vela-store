@@ -3,10 +3,10 @@ import { velaGreen } from 'style/colors'
 
 const ParkingButton = () =>
   <div className='parkingButton'>
-    <a href='http://www.bikeandpark.com.br'>Bike & Park <NextIcon fill={velaGreen} /></a>
+    <a href='http://www.bikeandpark.com.br'>Bike & Park</a>
     <style jsx>{`
       .parkingButton{
-          text-align: right;
+          text-align: left;
           margin-top: 1em;
       }
     `}</style>
