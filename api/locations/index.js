@@ -4,7 +4,7 @@ module.exports = async (req, res) => {
   return res.end(
     JSON.stringify([
       {
-        name: 'BotaniKafé - Jardins',
+        name: 'BotaniKafé Jardins',
         address: [
           'Alameda Lorena, 1765',
           'Jardins, São Paulo',
@@ -64,7 +64,7 @@ module.exports = async (req, res) => {
         type: ['charger']
       },
       {
-        name: 'CASA TOFFO',
+        name: 'Casa Toffo',
         address: [
           'R. Paulo Orozimbo, 613',
           'Aclimação, São Paulo',
@@ -124,7 +124,7 @@ module.exports = async (req, res) => {
         type: ['charger']
       },
       {
-        name: 'Torteria - Morumbi',
+        name: 'Torteria Morumbi',
         address: [
           'Rua dos Três Irmãos, 654',
           'Vila Progredior, São Paulo',
@@ -214,21 +214,6 @@ module.exports = async (req, res) => {
         type: ['charger']
       },
       {
-        name: 'Saladices Pinheiros',
-        address: [
-          'R. Simão Álvares, 49',
-          'Pinheiros, São Paulo',
-          'SP, 05417-030, Brasil'
-        ],
-        phone: '(11) 2309-3962',
-        pos: {
-          lat: -23.5668357,
-          lng: -46.6867454
-        },
-        googlePlace: 'ChIJM6Ei0whXzpQR2CeApInducA',
-        type: ['charger']
-      },
-      {
         name: 'The Coffee Oscar Freire',
         address: [
           'R. Oscar Freire, 1149',
@@ -257,7 +242,7 @@ module.exports = async (req, res) => {
         type: ['charger']
       },
       {
-        name: 'Bacio di Latte',
+        name: 'Bacio di Latte Moema',
         address: [
           'R. Gaivota, 544',
           'Moema, São Paulo',
@@ -287,7 +272,7 @@ module.exports = async (req, res) => {
         type: ['charger']
       },
       {
-        name: 'Bacio di Latte',
+        name: 'Bacio di Latte Pinheiros',
         address: [
           'R. dos Pinheiros, 404',
           'Pinheiros, São Paulo',
@@ -302,7 +287,7 @@ module.exports = async (req, res) => {
         type: ['charger']
       },
       {
-        name: 'WHEAT BIOPADARIA',
+        name: 'Wheat Biopadaria',
         address: [
           'R. Carlos Weber, 1622',
           'Vila Leopoldina, São Paulo',
@@ -332,7 +317,7 @@ module.exports = async (req, res) => {
         type: ['charger']
       },
       {
-        name: 'Bacio di Latte',
+        name: 'Bacio di Latte Itaim Bibi',
         address: [
           'R. Manuel Guedes, 77',
           'Itaim Bibi, São Paulo',
@@ -436,6 +421,36 @@ module.exports = async (req, res) => {
         type: ['charger']
       },
       {
+        name: 'Everybike',
+        address: [
+          'R. França Pinto, 421',
+          'Vila Mariana, São Paulo',
+          'SP, 04016-032, Brasil'
+        ],
+        phone: '(11) 5539-0125',
+        pos: {
+          lat: 	-23.5857730197085,
+          lng: -46.63915891970849
+        },
+        googlePlace: 'ChIJIdkhwIdZzpQRI1U5jULyGwY',
+        type: ['charger']
+      },
+      {
+        name: 'O Pudim Perfeito',
+        address: [
+          'Alameda Dr. Carlos de Carvalho, 1612 Loja B',
+          'Bigorrilho, São Paulo',
+          'PR, 80730-201, Brasil'
+        ],
+        phone: '(41) 98781-5381',
+        pos: {
+          lat: -25.4356163197085,
+          lng: -49.28880031970851
+        },
+        googlePlace: 'ChIJ-RWmK5Tj3JQRsVUJr9-lCRE',
+        type: ['charger']
+      },
+      {
         name: 'Maiss Bike Store',
         address: [
           'Praça Garibaldi, 78',
@@ -451,7 +466,7 @@ module.exports = async (req, res) => {
         type: ['service', 'charger']
       },
       {
-        name: 'Oficina Small Hill de bicicletas elétricas',
+        name: 'Oficina Small Hill de Bicicletas Elétricas',
         address: [
           'R. Pôrto Martins, 748',
           'Brooklin, São Paulo',
@@ -516,6 +531,22 @@ module.exports = async (req, res) => {
         type: ['service', 'charger']
       },
       {
+        name: 'Bike Café Sportix Tatuapé',
+        address: [
+          'R. Francisco Marengo, 189',
+          'Tatuapé, São Paulo',
+          'SP, 03313-000, Brasil'
+        ],
+        phone: '(11) 2096-2136',
+        open: true,
+        pos: {
+          lat: -23.5373773197085,
+          lng: -46.5584795697085
+        },
+        googlePlace: 'ChIJOeGEaFNfzpQRBMjvcEj6tj8',
+        type: ['charger']
+      },
+      {
         name: 'Reciclo Bikes',
         address: [
           'Mercado da Encruzilhada',
@@ -531,7 +562,7 @@ module.exports = async (req, res) => {
           lng: -34.8920891
         },
         googlePlace: 'ChIJWz5XtfAYqwcRPowRixw4slA',
-        type: ['service','charger']
+        type: ['service', 'charger']
       },
       {
         name: 'Atelier Bicicine',
@@ -637,7 +668,7 @@ module.exports = async (req, res) => {
           lng: -48.224602
         },
         googlePlace: 'ChIJb_VMpotPpJQREA-m3334ZD8',
-        type: ['service']
+        type: ['service', 'charger']
       },
       {
         name: 'Bicicletaria Recreio',
@@ -676,67 +707,49 @@ module.exports = async (req, res) => {
           'Bela Vista, São Paulo',
           'SP, 01409-001, Brasil'
         ],
-        phone: '(11) 3147-7000',
         pos: {
-          lat: -23.5602798,
-          lng: -46.6559448
+          lat: -23.5588213197085,
+          lng: -46.6547523697085
         },
         googlePlace: 'ChIJcVxJBsxZzpQRFMJ_Q7lID8w',
         type: ['parking']
       },
       {
-        name: 'Born To Crossfit',
-        address: [
-          'R. Diogo Jacome, 661',
-          'Moema, São Paulo',
-          'SP, 04511, Brasil'
-        ],
-        phone: '(11) 94296-6624',
-        pos: {
-          lat: -23.5977982,
-          lng: -46.6674756
-        },
-        googlePlace: 'ChIJ40wX2AFazpQRwDbHK9M_DdI',
-        type: ['parking']
-      },
-      {
-        name: 'Alameda Campinas, 445',
+        name: 'Alameda Campinas',
         address: [
           'Alameda Campinas, 445',
           'Jardim Paulista, São Paulo',
           'SP, 01404-100, Brasil'
         ],
         pos: {
-          lat: -23.5657148,
-          lng: -46.65265509999999
+          lat: -23.5642880697085,
+          lng: -46.6514159697085
         },
         googlePlace:
           'EktBbGFtZWRhIENhbXBpbmFzLCA0NDUgLSBKYXJkaW0gUGF1bGlzdGEsIFPDo28gUGF1bG8gLSBTUCwgMDE0MDQtMTAwLCBCcmF6aWwiMRIvChQKEgn3URm5x1nOlBHTNM9i0wEJ6BC9AyoUChIJJfBwmsZZzpQRNLtDV3SchRM',
         type: ['parking']
       },
       {
-        name: 'Condomínio Edifício Barão De Rothschild',
+        name: 'Av. Faria Lima',
         address: [
           'Av. Brg. Faria Lima, 1572',
           'Jardim Paulistano, São Paulo',
           'SP, 01451-001, Brasil'
         ],
-        phone: '(11) 3812-1866',
         pos: {
-          lat: -23.5715012,
-          lng: -46.69091
+          lat: -23.57017496970849,
+          lng: -46.6894528697085
         },
-        googlePlace: 'ChIJTQw8QQtXzpQRqC3spwDZMOI',
+        googlePlace: 'ChIJ2f9sQQtXzpQRpP17iW_zZyM',
         type: ['parking']
       },
       {
-        name: 'BrasilPark - Ed. Itamambuca',
+        name: 'Av. Berrini',
         address: [
           'Rua André Ampére, 65',
           'Cidade Monções, São Paulo',
           'SP, 04562-080, Brasil'
         ],
-        phone: '(11) 3812-2002',
         pos: {
           lat: -23.60974839999999,
           lng: -46.69388430000001
@@ -752,25 +765,10 @@ module.exports = async (req, res) => {
           'SP, 01305-000, Brasil'
         ],
         pos: {
-          lat: -23.5505555,
+          lat: -23.5491054197085,
           lng: -46.64716380000001
         },
         googlePlace: 'ChIJ7Vo9d0tYzpQRYEXmgBCMtic',
-        type: ['parking']
-      },
-      {
-        name: 'Pobre Juan - Vila Olímpia',
-        address: [
-          'R. Comendador Miguel Calfat, 525',
-          'Vila Nova Conceição, São Paulo',
-          'SP, 04537-082, Brasil'
-        ],
-        phone: '(11) 2397-0099',
-        pos: {
-          lat: -23.5936534,
-          lng: -46.677633
-        },
-        googlePlace: 'ChIJeTz9-VBXzpQRKiyUmAofCoc',
         type: ['parking']
       },
       {
@@ -786,6 +784,118 @@ module.exports = async (req, res) => {
           lng: -46.64494800000001
         },
         googlePlace: 'ChIJhXdZkkVYzpQRiLOGttP33AI',
+        type: ['parking']
+      },
+      {
+        name: 'DOC88',
+        address: [
+          'R. Cel. Joaquim Ferreira Lôbo, 314',
+          'Vila Nova Conceição, São Paulo',
+          'SP, 05425-070, Brasil'
+        ],
+        pos: {
+          lat: -23.5920455697085,
+          lng: -46.68130126970849
+        },
+        googlePlace: 'ChIJFUUWgEVXzpQRrwDOsIR40JE',
+        type: ['parking']
+      },
+      {
+        name: 'GROW',
+        address: [
+          'Rua Tabapuã, 743',
+          'Itaim Bibi, São Paulo',
+          'SP, 04533-012, Brasil'
+        ],
+        pos: {
+          lat: -23.5837346,
+          lng: -46.67770909999999
+        },
+        googlePlace: 'ChIJ3Sy3J7pXzpQR7l-ZefxvsmY',
+        type: ['parking']
+      },
+      {
+        name: 'Av. JK',
+        address: [
+          'Avenida Juscelino Kubitschek, 1200',
+          'Vila Nova Conceição, São Paulo',
+          'SP, 04538-070, Brasil'
+        ],
+        pos: {
+          lat: -46.6793996197085,
+          lng: -23.5888227697085
+        },
+        googlePlace: 'ChIJ7Uus0ERXzpQRU9g9ZPBJi0o',
+        type: ['parking']
+      },
+      {
+        name: 'Sta. Efigênia',
+        address: [
+          'Rua Antônio de Godói, 83',
+          'Santa Efigênia, São Paulo',
+          'SP, 01034-001, Brasil'
+        ],
+        pos: {
+          lat: -23.5405337697085,
+          lng: -46.6358544197085
+        },
+        googlePlace: 'ChIJ6wTp11BYzpQR8I1_HPRXJZ8',
+        type: ['parking']
+      },
+      {
+        name: 'Praca José Dom Gaspar',
+        address: [
+          'Rua da Consolação, 15',
+          'Centro Histórico de São Paulo, São Paulo',
+          'SP, Brasil'
+        ],
+        pos: {
+          lat: -23.5514883197085,
+          lng: -46.6577086197085
+        },
+        googlePlace: 'Ek1SLiBkYSBDb25zb2xhw6fDo28gLSBDZW50cm8gSGlzdMOzcmljbyBkZSBTw6NvIFBhdWxvLCBTw6NvIFBhdWxvIC0gU1AsIEJyYXppbCIuKiwKFAoSCf339TYzWM6UEbIhWwxGfRb9EhQKEgkpX2wKVljOlBF6S6DW5nfx7w',
+        type: ['parking']
+      },
+      {
+        name: 'Av. São João',
+        address: [
+          'Av. São João, 1277',
+          'República, São Paulo',
+          'SP, 01035-100 Brasil'
+        ],
+        pos: {
+          lat: -23.5382397197085,
+          lng: -46.6441959697085
+        },
+        googlePlace: 'ChIJWx19zUVYzpQR5FXkh8RfdQc',
+        type: ['parking']
+      },
+      {
+        name: 'Ibis Budget - Paraíso',
+        address: [
+          'Rua Vergueiro, 1571',
+          'Vila Mariana, São Paulo',
+          'SP, 04101-000 Brasil'
+        ],
+        pos: {
+          lat: -23.5748388697085,
+          lng: -46.63915171970849
+        },
+        googlePlace: 'ChIJ54KLZppZzpQRsIYXtywjFN8',
+        type: ['parking']
+      },
+      {
+        name: 'Mercadão de Pinheiros',
+        address: [
+          'Rua Pedro Cristi, 89',
+          'Pinheiros, São Paulo',
+          'SP, 05421-040 Brasil'
+        ],
+        pos: {
+          lat: -23.5646505697085,
+          lng: -46.6913942697085
+        },
+        googlePlace: 'ChIJcf4EqKFXzpQR2f8O708g8zY',
         type: ['parking']
       },
       {
