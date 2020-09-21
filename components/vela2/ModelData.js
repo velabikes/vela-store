@@ -1,83 +1,103 @@
 export default {
-  '{"color":"Vermelho","tire":"Creme","size":"P"}': {
+  '{"frame":"Baixo","size":"P","color":"Vermelho","tire":"Creme"}': {
     id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTcyNjk0NjEyMzgzMQ==',
-    photos: ['/static/vela2/models/VEL-V2-BAIXO-VERMELHO-CREME.png']
+    photos: ['/static/vela2/models/VEL-V2-490-26-VERMELHO-CREME.png']
   },
-  '{"color":"Coral","tire":"Creme","size":"P"}': {
+  '{"frame":"Baixo","size":"P","color":"Coral","tire":"Creme"}': {
     id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTcyNjk0NjMyMDQzOQ==',
-    photos: ['/static/vela2/models/VEL-V2-BAIXO-CORAL-CREME.png']
+    photos: ['/static/vela2/models/VEL-V2-490-26-CORAL-CREME.png']
   },
-  '{"color":"Verde","tire":"Creme","size":"P"}': {
+  '{"frame":"Baixo","size":"P","color":"Verde","tire":"Creme"}': {
     id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTcyNjk0NjA1ODI5NQ==',
-    photos: ['/static/vela2/models/VEL-V2-BAIXO-VERDE-CREME.png']
+    photos: ['/static/vela2/models/VEL-V2-490-26-VERDE-CREME.png']
   },
-  '{"color":"Azul","tire":"Creme","size":"P"}': {
+  '{"frame":"Baixo","size":"P","color":"Azul","tire":"Creme"}': {
     id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTcyNjk0NjI1NDkwMw==',
-    photos: ['/static/vela2/models/VEL-V2-BAIXO-AZUL-CREME.png']
+    photos: ['/static/vela2/models/VEL-V2-490-26-AZUL-CREME.png']
   },
-  '{"color":"Preto","tire":"Creme","size":"P"}': {
+  '{"frame":"Baixo","size":"P","color":"Preto","tire":"Creme"}': {
     id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTcyNjk0NjE4OTM2Nw==',
-    photos: ['/static/vela2/models/VEL-V2-BAIXO-PRETO-CREME.png']
+    photos: ['/static/vela2/models/VEL-V2-490-26-PRETO-CREME.png']
   },
-  '{"color":"Vermelho","tire":"Creme","size":"M"}': {
+  '{"frame":"Baixo","size":"M","color":"Vermelho","tire":"Creme"}': {
     id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTcyNjk0NjQ1MTUxMQ==',
-    photos: ['/static/vela2/models/VEL-V2-BAIXO-VERMELHO-CREME.png']
+    photos: ['/static/vela2/models/VEL-V2-490-29-VERMELHO-CREME.png']
   },
-  '{"color":"Vermelho","tire":"Creme","size":"G"}': {
+  '{"frame":"Reto","size":"M","color":"Vermelho","tire":"Creme"}': {
+    id: '',
+    photos: ['/static/vela2/models/VEL-V2-510-26-VERMELHO-CREME.png']
+  },
+  '{"frame":"Reto","size":"G","color":"Vermelho","tire":"Creme"}': {
     id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTcyNjk0NTQ2ODQ3MQ==',
-    photos: ['/static/vela2/models/VEL-V2-RETO-VERMELHO-CREME.png']
+    photos: ['/static/vela2/models/VEL-V2-550-29-VERMELHO-CREME.png']
   },
-  '{"color":"Vermelho","tire":"Creme","size":"GG"}': {
+  '{"frame":"Reto","size":"GG","color":"Vermelho","tire":"Creme"}': {
     id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTcyNjk0NTc5NjE1MQ==',
-    photos: ['/static/vela2/models/VEL-V2-RETO-VERMELHO-CREME.png']
+    photos: ['/static/vela2/models/VEL-V2-590-29-VERMELHO-CREME.png']
   },
-  '{"color":"Coral","tire":"Creme","size":"M"}': {
+  '{"frame":"Baixo","size":"M","color":"Coral","tire":"Creme"}': {
     id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTcyNjk0NjY0ODExOQ==',
-    photos: ['/static/vela2/models/VEL-V2-BAIXO-CORAL-CREME.png']
+    photos: ['/static/vela2/models/VEL-V2-490-29-CORAL-CREME.png']
   },
-  '{"color":"Coral","tire":"Creme","size":"G"}': {
+  '{"frame":"Reto","size":"M","color":"Coral","tire":"Creme"}': {
+    id: '',
+    photos: ['/static/vela2/models/VEL-V2-510-26-CORAL-CREME.png']
+  },
+  '{"frame":"Reto","size":"G","color":"Coral","tire":"Creme"}': {
     id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTcyNjk0NTY2NTA3OQ==',
-    photos: ['/static/vela2/models/VEL-V2-RETO-CORAL-CREME.png']
+    photos: ['/static/vela2/models/VEL-V2-550-29-CORAL-CREME.png']
   },
-  '{"color":"Coral","tire":"Creme","size":"GG"}': {
+  '{"frame":"Reto","size":"GG""color":"Coral","tire":"Creme"}': {
     id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTcyNjk0NTk5Mjc1OQ==',
-    photos: ['/static/vela2/models/VEL-V2-RETO-CORAL-CREME.png']
+    photos: ['/static/vela2/models/VEL-V2-590-29-CORAL-CREME.png']
   },
-  '{"color":"Verde","tire":"Creme","size":"M"}': {
+  '{"frame":"Baixo","size":"M","color":"Verde","tire":"Creme"}': {
     id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTcyNjk0NjM4NTk3NQ==',
-    photos: ['/static/vela2/models/VEL-V2-BAIXO-VERDE-CREME.png']
+    photos: ['/static/vela2/models/VEL-V2-490-29-VERDE-CREME.png']
   },
-  '{"color":"Verde","tire":"Creme","size":"G"}': {
+  '{"frame":"Reto","size":"M","color":"Verde","tire":"Creme"}': {
+    id: '',
+    photos: ['/static/vela2/models/VEL-V2-510-26-VERDE-CREME.png']
+  },
+  '{"frame":"Reto","size":"G","color":"Verde","tire":"Creme"}': {
     id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTcyNjk0NTQwMjkzNQ==',
-    photos: ['/static/vela2/models/VEL-V2-RETO-VERDE-CREME.png']
+    photos: ['/static/vela2/models/VEL-V2-550-29-VERDE-CREME.png']
   },
-  '{"color":"Verde","tire":"Creme","size":"GG"}': {
+  '{"frame":"Reto","size":"GG","color":"Verde","tire":"Creme"}': {
     id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTcyNjk0NTczMDYxNQ==',
-    photos: ['/static/vela2/models/VEL-V2-RETO-VERDE-CREME.png']
+    photos: ['/static/vela2/models/VEL-V2-590-29-VERDE-CREME.png']
   },
-  '{"color":"Azul","tire":"Creme","size":"M"}': {
+  '{"frame":"Baixo","size":"M","color":"Azul","tire":"Creme"}': {
     id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTcyNjk0NjU4MjU4Mw==',
-    photos: ['/static/vela2/models/VEL-V2-BAIXO-AZUL-CREME.png']
+    photos: ['/static/vela2/models/VEL-V2-490-29-AZUL-CREME.png']
   },
-  '{"color":"Azul","tire":"Creme","size":"G"}': {
+  '{"frame":"Reto","size":"M","color":"Azul","tire":"Creme"}': {
+    id: '',
+    photos: ['/static/vela2/models/VEL-V2-510-26-AZUL-CREME.png']
+  },
+  '{"frame":"Reto","size":"G","color":"Azul","tire":"Creme"}': {
     id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTcyNjk0NTU5OTU0Mw==',
-    photos: ['/static/vela2/models/VEL-V2-RETO-AZUL-CREME.png']
+    photos: ['/static/vela2/models/VEL-V2-550-29-AZUL-CREME.png']
   },
-  '{"color":"Azul","tire":"Creme","size":"GG"}': {
+  '{"frame":"Reto","size":"GG","color":"Azul","tire":"Creme"}': {
     id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTcyNjk0NTkyNzIyMw==',
-    photos: ['/static/vela2/models/VEL-V2-RETO-AZUL-CREME.png']
+    photos: ['/static/vela2/models/VEL-V2-590-29-AZUL-CREME.png']
   },
-  '{"color":"Preto","tire":"Creme","size":"M"}': {
+  '{"frame":"Baixo","size":"M","color":"Preto","tire":"Creme"}': {
     id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTcyNjk0NjUxNzA0Nw==',
-    photos: ['/static/vela2/models/VEL-V2-BAIXO-PRETO-CREME.png']
+    photos: ['/static/vela2/models/VEL-V2-490-29-PRETO-CREME.png']
   },
-  '{"color":"Preto","tire":"Creme","size":"G"}': {
+  '{"frame":"Reto","size":"M","color":"Preto","tire":"Creme"}': {
+    id: '',
+    photos: ['/static/vela2/models/VEL-V2-510-26-PRETO-CREME.png']
+  },
+  '{"frame":"Reto","size":"G","color":"Preto","tire":"Creme"}': {
     id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTcyNjk0NTUzNDAwNw==',
-    photos: ['/static/vela2/models/VEL-V2-RETO-PRETO-CREME.png']
+    photos: ['/static/vela2/models/VEL-V2-550-29-PRETO-CREME.png']
   },
-  '{"color":"Preto","tire":"Creme","size":"GG"}': {
+  '{"frame":"Reto","size":"GG","color":"Preto","tire":"Creme"}': {
     id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTcyNjk0NTg2MTY4Nw==',
-    photos: ['/static/vela2/models/VEL-V2-RETO-PRETO-CREME.png']
+    photos: ['/static/vela2/models/VEL-V2-590-29-PRETO-CREME.png']
   },
   '{"color":"Vermelho","tire":"Preto","size":"P"}': {
     id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTcyNjk0NjE1NjU5OQ==',

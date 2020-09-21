@@ -3,12 +3,13 @@ import { useEffect } from 'react'
 import ControlField from '../form/ControlField'
 
 const initialValues = {
+  frame: 'Reto',
+  size: 'M',
   color: 'Verde',
-  tire: 'Creme',
-  size: 'P'
+  tire: 'Creme'
 }
 
-const ModelSelector = ({ onModelChange }) => {
+const ModelSelector = ({ onModelChange, model }) => {
   const validate = values => {
     onModelChange(values)
 
@@ -21,9 +22,10 @@ const ModelSelector = ({ onModelChange }) => {
     <div>
       <Formik initialValues={initialValues} validate={validate}>
         <form>
+          <ControlField options={['Reto', 'Baixo']} name='frame' label='Tipo de quadro:' />
+          <ControlField options={model.frame === 'Baixo' ? ['P', 'M'] : ['M', 'G', 'GG']} name='size' label='Tamanho:' />
           <ControlField options={['Verde', 'Azul', 'Preto', 'Vermelho', 'Coral']} name='color' label='Cor:' />
           <ControlField options={['Creme', 'Preto']} name='tire' label='Pneu:' />
-          <ControlField options={['P', 'M', 'G', 'GG']} name='size' label='Tamanho:' />
         </form>
       </Formik>
       <p>Em dúvida de qual tamanho escolher? Siga as recomendações de acordo com sua altura:</p>
@@ -32,8 +34,9 @@ const ModelSelector = ({ onModelChange }) => {
       <p>→ M: 1,71m à 1,90m - Quadro 49 Aro 700C</p>
       <br/>
       <h4>• Quadro reto</h4>
-      <p>→ G: 1,68m à 1,82m - Quadro 55 Aro 700C</p>
-      <p>→ GG: 1,83m à 2,00m - Quadro 59 Aro 700C</p>
+      <p>→ M: 1,58m à 1,72m - Quadro 51 Aro 26"</p>
+      <p>→ G: 1,73m à 1,83m - Quadro 55 Aro 700C</p>
+      <p>→ GG: 1,84m à 2,00m - Quadro 59 Aro 700C</p>
       <style jsx>{`
 
       `}</style>

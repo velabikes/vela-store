@@ -1,14 +1,15 @@
 import { lightGray, velaGreen, white } from '../../style/colors'
 
-const Tab = ({ children, step }) => {
+const Tab = ({ children, step, onStep }) => {
+
   return (
     <div className='Tab'>
       <div className='TabSelector'>
-        <div className={step === 1 && 'active'}>
+        <div onClick={() => onStep(1)} className={step === 1 ? 'active' : 'inactive'}>
           1. Monte a sua
         </div>
-        <div className={step === 2 && 'active'}>2. Acessórios</div>
-        <div className={step === 3 && 'active'}>3. Pagamento</div>
+        <div onClick={() => onStep(2)} className={step === 2 ? 'active' : 'inactive'}>2. Acessórios</div>
+        <div onClick={() => onStep(3)} className={step === 3 ? 'active' : 'inactive'}>3. Pagamento</div>
       </div>
       <div className='TabContent'>
         {step === 1 && children[0]}
@@ -37,6 +38,13 @@ const Tab = ({ children, step }) => {
         .active {
           color: ${velaGreen};
           font-weight: 600;
+          cursor: auto;
+        }
+        .inactive {
+          cursor: pointer;
+        }
+        .inactive:hover {
+          background-color: ${lightGray};
         }
         .TabContent {
           background-color: ${white};

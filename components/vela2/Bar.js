@@ -21,9 +21,10 @@ const Bar = ({ onContinue, extra, step, checkout }) => {
         </div>
         <div className='actions'>
           <Button primary onClick={onContinue}>
-            {step === 1 && 'Continuar'}
-            {step === 2 && 'Continuar'}
-            {step === 3 && 'Finalizar'}
+            {step === 1 ? 'Continuar' : 
+              step === 2 ? 'Adicionar' :
+              checkout.lineItems.edges.length ? 'Finalizar' : 'Voltar'
+            }
           </Button>
         </div>
       </div>

@@ -11,7 +11,10 @@ const AddedToCart = ({ checkout, onStep }) => {
       <p>Finalize seu pedido ou confira mais acessórios, como cadeirinhas, caixotes e alforges, e continue comprando em nossa <a href='/loja'>loja</a>.</p>
       <p>Aceitamos pagamentos via PayPal, com opção de 12x sem juros no cartão de crédito, cartão de débito ou boleto bancário.</p>
       <div className='another' onClick={() => onStep(1)}><Button secondary>Adicionar outra Vela 2</Button></div>
+      {checkout && !checkout.lineItems.edges.length ? 
+      <p>O carrinho está vazio!</p> : 
       <p><b>Confira e revise os itens do seu pedido para finalizar:</b></p>
+      }
       <div className='items'>
         <table>
           <tbody>
