@@ -45,7 +45,7 @@ const HomePage = ({ highlight }) =>
             </Link>
           </div>
           <br/>
-          <small>Promoção do <b>Quadro Reto M</b> - Confortável para alturas de 1,58m até 1,74m. Válida até o fim de setembro ou enquanto durar o estoque.</small>
+          <small>Promoção apenas para o <b>Quadro Reto M</b> - Aplique o cupom <b>MESDAMOBILIDADE</b> no checkout. Válida até o fim de setembro ou enquanto durar o estoque.</small>
         </div>
       </div>
       <HomeImage />
@@ -75,8 +75,7 @@ const HomePage = ({ highlight }) =>
       }
       .cta {
         text-align: center;
-        padding: 1rem 3rem;
-        top: 2em;
+        padding: 2rem 3rem 1rem 3rem;
         background-color: #709981;
       }
       .cta h2, .cta small {
