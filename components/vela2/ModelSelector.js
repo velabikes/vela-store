@@ -13,7 +13,6 @@ const ModelSelector = ({ onModelChange, model }) => {
   const validate = values => {
     if (values.frame === 'Reto' && values.size === 'P') {
       onModelChange({...values, size: 'M'})
-      console.log({...values, size: 'M'})
       return {}
     }
     onModelChange(values)
