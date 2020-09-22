@@ -11,6 +11,7 @@ const initialValues = {
 
 const ModelSelector = ({ onModelChange, model }) => {
   const validate = values => {
+    console.log(values)
     onModelChange(values)
 
     return {}
