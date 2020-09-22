@@ -16,11 +16,11 @@ import ModelData from '../components/vela2/ModelData'
 const Vela2 = ({ checkout, checkoutId, checkoutLineItemsAdd }) => {
   const [selectedModel, setSelectedModel] = useState({})
   const [selectedExtra, setSelectedExtra] = useState([])
-  const [step, setStep] = useState(1)
+  const [step, setStep] = useState(1);
 
-  const { frame, color, tire, size } = selectedModel
+  const { frame, size, color, tire } = selectedModel
   const selectedModelData =
-    ModelData[JSON.stringify({ frame, color, tire, size })] || {}
+    ModelData[JSON.stringify({ frame, size, color, tire })] || {}
 
   const handleNext = async () => {
     if (step === 1) {
@@ -72,7 +72,7 @@ const Vela2 = ({ checkout, checkoutId, checkoutLineItemsAdd }) => {
       </Head>
       <div className='content'>
         <Display model={selectedModel} />
-        <Tab step={step}>
+        <Tab step={step} onStep={setStep}>
           <ModelSelector
             onModelChange={setSelectedModel}
             model={selectedModel}

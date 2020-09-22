@@ -1,8 +1,8 @@
 import { offWhite, darkGray } from '../../style/colors.js'
 import ModelData from './ModelData.js'
 
-const Display = ({ model: { color, tire, size } }) => {
-  const selectedModelData = ModelData[JSON.stringify({ color, tire, size })] || {}
+const Display = ({ model: { frame, size, color, tire } }) => {
+  const selectedModelData = ModelData[JSON.stringify({ frame, size, color, tire })] || {}
 
   return (
     <div className='Display'>
