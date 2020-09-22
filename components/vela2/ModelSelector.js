@@ -15,8 +15,9 @@ const ModelSelector = ({ onModelChange, model }) => {
       onModelChange({...values, size: 'M'})
       return {}
     }
-    onModelChange(values)
-    return {}
+    console.log(values)
+//     onModelChange(values)
+//     return {}
   }
 
   useEffect(() => onModelChange(initialValues), [])
