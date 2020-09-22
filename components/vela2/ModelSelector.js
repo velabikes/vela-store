@@ -29,13 +29,13 @@ const ModelSelector = ({ onModelChange, model }) => {
         </form>
       </Formik>
       <p>Em dúvida de qual tamanho escolher? Siga as recomendações de acordo com sua altura:</p>
-      <h4>• Quadro baixo</h4>
+      <h3>• Quadro baixo</h3>
       <p>→ P: 1,50m à 1,70m - Quadro 49 Aro 26"</p>
       <p>→ M: 1,71m à 1,90m - Quadro 49 Aro 700C</p>
       <br/>
-      <h4>• Quadro reto</h4>
-      <p><b>→ M de Mobilidade: 1,58m à 1,72m - Quadro 51 Aro 26"</b></p>
-      <p>→ G: 1,73m à 1,83m - Quadro 55 Aro 700C</p>
+      <h3>• Quadro reto</h3>
+      <p><b>→ Mês de Mobilidade: 1,58m à 1,74m - Quadro 51 Aro 26"</b></p>
+      <p>→ G: 1,75m à 1,83m - Quadro 55 Aro 700C</p>
       <p>→ GG: 1,84m à 2,00m - Quadro 59 Aro 700C</p>
       <style jsx>{`
 
