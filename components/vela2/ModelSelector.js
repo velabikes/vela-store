@@ -13,11 +13,12 @@ const ModelSelector = ({ onModelChange, model }) => {
   const validate = values => {
     if (values.frame === 'Reto' && values.size === 'P') {
       onModelChange({...values, size: 'M'})
+      console.log('intervee')
       return {}
     }
     console.log(values)
-//     onModelChange(values)
-//     return {}
+    onModelChange(values)
+    return {}
   }
 
   useEffect(() => onModelChange(initialValues), [])
