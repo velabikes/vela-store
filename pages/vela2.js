@@ -77,6 +77,7 @@ const Vela2 = ({ checkout, checkoutId, checkoutLineItemsAdd }) => {
             onModelChange={setSelectedModel}
             model={selectedModel}
           />
+    {selectedModel}
           <ExtraSelector
             model={selectedModel}
             selected={selectedExtra}
