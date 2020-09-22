@@ -90,8 +90,8 @@ const Vela2 = ({ checkout, checkoutId, checkoutLineItemsAdd }) => {
           />
           <AddedToCart onStep={setStep} />
         </Tab>
+        <h1>{selectedModel}</h1>
       </div>
-      <h1>{selectedModel}</h1>
       <Bar
         model={selectedModel}
         extra={selectedExtra}
