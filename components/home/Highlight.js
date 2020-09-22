@@ -13,17 +13,17 @@ const Highlight = () => {
         <div className='models'>
             <div className='qr'>
               <a href="/vela2">
-                <img alt='Vela 2 Quadro reto' src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/38f52e38-046a-4b9a-b38b-652ea463ddbd.png' />
+                <img alt='Vela 2 Quadro reto' src='/static/vela2/models/VEL-V2-550-29-VERDE-PRETO.png' />
                 <p>
                   <h2>Quadro reto</h2>
-                  <span>2 tamanhos</span>
-                  <span>1,60m até 2m</span>
+                  <span>3 tamanhos</span>
+                  <span>1,58m até 2m</span>
                 </p>
               </a>
             </div>
             <div className='qb'>
               <a href="/vela2">
-                <img alt='Vela 2 Quadro baixo' src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/0aed083a-3ee3-41db-9acf-fa78afb7010f.png' />
+                <img alt='Vela 2 Quadro baixo' src='/static/vela2/models/VEL-V2-490-29-VERDE-PRETO.png' />
                 <p>
                   <h2>Quadro baixo</h2>
                   <span>2 tamanhos</span>
@@ -43,14 +43,14 @@ const Highlight = () => {
           <p>Até 12x sem juros</p>
         </div>
         <div className='actions'>
-          <Link href='/vela2'>
-            <Button primary>Monte a sua</Button>
+          <Link href='/vela'>
+            <Button primary>Saiba mais</Button>
           </Link>
         </div>
         <div className='right'>
           <h3>Aluguel</h3>
           <h2>R$ 489/mês</h2>
-          <p>Disponível em agosto</p>
+          <p>Disponível em novembro</p>
         </div>
       </div>
       <style jsx>{`
