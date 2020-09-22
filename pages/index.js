@@ -33,19 +33,22 @@ const HomePage = ({ highlight }) =>
       <meta property='og:image' content='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FBikeEletricaSmart.jpg?alt=media&token=3f8618f9-981e-4ae4-9b43-a00210184e6e' />
     </Head>
     <div className='cover'>
-      <HomeImage />
       <div className='cta'>
         <div className='slogan'>
-          <h1>A bicicleta elétrica smart do Brasil</h1>
+          <h1>Mês da Mobilidade</h1>
           <p>Uma bike para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes, sem abrir mão do estilo.</p>
-          <h4>Faça parte do futuro. Agora.</h4>
+          <h4>De <strike>R$ 6.890</strike></h4>
+          <h2>Por R$ 5.690</h2>
           <div className='actions'>
-            <Link href='/vela'>
-              <Button primary>Saiba mais</Button>
+            <Link href='/vela2'>
+              <Button primary>Monte a sua</Button>
             </Link>
           </div>
+          <br/>
+          <small>Promoção do <b>Quadro Reto M</b> - Confortável para alturas de 1,58m até 1,74m. Válida até o fim de setembro ou enquanto durar o estoque.</small>
         </div>
       </div>
+      <HomeImage />
     </div>
     <Highlight />
     <div className='home-store'>
@@ -72,12 +75,12 @@ const HomePage = ({ highlight }) =>
       }
       .cta {
         text-align: center;
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        flex-direction: column;
         padding: 1rem 3rem;
-        background-color: #272727;
+        top: 2em;
+        background-color: #709981;
+      }
+      .cta h2, .cta small {
+        color: ${offWhite};
       }
       h1 {
         color: ${offWhite};
@@ -110,17 +113,20 @@ const HomePage = ({ highlight }) =>
       @media only screen and (min-width: 768px) {
         h1 {
           font-size: 2.5rem;
-          font-weight: 800;
+          font-weight: 700;
           color: ${offBlack}
         }
         h4, .cta p {
           color: ${offBlack};
         }
+        .cta h2, .cta small {
+          color: ${offBlack}
+        }
         .cta {
           position: absolute;
           justify-content: center;
           max-width: 20em;
-          left: 2em;
+          right: 2em;
           top: 2em;
           text-align: left;
           background-color: ${white};
@@ -132,7 +138,7 @@ const HomePage = ({ highlight }) =>
         }
         @media only screen and (min-width: 1300px) {
           .cta {
-            left: 4em;
+            right: 4em;
             top: 4em;
           }
         }
