@@ -148,10 +148,6 @@ const Vela = () =>
             <h3>Boost</h3>
             <p>Impulso na potência</p>
           </div>
-          <div className='bright'>
-            <h3>Lock</h3>
-            <p>Bloqueio da bike</p>
-          </div>
         </div>
       </div>
       <div className='section'>
@@ -249,7 +245,7 @@ const Vela = () =>
             <tbody>
               <tr className='tr-specs'>
                 <td className='td-specs'>Quadro</td>
-                <td className='td-specs'>Aço liga 4130 CrMo - Chromoly - Total de 4 geometrias diferentes.</td>
+                <td className='td-specs'>Aço liga 4130 CrMo - Chromoly - Total de 5 geometrias diferentes.</td>
               </tr>
               <tr className='tr-specs'>
                 <td className='td-specs'>Pintura</td>
@@ -257,7 +253,7 @@ const Vela = () =>
               </tr>
               <tr className='tr-specs'>
                 <td className='td-specs'>Tamanhos (quadro reto)</td>
-                <td className='td-specs'>55-700C: 1,69 à 1,82 | 59-700C: 1,83 à 2,00</td>
+                <td className='td-specs'>51-26": 1,58 à 1,72 | 55-700C: 1,73 à 1,82 | 59-700C: 1,83 à 2,00</td>
               </tr>
               <tr className='tr-specs'>
                 <td className='td-specs'>Tamanhos (quadro baixo)</td>
@@ -332,7 +328,7 @@ const Vela = () =>
               </tr>
               <tr>
                 <td>Aplicativo</td>
-                <td>Vela 2: iOS + Android | Configuração da Vela, mapa, modos de condução e atualizações de performance.</td>
+                <td>Vela 2: iOS 14 + Android 10 | Configuração da Vela, mapa, modos de condução e atualizações de performance.</td>
               </tr>
               <tr>
                 <td>Motor</td>

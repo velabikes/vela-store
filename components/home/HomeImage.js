@@ -1,7 +1,7 @@
 const HomeImage = () =>
   <div>
     <img src='/static/home-desktop.png' className='desktop' alt='Vela 2 - Vela Bikes' />
-    <img src='/static/home-mobile.png' className='mobile' alt='Vela 2 - Vela Bikes' />
+    <img src='/static/home-mobile.jpg' className='mobile' alt='Vela 2 - Vela Bikes' />
     <style jsx>{`
       img {
         min-height: 60vh;
