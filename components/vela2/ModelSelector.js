@@ -16,6 +16,16 @@ const ModelSelector = ({ onModelChange, model }) => {
       console.log({...values, size: 'M'})
       return {}
     }
+    if (values.frame === 'Baixo' && values.size === 'G') {
+      onModelChange({...values, size: 'M'})
+      console.log({...values, size: 'M'})
+      return {}
+    }
+    if (values.frame === 'Baixo' && values.size === 'GG') {
+      onModelChange({...values, size: 'M'})
+      console.log({...values, size: 'M'})
+      return {}
+    }
     onModelChange(values)
     return {}
   }
@@ -38,8 +48,8 @@ const ModelSelector = ({ onModelChange, model }) => {
       <p>→ M: 1,71m à 1,90m - Quadro 49 Aro 700C</p>
       <br/>
       <h3>• Quadro reto</h3>
-      <p><b>→ Mês de Mobilidade: 1,58m à 1,74m - Quadro 51 Aro 26"</b></p>
-      <p>→ G: 1,75m à 1,83m - Quadro 55 Aro 700C</p>
+      <p><b>→ Mês de Mobilidade: 1,58m à 1,72m - Quadro 51 Aro 26"</b></p>
+      <p>→ G: 1,73m à 1,83m - Quadro 55 Aro 700C</p>
       <p>→ GG: 1,84m à 2,00m - Quadro 59 Aro 700C</p>
       <style jsx>{`
 

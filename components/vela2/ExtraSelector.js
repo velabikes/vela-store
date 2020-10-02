@@ -71,7 +71,7 @@ const ExtraSelector = ({ collection, onSelect, selected, model }) => {
         {collection.products.edges
           .filter(product => {
             const filter =
-              model.size === 'G' || 'GG'
+              model.frame === 'Reto'
                 ? 'bagageiro-dianteiro-1'
                 : 'bagageiro-dianteiro-bambu'
 

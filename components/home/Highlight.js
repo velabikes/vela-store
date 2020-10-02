@@ -33,24 +33,15 @@ const Highlight = () => {
             </div>
         </div>
         <div className='color'>
-          <p>A Vela possui uma paleta única, com cinco cores exclusivas para você escolher.</p>
+          <p>Única no Brasil com aplicativo companheiro, freio regenerativo e rastreamento GPS.</p>
         </div>
       </div>
       <div className='price'>
-        <div className='left'>
-          <h3>Compra</h3>
-          <h2>R$ 6.890</h2>
-          <p>Até 12x sem juros</p>
-        </div>
+        <h2>Faça parte do futuro. Agora.</h2>
         <div className='actions'>
           <Link href='/vela'>
             <Button primary>Saiba mais</Button>
           </Link>
-        </div>
-        <div className='right'>
-          <h3>Aluguel</h3>
-          <h2>R$ 489/mês</h2>
-          <p>Disponível em novembro</p>
         </div>
       </div>
       <style jsx>{`
@@ -97,6 +88,7 @@ const Highlight = () => {
           }
           .price h2{
             color: ${offWhite};
+            text-align: center;
           }
           .price h3{
             color: ${offWhite};
@@ -106,6 +98,7 @@ const Highlight = () => {
             align-items: center;
             justify-content: center;
             min-width: 10em;
+            margin-top: 1em;
           }
           .actions :global(button) {
             margin: 0;
@@ -161,7 +154,9 @@ const Highlight = () => {
               align-self: flex-end;
             }
             .price {
-              flex-direction: row;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
               padding: 0 2em 2em 2em;  
             }
             }
