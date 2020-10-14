@@ -18,13 +18,13 @@ const TestRide = () =>
       <meta name="twitter:site" content="@velabikes" /> 
       <meta name="twitter:title" content="Test-ride - Vela Bikes" />
       <meta name="twitter:description" content="Você já pode testar a Vela 2 em São Paulo e Curitiba! Conheça a primeira smartbike do Brasil." />
-      <meta name="twitter:image" content="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FBikeEletricaSmart.jpg?alt=media&token=3f8618f9-981e-4ae4-9b43-a00210184e6e" />
+      <meta name="twitter:image" content="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Ftestride%2FTestRideVela2.jpg?alt=media&token=67d76c33-aa93-4704-81c8-72ffca0ef7a0" />
       <meta property='og:url' content='https://velabikes.com.br/test-ride' />
       <meta property='og:type' content='website' />
       <meta property='og:title' content='Test-ride - Vela Bikes' />
       <meta property='og:locale' content='pt_BR' />
       <meta property='og:description' content='Você já pode testar a Vela 2 em São Paulo e Curitiba! Conheça a primeira smartbike do Brasil.' />
-      <meta property='og:image' content='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FBikeEletricaSmart.jpg?alt=media&token=3f8618f9-981e-4ae4-9b43-a00210184e6e' />
+      <meta property='og:image' content='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Ftestride%2FTestRideVela2.jpg?alt=media&token=67d76c33-aa93-4704-81c8-72ffca0ef7a0' />
     </Head>
     <div className='cover'>
       <TestRideImage />

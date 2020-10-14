@@ -18,18 +18,10 @@ const MainMenu = () =>
         Nossas lojas
       </a></Link></li> */}
       {/*
-      <li><Link href='/about' as='/sobre'><a>
-        Sobre nós
-      </a></Link></li>
-      */}
-      {/*
       <li><Link href='/about' as='/network/charge'><a>
         Recarga Rápida
       </a></Link></li>
       */}
-      {/*       <li><Link href='/test-ride'><a>
-        Test-ride
-      </a></Link></li> */}
       <hr />
       <li><Link href='/network/map' as='/rede/mapa'><a>
         Rede
@@ -42,6 +34,9 @@ const MainMenu = () =>
       </a></Link></li>
       <li><Link href='/invest' as='/investir'><a>
         Investir
+      </a></Link></li>
+      <li><Link href='/testride' as='/test-ride'><a>
+        Test-ride
       </a></Link></li>
     </ul>
     <style jsx>{`
