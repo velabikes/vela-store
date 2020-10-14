@@ -76,7 +76,7 @@ const HomePage = ({ highlight }) =>
         padding: 2rem 3rem 1rem 3rem;
         background-color: #709981;
       }
-      .cta h2, .cta small {
+      .cta h2, .cta small, .cta p {
         color: ${offWhite};
       }
       h1 {
@@ -89,9 +89,6 @@ const HomePage = ({ highlight }) =>
       h4 {
         color: ${offWhite};
         padding-bottom: 0em;
-      }
-      .cta p {
-        color: ${offWhite}
       }
       .home-store {
         background-color: #272727;
