@@ -1,41 +1,27 @@
 import Section from 'components/Section'
+import SectionHeader from 'components/SectionHeader'
 
 const TestRideBanner = () =>
   <Section>
     <div className='TestRideBanner'>
       <div className='BannerTitle'>
-        <h1 className='title'>Test-ride</h1>
+        <SectionHeader
+          title="Você já pode testar a Vela 2 em São Paulo e Curitiba!"
+          tagline="Aproveite para descobrir a sensação única de pedalar uma bicicleta elétrica, com todo o apoio do Vela App pelo caminho."
+        />
         <p>
-          Nós temos diversos Amigos
-          pelo Brasil pra você
-          conhecer a Vela de perto.
-        </p>
-        <p>
-          Quer testar?
-          É gratuito, sem compromisso e
-          você ainda ganha benefícios!
+          O teste é gratuito e sem compromisso, pode ser realizado sozinho, com amigos ou acompanhado de um especialista Vela. 
         </p>
       </div>
       <div className='BannerImage'>
-        <img src='/static/testride.png' alt='' />
+        <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Ftestride%2FTestRideVelaBikes.png?alt=media&token=785ee1b6-ecfe-4e1a-83aa-71871069e4f4' alt='Test-ride Vela Bikes' />
       </div>
       <style jsx>{`
       .TestRideBanner {
-        font-size: 1.2em;
-        line-height: 1.2;
         position: relative;
         display: flex;
         flex-direction: column-reverse;
       }
-
-      .title {
-        font-size: 2.5em;
-      }
-
-      .TestRideBanner h1 {
-        font-size: 2.5rem;
-      }
-
       .BannerTitle {
         padding: 20px 0;
         text-align: center;
@@ -48,10 +34,11 @@ const TestRideBanner = () =>
       @media only screen and (min-width: 768px) {
         .TestRideBanner {
           flex-direction: row;
+          justify-content: space-around;
         }
         .BannerTitle {
-          width: 50%;
-          text-align: right;
+          width: 30%;
+          text-align: left;
         }
       }
     `}</style>

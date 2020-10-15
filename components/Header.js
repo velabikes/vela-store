@@ -10,7 +10,6 @@ import HeaderMenu from './HeaderMenu'
 import MainMenu from './MainMenu'
 import Footer from './Footer'
 import { Logo } from './Icons'
-import Button from './Button'
 
 /* eslint-disable */
 const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
@@ -44,6 +43,9 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
         </a></Link></div>
         <div className='left'><Link href='/invest' as='/investir'><a>
           Investir
+        </a></Link></div>
+        <div className='left'><Link href='/testride'><a>
+          Test-ride
         </a></Link></div>
       </div>
       <div className='right'>
