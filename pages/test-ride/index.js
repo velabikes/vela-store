@@ -69,7 +69,7 @@ const TestRide = () =>
       <div className='cta-bottom'>
         <div className='slogan'>
           <h2>Faça parte do futuro. Agora.</h2>
-          <p>Nosso horário de atendimento é de <b>terça à sábado das 10h às 18h.</b></p>
+          <p>O horário de funcionamento das nossas lojas é de <b>terça à sábado das 10h às 18h.</b></p>
         </div>
       </div>
     </div>
