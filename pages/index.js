@@ -1,16 +1,15 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import fetch from 'isomorphic-fetch'
 import { getPrismic, Predicates } from 'lib/prismic'
 import PropTypes from 'prop-types'
-import HomeImage from 'components/home/HomeImage'
+import HomeVideo from 'components/home/HomeVideo'
 import HomeBanner from 'components/home/HomeBanner'
 import Highlight from 'components/home/Highlight'
 import PostHighlight from 'components/blog/PostHighlight'
 import PaddedView from 'components/PaddedView'
 import Button from '../components/Button'
 import VelaPoint from '../components/charge/VelaPoint'
-import { offBlack, offWhite, white } from '../style/colors'
+import { offBlack, offWhite, velaGreen, white } from '../style/colors'
 
 const HomePage = ({ highlight }) =>
   <div className='HomePage'>
@@ -35,10 +34,10 @@ const HomePage = ({ highlight }) =>
     <div className='cover'>
       <div className='cta'>
         <div className='slogan'>
-          <h1>Vela 2</h1>
-          <p>Uma bicicleta elétrica & smart para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes, sem abrir mão do estilo.</p>
+          <h1>Feita no Brasil.</h1>
+          <h4>Com cuidado, cadeia produtiva sustentável e produção artesanal.</h4>
+          <p>A bicicleta elétrica & smart para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes, sem abrir mão do estilo.</p>
           <h2>Por R$ 6.890,00</h2>
-          <h4>Em até 12x sem juros!</h4>
           <div className='actions'>
             <Link href='/vela2'>
               <Button primary>Monte a sua</Button>
@@ -46,7 +45,7 @@ const HomePage = ({ highlight }) =>
           </div>
         </div>
       </div>
-      <HomeImage />
+      <HomeVideo />
     </div>
     <Highlight />
     <div className='home-store'>
@@ -106,9 +105,9 @@ const HomePage = ({ highlight }) =>
       }
       @media only screen and (min-width: 768px) {
         h1 {
-          font-size: 4rem;
+          font-size: 3.5rem;
           font-weight: 700;
-          color: ${offBlack}
+          color: ${velaGreen}
         }
         h4, .cta p {
           color: ${offBlack};
@@ -120,12 +119,13 @@ const HomePage = ({ highlight }) =>
           position: absolute;
           justify-content: center;
           max-width: 20em;
-          right: 2em;
-          top: 2em;
+          left: 2em;
+          top: 6em;
           text-align: left;
           background-color: ${white};
           margin-top: 0rem;
           padding: 2em;
+          z-index: 2;
         }
         .actions {
           right: 0;

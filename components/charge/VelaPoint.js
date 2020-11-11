@@ -7,11 +7,11 @@ const VelaPoint = () => (
     <div className="PointFigure">
       <div className="PointContent">
         <SectionHeader
-          title="Rede"
-          tagline="Confira o mapa para conhecer as lojas da Vela, recarregar em pontos parceiros ou procurar assistência autorizada para a sua smartbike."
+          title="Rede de Serviços Vela"
+          tagline="Confira nosso mapa para visitar as lojas da Vela, recarregar em pontos parceiros ou procurar assistência autorizada para a sua smartbike."
         />
         <p>
-          Entregamos em todo o Brasil, com diversos pontos de apoio para você velejar com tranquilidade.
+          Entregamos em todo o Brasil, com diversos pontos de apoio para você velejar com tranquilidade. Conheça agora os mais próximos de você.
         </p>
         <Link href="/network/map" as="/rede/mapa">
           <Button primary>Onde encontrar</Button>
@@ -57,7 +57,7 @@ const VelaPoint = () => (
           align-items: flex-end;
         }
         .FigureWrapper img {
-          max-width: 100%;
+          max-width: 80%;
         }
         .PointFigure {
           flex-direction: row;
@@ -65,9 +65,10 @@ const VelaPoint = () => (
           padding: 1em 0 1em 0;
         }
         .PointContent {
-          max-width: 20rem;
+          max-width: 22rem;
           padding-top: 8em;
-          text-align: left;
+          padding-left: 4em;
+          text-align: right;
         }
       }
     `}</style>
