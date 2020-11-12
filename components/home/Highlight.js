@@ -1,5 +1,4 @@
 import PaddedView from 'components/PaddedView'
-import Link from 'next/link'
 import { offWhite, offBlack, white } from '../../style/colors'
 import Button from '../Button'
 
@@ -14,21 +13,17 @@ const Highlight = () => {
             <div className='qr'>
               <a href="/vela2">
                 <img alt='Vela 2 Quadro reto' src='/static/vela2/models/VEL-V2-550-29-VERDE-PRETO.png' />
-                <p>
                   <h2>Quadro reto</h2>
                   <span>3 tamanhos</span>
                   <span>1,58m até 2m</span>
-                </p>
               </a>
             </div>
             <div className='qb'>
               <a href="/vela2">
                 <img alt='Vela 2 Quadro baixo' src='/static/vela2/models/VEL-V2-490-29-VERDE-PRETO.png' />
-                <p>
                   <h2>Quadro baixo</h2>
                   <span>2 tamanhos</span>
                   <span>1,58m até 1,90m</span>
-                </p>
               </a>
             </div>
         </div>
@@ -39,9 +34,9 @@ const Highlight = () => {
       <div className='price'>
         <h2>Faça parte do futuro. Agora.</h2>
         <div className='actions'>
-          <Link href='/vela'>
+          <a href='/vela'>
             <Button primary>Saiba mais</Button>
-          </Link>
+          </a>
         </div>
       </div>
       <style jsx>{`
