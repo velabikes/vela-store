@@ -41,6 +41,16 @@
 		/>
 	</url>
 	<url>
+		<loc>https://velabikes.com.br/testride</loc>
+		<lastmod>2020-07-28T19:30:37+01:00</lastmod>
+		<priority>0.8</priority>
+		<xhtml:link 
+               rel="alternate"
+               hreflang="pt-br"
+               href="https://velabikes.com.br/testride"
+		/>
+	</url>
+	<url>
 		<loc>https://velabikes.com.br/blog</loc>
 		<lastmod>2020-07-28T19:30:39+01:00</lastmod>
 		<priority>1.0</priority>

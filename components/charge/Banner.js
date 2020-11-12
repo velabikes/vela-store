@@ -1,6 +1,6 @@
 const Banner = () =>
   <div className='banner'>
-    <iframe src='https://player.vimeo.com/video/344801026'
+    <iframe src='/static/charge-banner.mp4'
       frameBorder='0'
       allow='autoplay; fullscreen'
       allowFullScreen

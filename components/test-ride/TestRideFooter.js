@@ -1,7 +1,7 @@
 const TestRideFooter = () =>
   <div>
-    <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Ftestride%2FTestRideVelaBike.jpg?alt=media&token=80adafe3-b276-4554-a3d8-e58935911a07' className='desktop' alt='TestRide VelaBike' />
-    <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Ftestride%2FTesteBikeEletrica.jpg?alt=media&token=4071083a-dcf8-4e7e-a663-24870ddc3595' className='mobile' alt='Teste Vela Bike' />
+    <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Ftestride%2Fbetterquality%2FTestRideVelaBike.jpg?alt=media&token=18685c66-fc14-4155-8918-d1f7c674ceca' className='desktop' alt='TestRide VelaBike' />
+    <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Ftestride%2Fbetterquality%2FTesteBikeEletrica.jpg?alt=media&token=bd413e4b-43a2-41f7-ade8-a7ab2960f9ef' className='mobile' alt='Teste Vela Bike' />
     <style jsx>{`
       img {
         min-height: 60vh;
