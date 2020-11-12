@@ -13,17 +13,21 @@ const Highlight = () => {
             <div className='qr'>
               <a href="/vela2">
                 <img alt='Vela 2 Quadro reto' src='/static/vela2/models/VEL-V2-550-29-VERDE-PRETO.png' />
+                <div className='models-content'>
                   <h2>Quadro reto</h2>
                   <span>3 tamanhos</span>
                   <span>1,58m até 2m</span>
+                </div>
               </a>
             </div>
             <div className='qb'>
               <a href="/vela2">
                 <img alt='Vela 2 Quadro baixo' src='/static/vela2/models/VEL-V2-490-29-VERDE-PRETO.png' />
+                <div className='models-content'>
                   <h2>Quadro baixo</h2>
                   <span>2 tamanhos</span>
                   <span>1,58m até 1,90m</span>
+                </div>
               </a>
             </div>
         </div>
@@ -61,7 +65,7 @@ const Highlight = () => {
             background-color: ${offWhite};
             padding: 2rem 0;
           }
-          .models p {
+          .models-content {
             padding: 2rem;
             background-color: ${white};
             text-align: center;
