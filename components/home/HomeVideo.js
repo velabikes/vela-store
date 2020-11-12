@@ -12,8 +12,16 @@ const HomeVideo = () =>
       }
       .banner video {
         width: 100%;
-        height: 100vh;
+        height: 60vh;
         object-fit: cover;
+      }
+
+      @media only screen and (min-width: 768px) {
+        .banner video {
+          width: 100%;
+          height: 100vh;
+          object-fit: cover;
+        }  
       }
     `}</style>
   </div>
