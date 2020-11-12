@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import Link from 'next/link'
 import { getPrismic, Predicates } from 'lib/prismic'
 import PropTypes from 'prop-types'
 import HomeVideo from 'components/home/HomeVideo'
@@ -39,9 +38,9 @@ const HomePage = ({ highlight }) =>
           <p>A bicicleta elétrica & smart para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes, sem abrir mão do estilo.</p>
           <h2>Por R$ 6.890,00</h2>
           <div className='actions'>
-            <Link href='/vela2'>
+            <a href='/vela2'>
               <Button primary>Monte a sua</Button>
-            </Link>
+            </a>
           </div>
         </div>
       </div>

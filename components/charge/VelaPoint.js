@@ -1,4 +1,3 @@
-import Link from "next/link";
 import Button from "components/Button";
 import SectionHeader from "components/SectionHeader";
 
@@ -13,17 +12,17 @@ const VelaPoint = () => (
         <p>
           Entregamos em todo o Brasil, com diversos pontos de apoio para você velejar com tranquilidade. Conheça agora os mais próximos de você.
         </p>
-        <Link href="/network/map" as="/rede/mapa">
+        <a href="/rede/mapa">
           <Button primary>Onde encontrar</Button>
-        </Link>
+        </a>
       </div>
       <div className="FigureWrapper">
-        <Link href="/network/map" as="/rede/mapa">
+        <a href="/rede/mapa">
           <img
             src="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FRedeVela.png?alt=media&token=d63d5018-1ab5-4874-b5f3-7cc623619a41"
             alt="Rede Vela"
           />
-        </Link>
+        </a>
       </div>
     </div>
     <style jsx>{`

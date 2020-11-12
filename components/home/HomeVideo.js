@@ -1,11 +1,8 @@
 const HomeVideo = () =>
   <div className='banner'>
-    <iframe src='/static/VelaBikesSmartbikeArtesanal.mp4'
-      frameBorder='0'
-      allow='autoplay; fullscreen; loop'
-      allowFullScreen
-      title='Banner video'
-    />
+    <video loop autoPlay muted> 
+      <source src='/static/VelaBikesSmartbikeArtesanal.mp4' type='video/mp4' />  
+    </video>
     <style jsx>{`
       .banner {
         margin-top: -3.5em;
@@ -13,9 +10,10 @@ const HomeVideo = () =>
         position: relative;
         z-index: 0;
       }
-      .banner iframe {
+      .banner video {
         width: 100%;
-        height: 56vw;
+        height: 100vh;
+        object-fit: cover;
       }
     `}</style>
   </div>
