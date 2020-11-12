@@ -451,6 +451,20 @@ module.exports = async (req, res) => {
         type: ['charger']
       },
       {
+        name: 'Prana Healthy Coffee',
+        address: [
+          'Av. Agami, 223',
+          'Indianópolis, São Paulo',
+          'SP, 04522-000, Brasil'
+        ],
+        pos: {
+          lat: -23.5996093,
+          lng: -46.6632647
+        },
+        googlePlace: 'ChIJA7WwTQNazpQRtFD8Hb02l18',
+        type: ['charger']
+      },
+      {
         name: 'Maiss Bike Store',
         address: [
           'Praça Garibaldi, 78',
@@ -544,7 +558,23 @@ module.exports = async (req, res) => {
           lng: -46.5584795697085
         },
         googlePlace: 'ChIJOeGEaFNfzpQRBMjvcEj6tj8',
-        type: ['charger']
+        type: ['charger','service']
+      },
+      {
+        name: 'Amo Minha Bike Elétrica',
+        address: [
+          'O atendimento é feito remotamente.',
+          'Entre em contato com nosso técnico parceiro, o Marcos, para conferir os bairros que são atendidos.',
+          'RJ, 21810-080, Brasil'
+        ],
+        phone: '(21) 99772-2226',
+        open: true,
+        pos: {
+          lat: -22.8809355,
+          lng: -43.4601332
+        },
+        googlePlace: 'ChIJAb_JCJHfmwARvlQg-Oe-HiI',
+        type: ['service']
       },
       {
         name: 'Reciclo Bikes',
@@ -639,6 +669,21 @@ module.exports = async (req, res) => {
         },
         googlePlace: 'ChIJHd72H1jh3JQRTBA9mMMznpg',
         type: ['service', 'charger']
+      },
+      {
+        name: 'Bicicletaria Urbana Bike Viva',
+        address: [
+          'Av. Washington Soares, 2565',
+          'Edson Queiroz, Fortaleza',
+          'CE, 60811-341, Brasil'
+        ],
+        phone: '(41) 3014-5762',
+        pos: {
+          lat: -3.7850419,
+          lng: -38.4825672
+        },
+        googlePlace: 'ChIJBzUXeYVIxwcRrjy1Utb3VCs',
+        type: ['service']
       },
       {
         name: 'Bicicletaria Cross Bike',
@@ -822,8 +867,8 @@ module.exports = async (req, res) => {
           'SP, 04538-070, Brasil'
         ],
         pos: {
-          lat: -46.6793996197085,
-          lng: -23.5888227697085
+          lat: -23.5901059,
+          lng: -46.6829569
         },
         googlePlace: 'ChIJ7Uus0ERXzpQRU9g9ZPBJi0o',
         type: ['parking']
