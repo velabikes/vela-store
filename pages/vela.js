@@ -34,8 +34,8 @@ const Vela = () =>
           <h4>Conheça a geração smart de bikes elétricas da Vela!</h4>
         </div>
         <div className='actions'>
-          <Link href='/vela2'>
-            <Button primary >Monte a sua</Button>
+          <Link href='/blackfriday'>
+            <Button bf>Black Friday</Button>
           </Link>
         </div>
       </div>
@@ -48,12 +48,12 @@ const Vela = () =>
             <h4>Sensores de pedal com alta percepção de movimento, para você pedalar com agilidade e confiança</h4>
             <p>Ao iniciar seu trajeto, com o assistente de partida da Vela 2, a resposta do motor é ainda mais rápida e intensa.</p>
           </div>
-          <a href="/vela2">
+          <a href="/blackfriday">
             <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/a142d80a-87e5-47b5-90ce-c76978dbd3a0.jpg' alt='Sensor de pedal bike elétrica' />
           </a>
         </div>
         <div className='left'>
-          <a href="/vela2">
+          <a href="/blackfriday">
             <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/e2f0d9af-8587-429c-956c-1aa6c902b398.jpg' alt='Bateria impermeável bicicleta elétrica' />
           </a>
           <div className='left-content'>
@@ -68,27 +68,27 @@ const Vela = () =>
             <h4>Recupera energia para a bateria nas descidas, com até <b>60km</b> de autonomia em trajetos</h4>
             <p>Tenha toda a assistência necessária para pedalar sem qualquer esforço, mesmo nas maiores inclinações.</p>
             <div className='actions'>
-              <Link href='/vela2'>
-                <Button primary >Monte a sua</Button>
+              <Link href='/blackfriday'>
+                <Button bf >Black Friday</Button>
               </Link>
             </div>
           </div>
-          <a href="/vela2">
+          <a href="/blackfriday">
             <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/c9f6a1b6-4dba-4bfb-a8de-129a47036d9b.jpg' alt='Freio regenerativo bike' />
           </a>
         </div>
       </div>
     </PaddedView>
     <div className='image-cut'>
-      <a href="/vela2">
+      <a href="/blackfriday">
         <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FTecnologiaVela2.jpg?alt=media&token=c8699709-d160-42bc-bc1c-c2c6a9310838' alt='Vela Bikes' />
       </a>
       <div className='tagline'>
         <h2>Tecnologia e design nunca estiveram tão próximos</h2>
         <h4>O design minimalista da Vela é a prova de que bikes elétricas podem reunir tecnologia de ponta, usabilidade e beleza. </h4>
         <div className='actions'>
-          <Link href='/vela2'>
-            <Button primary >Monte a sua</Button>
+          <Link href='/blackfriday'>
+            <Button bf>Black Friday</Button>
           </Link>
         </div>
       </div>
@@ -105,7 +105,7 @@ const Vela = () =>
           </div>
         </div>
         <div className='app-img'>
-          <a href="/vela2">
+          <a href="/blackfriday">
             <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/55068f24-1c81-4bdc-bec3-3f9d0e586a79.png' alt='App Vela 2' />
           </a>
         </div>
@@ -130,7 +130,7 @@ const Vela = () =>
             <h4>A smartbike conectada com as ruas, com seu celular e com você</h4>
             <p>O aplicativo da Vela te acompanha pelo caminho, mostrando em tempo real as informações essenciais para velejar com tranquilidade.</p>
           </div>
-          <a href="/vela2">
+          <a href="/blackfriday">
             <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/7130ce6f-5e4c-4472-bfc8-9855e17f0a92.jpg' alt='Smartbike Vela 2' />
           </a>
         </div>
@@ -152,7 +152,7 @@ const Vela = () =>
       </div>
       <div className='section'>
         <div className='left'>
-          <a href="/vela2">
+          <a href="/blackfriday">
             <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/d72b6886-6e78-40ff-a8d9-0e2d12fe5974.jpg' alt='Design urbano bike elétrica' />
           </a>
           <div className='left-content'>
@@ -167,12 +167,12 @@ const Vela = () =>
             <h4>Equipada com todos os acessórios essenciais para o dia a dia</h4>
             <p>A tranquilidade de pedalar com faróis automáticos integrados, conjunto completo de paralamas, manoplas ergonômicas e mudflaps.</p>
             <div className='actions'>
-              <Link href='/vela2'>
-                <Button primary >Monte a sua</Button>
+              <Link href='/blackfriday'>
+                <Button bf>Black Friday</Button>
               </Link>
             </div>
           </div>
-          <a href="/vela2">
+          <a href="/blackfriday">
             <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/9492947f-35ff-4f66-a9a2-4e6f8e8ea776.jpg' alt='Bike clássica elétrica' />
           </a>
         </div>
@@ -187,8 +187,8 @@ const Vela = () =>
             <h3>Livre</h3>
             <br />
             <p>
-              Primeira revisão gratuita<br />
-              Acesso à rede de recarga rápida<br />
+              Primeira revisão gratuita*<br />
+              Acesso à rede de recarga rápida**<br />
               Aplicativo companheiro<br />
               Bloqueio Bluetooth<br />
               Atualizações básicas<br />
@@ -202,14 +202,14 @@ const Vela = () =>
             <h3>Simples</h3>
             <br />
             <p>
-              Primeira revisão gratuita<br />
-              Acesso à rede de recarga rápida<br />
+              Primeira revisão gratuita*<br />
+              Acesso à rede de recarga rápida**<br />
               Aplicativo companheiro<br />
               Bloqueio remoto<br />
               Atualizações exclusivas<br />
               Proteção contra roubo e furto<br />
               Rastreamento GPS<br />
-              Vela reserva<br />
+              Vela reserva*<br />
             </p>
             <br />
             <div className='plans-price'>
@@ -220,14 +220,14 @@ const Vela = () =>
             <h3>Completo</h3>
             <br />
             <p>
-              Primeira revisão gratuita<br />
-              Acesso à rede de recarga rápida<br />
+              Primeira revisão gratuita*<br />
+              Acesso à rede de recarga rápida**<br />
               Aplicativo companheiro<br />
               Bloqueio remoto<br />
               Atualizações exclusivas<br />
               Proteção contra roubo e furto<br />
               Rastreamento GPS<br />
-              Vela reserva<br />
+              Vela reserva*<br />
               Peças consumíveis e de reposição<br />
             </p>
             <br />
@@ -236,6 +236,8 @@ const Vela = () =>
             </div>
           </div>
         </div>
+        <p><small><br/>* Condições válidas apenas nas lojas oficiais da Vela, em São Paulo e Curitiba. Confira os <a href='https://velabikes.com.br/legal'>Termos de Serviço do Plano Vela+</a>.<br/>
+        ** Condições válidas apenas para cidades em que a infraestrutura está disponível. Consulte nosso <a href='https://velabikes.com.br/rede/mapa'>mapa</a>.</small></p>
       </PaddedView>
       <div className='specs'>
         <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/4bb2a891-d7dd-4934-8625-259d8c2c1df2.jpg' alt='Especificações técnicas bike' />
@@ -514,7 +516,6 @@ const Vela = () =>
         color: ${offWhite}
       }
       .specs img {
-        margin-top: 2em;
         max-width: 100%;
       }
       .specs-content {
@@ -716,7 +717,7 @@ const Vela = () =>
           padding: 4em;
         }
         .specs {
-          margin: 1em auto 0 auto;
+          margin: 0 auto 0 auto;
         }
         .specs-content, .specs-tech-content {
           width: 100%

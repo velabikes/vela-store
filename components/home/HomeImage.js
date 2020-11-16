@@ -1,12 +1,12 @@
 const HomeImage = () =>
   <div>
-    <img src='/static/home-desktop.png' className='desktop' alt='Vela 2 - Vela Bikes' />
-    <img src='/static/home-mobile.jpg' className='mobile' alt='Vela 2 - Vela Bikes' />
+    <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Fblackfriday%2FBlackFridayVelaBikes.jpg?alt=media&token=31691630-473c-4f34-bd14-07e31d038fa1' className='desktop' alt='Black Friday Vela 2 - Vela Bikes' />
+    <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Fblackfriday%2FBlackFridayVelaBikes.jpg?alt=media&token=31691630-473c-4f34-bd14-07e31d038fa1' className='mobile' alt='Black Friday Smartbike - Vela Bikes' />
     <style jsx>{`
       img {
-        min-height: 60vh;
+        min-height: 55vh;
         object-fit: cover;
-        object-position: 55% 90%;
+        object-position: 60% 40%;
       }
       .desktop {
         display: none;
@@ -17,7 +17,7 @@ const HomeImage = () =>
           max-width: 100vw;
           object-fit: cover;
           max-height: calc(100vh - 3.5em);
-          object-position: 80% 20%;
+          object-position: 40% 60%;
         }
         .mobile {
           display: none;

@@ -94,21 +94,6 @@ module.exports = async (req, res) => {
         type: ['charger']
       },
       {
-        name: 'ZUD Café',
-        address: [
-          'R. Barão de Tatuí, 377',
-          'Vila Buarque, São Paulo',
-          'SP, 01226-030, Brasil'
-        ],
-        phone: '(11) 2769-3369',
-        pos: {
-          lat: -23.5392869,
-          lng: -46.6540996
-        },
-        googlePlace: 'ChIJpydZ5j5YzpQR1V_gNLyvHV4',
-        type: ['charger']
-      },
-      {
         name: 'SP Lovers Café e Vinho',
         address: [
           'R. Oscar Freire, 1921',
