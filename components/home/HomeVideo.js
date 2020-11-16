@@ -1,6 +1,6 @@
 const HomeVideo = () =>
   <div className='banner'>
-    <video loop autoPlay muted> 
+    <video loop autoPlay muted playsInline> 
       <source src='/static/VelaBikesSmartbikeArtesanal.mp4' type='video/mp4' />  
     </video>
     <style jsx>{`
