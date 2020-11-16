@@ -187,8 +187,8 @@ const Vela = () =>
             <h3>Livre</h3>
             <br />
             <p>
-              Primeira revisão gratuita<br />
-              Acesso à rede de recarga rápida<br />
+              Primeira revisão gratuita*<br />
+              Acesso à rede de recarga rápida**<br />
               Aplicativo companheiro<br />
               Bloqueio Bluetooth<br />
               Atualizações básicas<br />
@@ -202,14 +202,14 @@ const Vela = () =>
             <h3>Simples</h3>
             <br />
             <p>
-              Primeira revisão gratuita<br />
-              Acesso à rede de recarga rápida<br />
+              Primeira revisão gratuita*<br />
+              Acesso à rede de recarga rápida**<br />
               Aplicativo companheiro<br />
               Bloqueio remoto<br />
               Atualizações exclusivas<br />
               Proteção contra roubo e furto<br />
               Rastreamento GPS<br />
-              Vela reserva<br />
+              Vela reserva*<br />
             </p>
             <br />
             <div className='plans-price'>
@@ -220,14 +220,14 @@ const Vela = () =>
             <h3>Completo</h3>
             <br />
             <p>
-              Primeira revisão gratuita<br />
-              Acesso à rede de recarga rápida<br />
+              Primeira revisão gratuita*<br />
+              Acesso à rede de recarga rápida**<br />
               Aplicativo companheiro<br />
               Bloqueio remoto<br />
               Atualizações exclusivas<br />
               Proteção contra roubo e furto<br />
               Rastreamento GPS<br />
-              Vela reserva<br />
+              Vela reserva*<br />
               Peças consumíveis e de reposição<br />
             </p>
             <br />
@@ -236,6 +236,8 @@ const Vela = () =>
             </div>
           </div>
         </div>
+        <p><small><br/>* Condições válidas apenas nas lojas oficiais da Vela, em São Paulo e Curitiba. Confira os <a href='https://velabikes.com.br/legal'>Termos de Serviço do Plano Vela+</a>.<br/>
+        ** Condições válidas apenas para cidades em que a infraestrutura está disponível. Consulte nosso <a href='https://velabikes.com.br/rede/mapa'>mapa</a>.</small></p>
       </PaddedView>
       <div className='specs'>
         <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/4bb2a891-d7dd-4934-8625-259d8c2c1df2.jpg' alt='Especificações técnicas bike' />
@@ -514,7 +516,6 @@ const Vela = () =>
         color: ${offWhite}
       }
       .specs img {
-        margin-top: 2em;
         max-width: 100%;
       }
       .specs-content {
@@ -716,7 +717,7 @@ const Vela = () =>
           padding: 4em;
         }
         .specs {
-          margin: 1em auto 0 auto;
+          margin: 0 auto 0 auto;
         }
         .specs-content, .specs-tech-content {
           width: 100%
