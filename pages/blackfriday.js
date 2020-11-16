@@ -31,13 +31,25 @@ const BlackFriday = () => {
     const minutes = Math.floor( (timer/1000/60) % 60 );
     const hours = Math.floor( (timer/(1000*60*60)) % 24 );
     const seconds = Math.floor( (timer/1000) % 60 );
-  
-  
-
 return (
     <div className="blackfriday">
       <Head>
         <title>Black Friday 2020 - Vela Bikes</title>
+        <link rel='alternate' hrefLang='pt-br' href='https://velabikes.com.br/blackfriday' />
+        <meta httpEquiv='content-language' content='pt-br' />
+        <meta name='application-name' content='Vela Bikes Store' />
+        <meta name='description' content='Aluguel com opção de compra. Tenha até dois anos para pagar sua Vela 2!' />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@velabikes" /> 
+        <meta name="twitter:title" content="Black Friday 2020 - Vela Bikes" />
+        <meta name="twitter:description" content="Aluguel com opção de compra. Tenha até dois anos para pagar sua Vela 2!" />
+        <meta name="twitter:image" content="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Fblackfriday%2FBlackFridayVela2020.jpg?alt=media&token=c94e0d3f-5f5d-47eb-9b15-94d75bde074d" />
+        <meta property='og:url' content='https://velabikes.com.br' />
+        <meta property='og:type' content='website' />
+        <meta property='og:title' content='Black Friday 2020 - Vela Bikes' />
+        <meta property='og:locale' content='pt_BR' />
+        <meta property='og:description' content='Aluguel com opção de compra. Tenha até dois anos para pagar sua Vela 2!' />
+        <meta property='og:image' content='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Fblackfriday%2FBlackFridayVela2020.jpg?alt=media&token=c94e0d3f-5f5d-47eb-9b15-94d75bde074d' />
       </Head>
       <div className='cover'>
         <div className='cta'>
