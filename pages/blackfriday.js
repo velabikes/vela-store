@@ -1,3 +1,4 @@
+import React, {useState, useEffect} from "react";
 import { compose } from "recompose";
 import Head from "next/head"
 import Accordion from "../components/Accordion"
@@ -6,9 +7,34 @@ import BFImage from "../components/blackfriday/BFImage"
 import QuoteImage from "../components/blackfriday/QuoteImage"
 import FooterImage from "../components/blackfriday/FooterImage"
 import PaddedView from '../components/PaddedView'
+import SubscribeForm from "../components/blackfriday/SubscribeForm";
 
+var countDownDate = new Date("Nov 27, 2020 15:01:00 GMT").getTime();
 
-const BlackFriday = () => (
+function pad(n, width, z) {
+	z = z || '0';
+	n = n + '';
+	return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
+}
+
+const BlackFriday = () => {
+    const [timer, setTimer] = useState(countDownDate - (new Date().getTime()))
+
+    useEffect(() => {
+      let id = setInterval(() => {
+        setTimer(countDownDate - (new Date().getTime()));
+      }, 800);
+      return () => clearInterval(id);
+    }, []);
+  
+    const days = Math.floor(timer / (1000 * 60 * 60 * 24));
+    const minutes = Math.floor( (timer/1000/60) % 60 );
+    const hours = Math.floor( (timer/(1000*60*60)) % 24 );
+    const seconds = Math.floor( (timer/1000) % 60 );
+  
+  
+
+return (
     <div className="blackfriday">
       <Head>
         <title>Black Friday 2020 - Vela Bikes</title>
@@ -25,7 +51,7 @@ const BlackFriday = () => (
         <div className='steps'>
             <div className='step'>
                 <img src='/static/step1.png'></img>
-                <h4>Monte sua Vela agora!</h4>
+                <h4>Monte sua Vela na Black Friday!</h4>
                 <h5>Escolha a geometria do quadro, o tamanho, a cor e a cor dos pneus.</h5>
                 <p>Sua nova Vela 2 será feita sob medida e entregue a partir de fevereiro de 2021.</p>
             </div>
@@ -38,18 +64,23 @@ const BlackFriday = () => (
             <div className='step'>
                 <img src='/static/step3.png'></img>
                 <h4>Após o 1º ano, ela pode ser sua.</h4>
-                <h5>Por mais R$ 2.890 em até 12x. Você paga sua Vela em 2 anos no total!</h5>
+                <h5>Por mais R$ 2.890 em até 12x. Você paga sua Vela em um total de 24 meses.</h5>
                 <p>O melhor preço e o maior tempo de parcelamento, para você velejar.</p>
             </div>
         </div>
+      </div>
+      <div className='timer'>
+          <h4>Prepare-se! Para a Black Friday da Vela começar, faltam exatamente...</h4>
+          <h2>{pad(days,2)} dias {pad(hours,2)}h{pad(minutes,2)}min{pad(seconds,2)}s</h2>
+          <SubscribeForm />
       </div>
       <div className='image-cut'>
         <QuoteImage />
         <div className='tagline'>
             <h3>“Ir ao trabalho de Vela é o ‘novo normal’ para mim.</h3>
-            <h3>Estou orgulhoso por ter feito uma escolha ecológica, que prioriza minha qualidade de vida, saúde e segurança.</h3> 
+            <h3>Estou orgulhosa por ter feito uma escolha ecológica, que prioriza minha qualidade de vida, saúde e segurança.</h3> 
             <h3>O ‘novo normal’ é isso, né? Nossas novas escolhas...”</h3>
-            <h4>- Julio, Velejador há 2 meses</h4>
+            <h4>- Clara, Velejadora há 2 meses</h4>
         </div>
       </div>
       <PaddedView>
@@ -135,8 +166,8 @@ const BlackFriday = () => (
         }
         .section img {
             min-width: 100%;
-            min-height: 40vh;
-            max-height: 40vh;
+            min-height: 50vh;
+            max-height: 50vh;
             object-fit: cover;
         }
         .left {
@@ -194,6 +225,19 @@ const BlackFriday = () => (
         .howitworks h2{
             color: ${offBlack};
         }
+        .timer {
+            background-color: #1A3546;
+            padding: 3em 2em;
+            text-align: center;
+        }
+        .timer h2 {
+            color: #FFAF2D;
+            font-size: 2.5em;
+            line-height: 1em;
+        }
+        .timer h4 {
+            color: ${offWhite};
+        }
         .steps {
             display: flex;
             flex-direction: column;
@@ -247,6 +291,7 @@ const BlackFriday = () => (
                 }
                 .section img {
                     max-width: 32em;
+                    min-width: 28em;
                     max-height: 25em;
                     min-height: 25em;
                     object-fit: cover;
@@ -297,8 +342,13 @@ const BlackFriday = () => (
                 .image-cut {
                     position: relative;
                 }
+                .timer h2 {
+                    font-size: 3.5em;
+                }
         }
       `}</style>
     </div>
   )
-  export default compose()(BlackFriday)
+}
+
+export default compose()(BlackFriday)
