@@ -1,10 +1,10 @@
 const BFImage = () =>
   <div>
     <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Fblackfriday%2FBlackFridayVela2020.jpg?alt=media&token=c94e0d3f-5f5d-47eb-9b15-94d75bde074d' className='desktop' alt='Black Friday 2020 - Vela Bikes' />
-    <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Fblackfriday%2FBlackFridayBikeEl%C3%A9trica.jpg?alt=media&token=9c854c3a-3ba0-49d7-a19e-3dbe766d37dc' className='mobile' alt='Black Friday 2020 - Vela Bikes' />
+    <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Fblackfriday%2FBlackFridayVela2020.jpg?alt=media&token=c94e0d3f-5f5d-47eb-9b15-94d75bde074d' className='mobile' alt='Black Friday 2020 - Vela Bikes' />
     <style jsx>{`
       img {
-        max-height: 80vh;
+        height: 70vh;
         object-fit: cover;
       }
       .desktop {

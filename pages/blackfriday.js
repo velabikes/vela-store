@@ -126,19 +126,19 @@ return (
             />
             <Accordion 
                 title='2. Reservando agora, quando recebo a minha Vela 2?'
-                content='As primeiras entregas do plano anual de aluguel serão realizadas em fevereiro de 2021 na ordem dos pedidos. Como a expectativa é de receber muitos pedidos durante a Black Friday, o prazo pode ser maior para as pessoas que fizerem os pedidos por último. Portanto seja um(a) dos(as) primeiros(as)!'
+                content='As primeiras entregas do plano anual de aluguel serão realizadas em fevereiro de 2021 na ordem dos pedidos. Como a expectativa é de receber muitos pedidos nessa promoção, o prazo pode ser maior para as pessoas que fizerem os pedidos por último. Portanto seja um(a) dos(as) primeiros(as)! Durante o mês de dezembro de 2020, nossa equipe deve entrar em contato com todos e passar uma data prevista para a produção da sua Vela 2.'
             />
             <Accordion 
                 title='3. O que está incluso no pacote de aluguel?'
-                content='12 meses de uma unidade da Vela 2, nova em folha, na cor, tamanho e geometria da sua preferência. Todas as unidades serão entregues com o Plano Vela+ Simples ativo por 12 meses que engloba a proteção contra roubo e furto, GPS, atualizações exclusivas e muito mais (veja os termos do Plano Vela+ Simples aqui). Os serviços de revisão, manutenção e substituição de peças consumíveis não serão cobrados durante o período de locação, desde que realizados pela Vela nas cidades de São Paulo e Curitiba.'
+                content='12 meses de uma unidade da Vela 2, nova em folha, na cor, tamanho e geometria da sua preferência. Todas as unidades serão entregues com o Plano Vela+ Simples ativo por 12 meses que engloba a proteção contra roubo e furto, GPS, atualizações exclusivas e muito mais. Os serviços de revisão, manutenção e substituição de peças consumíveis não serão cobrados durante o período de locação, desde que realizados pela Vela nas cidades de São Paulo ou Curitiba.'
             />
             <Accordion 
                 title='4. E se eu não optar pela compra após 1 ano?'
-                content='Nos 30 dias antes do término do período dos 12 meses de locação, nossa equipe vai entrar em contato para verificar o interesse na compra da Vela 2, caso não haja interesse, nesse mesmo contato agendaremos a retirada da sua bicicleta.'
+                content='Em 30 dias antes do término do período dos 12 meses de locação, nossa equipe vai entrar em contato para verificar o interesse na compra da Vela 2, caso não haja interesse, nesse mesmo contato agendaremos a retirada da sua bicicleta, sem custo para as cidades de São Paulo e Curitiba.'
             />
             <Accordion 
                 title='5. Não moro em São Paulo ou Curitiba, ainda posso participar?'
-                content='Claro! A promoção é válida para todo o Brasil, porém será cobrada uma taxa de R$ 230,00 por cada trecho de transporte, como: entrega inicial, manutenções e devoluções.'
+                content='Claro! A promoção será válida para todo o Brasil, porém será cobrada uma taxa de R$ 180,00 por cada trecho de transporte, como: entrega inicial, manutenções e devoluções.'
             />
         </div>
         <div className='cover'>
