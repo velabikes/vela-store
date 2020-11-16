@@ -26,6 +26,7 @@
     { "src": "/testride", "dest": "/test-ride" },
     { "src": "/contato", "dest": "/contact" },
     { "src": "/investir", "dest": "/invest" },
+    { "src": "/blackfriday", "dest": "/blackfriday" },
     { "src": "/vela/", "dest": "/vela" },
     { "src": "/vela/(?<param>[^/]+)", "dest": "/static/v2landing/$param" },
     { "src": "/blog/(?<slug>[^/]+)", "dest": "/blog/slug?slug=$slug" },

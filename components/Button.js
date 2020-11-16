@@ -30,7 +30,7 @@ const Button = ({
       button {
         padding: 0.8em 1.2em;
         margin: 0 0.5em 0.5em 0;
-        font-size: 0.8em;
+        font-size: 0.9em;
         border: 2px solid ${color};
         background: ${bgColor};
         border-radius: 0.5em;
@@ -46,11 +46,6 @@ const Button = ({
         transform: translateY(2px);
         box-shadow: none;
         color: ${bgColor};
-      }
-      @media only screen and (min-width: 768px) {
-        button {
-          font-size: 0.9em;
-        }
       }
     `}</style>
   </>
@@ -69,7 +64,7 @@ export default compose(
   defaultProps({ color: offWhite, textColor: offBlack, bgColor: offWhite }),
   withProps(({ primary }) => primary && ({ color: lightGreen, bgColor: lightGreen, textColor: white })),
   withProps(({ secondary }) => secondary && ({ color: velaBlue, bgColor: velaBlue, textColor: white })),
-  withProps(({ bf }) => bf && ({ color: '#FFAF2D', bgColor: '#FFAF2D', textColor: white })),
+  withProps(({ bf }) => bf && ({ color: '#F99E0B', bgColor: '#F99E0B', textColor: white })),
   withProps(({ outline, color }) => outline && ({ bgColor: 'transparent', textColor: color === offWhite ? offBlack : color })),
   withProps(({ disabled }) => disabled && ({ bgColor: lightGray, textColor: midGray, color: lightGray }))
 )(Button)

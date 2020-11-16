@@ -49,9 +49,10 @@ const Bar = ({ onContinue, extra, step, checkout }) => {
       .top {
         display: flex;
         flex-direction: row;
+        align-items: center;
         justify-content: space-between;
         width: 100%;
-        padding: 0.5em;
+        padding: 0.5em 0.5em 1.5em 0.5em;
       }
       .top p {
         max-width: 6rem;
@@ -82,6 +83,9 @@ const Bar = ({ onContinue, extra, step, checkout }) => {
           padding: 0 6em 0 0;
           border: 0;
         }
+        .bottom h2 {
+          margin: 0;
+        }
         .top {
           font-size: 0.8em;
           display: flex;
@@ -95,7 +99,7 @@ const Bar = ({ onContinue, extra, step, checkout }) => {
         }
         .top .right {
           text-align: right;
-          margin-right: 0.7em;
+          margin-right: 0.8em;
         }
         .left {
           flex-direction: column;

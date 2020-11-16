@@ -4,7 +4,7 @@ const BFImage = () =>
     <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Fblackfriday%2FBlackFridayVela2020.jpg?alt=media&token=c94e0d3f-5f5d-47eb-9b15-94d75bde074d' className='mobile' alt='Black Friday 2020 - Vela Bikes' />
     <style jsx>{`
       img {
-        height: 70vh;
+        min-height: 70vh;
         object-fit: cover;
       }
       .desktop {

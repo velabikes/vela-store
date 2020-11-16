@@ -9,6 +9,7 @@ import PaddedView from 'components/PaddedView'
 import Button from '../components/Button'
 import VelaPoint from '../components/charge/VelaPoint'
 import { offBlack, offWhite, velaGreen, white } from '../style/colors'
+import HomeImage from '../components/home/HomeImage'
 
 const HomePage = ({ highlight }) =>
   <div className='HomePage'>
@@ -31,20 +32,25 @@ const HomePage = ({ highlight }) =>
       <meta property='og:image' content='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FBikeEletricaSmart.jpg?alt=media&token=3f8618f9-981e-4ae4-9b43-a00210184e6e' />
     </Head>
     <div className='cover'>
+      <HomeImage />
+      <div className='cta-bf'>
+        <div className='slogan'>
+          <h1>Black Friday</h1>
+          <h3>Aluguel com opção de compra.</h3>
+          <h4>A promoção que você estava esperando o ano inteiro. Vamos velejar?</h4>
+          <a href='/blackfriday'><Button bf>Conferir</Button></a>
+        </div>
+      </div>
+    </div>
+    <div className='cover'>
+      <HomeVideo />
       <div className='cta'>
         <div className='slogan'>
           <h1>Feita no Brasil.</h1>
-          <h4>Com cuidado, cadeia produtiva sustentável e produção artesanal.</h4>
-          <p>A bicicleta elétrica & smart para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes, sem abrir mão do estilo.</p>
-          <h2>Por R$ 6.890,00</h2>
-          <div className='actions'>
-            <a href='/vela2'>
-              <Button primary>Monte a sua</Button>
-            </a>
-          </div>
+          <h2>Com cuidado, cadeia produtiva sustentável e produção artesanal.</h2>
+          <h4>A bicicleta elétrica & smart para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes, sem abrir mão do estilo.</h4>
         </div>
       </div>
-      <HomeVideo />
     </div>
     <Highlight />
     <div className='home-store'>
@@ -69,9 +75,24 @@ const HomePage = ({ highlight }) =>
          position: relative;
          background-color: ${offWhite};
       }
+      .cta-bf {
+        text-align: center;
+        padding: 2rem 3rem 2rem 3rem;
+        background-color: ${offBlack};
+      }
+      .cta-bf h1 {
+        color: #FFAF2D;
+      }
+      .cta-bf h3 {
+        color: ${offWhite};
+      }
+      .cta-bf h4 {
+        color: ${offWhite};
+        margin-bottom: 1em;
+      }
       .cta {
         text-align: center;
-        padding: 2rem 3rem 1rem 3rem;
+        padding: 2rem 3rem 2rem 3rem;
         background-color: #709981;
       }
       .cta h2, .cta small, .cta p {
@@ -122,6 +143,18 @@ const HomePage = ({ highlight }) =>
           top: 6em;
           text-align: left;
           background-color: ${white};
+          margin-top: 0rem;
+          padding: 2em;
+          z-index: 2;
+        }
+        .cta-bf {
+          position: absolute;
+          justify-content: center;
+          max-width: 23em;
+          right: 2em;
+          top: 3.5em;
+          text-align: right;
+          background-color: transparent;
           margin-top: 0rem;
           padding: 2em;
           z-index: 2;

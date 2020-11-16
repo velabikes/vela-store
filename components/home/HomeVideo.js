@@ -5,7 +5,6 @@ const HomeVideo = () =>
     </video>
     <style jsx>{`
       .banner {
-        margin-top: -3.5em;
         display: grid;
         position: relative;
         z-index: 0;

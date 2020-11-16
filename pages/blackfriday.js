@@ -70,8 +70,8 @@ return (
         </div>
       </div>
       <div className='timer'>
-          <h4>Prepare-se! Para a Black Friday da Vela começar, faltam exatamente...</h4>
-          <h2>{pad(days,2)} dias {pad(hours,2)}h{pad(minutes,2)}min{pad(seconds,2)}s</h2>
+          <h4>Para a promoção começar, faltam...</h4>
+          <h2>{pad(days,2)} dias {pad(hours,2)} horas {pad(minutes,2)}min e {pad(seconds,2)}s </h2>
           <SubscribeForm />
       </div>
       <div className='image-cut'>
@@ -145,7 +145,7 @@ return (
             <FooterImage />
             <div className='cta-bottom'>
                 <div className='slogan'>
-                <h2>A Black Friday é apenas o começo de um novo caminho para você em 2021.</h2>
+                <h2>A Black Friday é apenas o começo de um novo caminho para você em <span style={{fontSize: '1.5em', color: '#FFAF2D'}}>2021</span>.</h2>
                 </div>
             </div>
         </div>
@@ -259,11 +259,14 @@ return (
             flex-direction: column;
             text-align: center;
             padding: 2em 4em 1em 4em;
-            background-color: ${offWhite};
+            background-color:  #1A3546;
         }
         .tagline h3 {
-            color: ${offBlack};
+            color: #FFAF2D;
             font-style: italic;
+        }
+        .tagline h4 {
+            color: ${offWhite};
         }
         @media only screen and (min-width: 768px) {
                 .questions {
@@ -344,6 +347,9 @@ return (
                 }
                 .timer h2 {
                     font-size: 3.5em;
+                }
+                .timer h4 {
+                    font-size: 1.4em;
                 }
         }
       `}</style>

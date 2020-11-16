@@ -38,6 +38,9 @@ const MainMenu = () =>
       <li><Link href='/testride' as='/test-ride'><a>
         Test-ride
       </a></Link></li>
+      <li><Link href='/blackfriday'><a style={{color: '#FFAF2D'}}>
+          Black Friday
+      </a></Link></li>
     </ul>
     <style jsx>{`
       h2 {

@@ -1,5 +1,5 @@
 import React, {useState, useRef} from 'react'
-import { offWhite } from '../style/colors'
+import { white } from '../style/colors'
 import { Chevron } from './Icons'
 
 
@@ -39,7 +39,7 @@ function Accordion({title, content}) {
 
       .accordion {
         background-color: #3D4057;
-        color: ${offWhite};
+        color: ${white};
         cursor: pointer;
         padding: 1em;
         display: flex;
