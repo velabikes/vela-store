@@ -75,6 +75,9 @@ module.exports = async (req, res) => {
   }
 
   if (totalGrams < 20000) {
+
+    console.log(totalGrams + '     TOTALGRAMS <<< 20000     ')
+
     const queryArgs = {
       nCdServico: '40010',
       sCepOrigem: origin.postal_code.replace('-', ''),
@@ -87,6 +90,8 @@ module.exports = async (req, res) => {
       nVlDiametro: 20,
       nVlValorDeclarado: totalPrice / 100
     }
+
+    console.log(queryArgs + '     QUERYARGS     ')
 
     return correios.calcPrecoPrazo(queryArgs, (err, result) => {
       if (err) return
@@ -127,10 +132,16 @@ module.exports = async (req, res) => {
   }
 }
 
-const mapCorreiosResultToRate = (result) => result.map(r => ({ // map here or map out?
-  service_name: `Sedex`,
-  service_code: r.Codigo,
-  total_price: parseFloat(r.Valor.split(',').join('.')) * 100,
-  description: `${r.PrazoEntrega} dias úteis`,
-  currency: `BRL`
-}))
+const mapCorreiosResultToRate = (result) => result.map(r => {
+  const correiosReturn = ({ // map here or map out?
+    service_name: `Sedex`,
+    service_code: r.Codigo,
+    total_price: parseFloat(r.Valor.split(',').join('.')) * 100,
+    description: `${r.PrazoEntrega} dias úteis`,
+    currency: `BRL`
+  })
+
+  console.log(correiosReturn + '     CORREIOSRETURN     ')
+
+  return correiosReturn
+})
