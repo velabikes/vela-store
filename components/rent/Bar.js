@@ -1,15 +1,16 @@
 /* eslint-disable react/prop-types */
+import React, {useEffect} from 'react'
 import { compose } from 'recompose'
 import { lightGray, darkGray } from '../../style/colors'
 import withCheckout from '../../containers/withCheckout'
 import Button from '../Button'
 import Price from '../Price'
 
-const Bar = ({ onContinue, extra, step, checkout }) => {
+const Bar = ({ onContinue, extra, step, checkout, checked }) => {
   return (
     <div className='Bar'>
       <div className='top'>
-        <p className='right'>Entrega em 3 meses</p><small>As bikes reservadas agora serão entregues a partir de fevereiro de 2021. O ciclo de aluguel começará a ser contado na data de entrega.</small>
+        <p className='right'>Entrega em até 3 meses</p><small>As bikes reservadas agora serão entregues a partir de <b>fevereiro de 2021</b>. O ciclo de aluguel começará a ser contado na data de entrega.</small>
       </div>
       <div className='bottom'>
         <div className='left'>

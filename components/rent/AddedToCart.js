@@ -2,14 +2,15 @@ import { compose } from 'recompose'
 import withCheckout from '../../containers/withCheckout'
 import CartItem from '../store/Cart/Item'
 import { velaBlue } from '../../style/colors'
+import Checkbox from '../Checkbox'
 
 const AddedToCart = ({ checkout }) => {
   return (
     <div>
       <h3>Itens adicionados ao carrinho!</h3>
-      <p>Finalize o pedido de seu Pacote Anual de Aluguel.</p>
+      <p>Finalize o pedido do seu Pacote Aluguel Anual da Vela 2.</p>
       <p><b>Os acessórios adicionados ao pedido não serão alugados e sim vendidos.</b></p>
-      <p>Aceitamos pagamentos via PayPal em até 12x sem juros no cartão de crédito.</p>
+      <p>Aceitamos pagamentos via PayPal em até 12x de R$ 289/mês no cartão de crédito.</p>
       {checkout && !checkout.lineItems.edges.length ? 
       <p>Seu carrinho está vazio!</p> : 
       <h5>Confira e revise os itens do pedido para finalizar:</h5>
@@ -21,6 +22,13 @@ const AddedToCart = ({ checkout }) => {
           </tbody>
         </table>
       </div>
+      <div>
+        <label>
+          <Checkbox/>
+          <span>Eu concordo com os <a href='/legal'>Termos de Serviço de Aluguel</a> da Vela 2.</span>
+        </label>
+        <h6>Após pagamento, a contratação será concluída mediante análise de crédito. As informações para análise serão requeridas por e-mail.</h6>
+      </div>    
       <style jsx>{`
       .items {
         flex: 1;
@@ -34,6 +42,14 @@ const AddedToCart = ({ checkout }) => {
       .another {
         color: ${velaBlue};
         cursor: pointer;
+      }
+      h5 {
+        padding-bottom: 0;
+      }
+      h6 {
+        padding-top: 1em;
+        line-height: 1.5;
+        padding-bottom: 0;
       }
       `}</style>
     </div>

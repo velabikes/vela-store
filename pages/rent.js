@@ -9,11 +9,10 @@ import ModelSelector from '../components/rent/ModelSelector'
 import ExtraSelector from '../components/rent/ExtraSelector'
 import Tab from '../components/rent/Tab'
 import withCheckoutLineItemsAdd from '../containers/withCheckoutLineItemsAdd'
-import withCheckoutId from '../containers/withCheckoutId'
 import withCheckout from '../containers/withCheckout'
 import ModelData from '../components/rent/ModelData'
 
-const Rent = ({ checkout, checkoutId, checkoutLineItemsAdd }) => {
+const Rent = ({ checkout, checkoutLineItemsAdd, handleCheckoutCreation}) => {
   const [selectedModel, setSelectedModel] = useState({})
   const [selectedExtra, setSelectedExtra] = useState([])
   const [step, setStep] = useState(1);
@@ -28,6 +27,7 @@ const Rent = ({ checkout, checkoutId, checkoutLineItemsAdd }) => {
     }
 
     if (step === 2) {
+      const checkoutId = await handleCheckoutCreation()
       await checkoutLineItemsAdd({
         variables: {
           checkoutId,
@@ -113,5 +113,4 @@ const Rent = ({ checkout, checkoutId, checkoutLineItemsAdd }) => {
 export default compose(
   withCheckout,
   withCheckoutLineItemsAdd,
-  withCheckoutId
 )(Rent)
