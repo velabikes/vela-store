@@ -76,7 +76,7 @@ module.exports = async (req, res) => {
 
   if (totalGrams < 20000) {
 
-    console.log(totalGrams + '     TOTALGRAMS <<< 20000     ')
+    console.log(totalGrams + ' = TOTALGRAMS <<< 20000')
 
     const queryArgs = {
       nCdServico: '40010',
@@ -91,12 +91,12 @@ module.exports = async (req, res) => {
       nVlValorDeclarado: totalPrice / 100
     }
 
-    console.log(queryArgs + '     QUERYARGS     ')
+    console.log(JSON.stringify(queryArgs) + ' = QUERYARGS')
 
     return correios.calcPrecoPrazo(queryArgs, (err, result) => {
       if (err) return
-      console.log(items)
-      console.log("\n")
+      // console.log(items)
+      // console.log("\n")
       return res.end(JSON.stringify({
         rates: mapCorreiosResultToRate(result)
       }))
@@ -141,7 +141,7 @@ const mapCorreiosResultToRate = (result) => result.map(r => {
     currency: `BRL`
   })
 
-  console.log(correiosReturn + '     CORREIOSRETURN     ')
+  console.log(JSON.stringify(correiosReturn) + ' = CORREIOSRETURN')
 
   return correiosReturn
 })
