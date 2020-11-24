@@ -48,7 +48,7 @@
     "next-with-apollo": "^3.4.0",
     "node-cache": "^4.2.0",
     "node-correios": "^2.2.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "nprogress": "^0.2.0",
     "prismic-javascript": "^2.1.1",
     "prismic-reactjs": "^1.1.0",
