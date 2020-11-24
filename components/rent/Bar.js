@@ -9,13 +9,13 @@ const Bar = ({ onContinue, extra, step, checkout }) => {
   return (
     <div className='Bar'>
       <div className='top'>
-        <p className='right'>Entrega em até 3 meses</p><small>A Vela é um produto sob medida e artesanal. Por conta do COVID-19, o prazo de entrega se encontra estendido e pode sofrer alterações.</small>
+        <p className='right'>Entrega em 3 meses</p><small>As bikes reservadas agora serão entregues a partir de fevereiro de 2021. O ciclo de aluguel começará a ser contado na data de entrega.</small>
       </div>
       <div className='bottom'>
         <div className='left'>
           <h2>
-            {step === 1 && <Price value={7590} />}
-            {step === 2 && <Price value={7590 + extra.reduce((a, b) => a + parseInt(b.priceV2.amount), 0)} />}
+            {step === 1 && <Price value={3468} />}
+            {step === 2 && <Price value={3468 + extra.reduce((a, b) => a + parseInt(b.priceV2.amount), 0)} />}
             {step === 3 && 'Total:' && <Price value={checkout.totalPrice} />}
           </h2>
         </div>

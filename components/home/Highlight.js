@@ -11,7 +11,7 @@ const Highlight = () => {
         </div>
         <div className='models'>
             <div className='qr'>
-              <a href="/vela2">
+              <a href="/vela">
                 <img alt='Vela 2 Quadro reto' src='/static/vela2/models/VEL-V2-550-29-VERDE-PRETO.png' />
                 <div className='models-content'>
                   <h2>Quadro reto</h2>
@@ -21,7 +21,7 @@ const Highlight = () => {
               </a>
             </div>
             <div className='qb'>
-              <a href="/vela2">
+              <a href="/vela">
                 <img alt='Vela 2 Quadro baixo' src='/static/vela2/models/VEL-V2-490-29-VERDE-PRETO.png' />
                 <div className='models-content'>
                   <h2>Quadro baixo</h2>

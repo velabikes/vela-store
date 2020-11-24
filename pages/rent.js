@@ -2,18 +2,18 @@
 import { useState } from 'react'
 import Head from 'next/head'
 import { compose } from 'recompose'
-import Display from '../components/vela2/Display'
-import Bar from '../components/vela2/Bar'
-import AddedToCart from '../components/vela2/AddedToCart'
-import ModelSelector from '../components/vela2/ModelSelector'
-import ExtraSelector from '../components/vela2/ExtraSelector'
-import Tab from '../components/vela2/Tab'
+import Display from '../components/rent/Display'
+import Bar from '../components/rent/Bar'
+import AddedToCart from '../components/rent/AddedToCart'
+import ModelSelector from '../components/rent/ModelSelector'
+import ExtraSelector from '../components/rent/ExtraSelector'
+import Tab from '../components/rent/Tab'
 import withCheckoutLineItemsAdd from '../containers/withCheckoutLineItemsAdd'
 import withCheckoutId from '../containers/withCheckoutId'
 import withCheckout from '../containers/withCheckout'
-import ModelData from '../components/vela2/ModelData'
+import ModelData from '../components/rent/ModelData'
 
-const Vela2 = ({ checkout, checkoutId, checkoutLineItemsAdd }) => {
+const Rent = ({ checkout, checkoutId, checkoutLineItemsAdd }) => {
   const [selectedModel, setSelectedModel] = useState({})
   const [selectedExtra, setSelectedExtra] = useState([])
   const [step, setStep] = useState(1);
@@ -54,19 +54,19 @@ const Vela2 = ({ checkout, checkoutId, checkoutLineItemsAdd }) => {
   return (
     <div className='vela2'>
       <Head>
-        <title>Monte a sua - Vela Bikes</title>
+        <title>Alugue a Vela 2 - Vela Bikes</title>
         <meta http-equiv='content-language' content='pt-br' />
         <meta name='application-name' content='Vela Bikes Store' />
         <meta name='description' content='Escolha o modelo da sua Vela 2, os acessórios essenciais para a cidade e aproveite para pedalar smart!' />
         <meta property='og:url' content='https://velabikes.com.br/vela2' />
         <meta property='og:type' content='website' />
-        <meta property='og:title' content='Monte a sua - Vela Bikes' />
+        <meta property='og:title' content='Alugue a Vela 2 - Vela Bikes' />
         <meta property='og:locale' content='pt_BR' />
         <meta property='og:description' content='Escolha o modelo da sua Vela 2, os acessórios essenciais para a cidade e aproveite para pedalar smart!' />
         <meta property='og:image' content='https://images.prismic.io/velabikes/3aec68d3-2a0b-4aaf-a56a-24abba68dae0__MG_4306+%281%29.jpg?auto=compress,format&rect=0,10,5006,3337&w=3000&h=2000' />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@velabikes" /> 
-        <meta name="twitter:title" content="Monte a sua - Vela Bikes" />
+        <meta name="twitter:title" content="Alugue a Vela 2 - Vela Bikes" />
         <meta name="twitter:description" content="Escolha o modelo da sua Vela 2, os acessórios essenciais para a cidade e aproveite para pedalar smart!'" />
         <meta name="twitter:image" content="https://images.prismic.io/velabikes/3aec68d3-2a0b-4aaf-a56a-24abba68dae0__MG_4306+%281%29.jpg?auto=compress,format&rect=0,10,5006,3337&w=3000&h=2000" />
       </Head>
@@ -114,4 +114,4 @@ export default compose(
   withCheckout,
   withCheckoutLineItemsAdd,
   withCheckoutId
-)(Vela2)
+)(Rent)

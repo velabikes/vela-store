@@ -70,8 +70,8 @@ return (
             <div className='step'>
                 <img src='/static/step2.png'></img>
                 <h4>Alugue a Vela 2 por 12 meses...</h4>
-                <h5>Pague apenas R$ 289 por mês e conte com o Plano Vela+ Simples!</h5>
-                <p>Rastreamento GPS e proteção contra roubo e furto inclusos no plano anual.</p>
+                <h5>Parcele o pacote anual no cartão de crédito e pague apenas R$ 289 por mês!</h5>
+                <p>Conte com rastreamento GPS e proteção contra roubo e furto inclusos.</p>
             </div>
             <div className='step'>
                 <img src='/static/step3.png'></img>

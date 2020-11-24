@@ -662,7 +662,7 @@ module.exports = async (req, res) => {
           'Edson Queiroz, Fortaleza',
           'CE, 60811-341, Brasil'
         ],
-        phone: '(41) 3014-5762',
+        phone: '(85) 99205-3891',
         pos: {
           lat: -3.7850419,
           lng: -38.4825672

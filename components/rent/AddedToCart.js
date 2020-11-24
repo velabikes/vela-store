@@ -7,7 +7,8 @@ const AddedToCart = ({ checkout }) => {
   return (
     <div>
       <h3>Itens adicionados ao carrinho!</h3>
-      <p>Finalize seu pedido ou confira mais acessórios, como cadeirinhas, caixotes e alforges, e continue comprando em nossa <a href='/loja'>loja</a>.</p>
+      <p>Finalize o pedido de seu Pacote Anual de Aluguel.</p>
+      <p><b>Os acessórios adicionados ao pedido não serão alugados e sim vendidos.</b></p>
       <p>Aceitamos pagamentos via PayPal em até 12x sem juros no cartão de crédito.</p>
       {checkout && !checkout.lineItems.edges.length ? 
       <p>Seu carrinho está vazio!</p> : 
