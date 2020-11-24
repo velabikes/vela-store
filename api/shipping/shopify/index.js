@@ -56,7 +56,7 @@ module.exports = async (req, res) => {
       }
     }))
     const info = await response.json()
-    cityName = info.cidade.nome
+    cityName = info && info.cidade && info.cidade.nome
   } catch(e) {
     console.warn(e)
     cityName = 'N/A'
