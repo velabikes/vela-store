@@ -60,9 +60,9 @@ const Footer = () => (
               </Link>
             </li>
             <li>
-              <Link href="https://velabikes.freshdesk.com/support/home">
-                <a>FAQ</a>
-              </Link>
+              <a href="https://velabikes.freshdesk.com/support/home">
+                FAQ
+              </a>
             </li>
             <li>
               <Link href="/legal">
@@ -73,27 +73,21 @@ const Footer = () => (
         </nav>
         <div className="social">
           <h3>+</h3>
-          <Link href="https://www.instagram.com/velabikes/">
-            <a>
+          <a href="https://www.instagram.com/velabikes/">
               <div className="social-icon">
                 <Instagram />
               </div>
-            </a>
-          </Link>
-          <Link href="https://www.facebook.com/velabikes">
-            <a>
+          </a>
+          <a href="https://www.facebook.com/velabikes">
               <div className="social-icon">
                 <Facebook />
               </div>
-            </a>
-          </Link>
-          <Link href="https://www.youtube.com/channel/UCa9GuqmiV3VbulKx9T2rjCw">
-            <a>
+          </a>
+          <a href="https://www.youtube.com/channel/UCa9GuqmiV3VbulKx9T2rjCw">
               <div className="social-icon">
                 <YouTube />
               </div>
-            </a>
-          </Link>
+          </a>
         </div>
         <div className="news">
           <SubscribeForm />

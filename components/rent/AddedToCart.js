@@ -1,10 +1,11 @@
+import React, {useState} from 'react'
 import { compose } from 'recompose'
 import withCheckout from '../../containers/withCheckout'
 import CartItem from '../store/Cart/Item'
 import { velaBlue } from '../../style/colors'
 import Checkbox from '../Checkbox'
 
-const AddedToCart = ({ checkout }) => {
+const AddedToCart = ({ checkout, checked, onCheck, toggleButton, activeButton }) => {
   return (
     <div>
       <h3>Itens adicionados ao carrinho!</h3>
@@ -13,7 +14,7 @@ const AddedToCart = ({ checkout }) => {
       <p>Aceitamos pagamentos via PayPal em até 12x de R$ 289/mês no cartão de crédito.</p>
       {checkout && !checkout.lineItems.edges.length ? 
       <p>Seu carrinho está vazio!</p> : 
-      <h5>Confira e revise os itens do pedido para finalizar:</h5>
+      <h5>Revise os itens do pedido para finalizar:</h5>
       }
       <div className='items'>
         <table>
@@ -24,8 +25,11 @@ const AddedToCart = ({ checkout }) => {
       </div>
       <div>
         <label>
-          <Checkbox/>
+          <Checkbox
+            onChange={() => onCheck(!checked) + toggleButton(!activeButton)}
+          />
           <span>Eu concordo com os <a href='/legal'>Termos de Serviço de Aluguel</a> da Vela 2.</span>
+          <br/><small style={{color: 'red'}}> {checked === false ? 'Você precisa concordar para continuar.' : ''}</small>
         </label>
         <h6>Após pagamento, a contratação será concluída mediante análise de crédito. As informações para análise serão requeridas por e-mail.</h6>
       </div>    

@@ -16,6 +16,8 @@ const Rent = ({ checkout, checkoutLineItemsAdd, handleCheckoutCreation}) => {
   const [selectedModel, setSelectedModel] = useState({})
   const [selectedExtra, setSelectedExtra] = useState([])
   const [step, setStep] = useState(1);
+  const [checked, setChecked] = useState(false)
+  const [activeButton, setActiveButton] = useState(false)
 
   const { frame, size, color, tire } = selectedModel
   const selectedModelData =
@@ -88,7 +90,15 @@ const Rent = ({ checkout, checkoutLineItemsAdd, handleCheckoutCreation}) => {
               )
             }
           />
-          <AddedToCart onStep={setStep} />
+          <AddedToCart 
+            onStep={setStep} 
+            checked={checked} 
+            onCheck={setChecked} 
+            toggleButton={setActiveButton}
+            activeButton={activeButton}
+          />
+          {console.log(checked)}
+          {console.log(activeButton)}
         </Tab>
       </div>
       <Bar
@@ -96,6 +106,7 @@ const Rent = ({ checkout, checkoutLineItemsAdd, handleCheckoutCreation}) => {
         extra={selectedExtra}
         onContinue={handleNext}
         step={step}
+        activeButton={activeButton}
       />
       <style jsx>{`
         @media only screen and (min-width: 768px) {

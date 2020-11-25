@@ -1,12 +1,13 @@
 /* eslint-disable react/prop-types */
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import { compose } from 'recompose'
 import { lightGray, darkGray } from '../../style/colors'
 import withCheckout from '../../containers/withCheckout'
 import Button from '../Button'
 import Price from '../Price'
 
-const Bar = ({ onContinue, extra, step, checkout, checked }) => {
+const Bar = ({ onContinue, extra, step, checkout, activeButton, toggleButton }) => {
+
   return (
     <div className='Bar'>
       <div className='top'>
@@ -21,12 +22,15 @@ const Bar = ({ onContinue, extra, step, checkout, checked }) => {
           </h2>
         </div>
         <div className='actions'>
-          <Button primary onClick={onContinue}>
-            {step === 1 ? 'Continuar' : 
-              step === 2 ? 'Adicionar' :
-              checkout.lineItems.edges.length ? 'Finalizar' : 'Voltar'
+          
+          {step === 1 ? 
+            <Button primary onClick={onContinue}>Continuar</Button> :
+            step === 2 ? 
+            <Button primary onClick={onContinue}>Adicionar</Button> :
+            activeButton === false ? <Button disabled onClick={''}>Finalizar</Button> :
+            <Button primary onClick={onContinue}>Finalizar</Button>
             }
-          </Button>
+          
         </div>
       </div>
       <style jsx>{`
