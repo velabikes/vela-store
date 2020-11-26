@@ -38,9 +38,7 @@ const Highlight = () => {
       <div className='price'>
         <h2>Faça parte do futuro. Agora.</h2>
         <div className='actions'>
-          <a href='/vela'>
-            <Button primary>Saiba mais</Button>
-          </a>
+          <a href='/alugar'><Button bf>Alugar</Button></a>
         </div>
       </div>
       <style jsx>{`

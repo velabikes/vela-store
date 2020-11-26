@@ -28,7 +28,7 @@ const AddedToCart = ({ checkout, checked, onCheck, toggleButton, activeButton })
           <Checkbox
             onChange={() => onCheck(!checked) + toggleButton(!activeButton)}
           />
-          <span>Eu concordo com os <a href='/legal'>Termos de Serviço de Aluguel</a> da Vela 2.</span>
+          <span>Eu concordo com os <a href='/terms-of-rent'>Termos de Serviço de Aluguel</a> da Vela 2.</span>
           <br/><small style={{color: 'red'}}> {checked === false ? 'Você precisa concordar para continuar.' : ''}</small>
         </label>
         <h6>Após pagamento, a contratação será concluída mediante análise de crédito. As informações para análise serão requeridas por e-mail.</h6>
