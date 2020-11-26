@@ -66,7 +66,7 @@ const ExtraSelector = ({ collection, onSelect, selected, model }) => {
 
   return (
     <div>
-      <p>Adicione também os acessórios extras essenciais para a cidade:</p>
+      <p>Compre também os acessórios extras essenciais para a cidade:</p>
       <div className='Items'>
         {collection.products.edges
           .filter(product => {

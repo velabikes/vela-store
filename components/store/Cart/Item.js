@@ -54,14 +54,14 @@ const CartItem = ({ item, handleLessClick }) =>
       font-weight: 600;
     }
     td.quantity {
-      min-width: 1.6em;
-      max-width: 1.6em;
+      min-width: 1.5em;
+      max-width: 1.5em;
       padding-left: 0.5em;
     }
     td.quantity a {
       display: block;
-      min-width: 1.7em;
-      max-width: 1.7em;
+      min-width: 1.5em;
+      max-width: 1.5em;
       text-align: center;
     }
     `}</style>

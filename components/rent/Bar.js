@@ -16,7 +16,7 @@ const Bar = ({ onContinue, extra, step, checkout, activeButton, toggleButton }) 
       <div className='bottom'>
         <div className='left'>
           <h2>
-            {step === 1 && <Price value={3468} />}
+            {step === 1 && <Price value={3468}/>}
             {step === 2 && <Price value={3468 + extra.reduce((a, b) => a + parseInt(b.priceV2.amount), 0)} />}
             {step === 3 && 'Total:' && <Price value={checkout.totalPrice} />}
           </h2>

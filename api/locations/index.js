@@ -543,7 +543,7 @@ module.exports = async (req, res) => {
           lng: -46.5584795697085
         },
         googlePlace: 'ChIJOeGEaFNfzpQRBMjvcEj6tj8',
-        type: ['charger','service']
+        type: ['service','charger']
       },
       {
         name: 'Amo Minha Bike Elétrica',
