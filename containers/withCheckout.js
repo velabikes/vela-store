@@ -66,6 +66,7 @@ export default compose(
           })
           const checkoutId = mutationResponse.data.checkoutCreate.checkout.id
           dispatch(setCheckoutId(checkoutId))
+          return checkoutId
         }
       }),
       withCheckout

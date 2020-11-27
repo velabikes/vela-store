@@ -543,7 +543,7 @@ module.exports = async (req, res) => {
           lng: -46.5584795697085
         },
         googlePlace: 'ChIJOeGEaFNfzpQRBMjvcEj6tj8',
-        type: ['charger','service']
+        type: ['service','charger']
       },
       {
         name: 'Amo Minha Bike Elétrica',
@@ -662,7 +662,7 @@ module.exports = async (req, res) => {
           'Edson Queiroz, Fortaleza',
           'CE, 60811-341, Brasil'
         ],
-        phone: '(41) 3014-5762',
+        phone: '(85) 99205-3891',
         pos: {
           lat: -3.7850419,
           lng: -38.4825672

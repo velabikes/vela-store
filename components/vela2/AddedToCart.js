@@ -1,19 +1,17 @@
 import { compose } from 'recompose'
 import withCheckout from '../../containers/withCheckout'
 import CartItem from '../store/Cart/Item'
-import Button from '../Button'
 import { velaBlue } from '../../style/colors'
 
-const AddedToCart = ({ checkout, onStep }) => {
+const AddedToCart = ({ checkout }) => {
   return (
     <div>
-      <p><b>Itens adicionados ao carrinho!</b></p>
+      <h3>Itens adicionados ao carrinho!</h3>
       <p>Finalize seu pedido ou confira mais acessórios, como cadeirinhas, caixotes e alforges, e continue comprando em nossa <a href='/loja'>loja</a>.</p>
-      <p>Aceitamos pagamentos via PayPal, com opção de 12x sem juros no cartão de crédito, cartão de débito ou boleto bancário.</p>
-      <div className='another' onClick={() => onStep(1)}><Button secondary>Adicionar outra Vela 2</Button></div>
+      <p>Aceitamos pagamentos via PayPal em até 12x sem juros no cartão de crédito.</p>
       {checkout && !checkout.lineItems.edges.length ? 
       <p>Seu carrinho está vazio!</p> : 
-      <p><b>Confira e revise os itens do pedido para finalizar:</b></p>
+      <h5>Confira e revise os itens do pedido para finalizar:</h5>
       }
       <div className='items'>
         <table>
