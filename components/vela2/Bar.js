@@ -93,7 +93,7 @@ const Bar = ({ onContinue, extra, step, checkout }) => {
           padding: 0 0 0 6em;
         }
         .top p{
-          max-width: 4.5rem;
+          max-width: 5rem;
           text-align: center;
           margin: 0;
         }
@@ -110,6 +110,7 @@ const Bar = ({ onContinue, extra, step, checkout }) => {
         small {
           border-left: 1px ${lightGray} solid;
           padding-left: 1em;
+          max-width: 20em;
         }
       }
     `}</style>
