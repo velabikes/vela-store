@@ -104,7 +104,7 @@ module.exports = async (req, res) => {
             service_name: 'Frete Grátis',
             service_code: 'FG',
             total_price: '0',
-            description: 'Produção + 18 dias úteis',
+            description: 'Tempo de produção + 18 dias úteis de transporte',
             currency: 'BRL'
           }]
         }))
