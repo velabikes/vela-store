@@ -99,7 +99,7 @@ export default {
     id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTcyNjk0NTg2MTY4Nw==',
     photos: ['/static/vela2/models/VEL-V2-590-29-PRETO-CREME.png']
   },
-  '{"frame":"Baixo","size":"P",color":"Vermelho","tire":"Preto"}': {
+  '{"frame":"Baixo","size":"P","color":"Vermelho","tire":"Preto"}': {
     id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTcyNjk0NjE1NjU5OQ==',
     photos: ['/static/vela2/models/VEL-V2-490-26-VERMELHO-PRETO.png']
   },

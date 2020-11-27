@@ -99,7 +99,7 @@ export default {
     id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMjM4MDM4ODMxMTA5NQ==',
     photos: ['/static/vela2/models/VEL-V2-590-29-PRETO-CREME.png']
   },
-  '{"frame":"Baixo","size":"P",color":"Vermelho","tire":"Preto"}': {
+  '{"frame":"Baixo","size":"P","color":"Vermelho","tire":"Preto"}': {
     id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMjM4MDM4ODYwNjAwNw==',
     photos: ['/static/vela2/models/VEL-V2-490-26-VERMELHO-PRETO.png']
   },
@@ -183,7 +183,7 @@ export default {
     id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMjM4MDM4ODQwOTM5OQ==',
     photos: ['/static/vela2/models/VEL-V2-590-29-AZUL-PRETO.png']
   },
-  '{"frame":"Reto","size":"M","color":"Preto","tire":"Preto"}': {
+  '{"frame":"Baixo","size":"M","color":"Preto","tire":"Preto"}': {
     id: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMjM4MDM4ODk5OTIyMw==',
     photos: ['/static/vela2/models/VEL-V2-490-29-PRETO-PRETO.png']
   },
