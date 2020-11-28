@@ -29,7 +29,7 @@ const AddedToCart = ({ checkout, checked, onCheck, toggleButton, activeButton })
             onChange={() => onCheck(!checked) + toggleButton(!activeButton)}
           />
           <span>Eu concordo com os <a href='/termosdealuguel' target='_blank'>Termos de Serviço de Aluguel</a> da Vela 2.</span>
-          <br/><small style={{color: 'red'}}> {checked === false ? 'Você precisa concordar para continuar.' : ''}</small>
+          <br/><small style={{color: 'red'}}> A contratação do aluguel está fechada. Aguarde nova disponibilidade.</small>
         </label>
         <h6>Após pagamento, a contratação será concluída mediante análise de crédito. As informações para análise serão requeridas por e-mail.</h6>
       </div>    

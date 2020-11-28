@@ -14,19 +14,19 @@ import HomeImage from '../components/home/HomeImage'
 const HomePage = ({ highlight }) =>
   <div className='HomePage'>
     <Head>
-      <title>Black Friday Vela 2: A bicicleta elétrica smart do Brasil - Vela  Bikes</title>
+      <title>Vela 2: A bicicleta elétrica smart do Brasil - Vela  Bikes</title>
       <link rel='alternate' hrefLang='pt-br' href='https://velabikes.com.br' />
       <meta httpEquiv='content-language' content='pt-br' />
       <meta name='application-name' content='Vela Bikes Store' />
       <meta name='description' content='Uma bicicleta elétrica & smart para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes, sem abrir mão do estilo.' />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content="@velabikes" /> 
-      <meta name="twitter:title" content="Black Friday Vela 2: A bicicleta elétrica smart do Brasil - Vela Bikes" />
+      <meta name="twitter:title" content="Vela 2: A bicicleta elétrica smart do Brasil - Vela Bikes" />
       <meta name="twitter:description" content="Uma bicicleta elétrica & smart para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes, sem abrir mão do estilo." />
       <meta name="twitter:image" content="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Fblackfriday%2FBlackFridayVelaBikes.jpg?alt=media&token=31691630-473c-4f34-bd14-07e31d038fa1" />
       <meta property='og:url' content='https://velabikes.com.br' />
       <meta property='og:type' content='website' />
-      <meta property='og:title' content='Black Friday Vela 2: A bicicleta elétrica smart do Brasil - Vela Bikes' />
+      <meta property='og:title' content='Vela 2: A bicicleta elétrica smart do Brasil - Vela Bikes' />
       <meta property='og:locale' content='pt_BR' />
       <meta property='og:description' content='Uma bicicleta elétrica & smart para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes, sem abrir mão do estilo.' />
       <meta property='og:image' content='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Fblackfriday%2FBlackFridayVelaBikes.jpg?alt=media&token=31691630-473c-4f34-bd14-07e31d038fa1' />
@@ -35,10 +35,10 @@ const HomePage = ({ highlight }) =>
       <HomeImage />
       <div className='cta-bf'>
         <div className='slogan'>
-          <h1>Black Friday</h1>
-          <h3>Aluguel com opção de compra.</h3>
-          <h4>A promoção que você estava esperando o ano inteiro. Vamos velejar?</h4>
-          <a href='/blackfriday'><Button bf>Conferir</Button></a>
+          <h1>Vela 2</h1>
+          <h3>A bicicleta elétrica smart.</h3>
+          <h4>Descubra agora um novo jeito de se deslocar pela cidade. Vamos velejar?</h4>
+          <a href='/vela'><Button primary>Conferir</Button></a>
         </div>
       </div>
     </div>
@@ -81,7 +81,7 @@ const HomePage = ({ highlight }) =>
         background-color: ${offBlack};
       }
       .cta-bf h1 {
-        color: #FFAF2D;
+        color: ${offWhite};
       }
       .cta-bf h3 {
         color: ${offWhite};
@@ -151,20 +151,20 @@ const HomePage = ({ highlight }) =>
           position: absolute;
           justify-content: center;
           max-width: 23em;
-          right: 2em;
+          left: 2em;
           top: 3.5em;
-          text-align: right;
+          text-align: left;
           background-color: transparent;
           margin-top: 0rem;
           padding: 2em;
           z-index: 2;
         }
         .actions {
-          right: 0;
+          left: 0;
         }
         @media only screen and (min-width: 1300px) {
           .cta {
-            right: 4em;
+            left: 4em;
             top: 4em;
           }
         }

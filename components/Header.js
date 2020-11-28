@@ -47,9 +47,6 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
         <div className='left'><Link href='/testride'><a>
           Test-ride
         </a></Link></div>
-        <div className='left'><Link href='/blackfriday'><a style={{color: '#FFAF2D'}}>
-          Black Friday
-        </a></Link></div>
       </div>
       <div className='right'>
         <HeaderMenu />

@@ -54,7 +54,7 @@ return (
       </Head>
       <div className='cover'>
         <div className='cta'>
-            <a href='/alugar'><Button bf>Alugar</Button></a>
+            <h2>Agora só em 2021!</h2>
         </div>
         <BFImage />
       </div>
@@ -82,9 +82,8 @@ return (
         </div>
       </div>
       <div className='timer'>
-          <h2>Aluguel com opção de compra</h2>
-          <h4>Contrate agora seu Pacote Anual de Aluguel da Vela 2!</h4>
-          <a href='/alugar'><Button bf>Alugar</Button></a>
+          <h2>Agora só em 2021!</h2>
+          <h4>Agradecemos à todos que participaram.</h4>
       </div>
       <div className='image-cut'>
         <QuoteImage />
@@ -116,7 +115,6 @@ return (
                     <h2>Após 12 meses...</h2>
                     <h4>Você pode comprar por mais R$ 2.890, em até 12x sem juros!</h4>
                     <p>As melhores condições de aluguel + compra da Vela 2 unidas para você.<br/> É a sua chance de participar da maior promoção na história da Vela. </p>
-                    <a href='/alugar'><Button bf>Alugar</Button></a>
                 </div>
             </div>
             <div className='right'>

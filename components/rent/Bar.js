@@ -28,7 +28,7 @@ const Bar = ({ onContinue, extra, step, checkout, activeButton, toggleButton }) 
             step === 2 ? 
             <Button primary onClick={onContinue}>Adicionar</Button> :
             activeButton === false ? <Button disabled onClick={''}>Finalizar</Button> :
-            <Button primary onClick={onContinue}>Finalizar</Button>
+            <Button disabled onClick={''}>Finalizar</Button>
             }
           
         </div>
