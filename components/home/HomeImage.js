@@ -1,7 +1,7 @@
 const HomeImage = () =>
   <div>
-    <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Fblackfriday%2FBlackFridayVelaBikes.jpg?alt=media&token=31691630-473c-4f34-bd14-07e31d038fa1' className='desktop' alt='Black Friday Vela 2 - Vela Bikes' />
-    <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Fblackfriday%2FBlackFridayVelaBikes.jpg?alt=media&token=31691630-473c-4f34-bd14-07e31d038fa1' className='mobile' alt='Black Friday Smartbike - Vela Bikes' />
+    <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FSmartbikeVelaBike.jpg?alt=media&token=45e92ba1-b417-4536-8b66-6347d7d272bf' className='desktop' alt='Vela 2 - Vela Bikes' />
+    <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FSmartbikeVelaBike.jpg?alt=media&token=45e92ba1-b417-4536-8b66-6347d7d272bf' className='mobile' alt='Smartbike - Vela Bikes' />
     <style jsx>{`
       img {
         min-height: 55vh;

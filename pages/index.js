@@ -81,7 +81,7 @@ const HomePage = ({ highlight }) =>
         background-color: ${offBlack};
       }
       .cta-bf h1 {
-        color: ${velaGreen};
+        color: ${offWhite};
       }
       .cta-bf h3 {
         color: ${offWhite};
@@ -151,20 +151,20 @@ const HomePage = ({ highlight }) =>
           position: absolute;
           justify-content: center;
           max-width: 23em;
-          right: 2em;
+          left: 2em;
           top: 3.5em;
-          text-align: right;
+          text-align: left;
           background-color: transparent;
           margin-top: 0rem;
           padding: 2em;
           z-index: 2;
         }
         .actions {
-          right: 0;
+          left: 0;
         }
         @media only screen and (min-width: 1300px) {
           .cta {
-            right: 4em;
+            left: 4em;
             top: 4em;
           }
         }
