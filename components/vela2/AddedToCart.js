@@ -12,6 +12,7 @@ const AddedToCart = ({ checkout }) => {
         <p>1. Pague agora R$ 100,00 adiantados (mais quaisquer acessórios e/ou custos de frete).</p>
         <p>2. Cobraremos os <b>R$ 7.490,00</b> restantes apenas quando sua bike for entregue.</p>
         <p>3. Sem taxas adicionais - <i>o valor total é o mesmo.</i></p>
+        <p>4. A reserva é reembolsável a qualquer momento antes da entrega.</p>
       </div>
       <p>Aceitamos pagamentos via PayPal em até 12x sem juros no cartão de crédito.</p>
       {checkout && !checkout.lineItems.edges.length ? 
