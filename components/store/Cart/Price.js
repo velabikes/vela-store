@@ -8,22 +8,12 @@ const CartPrice = ({ checkout }) =>
     { console.log(checkout) }
     <table>
       <tbody>
-        { checkout.availableShippingRates && checkout.availableShippingRates.shippingRates && checkout.availableShippingRates.shippingRates.length && <tr>
-          <td><label>Envio: </label></td>
-          <td>
-            <Price value={checkout.availableShippingRates.shippingRates[0].priceV2.amount} />
-          </td>
-        </tr>}
-        { !!parseInt(checkout.totalTax) && <tr>
-          <td><label>Impostos estaduais:</label></td>
-          <td><Price value={checkout.totalTax} /></td>
-        </tr> }
         <tr className='total'>
           <td><label>Total:</label></td>
           <td><Price value={checkout.totalPrice} /></td>
         </tr>
         <tr>
-          <tf /><td><InstallmentPrice count={12} value={checkout.totalPrice} /></td>
+         <td><InstallmentPrice count={12} value={checkout.totalPrice} /></td>
         </tr>
       </tbody>
     </table>

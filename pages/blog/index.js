@@ -50,7 +50,7 @@ const Blog = ({ posts, highlight }) =>
                     <p>{teaser[0].text}</p>
                     <br />
                     <div className='actions'>
-                      <a>Ler mais  <NextIcon fill={velaGreen} /></a>
+                      <a>Leia agora  <NextIcon fill={velaGreen} /></a>
                     </div>
                   </div>
                 </Link>

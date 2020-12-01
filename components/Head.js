@@ -22,7 +22,6 @@ const CustomHead = props =>
       <link rel='icon' type='image/x-icon' href='/static/fav/favicon.ico' />
       <meta name='theme-color' content='#ffffff' />
     </Head>
-    <FacebookPixel />
     <Freshchat />
     <noscript dangerouslySetInnerHTML={{__html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P7VWQJT" height="0" width="0" style="display:none;visibility:hidden;"></iframe>`}} />
     <style jsx global>{`

@@ -16,7 +16,7 @@ const HomeImage = () =>
           margin-top: 0em;
           max-width: 100vw;
           object-fit: cover;
-          max-height: calc(100vh - 3.5em);
+          height: calc(100vh - 3.5em);
           object-position: 40% 60%;
         }
         .mobile {
