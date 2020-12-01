@@ -1,16 +1,21 @@
 import { compose } from 'recompose'
 import withCheckout from '../../containers/withCheckout'
 import CartItem from '../store/Cart/Item'
-import { velaBlue } from '../../style/colors'
+import { offWhite, velaBlue } from '../../style/colors'
 
 const AddedToCart = ({ checkout }) => {
   return (
     <div>
       <h3>Itens adicionados ao carrinho!</h3>
-      <p>Finalize seu pedido ou confira mais acessórios, como cadeirinhas, caixotes e alforges, e continue comprando em nossa <a href='/loja'>loja</a>.</p>
+      <h4>Reserve sua Vela 2 e pague o restante quando recebê-la.</h4>
+      <div className='conditions'>
+        <p>1. Pague agora R$ 100,00 adiantados (mais quaisquer acessórios e/ou custos de frete).</p>
+        <p>2. Cobraremos os <b>R$ 7.490,00</b> restantes apenas quando sua bike for entregue.</p>
+        <p>3. Sem taxas adicionais - <i>o valor total é o mesmo.</i></p>
+      </div>
       <p>Aceitamos pagamentos via PayPal em até 12x sem juros no cartão de crédito.</p>
       {checkout && !checkout.lineItems.edges.length ? 
-      <p>Seu carrinho está vazio!</p> : 
+      <p>Seu carrinho está vazio.</p> : 
       <h5>Confira e revise os itens do pedido para finalizar:</h5>
       }
       <div className='items'>
@@ -33,6 +38,14 @@ const AddedToCart = ({ checkout }) => {
       .another {
         color: ${velaBlue};
         cursor: pointer;
+      }
+      .conditions {
+        background-color: ${offWhite};
+        padding: 1em;
+        margin-bottom: 1em;
+      }
+      .conditions p{
+        font-size: 0.9em;
       }
       `}</style>
     </div>

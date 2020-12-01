@@ -4,7 +4,7 @@ const HomeImage = () =>
     <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FSmartbikeVelaBike.jpg?alt=media&token=45e92ba1-b417-4536-8b66-6347d7d272bf' className='mobile' alt='Smartbike - Vela Bikes' />
     <style jsx>{`
       img {
-        min-height: 55vh;
+        min-height: 50vh;
         object-fit: cover;
         object-position: 60% 40%;
       }

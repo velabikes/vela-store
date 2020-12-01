@@ -35,10 +35,10 @@ const HomePage = ({ highlight }) =>
       <HomeImage />
       <div className='cta-bf'>
         <div className='slogan'>
-          <h1>Vela 2</h1>
-          <h3>A bicicleta elétrica smart.</h3>
-          <h4>Descubra agora um novo jeito de se deslocar pela cidade. Vamos velejar?</h4>
-          <a href='/vela'><Button primary>Conferir</Button></a>
+          <h1>Reserve agora, pague quando receber.</h1>
+          <h3>Está receoso em esperar?</h3>
+          <h4>Agora ao adquirir sua Vela 2, você paga apenas <b>R$ 100,00</b> para reservar e o restante no momento da entrega.</h4>
+          <a href='/vela2'><Button primary>Monte a sua</Button></a>
         </div>
       </div>
     </div>
@@ -125,7 +125,7 @@ const HomePage = ({ highlight }) =>
       }
       @media only screen and (min-width: 768px) {
         h1 {
-          font-size: 3.5rem;
+          font-size: 3rem;
           font-weight: 700;
           color: ${velaGreen}
         }
