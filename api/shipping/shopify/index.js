@@ -22,7 +22,7 @@ const freeShippingArray = [
 * @param {Promise} promise
 */
 const timeout = (time, promise) => {
-  return new Promise(function(resolve, reject) {
+  return new Promise(function (resolve, reject) {
     setTimeout(() => {
       reject(new Error('Request timed out.'))
     }, time);
@@ -57,7 +57,7 @@ module.exports = async (req, res) => {
     }))
     const info = await response.json()
     cityName = info && info.cidade && info.cidade.nome
-  } catch(e) {
+  } catch (e) {
     console.warn(e)
     cityName = 'N/A'
   }
@@ -104,21 +104,21 @@ module.exports = async (req, res) => {
             service_name: 'Frete Grátis',
             service_code: 'FG',
             total_price: '0',
-            description: 'Produção + 18 dias úteis',
+            description: 'Tempo de produção + 18 dias úteis de transporte',
             currency: 'BRL'
           }]
         }))
       )
     }
     else {
-      const totalShippingPrice = 23000 * Math.round(totalGrams / 26000)
+      const totalShippingPrice = 18000 * Math.round(totalGrams / 26000) // Shipping price Vela
       return (
         res.end(JSON.stringify({
           rates: [{
             service_name: 'Transportadora',
             service_code: 'FGN',
             total_price: totalShippingPrice.toString(),
-            description: 'Produção + 18 dias úteis',
+            description: 'Tempo de produção + 18 dias úteis de transporte',
             currency: 'BRL'
           }]
         }))

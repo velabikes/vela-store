@@ -1,19 +1,23 @@
 import { compose } from 'recompose'
 import withCheckout from '../../containers/withCheckout'
 import CartItem from '../store/Cart/Item'
-import Button from '../Button'
-import { velaBlue } from '../../style/colors'
+import { offWhite, velaBlue } from '../../style/colors'
 
-const AddedToCart = ({ checkout, onStep }) => {
+const AddedToCart = ({ checkout }) => {
   return (
     <div>
-      <p><b>Itens adicionados ao carrinho!</b></p>
-      <p>Finalize seu pedido ou confira mais acessórios, como cadeirinhas, caixotes e alforges, e continue comprando em nossa <a href='/loja'>loja</a>.</p>
-      <p>Aceitamos pagamentos via PayPal, com opção de 12x sem juros no cartão de crédito, cartão de débito ou boleto bancário.</p>
-      <div className='another' onClick={() => onStep(1)}><Button secondary>Adicionar outra Vela 2</Button></div>
+      <h3>Itens adicionados ao carrinho!</h3>
+      <h4>Reserve sua Vela 2 e pague o restante quando recebê-la.</h4>
+      <div className='conditions'>
+        <p>1. Pague agora R$ 100,00 adiantados (mais quaisquer acessórios e/ou custos de frete).</p>
+        <p>2. Cobraremos os <b>R$ 7.490,00</b> restantes apenas quando sua bike for entregue.</p>
+        <p>3. Sem taxas adicionais - <i>o valor total é o mesmo.</i></p>
+        <p>4. A reserva é reembolsável a qualquer momento antes da entrega.</p>
+      </div>
+      <p>Aceitamos pagamentos via PayPal em até 12x sem juros no cartão de crédito.</p>
       {checkout && !checkout.lineItems.edges.length ? 
-      <p>Seu carrinho está vazio!</p> : 
-      <p><b>Confira e revise os itens do pedido para finalizar:</b></p>
+      <p>Seu carrinho está vazio.</p> : 
+      <h5>Confira e revise os itens do pedido para finalizar:</h5>
       }
       <div className='items'>
         <table>
@@ -35,6 +39,14 @@ const AddedToCart = ({ checkout, onStep }) => {
       .another {
         color: ${velaBlue};
         cursor: pointer;
+      }
+      .conditions {
+        background-color: ${offWhite};
+        padding: 1em;
+        margin-bottom: 1em;
+      }
+      .conditions p{
+        font-size: 0.9em;
       }
       `}</style>
     </div>

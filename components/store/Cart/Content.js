@@ -8,11 +8,7 @@ const CartContent = ({ checkout }) =>
   <section className='CartContent'>
     <h1>Carrinho</h1>
     <div className='items'>
-      <table>
-        <tbody>
-          {checkout && checkout.lineItems.edges.map(item => <CartItem key={item.node.variant.id} item={item} />)}
-        </tbody>
-      </table>
+        {checkout && checkout.lineItems.edges.map(item => <CartItem key={item.node.variant.id} item={item} />)}
     </div>
     <hr />
     <div className='price'>

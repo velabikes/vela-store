@@ -8,6 +8,7 @@ import QuoteImage from "../components/blackfriday/QuoteImage"
 import FooterImage from "../components/blackfriday/FooterImage"
 import PaddedView from '../components/PaddedView'
 import SubscribeForm from "../components/blackfriday/SubscribeForm";
+import Button from "../components/Button";
 
 var countDownDate = new Date("Nov 27, 2020 15:01:00 GMT").getTime();
 
@@ -53,8 +54,7 @@ return (
       </Head>
       <div className='cover'>
         <div className='cta'>
-            <h2>Aluguel anual com opção de compra</h2>
-            <h4>27/11 das 12h01 às 23h59</h4>
+            <h2>Agora só em 2021!</h2>
         </div>
         <BFImage />
       </div>
@@ -70,8 +70,8 @@ return (
             <div className='step'>
                 <img src='/static/step2.png'></img>
                 <h4>Alugue a Vela 2 por 12 meses...</h4>
-                <h5>Pague apenas R$ 289 por mês e conte com o Plano Vela+ Simples!</h5>
-                <p>Rastreamento GPS e proteção contra roubo e furto inclusos no plano anual.</p>
+                <h5>Parcele o pacote anual no cartão de crédito e pague apenas R$ 289 por mês!</h5>
+                <p>Conte com rastreamento GPS e proteção contra roubo e furto inclusos.</p>
             </div>
             <div className='step'>
                 <img src='/static/step3.png'></img>
@@ -82,9 +82,8 @@ return (
         </div>
       </div>
       <div className='timer'>
-          <h4>Para a promoção começar, faltam...</h4>
-          <h2>{pad(days,2)} dias {pad(hours,2)} horas {pad(minutes,2)}min e {pad(seconds,2)}s </h2>
-          <SubscribeForm />
+          <h2>Agora só em 2021!</h2>
+          <h4>Agradecemos à todos que participaram.</h4>
       </div>
       <div className='image-cut'>
         <QuoteImage />
@@ -219,7 +218,7 @@ return (
         }
         .cta {
             position: absolute;
-            bottom: 0;
+            bottom: 1em;
             width: 100%;
             text-align: center;
         }
@@ -244,7 +243,7 @@ return (
         }
         .timer h2 {
             color: #FFAF2D;
-            font-size: 2.5em;
+            font-size: 2em;
             line-height: 1em;
         }
         .timer h4 {
@@ -358,7 +357,7 @@ return (
                     position: relative;
                 }
                 .timer h2 {
-                    font-size: 3.5em;
+                    font-size: 2.5em;
                 }
                 .timer h4 {
                     font-size: 1.4em;
