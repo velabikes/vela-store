@@ -131,7 +131,7 @@ const mapCorreiosResultToRate = (result) => result.map(r => {
   const correiosReturn = ({ // map here or map out?
     service_name: `Sedex`,
     service_code: r.Codigo,
-    total_price: parseFloat(2000 + (r.Valor.split(',').join('.')) * 100),
+    total_price: parseFloat((r.Valor.split(',').join('.')) * 100),
     description: `${r.PrazoEntrega} dias úteis`,
     currency: `BRL`
   })
