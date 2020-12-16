@@ -68,7 +68,8 @@ module.exports = async (req, res) => {
         service_name: 'Frete Grátis',
         service_code: 'FG',
         total_price: '0',
-        description: '6-11 dias úteis',
+        // description: '6-11 dias úteis', RECESSO
+        description: '21-26 dias úteis',
         currency: 'BRL'
       }]
     }))
@@ -132,7 +133,8 @@ const mapCorreiosResultToRate = (result) => result.map(r => {
     service_name: `Sedex`,
     service_code: r.Codigo,
     total_price: parseFloat((r.Valor.split(',').join('.')) * 100),
-    description: `${r.PrazoEntrega} dias úteis`,
+    // description: `${r.PrazoEntrega} dias úteis`, RECESSO
+    description: `${Number(r.PrazoEntrega) + 15} dias úteis`,
     currency: `BRL`
   })
 
