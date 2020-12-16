@@ -14,7 +14,7 @@ const Pop = () => {
         <CloseIcon background={offWhite} onClick={() => setClosed(true)} />
       </div>
       <h3>AVISO</h3>
-      <p>Agenda de serviços 2020 fechada. Agende sua manutenção para janeiro.</p>
+      <p>Agenda de serviços 2020 fechada. Novos agendamentos serão feitos para janeiro.</p>
       <small>Os horários de atendimento são: de segunda à sexta, das 10h às 18h (menos nos dias 24, 25, 30 e 01).</small>
       <style jsx>{`
     .Pop {
