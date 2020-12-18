@@ -9,8 +9,8 @@ const InstallmentPrice = ({ count, installmentValue }) => (
 );
 
 InstallmentPrice.propTypes = {
-  count: PropTypes.string,
-  installmentValue: PropTypes.string,
+  count: PropTypes.number,
+  installmentValue: PropTypes.number,
 };
 
 export default compose(

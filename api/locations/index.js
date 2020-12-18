@@ -450,21 +450,6 @@ module.exports = async (req, res) => {
         type: ['charger']
       },
       {
-        name: 'Maiss Bike Store',
-        address: [
-          'Praça Garibaldi, 78',
-          'Azenha, Porto Alegre',
-          'RS, 90050-020, Brasil'
-        ],
-        phone: '(51) 3372-5240',
-        pos: {
-          lat: -30.04319,
-          lng: -51.2202641
-        },
-        googlePlace: 'ChIJ340zClZ4GZURu2Yy8ZXSSl4',
-        type: ['service', 'charger']
-      },
-      {
         name: 'Oficina Small Hill de Bicicletas Elétricas',
         address: [
           'R. Pôrto Martins, 748',
@@ -580,21 +565,6 @@ module.exports = async (req, res) => {
         type: ['service', 'charger']
       },
       {
-        name: 'Atelier Bicicine',
-        address: [
-          'Av. Olégario Maciel, 742 Mercado Novo, lj 2.057/2.059',
-          'Centro, Belo Horizonte',
-          'MG, 30180-110, Brasil'
-        ],
-        phone: '(31) 99992-6906',
-        pos: {
-          lat: -19.9205817,
-          lng: -43.94527499999999
-        },
-        googlePlace: 'ChIJgc6RhsabpgARbQ40-IY0OK8',
-        type: ['service']
-      },
-      {
         name: 'Giro Master Bike Shop',
         address: [
           'CLN 406 Bl A Loj 42/46',
@@ -686,6 +656,21 @@ module.exports = async (req, res) => {
         type: ['service']
       },
       {
+        name: 'Vila Velô',
+        address: [
+          'Rua Sete de Abril, 291',
+          'Floresta, Porto Alegre',
+          'RS, 90220-130 Brasil'
+        ],
+        phone: '(51) 3092-0070',
+        pos: {
+          lat: -30.018188631201216,
+          lng: -51.2087267387078
+        },
+        googlePlace: 'ChIJ4UcEfrx5GZURpNp9gu16Gq0',
+        type: ['service']
+      },
+      {
         name: 'Ciclo Cerrado',
         address: [
           'Av. João Naves de Ávila, 7285',
@@ -713,21 +698,6 @@ module.exports = async (req, res) => {
           lng: -51.178016
         },
         googlePlace: 'ChIJu8ETGbNE65QRo_9GRkhKXio',
-        type: ['service']
-      },
-      {
-        name: 'Mega Bike Salvador',
-        address: [
-          'Av. Engenheiro Raymundo Carlos Nery, n20',
-          'Cajazeiras 10, Salvador',
-          'BA, 41339-060, Brasil'
-        ],
-        phone: '(71) 3238-4590',
-        pos: {
-          lat: -12.8933411,
-          lng: -38.4089588
-        },
-        googlePlace: 'ChIJgxXdVTARFgcRC8UVwCss3xo',
         type: ['service']
       },
       {
@@ -1093,10 +1063,6 @@ module.exports = async (req, res) => {
       type: ['charger']
     },
     {
-      googlePlace: 'ChIJ340zClZ4GZURu2Yy8ZXSSl4', // Maiss Bike Storie - Porto Alegre/RS
-      type: ['service']
-    },
-    {
       googlePlace: 'ChIJ8Z2NTyhRzpQRSkxnqdw8UjQ', // Oficina SmallHill - São Paulo/SP
       type: ['service']
     },
@@ -1117,10 +1083,6 @@ module.exports = async (req, res) => {
       type: ['service']
     },
     {
-      googlePlace: 'ChIJgc6RhsabpgARbQ40-IY0OK8', // Atelier Bicicine - Belo Horizonte/MG
-      type: ['service']
-    },
-    {
       googlePlace: 'ChIJKcPVzHI7WpMRaU9RkzCJHTY', // Giro Master Bike Shop - Brasília/DF
       type: ['service']
     },
@@ -1138,6 +1100,10 @@ module.exports = async (req, res) => {
     },
     {
       googlePlace: 'ChIJbYBYc6bLyZQRR_tQCYahjaE', // Bicicletaria Cross Bike - SJBV/SP
+      type: ['service']
+    },
+    {
+      googlePlace: 'ChIJ4UcEfrx5GZURpNp9gu16Gq0', // Vila Velô - Floresta/RS
       type: ['service']
     },
     {

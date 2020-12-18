@@ -9,25 +9,11 @@ import Pop from 'components/home/Pop'
 const CustomHead = props =>
   <div className='Head'>
     <Head>
-      <script dangerouslySetInnerHTML={{ __html: "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-P7VWQJT');" }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html:`{
-        "@context": "https://schema.org/",
-        "@type": "Organization",
-        "name": "Vela Bikes",
-        "sameAs": [
-          "https://velabikes.com.br",
-          "https://twitter.com/velabikes",
-          "https://www.facebook.com/velabikes",
-          "https://www.instagram.com/velabikes",
-          "https://www.linkedin.com/company/velabikes"
-        ],
-        "url": "https://velabikes.com.br",
-        "address": "R. Cunha Gago, 169 - Pinheiros, São Paulo - SP, 05421-000",
-        "brand": "Vela Bikes",
-        "email": "contato@velabikes.com.br",
-        "alternateName": "Vela Bikes Store",
-        "description": "Loja online das bicicletas elétricas da Vela."
-      }`}} />
+      <script dangerouslySetInnerHTML={{__html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-P7VWQJT');`}} />
       <meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0' />
       <meta charSet='utf-8' />
       <link href='https://fonts.googleapis.com/css?family=Barlow:400,500,600,700,900&display=swap' rel='stylesheet' />
@@ -37,7 +23,6 @@ const CustomHead = props =>
       <link rel='icon' type='image/x-icon' href='/static/fav/favicon.ico' />
       <meta name='theme-color' content='#ffffff' />
     </Head>
-    <FacebookPixel />
     <Freshchat />
     <Pop />
     <Heatmap />

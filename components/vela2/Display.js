@@ -6,7 +6,7 @@ const Display = ({ model: { frame, size, color, tire } }) => {
 
   return (
     <div className='Display'>
-      <h1>Vela 2</h1>
+      <h1>Reserva Vela 2</h1>
       <img
         src={(selectedModelData.photos && selectedModelData.photos[0])}
         alt='Vela 2'

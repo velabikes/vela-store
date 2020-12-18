@@ -10,21 +10,22 @@ import { Trash } from '../../Icons'
 /* eslint-disable */
 const CartItem = ({ item, handleLessClick }) =>
   <table>
-    <tr key={item.node.title}>
-      <td>
-        <ProductImage src={item.node.variant && item.node.variant.image.src} alt='' />
-        <span>{item.node.quantity}</span>
-      </td>
-      <td className='quantity'>
-        <a onClick={() => handleLessClick(item)}><Trash /></a>
-      </td>
-      <td className='name'>
-        <div>{item.node.title}</div>
-        <small>{item.node.variant && item.node.variant.title !== 'Default Title' && item.node.variant.title.replace(/\s*\[.*?\]/g, '')}</small>
-        <div><Price value={item.node.variant && item.node.variant.price} /></div>
-      </td>
-    </tr>
-    <hr />
+    <tbody>
+      <tr key={item.node.title}>
+        <td>
+          <ProductImage src={item.node.variant && item.node.variant.image.src} alt='' />
+          <span>{item.node.quantity}</span>
+        </td>
+        <td className='quantity'>
+          <a onClick={() => handleLessClick(item)}><Trash /></a>
+        </td>
+        <td className='name'>
+          <div>{item.node.title}</div>
+          <small>{item.node.variant && item.node.variant.title !== 'Default Title' && item.node.variant.title.replace(/\s*\[.*?\]/g, '')}</small>
+          <div><Price value={item.node.variant && item.node.variant.price} /></div>
+        </td>
+      </tr>
+    </tbody>
     <style jsx>{`
     td:first-child {
       width: 20%;
