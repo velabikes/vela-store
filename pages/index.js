@@ -102,6 +102,7 @@ const HomePage = ({ highlight }) =>
       }
       .cta h3, .cta h4, .cta small, .cta p {
         color: ${offBlack};
+      }
       h1 {
         color: ${offWhite};
         font-size: 2rem;
