@@ -1,12 +1,12 @@
 const TestRideFooter = () =>
   <div>
-    <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Ftestride%2Fbetterquality%2FTestRideVelaBike.jpg?alt=media&token=18685c66-fc14-4155-8918-d1f7c674ceca' className='desktop' alt='TestRide VelaBike' />
-    <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Ftestride%2Fbetterquality%2FTesteBikeEletrica.jpg?alt=media&token=bd413e4b-43a2-41f7-ade8-a7ab2960f9ef' className='mobile' alt='Teste Vela Bike' />
+    <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Ftestride%2FVela-SmartBike-TestRide.jpg?alt=media&token=520da99d-efc3-44e6-bb9a-aa681a1197f2' className='desktop' alt='Test-Ride Vela Bike' />
+    <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Ftestride%2FVela-SmartBike-TestRide.jpg?alt=media&token=520da99d-efc3-44e6-bb9a-aa681a1197f2' className='mobile' alt='Teste Vela Bike Elétrica' />
     <style jsx>{`
       img {
         min-height: 60vh;
         object-fit: cover;
-        object-position: 55% 90%;
+        object-position: 80% 20%;
       }
       .desktop {
         display: none;

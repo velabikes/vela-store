@@ -10,6 +10,7 @@ import Button from '../components/Button'
 import VelaPoint from '../components/charge/VelaPoint'
 import { offBlack, offWhite, velaGreen, white } from '../style/colors'
 import HomeImage from '../components/home/HomeImage'
+import Pop from '../components/home/Pop'
 
 const HomePage = ({ highlight }) =>
   <div className='HomePage'>
@@ -31,13 +32,14 @@ const HomePage = ({ highlight }) =>
       <meta property='og:description' content='Uma bicicleta elétrica & smart para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes, sem abrir mão do estilo.' />
       <meta property='og:image' content='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Fblackfriday%2FBlackFridayVelaBikes.jpg?alt=media&token=31691630-473c-4f34-bd14-07e31d038fa1' />
     </Head>
+    <Pop />
     <div className='cover'>
       <HomeImage />
       <div className='cta-bf'>
         <div className='slogan'>
           <h1>Reserve agora, pague quando receber.</h1>
           <h3>Está receoso em esperar?</h3>
-          <h4>Agora ao adquirir sua Vela 2, você paga apenas <b>R$ 100,00</b> para reservar e o restante no momento da entrega.</h4>
+          <h4>Agora para adquirir sua Vela 2, você paga apenas <b>R$ 100,00</b> ao reservar e o restante no momento da entrega.</h4>
           <a href='/vela2'><Button primary>Reserve a sua</Button></a>
         </div>
       </div>
@@ -93,7 +95,7 @@ const HomePage = ({ highlight }) =>
       .cta {
         text-align: center;
         padding: 2rem 3rem 2rem 3rem;
-        background-color: #709981;
+        background-color: ${white};
       }
       .cta h2, .cta h3, .cta small, .cta p {
         color: ${offWhite};

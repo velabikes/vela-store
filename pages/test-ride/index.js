@@ -42,7 +42,7 @@ const TestRide = () =>
       <div className="models">
         <div className="m1">
           <h3>São Paulo</h3>
-          <p><i>R. Cunha Gago, 169 - Pinheiros</i></p>
+          <p><i>R. Joaquim Antunes, 631 - Pinheiros</i></p>
           <p>
             Agende um horário online e apenas venha pedalar!
           </p>
@@ -69,7 +69,7 @@ const TestRide = () =>
       <div className='cta-bottom'>
         <div className='slogan'>
           <h2>Faça parte do futuro. Agora.</h2>
-          <p>O horário de funcionamento das nossas lojas é de <b>terça à sábado das 10h às 18h.</b></p>
+          <p>O horário de funcionamento de nossas lojas está sempre atualizado no mapa de nossa <a href="/rede/mapa">rede</a>.</p>
         </div>
       </div>
     </div>
@@ -81,7 +81,7 @@ const TestRide = () =>
       .cta {
         text-align: center;
         padding: 2rem 3rem 2rem 3rem;
-        background-color: #709981;
+        background-color: ${offBlack};
       }
       .cta h1, .cta small, .cta h4 {
         color: ${offWhite};
@@ -89,6 +89,7 @@ const TestRide = () =>
       .cta-bottom {
         text-align: center;
         padding: 2rem 3rem 2rem 3rem;
+        background-color: ${white}
       }
       .cta-bottom h2 {
         color: ${offBlack}
@@ -130,7 +131,7 @@ const TestRide = () =>
           position: absolute;
           justify-content: center;
           max-width: 18em;
-          left: 4em;
+          right: 4em;
           top: 4em;
           text-align: left;
           background-color: ${white};

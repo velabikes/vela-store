@@ -14,15 +14,15 @@ const Pop = () => {
         <CloseIcon background={offWhite} onClick={() => setClosed(true)} />
       </div>
       <h3>AVISO</h3>
-      <p>Agenda de serviços 2020 fechada. Novos agendamentos serão feitos para janeiro.</p>
-      <small>Os horários de atendimento são: de segunda à sexta, das 10h às 18h (menos nos dias 24, 25, 30 e 01).</small>
+      <p>Loja de São Paulo fechada!</p>
+      <small>Por conta da segunda onda do COVID-19, nossa loja está fechada até 20/01/2021. Prezamos pela saúde da nossa equipe e de todos os Velejadores.</small>
       <style jsx>{`
     .Pop {
         background-color: ${velaYellow};
         padding: 2em;
         position: fixed;
-        left: 1.5em;
-        bottom: 1.5em;
+        right: 2.5em;
+        bottom: 3em;
         z-index: 3;
         max-width: 16.4em;
     }

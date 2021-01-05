@@ -901,24 +901,24 @@ module.exports = async (req, res) => {
       {
         name: 'Vela Bikes',
         address: [
-          'R. Cunha Gago, 169',
+          'R. Joaquim Antunes, 631',
           'Pinheiros, São Paulo',
-          'SP, 05421-000, Brasil'
+          'SP, 05415-011, Brasil'
         ],
         phone: '(11) 4200-4950',
         open: true,
         hours: [
-          ['segunda-feira', ' Fechado'],
-          ['terça-feira', ' 09:00 – 18:00'],
-          ['quarta-feira', ' 09:00 – 18:00'],
-          ['quinta-feira', ' 09:00 – 18:00'],
-          ['sexta-feira', ' 09:00 – 18:00'],
-          ['sábado', ' 09:00 – 18:00'],
-          ['domingo', ' Fechado']
+          ['Seg', 'Fechado'],
+          ['Ter', 'Fechado'],
+          ['Qua', '11:00 – 19:00'],
+          ['Qui', '11:00 – 19:00'],
+          ['Sex', '11:00 – 19:00'],
+          ['Sáb', '11:00 – 19:00'],
+          ['Dom', '11:00 – 19:00']
         ],
         pos: {
-          lat: -23.5670166,
-          lng: -46.6907856
+          lat: -23.5633357,
+          lng: -46.6845747
         },
         googlePlace: 'ChIJL-xzGGFXzpQR_X4Kin8W9lQ',
         type: ['store', 'charger']
@@ -933,13 +933,13 @@ module.exports = async (req, res) => {
         phone: '(41) 98786-2553',
         open: true,
         hours: [
-          ['segunda-feira', ' Fechado'],
-          ['terça-feira', ' 09:00 – 18:00'],
-          ['quarta-feira', ' 09:00 – 18:00'],
-          ['quinta-feira', ' 09:00 – 18:00'],
-          ['sexta-feira', ' 09:00 – 18:00'],
-          ['sábado', ' 09:00 – 18:00'],
-          ['domingo', ' Fechado']
+          ['Dom', ' Fechado'],
+          ['Seg', ' Fechado'],
+          ['Ter', ' 09:00 – 18:00'],
+          ['Qua', ' 09:00 – 18:00'],
+          ['Qui', ' 09:00 – 18:00'],
+          ['Sex', ' 09:00 – 18:00'],
+          ['Sáb', ' 09:00 – 18:00']
         ],
         pos: {
           lat: -25.4311768,
@@ -954,211 +954,6 @@ module.exports = async (req, res) => {
   const googleMapsClient = GoogleMaps.createClient({
     key: process.env.GOOGLE_SERVER_KEY
   })
-
-  const locations = [
-    {
-      googlePlace: 'ChIJazzL3K5ZzpQRD9IIOo6VVGo', // BotaniKafé - SP
-      type: ['charger']
-    },
-    {
-      googlePlace: 'ChIJM0wFcdxXzpQRo_-Wyy4K_qE', // Alva Coworking - SP
-      type: ['charger']
-    },
-    {
-      googlePlace: 'ChIJ1aPPuV5ZzpQR4BIHucm4vGQ', // Dopê Casual Food - SP
-      type: ['charger']
-    },
-    {
-      googlePlace: 'ChIJbSxi-w9XzpQRxor0_L36Djs', // Bacio di Latte - Pinheiros/SP
-      type: ['charger']
-    },
-    {
-      googlePlace: 'ChIJ-0Zi6PxZzpQR-b6maQjQjSA', // Casa Toffo - SP
-      type: ['charger']
-    },
-    {
-      googlePlace: 'ChIJe45oNJZXzpQRUXYN4bE42h8', // Cupping Café - SP
-      type: ['charger']
-    }, {
-      googlePlace: 'ChIJpydZ5j5YzpQR1V_gNLyvHV4', // ZUD Café - SP
-      type: ['charger']
-    }, {
-      googlePlace: 'ChIJlVqH9KVXzpQRgkyOBRW-Peo', // SP Lovers Café e Vinho - SP
-      type: ['charger']
-    },
-    {
-      googlePlace: 'ChIJy9BBJORWzpQReEuaiOtk0kU', // Torteria - Morumbi/SP
-      type: ['charger']
-    },
-    {
-      googlePlace: 'ChIJ47W0GDdYzpQRGw-IqYoHn3k', // Torteria - Higienópolis/SP
-      type: ['charger']
-    },
-    {
-      googlePlace: 'ChIJixk9BXZXzpQRY2FAH25PxPU', // Torteria - Pinheiros/SP
-      type: ['charger']
-    },
-    {
-      googlePlace: 'ChIJ7-_Fxl1XzpQRDHUgRm86x9A', // Seu Chalita
-      type: ['charger']
-    },
-    {
-      googlePlace: 'ChIJyUY7cy9XzpQRHUOkTVXkURY', // De Lá do Pão - SP
-      type: ['charger']
-    },
-    {
-      googlePlace: 'ChIJc7C0To9ZzpQRxI8xZGKRSRM', // SOW Cake Lounge - SP
-      type: ['charger']
-    },
-    {
-      googlePlace: 'ChIJM6Ei0whXzpQR2CeApInducA', // Saladices - SP
-      type: ['charger']
-    },
-    {
-      googlePlace: 'ChIJn6sjxaVXzpQR6YVQqQ5PgYE', // The Coffee - SP
-      type: ['charger']
-    },
-    {
-      googlePlace: 'ChIJDdNzek5XzpQRcaNlJ3QxKoY', // Cubo Itaú - SP
-      type: ['charger']
-    },
-    {
-      googlePlace: 'ChIJAQCU4gNazpQRgrm7yhcWeKU', // Bacio di Latte - Moema/SP
-      type: ['charger']
-    },
-    {
-      googlePlace: 'ChIJ8zgq6hrVmwARf6ihPDuvaac', // MangoTree - RJ
-      type: ['charger']
-    },
-    {
-      googlePlace: 'ChIJcw9c6shXzpQRHtUh-HBq6-M', // Bacio di Latte - R. Pinheiros/SP
-      type: ['charger']
-    },
-    {
-      googlePlace: 'ChIJdXKRuZn4zpQRgF9owALNIQw', // WHEAT - SP
-      type: ['charger']
-    },
-    {
-      googlePlace: 'ChIJoxBMMO3j3JQRSjOnxx6TOLg', // Prestinaria - Curitiba
-      type: ['charger']
-    },
-    {
-      googlePlace: 'ChIJ_elqH0FXzpQRRoAPxQyLNvs', // Bacio di Latte - Itaim/SP
-      type: ['charger']
-    },
-    {
-      googlePlace: 'ChIJbxoCUgrk3JQRRmffu3l-VCo', // Les Terroirs - Curitiba
-      type: ['charger']
-    },
-    {
-      googlePlace: 'ChIJNcnhu33k3JQRhmvMJll-Of4', // Luiz Volpato Arq - Curitiba
-      type: ['charger']
-    },
-    {
-      googlePlace: 'ChIJNd83zRBYzpQR4XZlFQLIh5Q', // Velodrome - SP
-      type: ['charger']
-    },
-    {
-      googlePlace: 'ChIJnzOe4Rfl3JQRkkbNTZnH4K0', // SFco179 - Curitiba
-      type: ['charger']
-    },
-    {
-      googlePlace: 'ChIJ8Z2NTyhRzpQRSkxnqdw8UjQ', // Oficina SmallHill - São Paulo/SP
-      type: ['service']
-    },
-    {
-      googlePlace: 'ChIJiQg_EPkXuAARDOheZGROQDY', // Bicicletaria Oficina - Vitória/ES
-      type: ['service']
-    },
-    {
-      googlePlace: 'ChIJ_fqvTp06WpMR1dgVjHcw6Js', // Super Bike 101 - Brasília/DF
-      type: ['service', 'charger']
-    },
-    {
-      googlePlace: 'ChIJk6zVqYYDzpQRsZpUOCLGA8s', // Moto7Mobility - Santos/SP
-      type: ['service', 'charger']
-    },
-    {
-      googlePlace: 'ChIJWz5XtfAYqwcRPowRixw4slA', // Reciclo Bikes - Recife/PE
-      type: ['service']
-    },
-    {
-      googlePlace: 'ChIJKcPVzHI7WpMRaU9RkzCJHTY', // Giro Master Bike Shop - Brasília/DF
-      type: ['service']
-    },
-    {
-      googlePlace: 'ChIJkx4WygPXv5QR4Xyde_WDwps', // MUUVE - Marília/SP
-      type: ['service']
-    },
-    {
-      googlePlace: 'ChIJcexbQKAbHJURcWBerIApvFI', // Magrela Oficina Café - Carlos Barbosa/RS
-      type: ['service', 'charger']
-    },
-    {
-      googlePlace: 'ChIJHd72H1jh3JQRTBA9mMMznpg', // Bike4U - Curiitiba/PR
-      type: ['service', 'charger']
-    },
-    {
-      googlePlace: 'ChIJbYBYc6bLyZQRR_tQCYahjaE', // Bicicletaria Cross Bike - SJBV/SP
-      type: ['service']
-    },
-    {
-      googlePlace: 'ChIJ4UcEfrx5GZURpNp9gu16Gq0', // Vila Velô - Floresta/RS
-      type: ['service']
-    },
-    {
-      googlePlace: 'ChIJb_VMpotPpJQREA-m3334ZD8', // Ciclo Cerrado - Uberlândia/MG
-      type: ['service']
-    },
-    {
-      googlePlace: 'ChIJcVxJBsxZzpQRFMJ_Q7lID8w',
-      type: ['parking']
-    },
-    {
-      googlePlace: 'ChIJ40wX2AFazpQRwDbHK9M_DdI',
-      type: ['parking']
-    },
-    {
-      googlePlace: 'EktBbGFtZWRhIENhbXBpbmFzLCA0NDUgLSBKYXJkaW0gUGF1bGlzdGEsIFPDo28gUGF1bG8gLSBTUCwgMDE0MDQtMTAwLCBCcmF6aWwiMRIvChQKEgn3URm5x1nOlBHTNM9i0wEJ6BC9AyoUChIJJfBwmsZZzpQRNLtDV3SchRM',
-      type: ['parking']
-    },
-    {
-      googlePlace: 'ChIJTQw8QQtXzpQRqC3spwDZMOI',
-      type: ['parking']
-    },
-    {
-      googlePlace: 'ChIJyQilm8tQzpQRt2fiotym1BA',
-      type: ['parking']
-    },
-    {
-      googlePlace: 'ChIJ7Vo9d0tYzpQRYEXmgBCMtic',
-      type: ['parking']
-    },
-    {
-      googlePlace: 'ChIJ3Sy3J7pXzpQR7l-ZefxvsmY',
-      type: ['parking']
-    },
-    {
-      googlePlace: 'ChIJeTz9-VBXzpQRKiyUmAofCoc',
-      type: ['parking']
-    },
-    {
-      googlePlace: 'ChIJhXdZkkVYzpQRiLOGttP33AI',
-      type: ['parking']
-    },
-    {
-      googlePlace: 'ChIJb5SfPHpXzpQRNSE_pMCnJM4',
-      type: ['parking']
-    },
-    {
-      googlePlace: 'ChIJL-xzGGFXzpQR_X4Kin8W9lQ', // Loja SP
-      type: ['store', 'charger']
-    },
-    {
-      googlePlace: 'ChIJY1lrO13l3JQRfw9lIVJSCU8', // Loja CTB
-      type: ['store', 'charger']
-    }
-  ]
 
   const fetchLocationData = location =>
     new Promise((resolve, reject) =>
