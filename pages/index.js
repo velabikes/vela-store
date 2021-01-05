@@ -97,9 +97,11 @@ const HomePage = ({ highlight }) =>
         padding: 2rem 3rem 2rem 3rem;
         background-color: ${white};
       }
-      .cta h2, .cta h3, .cta small, .cta p {
-        color: ${offWhite};
+      .cta h2 {
+        color: ${velaGreen};
       }
+      .cta h3, .cta h4, .cta small, .cta p {
+        color: ${offBlack};
       h1 {
         color: ${offWhite};
         font-size: 2rem;
