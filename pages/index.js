@@ -10,6 +10,7 @@ import Button from '../components/Button'
 import VelaPoint from '../components/charge/VelaPoint'
 import { offBlack, offWhite, velaGreen, white } from '../style/colors'
 import HomeImage from '../components/home/HomeImage'
+import Pop from '../components/home/Pop'
 
 const HomePage = ({ highlight }) =>
   <div className='HomePage'>
@@ -31,14 +32,15 @@ const HomePage = ({ highlight }) =>
       <meta property='og:description' content='Uma bicicleta elétrica & smart para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes, sem abrir mão do estilo.' />
       <meta property='og:image' content='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Fblackfriday%2FBlackFridayVelaBikes.jpg?alt=media&token=31691630-473c-4f34-bd14-07e31d038fa1' />
     </Head>
+    <Pop />
     <div className='cover'>
       <HomeImage />
       <div className='cta-bf'>
         <div className='slogan'>
-          <h1>Vela 2</h1>
-          <h3>A bicicleta elétrica smart.</h3>
-          <h4>Descubra agora um novo jeito de se deslocar pela cidade. Vamos velejar?</h4>
-          <a href='/vela'><Button primary>Conferir</Button></a>
+          <h1>Reserve agora, pague quando receber.</h1>
+          <h3>Está receoso em esperar?</h3>
+          <h4>Agora para adquirir sua Vela 2, você paga apenas <b>R$ 100,00</b> ao reservar e o restante no momento da entrega.</h4>
+          <a href='/vela2'><Button primary>Reserve a sua</Button></a>
         </div>
       </div>
     </div>
@@ -46,9 +48,10 @@ const HomePage = ({ highlight }) =>
       <HomeVideo />
       <div className='cta'>
         <div className='slogan'>
-          <h1>Feita no Brasil.</h1>
-          <h2>Com cuidado, cadeia produtiva sustentável e produção artesanal.</h2>
-          <h4>A bicicleta elétrica & smart para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes, sem abrir mão do estilo.</h4>
+          <h2>Feita com cuidado.<br /> No Brasil.</h2>
+          <h3>Cadeia produtiva sustentável e produção artesanal.</h3>
+          <h4>A bicicleta elétrica & smart para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes.</h4>
+          <a href='/vela'><Button primary>Saiba mais</Button></a>
         </div>
       </div>
     </div>
@@ -93,7 +96,7 @@ const HomePage = ({ highlight }) =>
       .cta {
         text-align: center;
         padding: 2rem 3rem 2rem 3rem;
-        background-color: #709981;
+        background-color: ${white};
       }
       .cta h2, .cta small, .cta p {
         color: ${offWhite};
@@ -125,14 +128,16 @@ const HomePage = ({ highlight }) =>
       }
       @media only screen and (min-width: 768px) {
         h1 {
-          font-size: 3.5rem;
+          font-size: 2.5rem;
           font-weight: 700;
-          color: ${velaGreen}
         }
-        h4, .cta p {
-          color: ${offBlack};
+        .cta h3, .cta h2, .cta small, .cta h4, .cta p {
+          color: ${offBlack}
         }
-        .cta h2, .cta small {
+        .cta h2 {
+          font-size: 3rem;
+        }
+        .cta-bf h1, .cta-bf h3, .cta-bf h4, .cta-bf p {
           color: ${offBlack}
         }
         .cta {
@@ -150,11 +155,11 @@ const HomePage = ({ highlight }) =>
         .cta-bf {
           position: absolute;
           justify-content: center;
-          max-width: 23em;
+          max-width: 20em;
           left: 2em;
-          top: 3.5em;
+          top: 3em;
           text-align: left;
-          background-color: transparent;
+          background-color: ${white};
           margin-top: 0rem;
           padding: 2em;
           z-index: 2;

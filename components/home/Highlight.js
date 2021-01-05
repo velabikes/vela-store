@@ -11,20 +11,20 @@ const Highlight = () => {
         </div>
         <div className='models'>
             <div className='qr'>
-              <a href="/vela2">
+              <a href="/vela">
                 <img alt='Vela 2 Quadro reto' src='/static/vela2/models/VEL-V2-550-29-VERDE-PRETO.png' />
                 <div className='models-content'>
-                  <h2>Quadro reto</h2>
+                  <h3>Quadro reto</h3>
                   <span>3 tamanhos</span>
                   <span>1,58m até 2m</span>
                 </div>
               </a>
             </div>
             <div className='qb'>
-              <a href="/vela2">
+              <a href="/vela">
                 <img alt='Vela 2 Quadro baixo' src='/static/vela2/models/VEL-V2-490-29-VERDE-PRETO.png' />
                 <div className='models-content'>
-                  <h2>Quadro baixo</h2>
+                  <h3>Quadro baixo</h3>
                   <span>2 tamanhos</span>
                   <span>1,58m até 1,90m</span>
                 </div>
@@ -48,7 +48,6 @@ const Highlight = () => {
           .content{
             background-color: ${offBlack};
             padding: 1rem 1rem;
-            margin-bottom: 1rem;
           }
           .content p, .color p {
             color: ${offWhite};
@@ -59,6 +58,9 @@ const Highlight = () => {
             flex-direction: column;
             justify-content: center;
           }
+          .models span {
+            color: ${offBlack}
+          }
           .models img {
             background-color: ${offWhite};
             padding: 2rem 0;
@@ -68,6 +70,9 @@ const Highlight = () => {
             background-color: ${white};
             text-align: center;
             box-shadow: 0px .75rem 1rem -1.25rem rgba(20,20,20, 0.8);
+          }
+          .qr {
+            margin-bottom: 1em;
           }
           .models span {
             display: block;

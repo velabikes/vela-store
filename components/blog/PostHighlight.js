@@ -44,9 +44,15 @@ const PostHightlight = ({
         display: flex;
         flex-direction: column;
         height: 100%;
+        text-align: center;
       }
       .content > div:first-child {
         flex: 1;
+      }
+      @media only screen and (min-width: 768px) {
+        .content {
+          text-align: left;
+        }
       }
     `}</style>
   </Card>

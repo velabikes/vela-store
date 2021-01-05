@@ -4,6 +4,7 @@ import LandingImage from 'components/vela/LandingImage'
 import Button from '../components/Button'
 import PaddedView from '../components/PaddedView'
 import { offWhite, darkGray, offBlack, white, lightGray } from '../style/colors'
+import { Assist, Boost } from '../components/Icons'
 
 const Vela = () =>
   <div className='HomePage'>
@@ -141,12 +142,14 @@ const Vela = () =>
         <h4>Integrado ao guidão da Vela 2, o acionador em aço inox é totalmente à prova d'água e resistente a impactos</h4>
         <div className='bfunctions'>
           <div className='bleft'>
+            <Assist />
             <h3>Assist</h3>
-            <p>Assistente de partida</p>
+            <p>Segure para sair sem fazer qualquer esforço no pedal.</p>
           </div>
           <div className='bcenter'>
+            <Boost />
             <h3>Boost</h3>
-            <p>Impulso na potência</p>
+            <p>Aperte 2x para obter o impulso máximo na potência.</p>
           </div>
         </div>
       </div>
@@ -357,7 +360,7 @@ const Vela = () =>
         text-align: center;
       }
       .slogan h1 {
-        font-size: 8em;
+        font-size: 6em;
         font-weight: 900;
         color: ${offBlack};
         line-height: 1em;
@@ -444,7 +447,7 @@ const Vela = () =>
         align-items: center;
       }
       .bfunction-content h4{
-        max-width: 18em;
+        max-width: 15em;
         text-align: center;
       }
       .bfunctions {
@@ -459,7 +462,7 @@ const Vela = () =>
       .bleft, .bright, .bcenter {
         padding: 2em;
         text-align: center;
-        max-width: 10em;
+        max-width: 15em;
       }
       .plans {
         background-color: ${offWhite};

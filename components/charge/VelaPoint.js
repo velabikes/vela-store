@@ -7,10 +7,10 @@ const VelaPoint = () => (
       <div className="PointContent">
         <SectionHeader
           title="Rede de Serviços Vela"
-          tagline="Confira nosso mapa para visitar as lojas da Vela, recarregar em pontos parceiros ou procurar assistência autorizada para a sua smartbike."
+          tagline="Confira nosso mapa para visitar as lojas da Vela, recarregar em pontos parceiros e ter assistência autorizada."
         />
         <p>
-          Entregamos em todo o Brasil, com diversos pontos de apoio para você velejar com tranquilidade. Conheça agora os mais próximos de você.
+          Entregamos em todo o Brasil, com diversos locais de apoio para você velejar com tranquilidade. Conheça agora os mais próximos de você.
         </p>
         <a href="/rede/mapa">
           <Button primary>Onde encontrar</Button>

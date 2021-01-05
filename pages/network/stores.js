@@ -66,16 +66,16 @@ Locations.propTypes = {
 Locations.getInitialProps = () => {
   const stores = [{
     name: 'Vela São Paulo',
-    address: ['Rua Cunha Gago, 169', 'Pinheiros'],
+    address: ['R. Joaquim Antunes, 631', 'Pinheiros'],
     photo: 'https://gallery.mailchimp.com/68a0cce7cc109d78a8b44d7a0/images/35c08168-1a75-4125-b6e9-51fd31e46fc1.jpg',
     hours: [
-      ['Dom', 'Fechado'],
       ['Seg', 'Fechado'],
-      ['Ter', '09:00 - 18:00'],
-      ['Qua', '09:00 - 18:00'],
-      ['Qui', '09:00 - 18:00'],
-      ['Sex', '09:00 - 18:00'],
-      ['Sáb', '09:00 - 18:00']
+      ['Ter', 'Fechado'],
+      ['Qua', '11:00 – 19:00'],
+      ['Qui', '11:00 – 19:00'],
+      ['Sex', '11:00 – 19:00'],
+      ['Sáb', '11:00 – 19:00'],
+      ['Dom', '11:00 – 19:00']
     ]
   }, {
     name: 'Vela Curitiba',

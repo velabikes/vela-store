@@ -1,7 +1,6 @@
 import Head from 'next/head'
 import { compose, lifecycle } from 'recompose'
 import { velaGreen, offBlack, darkGray, white } from 'style/colors'
-import FacebookPixel from 'components/head/FacebookPixel'
 import Freshchat from 'components/head/Freshchat'
 import Heatmap from 'components/head/Heatmap'
 
@@ -36,7 +35,6 @@ const CustomHead = props =>
       <link rel='icon' type='image/x-icon' href='/static/fav/favicon.ico' />
       <meta name='theme-color' content='#ffffff' />
     </Head>
-    <FacebookPixel />
     <Freshchat />
     <Heatmap />
     <style jsx global>{`

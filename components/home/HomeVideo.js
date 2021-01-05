@@ -11,7 +11,7 @@ const HomeVideo = () =>
       }
       .banner video {
         width: 100%;
-        height: 60vh;
+        height: 50vh;
         object-fit: cover;
       }
 

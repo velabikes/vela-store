@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useState } from 'react'
-import { offWhite, offBlack } from '../../style/colors'
+import { offWhite, offBlack, velaYellow } from '../../style/colors'
 import Button from '../Button'
 import { CloseIcon } from '../Icons'
 
@@ -13,30 +13,27 @@ const Pop = () => {
       <div className='close'>
         <CloseIcon background={offWhite} onClick={() => setClosed(true)} />
       </div>
-      <h3>BATERIA EM DOBRO</h3>
-      <p>Na compra de duas unidades da Vela 2 você ganha duas baterias extras!</p>
-      <small>Para participar da promoção, monte as duas bikes e inclua as baterias extras na hora de escolher os acessórios. O desconto estará automaticamente aplicado ao finalizar.</small>
-      <div className='action'>
-        <Link href='/vela2'><a><Button primary>Participar</Button></a></Link>
-      </div>
+      <h3>AVISO</h3>
+      <p>Loja de São Paulo fechada!</p>
+      <small>Por conta da segunda onda do COVID-19, nossa loja está fechada até 20/01/2021. Prezamos pela saúde da nossa equipe e de todos os Velejadores.</small>
       <style jsx>{`
     .Pop {
-        background-color: ${offBlack};
+        background-color: ${velaYellow};
         padding: 2em;
         position: fixed;
-        left: 1.5em;
-        bottom: 1.5em;
+        right: 2.5em;
+        bottom: 3em;
         z-index: 3;
         max-width: 16.4em;
     }
     h3 {
-      color: ${offWhite};
+      color: ${offBlack};
     }
     p {
-      color: ${offWhite};
+      color: ${offBlack};
     }
     small {
-      color: ${offWhite};
+      color: ${offBlack};
     }
     .close {
       width: 1.2em;
