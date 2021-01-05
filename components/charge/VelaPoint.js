@@ -28,6 +28,7 @@ const VelaPoint = () => (
     <style jsx>{`
       .content {
         background-color: #ffffff;
+        padding: 1em;
       }
       .FigureWrapper {
         display: flex;

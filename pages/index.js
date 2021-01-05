@@ -91,14 +91,13 @@ const HomePage = ({ highlight }) =>
       }
       .cta-bf h4 {
         color: ${offWhite};
-        margin-bottom: 1em;
       }
       .cta {
         text-align: center;
         padding: 2rem 3rem 2rem 3rem;
         background-color: ${white};
       }
-      .cta h2, .cta small, .cta p {
+      .cta h2, .cta h3, .cta small, .cta p {
         color: ${offWhite};
       }
       h1 {
@@ -110,7 +109,6 @@ const HomePage = ({ highlight }) =>
       }
       h4 {
         color: ${offWhite};
-        padding-bottom: 0em;
       }
       .home-store {
         background-color: #272727;
@@ -145,7 +143,7 @@ const HomePage = ({ highlight }) =>
           justify-content: center;
           max-width: 20em;
           left: 2em;
-          top: 6em;
+          top: 3em;
           text-align: left;
           background-color: ${white};
           margin-top: 0rem;

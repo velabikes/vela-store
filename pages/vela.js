@@ -36,7 +36,7 @@ const Vela = () =>
         </div>
         <div className='actions'>
           <Link href='/vela2'>
-            <Button primary>Monte a sua</Button>
+            <Button primary>Reserve a sua</Button>
           </Link>
         </div>
       </div>
@@ -70,7 +70,7 @@ const Vela = () =>
             <p>Tenha toda a assistência necessária para pedalar sem qualquer esforço, mesmo nas maiores inclinações.</p>
             <div className='actions'>
               <Link href='/vela2'>
-                <Button primary>Monte a sua</Button>
+                <Button primary>Reserve a sua</Button>
               </Link>
             </div>
           </div>
@@ -89,7 +89,7 @@ const Vela = () =>
         <h4>O design minimalista da Vela é a prova de que bikes elétricas podem reunir tecnologia de ponta, usabilidade e beleza. </h4>
         <div className='actions'>
           <Link href='/vela2'>
-            <Button primary>Monte a sua</Button>
+            <Button primary>Reserve a sua</Button>
           </Link>
         </div>
       </div>
@@ -171,7 +171,7 @@ const Vela = () =>
             <p>A tranquilidade de pedalar com faróis automáticos integrados, conjunto completo de paralamas, manoplas ergonômicas e mudflaps.</p>
             <div className='actions'>
               <Link href='/vela2'>
-                <Button primary>Monte a sua</Button>
+                <Button primary>Reserve a sua</Button>
               </Link>
             </div>
           </div>

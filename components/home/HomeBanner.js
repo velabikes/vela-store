@@ -63,6 +63,12 @@ const HomeCards = () =>
       max-width: 180px;
       padding: 1.5em 2em;
     }
+    .top, .bottom {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
       @media only screen and (min-width: 768px) {
         .HomeCards {
           display: flex; 
