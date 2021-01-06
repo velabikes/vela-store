@@ -130,7 +130,7 @@ const TestRide = () =>
         .cta {
           position: absolute;
           justify-content: center;
-          max-width: 18em;
+          max-width: 16em;
           right: 4em;
           top: 4em;
           text-align: left;

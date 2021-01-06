@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useState } from 'react'
-import { offWhite, offBlack, velaYellow } from '../../style/colors'
+import { offWhite, offBlack, velaYellow, velaGreen } from '../../style/colors'
 import Button from '../Button'
 import { CloseIcon } from '../Icons'
 
@@ -13,18 +13,18 @@ const Pop = () => {
       <div className='close'>
         <CloseIcon background={offWhite} onClick={() => setClosed(true)} />
       </div>
-      <h3>AVISO</h3>
-      <p>Loja de São Paulo fechada!</p>
-      <small>Por conta da segunda onda do COVID-19, nossa loja está fechada até 20/01/2021. Prezamos pela saúde da nossa equipe e de todos os Velejadores.</small>
+      <h3>Loja de São Paulo fechada!</h3>
+      <p>Por conta da segunda onda do COVID-19, nossa loja está fechada até 20/01.</p>
+      <p><small>O <b>atendimento online</b> e <b>serviço Leva & Traz</b> seguem normais de seg à sex das 10h às 18h!</small></p>
       <style jsx>{`
     .Pop {
         background-color: ${velaYellow};
         padding: 2em;
         position: fixed;
-        right: 2.5em;
+        right: 2em;
         bottom: 3em;
         z-index: 3;
-        max-width: 16.4em;
+        max-width: 15em;
     }
     h3 {
       color: ${offBlack};
