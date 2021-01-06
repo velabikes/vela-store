@@ -56,6 +56,7 @@ module.exports = async (req, res) => {
       }
     }))
     const info = await response.json()
+    console.log(info)
     cityName = info && info.cidade && info.cidade.nome
   } catch (e) {
     console.warn(e)
