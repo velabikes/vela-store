@@ -608,7 +608,7 @@ const Vela = () =>
           justify-content: flex-end;
           align-items: flex-end;
           text-align: right;
-          right: 2em;
+          right: 4em;
           top: 2em;
           padding: 1em 2em 2em 1em;
           background-color: ${white};
