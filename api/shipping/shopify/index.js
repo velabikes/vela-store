@@ -133,7 +133,7 @@ const mapCorreiosResultToRate = (result) => result.map(r => {
     service_name: `Sedex`,
     service_code: r.Codigo,
     total_price: parseFloat((r.Valor.split(',').join('.')) * 100),
-    description: `${r.PrazoEntrega} dias úteis`,
+    description: `${Number(r.PrazoEntrega) + 3} dias úteis`,
     currency: `BRL`
   })
 
