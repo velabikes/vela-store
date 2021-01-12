@@ -52,7 +52,7 @@ const Tab = ({ children, step, onStep }) => {
         }
         @media only screen and (min-width: 768px) {
           .Tab {
-            width: 25.3em;
+            width: 26em;
             overflow-y: auto;
           }
           .TabContent {

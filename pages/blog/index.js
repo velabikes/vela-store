@@ -12,6 +12,7 @@ import { offWhite, velaGreen } from '../../style/colors'
 
 const Blog = ({ posts, highlight }) =>
   <div className='blog' style={{ background: `${offWhite}` }}>
+    <PostHighlight post={highlight} />
     <PaddedView>
       <Main>
         <Head>
@@ -33,11 +34,7 @@ const Blog = ({ posts, highlight }) =>
           <meta property='og:image' content='https://images.prismic.io/velabikes/3b2541d4-3894-48fa-8f84-76c3d064daa0_e03.jpg?auto=compress,format&rect=0,0,1333,889&w=3000&h=2000' />
         </Head>
         <section>
-          <PostHighlight post={highlight} />
-        </section>
-        <br/>
-        <br/>
-        <section>
+          <br />
           <Grid template='repeat(auto-fit, minmax(320px, 1fr))'>
             {posts.map(({ data: { cover, title, teaser }, uid }) => (
               <Card
@@ -50,7 +47,7 @@ const Blog = ({ posts, highlight }) =>
                     <p>{teaser[0].text}</p>
                     <br />
                     <div className='actions'>
-                      <a>Leia agora  <NextIcon fill={velaGreen} /></a>
+                      <a>Ler mais <NextIcon fill={velaGreen} /></a>
                     </div>
                   </div>
                 </Link>

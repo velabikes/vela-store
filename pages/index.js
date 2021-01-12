@@ -37,9 +37,9 @@ const HomePage = ({ highlight }) =>
       <HomeImage />
       <div className='cta-bf'>
         <div className='slogan'>
-          <h1>Reserve agora, pague quando receber.</h1>
+          <h1>Reserve hoje, sua Vela 2 de amanhã</h1>
           <h3>Está receoso em esperar?</h3>
-          <h4>Agora para adquirir sua Vela 2, você paga apenas <b>R$ 100,00</b> ao reservar e o restante no momento da entrega.</h4>
+          <h4>Você paga apenas <b>R$ 100,00</b> para reservar e os R$ 7.490,00 restantes no momento da entrega.</h4>
           <a href='/vela2'><Button primary>Reserve a sua</Button></a>
         </div>
       </div>

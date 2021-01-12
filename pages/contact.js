@@ -78,9 +78,9 @@ const Contact = () => (
           />
           <div className="left-content">
             <h2>FAQ</h2>
-            <h4>Confira nosso banco de informações para uma solução rápida</h4>
+            <h4>Confira nosso banco de informações para uma solução imediata</h4>
             <p>
-              Muitas vezes, sua dúvida é similar a de outros clientes que já
+              Muitas vezes, sua dúvida é similar a de outros Velejadores que já
               visitaram nosso site. Veja quais são os{" "}
               <a href="https://velabikes.freshdesk.com/support/home">tópicos</a>{" "}
               mais comentados.
@@ -92,7 +92,7 @@ const Contact = () => (
             <h2>Parcerias</h2>
             <h4>
               Conhece alguma bicicletaria de confiança? Um café bike-friendly
-              que pode virar um ponto de recarga?
+              que pode ser um ponto de recarga?
             </h4>
             <p>
               Conte pra nós! Estamos sempre à procura de novas parcerias e
