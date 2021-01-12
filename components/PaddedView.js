@@ -23,6 +23,7 @@ const PaddedView = props =>
           padding-bottom: 3rem;
         }
       }
+      
     `}</style>
   </div>
 

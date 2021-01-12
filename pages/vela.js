@@ -31,13 +31,13 @@ const Vela = () =>
       <div className='cta'>
         <div className='slogan'>
           <h1>V2</h1>
-          <h3>Conectada com as ruas, com seu celular e com você.</h3>
+          <h3>Vela 2: a bicicleta conectada com você.</h3>
           <h4>Conheça a geração smart de bikes elétricas da Vela!</h4>
         </div>
         <div className='actions'>
-          <Link href='/vela2'>
+          <a href='/vela2'>
             <Button primary>Reserve a sua</Button>
-          </Link>
+          </a>
         </div>
       </div>
     </div>
@@ -69,9 +69,9 @@ const Vela = () =>
             <h4>Recupera energia para a bateria nas descidas, com até <b>60km</b> de autonomia em trajetos</h4>
             <p>Tenha toda a assistência necessária para pedalar sem qualquer esforço, mesmo nas maiores inclinações.</p>
             <div className='actions'>
-              <Link href='/vela2'>
+              <a href='/vela2'>
                 <Button primary>Reserve a sua</Button>
-              </Link>
+              </a>
             </div>
           </div>
           <a href="/vela2">
@@ -88,9 +88,9 @@ const Vela = () =>
         <h2>Tecnologia e design nunca estiveram tão próximos</h2>
         <h4>O design minimalista da Vela é a prova de que bikes elétricas podem reunir tecnologia de ponta, usabilidade e beleza. </h4>
         <div className='actions'>
-          <Link href='/vela2'>
+          <a href='/vela2'>
             <Button primary>Reserve a sua</Button>
-          </Link>
+          </a>
         </div>
       </div>
     </div>
@@ -170,9 +170,9 @@ const Vela = () =>
             <h4>Equipada com todos os acessórios essenciais para o dia a dia</h4>
             <p>A tranquilidade de pedalar com faróis automáticos integrados, conjunto completo de paralamas, manoplas ergonômicas e mudflaps.</p>
             <div className='actions'>
-              <Link href='/vela2'>
+              <a href='/vela2'>
                 <Button primary>Reserve a sua</Button>
-              </Link>
+              </a>
             </div>
           </div>
           <a href="/vela2">

@@ -6,7 +6,7 @@ const VelaPoint = () => (
     <div className="PointFigure">
       <div className="PointContent">
         <SectionHeader
-          title="Rede de Serviços Vela"
+          title="Rede de Serviços"
           tagline="Confira nosso mapa para visitar as lojas da Vela, recarregar em pontos parceiros e ter assistência autorizada."
         />
         <p>
@@ -53,8 +53,8 @@ const VelaPoint = () => (
       }
       @media only screen and (min-width: 768px) {
         .FigureWrapper {
-          justify-content: flex-end;
-          align-items: flex-end;
+          justify-content: center;
+          align-items: center;
         }
         .FigureWrapper img {
           max-width: 80%;
@@ -65,9 +65,11 @@ const VelaPoint = () => (
           padding: 1em 0 1em 0;
         }
         .PointContent {
-          max-width: 22rem;
-          padding-top: 8em;
-          padding-left: 4em;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-end;
+          max-width: 20rem;
           text-align: right;
         }
       }

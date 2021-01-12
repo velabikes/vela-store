@@ -34,7 +34,7 @@ const PostHightlight = ({
     <style jsx>{`
       img {
         object-fit: cover;
-        min-height: 100%;
+        min-height: 40vh;
         cursor: pointer;
       }
       h2 {
@@ -52,6 +52,7 @@ const PostHightlight = ({
       @media only screen and (min-width: 768px) {
         .content {
           text-align: left;
+          padding: 1em;
         }
       }
     `}</style>

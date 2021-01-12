@@ -24,7 +24,6 @@ const CustomHead = props =>
     </Head>
     <Freshchat />
     <Pop />
-    <Heatmap />
     <style jsx global>{`
       body * {
         //outline: 1px solid rgba(200,0,0,0.1)
