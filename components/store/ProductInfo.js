@@ -60,6 +60,7 @@ const ProductInfo = ({ product, setAvailableVariants, availableVariants, selecte
       />
       <div dangerouslySetInnerHTML={{ __html: product.descriptionHtml }} />
       <br />
+      <h6>*Em decorrência do Covid-19, os prazos e disponibilidade de estoque podem ser afetados.</h6>
       <HideOnDesktop>
         <ProductImageGallery product={product} />
       </HideOnDesktop>
