@@ -13,8 +13,8 @@ const Pop = () => {
       <div className='close'>
         <CloseIcon background={offWhite} onClick={() => setClosed(true)} />
       </div>
-      <h3>Loja de São Paulo fechada!</h3>
-      <p>Por conta da segunda onda do COVID-19, nossa loja está fechada até 20/01.</p>
+      <h3>Aviso loja de São Paulo!</h3>
+      <p>Por conta da segunda onda do COVID-19, nossa loja está funcionando apenas com horário agendado. Mande uma mensagem no chat.</p>
       <p><small>O <b>atendimento online</b> e <b>serviço Leva & Traz</b> seguem normais de seg à sex das 10h às 18h!</small></p>
       <style jsx>{`
     .Pop {
