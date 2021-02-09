@@ -908,13 +908,13 @@ module.exports = async (req, res) => {
         phone: '(11) 4200-4950',
         open: true,
         hours: [
-          ['Seg', '10:00 – 19:00'],
-          ['Ter', '10:00 – 19:00'],
+          ['Seg', 'Fechado'],
+          ['Ter', 'Fechado'],
           ['Qua', '10:00 – 19:00'],
           ['Qui', '10:00 – 19:00'],
           ['Sex', '10:00 – 19:00'],
-          ['Sáb', 'Fechado'],
-          ['Dom', 'Fechado']
+          ['Sáb', '10:00 – 19:00'],
+          ['Dom', '10:00 – 19:00']
         ],
         pos: {
           lat: -23.5633357,
