@@ -10,7 +10,6 @@ import Button from '../components/Button'
 import VelaPoint from '../components/charge/VelaPoint'
 import { offBlack, offWhite, velaGreen, white } from '../style/colors'
 import HomeImage from '../components/home/HomeImage'
-import Pop from '../components/home/Pop'
 
 const HomePage = ({ highlight }) =>
   <div className='HomePage'>
@@ -32,7 +31,6 @@ const HomePage = ({ highlight }) =>
       <meta property='og:description' content='Uma bicicleta elétrica & smart para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes, sem abrir mão do estilo.' />
       <meta property='og:image' content='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Fblackfriday%2FBlackFridayVelaBikes.jpg?alt=media&token=31691630-473c-4f34-bd14-07e31d038fa1' />
     </Head>
-    <Pop />
     <div className='cover'>
       <HomeImage />
       <div className='cta-bf'>
