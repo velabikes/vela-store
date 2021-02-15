@@ -32,9 +32,9 @@ const MainMenu = () =>
       <li><Link href='/contact' as='/contato'><a>
         Contato
       </a></Link></li>
-      <li><Link href='/invest' as='/investir'><a>
+      <li><a href='https://app.kria.vc/agents/users/offers/210'>
         Investir
-      </a></Link></li>
+      </a></li>
       <li><Link href='/testride' as='/test-ride'><a>
         Test-ride
       </a></Link></li>
