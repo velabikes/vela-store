@@ -23,7 +23,6 @@ const CustomHead = props =>
       <meta name='theme-color' content='#ffffff' />
     </Head>
     <Freshchat />
-    <Pop />
     <style jsx global>{`
       body * {
         //outline: 1px solid rgba(200,0,0,0.1)
