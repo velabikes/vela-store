@@ -531,22 +531,6 @@ module.exports = async (req, res) => {
         type: ['service','charger']
       },
       {
-        name: 'Amo Minha Bike Elétrica',
-        address: [
-          'O atendimento é feito remotamente.',
-          'Entre em contato com nosso técnico parceiro, o Marcos, para conferir os bairros que são atendidos.',
-          'RJ, 21810-080, Brasil'
-        ],
-        phone: '(21) 99772-2226',
-        open: true,
-        pos: {
-          lat: -22.8809355,
-          lng: -43.4601332
-        },
-        googlePlace: 'ChIJAb_JCJHfmwARvlQg-Oe-HiI',
-        type: ['service']
-      },
-      {
         name: 'Reciclo Bikes',
         address: [
           'Mercado da Encruzilhada',
