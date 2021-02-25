@@ -37,17 +37,15 @@ const Contact = () => (
         <h3>Horário:</h3>
         <h4>Seg - Sex: 10h às 18h</h4>
         <br />
-        <h3>Telefone:</h3>
-        <h4>(11) 4200-4950</h4>
-        <br />
         <h3>E-mail:</h3>
         <h4>
           <a href="mailto:contato@velabikes.com.br">contato@velabikes.com.br</a>
+          <br />Respondemos sua solicitação em até <b>72 horas</b>.
         </h4>
         <br />
         <h3>Chat:</h3>
         <h4>
-          Para dúvidas e feedbacks, envie uma mensagem no chat (localizado à
+          Para suporte imediato, dúvidas e feedbacks, envie uma mensagem no chat (localizado à
           direita da tela).
         </h4>
       </div>
