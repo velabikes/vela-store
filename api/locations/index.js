@@ -685,20 +685,6 @@ module.exports = async (req, res) => {
         type: ['service']
       },
       {
-        name: 'Blue Tree Premium Paulista',
-        address: [
-          'Rua Peixoto Gomide, 707',
-          'Bela Vista, São Paulo',
-          'SP, 01409-001, Brasil'
-        ],
-        pos: {
-          lat: -23.5588213197085,
-          lng: -46.6547523697085
-        },
-        googlePlace: 'ChIJcVxJBsxZzpQRFMJ_Q7lID8w',
-        type: ['parking']
-      },
-      {
         name: 'Alameda Campinas',
         address: [
           'Alameda Campinas, 445',
@@ -756,21 +742,6 @@ module.exports = async (req, res) => {
         type: ['parking']
       },
       {
-        name: 'BK30 Largo do Arouche',
-        address: [
-          'Largo do Arouche, 77',
-          'República, São Paulo',
-          'SP, 01219-011, Brasil'
-        ],
-        phone: '(11) 94140-2116',
-        pos: {
-          lat: -23.5417054,
-          lng: -46.64494800000001
-        },
-        googlePlace: 'ChIJhXdZkkVYzpQRiLOGttP33AI',
-        type: ['parking']
-      },
-      {
         name: 'DOC88',
         address: [
           'R. Cel. Joaquim Ferreira Lôbo, 314',
@@ -785,17 +756,17 @@ module.exports = async (req, res) => {
         type: ['parking']
       },
       {
-        name: 'GROW',
+        name: 'Largo do Arouche',
         address: [
-          'Rua Tabapuã, 743',
-          'Itaim Bibi, São Paulo',
-          'SP, 04533-012, Brasil'
+          'Largo do Arouche, 77',
+          'República, São Paulo',
+          'SP, 01035-000, Brasil'
         ],
         pos: {
-          lat: -23.5837346,
-          lng: -46.67770909999999
+          lat: -23.5426643,
+          lng: -46.6441397
         },
-        googlePlace: 'ChIJ3Sy3J7pXzpQR7l-ZefxvsmY',
+        googlePlace: 'ChIJ886OPlBYzpQRjB4ENly1kOs',
         type: ['parking']
       },
       {
@@ -880,6 +851,124 @@ module.exports = async (req, res) => {
           lng: -46.6913942697085
         },
         googlePlace: 'ChIJcf4EqKFXzpQR2f8O708g8zY',
+        type: ['parking']
+      },
+      {
+        name: 'Studio Vila',
+        address: [
+          'Rua Ferreira de Araújo, 1051',
+          'Pinheiros, São Paulo',
+          'SP, 05428-001 Brasil'
+        ],
+        phone: '(11) 95682-4788',
+        pos: {
+          lat: -23.562478,
+          lng: -46.6990133
+        },
+        googlePlace: 'ChIJL5VXCaVXzpQR1xRO2vFUoec',
+        type: ['parking']
+      },
+      {
+        name: 'Central Bike',
+        address: [
+          'Rua Porto Martins, 748',
+          'Brooklin, São Paulo',
+          'SP, 04570-140 Brasil'
+        ],
+        phone: '(11) 95682-4788',
+        pos: {
+          lat: -23.6023249,
+          lng: -46.6909697
+        },
+        googlePlace: 'ChIJEdpfzEtXzpQRA506Dvj2oTw',
+        type: ['parking']
+      },
+      {
+        name: 'Lev Bicicletas',
+        address: [
+          'Rua Clodomiro Amazonas, 988',
+          'Vila Nova Conceição, São Paulo',
+          'SP, 04537-002 Brasil'
+        ],
+        phone: '(21) 98225-6445',
+        pos: {
+          lat: -23.59428,
+          lng: -46.6791787
+        },
+        googlePlace: 'ChIJjX4kiVBXzpQRXAlPyyM2-Xs',
+        type: ['parking']
+      },
+      {
+        name: 'Xandy Molina',
+        address: [
+          'Rua Costa Carvalho, 521',
+          'Pinheiros, São Paulo',
+          'SP, 05427-100 Brasil'
+        ],
+        phone: '(11) 98158-6872',
+        pos: {
+          lat: -23.5636534,
+          lng: -46.7007589
+        },
+        googlePlace: 'ChIJhzPcj6ZXzpQRk--Al31PMyw',
+        type: ['parking']
+      },
+      {
+        name: 'Bliv Bikes',
+        address: [
+          'Rua Heitor Penteado, 1017',
+          'Sumarezinho, São Paulo',
+          'SP, 05437-000 Brasil'
+        ],
+        phone: '(11) 99170-0287',
+        pos: {
+          lat: -23.5486945,
+          lng: -46.6867291
+        },
+        googlePlace: 'ChIJVVXps-pXzpQRpIv1Tu36McI',
+        type: ['parking']
+      },
+      {
+        name: 'Everybike',
+        address: [
+          'Rua Franca Pinto, 421',
+          'Vila Mariana, São Paulo',
+          'SP, 05437-000 Brasil'
+        ],
+        phone: '(11) 99537-7036',
+        pos: {
+          lat: -23.5874164,
+          lng: -46.6424013
+        },
+        googlePlace: 'ChIJjW_iwIdZzpQR4rW4BkK6MMs',
+        type: ['parking']
+      },
+      {
+        name: 'ReiPark',
+        address: [
+          'Avenida Paulista, 447',
+          'Jardim Paulista, São Paulo',
+          'SP, 01311-100 Brasil'
+        ],
+        pos: {
+          lat: -23.564885,
+          lng: -46.6543722
+        },
+        googlePlace: 'ChIJq-3GwLhZzpQRe4Fo9e6cGL0',
+        type: ['parking']
+      },
+      {
+        name: 'Hotel Transamérica',
+        address: [
+          'Rua Pedroso de Alvarenga, 1256',
+          'Itaim Bibi, São Paulo',
+          'SP, 04531-004 Brasil'
+        ],
+        pos: {
+          lat: -23.5823425,
+          lng: -46.6828607
+        },
+        googlePlace: 'ChIJFewCFmhXzpQRxGo0D7TBvlg',
         type: ['parking']
       },
       {
