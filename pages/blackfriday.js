@@ -149,7 +149,7 @@ return (
             />
             <Accordion 
                 title='5. Não moro em São Paulo ou Curitiba, ainda posso participar?'
-                content='Claro! A promoção será válida para todo o Brasil, porém será cobrada uma taxa de R$ 180,00 por cada trecho de transporte, como: entrega inicial, manutenções e devoluções.'
+                content='Claro! A promoção será válida para todo o Brasil, porém será cobrada uma taxa de R$ 245,00 por cada trecho de transporte, como: entrega inicial, manutenções e devoluções.'
             />
         </div>
         <div className='cover'>
