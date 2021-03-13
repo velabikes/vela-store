@@ -26,7 +26,7 @@ const Card = ({ children, onBackClick, media, horizontal }) =>
       .content :global(h1),
       .content :global(h2),
       .content :global(h3) {
-        font-weight: 600;
+        font-weight: 700;
         text-transform: initial;
         font-style: normal;
       }
