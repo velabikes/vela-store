@@ -130,6 +130,11 @@ const Vela = () =>
             <h2>Elétrica & smart</h2>
             <h4>A smartbike conectada com as ruas, com seu celular e com você</h4>
             <p>O aplicativo da Vela te acompanha pelo caminho, mostrando em tempo real as informações essenciais para velejar com tranquilidade.</p>
+            <div className='actions'>
+              <a href='/vela2'>
+                <Button primary>Reserve a sua</Button>
+              </a>
+            </div>
           </div>
           <a href="/vela2">
             <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/7130ce6f-5e4c-4472-bfc8-9855e17f0a92.jpg' alt='Smartbike Vela 2' />
@@ -180,68 +185,6 @@ const Vela = () =>
           </a>
         </div>
       </div>
-    </PaddedView>
-    <div className='plans'>
-      <PaddedView>
-        <h2>Plano Vela+</h2>
-        <h4>Obtenha a assinatura mensal da Vela para uma experiência ainda mais segura e completa.</h4>
-        <div className='plans-content'>
-          <div className='free'>
-            <h3>Livre</h3>
-            <br />
-            <p>
-              Primeira revisão gratuita*<br />
-              Acesso à rede de recarga rápida**<br />
-              Aplicativo companheiro<br />
-              Bloqueio Bluetooth<br />
-              Atualizações básicas<br />
-            </p>
-            <br />
-            <div className='plans-price'>
-              <h3>Grátis</h3>
-            </div>
-          </div>
-          <div className='basic'>
-            <h3>Simples</h3>
-            <br />
-            <p>
-              Primeira revisão gratuita*<br />
-              Acesso à rede de recarga rápida**<br />
-              Aplicativo companheiro<br />
-              Bloqueio remoto<br />
-              Atualizações exclusivas<br />
-              Proteção contra roubo e furto<br />
-              Rastreamento GPS<br />
-              Vela reserva*<br />
-            </p>
-            <br />
-            <div className='plans-price'>
-              <h3>R$ 49,90/mês</h3>
-            </div>
-          </div>
-          <div className='full'>
-            <h3>Completo</h3>
-            <br />
-            <p>
-              Primeira revisão gratuita*<br />
-              Acesso à rede de recarga rápida**<br />
-              Aplicativo companheiro<br />
-              Bloqueio remoto<br />
-              Atualizações exclusivas<br />
-              Proteção contra roubo e furto<br />
-              Rastreamento GPS<br />
-              Vela reserva*<br />
-              Peças consumíveis e de reposição<br />
-            </p>
-            <br />
-            <div className='plans-price'>
-              <h3>R$ 89,90/mês</h3>
-            </div>
-          </div>
-        </div>
-        <p><small><br/>* Condições válidas apenas nas lojas oficiais da Vela, em São Paulo e Curitiba. Confira os <a href='https://velabikes.com.br/legal'>Termos de Serviço do Plano Vela+</a>.<br/>
-        ** Condições válidas apenas para cidades em que a infraestrutura está disponível. Consulte nosso <a href='https://velabikes.com.br/rede/mapa'>mapa</a>.</small></p>
-      </PaddedView>
       <div className='specs'>
         <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/4bb2a891-d7dd-4934-8625-259d8c2c1df2.jpg' alt='Especificações técnicas bike' />
         <div className='specs-content'>
@@ -345,9 +288,9 @@ const Vela = () =>
               </tr>
             </tbody>
           </table>
-        </div>
       </div>
     </div>
+    </PaddedView>
     <style jsx>{`
       .cover {
         position: relative;
@@ -420,7 +363,7 @@ const Vela = () =>
       }
       .tagline h2 {
         margin-bottom: 1em;
-        color: ${darkGray};          
+        color: ${offBlack};          
       }
       .app-content{
         background-color: ${offWhite};
@@ -650,6 +593,9 @@ const Vela = () =>
         .left-content {
           padding: 3em 4em 2em 2em;
           text-align: right;
+          display: flex; 
+          flex-direction: column;
+          align-items: flex-end;
         }
         .right-content {
           padding: 3em 2em 2em 4em;
@@ -670,8 +616,16 @@ const Vela = () =>
           right: 0;
           text-align: right;
           position: absolute;
-          max-width: 28em;
+          max-width: 30em;
           background-color: transparent;
+        }
+        .tagline h2 {
+          margin-bottom: 1em;
+          color: ${white};          
+        }
+        .tagline h4 {
+          font-weight: 600;
+          color: ${white};    
         }
         .app-img {
           display: flex;
