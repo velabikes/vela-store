@@ -5,7 +5,8 @@ import { AddIcon, CloseIcon } from '../Icons'
 
 const rackmap = {
     P: 0,
-    M: 0,
+    BM: 0,
+    RM: 0,
     G: 2,
     GG: 1
 }
@@ -18,7 +19,7 @@ const Item = ({ node: { title, images, variants, handle }, onSelect, selected, m
     <div onClick={() => onSelect(variants.edges[variantIndex].node)}>
       <div className='selector'>
         {isSelected === false && <AddIcon fill={white} />}
-        {isSelected === true && <CloseIcon fill={white} />}
+        {isSelected === true && <CloseIcon color={white} />}
       </div>
       <img src={images && images.edges[0].node.src} alt={title} />
       <h4>{title}</h4>
@@ -26,7 +27,7 @@ const Item = ({ node: { title, images, variants, handle }, onSelect, selected, m
       <style jsx>{`
         div {
           max-width: 40%;
-          margin: 0.5em;
+          margin: 0.7em;
           display: flex;
           flex-direction: column;
         }
@@ -65,9 +66,18 @@ const ExtraSelector = ({ collection, onSelect, selected, model }) => {
   if (!collection.products) return <p />
 
   return (
-    <div>
-      <p>Adicione também os acessórios extras essenciais para a cidade:</p>
-      <div className='Items'>
+    <>
+      <h4>O que já está incluso?</h4>
+      <div className='core'>
+        <p>✔ Carregador padrão Vela</p>
+        <p>✔ Ferramentas essenciais</p>
+        <p>✔ Kit de paralamas</p>
+        <p>✔ Faróis integrados</p>
+        <p>✔ Mudflaps</p>
+      </div>
+      <h4>Personalize com mais acessórios:</h4>
+      <p>Adicione todos os ítens extras essenciais para Velejar com tranquilidade pela cidade:</p>
+      <div className='extraitems'>
         {collection.products.edges
           .filter(product => {
             const filter =
@@ -85,8 +95,17 @@ const ExtraSelector = ({ collection, onSelect, selected, model }) => {
               {...product}
             />
           ))}
+        </div>
         <style jsx>{`
-          .Items {
+          .core {
+            background-color: ${offWhite};
+            padding: 1em;
+            margin-bottom: 1em;
+          }
+          .core p {
+            font-size: 0.9em;
+          }
+          .extraitems {
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
@@ -94,8 +113,7 @@ const ExtraSelector = ({ collection, onSelect, selected, model }) => {
             flex-wrap: wrap;
           }
         `}</style>
-      </div>
-    </div>
+    </>
   )
 }
 
