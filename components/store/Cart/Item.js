@@ -14,7 +14,7 @@ const CartItem = ({ item, handleLessClick }) =>
       <tr key={item.node.title}>
         <td>
           <ProductImage src={item.node.variant && item.node.variant.image.src} alt='' />
-          <span>{item.node.quantity}</span>
+          <span className='quant'>{item.node.quantity}</span>
         </td>
         <td className='quantity'>
           <a onClick={() => handleLessClick(item)}><Trash /></a>
@@ -35,8 +35,8 @@ const CartItem = ({ item, handleLessClick }) =>
     }
     td:first-child span {
       position: absolute;
-      top: -.7em;
-      right: -.7em;
+      top: -.4em;
+      right: -.4em;
       background: ${velaBlue};
       border-radius: 1em;
       width: 1.8em;

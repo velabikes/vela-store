@@ -152,7 +152,6 @@ const TestRide = () =>
         .models-content {
           margin: 0 auto; 
           padding: 2em;
-          background-color: 
         }
         .models {
           flex-direction: row;
