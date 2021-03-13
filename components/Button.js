@@ -7,7 +7,8 @@ import {
   lightGreen,
   white,
   velaBlue,
-  offWhite
+  offWhite,
+  velaGreen
 } from '../style/colors'
 
 const Button = ({
@@ -66,5 +67,6 @@ export default compose(
   withProps(({ secondary }) => secondary && ({ color: velaBlue, bgColor: velaBlue, textColor: white })),
   withProps(({ bf }) => bf && ({ color: '#F99E0B', bgColor: '#F99E0B', textColor: white })),
   withProps(({ outline, color }) => outline && ({ bgColor: 'transparent', textColor: color === offWhite ? offBlack : color })),
+  withProps(({ icon }) => icon && ({ bgColor: 'transparent', textColor: 'transparent', color: 'transparent' })),
   withProps(({ disabled }) => disabled && ({ bgColor: lightGray, textColor: midGray, color: lightGray }))
 )(Button)
