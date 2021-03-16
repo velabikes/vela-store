@@ -128,7 +128,7 @@ const PlusImage = () =>
       
       @media only screen and (min-width: 768px) {
           img {
-            max-height: 90vh;
+            max-height: 85vh;
             width: 80%;
           }
           .mobile {
@@ -145,7 +145,7 @@ const PlusImage = () =>
           }
           .background img {
             width: 100%;
-            height: 90%;
+            height: 95%;
           }
       @media only screen and (min-width: 1680px) {
           img {
