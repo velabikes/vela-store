@@ -128,7 +128,7 @@ const PlusImage = () =>
       
       @media only screen and (min-width: 768px) {
           img {
-            max-height: 85vh;
+            max-height: 90vh;
             width: 80%;
           }
           .mobile {
