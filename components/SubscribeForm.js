@@ -1,21 +1,22 @@
 import MailchimpSubscribe from 'react-mailchimp-subscribe'
 import { Formik } from 'formik'
-import { lightGray, offWhite } from '../style/colors'
+import { lightGray, offWhite, velaGreen } from '../style/colors'
 import Button from './Button'
+import { NextIcon } from './Icons'
 
 const url = 'https://velabikes.us19.list-manage.com/subscribe/post?u=68a0cce7cc109d78a8b44d7a0&amp;id=35e53f5d9e'
 
 const SubscribeForm = () =>
   <div className='SubscribeForm'>
     <h3>Vamos nos conectar?</h3>
+    <p>Fique por dentro de novidades da Vela!</p>
     <MailchimpSubscribe
       url={url}
       render={({ subscribe, status }) =>
         status === 'success'
-          ? <div>Obrigado!</div>
+          ? <div><p>Agradecemos sua inscrição. Vamos velejar?</p></div>
           : <Formik initialValues={{ EMAIL: '' }} onSubmit={subscribe}>
             {({
-              values,
               handleChange,
               handleBlur,
               handleSubmit
@@ -32,41 +33,51 @@ const SubscribeForm = () =>
                   <input type='text' name='b_950b7d190680648ed40ffbe84_dde7c564df' tabIndex='-1' defaultValue='' />
                 </div>
                 <div className='submit'>
-                  <Button primary type='submit'>Assinar</Button>
+                  <Button icon><NextIcon style={{fill: velaGreen}}/></Button>
                 </div>
               </form>
             }
           </Formik>
       }
     />
-    <p>Fique por dentro de novidades da Vela!</p>
     <style jsx>{`
+      .SubscribeForm {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
       h3 {
         color: ${lightGray};
-        margin-bottom: 1rem;
         text-align: center;
+      }
+      .submit {
+        margin-left: -2em;
       }
       form {
         position: relative;
         z-index: 0;
+        display: flex;
+        flex-direction: row;
+        width: 280px;
+      }
+      .submit :global(button){
+        margin: 0;
+      }
+      input:not([type='checkbox']):not([type='radio']) {
+        margin: 0 -1em 0 0;
       }
       .hidden {
         position: absolute;
         left: -5000px;
-      }
-      .submit {
-        position: absolute;
-        right: 0;
-        bottom: -0.1em;
-      }
-      .submit > :global(button) {
-        margin: 0px;
       }
       p{
         color: ${offWhite};
         text-align: center;
       }
       @media only screen and (min-width: 768px) {
+        .SubscribeForm {
+          align-items: flex-start;
+        }
         h3 {
           text-align: left;
         }
