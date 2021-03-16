@@ -53,11 +53,11 @@ const ProtectionImage = () =>
           .animatedBG {
             height: 60vh;
         }
-        @media only screen and (min-width: 770px) {
+        @media only screen and (min-width: 1200px) {
           img {
             height: 100vh;
             width: 100%;
-            object-position: 50% 90%;
+            object-position: 50% 50%;
           }
           .mobile {
             display: none;
@@ -68,6 +68,7 @@ const ProtectionImage = () =>
           .animatedBG {
             height: 100vh;
         }
+        
       @media only screen and (min-width: 1680px) {
           img {
             max-height: 70%;

@@ -17,7 +17,6 @@ const PlusImage = () =>
     <style jsx>{`
       div {
         background-color: #FFFEFE;
-        margin-top: 3em;
         height: auto;
         display: flex;;
         align-items: center;
@@ -145,8 +144,12 @@ const PlusImage = () =>
           }
           .background img {
             width: 100%;
-            height: 95%;
+            height: 100%;
           }
+          @media only screen and (min-width: 1200px) {
+            .background img {
+              min-height: 95vh;
+            }
       @media only screen and (min-width: 1680px) {
           img {
             max-height: 70%;

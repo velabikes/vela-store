@@ -365,10 +365,10 @@ const VelaPlus = ({checkout, checkoutLineItemsAdd, handleCheckoutCreation}) => {
           align-items: center;
           flex-direction: column;
           justify-content: center;
-          padding-top: 1em;
         }
         .add h3 {
           color: ${offBlack};
+          text-decoration: line-through;
         }
         .add {
           padding: 1.5em;
@@ -479,6 +479,7 @@ const VelaPlus = ({checkout, checkoutLineItemsAdd, handleCheckoutCreation}) => {
           flex-direction: column;
           padding: 0em 2em 1em 2em;
           justify-content: center;
+          align-items: center;
         }
         .bfunctions h3{
           color: ${offBlack};
@@ -500,7 +501,6 @@ const VelaPlus = ({checkout, checkoutLineItemsAdd, handleCheckoutCreation}) => {
           }
           .add h3 {
             color: ${offBlack};
-            text-decoration: line-through;
           }
           .description {
             max-width: 25em;
@@ -537,7 +537,7 @@ const VelaPlus = ({checkout, checkoutLineItemsAdd, handleCheckoutCreation}) => {
             flex-direction: row;
             align-items: center;
             text-align: left;
-            margin: 1em 0 -4em 0;
+            margin: 1em 0 -2em 0;
           }
           .callcenter {
             display: flex;
@@ -562,7 +562,7 @@ const VelaPlus = ({checkout, checkoutLineItemsAdd, handleCheckoutCreation}) => {
             padding: 2em 2em 0 2em; 
           }
           .legal {
-            padding: 3em 1em 0 1em;
+            padding: 3em 1em 1em 1em;
           }
           .legal-container {
             flex-direction: row;
