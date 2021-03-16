@@ -87,27 +87,27 @@ const Footer = () => (
           <SubscribeForm />
           <div className="social">
           <div className="social-icon">
-            <a href="https://www.instagram.com/velabikes/">
+            <a href="https://www.instagram.com/velabikes/"target="_blank">
                 <Instagram />
             </a>
           </div>
           <div className="social-icon">
-            <a href="https://www.facebook.com/velabikes">
+            <a href="https://www.facebook.com/velabikes" target="_blank">
               <Facebook />
             </a>
           </div>
           <div className="social-icon">
-            <a href="https://www.linkedin.com/company/velabikes">
+            <a href="https://www.linkedin.com/company/velabikes" target="_blank">
                 <Linkedin />
             </a>
           </div>
           <div className="social-icon">
-            <a href="https://twitter.com/VelaBikes">
+            <a href="https://twitter.com/VelaBikes" target="_blank">
                 <Twitter/>
             </a>
           </div>
           <div className="social-icon">
-            <a href="https://www.youtube.com/channel/UCa9GuqmiV3VbulKx9T2rjCw">
+            <a href="https://www.youtube.com/channel/UCa9GuqmiV3VbulKx9T2rjCw" target="_blank">
                 <YouTube />
             </a>
           </div>
