@@ -1,9 +1,8 @@
-import { velaGreen } from "../../style/colors"
 
-const BFImage = () =>
+const PlusImage = () =>
   <div>
-    <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FSegurancaBikeEletrica.png?alt=media&token=8a5011f9-bbda-4f4f-9a82-431ddc678dda' className='desktop' alt='Black Friday 2020 - Vela Bikes' />
-    <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FSeguran%C3%A7aBikeEletricaGPS.png?alt=media&token=ecece5f5-6eae-4627-9253-1d3f137a3edd' className='mobile' alt='Black Friday 2020 - Vela Bikes' />
+    <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FSegurancaBikeEletrica.png?alt=media&token=8a5011f9-bbda-4f4f-9a82-431ddc678dda' className='desktop' alt='Assinatura Segurança Bike Elétrica' />
+    <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FSeguran%C3%A7aBikeEletricaGPS.png?alt=media&token=ecece5f5-6eae-4627-9253-1d3f137a3edd' className='mobile' alt='Segurança Vela Bikes pelo App' />
     <div className='animatedBG'>
       <div className='circle xxlarge shade1'></div>
       <div className='circle xlarge shade2'></div>
@@ -11,6 +10,9 @@ const BFImage = () =>
       <div className='circle medium shade4'></div>
       <div className='circle small shade5'></div>
       <div className='circle xsmall shade5'></div>
+    </div>
+    <div className="background">
+      <img src="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FBackgroundVelaMais.png?alt=media&token=52c11c62-9743-45ac-89f5-1ab7d6cdcd17" />
     </div>
     <style jsx>{`
       div {
@@ -25,21 +27,32 @@ const BFImage = () =>
         object-fit: cover;
         z-index: 3;
       }
+      .background {
+        position: absolute;
+        width: 100%;
+      }
+      .background img {
+        object-fit: cover;
+        z-index: 1;
+        opacity: 0.4;
+        height: 85vh;
+      }
       .desktop {
         display: none;
       }
       .animatedBG {
         width: 100vw;
-        height: 90vh;
+        height: 70em;
         overflow: hidden;
         position: absolute;
+        z-index: 1;
       }
       .circle{
         position: absolute;
         border-radius: 50%;
-        background: #FFEDA6;
+        background: #B2F1FF;
         animation: scaleIn 5s infinite;
-        box-shadow: 0px 0px 1px 0px #B7F0D9;
+        box-shadow: 0px 0px 1px 0px #B2F1FF;
       }
 
       .xsmall{
@@ -115,7 +128,7 @@ const BFImage = () =>
       
       @media only screen and (min-width: 768px) {
           img {
-            max-height: 70%;
+            max-height: 85vh;
             width: 80%;
           }
           .mobile {
@@ -130,9 +143,16 @@ const BFImage = () =>
             height: 80em;
             z-index: 1;
           }
+          .background img {
+            width: 100%;
+            height: 90%;
+          }
       @media only screen and (min-width: 1680px) {
           img {
             max-height: 70%;
+          }
+          .background img {
+            height: 90%;
           }
         }
       }
@@ -140,4 +160,4 @@ const BFImage = () =>
     `}</style>
   </div>
 
-export default BFImage
+export default PlusImage

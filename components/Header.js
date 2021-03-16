@@ -41,10 +41,7 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
         <div className='left'><Link href='/blog'><a>
           Blog
         </a></Link></div>
-        <div className='left'><Link href='/contact' as='/contato'><a>
-          Contato
-        </a></Link></div>
-        <div className='left'><a href='https://app.kria.vc/agents/users/offers/210'>
+        <div className='left'><a href='https://app.kria.vc/agents/users/offers/210' target='_blank'>
           Investir
         </a></div>
       </div>

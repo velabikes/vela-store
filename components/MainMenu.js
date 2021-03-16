@@ -14,6 +14,9 @@ const MainMenu = () =>
       <li><Link href='/store' as='/loja'><a>
         Acessórios
       </a></Link></li>
+      <li><Link href='/parts' as='/pecas'><a>
+        Peças
+      </a></Link></li>
       {/* <li><Link href='/network/stores' as='/rede/lojas'><a>
         Nossas lojas
       </a></Link></li> */}
@@ -35,7 +38,7 @@ const MainMenu = () =>
       <li><Link href='/contact' as='/contato'><a>
         Contato
       </a></Link></li>
-      <li><a href='https://app.kria.vc/agents/users/offers/210'>
+      <li><a href='https://app.kria.vc/agents/users/offers/210' target='_blank'>
         Investir
       </a></li>
     </ul>
