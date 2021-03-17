@@ -2,7 +2,7 @@ import { compose, withProps, withHandlers } from 'recompose'
 import PropTypes from 'prop-types'
 import Link from 'next/link'
 import { toggleDrawer } from '../lib/redux'
-import { white, offWhite, lightGreen } from '../style/colors'
+import { white, offWhite, lightGreen, offBlack } from '../style/colors'
 import withOpenDrawer from '../containers/withOpenDrawer'
 import Cart from './store/Cart'
 import HeaderDrawer from './HeaderDrawer'
@@ -26,27 +26,24 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
         <div className='left'><Link href='/vela'><a>
           Vela 2
         </a></Link></div>
+        <div className='left'><Link href='/velaplus' as='/velamais'><a>
+          Vela+
+        </a></Link></div>
         <div className='left'><Link href='/store' as='/loja'><a>
           Acessórios
-        </a></Link></div>
-        <div className='left'><Link href='/store/parts' as='/loja/pecas'><a>
-          Peças
         </a></Link></div>
         <div className='left'><Link href='/network/map' as='/rede/mapa'><a>
           Rede
         </a></Link></div>
-        <div className='left'><Link href='/blog'><a>
-          Blog
-        </a></Link></div>
-        <div className='left'><Link href='/contact' as='/contato'><a>
-          Contato
-        </a></Link></div>
-        <div className='left'><a href='https://app.kria.vc/agents/users/offers/210'>
-          Investir
-        </a></div>
         <div className='left'><Link href='/testride'><a>
           Test-ride
         </a></Link></div>
+        <div className='left'><Link href='/blog'><a>
+          Blog
+        </a></Link></div>
+        <div className='left'><a href='https://app.kria.vc/agents/users/offers/210' target='_blank'>
+          Investir
+        </a></div>
       </div>
       <div className='right'>
         <HeaderMenu />
@@ -66,7 +63,7 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
         right: 0;
         z-index: 1001;
         width: 100%;
-        background-color: rgba(45, 45, 45, 0.9)
+        background-color: ${offBlack};
       }
       .app-content {
         margin-top: 3.5rem;
@@ -119,7 +116,7 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
         }
         .top .left {
           display: flex;
-          padding: 0 1rem;
+          padding: 0 1.2rem;
         } 
         .right {
           right: 0;

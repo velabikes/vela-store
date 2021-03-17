@@ -6,25 +6,25 @@ import { CloseIcon } from '../Icons'
 
 const Pop = () => {
   const [closed, setClosed] = useState(false)
-  if (closed) return false
+  if (closed) return true
 
   return (
     <div className='Pop'>
       <div className='close'>
-        <CloseIcon background={offWhite} onClick={() => setClosed(true)} />
+        <CloseIcon color={offBlack} onClick={() => setClosed(true)} />
       </div>
-      <h3>Aviso loja de São Paulo!</h3>
-      <p>Por conta da segunda onda do COVID-19, nossa loja está funcionando apenas com horário agendado. Mande uma mensagem no chat.</p>
-      <p><small>O <b>atendimento online</b> e <b>serviço Leva & Traz</b> seguem normais de seg à sex das 10h às 18h!</small></p>
+      <h3>Aviso!</h3>
+      <h6>Por conta da segunda onda do COVID-19, nossas lojas estão fechadas até 30/03.</h6>
+      <p><small>O <b>atendimento online</b> segue de seg à sex das 10h às 18h.</small></p>
       <style jsx>{`
     .Pop {
         background-color: ${velaYellow};
         padding: 2em;
         position: fixed;
         right: 2em;
-        bottom: 3em;
+        bottom: 2em;
         z-index: 3;
-        max-width: 15em;
+        max-width: 14em;
     }
     h3 {
       color: ${offBlack};

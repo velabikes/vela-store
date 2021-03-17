@@ -39,8 +39,8 @@ const BlogPostPage = ({ cover, title, teaser, body, post_date }) =>
 
       @media only screen and (min-width: 768px) {
       .PostBody {
-        margin: 0 auto;
-        max-width: 60%;
+        margin: 1em auto 0 auto;
+        max-width: 70%;
       }
       .PostBody :global(img) {
           margin: 1em 0;

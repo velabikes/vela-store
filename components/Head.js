@@ -53,7 +53,6 @@ const CustomHead = props =>
         text-transform: none;
         font-style: normal;
         line-height: 1.5em;
-        padding-bottom: 1rem;
       }
       h1 {
         font-size: 2rem;
@@ -65,10 +64,13 @@ const CustomHead = props =>
         font-size: 1.2rem;
       }
       h4 {
-        font-size: 1rem;
+        font-size: 1.1rem;
       }
       h5 {
         font-size: 1rem;
+      }
+      h6 {
+        font-size: 0.9rem;
       }
       section h1, nav h1 {
         font-size: 2rem;

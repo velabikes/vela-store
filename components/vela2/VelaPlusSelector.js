@@ -1,18 +1,10 @@
 import Price from '../Price'
 import withCollectionByHandle from '../../containers/withCollectionByHandle'
-import { offWhite, lightGreen, white, velaRed } from '../../style/colors'
+import { offWhite, lightGreen, white, velaRed, velaGreen } from '../../style/colors'
 import { AddIcon, CloseIcon } from '../Icons'
 
-const rackmap = {
-    P: 0,
-    BM: 0,
-    RM: 0,
-    G: 2,
-    GG: 1
-}
-
-const Item = ({ node: { title, images, variants, handle }, onSelect, selected, model }) => {
-  const variantIndex = handle === 'bagageiro-traseiro' ? rackmap[model.size] : 0
+const ServiceItem = ({ node: { title, images, variants, handle }, onSelect, selected }) => {
+  const variantIndex = handle === 'plano-anual-vela' ? 0 : 0
   const isSelected = selected.includes(variants.edges[variantIndex].node)
 
   return (
@@ -26,13 +18,15 @@ const Item = ({ node: { title, images, variants, handle }, onSelect, selected, m
       <Price value={variants.edges[0].node.priceV2.amount} />
       <style jsx>{`
         div {
-          max-width: 40%;
-          margin: 0.7em;
+          max-width: 100%;
+          margin: 0.7em 0;
           display: flex;
           flex-direction: column;
         }
         img {
           width: 100%;
+          height: 10em;
+          object-fit: cover;
           background-color: ${offWhite};
         }
         h4 {
@@ -61,37 +55,50 @@ const Item = ({ node: { title, images, variants, handle }, onSelect, selected, m
   )
 }
 
-const ExtraSelector = ({ collection, onSelect, selected, model }) => {
+const VelaPlusSelector = ({ collection, onSelect, selected }) => {
   if (!collection) return <p />
   if (!collection.products) return <p />
 
   return (
     <>
-      <h4>O que já está incluso?</h4>
-      <div className='core'>
-        <p>✔ Carregador padrão Vela</p>
-        <p>✔ Ferramentas essenciais</p>
-        <p>✔ Kit de paralamas</p>
-        <p>✔ Faróis integrados</p>
-        <p>✔ Mudflaps</p>
-      </div>
-      <h4>Personalize com mais acessórios:</h4>
-      <p>Adicione todos os ítens extras essenciais para Velejar com tranquilidade pela cidade:</p>
+      <h4>Proteja sua bike:</h4>
+      <p>Assine o pacote anual do <a href="/velamais" target="_blank">Plano Vela+</a> para ter ainda mais segurança e a melhor experiência.</p>
+      <div className="add">
+          <p>
+            <AddIcon style={{ width: "1.2em" }} />
+            Proteção contra roubo e furto
+          </p>
+          <p>
+            <AddIcon style={{ width: "1.2em" }} />
+            Notificações remotas
+          </p>
+          <p>
+            <AddIcon style={{ width: "1.2em" }} />
+            Rastreamento GPS
+          </p>
+          <p>
+            <AddIcon style={{ width: "1.2em" }} />
+            Descontos em produtos e serviços
+          </p>
+          <p>
+            <AddIcon style={{ width: "1.2em" }} />
+            Funções e atualizações exclusivas
+          </p>
+          <p>
+            <AddIcon style={{ width: "1.2em" }} />
+            Desconto em novas baterias
+          </p>
+          <p>
+            <AddIcon style={{ width: "1.2em" }} />
+            Benefícios com parceiros
+          </p>
+        </div>
       <div className='extraitems'>
-        {collection.products.edges
-          .filter(product => {
-            const filter =
-              model.frame === 'Reto'
-                ? 'bagageiro-dianteiro-1'
-                : 'bagageiro-dianteiro-bambu'
-
-            return product.node.handle !== filter
-          })
+      {collection.products.edges
           .map(product => (
-            <Item
+            <ServiceItem
               onSelect={onSelect}
               selected={selected}
-              model={model}
               {...product}
             />
           ))}
@@ -112,11 +119,24 @@ const ExtraSelector = ({ collection, onSelect, selected, model }) => {
             max-width: 100%;
             flex-wrap: wrap;
           }
+          .add {
+            padding: 1em 1em 0.5em 1em;
+            border-radius: 10px;
+            border: solid 2px ${velaGreen};
+            margin-top: 1em;
+            z-index: 2;
+          }
+          .add p {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            font-size: 0.8em;
+          }
         `}</style>
     </>
   )
 }
 
-export default withCollectionByHandle('essentials', {
-  filterUnavailable: true
-})(ExtraSelector)
+export default withCollectionByHandle('velaplus', {
+  filterUnavailable: false
+})(VelaPlusSelector)
