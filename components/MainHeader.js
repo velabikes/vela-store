@@ -4,7 +4,7 @@ import { offBlack } from '../style/colors'
 const MainHeader = ({ title, tagline }) =>
   <header className='MainHeader'>
     <h1>{title}</h1>
-    {tagline && <h3>{tagline}</h3>}
+    {tagline && <h2>{tagline}</h2>}
     <style jsx>{`
       .MainHeader {
         margin-bottom: 1.5rem;
@@ -12,7 +12,7 @@ const MainHeader = ({ title, tagline }) =>
       h1 {
         margin-bottom: 0;
       }
-      h3 {
+      h2 {
         color: ${offBlack};
       }
       p {

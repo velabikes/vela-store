@@ -57,7 +57,7 @@ const HomePage = ({ highlight }) =>
     <div className='home-store'>
       <a href='/blog'>
         <div className='store-title'>
-          <h3>Blog</h3>
+          <h3>Bons Ventos</h3>
         </div>
       </a>
     </div>
@@ -67,9 +67,7 @@ const HomePage = ({ highlight }) =>
       <PostHighlight post={highlight} />
       <HomeBanner />
     </PaddedView>
-    <PaddedView style={{backgroundColor: '#FFFEFE'}}>
-      <VelaPoint />
-    </PaddedView>
+    <VelaPoint />
     <style jsx>{`
       .HomePage {
         background-color: ${offWhite};
@@ -117,15 +115,15 @@ const HomePage = ({ highlight }) =>
         background-color: #272727;
         display: flex;
         justify-content: center;
-        margin-bottom: 3em;
+        margin-bottom: 2em;
       }
       .store-title {
         background-color: ${white};
         padding: 1em 2em 0.5em 2em;
         margin-bottom: -2em;
       }
-      .cta :global(button), .cta-bf :global(button) {
-        margin: 1em 0 1em 0;
+      .actions :global(button) {
+        margin: 1em 0 0 0;
       }
       @media only screen and (min-width: 768px) {
         h1 {
@@ -164,6 +162,9 @@ const HomePage = ({ highlight }) =>
           margin-top: 0rem;
           padding: 2em;
           z-index: 2;
+        }
+        .actions {
+          left: 0;
         }
         @media only screen and (min-width: 1300px) {
           .cta {

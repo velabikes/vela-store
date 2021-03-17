@@ -16,15 +16,13 @@ const Bar = ({ onContinue, extra, step, checkout }) => {
           <h2>
             {step === 1 && <Price value={7590} />}
             {step === 2 && <Price value={7590 + extra.reduce((a, b) => a + parseInt(b.priceV2.amount), 0)} />}
-            {step === 3 && <Price value={7590 + extra.reduce((c, d) => c + parseInt(d.priceV2.amount), 0)} />}
-            {step === 4 && 'Total:' && <Price value={checkout.totalPrice} />}
+            {step === 3 && 'Total:' && <Price value={checkout.totalPrice} />}
           </h2>
         </div>
         <div className='actions'>
           <Button primary onClick={onContinue}>
             {step === 1 ? 'Continuar' : 
               step === 2 ? 'Adicionar' :
-              step === 3 ? 'Adicionar' :
               checkout.lineItems.edges.length ? 'Finalizar' : 'Voltar'
             }
           </Button>

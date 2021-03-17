@@ -8,13 +8,10 @@ const MainMenu = () =>
       <li><Link href='/vela'><a>
         Vela 2
       </a></Link></li>
-      <li><Link href='/velamais'><a>
-        Vela+
-      </a></Link></li>
       <li><Link href='/store' as='/loja'><a>
         Acessórios
       </a></Link></li>
-      <li><Link href='/parts' as='/pecas'><a>
+      <li><Link href='/store/parts' as='/loja/pecas'><a>
         Peças
       </a></Link></li>
       {/* <li><Link href='/network/stores' as='/rede/lojas'><a>
@@ -29,18 +26,18 @@ const MainMenu = () =>
       <li><Link href='/network/map' as='/rede/mapa'><a>
         Rede
       </a></Link></li>
-      <li><Link href='/testride' as='/test-ride'><a>
-        Test-ride
-      </a></Link></li>
       <li><Link href='/blog'><a>
         Blog
       </a></Link></li>
       <li><Link href='/contact' as='/contato'><a>
         Contato
       </a></Link></li>
-      <li><a href='https://app.kria.vc/agents/users/offers/210' target='_blank'>
+      <li><a href='https://app.kria.vc/agents/users/offers/210'>
         Investir
       </a></li>
+      <li><Link href='/testride' as='/test-ride'><a>
+        Test-ride
+      </a></Link></li>
     </ul>
     <style jsx>{`
       h2 {

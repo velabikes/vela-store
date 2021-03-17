@@ -113,7 +113,7 @@ const Contact = () => (
         padding: 2em;
         text-align: center;
       }
-      .content img {
+      img {
         max-height: 60vh;
         object-fit: cover;
       }
@@ -146,11 +146,9 @@ const Contact = () => (
       }
       @media only screen and (min-width: 768px) {
         img {
-          max-width: 40%;
+          max-width: 30em;
           min-width: 0em;
-          height: calc(100vh - 3.5em);
-          object-fit: cover;
-          object-position: 20% 50%;
+          max-height: 40em;
         }
         .content {
           text-align: left;
@@ -194,9 +192,6 @@ const Contact = () => (
         .left-content {
           padding: 4em;
           text-align: right;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-end;
         }
         .right-content {
           padding: 4em;

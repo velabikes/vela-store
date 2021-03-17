@@ -29,7 +29,6 @@ const CartContent = ({ checkout }) =>
         overflow: auto;
         min-height: 0;
         max-width: 100%;
-        margin-top: 1em;
       }
       .items table {
         border-spacing: 0 1rem;

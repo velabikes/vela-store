@@ -3,7 +3,7 @@ import { white } from '../style/colors'
 import { Chevron } from './Icons'
 
 
-function Accordion({title, content, color, hoverColor, textColor}) {
+function Accordion({title, content}) {
     const [setActive, setActiveState] = useState("")
     const activeContent = useRef(null)
     const [setHeight, setHeightState] = useState("0px")
@@ -23,7 +23,7 @@ function Accordion({title, content, color, hoverColor, textColor}) {
      <button className={`accordion ${setActive}`} onClick={toggleAccordion}>
        <p className='title'>{title}</p>
        <div className={`${setRotate}`}>
-        <Chevron color={textColor} />
+        <Chevron/>
        </div>
      </button>
      <div ref={activeContent} style={{ maxHeight: `${setHeight}` }} className='content'>
@@ -38,8 +38,8 @@ function Accordion({title, content, color, hoverColor, textColor}) {
       }
 
       .accordion {
-        background-color: ${color};
-        color: ${textColor};
+        background-color: #3D4057;
+        color: ${white};
         cursor: pointer;
         padding: 1em;
         display: flex;
@@ -52,7 +52,7 @@ function Accordion({title, content, color, hoverColor, textColor}) {
 
       .accordion:hover,
       .active {
-        background-color: ${hoverColor};
+        background-color: #FFAF2D;
       }
 
       .title {
