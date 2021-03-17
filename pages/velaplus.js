@@ -39,7 +39,7 @@ const VelaPlus = ({checkout, checkoutLineItemsAdd, handleCheckoutCreation}) => {
         <link
           rel="alternate"
           hrefLang="pt-br"
-          href="https://velabikes.com.br/blackfriday"
+          href="https://velabikes.com.br/velamais"
         />
         <meta httpEquiv="content-language" content="pt-br" />
         <meta name="application-name" content="Vela Bikes Store" />
@@ -56,7 +56,7 @@ const VelaPlus = ({checkout, checkoutLineItemsAdd, handleCheckoutCreation}) => {
         />
         <meta
           name="twitter:image"
-          content="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Fblackfriday%2FBlackFridayVela2020.jpg?alt=media&token=c94e0d3f-5f5d-47eb-9b15-94d75bde074d"
+          content="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FPlanoVelaMais.png?alt=media&token=4a7061bc-bbc8-418c-af4b-ea0c8a3fc428"
         />
         <meta property="og:url" content="https://velabikes.com.br" />
         <meta property="og:type" content="website" />
@@ -68,7 +68,7 @@ const VelaPlus = ({checkout, checkoutLineItemsAdd, handleCheckoutCreation}) => {
         />
         <meta
           property="og:image"
-          content="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Fblackfriday%2FBlackFridayVela2020.jpg?alt=media&token=c94e0d3f-5f5d-47eb-9b15-94d75bde074d"
+          content="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FPlanoVelaMais.png?alt=media&token=4a7061bc-bbc8-418c-af4b-ea0c8a3fc428"
         />
       </Head>
       <PlusImage />
