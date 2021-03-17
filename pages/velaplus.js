@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import Head from "next/head";
 import { compose } from 'recompose'
 import withCheckoutLineItemsAdd from '../containers/withCheckoutLineItemsAdd'
@@ -12,6 +12,12 @@ import PlusImage from "components/velaplus/PlusImage";
 import ProtectionImage from "components/velaplus/ProtectionImage";
 
 const VelaPlus = ({checkout, checkoutLineItemsAdd, handleCheckoutCreation}) => {
+  const [mustRedirect, setMustRedirect] = useState(false)
+  useEffect(() => {
+    if (mustRedirect) {
+      window.location.replace(checkout.webUrl)
+    }
+  }, [mustRedirect, checkout])
   const handleVelaPlusCta = async () => {
     const checkoutId = await handleCheckoutCreation();
     await checkoutLineItemsAdd({
@@ -23,7 +29,7 @@ const VelaPlus = ({checkout, checkoutLineItemsAdd, handleCheckoutCreation}) => {
         }
       }
     })
-    window.location.replace(checkout.webUrl)
+    setMustRedirect(true)
   };
 
   return (
