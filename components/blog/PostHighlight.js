@@ -34,7 +34,6 @@ const PostHightlight = ({
     <style jsx>{`
       img {
         object-fit: cover;
-        min-height: 40vh;
         cursor: pointer;
       }
       h2 {
