@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import Head from 'next/head'
 import { compose } from 'recompose'
 import Display from '../components/vela2/Display'
@@ -7,92 +7,27 @@ import Bar from '../components/vela2/Bar'
 import AddedToCart from '../components/vela2/AddedToCart'
 import ModelSelector from '../components/vela2/ModelSelector'
 import ExtraSelector from '../components/vela2/ExtraSelector'
-import VelaPlusSelector from '../components/vela2/VelaPlusSelector'
 import Tab from '../components/vela2/Tab'
 import withCheckoutLineItemsAdd from '../containers/withCheckoutLineItemsAdd'
+import withCheckoutId from '../containers/withCheckoutId'
 import withCheckout from '../containers/withCheckout'
 import ModelData from '../components/vela2/ModelData'
 
-const initialValues = {
-	color: 'Verde',
-	size: 'P',
-	tire: 'Creme',
-};
-
-
 const Vela2 = ({ checkout, checkoutLineItemsAdd, handleCheckoutCreation }) => {
-  const [selectedModel, setSelectedModel] = useState(initialValues);
+  const [selectedModel, setSelectedModel] = useState({})
   const [selectedExtra, setSelectedExtra] = useState([])
   const [step, setStep] = useState(1);
-  const [loadedCheckout, setLoadedCheckout] = useState(false);
 
-  const { size, color, tire } = selectedModel
+  const { frame, size, color, tire } = selectedModel
   const selectedModelData =
-    ModelData[JSON.stringify({ size, color, tire })] || {}
-
-
-    useEffect(() => {
-      if (loadedCheckout) return;
-      if (!checkout) return;
-      const bikeIds = findBikeIdOnCheckout();
-      if (bikeIds.length > 0) {
-        const bike = getModelById(bikeIds[bikeIds.length - 1]);
-        setSelectedModel(bike);
-      }
-      setLoadedCheckout(true);
-    }, [checkout]);
-
-  
-    const findBikeIdOnCheckout = () => {
-      const modelIds = getAllModelIds();
-      const bikeIds = [];
-      for (let modelId of modelIds) {
-        const item = findItemOnCheckout(modelId);
-        if (item) {
-          bikeIds.push(modelId);
-        }
-      }
-  
-      return bikeIds;
-    };
-  
-  
-    const getAllModelIds = () => {
-      const models = [];
-      Object.keys(ModelData).forEach((model) => {
-        models.push(ModelData[model].id);
-      });
-  
-      return models;
-    };
-  
-    const getModelById = (id) => {
-      let bike;
-      Object.keys(ModelData).forEach((model) => {
-        if (ModelData[model].id === id) {
-          bike = model;
-        }
-      });
-  
-      return JSON.parse(bike);
-    };
-  
-    const findItemOnCheckout = (id) => {
-      return checkout.lineItems.edges.find(
-        (item) => item.node.variant.id === id
-      );
-    };
-  
+    ModelData[JSON.stringify({ frame, size, color, tire })] || {}
 
   const handleNext = async () => {
     if (step === 1) {
       setStep(2)
     }
-    if (step === 2) {
-      setStep(3)
-    }
 
-    if (step === 3) {
+    if (step === 2) {
       const checkoutId = await handleCheckoutCreation()
       await checkoutLineItemsAdd({
         variables: {
@@ -109,10 +44,10 @@ const Vela2 = ({ checkout, checkoutLineItemsAdd, handleCheckoutCreation }) => {
           ]
         }
       })
-      setStep(4)
+      setStep(3)
     }
 
-    if (step === 4) {
+    if (step === 3) {
       {checkout.lineItems.edges.length ? window.location.replace(checkout.webUrl) : setStep(1)}
     }
   }
@@ -154,16 +89,6 @@ const Vela2 = ({ checkout, checkoutLineItemsAdd, handleCheckoutCreation }) => {
               )
             }
           />
-          <VelaPlusSelector
-            model={selectedModel}
-            selected={selectedExtra}
-            onSelect={id =>
-              setSelectedExtra(
-                selectedExtra.includes(id)
-                  ? selectedExtra.filter(item => item !== id)
-                  : [...selectedExtra, id]
-              )}
-          />
           <AddedToCart onStep={setStep} />
         </Tab>
       </div>
@@ -174,9 +99,6 @@ const Vela2 = ({ checkout, checkoutLineItemsAdd, handleCheckoutCreation }) => {
         step={step}
       />
       <style jsx>{`
-        .mobiledisplay {
-          margin-top: 10em;
-        }
         @media only screen and (min-width: 768px) {
           .content {
             display: flex;

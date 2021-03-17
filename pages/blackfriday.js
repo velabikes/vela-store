@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import { compose } from "recompose";
 import Head from "next/head"
 import Accordion from "../components/Accordion"
-import { offBlack, offWhite, white } from "../style/colors"
+import { offBlack, offWhite } from "../style/colors"
 import BFImage from "../components/blackfriday/BFImage"
 import QuoteImage from "../components/blackfriday/QuoteImage"
 import FooterImage from "../components/blackfriday/FooterImage"
@@ -130,44 +130,27 @@ return (
         </div>
         </PaddedView>
         <div className='questions'>
-            <PaddedView>
             <h2>Possui dúvidas?</h2>
             <Accordion 
-                color='#3D4057'
-                hoverColor='#FFAF2D'
-                textColor={white}
                 title='1. Qual o período que a promoção estará ativa?'
                 content='Apenas na sexta-feira de Black Friday do dia 27 de novembro das 12:01 às 23:59.'
             />
             <Accordion 
-                color='#3D4057'
-                hoverColor='#FFAF2D'
-                textColor={white}
                 title='2. Reservando agora, quando recebo a minha Vela 2?'
                 content='As primeiras entregas do plano anual de aluguel serão realizadas em fevereiro de 2021 na ordem dos pedidos. Como a expectativa é de receber muitos pedidos nessa promoção, o prazo pode ser maior para as pessoas que fizerem os pedidos por último. Portanto seja um(a) dos(as) primeiros(as)! Durante o mês de dezembro de 2020, nossa equipe deve entrar em contato com todos e passar uma data prevista para a produção da sua Vela 2.'
             />
-            <Accordion
-                color='#3D4057'
-                hoverColor='#FFAF2D'
-                textColor={white}
+            <Accordion 
                 title='3. O que está incluso no pacote de aluguel?'
                 content='12 meses de uma unidade da Vela 2, nova em folha, na cor, tamanho e geometria da sua preferência. Todas as unidades serão entregues com o Plano Vela+ Simples ativo por 12 meses que engloba a proteção contra roubo e furto, GPS, atualizações exclusivas e muito mais. Os serviços de revisão, manutenção e substituição de peças consumíveis não serão cobrados durante o período de locação, desde que realizados pela Vela nas cidades de São Paulo ou Curitiba.'
             />
             <Accordion 
-                color='#3D4057'
-                hoverColor='#FFAF2D'
-                textColor={white}
                 title='4. E se eu não optar pela compra após 1 ano?'
                 content='Em 30 dias antes do término do período dos 12 meses de locação, nossa equipe vai entrar em contato para verificar o interesse na compra da Vela 2, caso não haja interesse, nesse mesmo contato agendaremos a retirada da sua bicicleta, sem custo para as cidades de São Paulo e Curitiba.'
             />
             <Accordion 
-                color='#3D4057'
-                hoverColor='#FFAF2D'
-                textColor={white}
                 title='5. Não moro em São Paulo ou Curitiba, ainda posso participar?'
                 content='Claro! A promoção será válida para todo o Brasil, porém será cobrada uma taxa de R$ 245,00 por cada trecho de transporte, como: entrega inicial, manutenções e devoluções.'
             />
-            </ PaddedView>
         </div>
         <div className='cover'>
             <FooterImage />
@@ -217,7 +200,7 @@ return (
             text-align: center;
         }
         .questions {
-            padding: 2em 2em 0 2em;
+            padding: 2em;
             background-color: #1A3546;    
         }
         .cta h2 {

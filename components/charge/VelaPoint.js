@@ -1,59 +1,79 @@
-import Section from 'components/Section'
-import SectionHeader from 'components/SectionHeader'
-import Button from 'components/Button'
+import Button from "components/Button";
+import SectionHeader from "components/SectionHeader";
 
-const VelaPoint = () =>
-  <Section>
-    <div className='PointBanner'>
-      <div className='BannerTitle'>
+const VelaPoint = () => (
+  <div className="content">
+    <div className="PointFigure">
+      <div className="PointContent">
         <SectionHeader
-          title="Conheça agora a Rede Vela e pedale sem preocupações!"
-          tagline="No mapa de serviços você encontra as lojas da Vela, pontos de recarga pela cidade e assistência autorizada."
+          title="Rede de Serviços"
+          tagline="Confira nosso mapa para visitar as lojas da Vela, recarregar em pontos parceiros e ter assistência autorizada."
         />
         <p>
-          Entregamos em todo o país e contamos com apoio de diversos parceiros para te ajudar. Descubra os mais próximos de você.
+          Entregamos em todo o Brasil, com diversos locais de apoio para você velejar com tranquilidade. Conheça agora os mais próximos de você.
         </p>
         <a href="/rede/mapa">
           <Button primary>Onde encontrar</Button>
         </a>
       </div>
-      <div className='BannerImage'>
-        <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FRedeVela.png?alt=media&token=d63d5018-1ab5-4874-b5f3-7cc623619a41' alt='Rede de serviços Vela' />
+      <div className="FigureWrapper">
+        <a href="/rede/mapa">
+          <img
+            src="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FRedeVela.png?alt=media&token=d63d5018-1ab5-4874-b5f3-7cc623619a41"
+            alt="Rede Vela"
+          />
+        </a>
       </div>
-      <style jsx>{`
-      .PointBanner {
-        position: relative;
-        display: flex;
-        flex-direction: column-reverse;
+    </div>
+    <style jsx>{`
+      .content {
+        background-color: #ffffff;
+        padding: 1em;
       }
-      .BannerTitle {
-        padding: 20px 0;
-        text-align: center;
+      .FigureWrapper {
         display: flex;
-        width: 100%;
         flex-direction: column;
-        justify-content: center;
+        margin-bottom: 1em;
       }
-      .BannerTitle :global(button) {
-        margin-top: 1em;
+      .FigureWrapper img {
+        max-width: 100%;
+      }
+      .PointFigure {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 2em 0em;
+      }
+      .PointContent {
+        text-align: center;
+        padding: 1em;
+      }
+      .PointContent :global(button) {
+        margin: 1em 0 0 0;
       }
       @media only screen and (min-width: 768px) {
-        .PointBanner {
+        .FigureWrapper {
+          justify-content: center;
+          align-items: center;
+        }
+        .FigureWrapper img {
+          max-width: 80%;
+        }
+        .PointFigure {
           flex-direction: row;
-          justify-content: space-around;
+          justify-content: center;
+          padding: 1em 0 1em 0;
         }
-        .BannerTitle {
-          width: 30%;
-          text-align: left;
-        }
-        .BannerImage img {
-          max-height: 562px;
-          width: auto;
-          margin-bottom: 1em;
+        .PointContent {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-end;
+          max-width: 20rem;
+          text-align: right;
         }
       }
     `}</style>
-    </div>
-  </Section>
-
-export default VelaPoint
+  </div>
+);
+export default VelaPoint;

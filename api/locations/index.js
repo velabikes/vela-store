@@ -154,6 +154,21 @@ module.exports = async (req, res) => {
         type: ['charger']
       },
       {
+        name: 'Seu Chalita o Árabe',
+        address: [
+          'Rua Tabapuã, 592',
+          'Itaim Bibi, São Paulo',
+          'SP, 04533-002, Brasil'
+        ],
+        phone: '(11) 2361-9936',
+        pos: {
+          lat: -23.5832047,
+          lng: -46.6763248
+        },
+        googlePlace: 'ChIJ7-_Fxl1XzpQRDHUgRm86x9A',
+        type: ['charger']
+      },
+      {
         name: 'De Lá Do Pão',
         address: [
           'Rua Harmonia, 1158',
@@ -399,11 +414,11 @@ module.exports = async (req, res) => {
         ],
         phone: '(11) 5539-0125',
         pos: {
-          lat: -23.587214,
-          lng: -46.640451
+          lat: 	-23.5857730197085,
+          lng: -46.63915891970849
         },
         googlePlace: 'ChIJIdkhwIdZzpQRI1U5jULyGwY',
-        type: ['charger','parking']
+        type: ['charger']
       },
       {
         name: 'O Pudim Perfeito',
@@ -622,7 +637,7 @@ module.exports = async (req, res) => {
           lng: -46.781424
         },
         googlePlace: 'ChIJbYBYc6bLyZQRR_tQCYahjaE',
-        type: ['service',  'charger']
+        type: ['service']
       },
       {
         name: 'Vila Velô',
@@ -869,6 +884,21 @@ module.exports = async (req, res) => {
         type: ['parking']
       },
       {
+        name: 'Lev Bicicletas',
+        address: [
+          'Rua Clodomiro Amazonas, 988',
+          'Vila Nova Conceição, São Paulo',
+          'SP, 04537-002 Brasil'
+        ],
+        phone: '(21) 98225-6445',
+        pos: {
+          lat: -23.59428,
+          lng: -46.6791787
+        },
+        googlePlace: 'ChIJjX4kiVBXzpQRXAlPyyM2-Xs',
+        type: ['parking']
+      },
+      {
         name: 'Xandy Molina',
         address: [
           'Rua Costa Carvalho, 521',
@@ -896,6 +926,21 @@ module.exports = async (req, res) => {
           lng: -46.6867291
         },
         googlePlace: 'ChIJVVXps-pXzpQRpIv1Tu36McI',
+        type: ['parking']
+      },
+      {
+        name: 'Everybike',
+        address: [
+          'Rua Franca Pinto, 421',
+          'Vila Mariana, São Paulo',
+          'SP, 05437-000 Brasil'
+        ],
+        phone: '(11) 99537-7036',
+        pos: {
+          lat: -23.5874164,
+          lng: -46.6424013
+        },
+        googlePlace: 'ChIJjW_iwIdZzpQR4rW4BkK6MMs',
         type: ['parking']
       },
       {
@@ -933,6 +978,7 @@ module.exports = async (req, res) => {
           'Pinheiros, São Paulo',
           'SP, 05415-011, Brasil'
         ],
+        phone: '(11) 4200-4950',
         open: true,
         hours: [
           ['Seg', 'Fechado'],
@@ -944,8 +990,8 @@ module.exports = async (req, res) => {
           ['Dom', '10:00 – 19:00']
         ],
         pos: {
-          lat: -23.563341,
-          lng: -46.682386
+          lat: -23.5633357,
+          lng: -46.6845747
         },
         googlePlace: 'ChIJL-xzGGFXzpQR_X4Kin8W9lQ',
         type: ['store', 'charger']

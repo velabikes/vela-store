@@ -247,9 +247,6 @@ const Invest = () => (
         .left-content {
           padding: 4em;
           text-align: right;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-end;
         }
         .right-content {
           padding: 4em;
@@ -258,6 +255,7 @@ const Invest = () => (
         .models-content {
           margin: 0 auto; 
           padding: 2em;
+          background-color: 
         }
         .models {
           flex-direction: row;
