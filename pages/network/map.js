@@ -18,6 +18,9 @@ const LocationsMapPage = ({ locations }) =>
         left: 0;
         bottom: 0;
       }
+      :global(footer){
+        display: none;
+      }
     `}</style>
   </div>
 

@@ -74,7 +74,7 @@ Blog.getInitialProps = async ({ req }) => {
   const api = await getPrismic(req)
   const { results } = await api.query(
     Predicates.at('document.type', 'blog_post'),
-    { pageSize: 30, orderings: '[my.blog_post.post_date desc]' }
+    { pageSize: 16, orderings: '[my.blog_post.post_date desc]' }
   )
   const posts = results.slice()
   posts.shift()

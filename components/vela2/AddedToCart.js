@@ -7,13 +7,12 @@ const AddedToCart = ({ checkout }) => {
   return (
     <div>
       <h3>Itens adicionados ao carrinho!</h3>
-      <h5>Reserve sua Vela 2 e pague o restante apenas quando ela ficar pronta.</h5>
+      <h5>Finalize agora o pedido da sua Vela 2!</h5>
       <div className='conditions'>
-        <p>1. Pague agora R$ 100,00 adiantados (mais quaisquer acessórios e/ou custos de frete).</p>
-        <p>2. Cobraremos os <b>R$ 7.490,00</b> restantes apenas quando sua bike estiver para ser entregue.</p>
-        <p>3. Sem taxas adicionais surpresas - <i>o valor total é o mesmo.</i></p>
-        <p>4. A reserva é reembolsável a qualquer momento antes da entrega.</p>
-        <p>5. Possui alguma dúvida? Envie uma mensagem no chat em azul à direita da tela!</p>
+        <p>1. A Vela é feita sob medida, o prazo atual é de até 3 meses para produção e entrega.</p>
+        <p>2. Possui alguma dúvida? Envie uma mensagem no chat em azul à direita da tela!</p>
+        <p>3. Quer saber mais sobre a V2? Acesse nossa FAQ.</p>
+        <p>4. Você receberá o status de acompanhamento do seu pedido por e-mail.</p>
       </div>
       <p>Aceitamos pagamentos pelo <b>PayPal</b> (parcele em até 12x sem juros no cartão de crédito) ou pelo Coinbase com criptomoedas.</p>
       {checkout && !checkout.lineItems.edges.length ? 

@@ -41,7 +41,7 @@ const Invest = () => (
           </p>
         </div>
       </div>
-      <div className="values">
+      <div className="section">
         <div className="left">
           <img
             src="https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/dae5968e-1ec7-457a-86f7-ae082ca4c460.jpg"
@@ -153,9 +153,10 @@ const Invest = () => (
         text-align: center;
         padding: 2em 1em;
       }
-      .values {
+      .section {
         display: flex;
         flex-direction: column;
+        padding-top: 1em;
       }
       .left {
         display: flex;
@@ -167,8 +168,8 @@ const Invest = () => (
         text-align: center;
       }
       .right {
-        display: flex;
         margin: 1em 0;
+        display: flex;
         flex-direction: column-reverse;
       }
       .right-content {
@@ -222,39 +223,6 @@ const Invest = () => (
           flex: 1 1 45%;
           max-width: 20em;
         }
-        .values {
-          flex-direction: column;
-          padding-top: 2em;
-          padding-bottom: 2em;
-          align-items: stretch;
-        }
-        .left {
-          flex-direction: row-reverse;
-          margin-bottom: 2em;
-        }
-        .values img {
-          max-width: 32em;
-          max-height: 25em;
-          object-fit: contain;
-        }
-        .values p, .values h4 {
-          width: 16em;
-        }
-        .right {
-          flex-direction: row-reverse;
-          align-self: start;
-        }
-        .left-content {
-          padding: 4em;
-          text-align: right;
-          display: flex;
-          flex-direction: column;
-          align-items: flex-end;
-        }
-        .right-content {
-          padding: 4em;
-          text-align: left;
-        }
         .models-content {
           margin: 0 auto; 
           padding: 2em;
@@ -298,6 +266,53 @@ const Invest = () => (
           margin-top: 2em;
           z-index: 1;
         }
+        .section {
+          flex-direction: column;
+          align-items: center;
+          padding: 0;
+        }
+        .left {
+          flex-direction: row-reverse;
+          margin-top: 1em;
+          margin-bottom: 1em;
+        }
+        .section img {
+          width: 22em;
+          height: 22em;
+          object-fit: cover;
+        }
+        .section p, .section h4 {
+          width: 16em;
+        }
+        .right {
+          flex-direction: row-reverse;
+        }
+        .left-content {
+          padding: 3em 4em 2em 2em;
+          text-align: right;
+          display: flex; 
+          flex-direction: column;
+          align-items: flex-end;
+        }
+        .right-content {
+          padding: 3em 2em 2em 4em;
+          text-align: left;
+        }
+      }
+      @media only screen and (min-width: 1200px) {
+        .section {
+          padding-top: 2em;
+          align-items: stretch;
+        }
+        .right {
+          align-self: start;
+        }
+        .section img {
+          width: 32em;
+          height: 25em;
+          object-fit: cover;
+        }
+      }
       }  
     }
     `}</style>

@@ -71,7 +71,7 @@ const Footer = () => (
                 </Link>
               </li>
               <li>
-                <a href="https://velabikes.freshdesk.com/support/home">
+                <a href="https://velabikes.freshdesk.com/support/home" target="_blank">
                   FAQ
                 </a>
               </li>

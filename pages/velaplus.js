@@ -401,6 +401,7 @@ const VelaPlus = ({checkout, checkoutLineItemsAdd, handleCheckoutCreation}) => {
         }
         .action {
           margin-top: 2em;
+          margin-bottom: 1em;
         }
         .models-content {
           padding: 2em;
@@ -464,7 +465,11 @@ const VelaPlus = ({checkout, checkoutLineItemsAdd, handleCheckoutCreation}) => {
         }
         .legal h3 {
           color: ${offBlack};
+        }
+        .docs h3 {
+          color: ${offBlack};
           margin-bottom: 1em;
+          margin-top: 1em;
         }
         .app {
           display: flex;
@@ -569,6 +574,9 @@ const VelaPlus = ({checkout, checkoutLineItemsAdd, handleCheckoutCreation}) => {
           }
           .legal {
             padding: 3em 1em 1em 1em;
+          }
+          .docs h3 {
+            margin-top: 0;
           }
           .legal-container {
             flex-direction: row;
