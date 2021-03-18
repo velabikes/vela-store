@@ -14,7 +14,7 @@ const MainMenu = () =>
       <li><Link href='/store' as='/loja'><a>
         Acessórios
       </a></Link></li>
-      <li><Link href='/parts' as='/pecas'><a>
+      <li><Link href='/store/parts' as='/loja/pecas'><a>
         Peças
       </a></Link></li>
       {/* <li><Link href='/network/stores' as='/rede/lojas'><a>

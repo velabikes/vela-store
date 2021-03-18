@@ -40,7 +40,7 @@ const Contact = () => (
         <h3>E-mail:</h3>
         <h4>
           <a href="mailto:contato@velabikes.com.br">contato@velabikes.com.br</a>
-          <br />Respondemos sua solicitação em até <b>72 horas</b>.
+          <br />Iremos responder sua solicitação em até <b>72 horas</b>.
         </h4>
         <br />
         <h3>Chat:</h3>
@@ -68,7 +68,7 @@ const Contact = () => (
       </div>
     </div>
     <PaddedView>
-      <div className="values">
+      <div className="section">
         <div className="left">
           <img
             src="https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/e28953c8-5547-4bf1-8acf-521f38934af8.png"
@@ -76,7 +76,7 @@ const Contact = () => (
           />
           <div className="left-content">
             <h2>FAQ</h2>
-            <h4>Confira nosso banco de informações para uma solução imediata</h4>
+            <h4>Confira as perguntas frequentes para uma resposta imediata</h4>
             <p>
               Muitas vezes, sua dúvida é similar a de outros Velejadores que já
               visitaram nosso site. Veja quais são os{" "}
@@ -122,9 +122,10 @@ const Contact = () => (
         padding: 2em;
         margin: 0 auto;
       }
-      .values {
+      .section {
         display: flex;
         flex-direction: column;
+        padding-top: 1em;
       }
       .left {
         display: flex;
@@ -136,8 +137,8 @@ const Contact = () => (
         text-align: center;
       }
       .right {
-        display: flex;
         margin: 1em 0;
+        display: flex;
         flex-direction: column-reverse;
       }
       .right-content {
@@ -145,12 +146,12 @@ const Contact = () => (
         text-align: center;
       }
       @media only screen and (min-width: 768px) {
-        img {
+        .main img {
           max-width: 40%;
-          min-width: 0em;
-          height: calc(100vh - 3.5em);
+          min-width: 2em;
+          max-height: calc(100vh - 3.5em);
           object-fit: cover;
-          object-position: 20% 50%;
+          object-position: 80% 50%;
         }
         .content {
           text-align: left;
@@ -168,41 +169,54 @@ const Contact = () => (
           flex-direction: row;
           justify-content: space-between;
         }
-        .values {
+        .section {
           flex-direction: column;
-          padding-top: 2em;
-          padding-bottom: 2em;
-          align-items: stretch;
+          align-items: center;
+          padding: 0;
         }
         .left {
           flex-direction: row-reverse;
-          margin-bottom: 2em;
+          margin-top: 1em;
+          margin-bottom: 1em;
         }
-        .values img {
-          max-width: 32em;
-          max-height: 25em;
-          object-fit: contain;
+        .section img {
+          width: 22em;
+          height: 22em;
+          object-fit: cover;
         }
-        .values p,
-        .values h4 {
+        .section p, .section h4 {
           width: 16em;
         }
         .right {
           flex-direction: row-reverse;
-          align-self: start;
         }
         .left-content {
-          padding: 4em;
+          padding: 3em 4em 2em 2em;
           text-align: right;
-          display: flex;
+          display: flex; 
           flex-direction: column;
           align-items: flex-end;
         }
         .right-content {
-          padding: 4em;
+          padding: 3em 2em 2em 4em;
           text-align: left;
         }
       }
+      @media only screen and (min-width: 1200px) {
+        .section {
+          padding-top: 2em;
+          align-items: stretch;
+        }
+        .right {
+          align-self: start;
+        }
+        .section img {
+          width: 32em;
+          height: 25em;
+          object-fit: cover;
+        }
+      }
+
     `}</style>
   </div>
 );

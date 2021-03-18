@@ -35,10 +35,10 @@ const HomePage = ({ highlight }) =>
       <HomeImage />
       <div className='cta-bf'>
         <div className='slogan'>
-          <h1>Reserve hoje, sua Vela 2 de amanhã</h1>
-          <h3>Está receoso em esperar?</h3>
-          <h4>Você paga apenas <b>R$ 100,00</b> para reservar e os R$ 7.490,00 restantes no momento da entrega.</h4>
-          <a href='/vela2'><Button primary>Reserve a sua</Button></a>
+          <h1>Smartbike Vela 2</h1>
+          <h3>Pedale junto com a gente para cidades mais saudáveis</h3>
+          <h4>A bicicleta elétrica e smart para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes, sem abrir mão do design.</h4>
+          <a href='/vela2'><Button primary>Monte a sua</Button></a>
         </div>
       </div>
     </div>
