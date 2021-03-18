@@ -36,7 +36,7 @@ const Vela = () =>
         </div>
         <div className='actions'>
           <a href='/vela2'>
-            <Button primary>Reserve a sua</Button>
+            <Button primary>Monte a sua</Button>
           </a>
         </div>
       </div>
@@ -70,7 +70,7 @@ const Vela = () =>
             <p>Tenha toda a assistência necessária para pedalar sem qualquer esforço, mesmo nas maiores inclinações.</p>
             <div className='actions'>
               <a href='/vela2'>
-                <Button primary>Reserve a sua</Button>
+                <Button primary>Monte a sua</Button>
               </a>
             </div>
           </div>
@@ -82,14 +82,14 @@ const Vela = () =>
     </PaddedView>
     <div className='image-cut'>
       <a href="/vela2">
-        <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FTecnologiaVela2.jpg?alt=media&token=c8699709-d160-42bc-bc1c-c2c6a9310838' alt='Vela Bikes' />
+        <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FSmartbikeVelaBike.jpg?alt=media&token=45e92ba1-b417-4536-8b66-6347d7d272bf' alt='Vela Bike Elétrica Smart' />
       </a>
       <div className='tagline'>
         <h2>Tecnologia e design nunca estiveram tão próximos</h2>
-        <h4>O design minimalista da Vela é a prova de que bikes elétricas podem reunir tecnologia de ponta, usabilidade e beleza. </h4>
+        <h4>O design minimalista da Vela é a prova de que bikes elétricas podem reunir tecnologia de ponta e beleza. </h4>
         <div className='actions'>
           <a href='/vela2'>
-            <Button primary>Reserve a sua</Button>
+            <Button primary>Monte a sua</Button>
           </a>
         </div>
       </div>
@@ -132,7 +132,7 @@ const Vela = () =>
             <p>O aplicativo da Vela te acompanha pelo caminho, mostrando em tempo real as informações essenciais para velejar com tranquilidade.</p>
             <div className='actions'>
               <a href='/vela2'>
-                <Button primary>Reserve a sua</Button>
+                <Button primary>Monte a sua</Button>
               </a>
             </div>
           </div>
@@ -176,7 +176,7 @@ const Vela = () =>
             <p>A tranquilidade de pedalar com faróis automáticos integrados, conjunto completo de paralamas, manoplas ergonômicas e mudflaps.</p>
             <div className='actions'>
               <a href='/vela2'>
-                <Button primary>Reserve a sua</Button>
+                <Button primary>Monte a sua</Button>
               </a>
             </div>
           </div>
@@ -185,12 +185,14 @@ const Vela = () =>
           </a>
         </div>
       </div>
+      </PaddedView>
       <div className='specs'>
         <img src='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/4bb2a891-d7dd-4934-8625-259d8c2c1df2.jpg' alt='Especificações técnicas bike' />
         <div className='specs-content'>
-          <h2>Especificações</h2>
           <table className='table-specs'>
             <tbody>
+              <h2>Especificações</h2>
+              <hr/>
               <tr className='tr-specs'>
                 <td className='td-specs'>Quadro</td>
                 <td className='td-specs'>Aço liga 4130 CrMo - Chromoly - Total de 5 geometrias diferentes.</td>
@@ -247,50 +249,50 @@ const Vela = () =>
           </table>
         </div>
         <div className='specs-tech-content'>
-          <h2>Tecnologia</h2>
-          <table>
-            <tbody>
-              <tr>
-                <td>Velocidade máxima</td>
-                <td>25 km/h no modo Boost.</td>
-              </tr>
-              <tr>
-                <td>Autonomia</td>
-                <td>Até 60 km no modo Econômico. Média de 25km no modo Boost.</td>
-              </tr>
-              <tr>
-                <td>Bateria</td>
-                <td>Integrada de lítio e removível | 378Wh de capacidade | Tensão nominal 36V.</td>
-              </tr>
-              <tr>
-                <td>Carregador</td>
-                <td>126W | Recarga completa em até 3h | Compatível com recarga rápida.</td>
-              </tr>
-              <tr>
-                <td>Conectividade</td>
-                <td>Bluetooth 4.2, WiFi, GPS e GSM</td>
-              </tr>
-              <tr>
-                <td>Segurança</td>
-                <td>Alarme com sensor de movimento | Bloqueio eletromagnético | Notificações no app | Rastreamento GPS.</td>
-              </tr>
-              <tr>
-                <td>Aplicativo</td>
-                <td>Vela 2: iOS 14 + Android 10 | Configuração da Vela, mapa, modos de condução e atualizações de performance.</td>
-              </tr>
-              <tr>
-                <td>Motor</td>
-                <td>350W traseiro com frenagem regenerativa | Bafang </td>
-              </tr>
-              <tr>
-                <td>Garantia</td>
-                <td>Acessórios: 1 ano | Bateria: 2 anos | Quadro: 3 anos | Legal: 90 dias de acordo com o Código de Defesa do Consumidor (lei 8078/1990).  </td>
-              </tr>
-            </tbody>
-          </table>
-      </div>
+            <table>
+              <tbody>
+                <h2>Tecnologia</h2>
+                <hr/>
+                <tr>
+                  <td>Velocidade máxima</td>
+                  <td>25 km/h no modo Boost.</td>
+                </tr>
+                <tr>
+                  <td>Autonomia</td>
+                  <td>Até 60 km no modo Econômico. Média de 25km no modo Boost.</td>
+                </tr>
+                <tr>
+                  <td>Bateria</td>
+                  <td>Integrada de lítio e removível | 378Wh de capacidade | Tensão nominal 36V.</td>
+                </tr>
+                <tr>
+                  <td>Carregador</td>
+                  <td>126W | Recarga completa em até 3h | Compatível com recarga rápida.</td>
+                </tr>
+                <tr>
+                  <td>Conectividade</td>
+                  <td>Bluetooth 4.2, WiFi, GPS e GSM</td>
+                </tr>
+                <tr>
+                  <td>Segurança</td>
+                  <td>Alarme com sensor de movimento | Bloqueio eletromagnético | Notificações no app | Rastreamento GPS.</td>
+                </tr>
+                <tr>
+                  <td>Aplicativo</td>
+                  <td>Vela 2: iOS 14 + Android 10 | Configuração da Vela, mapa, modos de condução e atualizações de performance.</td>
+                </tr>
+                <tr>
+                  <td>Motor</td>
+                  <td>350W traseiro com frenagem regenerativa | Bafang </td>
+                </tr>
+                <tr>
+                  <td>Garantia</td>
+                  <td>Acessórios: 1 ano | Bateria: 2 anos | Quadro: 3 anos | Legal: 90 dias de acordo com o Código de Defesa do Consumidor (lei 8078/1990).  </td>
+                </tr>
+              </tbody>
+            </table>
+        </div>
     </div>
-    </PaddedView>
     <style jsx>{`
       .cover {
         position: relative;
@@ -445,13 +447,7 @@ const Vela = () =>
       }
       .plans-price {
         margin-top: auto;
-      }
-      .basic h3, .free h3 {
-        color: ${offBlack};
-      }
-      .full h3, .full p {
-        color: ${offWhite};
-      }
+      }https://images.prismic.io/velabikes/611f5e97-f3d5-4a10-8755-0cfc0b4e6a89_Frame+12.jpg?auto=compress,format&rect=0,0,3000,2000&w=3000&h=2000
       .specs {
         margin: 0 auto;
         display: flex;
@@ -463,26 +459,28 @@ const Vela = () =>
       }
       .specs img {
         max-width: 100%;
+        height: 50vh;
+        object-fit: cover;
       }
       .specs-content {
         background-color: ${white};
-        padding: 2em 2em 0 2em;
         text-align: left;
         align-self: center;
         display: flex;
+        padding: 1em 0 0 0;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
       }
       .specs-tech-content {
         background-color: ${offBlack};
-        padding: 2em 2em 0 2em;
         text-align: left;
         align-self: center;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
+        padding: 2em 0 0 0;
       }
       .table-specs {
         border-collapse: collapse;
@@ -503,17 +501,17 @@ const Vela = () =>
       }
     
       .tr-specs:nth-child(even) {
-        background: ${lightGray};
-      }
-    
-      .tr-specs:hover {
-        background: ${lightGray};
+        background: ${white};
       }
     
       table {
         border-collapse: collapse;
-        margin: 2em 0;
+        margin: 1em 0;
         font-size: 1em;
+      }
+
+      .specs-tech-content h2, .specs-content h2 {
+        margin: 0 1em;
       }
     
       th {
@@ -524,19 +522,30 @@ const Vela = () =>
       table tr td:last-child {
         text-align: left;
       }
-      th, td {
+      td {
         padding: 1em;
         font-size: 1em;
         color: ${offWhite};
         text-align: left;
+        width: 90%;
+      }
+
+      tr {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-tart;
+        padding: 1em;
       }
     
       tr:nth-child(even) {
-        background: ${darkGray};
+        background: ${offBlack};
       }
-    
-      tr:hover {
-        background: ${darkGray};
+      .specs-content table tr td:first-child {
+        font-weight: 600;
+      }
+      .specs-tech-content table tr td:first-child {
+        font-weight: 600;
       }
       .actions :global(button) {
         margin: 1em 0 0 0;
@@ -552,7 +561,7 @@ const Vela = () =>
           align-items: flex-end;
           text-align: right;
           right: 4em;
-          top: 2em;
+          top: 4em;
           padding: 1em 2em 2em 1em;
           background-color: ${white};
         }
@@ -570,25 +579,25 @@ const Vela = () =>
           padding: 0;
         }
         .section {
-          padding: 2em;
           flex-direction: column;
-          align-items: stretch;
+          align-items: center;
+          padding: 0;
         }
         .left {
           flex-direction: row-reverse;
-          margin-bottom: 2em;
+          margin-top: 1em;
+          margin-bottom: 1em;
         }
         .section img {
-          max-width: 32em;
-          max-height: 25em;
-          object-fit: contain;
+          width: 22em;
+          height: 22em;
+          object-fit: cover;
         }
         .section p, .section h4 {
           width: 16em;
         }
         .right {
           flex-direction: row-reverse;
-          align-self: start;
         }
         .left-content {
           padding: 3em 4em 2em 2em;
@@ -610,35 +619,35 @@ const Vela = () =>
           position: relative;
         }
         .tagline {
-          justify-content: flex-end;
-          align-items: flex-end;
-          top: 1em;
-          right: 0;
-          text-align: right;
+          justify-content: flex-start;
+          align-items: flex-start;
+          top: 4em;
+          left: 4em;
+          text-align: left;
           position: absolute;
-          max-width: 30em;
-          background-color: transparent;
+          max-width: 23em;
+          padding: 2em;
+          background-color: ${white};
         }
         .tagline h2 {
           margin-bottom: 1em;
-          color: ${white};          
+          color: ${offBlack};          
         }
         .tagline h4 {
           font-weight: 600;
-          color: ${white};    
+          color: ${offBlack};    
         }
         .app-img {
           display: flex;
-          align-items: flex-end;
-          justify-content: flex-start;
+          align-items: center;
+          justify-content: center;
           flex-direction: column;
           position: relative;
         }
         .app-content img {
-          max-width: 50%;
-          right: 25%;
-          top: -20em;
-          position: absolute;
+          max-width: 40em;
+          position: relative;
+          margin: -6em 0 -6em 0;
         }
         .app-bottom {
           display: flex;
@@ -650,11 +659,11 @@ const Vela = () =>
           flex-direction: column;
         }
         .app-content .section .right .right-content{
-          padding: 2em;
+          padding: 2em 0 2em 1em;
           margin: 0;
         }
         .app-content .section .left .left-content{
-          padding: 2em 2em 0 2em; 
+          padding: 2em 1em 0 1em; 
           margin: 0;
         }
         .bfunctions {
@@ -676,13 +685,55 @@ const Vela = () =>
         .specs {
           margin: 0 auto 0 auto;
         }
-        .specs-content, .specs-tech-content {
-          width: 100%
+        .specs img {
+          height: 50vh;
+          object-fit: contain;
+          background-color: #D5D5D5;
+          padding: 2em 0;
         }
-        .specs-tech-content td {
-          min-width: 275px;
+        .specs-content, .specs-tech-content {
+          width: 100%;
+          padding: 4em;
+        }
+        table, .table-specs {
+          width: 100%;
+          margin: 0 auto;
+        }
+        tr {
+          flex-direction: row;
+        }
+        .specs-content table tr td:first-child {
+          width: 25%;
+        }
+        .specs-content table tr td:last-child {
+          width: 75%;
+        }
+        .specs-tech-content table tr td:first-child {
+          width: 25%;
+        }
+        .specs-tech-content table tr td:last-child {
+          width: 75%;
         }
         @media only screen and (min-width: 1200px) {
+          .section {
+            padding-top: 2em;
+            align-items: stretch;
+          }
+          .right {
+            align-self: start;
+          }
+          .bfunction-content {
+            margin-top: 3em;
+          }
+          .section img {
+            width: 32em;
+            height: 25em;
+          }
+          .app-content img {
+            max-width: 50em;
+            position: relative;
+            margin: -12em 0 -12em 0;
+          }
           .plans-content{
             flex-direction: row;
             justify-content: space-between;
@@ -693,6 +744,16 @@ const Vela = () =>
           }
           .full, .free {
             padding: 2em;
+          }
+          .specs img {
+            height: 80vh;
+          }
+          
+          @media only screen and (min-width: 1800px) {
+            table, .table-specs {
+              width: 80%;
+              margin: 0 auto;
+            }
           }
         }
       }
