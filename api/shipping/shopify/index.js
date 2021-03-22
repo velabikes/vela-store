@@ -112,7 +112,11 @@ module.exports = async (req, res) => {
       )
     }
     else {
+<<<<<<< HEAD
       const totalShippingPrice = 24500 * Math.round(totalGrams / 26000) // Shipping price Vela
+=======
+      const totalShippingPrice = 25000 * Math.round(totalGrams / 26000) // Shipping price Vela
+>>>>>>> Fixing conflict
       return (
         res.end(JSON.stringify({
           rates: [{
