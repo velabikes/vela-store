@@ -24,7 +24,7 @@ const VelaPlus = ({checkout, checkoutLineItemsAdd, handleCheckoutCreation}) => {
       variables: {
         checkoutId,
         lineItems: {
-          variantId: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zOTI1Mjc5MjIxMzU1OQ==',
+          variantId: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zOTI3ODk3OTc0Mzc5OQ==',
           quantity: 1,
         }
       }
