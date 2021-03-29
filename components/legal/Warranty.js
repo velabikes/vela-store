@@ -10,7 +10,7 @@ const Warranty = () => (
         Por intermédio do presente termo de garantia das bicicletas elétricas
         modelo VELA, a VELA BIKES COMÉRCIO E SERVIÇOS DE BICICLETAS EIRELI -EPP,
         devidamente inscrita no CNPJ/MF sob no 20.430.806/0001-27, com sede na
-        rua Cunha Gago, 169, Pinheiros, São Paulo, SP, CEP 05421-100, doravante
+        Rua Joaquim Antunes 631, Pinheiros, São Paulo, SP, CEP 05421-100, doravante
         apenas “VELA” assegura o produto acima citado em favor do adquirente,
         nos seguintes e estritos termos:
       </p>

@@ -8,7 +8,7 @@ const TermsOfRent = () => (
     <Section>
       <p>
         VELA BIKE COMÉRCIO E SERVIÇOS DE BICICLETAS EIRELI “VELA”​, inscrita no
-        CNPJ sob no 20.430.806/0001-27, estabelecida na Rua Cunha Gago 169,
+        CNPJ sob no 20.430.806/0001-27, estabelecida na Rua Joaquim Antunes 631,
         Pinheiros, São Paulo – SP, CEP 05421-000, daqui adiante denominada
         “LOCADORA”, e do outro lado, o contratante do pacote de aluguel, daqui
         adiante denominado “LOCATÁRIO”.
@@ -346,7 +346,7 @@ const TermsOfRent = () => (
         para nele serem dirimidas quaisquer dúvidas oriundas do presente Termo.
         E, por assim estarem de acordo, as partes aceitam o presente Termo.
       </p>
-      <small>Revisado e atualizado em 27 de novembro de 2020.</small>
+      <small>Revisado e atualizado em 22 de março de 2021.</small>
     </Section>
   </div>
 );
