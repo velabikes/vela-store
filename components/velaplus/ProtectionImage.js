@@ -18,23 +18,6 @@ const ProtectionImage = () =>
       .desktop {
         display: none;
       }
-      .animatedBG {
-          animation: flashing 1s infinite;
-          position: absolute;
-          width: 100%;
-          height: 60vh;
-          z-index: 2;
-          background-color: #C0022F;
-      }
-      
-      @keyframes flashing {
-        0% {
-          opacity: 0.01;
-        }
-        100% {
-          opacity: 0.08;
-        }
-      }
       
       @media only screen and (min-width: 768px) {
           img {
@@ -48,9 +31,6 @@ const ProtectionImage = () =>
           .desktop {
             display: initial;
           }
-          .animatedBG {
-            height: 60vh;
-        }
         @media only screen and (min-width: 1200px) {
           div {
             justify-content: flex-start;
@@ -65,10 +45,6 @@ const ProtectionImage = () =>
           }
           .desktop {
           }
-          .animatedBG {
-            height: 100vh;
-        }
-        
       @media only screen and (min-width: 1680px) {
           img {
             max-height: 70%;

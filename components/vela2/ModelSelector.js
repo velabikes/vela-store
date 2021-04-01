@@ -49,7 +49,7 @@ const options = {
 		},
 		{
 			icon:
-				'https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelabikescom%2Fassets%2FL.png?alt=media&token=c61242d5-a6b5-445f-86d8-67ace2cbc123',
+				'https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelabikescom%2Fassets%2FM.png?alt=media&token=92ceac16-01b7-4d6e-bf0f-7db2a389e5d2',
 			label: '1.58 - 1.72m',
 			option: 'RM'
 		},
