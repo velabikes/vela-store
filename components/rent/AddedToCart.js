@@ -16,13 +16,15 @@ const AddedToCart = ({ checkout, checked, onCheck, toggleButton, activeButton })
       <p>Seu carrinho está vazio!</p> : 
       <h5>Revise os itens do pedido para finalizar:</h5>
       }
-      <div className='items'>
-        <table>
-          <tbody>
-            {checkout.lineItems.edges.map(item => <CartItem key={item.node.variant.id} item={item} />)}
-          </tbody>
-        </table>
-      </div>
+      {!checkout &&
+        <div className='items'>
+          <table>
+            <tbody>
+              {checkout.lineItems.edges.map(item => <CartItem key={item.node.variant.id} item={item} />)}
+            </tbody>
+          </table>
+        </div>
+      }
       <div>
         <label>
           <Checkbox

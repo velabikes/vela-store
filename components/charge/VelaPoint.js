@@ -3,7 +3,7 @@ import SectionHeader from 'components/SectionHeader'
 import Button from 'components/Button'
 
 const VelaPoint = () =>
-  <Section>
+  <>
     <div className='PointBanner'>
       <div className='BannerTitle'>
         <SectionHeader
@@ -24,7 +24,9 @@ const VelaPoint = () =>
       .PointBanner {
         position: relative;
         display: flex;
+        align-items: center;
         flex-direction: column-reverse;
+        justify-content: space-between;
       }
       .BannerTitle {
         padding: 20px 0;
@@ -43,17 +45,18 @@ const VelaPoint = () =>
           justify-content: space-around;
         }
         .BannerTitle {
-          width: 30%;
+          width: 35%;
           text-align: left;
         }
+        .BannerImage {
+          max-width: 60%;
+        }
         .BannerImage img {
-          max-height: 562px;
-          width: auto;
-          margin-bottom: 1em;
+          max-width: auto;
         }
       }
     `}</style>
     </div>
-  </Section>
+  </>
 
 export default VelaPoint

@@ -53,6 +53,9 @@ const PostHightlight = ({
           text-align: left;
           padding: 1em;
         }
+        img {
+          height: 100%;
+        }
       }
     `}</style>
   </Card>
