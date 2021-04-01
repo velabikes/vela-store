@@ -16,6 +16,9 @@ const HomeVideo = () =>
       }
 
       @media only screen and (min-width: 768px) {
+        .banner {
+          width: 100%;
+        }
         .banner video {
           width: 100%;
           height: 100vh;

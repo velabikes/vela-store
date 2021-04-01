@@ -7,12 +7,12 @@ import Button from 'components/Button'
 const CartContent = ({ checkout }) =>
   <section className='CartContent'>
     <h1>Carrinho</h1>
-    <div className='items'>
-        {checkout && checkout.lineItems.edges.map(item => <CartItem key={item.node.variant.id} item={item} />)}
-    </div>
-    <hr />
-    <div className='price'>
-      <CartPrice checkout={checkout} />
+      <div className='items'>
+          {checkout && checkout.lineItems.edges.map(item => <CartItem key={item.node.variant.id} item={item} />)}
+      </div>
+      <hr />
+      <div className='price'>
+        <CartPrice checkout={checkout} />
     </div>
     <div className='footer'>
       <small />

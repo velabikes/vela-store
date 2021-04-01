@@ -167,6 +167,7 @@ const VelaPlus = ({checkout, checkoutLineItemsAdd, handleCheckoutCreation}) => {
           <h2>
             Proteção contra <br/>roubo e furto
           </h2>
+          <h4>Segurança em primeiro lugar para você pedalar pela cidade sem medo!</h4>
           <p>Assinando o Plano Vela+ você conta com mais segurança. Bloqueamos sua bike, ajudamos na busca, e, caso não seja possível resgatá-la, substituímos ela para você.</p>
         </div>
       </div>
@@ -352,14 +353,14 @@ const VelaPlus = ({checkout, checkoutLineItemsAdd, handleCheckoutCreation}) => {
           align-items: center;
           justify-content: center;
           width: 100%;
-          background-color: #000;
+          background-color: ${offBlack};
         }
         .protection .cta {
           width: 20em;
           text-align: center;
           padding: 4em 2em;
         }
-        .protection .cta h2 {
+        .protection .cta h2, .protection .cta h4 {
           color: ${offWhite};
         }
         .protection .cta p {
@@ -404,7 +405,7 @@ const VelaPlus = ({checkout, checkoutLineItemsAdd, handleCheckoutCreation}) => {
           margin-bottom: 1em;
         }
         .models-content {
-          padding: 2em;
+          padding: 1em 2em 2em 2em;
           background-color: ${offWhite};
         }
         .models {
@@ -448,7 +449,7 @@ const VelaPlus = ({checkout, checkoutLineItemsAdd, handleCheckoutCreation}) => {
           margin: 2em 0;
         }
         .questions {
-          padding: 2em 1em;
+          padding: 2em 0 0 0;
           background-color: ${white};    
         }
         .questions h2 {
@@ -457,7 +458,7 @@ const VelaPlus = ({checkout, checkoutLineItemsAdd, handleCheckoutCreation}) => {
         }
         .legal {
           background-color: ${offWhite};
-          padding: 3em 1em 2em 1em;
+          padding: 2em 0 2em 0;
         }
         .legal-container {
           display: flex;
@@ -480,7 +481,7 @@ const VelaPlus = ({checkout, checkoutLineItemsAdd, handleCheckoutCreation}) => {
         }
         .app img {
           max-width: 85%;
-          margin-top: 1em;
+          margin-top: 2em;
         }
         .apptext {
           padding: 2em;
@@ -525,7 +526,7 @@ const VelaPlus = ({checkout, checkoutLineItemsAdd, handleCheckoutCreation}) => {
             align-items: flex-end;
             justify-content: flex-start;
             width: 100%;
-            background-color: transparent;
+            background-color: ${offBlack};
           }
           .protection .cta {
             width: 22em;
@@ -570,7 +571,7 @@ const VelaPlus = ({checkout, checkoutLineItemsAdd, handleCheckoutCreation}) => {
             max-width: 28%;
           }
           .questions {
-            padding: 2em 2em 0 2em; 
+            padding: 3em 2em 0 2em; 
           }
           .legal {
             padding: 3em 1em 1em 1em;
@@ -625,7 +626,7 @@ const VelaPlus = ({checkout, checkoutLineItemsAdd, handleCheckoutCreation}) => {
           }
           .app {
             display: flex;
-            flex-direction: row;
+            flex-direction: row-reverse;
             justify-content: space-around;
           }
           .app img {

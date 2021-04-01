@@ -36,8 +36,8 @@ const HomePage = ({ highlight }) =>
       <div className='cta-bf'>
         <div className='slogan'>
           <h1>Smartbike Vela 2</h1>
-          <h3>Pedale junto com a gente para cidades mais saudáveis</h3>
-          <h4>A bicicleta elétrica e smart para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes, sem abrir mão do design.</h4>
+          <h3>Pedale com a gente para cidades mais saudáveis</h3>
+          <h4>A bicicleta elétrica e smart para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes.</h4>
           <a href='/vela2'><Button primary>Monte a sua</Button></a>
         </div>
       </div>
@@ -48,7 +48,7 @@ const HomePage = ({ highlight }) =>
         <div className='slogan'>
           <h2>Feita com cuidado.<br /> No Brasil.</h2>
           <h3>Cadeia produtiva sustentável e produção artesanal.</h3>
-          <h4>A bicicleta elétrica & smart para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes.</h4>
+          <h4>Cada bike é montada sob medida, com a combinação e tamanho feitos para você.</h4>
           <a href='/vela'><Button primary>Saiba mais</Button></a>
         </div>
       </div>
@@ -105,7 +105,7 @@ const HomePage = ({ highlight }) =>
       }
       h1 {
         color: ${offWhite};
-        font-size: 2rem;
+        font-size: 1.8rem;
       }
       h2 {
         color: ${offBlack};
@@ -128,41 +128,46 @@ const HomePage = ({ highlight }) =>
         margin: 1em 0 1em 0;
       }
       @media only screen and (min-width: 768px) {
+        .cover {
+          display: flex;
+          justify-content: center;
+        }
         h1 {
-          font-size: 2.5rem;
+          font-size: 4rem;
           font-weight: 700;
         }
         .cta h3, .cta h2, .cta small, .cta h4, .cta p {
           color: ${offBlack}
         }
         .cta h2 {
-          font-size: 3rem;
+          font-size: 2rem;
         }
-        .cta-bf h1, .cta-bf h3, .cta-bf h4, .cta-bf p {
-          color: ${offBlack}
+
+        .cta-bf h1 {
+          color: ${offWhite}
+        }
+        .cta-bf h3, .cta-bf h4, .cta-bf p {
+          color: ${offWhite}
         }
         .cta {
           position: absolute;
           justify-content: center;
-          max-width: 20em;
+          max-width: 23em;
           left: 2em;
           top: 3em;
           text-align: left;
           background-color: ${white};
-          margin-top: 0rem;
           padding: 2em;
           z-index: 2;
         }
         .cta-bf {
           position: absolute;
           justify-content: center;
-          max-width: 20em;
-          left: 2em;
-          top: 3em;
-          text-align: left;
-          background-color: ${white};
-          margin-top: 0rem;
+          max-width: 40em;
+          text-align: center;
           padding: 2em;
+          bottom: 1em;
+          background-color: transparent;
           z-index: 2;
         }
         @media only screen and (min-width: 1300px) {

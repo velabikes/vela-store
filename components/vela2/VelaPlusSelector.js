@@ -3,8 +3,8 @@ import withCollectionByHandle from '../../containers/withCollectionByHandle'
 import { offWhite, lightGreen, white, velaRed, velaGreen } from '../../style/colors'
 import { AddIcon, CloseIcon } from '../Icons'
 
-const ServiceItem = ({ node: { title, images, variants, handle }, onSelect, selected }) => {
-  const variantIndex = handle === 'plano-anual-vela' ? 0 : 0
+const ServiceItem = ({ node: { title, images, variants, handle, sku }, onSelect, selected }) => {
+  const variantIndex = sku === 'VEL-PLUS-REV1-06M' ? 0 : 'VEL-PLUS-REV1-12M' ? 1 : 2
   const isSelected = selected.includes(variants.edges[variantIndex].node)
 
   return (
@@ -15,7 +15,7 @@ const ServiceItem = ({ node: { title, images, variants, handle }, onSelect, sele
       </div>
       <img src={images && images.edges[0].node.src} alt={title} />
       <h4>{title}</h4>
-      <Price value={variants.edges[0].node.priceV2.amount} />
+      <Price value={variants.edges[variantIndex].node.priceV2.amount} />
       <style jsx>{`
         div {
           max-width: 100%;

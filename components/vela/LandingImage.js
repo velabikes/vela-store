@@ -4,7 +4,7 @@ const LandingImage = () =>
     <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FSmartbike.jpg?alt=media&token=db783cf6-c08e-49ae-98d8-3816c3d06ddf' className='mobile' alt='Vela 2 - Smartbike' />
     <style jsx>{`
       img {
-        height: 60vh;
+        height: 50vh;
         object-fit: cover;
         object-position: 40% 60%;
       }

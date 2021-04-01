@@ -447,7 +447,7 @@ const Vela = () =>
       }
       .plans-price {
         margin-top: auto;
-      }https://images.prismic.io/velabikes/611f5e97-f3d5-4a10-8755-0cfc0b4e6a89_Frame+12.jpg?auto=compress,format&rect=0,0,3000,2000&w=3000&h=2000
+      }
       .specs {
         margin: 0 auto;
         display: flex;
@@ -648,6 +648,9 @@ const Vela = () =>
           max-width: 40em;
           position: relative;
           margin: -6em 0 -6em 0;
+        }
+        .app-content .section {
+          align-items: flex-start;
         }
         .app-bottom {
           display: flex;

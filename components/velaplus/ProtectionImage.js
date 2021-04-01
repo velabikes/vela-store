@@ -1,7 +1,7 @@
 const ProtectionImage = () =>
   <div>
-    <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FProtecaoRouboFurtoBikeEletrica.jpg?alt=media&token=cfdd7f43-902c-47f9-a420-5fb1b4fba062' className='desktop' alt='Alarme e Segurança para Bike Elétrica' />
-    <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FAlarmeBikeEletrica.jpg?alt=media&token=c995145c-a7a2-49fe-bae0-6234d61f5adc' className='mobile' alt='Proteção contra Roubo e Furto para Bikes Elétricas' />
+    <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FVela-Mais-Seguranca-Bike-Eletrica.jpg?alt=media&token=f94b3cfc-2a4f-4974-9b20-1955be5744b5' className='desktop' alt='Alarme e Segurança para Bike Elétrica' />
+    <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FVela-Mais-Seguranca-Bike-Eletrica.jpg?alt=media&token=f94b3cfc-2a4f-4974-9b20-1955be5744b5' className='mobile' alt='Proteção contra Roubo e Furto para Bikes Elétricas' />
     <style jsx>{`
       div {
         width: 100%;
@@ -13,25 +13,13 @@ const ProtectionImage = () =>
         object-fit: cover;
         z-index: 1;
         width: 100%;
-        height: 60vh;
+        height: 50vh;
       }
       .desktop {
         display: none;
       }
       
       @media only screen and (min-width: 768px) {
-          img {
-            height: 60vh;
-            width: 100%;
-            object-position: 50% 50%;
-          }
-          .mobile {
-            display: none;
-          }
-          .desktop {
-            display: initial;
-          }
-        @media only screen and (min-width: 1200px) {
           img {
             height: 100vh;
             width: 100%;
@@ -42,6 +30,20 @@ const ProtectionImage = () =>
           }
           .desktop {
             display: initial;
+          }
+        @media only screen and (min-width: 1200px) {
+          div {
+            justify-content: flex-start;
+          }
+          img {
+            height: 95vh;
+            width: 70vw;
+            object-position: left;
+          }
+          .mobile {
+            display: none;
+          }
+          .desktop {
           }
       @media only screen and (min-width: 1680px) {
           img {
