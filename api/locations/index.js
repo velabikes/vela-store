@@ -421,20 +421,6 @@ module.exports = async (req, res) => {
         type: ['charger']
       },
       {
-        name: 'Prana Healthy Coffee',
-        address: [
-          'Av. Agami, 223',
-          'Indianópolis, São Paulo',
-          'SP, 04522-000, Brasil'
-        ],
-        pos: {
-          lat: -23.5996093,
-          lng: -46.6632647
-        },
-        googlePlace: 'ChIJA7WwTQNazpQRtFD8Hb02l18',
-        type: ['charger']
-      },
-      {
         name: 'Oficina Small Hill de Bicicletas Elétricas',
         address: [
           'R. Pôrto Martins, 748',
