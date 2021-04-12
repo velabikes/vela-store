@@ -199,11 +199,11 @@ const Vela = () =>
               </tr>
               <tr className='tr-specs'>
                 <td className='td-specs'>Pintura</td>
-                <td className='td-specs'>Eletrostática, verniz fosco ou brilhante. 5 cores exclusivas da Vela 2.</td>
+                <td className='td-specs'>Eletrostática, verniz fosco. 5 cores exclusivas da Vela 2.</td>
               </tr>
               <tr className='tr-specs'>
                 <td className='td-specs'>Tamanhos (quadro reto)</td>
-                <td className='td-specs'>51-26": 1,58 à 1,72 | 55-700C: 1,73 à 1,82 | 59-700C: 1,83 à 2,00</td>
+                <td className='td-specs'>51-26": 1,58 à 1,72 | 55-700C: 1,73 à 1,83 | 59-700C: 1,84 à 2,00</td>
               </tr>
               <tr className='tr-specs'>
                 <td className='td-specs'>Tamanhos (quadro baixo)</td>

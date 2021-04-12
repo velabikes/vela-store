@@ -4,7 +4,7 @@ import { lightGray, offWhite, velaGreen } from '../style/colors'
 import Button from './Button'
 import { NextIcon } from './Icons'
 
-const url = 'https://velabikes.us19.list-manage.com/subscribe/post?u=68a0cce7cc109d78a8b44d7a0&amp;id=35e53f5d9e'
+const url = 'https://velabikes.us19.list-manage.com/subscribe/post?u=68a0cce7cc109d78a8b44d7a0&amp;id=b534f5cb40'
 
 const SubscribeForm = () =>
   <div className='SubscribeForm'>
@@ -15,6 +15,8 @@ const SubscribeForm = () =>
       render={({ subscribe, status }) =>
         status === 'success'
           ? <div><p>Agradecemos sua inscrição. Vamos velejar?</p></div>
+          : status === 'error' 
+          ? <div><p>Opa, parece que você já de inscreveu!</p></div>
           : <Formik initialValues={{ EMAIL: '' }} onSubmit={subscribe}>
             {({
               handleChange,
