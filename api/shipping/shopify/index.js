@@ -45,8 +45,22 @@ module.exports = async (req, res) => {
   const { rate: { origin, destination, items } } = await json(req)
   const totalGrams = items.map(item => item.grams).reduce((b, a) => b + a, 0)
   const totalPrice = items.map(item => item.price).reduce((b, a) => b + a, 0)
-
   const cepAvailable = destination.postal_code.replace('-', '').padEnd(8, '0')
+
+  if (cepAvailable === '05463040') {
+    return (
+      res.end(JSON.stringify({
+        rates: [{
+          service_name: 'Frete Grátis',
+          service_code: 'FG',
+          total_price: '0',
+          description: 'Tempo de produção + 18 dias úteis de transporte',
+          currency: 'BRL'
+        }]
+      }))
+    )
+  }
+
   let response
   let cityName
   try {
