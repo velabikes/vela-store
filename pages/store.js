@@ -22,7 +22,6 @@ const Store = ({
         title={collection && collection.title}
       />
       <h2>{collection && collection.descriptionHtml}</h2>
-      {collection.title === "Acessórios" && <p><a href="/loja/pecas" target="_blank">Ver peças</a></p>}
       </div>
       <br />
       <ProductList products={collection && collection.products} loading={isCollectionLoading} />
