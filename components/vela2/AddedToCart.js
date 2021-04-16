@@ -9,7 +9,7 @@ const AddedToCart = ({ checkout }) => {
       <h3>Itens adicionados ao carrinho</h3>
       <h5>Finalize agora o pedido da sua Vela 2!</h5>
       <div className='conditions'>
-        <p>1. A Vela é feita sob medida, o prazo atual é de 3 até 4 meses para produção e entrega.</p>
+        <p>1. A Vela é feita sob medida, o prazo atual é de 2 até 3 meses para produção e entrega.</p>
         <p>2. Possui alguma dúvida? Envie uma mensagem no chat em azul à direita da tela!</p>
         <p>3. Você receberá o status de acompanhamento do seu pedido por e-mail.</p>
       </div>
