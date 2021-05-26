@@ -6,17 +6,24 @@ import Button from "../Button";
 import Price from "../Price";
 
 const Bar = ({ onContinue, extra, step, checkout, model, activeButton }) => {
+  const priceExtra =
+    (model.time === "Anual"
+      ? 5146.5
+      : model.time === "Semestral"
+      ? 3168.0
+      : 1885.5) + extra.reduce((a, b) => a + parseInt(b.priceV2.amount), 0);
+
   return (
     <div className="Bar">
       <div className="top">
-        <p className="right">
+        <div className="right">
           Entrega de
           <br /> 2 até 3 meses
-        </p>
-        <small>
+        </div>
+        <p>
           A Vela é um produto sob medida e artesanal. Por conta do COVID-19, o
           prazo de entrega se encontra estendido e pode sofrer alterações.
-        </small>
+        </p>
       </div>
       <div className="bottom">
         <div className="left">
@@ -25,26 +32,26 @@ const Bar = ({ onContinue, extra, step, checkout, model, activeButton }) => {
               <Price
                 value={
                   model.time === "Anual"
-                    ? 5146.60
+                    ? 5146.5 / 365
                     : model.time === "Semestral"
-                    ? 2946.30
-                    : 1600.80
+                    ? 3168.0 / 180
+                    : 1885.5 / 90
                 }
+                period={"/dia"}
               />
             )}
-            {step === 2 && (
+            {(step === 2 || step === 3) && (
               <Price
                 value={
                   model.time === "Anual"
-                    ? 5146.60
+                    ? priceExtra / 365
                     : model.time === "Semestral"
-                    ? 2946.30
-                    : 1600.80 +
-                  extra.reduce((a, b) => a + parseInt(b.priceV2.amount), 0)
+                    ? priceExtra / 180
+                    : priceExtra / 90
                 }
+                period={"/dia"}
               />
             )}
-            {step === 3 && "Total:" && <Price value={checkout.totalPrice} />}
           </h2>
         </div>
         <div className="actions">
@@ -77,6 +84,10 @@ const Bar = ({ onContinue, extra, step, checkout, model, activeButton }) => {
       h2 { 
         color: ${darkGray};
       }
+      h3 { 
+        color: ${darkGray};
+        margin-bottom: 0;
+      }
       .bottom {
         display: flex;
         flex-direction: row;
@@ -93,25 +104,24 @@ const Bar = ({ onContinue, extra, step, checkout, model, activeButton }) => {
         width: 100%;
         padding: 0.5em 0.5em 1.5em 0.5em;
       }
-      .top p {
-        max-width: 6rem;
-      }
       .right {
         text-align: left;
+        max-width: 6rem;
       }
       .left {
         display: flex;
         flex-direction: row;
         align-items: center;
       }
-      .left h1 {
-        margin-bottom: 0;
+      .left p {
+        font-size: 0.7em
       }
       .actions :global(button) {
         margin: 0;
       }
-      small {
+      .top p {
         max-width: 15em;
+        font-size: 0.8em
       }
       @media only screen and (min-width: 768px) {
         .Bar {
@@ -119,7 +129,7 @@ const Bar = ({ onContinue, extra, step, checkout, model, activeButton }) => {
           flex-direction: row;
         }
         .bottom {
-          padding: 0 6em 0 0;
+          padding: 0 3em 0 0;
           border: 0;
         }
         .bottom h2 {
@@ -129,27 +139,24 @@ const Bar = ({ onContinue, extra, step, checkout, model, activeButton }) => {
           font-size: 0.8em;
           display: flex;
           justify-content: center;
-          padding: 0 0 0 6em;
+          padding: 0 0 0 3em;
         }
-        .top p{
+        .right {
           max-width: 6rem;
           text-align: center;
           margin: 0;
-        }
-        .top .right {
           text-align: right;
           margin-right: 0.8em;
         }
         .left {
           flex-direction: column;
+          padding-right: 2.5em;
         }
-        .left h2 {
-          padding-right: 1.5em;
-        }
-        small {
+        .top p {
           border-left: 1px ${lightGray} solid;
           padding-left: 1em;
           max-width: 20em;
+          margin-bottom: 0;
         }
       }
     `}</style>

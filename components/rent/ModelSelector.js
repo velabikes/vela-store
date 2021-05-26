@@ -26,9 +26,9 @@ const options = {
     { label: "Quadro reto", option: "Reto" },
   ],
   time: [
-    { label: "Anual", option: "Anual" },
-    { label: "Semestral", option: "Semestral" },
     { label: "Trimestral", option: "Trimestral" },
+    { label: "Semestral", option: "Semestral" },
+    { label: "Anual", option: "Anual" },
   ],
 };
 
