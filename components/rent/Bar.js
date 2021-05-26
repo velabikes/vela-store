@@ -1,36 +1,70 @@
 /* eslint-disable react/prop-types */
-import React, {useEffect, useState} from 'react'
-import { compose } from 'recompose'
-import { lightGray, darkGray } from '../../style/colors'
-import withCheckout from '../../containers/withCheckout'
-import Button from '../Button'
-import Price from '../Price'
+import { compose } from "recompose";
+import { lightGray, darkGray } from "../../style/colors";
+import withCheckout from "../../containers/withCheckout";
+import Button from "../Button";
+import Price from "../Price";
 
-const Bar = ({ onContinue, extra, step, checkout, activeButton, toggleButton }) => {
-
+const Bar = ({ onContinue, extra, step, checkout, model, activeButton }) => {
   return (
-    <div className='Bar'>
-      <div className='top'>
-        <p className='right'>Entrega em até 3 meses</p><small>As bikes reservadas agora serão entregues a partir de <b>fevereiro de 2021</b>. O ciclo de aluguel começará a ser contado na data de entrega.</small>
+    <div className="Bar">
+      <div className="top">
+        <p className="right">
+          Entrega de
+          <br /> 2 até 3 meses
+        </p>
+        <small>
+          A Vela é um produto sob medida e artesanal. Por conta do COVID-19, o
+          prazo de entrega se encontra estendido e pode sofrer alterações.
+        </small>
       </div>
-      <div className='bottom'>
-        <div className='left'>
+      <div className="bottom">
+        <div className="left">
           <h2>
-            {step === 1 && <Price value={3468}/>}
-            {step === 2 && <Price value={3468 + extra.reduce((a, b) => a + parseInt(b.priceV2.amount), 0)} />}
-            {step === 3 && 'Total:' && <Price value={checkout.totalPrice} />}
+            {step === 1 && (
+              <Price
+                value={
+                  model.time === "Anual"
+                    ? 5146.60
+                    : model.time === "Semestral"
+                    ? 2946.30
+                    : 1600.80
+                }
+              />
+            )}
+            {step === 2 && (
+              <Price
+                value={
+                  model.time === "Anual"
+                    ? 5146.60
+                    : model.time === "Semestral"
+                    ? 2946.30
+                    : 1600.80 +
+                  extra.reduce((a, b) => a + parseInt(b.priceV2.amount), 0)
+                }
+              />
+            )}
+            {step === 3 && "Total:" && <Price value={checkout.totalPrice} />}
           </h2>
         </div>
-        <div className='actions'>
-          
-          {step === 1 ? 
-            <Button primary onClick={onContinue}>Continuar</Button> :
-            step === 2 ? 
-            <Button primary onClick={onContinue}>Adicionar</Button> :
-            activeButton === false ? <Button disabled onClick={''}>Finalizar</Button> :
-            <Button disabled onClick={''}>Finalizar</Button>
-            }
-          
+        <div className="actions">
+          {step === 1 ? (
+            <Button primary onClick={onContinue}>
+              Continuar
+            </Button>
+          ) : step === 2 ? (
+            <Button primary onClick={onContinue}>
+              Adicionar
+            </Button>
+          ) : activeButton === false ? (
+            <Button disabled onClick={""}>
+              Finalizar
+            </Button>
+          ) : (
+            <Button primary onClick={onContinue}>
+              Finalizar
+            </Button>
+          )}
         </div>
       </div>
       <style jsx>{`
@@ -98,7 +132,7 @@ const Bar = ({ onContinue, extra, step, checkout, activeButton, toggleButton }) 
           padding: 0 0 0 6em;
         }
         .top p{
-          max-width: 4.5rem;
+          max-width: 6rem;
           text-align: center;
           margin: 0;
         }
@@ -115,13 +149,12 @@ const Bar = ({ onContinue, extra, step, checkout, activeButton, toggleButton }) 
         small {
           border-left: 1px ${lightGray} solid;
           padding-left: 1em;
+          max-width: 20em;
         }
       }
     `}</style>
     </div>
-  )
-}
+  );
+};
 
-export default compose(
-  withCheckout
-)(Bar)
+export default compose(withCheckout)(Bar);

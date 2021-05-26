@@ -30,6 +30,7 @@
     { "src": "/investir", "dest": "/invest" },
     { "src": "/velamais", "dest": "/velaplus" },
     { "src": "/alugar", "dest": "/rent" },
+    { "src": "/aluguel", "dest": "/rental" },
     { "src": "/termosdealuguel", "dest": "/legal" },
     { "src": "/terms-of-rent", "dest": "/legal" },
     { "src": "/blackfriday", "dest": "/blackfriday" },
@@ -44,6 +45,11 @@
       "src": "/live",
       "status": 301,
       "headers": { "Location": "https://videos.netshow.me/t/xVgbn-QPW4E/form" }
+    },
+    {
+      "src": "/blackfriday",
+      "status": 301,
+      "headers": { "Location": "/aluguel" }
     },
     {
       "src": "/lugares",
