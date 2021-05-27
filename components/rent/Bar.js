@@ -40,7 +40,7 @@ const Bar = ({ onContinue, extra, step, checkout, model, activeButton }) => {
                 period={"/dia"}
               />
             )}
-            {(step === 2 || step === 3) && (
+            {step === 2 && (
               <Price
                 value={
                   model.time === "Anual"
@@ -48,6 +48,18 @@ const Bar = ({ onContinue, extra, step, checkout, model, activeButton }) => {
                     : model.time === "Semestral"
                     ? priceExtra / 180
                     : priceExtra / 90
+                }
+                period={"/dia"}
+              />
+            )}
+            {step === 3 && (
+              <Price
+                value={
+                  model.time === "Anual"
+                    ? checkout.totalPrice / 365
+                    : model.time === "Semestral"
+                    ? checkout.totalPrice / 180
+                    : checkout.totalPrice / 90
                 }
                 period={"/dia"}
               />
@@ -67,9 +79,13 @@ const Bar = ({ onContinue, extra, step, checkout, model, activeButton }) => {
             <Button disabled onClick={""}>
               Finalizar
             </Button>
-          ) : (
+          ) : activeButton === true && checkout.lineItems.edges.length ? (
             <Button primary onClick={onContinue}>
               Finalizar
+            </Button>
+          ) : (
+            <Button primary onClick={onContinue}>
+              Voltar
             </Button>
           )}
         </div>

@@ -15,7 +15,7 @@ import ModelData from '../components/rent/ModelData'
 const initialValues = {
   frame: "Baixo",
   color: "Verde",
-  time: "Anual",
+  time: "Trimestral",
 };
 
 const Rent = ({ checkout, checkoutLineItemsAdd, handleCheckoutCreation}) => {

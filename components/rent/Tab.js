@@ -5,11 +5,11 @@ const Tab = ({ children, step, onStep }) => {
   return (
     <div className='Tab'>
       <div className='TabSelector'>
-        <div onClick={() => onStep(1)} className={step === 1 ? 'active' : 'inactive'}>
+        <div className={step === 1 ? 'active' : 'inactive'}>
           1. Montar
         </div>
-        <div onClick={() => onStep(2)} className={step === 2 ? 'active' : 'inactive'}>2. Extras</div>
-        <div onClick={() => onStep(3)} className={step === 3 ? 'active' : 'inactive'}>3. Pagar</div>
+        <div className={step === 2 ? 'active' : 'inactive'}>2. Extras</div>
+        <div className={step === 3 ? 'active' : 'inactive'}>3. Pagar</div>
       </div>
       <div className='TabContent'>
         {step === 1 && children[0]}
@@ -43,12 +43,6 @@ const Tab = ({ children, step, onStep }) => {
           color: ${velaGreen};
           font-weight: 600;
           cursor: auto;
-        }
-        .inactive {
-          cursor: pointer;
-        }
-        .inactive:hover {
-          background-color: ${offWhite};
         }
         .TabContent {
           background-color: ${white};

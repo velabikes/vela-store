@@ -2,7 +2,7 @@ import { compose, withProps, withHandlers } from 'recompose'
 import PropTypes from 'prop-types'
 import Link from 'next/link'
 import { toggleDrawer } from '../lib/redux'
-import { white, offWhite, lightGreen, offBlack } from '../style/colors'
+import { white, offWhite, velaGreen, offBlack } from '../style/colors'
 import withOpenDrawer from '../containers/withOpenDrawer'
 import Cart from './store/Cart'
 import HeaderDrawer from './HeaderDrawer'
@@ -123,7 +123,7 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
         } 
         .right {
           right: 0;
-          background-color: ${lightGreen};
+          background-color: ${velaGreen};
         }
         .right :global(.CartIcon) {
           fill: ${white};

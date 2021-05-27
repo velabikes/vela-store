@@ -130,7 +130,7 @@ export const Logo = props =>
     </svg>
     <style jsx>{`
     .Logo {
-      fill: ${lightGreen}
+      fill: ${velaGreen}
     }
     @keyframes colorchange {
       0%  { transform: scale(1) }

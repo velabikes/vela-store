@@ -2,38 +2,16 @@ import React, {useState, useEffect} from "react";
 import { compose } from "recompose";
 import Head from "next/head"
 import Accordion from "../components/Accordion"
-import { offBlack, offWhite, white } from "../style/colors"
-import BFImage from "../components/blackfriday/BFImage"
-import QuoteImage from "../components/blackfriday/QuoteImage"
-import FooterImage from "../components/blackfriday/FooterImage"
+import { offBlack, offWhite, velaGreen, white } from "../style/colors"
+import RentImage from "../components/rent/RentImage"
+import QuoteImage from "../components/rent/QuoteImage"
 import PaddedView from '../components/PaddedView'
-import SubscribeForm from "../components/blackfriday/SubscribeForm";
 import Button from "../components/Button";
 
-var countDownDate = new Date("Nov 27, 2020 15:01:00 GMT").getTime();
+const Rental = () => {
 
-function pad(n, width, z) {
-	z = z || '0';
-	n = n + '';
-	return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
-}
-
-const BlackFriday = () => {
-    const [timer, setTimer] = useState(countDownDate - (new Date().getTime()))
-
-    useEffect(() => {
-      let id = setInterval(() => {
-        setTimer(countDownDate - (new Date().getTime()));
-      }, 800);
-      return () => clearInterval(id);
-    }, []);
-  
-    const days = Math.floor(timer / (1000 * 60 * 60 * 24));
-    const minutes = Math.floor( (timer/1000/60) % 60 );
-    const hours = Math.floor( (timer/(1000*60*60)) % 24 );
-    const seconds = Math.floor( (timer/1000) % 60 );
 return (
-    <div className="blackfriday">
+    <div className="rental">
       <Head>
         <title>Pacote Aluguel - Vela Bikes</title>
         <link rel='alternate' hrefLang='pt-br' href='https://velabikes.com.br/aluguel' />
@@ -44,46 +22,44 @@ return (
         <meta name="twitter:site" content='@velabikes' /> 
         <meta name="twitter:title" content='Pacote Aluguel - Vela Bikes' />
         <meta name="twitter:description" content='Pacotes de aluguel para você experimentar a Vela 2! A primeira smartbike do Brasil com condições exclusivas para chamar de sua.' />
-        <meta name="twitter:image" content='' />
+        <meta name="twitter:image" content='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Frent%2FAluguel-Bike-Aplicativo.jpg?alt=media&token=a5714d99-03c9-4df7-bd9e-8e89c3c83f04' />
         <meta property='og:url' content='https://velabikes.com.br' />
         <meta property='og:type' content='website' />
         <meta property='og:title' content='Pacote Aluguel - Vela Bikes' />
         <meta property='og:locale' content='pt_BR' />
         <meta property='og:description' content='Pacotes de aluguel para você experimentar a Vela 2! A primeira smartbike do Brasil com condições exclusivas para chamar de sua.' />
-        <meta property='og:image' content='' />
+        <meta property='og:image' content='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Frent%2FAluguel-Bike-Aplicativo.jpg?alt=media&token=a5714d99-03c9-4df7-bd9e-8e89c3c83f04' />
       </Head>
       <div className='cover'>
         <div className='cta'>
-            <h2>Pacote de Aluguel da Vela 2</h2>
+            <h1>Alugue a Vela 2</h1>
+            <h2>A primeira bike elétrica com app integrado</h2>
+            <h4>Com planos feitos especialmente para sua o seu dia a dia</h4>
         </div>
-        <BFImage />
+        <RentImage />
       </div>
       <div className='howitworks'>
         <h2>Como funciona?</h2>
         <div className='steps'>
             <div className='step'>
                 <img src='/static/step1.png'></img>
-                <h4>Monte sua Vela!</h4>
-                <h5>Escolha a geometria do quadro, a cor e o período de locação.</h5>
-                <p>Sua nova Vela 2 será feita sob medida e entregue em até 3 meses.</p>
+                <h4>Monte sua Vela</h4>
+                <h5>Escolha a geometria do quadro, a cor da bike e o período de locação</h5>
+                <p>A Vela 2 alugada será feita sob medida e entregue em até 3 meses.</p>
             </div>
             <div className='step'>
                 <img src='/static/step2.png'></img>
                 <h4>Alugue a Vela 2...</h4>
-                <h5>Parcele o pacote do período desejado no cartão de crédito e pague em até 12x sem juros!</h5>
-                <p>Conte com rastreamento GPS e proteção contra roubo e furto inclusos.</p>
+                <h5>Parcele o pacote do período desejado, pague em até 12x sem juros!</h5>
+                <p>Planos de um ano, seis meses ou três meses, pensados para sua rotina.</p>
             </div>
             <div className='step'>
                 <img src='/static/step3.png'></img>
-                <h4>Após alugar, .</h4>
-                <h5>Por mais R$ 2.890 em até 12x. Você paga sua Vela em um total de 24 meses.</h5>
-                <p>O melhor preço e o maior tempo de parcelamento, para você velejar.</p>
+                <h4>Aproveite!</h4>
+                <h5>Conte com rastreamento GPS e proteção contra roubo e furto inclusos</h5>
+                <p>O melhor preço e o maior tempo de parcelamento, vamos velejar?</p>
             </div>
         </div>
-      </div>
-      <div className='timer'>
-          <h2>Agora só em 2021!</h2>
-          <h4>Agradecemos à todos que participaram.</h4>
       </div>
       <div className='image-cut'>
         <QuoteImage />
@@ -98,85 +74,98 @@ return (
         <div className='section'>
             <div className='right'>
                 <div className='right-content'>
-                    <h2>R$ 289 por mês</h2>
-                    <h4>Pacote de aluguel anual<br/> em até 12x sem juros.</h4>
+                    <h2>O aluguel feito para você</h2>
+                    <h4>Os pacotes de 3, 6 ou 12 meses da Vela se encaixam na sua rotina.</h4>
                     <p>Conte com <i>manutenções/revisões</i>*, <i>rastreamento GPS</i> + <i>proteção contra roubo e furto</i> inclusos.</p>
                     <small><p>* Válido apenas em São Paulo e Curitiba.</p></small>
                 </div>
                 <a href="/vela2">
-                    <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Fblackfriday%2FAluguelCompraVelaBike.jpg?alt=media&token=d51fb99e-9fb5-4b9d-8c3c-47609ff03c98' alt='Black Friday Vela Bike Aluguel' />
+                    <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Frent%2FAluguel-Bike-Eletrica.jpg?alt=media&token=2c22bfaf-bbd9-4457-a33a-5e213620ee4a' alt='Aluguel de Bike Elétrica' />
                 </a>
             </div>
             <div className='left'>
                 <a href="/vela2">
-                    <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Fblackfriday%2FAluguelVelaBikes.jpg?alt=media&token=e35602d0-5507-4d9b-aa37-ff7d84244585' alt='Aluguel Vela Bikes' />
+                    <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Frent%2FBike-Com-App-Aluguel.jpg?alt=media&token=612613fc-aa49-471b-9365-3453093f9857' alt='Bicicleta com App' />
                 </a>
                 <div className='left-content'>
-                    <h2>Após 12 meses...</h2>
-                    <h4>Você pode comprar por mais R$ 2.890, em até 12x sem juros!</h4>
-                    <p>As melhores condições de aluguel + compra da Vela 2 unidas para você.<br/> É a sua chance de participar da maior promoção na história da Vela. </p>
+                    <h2>A única smartbike do Brasil</h2>
+                    <h4>Agora com as melhores condições de aluguel. Vamos pedalar smart?</h4>
+                    <p>Após o período de aluguel, você pode renovar o plano ou receber desconto na compra da sua Vela 2.</p>
                 </div>
             </div>
             <div className='right'>
                 <div className='right-content'>
-                    <h2>Dois anos para pagar!</h2>
-                    <h4>Aproveite para começar o ano de 2021 descobrindo uma nova forma de se deslocar pela cidade.</h4>
-                    <p>Pense agora nas escolhas que você deseja para o seu 'novo normal'. Comece a criar novos hábitos mais saudáveis para você e para todos ao seu redor. </p>
+                    <h2>Planos em até 12x sem juros</h2>
+                    <h4>Aproveite para descobrir uma nova forma de se deslocar pela cidade.</h4>
+                    <p>Pense agora nas escolhas que você deseja para o seu 'novo normal'. Crie hábitos mais saudáveis para você e para todos ao seu redor. </p>
                 </div>
                 <a href="/vela2">
-                    <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Fblackfriday%2FBlackFridayAluguelBikeEl%C3%A9trica.jpg?alt=media&token=3106791e-b0db-4ff9-a5ce-688b7c58b32b' alt='Alugar bike elétrica' />
+                    <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Frent%2FSmartbike-Aluguel-Vela-Bikes.jpg?alt=media&token=13661daa-c0ef-4abc-a662-5f7c916f8ef7' alt='Smartbike Aluguel Vela Bikes' />
                 </a>
             </div>
         </div>
         </PaddedView>
         <div className='questions'>
-            <PaddedView>
             <h2>Possui dúvidas?</h2>
             <Accordion 
-                color='#3D4057'
-                hoverColor='#FFAF2D'
+                color={offBlack}
+                hoverColor={velaGreen}
                 textColor={white}
                 title='1. Qual o período que a promoção estará ativa?'
                 content='Apenas na sexta-feira de Black Friday do dia 27 de novembro das 12:01 às 23:59.'
             />
             <Accordion 
-                color='#3D4057'
-                hoverColor='#FFAF2D'
+                color={offBlack}
+                hoverColor={velaGreen}
                 textColor={white}
                 title='2. Reservando agora, quando recebo a minha Vela 2?'
                 content='As primeiras entregas do plano anual de aluguel serão realizadas em fevereiro de 2021 na ordem dos pedidos. Como a expectativa é de receber muitos pedidos nessa promoção, o prazo pode ser maior para as pessoas que fizerem os pedidos por último. Portanto seja um(a) dos(as) primeiros(as)! Durante o mês de dezembro de 2020, nossa equipe deve entrar em contato com todos e passar uma data prevista para a produção da sua Vela 2.'
             />
             <Accordion
-                color='#3D4057'
-                hoverColor='#FFAF2D'
+                color={offBlack}
+                hoverColor={velaGreen}
                 textColor={white}
                 title='3. O que está incluso no pacote de aluguel?'
                 content='12 meses de uma unidade da Vela 2, nova em folha, na cor, tamanho e geometria da sua preferência. Todas as unidades serão entregues com o Plano Vela+ Simples ativo por 12 meses que engloba a proteção contra roubo e furto, GPS, atualizações exclusivas e muito mais. Os serviços de revisão, manutenção e substituição de peças consumíveis não serão cobrados durante o período de locação, desde que realizados pela Vela nas cidades de São Paulo ou Curitiba.'
             />
             <Accordion 
-                color='#3D4057'
-                hoverColor='#FFAF2D'
+                color={offBlack}
+                hoverColor={velaGreen}
                 textColor={white}
                 title='4. E se eu não optar pela compra após 1 ano?'
                 content='Em 30 dias antes do término do período dos 12 meses de locação, nossa equipe vai entrar em contato para verificar o interesse na compra da Vela 2, caso não haja interesse, nesse mesmo contato agendaremos a retirada da sua bicicleta, sem custo para as cidades de São Paulo e Curitiba.'
             />
             <Accordion 
-                color='#3D4057'
-                hoverColor='#FFAF2D'
+                color={offBlack}
+                hoverColor={velaGreen}
                 textColor={white}
                 title='5. Não moro em São Paulo ou Curitiba, ainda posso participar?'
                 content='Claro! A promoção será válida para todo o Brasil, porém será cobrada uma taxa de R$ 245,00 por cada trecho de transporte, como: entrega inicial, manutenções e devoluções.'
             />
-            </ PaddedView>
         </div>
-        <div className='cover'>
-            <FooterImage />
-            <div className='cta-bottom'>
-                <div className='slogan'>
-                <h2>A Black Friday é apenas o começo de um novo caminho para você em <span style={{fontSize: '1.5em', color: '#FFAF2D'}}>2021</span>.</h2>
-                </div>
+        <div className="legal">
+        <PaddedView>
+        <div className="legal-container">
+          <div className="infos">
+            <h3>Informações Legais</h3>
+            <p>Esta página é um resumo da assinatura, consulte o contrato e as condições gerais para obter todos os detalhes da sua cobertura.</p>
+            <p>O presente contrato é celebrado pelo período de um ano e, se desejado, deve ser renovado tacitamente por períodos consecutivos após um ano.</p>
+            <p>O contrato de assinatura e os Termos de Serviço estão sujeitos à lei brasileira e ao Código de Defesa do Consumidor.</p>
+          </div>
+          <div className="docs">
+            <h3>Documentos</h3>
+            <p><a href="/legal">Termos do Pacote de Aluguel</a></p>
+            <p><a href="/legal">Termos de Serviço</a></p>
+            <p><a href="/legal">Política de Privacidade</a></p>
+            <div className="action">
+              <a href="https://velabikes.freshdesk.com/support/home" target="_blank">
+                <Button primary>Todas as FAQs</Button>
+              </a>
             </div>
+          </div>
         </div>
+        </PaddedView>
+      </div>
       <style jsx>{`
 
         @media only screen and (max-width: 320px) {
@@ -190,7 +179,7 @@ return (
             padding-top: 1em;
         }
         .section h2 {
-            color: #FFAF2D;
+            color: ${offBlack};
         }
         .section img {
             min-width: 100%;
@@ -218,30 +207,31 @@ return (
         }
         .questions {
             padding: 2em 2em 0 2em;
-            background-color: #1A3546;    
+            background-color: ${offBlack};    
         }
-        .cta h2 {
-            color: #FFAF2D;
+        .cta h2, .cta h1, .cta h4 {
+            color: ${offWhite}
         }
         .questions h2 {
             color: ${offWhite};
             margin-bottom: 1em;
-        }
-        .cta h4 {
-            color: ${offWhite};
         }
         .cover {
             position: relative;
         }
         .cta {
             position: absolute;
-            bottom: 1em;
-            width: 100%;
+            bottom: 0em;
+            right: auto;
+            left: auto.
+            width: 18em;
             text-align: center;
+            padding: 2em;
+            background-color: ${offBlack};
         }
         .cta-bottom {
             text-align: center;
-            background-color: #1A3546;
+            background-color: ${offBlack};
             padding: 2rem 3rem 2rem 3rem;
         }
         .cta-bottom h2 {
@@ -252,19 +242,6 @@ return (
         }
         .howitworks h2{
             color: ${offBlack};
-        }
-        .timer {
-            background-color: #1A3546;
-            padding: 3em 2em;
-            text-align: center;
-        }
-        .timer h2 {
-            color: #FFAF2D;
-            font-size: 2em;
-            line-height: 1em;
-        }
-        .timer h4 {
-            color: ${offWhite};
         }
         .steps {
             display: flex;
@@ -287,21 +264,54 @@ return (
             flex-direction: column;
             text-align: center;
             padding: 2em 4em 1em 4em;
-            background-color:  #1A3546;
+            background-color:  ${offWhite};
         }
         .tagline h3 {
-            color: #FFAF2D;
+            color: ${offBlack};
             font-style: italic;
         }
         .tagline h4 {
-            color: ${offWhite};
+            color: ${offBlack};
         }
+        .legal {
+            background-color: ${offWhite};
+            padding: 2em 0 2em 0;
+          }
+          .legal-container {
+            display: flex;
+            flex-direction: column;
+          }
+          .legal h3 {
+            color: ${offBlack};
+          }
+          .docs h3 {
+            color: ${offBlack};
+            margin-bottom: 1em;
+            margin-top: 1em;
+          }
         @media only screen and (min-width: 768px) {
+            .cta {
+                position: absolute;
+                top: 4em;
+                right: 4em;
+                width: 18em;
+                bottom: auto;
+                text-align: center;
+                padding: 2em;
+                background-color: ${white};
+            }
+            .cta h2, .cta h1, .cta h4 {
+                color: ${offBlack}
+            }
+
                 .questions {
-                    padding: 3em;
+                    padding: 3em 4em 2em 4em;
                 }
                 .howitworks {
                     padding: 3em 3em 2em 3em;
+                }
+                .howitworks h2 {
+                    padding-left: 1em;
                 }
                 .steps {
                     display: flex;
@@ -337,10 +347,17 @@ return (
                 .left-content {
                     padding: 3em 4em 2em 2em;
                     text-align: right;
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: center;
+                    flex-direction: column;
                 }
                 .right-content {
                     padding: 3em 2em 2em 4em;
                     text-align: left;
+                    display: flex;
+                    justify-content: center;
+                    flex-direction: column;
                 }
                 .cta-bottom {
                     position: absolute;
@@ -356,8 +373,8 @@ return (
                 .tagline {
                     justify-content: flex-start;
                     align-items: flex-start;
-                    bottom: 2em;
-                    left: 2em;
+                    top: 2em;
+                    right: 4em;
                     text-align: left;
                     position: absolute;
                     max-width: 24em;
@@ -373,16 +390,23 @@ return (
                 .image-cut {
                     position: relative;
                 }
-                .timer h2 {
-                    font-size: 2.5em;
-                }
-                .timer h4 {
-                    font-size: 1.4em;
-                }
+                .legal {
+                    padding: 3em 3em 1em 3em;
+                  }
+                  .docs h3 {
+                    margin-top: 0;
+                  }
+                  .legal-container {
+                    flex-direction: row;
+                    justify-content: space-between;
+                  }
+                  .legal .infos {
+                    max-width: 45%;
+                  }
         }
       `}</style>
     </div>
   )
 }
 
-export default compose()(BlackFriday)
+export default compose()(Rental)
