@@ -1,8 +1,8 @@
-import React, {useState} from 'react'
+import React from 'react'
 import { compose } from 'recompose'
 import withCheckout from '../../containers/withCheckout'
 import CartItem from '../store/Cart/Item'
-import { velaBlue } from '../../style/colors'
+import { velaBlue, offWhite } from '../../style/colors'
 import Checkbox from '../Checkbox'
 
 const AddedToCart = ({ checkout, checked, onCheck, toggleButton, activeButton }) => {
@@ -10,28 +10,35 @@ const AddedToCart = ({ checkout, checked, onCheck, toggleButton, activeButton })
     <div>
       <h3>Itens adicionados ao carrinho!</h3>
       <p>Finalize o pedido do seu Pacote Aluguel Anual da Vela 2.</p>
-      <p><b>Os acessórios adicionados ao pedido não serão alugados e sim vendidos.</b></p>
-      <p>Aceitamos pagamentos via PayPal em até 12x de R$ 289/mês no cartão de crédito.</p>
-      {checkout && !checkout.lineItems.edges.length ? 
-      <p>Seu carrinho está vazio!</p> : 
-      <h5>Revise os itens do pedido para finalizar:</h5>
-      }
-      {!checkout &&
-        <div className='items'>
-          <table>
-            <tbody>
-              {checkout.lineItems.edges.map(item => <CartItem key={item.node.variant.id} item={item} />)}
-            </tbody>
-          </table>
-        </div>
-      }
+      <div className='conditions'>
+        <p>1. Os acessórios adicionados ao pedido não serão alugados e sim vendidos.</p>
+        <p>2. A Vela é feita sob medida, o prazo atual é de 2 até 3 meses para produção e entrega.</p>
+        <p>3. Possui alguma dúvida? Envie uma mensagem no chat em azul à direita da tela!</p>
+        <p>4. Você receberá o status de acompanhamento do seu pedido por e-mail.</p>
+      </div>
+      <p>Aceitamos pagamentos pelo <b>PayPal</b> (parcele em até 12x sem juros no cartão de crédito) ou pelo Coinbase com criptomoedas.</p>
+      {checkout && !checkout.lineItems.edges.length ? (
+        <h5>Seu carrinho está vazio.</h5>
+      ) : (
+        <>
+          <h5>Confira e revise os itens do pedido para finalizar:</h5>
+          <div className="items">
+            <table>
+              <tbody>
+                {checkout.lineItems.edges.map((item) => (
+                  <CartItem key={item.node.variant.id} item={item} />
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </>
+      )}
       <div>
         <label>
           <Checkbox
             onChange={() => onCheck(!checked) + toggleButton(!activeButton)}
           />
           <span>Eu concordo com os <a href='/termosdealuguel' target='_blank'>Termos de Serviço de Aluguel</a> da Vela 2.</span>
-          <br/><small style={{color: 'red'}}> A contratação do aluguel está fechada. Aguarde nova disponibilidade.</small>
         </label>
         <h6>Após pagamento, a contratação será concluída mediante análise de crédito. As informações para análise serão requeridas por e-mail.</h6>
       </div>    
@@ -49,13 +56,13 @@ const AddedToCart = ({ checkout, checked, onCheck, toggleButton, activeButton })
         color: ${velaBlue};
         cursor: pointer;
       }
-      h5 {
-        padding-bottom: 0;
+      .conditions {
+        background-color: ${offWhite};
+        padding: 1em;
+        margin-bottom: 1em;
       }
-      h6 {
-        padding-top: 1em;
-        line-height: 1.5;
-        padding-bottom: 0;
+      .conditions p{
+        font-size: 0.9em;
       }
       `}</style>
     </div>

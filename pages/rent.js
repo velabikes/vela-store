@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Head from 'next/head'
 import { compose } from 'recompose'
 import Display from '../components/rent/Display'
@@ -12,16 +12,75 @@ import withCheckoutLineItemsAdd from '../containers/withCheckoutLineItemsAdd'
 import withCheckout from '../containers/withCheckout'
 import ModelData from '../components/rent/ModelData'
 
+const initialValues = {
+  frame: "Baixo",
+  color: "Verde",
+  time: "Trimestral",
+};
+
 const Rent = ({ checkout, checkoutLineItemsAdd, handleCheckoutCreation}) => {
-  const [selectedModel, setSelectedModel] = useState({})
+  const [selectedModel, setSelectedModel] = useState(initialValues)
   const [selectedExtra, setSelectedExtra] = useState([])
   const [step, setStep] = useState(1);
   const [checked, setChecked] = useState(false)
   const [activeButton, setActiveButton] = useState(false)
+  const [loadedCheckout, setLoadedCheckout] = useState(false);
 
-  const { frame, size, color, tire } = selectedModel
+  const { frame, color, time } = selectedModel
   const selectedModelData =
-    ModelData[JSON.stringify({ frame, size, color, tire })] || {}
+    ModelData[JSON.stringify({ frame, color, time })] || {}
+
+    useEffect(() => {
+      if (loadedCheckout) return;
+      if (!checkout) return;
+      const bikeIds = findBikeIdOnCheckout();
+      if (bikeIds.length > 0) {
+        const bike = getModelById(bikeIds[bikeIds.length - 1]);
+        setSelectedModel(bike);
+      }
+      setLoadedCheckout(true);
+    }, [checkout]);
+
+  
+    const findBikeIdOnCheckout = () => {
+      const modelIds = getAllModelIds();
+      const bikeIds = [];
+      for (let modelId of modelIds) {
+        const item = findItemOnCheckout(modelId);
+        if (item) {
+          bikeIds.push(modelId);
+        }
+      }
+  
+      return bikeIds;
+    };
+  
+  
+    const getAllModelIds = () => {
+      const models = [];
+      Object.keys(ModelData).forEach((model) => {
+        models.push(ModelData[model].id);
+      });
+  
+      return models;
+    };
+  
+    const getModelById = (id) => {
+      let bike;
+      Object.keys(ModelData).forEach((model) => {
+        if (ModelData[model].id === id) {
+          bike = model;
+        }
+      });
+  
+      return JSON.parse(bike);
+    };
+  
+    const findItemOnCheckout = (id) => {
+      return checkout.lineItems.edges.find(
+        (item) => item.node.variant.id === id
+      );
+    };
 
   const handleNext = async () => {
     if (step === 1) {
@@ -54,7 +113,7 @@ const Rent = ({ checkout, checkoutLineItemsAdd, handleCheckoutCreation}) => {
   }
 
   return (
-    <div className='vela2'>
+    <div className='rent'>
       <Head>
         <title>Alugue a Vela 2 - Vela Bikes</title>
         <meta http-equiv='content-language' content='pt-br' />

@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types'
 import { compose, withProps } from 'recompose'
 
-const Price = ({ formatedValue }) =>
+const Price = ({ formatedValue, period }) =>
   <span className='Price'>
-    {formatedValue}
+    {formatedValue}{period}
   </span>
 
 const intToBRL = n => parseFloat(n).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', currencyDisplay: 'symbol' })
