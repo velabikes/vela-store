@@ -1,173 +1,268 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { compose } from "recompose";
-import Head from "next/head"
-import Accordion from "../components/Accordion"
-import { offBlack, offWhite, velaGreen, white } from "../style/colors"
-import RentImage from "../components/rent/RentImage"
-import QuoteImage from "../components/rent/QuoteImage"
-import PaddedView from '../components/PaddedView'
+import Head from "next/head";
+import Accordion from "../components/Accordion";
+import { offBlack, offWhite, velaGreen, white } from "../style/colors";
+import RentImage from "../components/rent/RentImage";
+import QuoteImage from "../components/rent/QuoteImage";
+import PaddedView from "../components/PaddedView";
 import Button from "../components/Button";
 
 const Rental = () => {
-
-return (
+  return (
     <div className="rental">
       <Head>
         <title>Pacote Aluguel - Vela Bikes</title>
-        <link rel='alternate' hrefLang='pt-br' href='https://velabikes.com.br/aluguel' />
-        <meta httpEquiv='content-language' content='pt-br' />
-        <meta name='application-name' content='Vela Bikes Store' />
-        <meta name='description' content='Pacotes de aluguel para você experimentar a Vela 2! A primeira smartbike do Brasil com condições exclusivas para chamar de sua.' />
-        <meta name="twitter:card" content='summary' />
-        <meta name="twitter:site" content='@velabikes' /> 
-        <meta name="twitter:title" content='Pacote Aluguel - Vela Bikes' />
-        <meta name="twitter:description" content='Pacotes de aluguel para você experimentar a Vela 2! A primeira smartbike do Brasil com condições exclusivas para chamar de sua.' />
-        <meta name="twitter:image" content='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Frent%2FAluguel-Bike-Aplicativo.jpg?alt=media&token=a5714d99-03c9-4df7-bd9e-8e89c3c83f04' />
-        <meta property='og:url' content='https://velabikes.com.br' />
-        <meta property='og:type' content='website' />
-        <meta property='og:title' content='Pacote Aluguel - Vela Bikes' />
-        <meta property='og:locale' content='pt_BR' />
-        <meta property='og:description' content='Pacotes de aluguel para você experimentar a Vela 2! A primeira smartbike do Brasil com condições exclusivas para chamar de sua.' />
-        <meta property='og:image' content='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Frent%2FAluguel-Bike-Aplicativo.jpg?alt=media&token=a5714d99-03c9-4df7-bd9e-8e89c3c83f04' />
+        <link
+          rel="alternate"
+          hrefLang="pt-br"
+          href="https://velabikes.com.br/aluguel"
+        />
+        <meta httpEquiv="content-language" content="pt-br" />
+        <meta name="application-name" content="Vela Bikes Store" />
+        <meta
+          name="description"
+          content="Pacotes de aluguel para você experimentar a Vela 2! A primeira smartbike do Brasil com condições exclusivas para chamar de sua."
+        />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@velabikes" />
+        <meta name="twitter:title" content="Pacote Aluguel - Vela Bikes" />
+        <meta
+          name="twitter:description"
+          content="Pacotes de aluguel para você experimentar a Vela 2! A primeira smartbike do Brasil com condições exclusivas para chamar de sua."
+        />
+        <meta
+          name="twitter:image"
+          content="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Frent%2FAluguel-Bike-Aplicativo.jpg?alt=media&token=a5714d99-03c9-4df7-bd9e-8e89c3c83f04"
+        />
+        <meta property="og:url" content="https://velabikes.com.br" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Pacote Aluguel - Vela Bikes" />
+        <meta property="og:locale" content="pt_BR" />
+        <meta
+          property="og:description"
+          content="Pacotes de aluguel para você experimentar a Vela 2! A primeira smartbike do Brasil com condições exclusivas para chamar de sua."
+        />
+        <meta
+          property="og:image"
+          content="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Frent%2FAluguel-Bike-Aplicativo.jpg?alt=media&token=a5714d99-03c9-4df7-bd9e-8e89c3c83f04"
+        />
       </Head>
-      <div className='cover'>
-        <div className='cta'>
-            <h1>Alugue a Vela 2</h1>
-            <h2>A primeira bike elétrica com app integrado</h2>
-            <h4>Com planos feitos especialmente para sua o seu dia a dia</h4>
-        </div>
+      <div className="cover">
         <RentImage />
-      </div>
-      <div className='howitworks'>
-        <h2>Como funciona?</h2>
-        <div className='steps'>
-            <div className='step'>
-                <img src='/static/step1.png'></img>
-                <h4>Monte sua Vela</h4>
-                <h5>Escolha a geometria do quadro, a cor da bike e o período de locação</h5>
-                <p>A Vela 2 alugada será feita sob medida e entregue em até 3 meses.</p>
-            </div>
-            <div className='step'>
-                <img src='/static/step2.png'></img>
-                <h4>Alugue a Vela 2...</h4>
-                <h5>Parcele o pacote do período desejado, pague em até 12x sem juros!</h5>
-                <p>Planos de um ano, seis meses ou três meses, pensados para sua rotina.</p>
-            </div>
-            <div className='step'>
-                <img src='/static/step3.png'></img>
-                <h4>Aproveite!</h4>
-                <h5>Conte com rastreamento GPS e proteção contra roubo e furto inclusos</h5>
-                <p>O melhor preço e o maior tempo de parcelamento, vamos velejar?</p>
-            </div>
+        <div className="cta">
+          <h1>Alugue a Vela 2</h1>
+          <h2>A primeira bike elétrica com app</h2>
+          <h4>Planos feitos especialmente para sua o seu dia a dia</h4>
+          <div className='actions'>
+            <a href='/alugar'>
+                <Button primary>Monte a sua</Button>
+            </a>
+          </div>
         </div>
       </div>
-      <div className='image-cut'>
+      <div className="howitworks">
+        <h2>Como funciona?</h2>
+        <div className="steps">
+          <div className="step">
+            <img src="/static/step1.png"></img>
+            <h4>Monte sua Vela</h4>
+            <h5>
+              Escolha a geometria do quadro, a cor da bike e o período de
+              locação
+            </h5>
+            <p>
+              A Vela 2 alugada será feita sob medida e entregue em até 3 meses.
+            </p>
+          </div>
+          <div className="step">
+            <img src="/static/step2.png"></img>
+            <h4>Alugue a Vela 2...</h4>
+            <h5>
+              Parcele o pacote do período desejado, pague em até 12x sem juros!
+            </h5>
+            <p>
+              Planos de um ano, seis meses ou três meses, pensados para sua
+              rotina.
+            </p>
+          </div>
+          <div className="step">
+            <img src="/static/step3.png"></img>
+            <h4>Aproveite!</h4>
+            <h5>
+              Conte com rastreamento GPS e proteção contra roubo e furto
+              inclusos
+            </h5>
+            <p>
+              O melhor preço e o maior tempo de parcelamento, vamos velejar?
+            </p>
+          </div>
+        </div>
+      </div>
+      <div className="protection">
         <QuoteImage />
-        <div className='tagline'>
-            <h3>“Ir ao trabalho de Vela é o ‘novo normal’ para mim.</h3>
-            <h3>Estou orgulhosa por ter feito uma escolha ecológica, que prioriza minha qualidade de vida, saúde e segurança.</h3> 
-            <h3>O ‘novo normal’ é isso, né? Nossas novas escolhas...”</h3>
-            <h4>- Clara, Velejadora há 2 meses</h4>
+        <div className="cta-protect">
+          <h3>“Ir ao trabalho de Vela é o ‘novo normal’ para mim.</h3>
+          <h3>
+            Estou orgulhosa por ter feito uma escolha ecológica, que prioriza
+            minha qualidade de vida, saúde e segurança.
+          </h3>
+          <h3>O ‘novo normal’ é isso, né? Nossas novas escolhas...”</h3>
+          <h4>- Clara, Velejadora</h4>
+          <div className='actions'>
+            <a href='/alugar'>
+                <Button primary>Monte a sua</Button>
+            </a>
+          </div>
         </div>
       </div>
       <PaddedView>
-        <div className='section'>
-            <div className='right'>
-                <div className='right-content'>
-                    <h2>O aluguel feito para você</h2>
-                    <h4>Os pacotes de 3, 6 ou 12 meses da Vela se encaixam na sua rotina.</h4>
-                    <p>Conte com <i>manutenções/revisões</i>*, <i>rastreamento GPS</i> + <i>proteção contra roubo e furto</i> inclusos.</p>
-                    <small><p>* Válido apenas em São Paulo e Curitiba.</p></small>
-                </div>
-                <a href="/vela2">
-                    <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Frent%2FAluguel-Bike-Eletrica.jpg?alt=media&token=2c22bfaf-bbd9-4457-a33a-5e213620ee4a' alt='Aluguel de Bike Elétrica' />
-                </a>
+        <div className="section">
+          <div className="right">
+            <div className="right-content">
+              <h2>O aluguel feito para você</h2>
+              <h4>
+                Os pacotes de 3, 6 ou 12 meses da Vela se encaixam na sua
+                rotina.
+              </h4>
+              <p>
+                Conte com <i>manutenções/revisões</i>*, <i>rastreamento GPS</i>{" "}
+                + <i>proteção contra roubo e furto</i> inclusos.
+              </p>
+              <small>
+                <p>* Válido apenas em São Paulo e Curitiba.</p>
+              </small>
             </div>
-            <div className='left'>
-                <a href="/vela2">
-                    <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Frent%2FBike-Com-App-Aluguel.jpg?alt=media&token=612613fc-aa49-471b-9365-3453093f9857' alt='Bicicleta com App' />
-                </a>
-                <div className='left-content'>
-                    <h2>A única smartbike do Brasil</h2>
-                    <h4>Agora com as melhores condições de aluguel. Vamos pedalar smart?</h4>
-                    <p>Após o período de aluguel, você pode renovar o plano ou receber desconto na compra da sua Vela 2.</p>
-                </div>
+            <a href="/vela2">
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Frent%2FAluguel-Bike-Eletrica.jpg?alt=media&token=2c22bfaf-bbd9-4457-a33a-5e213620ee4a"
+                alt="Aluguel de Bike Elétrica"
+              />
+            </a>
+          </div>
+          <div className="left">
+            <a href="/vela2">
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Frent%2FBike-Com-App-Aluguel.jpg?alt=media&token=612613fc-aa49-471b-9365-3453093f9857"
+                alt="Bicicleta com App"
+              />
+            </a>
+            <div className="left-content">
+              <h2>A única smartbike do Brasil</h2>
+              <h4>
+                Agora com as melhores condições de aluguel. Vamos pedalar smart?
+              </h4>
+              <p>
+                Após o período de aluguel, você pode renovar o plano ou receber
+                desconto na compra da sua Vela 2.
+              </p>
             </div>
-            <div className='right'>
-                <div className='right-content'>
-                    <h2>Planos em até 12x sem juros</h2>
-                    <h4>Aproveite para descobrir uma nova forma de se deslocar pela cidade.</h4>
-                    <p>Pense agora nas escolhas que você deseja para o seu 'novo normal'. Crie hábitos mais saudáveis para você e para todos ao seu redor. </p>
-                </div>
-                <a href="/vela2">
-                    <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Frent%2FSmartbike-Aluguel-Vela-Bikes.jpg?alt=media&token=13661daa-c0ef-4abc-a662-5f7c916f8ef7' alt='Smartbike Aluguel Vela Bikes' />
-                </a>
+          </div>
+          <div className="right">
+            <div className="right-content">
+              <h2>Planos em até 12x sem juros</h2>
+              <h4>
+                Aproveite para descobrir uma nova forma de se deslocar pela
+                cidade.
+              </h4>
+              <p>
+                Pense agora nas escolhas que você deseja para o seu 'novo
+                normal'. Crie hábitos mais saudáveis para você e para todos ao
+                seu redor.{" "}
+              </p>
             </div>
+            <a href="/vela2">
+              <img
+                src="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Frent%2FSmartbike-Aluguel-Vela-Bikes.jpg?alt=media&token=13661daa-c0ef-4abc-a662-5f7c916f8ef7"
+                alt="Smartbike Aluguel Vela Bikes"
+              />
+            </a>
+          </div>
         </div>
-        </PaddedView>
-        <div className='questions'>
-            <h2>Possui dúvidas?</h2>
-            <Accordion 
-                color={offBlack}
-                hoverColor={velaGreen}
-                textColor={white}
-                title='1. Qual o período que a promoção estará ativa?'
-                content='Apenas na sexta-feira de Black Friday do dia 27 de novembro das 12:01 às 23:59.'
-            />
-            <Accordion 
-                color={offBlack}
-                hoverColor={velaGreen}
-                textColor={white}
-                title='2. Reservando agora, quando recebo a minha Vela 2?'
-                content='As primeiras entregas do plano anual de aluguel serão realizadas em fevereiro de 2021 na ordem dos pedidos. Como a expectativa é de receber muitos pedidos nessa promoção, o prazo pode ser maior para as pessoas que fizerem os pedidos por último. Portanto seja um(a) dos(as) primeiros(as)! Durante o mês de dezembro de 2020, nossa equipe deve entrar em contato com todos e passar uma data prevista para a produção da sua Vela 2.'
-            />
-            <Accordion
-                color={offBlack}
-                hoverColor={velaGreen}
-                textColor={white}
-                title='3. O que está incluso no pacote de aluguel?'
-                content='12 meses de uma unidade da Vela 2, nova em folha, na cor, tamanho e geometria da sua preferência. Todas as unidades serão entregues com o Plano Vela+ Simples ativo por 12 meses que engloba a proteção contra roubo e furto, GPS, atualizações exclusivas e muito mais. Os serviços de revisão, manutenção e substituição de peças consumíveis não serão cobrados durante o período de locação, desde que realizados pela Vela nas cidades de São Paulo ou Curitiba.'
-            />
-            <Accordion 
-                color={offBlack}
-                hoverColor={velaGreen}
-                textColor={white}
-                title='4. E se eu não optar pela compra após 1 ano?'
-                content='Em 30 dias antes do término do período dos 12 meses de locação, nossa equipe vai entrar em contato para verificar o interesse na compra da Vela 2, caso não haja interesse, nesse mesmo contato agendaremos a retirada da sua bicicleta, sem custo para as cidades de São Paulo e Curitiba.'
-            />
-            <Accordion 
-                color={offBlack}
-                hoverColor={velaGreen}
-                textColor={white}
-                title='5. Não moro em São Paulo ou Curitiba, ainda posso participar?'
-                content='Claro! A promoção será válida para todo o Brasil, porém será cobrada uma taxa de R$ 245,00 por cada trecho de transporte, como: entrega inicial, manutenções e devoluções.'
-            />
-        </div>
-        <div className="legal">
+      </PaddedView>
+      <div className="questions">
         <PaddedView>
-        <div className="legal-container">
-          <div className="infos">
-            <h3>Informações Legais</h3>
-            <p>Esta página é um resumo da assinatura, consulte o contrato e as condições gerais para obter todos os detalhes da sua cobertura.</p>
-            <p>O presente contrato é celebrado pelo período de um ano e, se desejado, deve ser renovado tacitamente por períodos consecutivos após um ano.</p>
-            <p>O contrato de assinatura e os Termos de Serviço estão sujeitos à lei brasileira e ao Código de Defesa do Consumidor.</p>
-          </div>
-          <div className="docs">
-            <h3>Documentos</h3>
-            <p><a href="/legal">Termos do Pacote de Aluguel</a></p>
-            <p><a href="/legal">Termos de Serviço</a></p>
-            <p><a href="/legal">Política de Privacidade</a></p>
-            <div className="action">
-              <a href="https://velabikes.freshdesk.com/support/home" target="_blank">
-                <Button primary>Todas as FAQs</Button>
-              </a>
+        <h2>Possui dúvidas?</h2>
+        <Accordion
+          color={offBlack}
+          hoverColor={velaGreen}
+          textColor={white}
+          title="1. Qual o período que a promoção estará ativa?"
+          content="Com exclusividade para a Bain, o aluguel da Vela 2 estará aberto durante o mês de junho."
+        />
+        <Accordion
+          color={offBlack}
+          hoverColor={velaGreen}
+          textColor={white}
+          title="2. Reservando agora, quando recebo a minha Vela 2?"
+          content="As primeiras entregas dos planos de aluguel serão realizadas em agosto de 2021 na ordem dos pedidos. Como a expectativa é de receber muitos pedidos nessa promoção, o prazo pode ser maior para as pessoas que fizerem os pedidos por último. Portanto seja um(a) dos(as) primeiros(as)! Durante o mês de julho de 2020, nossa equipe deve entrar em contato com todos e passar uma data prevista para a entrega da sua Vela 2."
+        />
+        <Accordion
+          color={offBlack}
+          hoverColor={velaGreen}
+          textColor={white}
+          title="3. O que está incluso no pacote de aluguel?"
+          content="12, 6 ou 3 meses de uma unidade da Vela 2, nova em folha, na cor e geometria da sua preferência. Todas as unidades serão entregues com o Plano Vela+ Simples ativo, que engloba a proteção contra roubo e furto, GPS, atualizações exclusivas e muito mais. Os serviços de revisão, manutenção e substituição de peças consumíveis não serão cobrados durante o período de locação, desde que realizados pela Vela nas cidades de São Paulo ou Curitiba."
+        />
+        <Accordion
+          color={offBlack}
+          hoverColor={velaGreen}
+          textColor={white}
+          title="4. E se eu não optar pela compra?"
+          content="Em 30 dias antes do término do período de locação, nossa equipe vai entrar em contato para verificar o interesse na compra da Vela 2, caso não haja interesse pela compra ou renovação do plano, nesse mesmo contato agendaremos a retirada da sua bicicleta, sem custo para as cidades de São Paulo e Curitiba."
+        />
+        <Accordion
+          color={offBlack}
+          hoverColor={velaGreen}
+          textColor={white}
+          title="5. Não moro em São Paulo ou Curitiba, ainda posso participar?"
+          content="Claro! A promoção será válida para todo o Brasil, porém será cobrada uma taxa de R$ 245,00 por cada trecho de transporte, como: entrega inicial, manutenções e devoluções."
+        />
+        </PaddedView>
+      </div>
+      <div className="legal">
+        <PaddedView>
+          <div className="legal-container">
+            <div className="infos">
+              <h3>Informações Legais</h3>
+              <p>
+                Esta página é um resumo da assinatura de locação, consulte o contrato e as
+                condições gerais para obter todos os detalhes da sua cobertura.
+              </p>
+              <p>
+                O presente contrato é celebrado pelo período de escolha no momento do pedido e, se
+                desejado, deve ser renovado tacitamente por períodos
+                consecutivos após um ano.
+              </p>
+              <p>
+                Os Termos de Aluguel e os Termos de Serviço estão sujeitos à
+                lei brasileira e ao Código de Defesa do Consumidor.
+              </p>
+            </div>
+            <div className="docs">
+              <h3>Documentos</h3>
+              <p>
+                <a href="/legal">Termos do Pacote de Aluguel</a>
+              </p>
+              <p>
+                <a href="/legal">Termos de Serviço</a>
+              </p>
+              <p>
+                <a href="/legal">Política de Privacidade</a>
+              </p>
+              <div className="action">
+                <a
+                  href="https://velabikes.freshdesk.com/support/home"
+                  target="_blank"
+                >
+                  <Button primary>Todas as FAQs</Button>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
         </PaddedView>
       </div>
       <style jsx>{`
-
         @media only screen and (max-width: 320px) {
             h2 {
                 font-size: 1.2em;
@@ -186,6 +281,10 @@ return (
             min-height: 50vh;
             max-height: 50vh;
             object-fit: cover;
+        }
+        .actions :global(button) {
+            margin-top: 1em;
+            margin-bottom: 0;
         }
         .left {
             display: flex;
@@ -206,7 +305,7 @@ return (
             text-align: center;
         }
         .questions {
-            padding: 2em 2em 0 2em;
+            padding: 2em 0em 0em 0em;
             background-color: ${offBlack};    
         }
         .cta h2, .cta h1, .cta h4 {
@@ -220,7 +319,6 @@ return (
             position: relative;
         }
         .cta {
-            position: absolute;
             bottom: 0em;
             right: auto;
             left: auto.
@@ -289,124 +387,168 @@ return (
             margin-bottom: 1em;
             margin-top: 1em;
           }
+          .protection {
+            z-index: 3;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            background-color: ${offBlack};
+          }
+          .protection .cta-protect {
+            width: 20em;
+            text-align: center;
+            padding: 2em 2em;
+          }
+          .protection .cta-protect h3, .protection .cta-protect h4 {
+            color: ${offWhite};
+          }
+          .protection .cta-protect p {
+            color: ${offWhite};
+            font-weight: 600;
+          }
         @media only screen and (min-width: 768px) {
             .cta {
                 position: absolute;
                 top: 4em;
-                right: 4em;
-                width: 18em;
+                left: 4em;
+                width: 14em;
                 bottom: auto;
-                text-align: center;
+                text-align: left;
                 padding: 2em;
                 background-color: ${white};
             }
             .cta h2, .cta h1, .cta h4 {
                 color: ${offBlack}
             }
-
-                .questions {
-                    padding: 3em 4em 2em 4em;
-                }
-                .howitworks {
-                    padding: 3em 3em 2em 3em;
-                }
-                .howitworks h2 {
-                    padding-left: 1em;
-                }
-                .steps {
-                    display: flex;
-                    flex-direction: row;
-                }
-                .step {
-                    padding: 2em 3em;
-                    max-width: 33%;
-                }
-                .section {
-                    padding: 3em 2em 1em 2em;
-                    flex-direction: column;
-                    align-items: stretch;
-                }
-                .left {
-                    flex-direction: row-reverse;
-                    margin-bottom: 2em;
-                }
-                .section img {
-                    max-width: 32em;
-                    min-width: 28em;
-                    max-height: 25em;
-                    min-height: 25em;
-                    object-fit: cover;
-                }
-                .section p, .section h4 {
-                    width: 16em;
-                }
-                .right {
-                    flex-direction: row-reverse;
-                    align-self: start;
-                }
-                .left-content {
-                    padding: 3em 4em 2em 2em;
-                    text-align: right;
-                    display: flex;
-                    align-items: flex-end;
-                    justify-content: center;
-                    flex-direction: column;
-                }
-                .right-content {
-                    padding: 3em 2em 2em 4em;
-                    text-align: left;
-                    display: flex;
-                    justify-content: center;
-                    flex-direction: column;
-                }
-                .cta-bottom {
-                    position: absolute;
-                    justify-content: center;
-                    left: 2em;
-                    bottom: 2em;
-                    text-align: left;
-                    background-color: transparent;
-                    margin-top: 0rem;
-                    padding: 2em;
-                    width: 30vw;
-                }
-                .tagline {
-                    justify-content: flex-start;
-                    align-items: flex-start;
-                    top: 2em;
-                    right: 4em;
-                    text-align: left;
-                    position: absolute;
-                    max-width: 24em;
-                    background-color: transparent;
-                }
-                .tagline h3{
-                    color: ${offWhite};
-                    font-style: italic;
-                }
-                .tagline h4{
-                    color: ${offWhite};
-                }
-                .image-cut {
-                    position: relative;
-                }
-                .legal {
-                    padding: 3em 3em 1em 3em;
-                  }
-                  .docs h3 {
-                    margin-top: 0;
-                  }
-                  .legal-container {
-                    flex-direction: row;
-                    justify-content: space-between;
-                  }
-                  .legal .infos {
-                    max-width: 45%;
-                  }
+            .protection .cta-protect h3, .protection .cta-protect h4 {
+              color: ${offBlack};
+            }
+            .protection .cta-protect p {
+              color: ${offBlack};
+              font-weight: 600;
+            }
+            .protection {
+                align-items: flex-end;
+                justify-content: flex-start;
+                width: 100%;
+                background-color: ${offBlack};
+            }
+            .protection .cta-protect {
+                width: 22em;
+                text-align: left;
+                padding: 3em;
+                position: absolute;
+                z-index: 4;
+                right: 8em;
+                top: 4em;
+                background-color: ${white}
+            }
+            .questions {
+                padding: 3em 4em 0em 4em;
+            }
+            .howitworks {
+                padding: 3em 3em 2em 3em;
+            }
+            .howitworks h2 {
+                padding-left: 1em;
+            }
+            .steps {
+                display: flex;
+                flex-direction: row;
+            }
+            .step {
+                padding: 2em 3em;
+                max-width: 33%;
+            }
+            .section {
+                padding: 3em 2em 1em 2em;
+                flex-direction: column;
+                align-items: stretch;
+            }
+                        .left {
+                            flex-direction: row-reverse;
+                            margin-bottom: 2em;
+                        }
+                        .section img {
+                            max-width: 32em;
+                            min-width: 28em;
+                            max-height: 25em;
+                            min-height: 25em;
+                            object-fit: cover;
+                        }
+                        .section p, .section h4 {
+                            width: 16em;
+                        }
+                        .right {
+                            flex-direction: row-reverse;
+                            align-self: start;
+                        }
+                        .left-content {
+                            padding: 3em 4em 2em 2em;
+                            text-align: right;
+                            display: flex;
+                            align-items: flex-end;
+                            justify-content: center;
+                            flex-direction: column;
+                        }
+                        .right-content {
+                            padding: 3em 2em 2em 4em;
+                            text-align: left;
+                            display: flex;
+                            justify-content: center;
+                            flex-direction: column;
+                        }
+                        .cta-bottom {
+                            position: absolute;
+                            justify-content: center;
+                            left: 2em;
+                            bottom: 2em;
+                            text-align: left;
+                            background-color: transparent;
+                            margin-top: 0rem;
+                            padding: 2em;
+                            width: 30vw;
+                        }
+                        .tagline {
+                            justify-content: flex-start;
+                            align-items: flex-start;
+                            top: 2em;
+                            right: 4em;
+                            text-align: left;
+                            position: absolute;
+                            max-width: 24em;
+                            background-color: transparent;
+                        }
+                        .tagline h3{
+                            color: ${offWhite};
+                            font-style: italic;
+                        }
+                        .tagline h4{
+                            color: ${offWhite};
+                        }
+                        .image-cut {
+                            position: relative;
+                        }
+                        .legal {
+                            padding: 3em 3em 1em 3em;
+                        }
+                        .docs h3 {
+                            margin-top: 0;
+                        }
+                        .legal-container {
+                            flex-direction: row;
+                            justify-content: space-between;
+                        }
+                        .legal .infos {
+                            max-width: 45%;
+                        }
         }
       `}</style>
     </div>
-  )
-}
+  );
+};
 
-export default compose()(Rental)
+export default compose()(Rental);
