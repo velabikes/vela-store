@@ -51,14 +51,8 @@ const Rental = () => {
       <div className="cover">
         <RentImage />
         <div className="cta">
-          <h1>Alugue a Vela 2</h1>
-          <h2>A primeira bike elétrica com app</h2>
-          <h4>Planos feitos especialmente para sua o seu dia a dia</h4>
-          <div className='actions'>
-            <a href='/alugar'>
-                <Button primary>Monte a sua</Button>
-            </a>
-          </div>
+          <h2>Alugue a primeira bike elétrica com app</h2>
+          <h4>Uma parceria exclusiva para o seu dia a dia</h4>
         </div>
       </div>
       <div className="howitworks">
@@ -98,6 +92,11 @@ const Rental = () => {
             </p>
           </div>
         </div>
+        <div className='actions'>
+            <center><a href='/alugar'>
+                <Button primary>Monte a sua</Button>
+            </a></center>
+          </div>
       </div>
       <div className="protection">
         <QuoteImage />
@@ -170,6 +169,11 @@ const Rental = () => {
                 normal'. Crie hábitos mais saudáveis para você e para todos ao
                 seu redor.{" "}
               </p>
+              <div className='actions'>
+            <a href='/alugar'>
+                <Button primary>Monte a sua</Button>
+            </a>
+          </div>
             </div>
             <a href="/vela2">
               <img
@@ -319,13 +323,16 @@ const Rental = () => {
             position: relative;
         }
         .cta {
-            bottom: 0em;
-            right: auto;
-            left: auto.
-            width: 18em;
             text-align: center;
             padding: 2em;
             background-color: ${offBlack};
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .cta h4 {
+          width: 14em;
         }
         .cta-bottom {
             text-align: center;
@@ -336,7 +343,7 @@ const Rental = () => {
             color: ${offWhite};
         }
         .howitworks {
-            padding: 2em;
+            padding: 2em 2em 3em 2em;
         }
         .howitworks h2{
             color: ${offBlack};
@@ -412,16 +419,20 @@ const Rental = () => {
         @media only screen and (min-width: 768px) {
             .cta {
                 position: absolute;
-                top: 4em;
-                left: 4em;
-                width: 14em;
-                bottom: auto;
-                text-align: left;
+                bottom: 0;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
                 padding: 2em;
-                background-color: ${white};
+                background-color: transparent;
             }
             .cta h2, .cta h1, .cta h4 {
-                color: ${offBlack}
+                color: ${offWhite}
+            }
+            .cta h4 {
+              width: 100%;
             }
             .protection .cta-protect h3, .protection .cta-protect h4 {
               color: ${offBlack};
