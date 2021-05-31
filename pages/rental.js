@@ -52,7 +52,7 @@ const Rental = () => {
         <RentImage />
         <div className="cta">
           <h2>Alugue a primeira bike elétrica com app</h2>
-          <h4>Uma parceria exclusiva para o seu dia a dia</h4>
+          <h4>Uma parceria exclusiva para o seu dia a dia - Válida em todo o Brasil</h4>
         </div>
       </div>
       <div className="howitworks">
@@ -331,8 +331,8 @@ const Rental = () => {
             justify-content: center;
             align-items: center;
         }
-        .cta h4 {
-          width: 14em;
+        .cta h4, .cta h2 {
+          width: 16em;
         }
         .cta-bottom {
             text-align: center;
