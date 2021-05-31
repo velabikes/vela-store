@@ -4,15 +4,9 @@ const options = {
   color: [
     {
       icon:
-        "https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelabikescom%2Fassets%2FGreen.png?alt=media&token=7ccad21a-f7df-4e45-afc6-b2abd5c868c6",
-      label: "Verde Floresta",
-      option: "Verde",
-    },
-    {
-      icon:
-        "https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelabikescom%2Fassets%2FBlue.png?alt=media&token=a41a1f25-ca21-4ff1-9cb7-399434d5637e",
-      label: "Azul Atlântico",
-      option: "Azul",
+        "https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelabikescom%2Fassets%2FRed.png?alt=media&token=f6f153a9-3be9-4c25-bca7-f5a5d068f5c5",
+      label: "Vermelho Bain",
+      option: "Vermelho",
     },
     {
       icon:

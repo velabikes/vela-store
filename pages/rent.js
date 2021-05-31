@@ -14,7 +14,7 @@ import ModelData from '../components/rent/ModelData'
 
 const initialValues = {
   frame: "Baixo",
-  color: "Verde",
+  color: "Vermelho",
   time: "Trimestral",
 };
 
