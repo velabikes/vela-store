@@ -499,7 +499,7 @@ module.exports = async (req, res) => {
           lng: -46.5584795697085
         },
         googlePlace: 'ChIJOeGEaFNfzpQRBMjvcEj6tj8',
-        type: ['service','charger']
+        type: ['service']
       },
       {
         name: 'Reciclo Bikes',
@@ -653,6 +653,36 @@ module.exports = async (req, res) => {
           lng: -51.178016
         },
         googlePlace: 'ChIJu8ETGbNE65QRo_9GRkhKXio',
+        type: ['service']
+      },
+      {
+        name: 'Saluh Oficina',
+        address: [
+          'R. Batista Cepelos, 283',
+          'Vila Mariana, São Paulo',
+          'SP, 04109-120, Brasil'
+        ],
+        phone: '(11) 97422-8054',
+        pos: {
+          lat: -23.5771711,
+          lng: -46.6328599
+        },
+        googlePlace: 'ChIJUb-kvoJZzpQRcKWYxtrRZY0',
+        type: ['service']
+      },
+      {
+        name: 'Tamanduá Bike Store LTDA',
+        address: [
+          'R. Sete de Setembro, 1495',
+          'Aeroporto, Corumbá',
+          'MS, 79332-010, Brasil'
+        ],
+        phone: '(67) 3232-9743',
+        pos: {
+          lat: -19.0110916,
+          lng: -57.654644
+        },
+        googlePlace: 'ChIJr5wbjnChh5MRLdm1W9GOU_g',
         type: ['service']
       },
       {
