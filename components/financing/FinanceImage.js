@@ -4,9 +4,9 @@ const FinanceImage = () =>
     <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FFinanciamento-Vela-2.jpg?alt=media&token=7080fcca-237d-4650-b2f9-665114ea2161' className='mobile' alt='Parcelar bike elétrica com App' />
     <style jsx>{`
       img {
-        min-height: 62vh;
+        min-height: 68vh;
         object-fit: cover;
-        object-position: 42% 50%;
+        object-position: 48% 100%;
       }
       .desktop {
         display: none;
@@ -17,7 +17,7 @@ const FinanceImage = () =>
             max-width: 100vw;
             object-fit: cover;
             max-height: calc(100vh - 3.5em);
-            object-position: 50% 100%;
+            object-position: 50% 60%;
           }
           .mobile {
             display: none;
