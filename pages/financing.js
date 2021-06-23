@@ -7,6 +7,7 @@ import { offBlack, offWhite, white } from "../style/colors";
 import Button from "../components/Button";
 import MainImage from "../components/financing/MainImage";
 import FinanceImage from "../components/financing/FinanceImage";
+import LastImage from "../components/financing/LastImage";
 
 const Financing = () => {
   return (
@@ -118,7 +119,7 @@ const Financing = () => {
             hoverColor={'#DCF5EB'}
             textColor={offBlack}
             title="3. Existe a incidência de juros no financiamento?"
-            content="O valor de mercado de uma nova unidade da Vela 2 hoje é de R$ 8.890, valor esse que pode ser divido em até 12x sem juros para o cliente. Para as pessoas inscritas no treinamento, além de oferecer o financiamento exclusivo em 18x, não será cobrado qualquer valor com relação à incidência de juros e ainda todos inscritos terão acesso à um desconto, ou seja, o valor final pago, considerando a soma de todas as parcelas do financiamento, é inferior ao valor de mercado, apenas R$ 7.872, ou seja, na prática, além do financiamento especial, estamos oferecendo mais de R$ 1.000 de desconto aos parceiros."
+            content="Não, na verdade pelo contrário! O valor de mercado de uma nova unidade da Vela 2 hoje é de R$ 8.890, valor esse que pode ser divido em até 12x sem juros para o cliente. Para as pessoas inscritas no treinamento, além de oferecer o financiamento exclusivo em 18x, não será cobrado qualquer valor com relação à incidência de juros e ainda todos inscritos terão acesso à um desconto, ou seja, o valor final pago, considerando a soma da entrada e todas as parcelas do financiamento, é inferior ao valor de mercado, apenas R$ 7.872, ou seja, na prática, além do financiamento especial, estamos oferecendo mais de R$ 1.000 de desconto aos parceiros."
           />
           <Accordion
             color={white}
@@ -136,9 +137,15 @@ const Financing = () => {
           />
         </PaddedView>
       </div>
+      <div className="last-image">
+        <div className="cta">
+          <h2>Você e a Vela unidos por uma mobilidade mais sustentável</h2>
+        </div>
+        <LastImage />
+      </div>
       <div className="last-call">
         <h3>Ainda possui dúvidas e quer saber mais sobre as condições de financiamento?</h3>
-        <p>Envie uma mensagem no chat à direita da tela para conversar com nosso time de atendimento. Você e a Vela unidos por uma mobilidade mais sustentável.</p>
+        <p>Envie uma mensagem no chat à direita da tela para conversar com nosso time de atendimento.</p>
       </div>
       <div className="legal">
         <PaddedView>
@@ -288,6 +295,11 @@ const Financing = () => {
         .last-call h3, .last-call p {
           color: ${offWhite}
         }
+        .last-image .cta {
+          padding: 2em;
+          text-align: center;
+          background-color: ${offWhite}
+        }
         @media only screen and (min-width: 768px) {
           .cover .cta {
             position: absolute;
@@ -348,6 +360,19 @@ const Financing = () => {
             justify-content: space-between;
             margin-top: 2em;
           }
+          .last-image .cta {
+            position: absolute;
+            padding: 2em;
+            z-index: 5;
+            max-width: 15em;
+            margin-top: 4em;
+            right: 4em;
+            background-color: ${offBlack};
+            text-align: left;
+          }
+          .last-image .cta h2 {
+            color: ${white};
+          }
         }
         @media only screen and (min-width: 770px) {
           .models-content {
@@ -367,7 +392,7 @@ const Financing = () => {
             font-size: 0.8em;
           }
           .last-call {
-            padding: 3em 4em;
+            padding: 3em 4em 2em 4em;
           }
           .bfunctions {
             flex-direction: row;
