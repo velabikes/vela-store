@@ -6,7 +6,7 @@ const FinanceImage = () =>
       img {
         min-height: 68vh;
         object-fit: cover;
-        object-position: 48% 100%;
+        object-position: 53% 100%;
       }
       .desktop {
         display: none;

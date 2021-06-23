@@ -51,9 +51,8 @@ const Financing = () => {
       <div className="cover">
         <FinanceImage />
         <div className="cta">
-          <h1 className="main-title">FINANCIE!</h1>
+          <h1 className="main-title">FINANCIE</h1>
           <h2>Condições exclusivas para especialistas Vela</h2>
-          <h4>Pague a entrada e parcele sua Vela 2 em até 18x sem juros - Válida em todo o país</h4>
         </div>
       </div>
       <div className="protection">
@@ -62,8 +61,8 @@ const Financing = () => {
           <h2>
             Chegou a melhor chance de adquirir a sua Vela 2!
           </h2>
-          <h4>Financie a primeira smartbike do Brasil, pague a entrada e parcele o valor restante em até 18x sem juros!</h4>
-          <p>Valor reduzido para o treinamento de especialistas no curso online da Vela</p>
+          <h4>Financie a primeira smartbike do Brasil, pague a entrada e parcele o valor restante em até 18x sem juros</h4>
+          <p>Valor reduzido para o treinamento de especialistas no curso online da Vela.</p>
           <div className="action">
             <Link href="/vela2"><Button primary>Monte a sua</Button></Link>
           </div>
@@ -80,16 +79,16 @@ const Financing = () => {
           </div>
           <div className="m2">
             <img src="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FFinanciamento-Parcele-Bike-Eletrica.png?alt=media&token=8112472e-3d1e-438b-938f-f1a7e342eb4d" />
-            <h3>Confirme o pedido com o pagamento do valor de entrada: R$ 2.990.</h3>
+            <h3>Confirme o pedido com o pagamento do valor de entrada: R$ 2.490</h3>
             <p>
-              Nossa equipe vai entrar em contato para confirmar o pedido e receber o valor da entrada, dando seguimento ao seu pedido.
+              Nossa equipe vai entrar em contato para confirmar o pedido e receber o valor da entrada, dando seguimento à fabricação da bicicleta.
             </p>
           </div>
           <div className="m3">
             <img src="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FFinanciamento-Vela-Bikes-Especialistas.png?alt=media&token=5de68efa-a1ef-41dc-be81-871f42b82356" />
-            <h3>Assista os módulos de vídeo aulas enquanto aguarda sua Vela!</h3>
+            <h3>Assista os módulos de vídeoaulas enquanto aguarda sua Vela!</h3>
             <p>
-              Aproveite o tempo de entrega para assistir os módulos de treinamento, torne-se um especialista e saiba tudo a respeito da Vela 2
+              Aproveite o tempo de entrega para assistir os módulos de treinamento, torne-se um especialista e saiba tudo a respeito da Vela 2.
             </p>
           </div>
         </div>
@@ -105,7 +104,7 @@ const Financing = () => {
             hoverColor={'#DCF5EB'}
             textColor={offBlack}
             title="1. Qual o passo a passo para o financiamento?"
-            content="Acesse a página www.velabikes.com.br/financiamento, clique no botão para montar a sua Vela 2, selecione a cor, modelo, tamanho, acessórios e siga em frente. Aplique o cupom ESPECIALISTA para ter acesso às parcelas de R$ 299 e siga para a página de pagamento. Siga com o pagamento através da plataforma Pagseguro para ter acesso ao financiamento em até 18x sem juros no cartão de crédito. Alguns cartões podem precisar de uma aprovação, caso tenha alguma dúvida, fale com o seu banco ou operadora do cartão. Após essa primeira etapa de solicitação do financiamento, caso aprovado, nossa equipe de atendimento irá entrar em contato contigo para realizar a confirmação do pedido e pagamento do valor da entrada de R$ 2.990. Esse valor poderá ser pago via PIX, transferência ou boleto bancário.Após a confirmação do seu pedido, nossa equipe vai dar entrada para separação do material e entrada da sua Vela na nossa fila de produção. Caso qualquer dúvida durante o processo de pedido ou enquanto aguarda a produção da sua Vela e faz os treinamentos, abra um chamado no chat do nosso site ou envie um email para escola@velabikes.com.br que responderemos em seguida."
+            content="Acesse a página www.velabikes.com.br/financiamento, clique no botão para montar a sua Vela 2, selecione a cor, modelo, tamanho, acessórios e siga em frente. Aplique o cupom ESPECIALISTA para ter acesso às parcelas de R$ 299 e siga para a página de pagamento. Siga com o pagamento através da plataforma Pagseguro para ter acesso ao financiamento em até 18x sem juros no cartão de crédito. Alguns cartões podem precisar de uma aprovação, caso tenha alguma dúvida, fale com o seu banco ou operadora do cartão. Após essa primeira etapa de solicitação do financiamento, caso aprovado, nossa equipe de atendimento irá entrar em contato contigo para realizar a confirmação do pedido e pagamento do valor da entrada de R$ 2.490. Esse valor poderá ser pago via PIX, transferência ou boleto bancário.Após a confirmação do seu pedido, nossa equipe vai dar entrada para separação do material e entrada da sua Vela na nossa fila de produção. Caso qualquer dúvida durante o processo de pedido ou enquanto aguarda a produção da sua Vela e faz os treinamentos, abra um chamado no chat do nosso site ou envie um email para escola@velabikes.com.br que responderemos em seguida."
           />
           <Accordion
             color={white}
@@ -119,7 +118,7 @@ const Financing = () => {
             hoverColor={'#DCF5EB'}
             textColor={offBlack}
             title="3. Existe a incidência de juros no financiamento?"
-            content="O valor de mercado de uma nova unidade da Vela 2 hoje é de R$ 8.890, valor esse que pode ser divido em até 12x sem juros para o cliente. Para as pessoas inscritas no treinamento, além de oferecer o financiamento exclusivo em 18x, não será cobrado qualquer valor com relação à incidência de juros e ainda todos inscritos terão acesso à um desconto, ou seja, o valor final pago, considerando a soma de todas as parcelas do financiamento, é inferior ao valor de mercado, apenas R$ 8.372."
+            content="O valor de mercado de uma nova unidade da Vela 2 hoje é de R$ 8.890, valor esse que pode ser divido em até 12x sem juros para o cliente. Para as pessoas inscritas no treinamento, além de oferecer o financiamento exclusivo em 18x, não será cobrado qualquer valor com relação à incidência de juros e ainda todos inscritos terão acesso à um desconto, ou seja, o valor final pago, considerando a soma de todas as parcelas do financiamento, é inferior ao valor de mercado, apenas R$ 7.872, ou seja, na prática, além do financiamento especial, estamos oferecendo mais de R$ 1.000 de desconto aos parceiros."
           />
           <Accordion
             color={white}
@@ -133,9 +132,13 @@ const Financing = () => {
             hoverColor={'#DCF5EB'}
             textColor={offBlack}
             title="5. Quais as condições para ser apto ao financiamento?"
-            content="Estar inscrito no programa de treinamento de técnico e especialistas, realizar o pagamento da entrada à vista no valor de R$ 2.990 e possuir limite no cartão de crédito para seguir com o financiamento em até 18x."
+            content="Estar inscrito no programa de treinamento de técnico e especialistas, realizar o pagamento da entrada à vista no valor de R$ 2.490 e possuir limite no cartão de crédito para seguir com o financiamento em até 18x."
           />
         </PaddedView>
+      </div>
+      <div className="last-call">
+        <h3>Ainda possui dúvidas e quer saber mais sobre as condições de financiamento?</h3>
+        <p>Envie uma mensagem no chat à direita da tela para conversar com nosso time de atendimento. Você e a Vela unidos por uma mobilidade mais sustentável.</p>
       </div>
       <div className="legal">
         <PaddedView>
@@ -180,7 +183,7 @@ const Financing = () => {
         }
         .main-title {
           position: absolute;
-          top: 1em;
+          top: 0.7em;
         }
         .cover .cta h4, .cover .cta h2 {
           color: ${offWhite};
@@ -277,6 +280,14 @@ const Financing = () => {
           max-width: 14em;
           min-width: 14em;
         }
+        .last-call {
+          padding: 2em;
+          background-color: ${offBlack};
+          text-align: center;
+        }
+        .last-call h3, .last-call p {
+          color: ${offWhite}
+        }
         @media only screen and (min-width: 768px) {
           .cover .cta {
             position: absolute;
@@ -291,27 +302,28 @@ const Financing = () => {
           }
           .main-title {
             top: -0.7em;
+            margin-left: 0.3em;
           }
           .protection {
+            padding-top: 4em;
             align-items: center;
             justify-content: center;
             flex-direction: row-reverse;
             width: 100%;
-            background-color: ${white};
+            background-color: ${offBlack};
             padding-bottom: 4em;
           }
           .protection .cta {
             text-align: right;
-            padding: 4em;
+            padding: 4em 4em 4em 2em;
             max-width: 28em;
-            margin-left: 4em;
             z-index: 4;
           }
           .protection .cta h4 {
-            color: ${offBlack};
+            color: ${offWhite};
           }
           .protection .cta p {
-            color: ${offBlack};
+            color: ${offWhite};
             font-weight: 600;
           }
           .questions {
@@ -354,6 +366,9 @@ const Financing = () => {
           .models > * > .profile {
             font-size: 0.8em;
           }
+          .last-call {
+            padding: 3em 4em;
+          }
           .bfunctions {
             flex-direction: row;
             padding: 2em
@@ -363,6 +378,20 @@ const Financing = () => {
           .bleft, .bright, .bcenter {
             max-width: 12em;
             min-width: 12em;
+          }
+        }
+        @media only screen and (min-width: 1500px) {
+          .cover .cta {
+            top: 8em;
+            right: 6em;
+            max-width: 25em;
+          }
+          .cover .cta h1 {
+            font-size: 4.5em;
+            margin-left: 0.5em;
+          }
+          .cover .cta h2 {
+            font-size: 2em;
           }
         }
         }
