@@ -31,6 +31,7 @@
     { "src": "/velamais", "dest": "/velaplus" },
     { "src": "/alugar", "dest": "/rent" },
     { "src": "/aluguel", "dest": "/rental" },
+    { "src": "/financiamento", "dest": "/financing" },
     { "src": "/termosdealuguel", "dest": "/legal" },
     { "src": "/terms-of-rent", "dest": "/legal" },
     { "src": "/blackfriday", "dest": "/blackfriday" },
@@ -40,6 +41,11 @@
     { "src": "/vela", 
       "status": 301, 
       "headers": { "Location": "/vela/" } 
+    },
+    {
+      "src": "/rede/lojas",
+      "status": 301,
+      "headers": { "Location": "/rede/mapa" }
     },
     {
       "src": "/live",
