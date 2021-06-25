@@ -21,7 +21,7 @@ const Modal = ({ show, onClose }) => {
           <div className="modalText">
             <div>
               <h2>Seja bem-vindo à Vela</h2>
-              <h3>Inscreva-se e ganhe 5% de desconto em nosso site!</h3>
+              <h3>Inscreva-se e ganhe 5% de desconto no seu primeiro pedido em todo o nosso site!</h3>
               <p>Fique por dentro das novidades e seja o(a) primeiro(a) a saber sobre nossas promoções. Vamos velejar?</p>
             </div>
             <div className="form">
