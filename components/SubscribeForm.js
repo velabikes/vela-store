@@ -16,7 +16,7 @@ const SubscribeForm = ({ showText }) =>
       url={url}
       render={({ subscribe, status }) =>
         status === 'success'
-          ? <div><p>Agradecemos sua inscrição. Vamos velejar?</p></div>
+          ? <div><p>Agradecemos sua inscrição.</p></div>
           : status === 'error' 
           ? <div><p>Opa, parece que você já de inscreveu!</p></div>
           : <Formik initialValues={{ EMAIL: '' }} onSubmit={subscribe}>
@@ -48,7 +48,7 @@ const SubscribeForm = ({ showText }) =>
       .SubscribeForm {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
       }
       h3 {
         color: ${lightGray};
@@ -75,8 +75,8 @@ const SubscribeForm = ({ showText }) =>
         left: -5000px;
       }
       p{
-        color: ${offWhite};
-        text-align: center;
+        color: ${velaGreen};
+        text-align: left;
       }
       @media only screen and (min-width: 768px) {
         .SubscribeForm {

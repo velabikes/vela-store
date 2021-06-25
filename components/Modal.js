@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
+import { getCurrentScrollPosition } from '../lib/scroll';
 import SubscribeForm from 'components/SubscribeForm'
 import { white } from 'style/colors'
-import { offBlack, offWhite } from "../style/colors"
+import { offBlack, velaGreen } from "../style/colors"
 import { CloseIcon } from './Icons'
 
 const Modal = ({ show, onClose }) => {
@@ -10,8 +11,8 @@ const Modal = ({ show, onClose }) => {
   return (
     <div className="modalBackground">
       <div className="modalContainer">
-        <div className='close'>
-          <CloseIcon color={offWhite} onClick={onClose} />
+        <div className='close' onClick={onClose}>
+          <CloseIcon color={velaGreen} />
         </div>
         <div className="modalContent">
           <div className="modalPic">
@@ -20,7 +21,7 @@ const Modal = ({ show, onClose }) => {
           <div className="modalText">
             <div>
               <h2>Seja bem-vindo à Vela</h2>
-              <h3>Inscreva-se e ganhe R$ 500 de desconto na sua Vela 2!</h3>
+              <h3>Inscreva-se e ganhe 5% de desconto em nosso site!</h3>
               <p>Fique por dentro das novidades e seja o(a) primeiro(a) a saber sobre nossas promoções. Vamos velejar?</p>
             </div>
             <div className="form">
@@ -34,7 +35,7 @@ const Modal = ({ show, onClose }) => {
       <style jsx>{`
         .modalBackground {
           position: absolute;
-          top: 0;
+          top: ${getCurrentScrollPosition()}px;
           left: 0;
           right: 0;
           bottom: 0;
@@ -55,12 +56,15 @@ const Modal = ({ show, onClose }) => {
         }
         .modalContent {
           display: flex;
-          flex-direction: row-reverse;
+          flex-direction: column;
           background-color: ${white};
         }
         .modalText {
           padding: 2em;
           color: ${offBlack}
+        }
+        .modalPic img {
+          display: none;
         }
         .modalText h3 {
           color: ${offBlack}
@@ -75,16 +79,27 @@ const Modal = ({ show, onClose }) => {
           right: 1.2em;
           top: 1.2em;
           cursor: pointer;
+          z-index: 5;
         }
         @media only screen and (min-width: 768px) {
           .modalContainer {
-            width: 50vw;
-            padding-bottom: 5em;
+            width: auto;
+            padding-bottom: 1em;
+          }
+          .modalContent {
+            flex-direction: row-reverse;
+          }
+          .modalPic img {
+            display: block;
+            max-width: 20em;
+            min-width: 20em;
           }
           .modalText {
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            min-width: 20em;
+            max-width: 20em;
           }
         }
       `}</style>
