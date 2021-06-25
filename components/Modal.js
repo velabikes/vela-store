@@ -8,7 +8,7 @@ const Modal = ({ show, onClose }) => {
   if (!show) return <></>;
 
   return (
-    <div className="modalBackground" onClick={onClose} >
+    <div className="modalBackground">
       <div className="modalContainer">
         <div className='close'>
           <CloseIcon color={offWhite} onClick={onClose} />
