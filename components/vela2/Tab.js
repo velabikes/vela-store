@@ -26,7 +26,7 @@ const Tab = ({ children, step, onStep }) => {
         }
         .TabSelector {
           position: fixed;
-          z-index: 120;
+          z-index: 5;
           display: flex;
           flex-direction: row;
           width: 100%;

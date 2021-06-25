@@ -46,7 +46,7 @@ const Modal = ({ show, onClose }) => {
           height: 100vh;
           width: 100%;
           min-height: 100vh;
-          z-index: 4;
+          z-index: 200;
         }
         .modalContainer {
           position: relative;
