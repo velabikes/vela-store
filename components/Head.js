@@ -6,7 +6,6 @@ import Freshchat from "components/head/Freshchat";
 import Modal from "components/Modal";
 
 const CustomHead = () => {
-  const [count, setCount] = useState(0);
   const [showModal, setShowModal] = useState(false);
 
   const handleShowModal = () => {
@@ -14,22 +13,12 @@ const CustomHead = () => {
     setShowModal(show);
   };
 
-  if(count < 1) {
-    setTimeout(() => {
-      setCount(count + 1);
-    }, 10000);
-  }
-
   useEffect(() => {
-    setTimeout(() => {
+    const timeout = setTimeout(() => {
       setShowModal(true);
     }, 25000);
-  }, [count]);
-
-  useEffect(() => {
-    const body = document.querySelector("body");
-    body.style.overflow = showModal === true ? "hidden" : "auto";
-  }, [showModal]);
+    return () => clearTimeout(timeout)
+  }, []);
 
   return (
     <div className="Head">
@@ -88,6 +77,7 @@ const CustomHead = () => {
           color: ${offBlack};
           background-color: ${white};
           font-family: Barlow, sans-serif;
+          overflow: ${showModal ? "hidden" : "auto"};
         }
         h1,
         h2,
