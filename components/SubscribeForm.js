@@ -6,10 +6,12 @@ import { NextIcon } from './Icons'
 
 const url = 'https://velabikes.us19.list-manage.com/subscribe/post?u=68a0cce7cc109d78a8b44d7a0&amp;id=b534f5cb40'
 
-const SubscribeForm = () =>
+const SubscribeForm = ({ showText }) =>
   <div className='SubscribeForm'>
-    <h3>Vamos nos conectar?</h3>
-    <p>Fique por dentro de novidades da Vela!</p>
+    {showText && 
+    <><h3>Vamos nos conectar?</h3>
+    <p>Fique por dentro de novidades da Vela!</p></>
+    }
     <MailchimpSubscribe
       url={url}
       render={({ subscribe, status }) =>

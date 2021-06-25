@@ -1,11 +1,26 @@
+import React, { useState, useEffect } from "react";
 import Head from 'next/head'
 import { compose, lifecycle } from 'recompose'
 import { velaGreen, offBlack, darkGray, white } from 'style/colors'
 import Freshchat from 'components/head/Freshchat'
+import Modal from 'components/Modal'
 import Heatmap from 'components/head/Heatmap'
 import Pop from 'components/home/Pop'
 
-const CustomHead = props =>
+const CustomHead = () => {
+  const [showModal, setShowModal] = useState(true);
+
+  const handleShowModal = () => {
+    const show = !showModal;
+    setShowModal(show);
+  };
+
+  useEffect(() => {
+    const body = document.querySelector('body');
+    body.style.overflow = showModal ? 'hidden' : 'auto';
+  }, [showModal])
+
+  return (
   <div className='Head'>
     <Head>
       <script dangerouslySetInnerHTML={{__html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -23,6 +38,7 @@ const CustomHead = props =>
       <meta name='theme-color' content='#ffffff' />
     </Head>
     <Freshchat />
+    <Modal onClose={handleShowModal} show={showModal} />
     <style jsx global>{`
       body * {
         //outline: 1px solid rgba(200,0,0,0.1)
@@ -167,6 +183,8 @@ const CustomHead = props =>
       }
     `}</style>
   </div>
+  )
+}
 
 export default compose(
   lifecycle({
