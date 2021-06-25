@@ -4,10 +4,9 @@ import { compose, lifecycle } from "recompose";
 import { velaGreen, offBlack, darkGray, white } from "style/colors";
 import Freshchat from "components/head/Freshchat";
 import Modal from "components/Modal";
-import Heatmap from "components/head/Heatmap";
-import Pop from "components/home/Pop";
 
 const CustomHead = () => {
+  const [count, setCount] = useState(0);
   const [showModal, setShowModal] = useState(false);
 
   const handleShowModal = () => {
@@ -15,10 +14,19 @@ const CustomHead = () => {
     setShowModal(show);
   };
 
+  if(count < 1) {
+    setTimeout(() => {
+      setCount(count + 1);
+    }, 1000);
+  }
+
   useEffect(() => {
     setTimeout(() => {
       setShowModal(true);
     }, 25000);
+  }, [count]);
+
+  useEffect(() => {
     const body = document.querySelector("body");
     body.style.overflow = showModal === true ? "hidden" : "auto";
   }, [showModal]);
