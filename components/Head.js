@@ -17,7 +17,7 @@ const CustomHead = () => {
   if(count < 1) {
     setTimeout(() => {
       setCount(count + 1);
-    }, 1000);
+    }, 10000);
   }
 
   useEffect(() => {
