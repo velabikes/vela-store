@@ -6,15 +6,17 @@ import { NextIcon } from './Icons'
 
 const url = 'https://velabikes.us19.list-manage.com/subscribe/post?u=68a0cce7cc109d78a8b44d7a0&amp;id=b534f5cb40'
 
-const SubscribeForm = () =>
+const SubscribeForm = ({ showText }) =>
   <div className='SubscribeForm'>
-    <h3>Vamos nos conectar?</h3>
-    <p>Fique por dentro de novidades da Vela!</p>
+    {showText && 
+    <><h3>Vamos nos conectar?</h3>
+    <p>Fique por dentro de novidades da Vela!</p></>
+    }
     <MailchimpSubscribe
       url={url}
       render={({ subscribe, status }) =>
         status === 'success'
-          ? <div><p>Agradecemos sua inscrição. Vamos velejar?</p></div>
+          ? <div><p>Agradecemos sua inscrição.</p></div>
           : status === 'error' 
           ? <div><p>Opa, parece que você já de inscreveu!</p></div>
           : <Formik initialValues={{ EMAIL: '' }} onSubmit={subscribe}>
@@ -46,7 +48,7 @@ const SubscribeForm = () =>
       .SubscribeForm {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
       }
       h3 {
         color: ${lightGray};
@@ -73,8 +75,8 @@ const SubscribeForm = () =>
         left: -5000px;
       }
       p{
-        color: ${offWhite};
-        text-align: center;
+        color: ${velaGreen};
+        text-align: left;
       }
       @media only screen and (min-width: 768px) {
         .SubscribeForm {

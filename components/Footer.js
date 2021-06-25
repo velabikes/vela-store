@@ -84,7 +84,7 @@ const Footer = () => (
           </nav>
         </div>
         <div className="news">
-          <SubscribeForm />
+          <SubscribeForm showText />
           <div className="social">
           <div className="social-icon">
             <a href="https://www.instagram.com/velabikes/"target="_blank">

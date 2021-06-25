@@ -21,21 +21,27 @@ const MainImage = () => (
       .desktop {
         display: none;
       }
-
-        @media only screen and (min-width: 768px) {
-          .mobile {
-            display: none;
-          }
-          .desktop {
-            display: initial;
-          }
-          img {
-            height: 30em;
-            width: 30em;
-            object-position: 50% 50%;
-          }
+      @media only screen and (min-width: 768px) {
+        .mobile {
+          display: none;
+        }
+        .desktop {
+          display: initial;
+        }
+        img {
+          height: 30em;
+          width: 30em;
+          object-position: 50% 50%;
         }
       }
+
+      @media only screen and (min-width: 1400px) {
+        img {
+          height: 43em;
+          width: 43em;
+        }
+      }
+    }
     `}</style>
   </div>
 );

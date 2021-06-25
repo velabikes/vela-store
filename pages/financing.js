@@ -307,6 +307,8 @@ const Financing = () => {
             max-width: 20em;
             right: 2em;
             text-align: right;
+            justify-items: flex-end;
+            align-items: flex-end;
             background-color: transparent;
           }
           .cover .cta h2 {
@@ -413,10 +415,13 @@ const Financing = () => {
           }
           .cover .cta h1 {
             font-size: 4.5em;
-            margin-left: 0.5em;
           }
           .cover .cta h2 {
             font-size: 2em;
+          }
+          .last-image .cta {
+            right: 8em;
+            margin-top: 8em;
           }
         }
         }
