@@ -23,13 +23,13 @@ const HomePage = ({ highlight }) =>
       <meta name="twitter:site" content="@velabikes" /> 
       <meta name="twitter:title" content="Vela 2: A bicicleta elétrica smart do Brasil - Vela Bikes" />
       <meta name="twitter:description" content="Uma bicicleta elétrica & smart para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes, sem abrir mão do estilo." />
-      <meta name="twitter:image" content="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Fblackfriday%2FBlackFridayVelaBikes.jpg?alt=media&token=31691630-473c-4f34-bd14-07e31d038fa1" />
+      <meta name="twitter:image" content="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FBike-Eletrica-Smart-Vela-Bikes.jpg?alt=media&token=83330a4b-06f4-4931-8b4f-e8afbff476c9" />
       <meta property='og:url' content='https://velabikes.com.br' />
       <meta property='og:type' content='website' />
       <meta property='og:title' content='Vela 2: A bicicleta elétrica smart do Brasil - Vela Bikes' />
       <meta property='og:locale' content='pt_BR' />
       <meta property='og:description' content='Uma bicicleta elétrica & smart para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes, sem abrir mão do estilo.' />
-      <meta property='og:image' content='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Fblackfriday%2FBlackFridayVelaBikes.jpg?alt=media&token=31691630-473c-4f34-bd14-07e31d038fa1' />
+      <meta property='og:image' content='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FBike-Eletrica-Smart-Vela-Bikes.jpg?alt=media&token=83330a4b-06f4-4931-8b4f-e8afbff476c9' />
     </Head>
     <div className='cover'>
       <HomeImage />
