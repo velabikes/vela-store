@@ -21,6 +21,9 @@ const LocationsMapPage = ({ locations }) =>
       :global(footer){
         display: none;
       }
+      :global(body) {
+        overflow: visible;
+      }
     `}</style>
   </div>
 
