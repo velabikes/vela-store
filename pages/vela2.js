@@ -26,9 +26,9 @@ const Vela2 = ({ checkout, checkoutLineItemsAdd, handleCheckoutCreation }) => {
   const [step, setStep] = useState(1);
   const [loadedCheckout, setLoadedCheckout] = useState(false);
 
-  const { size, color, tire } = selectedModel
+  const { size, color } = selectedModel
   const selectedModelData =
-    ModelData[JSON.stringify({ size, color, tire })] || {}
+    ModelData[JSON.stringify({ size, color })] || {}
 
 
     useEffect(() => {

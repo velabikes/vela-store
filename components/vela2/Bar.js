@@ -9,7 +9,7 @@ const Bar = ({ onContinue, extra, step, checkout }) => {
   return (
     <div className='Bar'>
       <div className='top'>
-        <p className='right'>Entrega de<br/> 2 até 3 meses</p><small>A Vela é um produto sob medida e artesanal. Por conta do COVID-19, o prazo de entrega se encontra estendido e pode sofrer alterações.</small>
+        <p className='right'>Entrega de<br/> 6 até 8 semanas</p><small>A Vela é um produto sob medida e artesanal. Por conta do COVID-19, o prazo de entrega se encontra estendido e pode sofrer alterações.</small>
       </div>
       <div className='bottom'>
         <div className='left'>

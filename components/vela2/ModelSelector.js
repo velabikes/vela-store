@@ -11,12 +11,6 @@ const options = {
     },
     {
       icon:
-        "https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelabikescom%2Fassets%2FRed.png?alt=media&token=f6f153a9-3be9-4c25-bca7-f5a5d068f5c5",
-      label: "Vermelho Pimenta",
-      option: "Vermelho",
-    },
-    {
-      icon:
         "https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelabikescom%2Fassets%2FBlue.png?alt=media&token=a41a1f25-ca21-4ff1-9cb7-399434d5637e",
       label: "Azul Atlântico",
       option: "Azul",
@@ -37,52 +31,32 @@ const options = {
   size: [
     {
       icon:
-        "https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FP.png?alt=media&token=5aa672a2-2696-498d-8141-b4d584a0c579",
-      label: "1.50 - 1.70m",
+        "https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FU.png?alt=media&token=7a2b99dd-4fca-4380-88f2-7c515062af53",
+      label: "1.50 - 1.80m",
       option: "P",
     },
     {
       icon:
         "https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelabikescom%2Fassets%2FM.png?alt=media&token=92ceac16-01b7-4d6e-bf0f-7db2a389e5d2",
-      label: "1.71 - 1.90m",
-      option: "BM",
-    },
-    {
-      icon:
-        "https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelabikescom%2Fassets%2FM.png?alt=media&token=92ceac16-01b7-4d6e-bf0f-7db2a389e5d2",
-      label: "1.58 - 1.72m",
-      option: "RM",
+      label: "1.60 - 1.72m",
+      option: "M",
     },
     {
       icon:
         "https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FG.png?alt=media&token=6c48b775-5e34-4240-bc21-d8b8e204509d",
-      label: "1.73 - 1.83m",
+      label: "1.73 - 1.85m",
       option: "G",
     },
     {
       icon:
         "https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FGG.png?alt=media&token=3582c696-66b7-43aa-a3a9-fb70af34a7a9",
-      label: "1.84 - 2m",
+      label: "1.86 - 2m",
       option: "GG",
     },
   ],
-  tire: [
-    {
-      icon:
-        "https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelabikescom%2Fassets%2FBlack.png?alt=media&token=d5b47cc2-6d10-45ae-91e9-6a521a4fef48",
-      label: "Preto",
-      option: "Preto",
-    },
-    {
-      icon:
-        "https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelabikescom%2Fassets%2FCream.png?alt=media&token=1710d261-2442-4ea6-832a-e96277c31551",
-      label: "Creme",
-      option: "Creme",
-    },
-  ],
   frame: [
-    { label: "Quadro baixo", option: "Baixo", sizes: ["P", "BM"] },
-    { label: "Quadro reto", option: "Reto", sizes: ["RM", "G", "GG"] },
+    { label: "Quadro baixo", option: "Baixo", sizes: ["P"] },
+    { label: "Quadro reto", option: "Reto", sizes: ["M", "G", "GG"] },
   ],
 };
 
@@ -90,7 +64,7 @@ const ModelSelector = ({ onModelChange, model }) => {
   const [selectedFrame, setSelectedFrame] = useState({
     label: "Quadro baixo",
     option: "Baixo",
-    sizes: ["P", "BM"],
+    sizes: ["P"],
   });
   const [filteredSizes, setFilteredSizes] = useState(options.size);
   const validate = (type, value) => {
@@ -106,7 +80,7 @@ const ModelSelector = ({ onModelChange, model }) => {
   }, [model]);
 
   const getModelFrame = (model) => {
-    if (model.size === "P" || model.size === "BM")
+    if (model.size === "P")
       return options.frame.filter((frame) => frame.option === "Baixo")[0];
     return options.frame.filter((frame) => frame.option === "Reto")[0];
   };
@@ -150,13 +124,6 @@ const ModelSelector = ({ onModelChange, model }) => {
         options={filteredSizes}
         onSelectOption={validate}
         selected={model.size}
-      />
-      <ControlField
-        label="Pneus:"
-        name="tire"
-        options={options.tire}
-        onSelectOption={validate}
-        selected={model.tire}
       />
     </div>
   );

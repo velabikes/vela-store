@@ -2,8 +2,8 @@ import { offWhite, darkGray } from '../../style/colors.js'
 import ModelData from './ModelData.js'
 import {HideOnMobile} from '../HideOn.js'
 
-const Display = ({ model: { frame, size, color, tire } }) => {
-  const selectedModelData = ModelData[JSON.stringify({ frame, size, color, tire })] || {}
+const Display = ({ model: { frame, size, color } }) => {
+  const selectedModelData = ModelData[JSON.stringify({ frame, size, color })] || {}
 
   return (
     <div className='Display'>
