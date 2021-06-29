@@ -267,7 +267,7 @@ const Vela = () =>
                 </tr>
                 <tr>
                   <td>Carregador</td>
-                  <td>126W | Recarga completa em até 3h | Compatível com recarga rápida.</td>
+                  <td>75W | Recarga completa em até 4-5 horas | Compatível com recarga rápida.</td>
                 </tr>
                 <tr>
                   <td>Conectividade</td>
