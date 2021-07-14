@@ -73,7 +73,7 @@ const ExtraSelector = ({ collection, onSelect, selected, model }) => {
         <p>✔ Mudflaps</p>
       </div>
       <h4>Personalize com mais acessórios:</h4>
-      <p>Adicione todos os ítens extras essenciais para Velejar com tranquilidade pela cidade:</p>
+      <p>Os ítens extras adicionados ao pedido não serão alugados e sim vendidos.</p>
       <div className='extraitems'>
         {collection.products.edges
           .filter(product => {

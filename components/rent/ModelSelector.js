@@ -1,26 +1,11 @@
 import ControlField from "../form/ControlField";
 
 const options = {
-  color: [
-    {
-      icon:
-        "https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelabikescom%2Fassets%2FRed.png?alt=media&token=f6f153a9-3be9-4c25-bca7-f5a5d068f5c5",
-      label: "Vermelho Bain",
-      option: "Vermelho",
-    },
-    {
-      icon:
-        "https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelabikescom%2Fassets%2FMidnight.png?alt=media&token=7907c973-ad1b-4134-9fab-849bac650bb5",
-      label: "Preto Meia-noite",
-      option: "Preto",
-    },
-  ],
   frame: [
     { label: "Quadro baixo", option: "Baixo" },
     { label: "Quadro reto", option: "Reto" },
   ],
   time: [
-    { label: "Trimestral", option: "Trimestral" },
     { label: "Semestral", option: "Semestral" },
     { label: "Anual", option: "Anual" },
   ],
@@ -42,13 +27,6 @@ const ModelSelector = ({ onModelChange, model }) => {
         selected={model.frame}
       />
       <ControlField
-        label="Cor:"
-        name="color"
-        options={options.color}
-        onSelectOption={validate}
-        selected={model.color}
-      />
-      <ControlField
         label="Período:"
         name="time"
         options={options.time}
@@ -56,14 +34,13 @@ const ModelSelector = ({ onModelChange, model }) => {
         selected={model.time}
       />
 	  <br />
+      <h4>Informaremos antes da entrega quais as cores disponíveis para você escolher.</h4>
       <p>
         Em dúvida de qual tamanho escolher? Siga as recomendações de acordo com
         sua altura:
       </p>
-      <h3>• Quadro baixo:</h3>
-      <p>→ 1,50m à 1,70m - Quadro 49 Aro 26"</p>
-      <h3>• Quadro reto:</h3>
-      <p>→ 1,71m à 1,90m - Quadro 55 Aro 700C</p>
+      <h6>• Quadro baixo: 1,50m à 1,70m</h6>
+      <h6>• Quadro reto: 1,71m à 1,90m</h6>
     </div>
   );
 };

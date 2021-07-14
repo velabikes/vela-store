@@ -1,12 +1,12 @@
 const RentImage = () =>
   <div>
-    <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Frent%2FAlugue-Vela-2-Bain.jpg?alt=media&token=0f92939b-a51b-4d01-afc1-5acff3b41605' className='desktop' alt='Aluguel bike elétrica com App' />
-    <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Frent%2FAlugue-Vela-2-Bain.jpg?alt=media&token=0f92939b-a51b-4d01-afc1-5acff3b41605' className='mobile' alt='Aluguel bike elétrica com App' />
+    <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FAluguel-Vela-2.jpg?alt=media&token=cf45b181-b3cf-41fc-9f12-f660dd9a2277' className='desktop' alt='Aluguel bike elétrica com App' />
+    <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FAssinatura-Vela-2.jpg?alt=media&token=a8e1d298-094a-4972-9654-e94e1ce02376' className='mobile' alt='Aluguel bike elétrica com App' />
     <style jsx>{`
       img {
-        min-height: 62vh;
+        height: 55vh;
         object-fit: cover;
-        object-position: 47% 50%;
+        object-position: 50% 50%;
       }
       .desktop {
         display: none;
@@ -16,8 +16,8 @@ const RentImage = () =>
             margin-top: 0em;
             max-width: 100vw;
             object-fit: cover;
-            max-height: calc(100vh - 3.5em);
-            object-position: 50% 100%;
+            height: 36em;
+            object-position: 50% 50%;
           }
           .mobile {
             display: none;

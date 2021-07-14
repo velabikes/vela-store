@@ -327,6 +327,11 @@ const Vela = () =>
         flex-direction: column;
         padding-top: 1em;
       }
+
+      .section img {
+        height: 35vh;
+        object-fit: cover;
+      }
       .left {
         display: flex;
         flex-direction: column;
@@ -350,7 +355,7 @@ const Vela = () =>
         overflow: hidden;
       }
       .image-cut img {
-        height: 25em;
+        height: 45vh;
         object-fit: cover;
         max-width: 100%;
         object-position: 50% 50%;
@@ -459,7 +464,7 @@ const Vela = () =>
       }
       .specs img {
         max-width: 100%;
-        height: 50vh;
+        height: 45vh;
         object-fit: cover;
       }
       .specs-content {
@@ -467,7 +472,7 @@ const Vela = () =>
         text-align: left;
         align-self: center;
         display: flex;
-        padding: 1em 0 0 0;
+        padding: 1em 0.5em 0 0.5em;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
@@ -480,7 +485,7 @@ const Vela = () =>
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
-        padding: 2em 0 0 0;
+        padding: 2em 0.5em 0 0.5em;
       }
       .table-specs {
         border-collapse: collapse;
@@ -754,7 +759,7 @@ const Vela = () =>
           
           @media only screen and (min-width: 1800px) {
             table, .table-specs {
-              width: 80%;
+              width: 75%;
               margin: 0 auto;
             }
           }

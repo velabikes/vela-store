@@ -12,7 +12,7 @@ const Rental = () => {
   return (
     <div className="rental">
       <Head>
-        <title>Bain + Vela: Alugue a Vela 2 - Vela Bikes</title>
+        <title>Alugue a Vela 2 - Vela Bikes</title>
         <link
           rel="alternate"
           hrefLang="pt-br"
@@ -26,7 +26,7 @@ const Rental = () => {
         />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@velabikes" />
-        <meta name="twitter:title" content="Bain + Vela: Alugue a Vela 2 - Vela Bikes" />
+        <meta name="twitter:title" content="Alugue a Vela 2 - Vela Bikes" />
         <meta
           name="twitter:description"
           content="Pacotes de aluguel para você experimentar a Vela 2! A primeira smartbike do Brasil com condições exclusivas para chamar de sua."
@@ -37,7 +37,7 @@ const Rental = () => {
         />
         <meta property="og:url" content="https://velabikes.com.br" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Bain + Vela: Alugue a Vela 2 - Vela Bikes" />
+        <meta property="og:title" content="Alugue a Vela 2 - Vela Bikes" />
         <meta property="og:locale" content="pt_BR" />
         <meta
           property="og:description"
@@ -50,10 +50,6 @@ const Rental = () => {
       </Head>
       <div className="cover">
         <RentImage />
-        <div className="cta">
-          <h2>Alugue a primeira bike elétrica com app</h2>
-          <h4>Uma parceria exclusiva para o seu dia a dia - Válida em todo o Brasil</h4>
-        </div>
       </div>
       <div className="howitworks">
         <h2>Como funciona?</h2>
@@ -62,8 +58,7 @@ const Rental = () => {
             <img src="/static/step1.png"></img>
             <h4>Monte sua Vela</h4>
             <h5>
-              Escolha a geometria do quadro, a cor da bike e o período de
-              locação
+              Escolha a geometria do quadro e o período de locação
             </h5>
             <p>
               A Vela 2 alugada será feita sob medida e entregue em até 3 meses.
@@ -76,8 +71,7 @@ const Rental = () => {
               Parcele o pacote do período desejado, pague em até 12x sem juros!
             </h5>
             <p>
-              Planos de um ano, seis meses ou três meses, pensados para sua
-              rotina.
+              Planos de um ano, seis meses ou três meses, pensados para sua rotina.
             </p>
           </div>
           <div className="step">
@@ -109,8 +103,8 @@ const Rental = () => {
           <h3>O ‘novo normal’ é isso, né? Nossas novas escolhas...”</h3>
           <h4>- Clara, Velejadora</h4>
           <div className='actions'>
-            <a href='/alugar'>
-                <Button primary>Monte a sua</Button>
+            <a href='/vela'>
+                <Button primary>Conheça a bike</Button>
             </a>
           </div>
         </div>
@@ -121,7 +115,7 @@ const Rental = () => {
             <div className="right-content">
               <h2>O aluguel feito para você</h2>
               <h4>
-                Os pacotes de 3, 6 ou 12 meses da Vela se encaixam na sua
+                Os pacotes de 6 ou 12 meses da Vela se encaixam na sua
                 rotina.
               </h4>
               <p>
@@ -136,11 +130,11 @@ const Rental = () => {
               <img
                 src="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Frent%2FAluguel-Bike-Eletrica.jpg?alt=media&token=2c22bfaf-bbd9-4457-a33a-5e213620ee4a"
                 alt="Aluguel de Bike Elétrica"
-              />
+              /> 
             </a>
           </div>
-          <div className="left">
-            <a href="/vela2">
+          <div className="left">  
+            <a href="/vela2"> 
               <img
                 src="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Frent%2FBike-Com-App-Aluguel.jpg?alt=media&token=612613fc-aa49-471b-9365-3453093f9857"
                 alt="Bicicleta com App"
@@ -165,9 +159,7 @@ const Rental = () => {
                 cidade.
               </h4>
               <p>
-                Pense agora nas escolhas que você deseja para o seu 'novo
-                normal'. Crie hábitos mais saudáveis para você e para todos ao
-                seu redor.{" "}
+                Com nossa assinatura, você se concentra no que realmente importa: aproveitar o caminho.
               </p>
               <div className='actions'>
             <a href='/alugar'>
@@ -191,28 +183,28 @@ const Rental = () => {
           color={offBlack}
           hoverColor={velaGreen}
           textColor={white}
-          title="1. Qual o período que a promoção estará ativa?"
-          content="Com exclusividade para a Bain, o aluguel da Vela 2 estará aberto durante o mês de junho."
+          title="1. Qual o período que as condições estarão ativas?"
+          content="Com quantidade limitada de 30 unidades, o aluguel da Vela 2 estará aberto enquanto tiver vagas disponíveis."
         />
         <Accordion
           color={offBlack}
           hoverColor={velaGreen}
           textColor={white}
           title="2. Reservando agora, quando recebo a minha Vela 2?"
-          content="As primeiras entregas dos planos de aluguel serão realizadas em agosto de 2021 na ordem dos pedidos. Como a expectativa é de receber muitos pedidos nessa promoção, o prazo pode ser maior para as pessoas que fizerem os pedidos por último. Portanto seja um(a) dos(as) primeiros(as)! Durante o mês de julho de 2020, nossa equipe deve entrar em contato com todos e passar uma data prevista para a entrega da sua Vela 2."
+          content="As primeiras entregas dos planos de aluguel serão realizadas em agosto de 2021 na ordem dos pedidos. O prazo esperado é de 6 até 12 semanas para as unidades estarem entregues."
         />
         <Accordion
           color={offBlack}
           hoverColor={velaGreen}
           textColor={white}
           title="3. O que está incluso no pacote de aluguel?"
-          content="12, 6 ou 3 meses de uma unidade da Vela 2, nova em folha, na cor e geometria da sua preferência. Todas as unidades serão entregues com o Plano Vela+ Simples ativo, que engloba a proteção contra roubo e furto, GPS, atualizações exclusivas e muito mais. Os serviços de revisão, manutenção e substituição de peças consumíveis não serão cobrados durante o período de locação, desde que realizados pela Vela nas cidades de São Paulo ou Curitiba."
+          content="12 ou 6 meses de uma unidade da Vela 2, nova em folha, na geometria da sua preferência. A cor será confirmada com você antes da entrega, informaremos as opções disponíveis para escolha. Todas as unidades serão entregues com o Plano Vela+ Simples ativo, que engloba a proteção contra roubo e furto, GPS, atualizações exclusivas e muito mais. Os serviços de revisão, manutenção e substituição de peças consumíveis não serão cobrados durante o período de locação, desde que realizados pela Vela nas cidades de São Paulo ou Curitiba."
         />
         <Accordion
           color={offBlack}
           hoverColor={velaGreen}
           textColor={white}
-          title="4. E se eu não optar pela compra?"
+          title="4. E quando o período de locação terminar?"
           content="Em 30 dias antes do término do período de locação, nossa equipe vai entrar em contato para verificar o interesse na compra da Vela 2, caso não haja interesse pela compra ou renovação do plano, nesse mesmo contato agendaremos a retirada da sua bicicleta, sem custo para as cidades de São Paulo e Curitiba."
         />
         <Accordion
@@ -220,7 +212,7 @@ const Rental = () => {
           hoverColor={velaGreen}
           textColor={white}
           title="5. Não moro em São Paulo ou Curitiba, ainda posso participar?"
-          content="Claro! A promoção será válida para todo o Brasil, porém será cobrada uma taxa de R$ 245,00 por cada trecho de transporte, como: entrega inicial, manutenções e devoluções."
+          content="Claro! As condições são válidas para todo o Brasil, porém será cobrada uma taxa de R$ 245,00 por cada trecho de transporte, como: entrega inicial, manutenções e devoluções."
         />
         </PaddedView>
       </div>
@@ -282,8 +274,8 @@ const Rental = () => {
         }
         .section img {
           min-width: 100%;
-          min-height: 50vh;
-          max-height: 50vh;
+          min-height: 35vh;
+          max-height: 35vh;
           object-fit: cover;
         }
         .actions :global(button) {
@@ -346,7 +338,7 @@ const Rental = () => {
           color: ${offWhite};
         }
         .howitworks {
-          padding: 2em 2em 3em 2em;
+          padding: 0em 2em 3em 2em;
         }
         .howitworks h2{
           color: ${offBlack};
@@ -381,13 +373,11 @@ const Rental = () => {
         .tagline h4 {
           color: ${offBlack};
         }
-        .legal {
-          background-color: ${offWhite};
-          padding: 2em 0 2em 0;
-          }
+
         .legal-container {
           display: flex;
           flex-direction: column;
+          padding: 2em 0 1em 0;
         }
         .legal h3 {
           color: ${offBlack};
@@ -419,6 +409,7 @@ const Rental = () => {
           color: ${offWhite};
           font-weight: 600;
         }
+        
         @media only screen and (min-width: 768px) {
           .cta {
             position: absolute;
@@ -464,7 +455,7 @@ const Rental = () => {
             padding: 3em 4em 0em 4em;
           }
           .howitworks {
-            padding: 3em 3em 2em 3em;
+            padding: 3em 3em 3em 3em;
           }
           .howitworks h2 {
             padding-left: 1em;

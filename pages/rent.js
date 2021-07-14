@@ -14,8 +14,7 @@ import ModelData from '../components/rent/ModelData'
 
 const initialValues = {
   frame: "Baixo",
-  color: "Vermelho",
-  time: "Trimestral",
+  time: "Semestral",
 };
 
 const Rent = ({ checkout, checkoutLineItemsAdd, handleCheckoutCreation}) => {
@@ -26,9 +25,9 @@ const Rent = ({ checkout, checkoutLineItemsAdd, handleCheckoutCreation}) => {
   const [activeButton, setActiveButton] = useState(false)
   const [loadedCheckout, setLoadedCheckout] = useState(false);
 
-  const { frame, color, time } = selectedModel
+  const { frame, time } = selectedModel
   const selectedModelData =
-    ModelData[JSON.stringify({ frame, color, time })] || {}
+    ModelData[JSON.stringify({ frame, time })] || {}
 
     useEffect(() => {
       if (loadedCheckout) return;

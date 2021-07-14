@@ -8,9 +8,9 @@ import Price from "../Price";
 const Bar = ({ onContinue, extra, step, checkout, model, activeButton }) => {
   const priceExtra =
     (model.time === "Anual"
-      ? 5146.5
+      ? 5438.5
       : model.time === "Semestral"
-      ? 3168.0
+      ? 3582.0
       : 1885.5) + extra.reduce((a, b) => a + parseInt(b.priceV2.amount), 0);
 
   return (
@@ -18,7 +18,7 @@ const Bar = ({ onContinue, extra, step, checkout, model, activeButton }) => {
       <div className="top">
         <div className="right">
           Entrega de
-          <br /> 2 até 3 meses
+          <br /> 6 até 12 semanas
         </div>
         <p>
           A Vela é um produto sob medida e artesanal. Por conta do COVID-19, o
@@ -32,9 +32,9 @@ const Bar = ({ onContinue, extra, step, checkout, model, activeButton }) => {
               <Price
                 value={
                   model.time === "Anual"
-                    ? 5146.5 / 365
+                    ? 5438.5 / 365
                     : model.time === "Semestral"
-                    ? 3168.0 / 180
+                    ? 3582.0 / 180
                     : 1885.5 / 90
                 }
                 period={"/dia"}
