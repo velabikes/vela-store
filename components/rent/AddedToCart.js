@@ -11,10 +11,9 @@ const AddedToCart = ({ checkout, checked, onCheck, toggleButton, activeButton })
       <h3>Itens adicionados ao carrinho!</h3>
       <p>Finalize o pedido do seu Pacote Aluguel Anual da Vela 2.</p>
       <div className='conditions'>
-        <p>1. Os acessórios adicionados ao pedido não serão alugados e sim vendidos.</p>
-        <p>2. A Vela é feita sob medida, o prazo atual é de 2 até 3 meses para produção e entrega.</p>
-        <p>3. Possui alguma dúvida? Envie uma mensagem no chat em azul à direita da tela!</p>
-        <p>4. Você receberá o status de acompanhamento do seu pedido por e-mail.</p>
+        <p>1. A Vela é feita sob medida, o prazo atual é de 6 até 12 semanas para produção e entrega.</p>
+        <p>2. Possui alguma dúvida? Envie uma mensagem no chat em azul à direita da tela!</p>
+        <p>3. Você receberá o status de acompanhamento do seu pedido por e-mail.</p>
       </div>
       <p>Aceitamos pagamentos pelo <b>PayPal</b> (parcele em até 12x sem juros no cartão de crédito) ou pelo Coinbase com criptomoedas.</p>
       {checkout && !checkout.lineItems.edges.length ? (

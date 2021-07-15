@@ -43,7 +43,7 @@ const Highlight = () => {
       </div>
       <style jsx>{`
           .Highlight {
-            padding: 2em 1em;
+            padding: 2em 0em;
           }
           .content{
             background-color: ${offBlack};
@@ -85,7 +85,7 @@ const Highlight = () => {
             display: flex;
             flex-direction: column;
             color: ${offWhite};
-            padding: 0em 2em 1em 2em;
+            padding: 0em 2em 2em 2em;
             justify-content: center;
           }
           .price h2{

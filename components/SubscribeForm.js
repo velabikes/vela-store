@@ -9,8 +9,10 @@ const url = 'https://velabikes.us19.list-manage.com/subscribe/post?u=68a0cce7cc1
 const SubscribeForm = ({ showText }) =>
   <div className='SubscribeForm'>
     {showText && 
-    <><h3>Vamos nos conectar?</h3>
-    <p>Fique por dentro de novidades da Vela!</p></>
+    <>
+      <h3>Vamos nos conectar?</h3>
+      <p>Fique por dentro de novidades da Vela!</p>
+    </>
     }
     <MailchimpSubscribe
       url={url}
@@ -48,7 +50,7 @@ const SubscribeForm = ({ showText }) =>
       .SubscribeForm {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: ${showText ? "center" : "flext-start"};
       }
       h3 {
         color: ${lightGray};
@@ -75,7 +77,7 @@ const SubscribeForm = ({ showText }) =>
         left: -5000px;
       }
       p{
-        color: ${velaGreen};
+        color: ${offWhite};
         text-align: left;
       }
       @media only screen and (min-width: 768px) {

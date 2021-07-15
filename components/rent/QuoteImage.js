@@ -13,7 +13,8 @@ const QuoteImage = () =>
         object-fit: cover;
         z-index: 1;
         width: 100%;
-        height: 50vh;
+        height: 45vh;
+        object-position: top;
       }
       .desktop {
         display: none;
@@ -21,9 +22,9 @@ const QuoteImage = () =>
       
       @media only screen and (min-width: 768px) {
           img {
-            height: 100vh;
+            height: 70vh;
             width: 100%;
-            object-position: 50% 50%;
+            object-position: top;
           }
           .mobile {
             display: none;
@@ -37,17 +38,18 @@ const QuoteImage = () =>
           }
           img {
             height: 95vh;
-            width: 55vw;
-            object-position: left;
+            width: 70vw;
+            object-position: top;
           }
           .mobile {
             display: none;
           }
           .desktop {
           }
-      @media only screen and (min-width: 1680px) {
+      @media only screen and (min-width: 1400px) {
           img {
             max-height: 70%;
+            width: 80vw;
           }
         }
       }
