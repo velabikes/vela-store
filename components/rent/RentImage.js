@@ -26,6 +26,16 @@ const RentImage = () =>
             display: initial;
           }
         }
+        @media only screen and (min-width: 1400px) {
+          img {
+            height: 45em;
+          }
+        }
+        @media only screen and (min-width: 1800px) {
+          img {
+            height: 55em;
+          }
+        }
       }
     `}</style>
   </div>

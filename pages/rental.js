@@ -7,6 +7,7 @@ import RentImage from "../components/rent/RentImage";
 import QuoteImage from "../components/rent/QuoteImage";
 import PaddedView from "../components/PaddedView";
 import Button from "../components/Button";
+import FooterImage from "../components/rent/FooterImage";
 
 const Rental = () => {
   return (
@@ -61,7 +62,7 @@ const Rental = () => {
               Escolha a geometria do quadro e o período de locação
             </h5>
             <p>
-              A Vela 2 alugada será feita sob medida e entregue em até 3 meses.
+              A Vela 2 alugada será feita sob medida e entregue na sua casa.
             </p>
           </div>
           <div className="step">
@@ -71,7 +72,7 @@ const Rental = () => {
               Parcele o pacote do período desejado, pague em até 12x sem juros!
             </h5>
             <p>
-              Planos de um ano, seis meses ou três meses, pensados para sua rotina.
+              Planos de um ano ou seis meses, pensados para sua rotina.
             </p>
           </div>
           <div className="step">
@@ -88,26 +89,18 @@ const Rental = () => {
         </div>
         <div className='actions'>
             <center><a href='/alugar'>
-                <Button primary>Monte a sua</Button>
+                <Button primary>Alugar</Button>
             </a></center>
           </div>
       </div>
-      <div className="protection">
-        <QuoteImage />
-        <div className="cta-protect">
-          <h3>“Ir ao trabalho de Vela é o ‘novo normal’ para mim.</h3>
-          <h3>
-            Estou orgulhosa por ter feito uma escolha ecológica, que prioriza
-            minha qualidade de vida, saúde e segurança.
-          </h3>
-          <h3>O ‘novo normal’ é isso, né? Nossas novas escolhas...”</h3>
-          <h4>- Clara, Velejadora</h4>
-          <div className='actions'>
-            <a href='/vela'>
-                <Button primary>Conheça a bike</Button>
-            </a>
+      <div className='cover'>
+          <FooterImage />
+          <div className='cta-bottom'>
+              <div className='slogan'>
+                <h2>A partir de apenas <br />R$ 14,90 por dia!</h2>
+                <h3>Alugue uma smartbike: o meio de transporte mais econômico e saudável para o seu dia a dia.</h3>
+              </div>
           </div>
-        </div>
       </div>
       <PaddedView>
         <div className="section">
@@ -123,7 +116,7 @@ const Rental = () => {
                 + <i>proteção contra roubo e furto</i> inclusos.
               </p>
               <small>
-                <p>* Válido apenas em São Paulo e Curitiba.</p>
+                <p>* Válido apenas em São Paulo.</p>
               </small>
             </div>
             <a href="/vela2">
@@ -163,7 +156,7 @@ const Rental = () => {
               </p>
               <div className='actions'>
             <a href='/alugar'>
-                <Button primary>Monte a sua</Button>
+                <Button primary>Alugar</Button>
             </a>
           </div>
             </div>
@@ -176,6 +169,23 @@ const Rental = () => {
           </div>
         </div>
       </PaddedView>
+      <div className="protection">
+        <QuoteImage />
+        <div className="cta-protect">
+          <h3>“Ir ao trabalho de Vela é o ‘novo normal’ para mim.</h3>
+          <h3>
+            Estou orgulhosa por ter feito uma escolha ecológica, que prioriza
+            minha qualidade de vida, saúde e segurança.
+          </h3>
+          <h3>O ‘novo normal’ é isso, né? Nossas novas escolhas...”</h3>
+          <h4>- Clara, Velejadora</h4>
+          <div className='actions'>
+            <a href='/vela'>
+                <Button primary>Conheça a bike</Button>
+            </a>
+          </div>
+        </div>
+      </div>
       <div className="questions">
         <PaddedView>
         <h2>Possui dúvidas?</h2>
@@ -184,34 +194,34 @@ const Rental = () => {
           hoverColor={velaGreen}
           textColor={white}
           title="1. Qual o período que as condições estarão ativas?"
-          content="Com quantidade limitada de 30 unidades, o aluguel da Vela 2 estará aberto enquanto tiver vagas disponíveis."
+          content="Com quantidade limitada, o aluguel da Vela 2 estará aberto enquanto tiver vagas disponíveis."
         />
         <Accordion
           color={offBlack}
           hoverColor={velaGreen}
           textColor={white}
           title="2. Reservando agora, quando recebo a minha Vela 2?"
-          content="As primeiras entregas dos planos de aluguel serão realizadas em agosto de 2021 na ordem dos pedidos. O prazo esperado é de 6 até 12 semanas para as unidades estarem entregues."
+          content="As primeiras entregas dos planos de aluguel serão realizadas em agosto de 2021 na ordem dos pedidos. O prazo esperado é de 6 até 12 semanas para sua unidade ser entregue."
         />
         <Accordion
           color={offBlack}
           hoverColor={velaGreen}
           textColor={white}
           title="3. O que está incluso no pacote de aluguel?"
-          content="12 ou 6 meses de uma unidade da Vela 2, nova em folha, na geometria da sua preferência. A cor será confirmada com você antes da entrega, informaremos as opções disponíveis para escolha. Todas as unidades serão entregues com o Plano Vela+ Simples ativo, que engloba a proteção contra roubo e furto, GPS, atualizações exclusivas e muito mais. Os serviços de revisão, manutenção e substituição de peças consumíveis não serão cobrados durante o período de locação, desde que realizados pela Vela nas cidades de São Paulo ou Curitiba."
+          content="12 ou 6 meses de uma unidade da Vela 2, na geometria da sua preferência. A cor será confirmada com você antes da entrega, informaremos as opções disponíveis para escolha. Todas as unidades serão entregues com o Plano Vela+ Simples ativo, que engloba a proteção contra roubo e furto, GPS, atualizações exclusivas e muito mais. Os serviços de revisão, manutenção e substituição de peças consumíveis não serão cobrados durante o período de locação, desde que realizados pela Vela na cidade de São Paulo."
         />
         <Accordion
           color={offBlack}
           hoverColor={velaGreen}
           textColor={white}
-          title="4. E quando o período de locação terminar?"
-          content="Em 30 dias antes do término do período de locação, nossa equipe vai entrar em contato para verificar o interesse na compra da Vela 2, caso não haja interesse pela compra ou renovação do plano, nesse mesmo contato agendaremos a retirada da sua bicicleta, sem custo para as cidades de São Paulo e Curitiba."
+          title="4. O período de locação acabou, e agora?"
+          content="Você pode renovar ele o aluguel ou comprar a Vela 2 com desconto! Nossa equipe irá entrar em contato 30 dias antes do fim do período para confirmar sua preferência. Caso você deseje finalizar o contrato, você deve enviar a bike de volta para nós."
         />
         <Accordion
           color={offBlack}
           hoverColor={velaGreen}
           textColor={white}
-          title="5. Não moro em São Paulo ou Curitiba, ainda posso participar?"
+          title="5. Não moro em São Paulo, ainda posso participar?"
           content="Claro! As condições são válidas para todo o Brasil, porém será cobrada uma taxa de R$ 245,00 por cada trecho de transporte, como: entrega inicial, manutenções e devoluções."
         />
         </PaddedView>
@@ -295,6 +305,7 @@ const Rental = () => {
           margin: 1em 0;
           display: flex;
           flex-direction: column-reverse;
+          align-self: flex-start;
         }
         .right-content {
           padding: 2em 2em 1em 2em;
@@ -409,7 +420,10 @@ const Rental = () => {
           color: ${offWhite};
           font-weight: 600;
         }
-        
+        .slogan h3 {
+          color: ${offWhite};
+          font-weight: 500;
+        }
         @media only screen and (min-width: 768px) {
           .cta {
             position: absolute;
@@ -448,7 +462,7 @@ const Rental = () => {
             position: absolute;
             z-index: 4;
             right: 8em;
-            top: 4em;
+            top: 6em;
             background-color: ${white}
           }
           .questions {
@@ -469,7 +483,6 @@ const Rental = () => {
             max-width: 33%;
           }
           .section {
-            padding: 3em 2em 1em 2em;
             flex-direction: column;
             align-items: stretch;
           }
@@ -478,7 +491,7 @@ const Rental = () => {
             margin-bottom: 2em;
           }
           .section img {
-            max-width: 32em;
+            max-width: 35em;
             min-width: 28em;
             max-height: 25em;
             min-height: 25em;
@@ -489,7 +502,6 @@ const Rental = () => {
           }
           .right {
             flex-direction: row-reverse;
-            align-self: start;
           }
           .left-content {
             padding: 3em 4em 2em 2em;
@@ -509,13 +521,14 @@ const Rental = () => {
           .cta-bottom {
             position: absolute;
             justify-content: center;
-            left: 2em;
-            bottom: 2em;
+            left: 4em;
+            top: 4em;
             text-align: left;
             background-color: transparent;
             margin-top: 0rem;
             padding: 2em;
-            width: 30vw;
+            width: 25vw;
+            background-color: ${offBlack}
           }
           .tagline {
             justify-content: flex-start;
@@ -549,6 +562,27 @@ const Rental = () => {
           }
           .legal .infos {
             max-width: 45%;
+          }
+        }
+        @media only screen and (min-width: 768px) and (max-width: 1200px) {
+          .protection .cta-protect {
+            bottom: 2em;
+            top: auto;
+            left: 2em;
+            right: auto;
+          }
+          .section {
+            align-items: center;
+          }
+          .right {
+            align-self: center;
+          }
+          .section img {
+            max-width: 22em;
+            min-width: 22em;
+            max-height: 22em;
+            min-height: 22em;
+            object-fit: cover;
           }
         }
       `}</style>

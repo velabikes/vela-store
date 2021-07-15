@@ -14,6 +14,7 @@ const QuoteImage = () =>
         z-index: 1;
         width: 100%;
         height: 45vh;
+        object-position: top;
       }
       .desktop {
         display: none;
@@ -21,9 +22,9 @@ const QuoteImage = () =>
       
       @media only screen and (min-width: 768px) {
           img {
-            height: 100vh;
+            height: 70vh;
             width: 100%;
-            object-position: 50% 50%;
+            object-position: top;
           }
           .mobile {
             display: none;
