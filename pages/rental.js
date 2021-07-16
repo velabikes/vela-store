@@ -62,7 +62,7 @@ const Rental = () => {
               Escolha a geometria do quadro e o período de locação
             </h5>
             <p>
-              A Vela 2 alugada será feita sob medida e entregue na sua casa.
+              Você receberá uma Vela 2 da nossa frota revisada e entregue na sua casa.
             </p>
           </div>
           <div className="step">
@@ -72,7 +72,7 @@ const Rental = () => {
               Parcele o pacote do período desejado, pague em até 12x sem juros!
             </h5>
             <p>
-              Planos de um ano ou seis meses, pensados para sua rotina.
+              Planos de um ano ou seis meses, pensados para sua rotina na cidade.
             </p>
           </div>
           <div className="step">
@@ -97,7 +97,7 @@ const Rental = () => {
           <FooterImage />
           <div className='cta-bottom'>
               <div className='slogan'>
-                <h2>A partir de apenas <br />R$ 14,90 por dia!</h2>
+                <h2>A partir de R$ 14,90 por dia no plano anual!</h2>
                 <h3>Alugue uma smartbike: o meio de transporte mais econômico e saudável para o seu dia a dia.</h3>
               </div>
           </div>
@@ -136,7 +136,7 @@ const Rental = () => {
             <div className="left-content">
               <h2>A única smartbike do Brasil</h2>
               <h4>
-                Agora com as melhores condições de aluguel. Vamos pedalar smart?
+                Agora com as melhores condições de aluguel. Prepare-se para pedalar smart.
               </h4>
               <p>
                 Após o período de aluguel, você pode renovar o plano ou receber
@@ -194,14 +194,14 @@ const Rental = () => {
           hoverColor={velaGreen}
           textColor={white}
           title="1. Qual o período que as condições estarão ativas?"
-          content="Com quantidade limitada, o aluguel da Vela 2 estará aberto enquanto tiver vagas disponíveis."
+          content="Com quantidade limitada, o aluguel da Vela 2 estará aberto enquanto houverem vagas disponíveis."
         />
         <Accordion
           color={offBlack}
           hoverColor={velaGreen}
           textColor={white}
           title="2. Reservando agora, quando recebo a minha Vela 2?"
-          content="As primeiras entregas dos planos de aluguel serão realizadas em agosto de 2021 na ordem dos pedidos. O prazo esperado é de 6 até 12 semanas para sua unidade ser entregue."
+          content="As primeiras entregas dos planos de aluguel serão realizadas em agosto de 2021 na ordem dos pedidos. O prazo esperado é de 4 até 8 semanas para sua unidade ser entregue."
         />
         <Accordion
           color={offBlack}
@@ -215,7 +215,7 @@ const Rental = () => {
           hoverColor={velaGreen}
           textColor={white}
           title="4. O período de locação acabou, e agora?"
-          content="Você pode renovar ele o aluguel ou comprar a Vela 2 com desconto! Nossa equipe irá entrar em contato 30 dias antes do fim do período para confirmar sua preferência. Caso você deseje finalizar o contrato, você deve enviar a bike de volta para nós."
+          content="Você pode renovar o aluguel ou comprar a Vela 2 com desconto! Nossa equipe irá entrar em contato 30 dias antes do fim do período para confirmar sua preferência. Caso você deseje finalizar o contrato, você deve enviar a bike de volta para nós."
         />
         <Accordion
           color={offBlack}
@@ -583,6 +583,13 @@ const Rental = () => {
             max-height: 22em;
             min-height: 22em;
             object-fit: cover;
+          }
+        }
+        @media only screen and (min-width: 1600px) {
+          .cta-bottom {
+            width: 16vw;
+            top: 6em;
+            left: 6em;
           }
         }
       `}</style>
