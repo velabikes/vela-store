@@ -4,7 +4,6 @@ import Main from '../components/Main'
 import Head from '../components/Head'
 import Tab from '../components/legal/Tab'
 import TermsOfService from '../components/legal/TermsOfService'
-import TermsOfRent from '../components/legal/TermsOfRent'
 import TermsOfVelaPlus from '../components/legal/TermsOfVelaPlus'
 import PrivacyPolicy from '../components/legal/PrivacyPolicy'
 import ShippingPolicy from '../components/legal/ShippingPolicy'
@@ -27,7 +26,6 @@ const LegalPage = () => {
             <Returns />
             <Warranty />
             <PrivacyPolicy />
-            <TermsOfRent />
             <TermsOfVelaPlus />
           </Tab>
         </PaddedView>
