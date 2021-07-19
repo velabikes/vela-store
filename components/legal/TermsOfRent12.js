@@ -1,7 +1,7 @@
 import PaddedView from "../PaddedView";
 import Section from "../Section";
 
-const TermsOfRent = () => (
+const TermsOfRent12 = () => (
   <div>
     <br />
     <h2>Termo de Locação do Pacote Aluguel Anual</h2>
@@ -36,10 +36,7 @@ const TermsOfRent = () => (
         contendo foto e número do CPF;
       </p>
       <p>
-        (b) O pedido de locação estará sujeito à uma análise e aprovação de
-        crédito. A conclusão da análise deve ser realizada até o dia 19 de
-        dezembro de 2020. Caso a aprovação seja negada, a LOCADORA tem até 10
-        dias úteis para realizar o reembolso do pedido;
+        (b) O pedido de locação estará sujeito à uma análise e aprovação de crédito. A conclusão da análise deve ser realizada em até 15 dias corridos da data do pedido. Caso a aprovação seja negada, a LOCADORA tem até 10 dias úteis para realizar o reembolso do pedido;
       </p>
       <p>
         (c) Apresentação de comprovante de residência em nome do LOCATÁRIO e
@@ -65,28 +62,28 @@ const TermsOfRent = () => (
       <p>
         1.3. Entrega da Bike. A LOCADORA se obriga a entregar a BIKE ao
         LOCATÁRIO, no seu domicílio pessoal ou endereço de preferência com frete
-        grátis para São Paulo (SP) e Curitiba (PR) e frete no valor de R$180,00
-        (cento e oitenta reais) para outros locais do Brasil.
+        grátis para São Paulo (SP) e frete no valor de R$245,00
+        (duzentos e quarenta e cinco reais) para outros locais do Brasil.
       </p>
       <p>
         1.4. Devolução da Bike. O LOCATÁRIO será responsável pela devolução da
         BIKE à LOCADORA, caso opte pela devolução da BIKE após o período de 12
-        (doze) meses. Para São Paulo (SP) e Curitiba (PR), a BIKE deverá ser
+        (doze) meses. Para São Paulo (SP), a BIKE deverá ser
         devolvida no endereço indicado pela LOCADORA, para outras cidades do
         Brasil, o frete de devolução será de responsabilidade do LOCATÁRIO e
-        terá do custo de R$180,00 (cento e oitenta reais) que deverá ser pago
+        terá do custo de R$245,00 (duzentos e quarenta e cinco reais) que deverá ser pago
         pelo LOCATÁRIO à LOCADORA.
       </p>
       <h3>SEÇÃO 2 - ALUGUEL E ENCARGOS </h3>
       <p>
         2.1. O LOCATÁRIO pagará à LOCADORA o aluguel mensal, por um período de
-        12 (doze) meses, no valor de R$ 289,00 (duzentos e oitenta e nove reais)
+        12 (doze) meses, no valor de R$ 453,20 (quatrocentos e cinquenta e três reais e vinte centavos)
         ao mês (“Aluguel”) cobrados no cartão de crédito no ato da reserva deste
         pacote.
       </p>
       <p>
         2.2. O Aluguel será pago de maneira antecipada, em 12 (doze) parcelas no
-        valor de R$ 289,00 (duzentos e oitenta e nove reais), por meio de débito
+        valor de R$ 453,20 (quatrocentos e cinquenta e três reais e vinte centavos), por meio de débito
         direto no cartão de crédito de titularidade do LOCATÁRIO, cadastrado
         previamente pela LOCADORA, e é devido no momento da reserva de locação
         do pacote anual da BIKE à LOCADORA.
@@ -117,7 +114,7 @@ const TermsOfRent = () => (
       </p>
       <p>
         (b) Oferecer assistência técnica à BIKE, no endereço indicado pela
-        LOCADORA em São Paulo (SP) ou Curitiba (PR), sem qualquer custo
+        LOCADORA em São Paulo (SP), sem qualquer custo
         adicional para o LOCATÁRIO, desde que não haja constatação de mau uso
         pelo LOCATÁRIO;
       </p>
@@ -176,10 +173,10 @@ const TermsOfRent = () => (
       </p>
       <p>
         4.2. Na hipótese de roubo da BIKE, o LOCATÁRIO pagará à LOCADORA o valor
-        de R$ 2.890,00 (dois mil oitocentos e noventa reais), a título de
+        de R$ 3.890,00 (três mil oitocentos e noventa reais), a título de
         coparticipação. Já nas hipóteses de furto e furto qualificado, o valor
-        da coparticipação a ser paga pelo LOCATÁRIO à LOCADORA é de R$ 3.890,00
-        (três mil oitocentos e noventa reais).
+        da coparticipação a ser paga pelo LOCATÁRIO à LOCADORA é de R$ 4.890,00
+        (quatro mil oitocentos e noventa reais).
       </p>
       <p>
         4.3. O pagamento da coparticipação pelo LOCATÁRIO à LOCADORA, em
@@ -190,13 +187,12 @@ const TermsOfRent = () => (
       <p>
         5.1. A manutenção da BIKE está inclusa na Locação e não será cobrada do
         LOCATÁRIO desde que seja realizada diretamente pela LOCADORA em São
-        Paulo (SP) ou Curitiba (PR).
+        Paulo (SP).
       </p>
       <p>
         5.2. No caso de serviços necessários fora das cidades onde temos oficina
         Vela ou fora da garantia da BIKE, é de exclusiva responsabilidade do
-        LOCATÁRIO o pagamento do transporte, no valor de R$180,00 (cento e
-        oitenta reais) por trecho.
+        LOCATÁRIO o pagamento do transporte, no valor de R$245,00 (duzentos e quarenta e cinco reais) por trecho.
       </p>
       <p>
         5.3. Hipóteses de exclusão da cobertura da manutenção prevista na
@@ -241,8 +237,8 @@ const TermsOfRent = () => (
       </p>
       <p>(k) Caso a BIKE seja vandalizada pelo LOCATÁRIO;</p>
       <p>
-        (l) Caso a manutenção seja realizada em outros locais que não sejam as
-        sedes de São Paulo (SP) ou Curitiba (PR) da LOCADORA.
+        (l) Caso a manutenção seja realizada em outros locais que não seja a
+        sede de São Paulo (SP) da LOCADORA.
       </p>
       <p>
         5.4. A exclusão da cobertura de manutenção prevista na Cláusula 5.1
@@ -260,7 +256,7 @@ const TermsOfRent = () => (
       <p>
         6.1. O presente Termo entra em vigor na data da entrega da BIKE pela
         LOCADORA em favor do LOCATÁRIO, nos termos previstos na Cláusula 1.3 e
-        permanecerá em vigor por 12 meses.
+        permanecerá em vigor por 12 (doze) meses.
       </p>
       <h3>SEÇAO 7 - INADIMPLEMENTO, PENALIDADES E RESCISÕES</h3>
       <p>
@@ -302,9 +298,8 @@ const TermsOfRent = () => (
         7.6. É de responsabilidade do LOCATÁRIO a devolução da BIKE à LOCADORA
         após o período de 12 (doze) meses. Bem como todos os custos necessários,
         quando aplicáveis, para o envio da BIKE ao endereço indicado pela
-        LOCADORA, como fretes ou transportadora, com o custo de R$180,00 (cento
-        e oitenta reais) por trecho para cidades de todo o país com exceção de
-        São Paulo (SP) e Curitiba (PR).
+        LOCADORA, como fretes ou transportadora, com o custo de R$245,00 (duzentos e quarenta e cinco reais) por trecho para cidades de todo o país com exceção de
+        São Paulo (SP).
       </p>
       <h3>SEÇÃO 8 - PRIVACIDADE</h3>
       <p>
@@ -346,9 +341,9 @@ const TermsOfRent = () => (
         para nele serem dirimidas quaisquer dúvidas oriundas do presente Termo.
         E, por assim estarem de acordo, as partes aceitam o presente Termo.
       </p>
-      <small>Revisado e atualizado em 22 de março de 2021.</small>
+      <small>Revisado e atualizado em 19 de julho de 2021.</small>
     </Section>
   </div>
 );
 
-export default TermsOfRent;
+export default TermsOfRent12;

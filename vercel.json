@@ -26,15 +26,16 @@
     { "src": "/loja/produto/(?<handle>[^/]+)$", "dest": "/store/product?handle=$handle" },
     { "src": "/testride", "dest": "/test-ride" },
     { "src": "/contato", "dest": "/contact" },
+    { "src": "/contato", "dest": "/contact" },
     { "src": "/loja/pecas", "dest": "/store/parts" },
     { "src": "/investir", "dest": "/invest" },
+    { "src": "/termosdealuguel", "dest": "/terms-of-rent" },
     { "src": "/velamais", "dest": "/velaplus" },
     { "src": "/alugar", "dest": "/rent" },
     { "src": "/aluguel", "dest": "/rental" },
     { "src": "/financiamento", "dest": "/financing" },
-    { "src": "/termosdealuguel", "dest": "/legal" },
-    { "src": "/terms-of-rent", "dest": "/legal" },
     { "src": "/blackfriday", "dest": "/blackfriday" },
+    { "src": "/blackfriday/legal", "dest": "/blackfriday/legal" },
     { "src": "/vela/", "dest": "/vela" },
     { "src": "/vela/(?<param>[^/]+)", "dest": "/vela" },
     { "src": "/blog/(?<slug>[^/]+)", "dest": "/blog/slug?slug=$slug" },
@@ -51,11 +52,6 @@
       "src": "/live",
       "status": 301,
       "headers": { "Location": "https://videos.netshow.me/t/xVgbn-QPW4E/form" }
-    },
-    {
-      "src": "/blackfriday",
-      "status": 301,
-      "headers": { "Location": "/aluguel" }
     },
     {
       "src": "/lugares",

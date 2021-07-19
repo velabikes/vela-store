@@ -33,11 +33,11 @@ const AddedToCart = ({ checkout, checked, onCheck, toggleButton, activeButton })
         </>
       )}
       <div>
-        <label>
+        <label className='terms'>
           <Checkbox
             onChange={() => onCheck(!checked) + toggleButton(!activeButton)}
           />
-          <span>Eu concordo com os <a href='/termosdealuguel' target='_blank'>Termos de Serviço de Aluguel</a> da Vela 2.</span>
+          <span>Eu concordo com os <a href='/termosdealuguel' target='_blank'>Termos de Aluguel</a> da Vela 2 correspondentes ao período contratado.</span>
         </label>
         <h6>Após pagamento, a contratação será concluída mediante análise de crédito. As informações para análise serão requeridas por e-mail.</h6>
       </div>    
@@ -62,6 +62,9 @@ const AddedToCart = ({ checkout, checked, onCheck, toggleButton, activeButton })
       }
       .conditions p{
         font-size: 0.9em;
+      }
+      .terms {
+        margin-bottom: 0.5em;
       }
       `}</style>
     </div>

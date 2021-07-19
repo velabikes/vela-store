@@ -1,14 +1,12 @@
 import React, {useState, useEffect} from "react";
 import { compose } from "recompose";
 import Head from "next/head"
-import Accordion from "../components/Accordion"
-import { offBlack, offWhite, white } from "../style/colors"
-import BFImage from "../components/blackfriday/BFImage"
-import QuoteImage from "../components/blackfriday/QuoteImage"
-import FooterImage from "../components/blackfriday/FooterImage"
-import PaddedView from '../components/PaddedView'
-import SubscribeForm from "../components/blackfriday/SubscribeForm";
-import Button from "../components/Button";
+import Accordion from "../../components/Accordion"
+import { offBlack, offWhite, white } from "../../style/colors"
+import BFImage from "../../components/blackfriday/BFImage"
+import QuoteImage from "../../components/blackfriday/QuoteImage"
+import FooterImage from "../../components/blackfriday/FooterImage"
+import PaddedView from '../../components/PaddedView'
 
 var countDownDate = new Date("Nov 27, 2020 15:01:00 GMT").getTime();
 
@@ -70,13 +68,13 @@ return (
             <div className='step'>
                 <img src='/static/step2.png'></img>
                 <h4>Alugue a Vela 2 por 12 meses...</h4>
-                <h5>Parcele o pacote anual no cartão de crédito e pague apenas R$ 289 por mês!</h5>
+                <h5>Parcele o pacote anual no cartão de crédito!</h5>
                 <p>Conte com rastreamento GPS e proteção contra roubo e furto inclusos.</p>
             </div>
             <div className='step'>
                 <img src='/static/step3.png'></img>
                 <h4>Após o 1º ano, ela pode ser sua.</h4>
-                <h5>Por mais R$ 2.890 em até 12x. Você paga sua Vela em um total de 24 meses.</h5>
+                <h5>Você paga sua Vela em um total de 24 meses.</h5>
                 <p>O melhor preço e o maior tempo de parcelamento, para você velejar.</p>
             </div>
         </div>
@@ -98,7 +96,7 @@ return (
         <div className='section'>
             <div className='right'>
                 <div className='right-content'>
-                    <h2>R$ 289 por mês</h2>
+                    <h2>Mensalidade exclusiva</h2>
                     <h4>Pacote de aluguel anual<br/> em até 12x sem juros.</h4>
                     <p>Conte com <i>manutenções/revisões</i>*, <i>rastreamento GPS</i> + <i>proteção contra roubo e furto</i> inclusos.</p>
                     <small><p>* Válido apenas em São Paulo e Curitiba.</p></small>
@@ -113,8 +111,8 @@ return (
                 </a>
                 <div className='left-content'>
                     <h2>Após 12 meses...</h2>
-                    <h4>Você pode comprar por mais R$ 2.890, em até 12x sem juros!</h4>
-                    <p>As melhores condições de aluguel + compra da Vela 2 unidas para você.<br/> É a sua chance de participar da maior promoção na história da Vela. </p>
+                    <h4>Você pode comprar a unidade locada, em até 12x sem juros!</h4>
+                    <p>As melhores condições de aluguel + compra da Vela 2 unidas para você.<br/> Confira os <a href='/blackfriday/legal'>termos de aluguel</a> exclusivos da Black Friday 2020. </p>
                 </div>
             </div>
             <div className='right'>

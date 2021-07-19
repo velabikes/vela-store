@@ -8,46 +8,18 @@ const Tab = ({ children, step, onStep }) => {
           onClick={() => onStep(1)}
           className={step === 1 ? "active" : "inactive"}
         >
-          Termos de Serviços
+          Pacote Anual
         </div>
         <div
           onClick={() => onStep(2)}
           className={step === 2 ? "active" : "inactive"}
         >
-          Política de Frete
-        </div>
-        <div
-          onClick={() => onStep(3)}
-          className={step === 3 ? "active" : "inactive"}
-        >
-          Política de Devoluções
-        </div>
-        <div
-          onClick={() => onStep(4)}
-          className={step === 4 ? "active" : "inactive"}
-        >
-          Termos de Garantia
-        </div>
-        <div
-          onClick={() => onStep(5)}
-          className={step === 5 ? "active" : "inactive"}
-        >
-          Política de Privacidade
-        </div>
-        <div
-          onClick={() => onStep(6)}
-          className={step === 6 ? "active" : "inactive"}
-        >
-          Termos do Plano Vela+
+          Pacote Semestral
         </div>
       </div>
       <div className="TabContent">
         {step === 1 && children[0]}
         {step === 2 && children[1]}
-        {step === 3 && children[2]}
-        {step === 4 && children[3]}
-        {step === 5 && children[4]}
-        {step === 6 && children[5]}
       </div>
       <style jsx>{`
         .Tab {
