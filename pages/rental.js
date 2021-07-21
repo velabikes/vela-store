@@ -88,8 +88,8 @@ const Rental = () => {
           </div>
         </div>
         <div className='actions'>
-            <center><a href='/alugar'>
-                <Button primary>Alugar</Button>
+            <center><a href='/'>
+                <Button disabled>Alugar</Button>
             </a></center>
           </div>
       </div>
@@ -155,8 +155,8 @@ const Rental = () => {
                 Com nossa assinatura, você se concentra no que realmente importa: aproveitar o caminho.
               </p>
               <div className='actions'>
-            <a href='/alugar'>
-                <Button primary>Alugar</Button>
+            <a href='/'>
+                <Button disabled>Alugar</Button>
             </a>
           </div>
             </div>

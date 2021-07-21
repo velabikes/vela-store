@@ -80,7 +80,7 @@ const Bar = ({ onContinue, extra, step, checkout, model, activeButton }) => {
               Finalizar
             </Button>
           ) : activeButton === true && checkout.lineItems.edges.length ? (
-            <Button primary onClick={onContinue}>
+            <Button disabled onClick={""}>
               Finalizar
             </Button>
           ) : (

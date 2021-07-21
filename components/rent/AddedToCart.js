@@ -2,7 +2,7 @@ import React from 'react'
 import { compose } from 'recompose'
 import withCheckout from '../../containers/withCheckout'
 import CartItem from '../store/Cart/Item'
-import { velaBlue, offWhite } from '../../style/colors'
+import { velaBlue, offWhite, velaRed } from '../../style/colors'
 import Checkbox from '../Checkbox'
 
 const AddedToCart = ({ checkout, checked, onCheck, toggleButton, activeButton }) => {
@@ -33,13 +33,14 @@ const AddedToCart = ({ checkout, checked, onCheck, toggleButton, activeButton })
         </>
       )}
       <div>
-        <label className='terms'>
+        {/* <label className='terms'>
           <Checkbox
             onChange={() => onCheck(!checked) + toggleButton(!activeButton)}
           />
           <span>Eu concordo com os <a href='/termosdealuguel' target='_blank'>Termos de Aluguel</a> da Vela 2 correspondentes ao período contratado.</span>
         </label>
-        <h6>Após pagamento, a contratação será concluída mediante análise de crédito. As informações para análise serão requeridas por e-mail.</h6>
+        <h6>Após pagamento, a contratação será concluída mediante análise de crédito. As informações para análise serão requeridas por e-mail.</h6> */}
+        <h5 className='unavailable'>O aluguel está indisponível no momento. Aguarde novas oportunidades!</h5>
       </div>    
       <style jsx>{`
       .items {
@@ -65,6 +66,9 @@ const AddedToCart = ({ checkout, checked, onCheck, toggleButton, activeButton })
       }
       .terms {
         margin-bottom: 0.5em;
+      }
+      .unavailable {
+        color: ${velaRed};
       }
       `}</style>
     </div>
