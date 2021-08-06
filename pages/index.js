@@ -77,6 +77,7 @@ const HomePage = ({ highlight }) =>
       .cover {
          position: relative;
          background-color: ${offWhite};
+         width: 100%;
       }
       .cta-bf {
         text-align: center;

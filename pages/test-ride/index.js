@@ -13,17 +13,17 @@ const TestRide = () =>
       <link rel='alternate' hrefLang='pt-br' href='https://velabikes.com.br/test-ride' />
       <meta httpEquiv='content-language' content='pt-br' />
       <meta name='application-name' content='Vela Bikes Store' />
-      <meta name='description' content='Você já pode testar a Vela 2 em São Paulo e Curitiba! Conheça a primeira smartbike do Brasil.' />
+      <meta name='description' content='Você já pode testar a Vela 2 em São Paulo! Conheça a primeira smartbike do Brasil.' />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content="@velabikes" /> 
       <meta name="twitter:title" content="Test-ride - Vela Bikes" />
-      <meta name="twitter:description" content="Você já pode testar a Vela 2 em São Paulo e Curitiba! Conheça a primeira smartbike do Brasil." />
+      <meta name="twitter:description" content="Você já pode testar a Vela 2 em São Paulo! Conheça a primeira smartbike do Brasil." />
       <meta name="twitter:image" content="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Ftestride%2FTestRideVela2.jpg?alt=media&token=67d76c33-aa93-4704-81c8-72ffca0ef7a0" />
       <meta property='og:url' content='https://velabikes.com.br/test-ride' />
       <meta property='og:type' content='website' />
       <meta property='og:title' content='Test-ride - Vela Bikes' />
       <meta property='og:locale' content='pt_BR' />
-      <meta property='og:description' content='Você já pode testar a Vela 2 em São Paulo e Curitiba! Conheça a primeira smartbike do Brasil.' />
+      <meta property='og:description' content='Você já pode testar a Vela 2 em São Paulo! Conheça a primeira smartbike do Brasil.' />
       <meta property='og:image' content='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2Ftestride%2FTestRideVela2.jpg?alt=media&token=67d76c33-aa93-4704-81c8-72ffca0ef7a0' />
     </Head>
     <div className='cover'>
@@ -51,16 +51,6 @@ const TestRide = () =>
               <Button primary>Agendar</Button>
             </a>
           </div>
-        </div>
-        <div className="m2">
-          <h3>Curitiba</h3>
-          <p><i>Al. Prudente de Moraes, 1071 - Mercês</i></p>
-          <p>
-            Entre em contato para agendar com a nossa loja:
-          </p>
-          <h4>
-            (41) 98786-2553
-          </h4>
         </div>
       </div>
     </div>

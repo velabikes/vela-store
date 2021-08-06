@@ -11,8 +11,8 @@ import Inverter from 'components/Inverter'
 const Locations = ({ stores }) =>
   <PaddedView className='Stores'>
     <Head>
-      <title>Nossas Lojas - Vela Bikes</title>
-      <meta name='description' content='Venha conhecer uma de nossas lojas oficiais, estamos em São Paulo e Curitiba' />
+      <title>Nossa Loja - Vela Bikes</title>
+      <meta name='description' content='Venha conhecer nossa loja oficial, estamos no coração de São Paulo.' />
     </Head>
     <Main>
       <MainHeader
@@ -20,7 +20,7 @@ const Locations = ({ stores }) =>
         tagline='Conheça nossos produtos em uma loja Vela'
       />
       <p>
-        Oferecemos em nossas lojas experiências de test-ride, serviços, ampla gama de acessórios e café fresco, em ambiente confortável e inclusivo para o universo do ciclismo e da mobilidade urbana elétrica.
+        Oferecemos em nossa loja experiências de test-ride, serviços, ampla gama de acessórios e café fresco, em ambiente confortável e inclusivo para o universo do ciclismo e da mobilidade urbana elétrica.
       </p>
       <br />
       {stores && stores.map(({ photo, ...locationInfo }) =>
@@ -76,19 +76,6 @@ Locations.getInitialProps = () => {
       ['Sex', '11:00 – 19:00'],
       ['Sáb', '11:00 – 19:00'],
       ['Dom', '11:00 – 19:00']
-    ]
-  }, {
-    name: 'Vela Curitiba',
-    address: ['Alameda Prudente de Moraes 1071', 'Centro'],
-    photo: 'https://gallery.mailchimp.com/68a0cce7cc109d78a8b44d7a0/images/f6dfc4d8-5992-453c-929a-5fe2f2c44010.jpg',
-    hours: [
-      ['Dom', 'Fechado'],
-      ['Seg', 'Fechado'],
-      ['Ter', '09:00 - 18:00'],
-      ['Qua', '09:00 - 18:00'],
-      ['Qui', '09:00 - 18:00'],
-      ['Sex', '09:00 - 18:00'],
-      ['Sáb', '09:00 - 18:00']
     ]
   }]
 

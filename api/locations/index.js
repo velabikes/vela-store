@@ -965,31 +965,6 @@ module.exports = async (req, res) => {
         },
         googlePlace: 'ChIJL-xzGGFXzpQR_X4Kin8W9lQ',
         type: ['store', 'charger']
-      },
-      {
-        name: 'Vela Bikes',
-        address: [
-          'Alameda Prudente de Moraes, 1071',
-          'Mercês, Curitiba',
-          'PR, 80430-234, Brasil'
-        ],
-        phone: '(41) 98786-2553',
-        open: true,
-        hours: [
-          ['Dom', ' Fechado'],
-          ['Seg', ' Fechado'],
-          ['Ter', ' 09:00 – 18:00'],
-          ['Qua', ' 09:00 – 18:00'],
-          ['Qui', ' 09:00 – 18:00'],
-          ['Sex', ' 09:00 – 18:00'],
-          ['Sáb', ' 09:00 – 18:00']
-        ],
-        pos: {
-          lat: -25.4311768,
-          lng: -49.2818262
-        },
-        googlePlace: 'ChIJY1lrO13l3JQRfw9lIVJSCU8',
-        type: ['store', 'charger']
       }
     ])
   )
