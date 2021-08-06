@@ -23,7 +23,7 @@ const HomeImage = () =>
           display: none;
         }
         .desktop {
-          display: initial;
+          display: cover;
         }
       }
     }

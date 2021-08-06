@@ -4,7 +4,6 @@ const fetch = require('node-fetch')
 
 const freeShippingArray = [
   'Osasco',
-  'Curitiba',
   'São Paulo',
   'Guarulhos',
   'Diadema',
