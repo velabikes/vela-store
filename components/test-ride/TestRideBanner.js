@@ -6,7 +6,7 @@ const TestRideBanner = () =>
     <div className='TestRideBanner'>
       <div className='BannerTitle'>
         <SectionHeader
-          title="Você já pode testar a Vela 2 em São Paulo e Curitiba!"
+          title="Você já pode testar a Vela 2 em São Paulo!"
           tagline="Aproveite para descobrir a sensação única de pedalar uma bicicleta elétrica, com todo o apoio do Vela App pelo caminho."
         />
         <p>
