@@ -421,21 +421,6 @@ module.exports = async (req, res) => {
         type: ['charger']
       },
       {
-        name: 'Oficina Small Hill de Bicicletas Elétricas',
-        address: [
-          'R. Pôrto Martins, 748',
-          'Brooklin, São Paulo',
-          'SP, 04570-140, Brasil'
-        ],
-        phone: '(11) 95874-5326',
-        pos: {
-          lat: -23.6002339,
-          lng: -46.68690119999999
-        },
-        googlePlace: 'ChIJ8Z2NTyhRzpQRSkxnqdw8UjQ',
-        type: ['service']
-      },
-      {
         name: 'Bicicletaria Oficina',
         address: [
           'Condomínio do Centro Comercial Long Beach',
@@ -683,6 +668,21 @@ module.exports = async (req, res) => {
           lng: -57.654644
         },
         googlePlace: 'ChIJr5wbjnChh5MRLdm1W9GOU_g',
+        type: ['service']
+      },
+      {
+        name: 'Tito',
+        address: [
+          'Rua Professora Antonia Reginato Vianna, 794',
+          'Capão da Imbuia, Curitiba',
+          'PR, 82810-300, Brasil'
+        ],
+        phone: '(41) 99651-1135',
+        pos: {
+          lat: -25.4334753,
+          lng: -49.2161606
+        },
+        googlePlace: 'ChIJH4KmwHvl3JQRyCMugpwaUNg',
         type: ['service']
       },
       {
