@@ -63,7 +63,6 @@ const CustomHead = () => {
         <meta name="theme-color" content="#ffffff" />
       </Head>
       <Freshchat />
-      <Modal onClose={handleShowModal} show={showModal} />
       <style jsx global>{`
         body * {
           //outline: 1px solid rgba(200,0,0,0.1)
