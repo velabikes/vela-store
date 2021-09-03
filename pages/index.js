@@ -1,73 +1,107 @@
-import Head from 'next/head'
-import { getPrismic, Predicates } from 'lib/prismic'
-import PropTypes from 'prop-types'
-import HomeVideo from 'components/home/HomeVideo'
-import HomeBanner from 'components/home/HomeBanner'
-import Highlight from 'components/home/Highlight'
-import PostHighlight from 'components/blog/PostHighlight'
-import PaddedView from 'components/PaddedView'
-import Button from '../components/Button'
-import VelaPoint from '../components/charge/VelaPoint'
-import { offBlack, offWhite, velaGreen, white } from '../style/colors'
-import HomeImage from '../components/home/HomeImage'
+import Head from "next/head";
+import { getPrismic, Predicates } from "lib/prismic";
+import PropTypes from "prop-types";
+import HomeVideo from "components/home/HomeVideo";
+import HomeBanner from "components/home/HomeBanner";
+import Highlight from "components/home/Highlight";
+import PostHighlight from "components/blog/PostHighlight";
+import PaddedView from "components/PaddedView";
+import Button from "../components/Button";
+import VelaPoint from "../components/charge/VelaPoint";
+import { offBlack, offWhite, velaGreen, white } from "../style/colors";
+import HomeImage from "../components/home/HomeImage";
 
-const HomePage = ({ highlight }) =>
-  <div className='HomePage'>
+const HomePage = ({ highlight }) => (
+  <div className="HomePage">
     <Head>
-      <title>Vela 2: A bicicleta elétrica smart do Brasil - Vela  Bikes</title>
-      <link rel='alternate' hrefLang='pt-br' href='https://velabikes.com.br' />
-      <meta httpEquiv='content-language' content='pt-br' />
-      <meta name='application-name' content='Vela Bikes Store' />
-      <meta name='description' content='Uma bicicleta elétrica & smart para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes, sem abrir mão do estilo.' />
+      <title>Vela 2: A bicicleta elétrica smart do Brasil - Vela Bikes</title>
+      <link rel="alternate" hrefLang="pt-br" href="https://velabikes.com.br" />
+      <meta httpEquiv="content-language" content="pt-br" />
+      <meta name="application-name" content="Vela Bikes Store" />
+      <meta
+        name="description"
+        content="Uma bicicleta elétrica & smart para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes, sem abrir mão do estilo."
+      />
       <meta name="twitter:card" content="summary" />
-      <meta name="twitter:site" content="@velabikes" /> 
-      <meta name="twitter:title" content="Vela 2: A bicicleta elétrica smart do Brasil - Vela Bikes" />
-      <meta name="twitter:description" content="Uma bicicleta elétrica & smart para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes, sem abrir mão do estilo." />
-      <meta name="twitter:image" content="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FBike-Eletrica-Smart-Vela-Bikes.jpg?alt=media&token=83330a4b-06f4-4931-8b4f-e8afbff476c9" />
-      <meta property='og:url' content='https://velabikes.com.br' />
-      <meta property='og:type' content='website' />
-      <meta property='og:title' content='Vela 2: A bicicleta elétrica smart do Brasil - Vela Bikes' />
-      <meta property='og:locale' content='pt_BR' />
-      <meta property='og:description' content='Uma bicicleta elétrica & smart para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes, sem abrir mão do estilo.' />
-      <meta property='og:image' content='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FBike-Eletrica-Smart-Vela-Bikes.jpg?alt=media&token=83330a4b-06f4-4931-8b4f-e8afbff476c9' />
+      <meta name="twitter:site" content="@velabikes" />
+      <meta
+        name="twitter:title"
+        content="Vela 2: A bicicleta elétrica smart do Brasil - Vela Bikes"
+      />
+      <meta
+        name="twitter:description"
+        content="Uma bicicleta elétrica & smart para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes, sem abrir mão do estilo."
+      />
+      <meta
+        name="twitter:image"
+        content="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FBike-Eletrica-Smart-Vela-Bikes.jpg?alt=media&token=83330a4b-06f4-4931-8b4f-e8afbff476c9"
+      />
+      <meta property="og:url" content="https://velabikes.com.br" />
+      <meta property="og:type" content="website" />
+      <meta
+        property="og:title"
+        content="Vela 2: A bicicleta elétrica smart do Brasil - Vela Bikes"
+      />
+      <meta property="og:locale" content="pt_BR" />
+      <meta
+        property="og:description"
+        content="Uma bicicleta elétrica & smart para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes, sem abrir mão do estilo."
+      />
+      <meta
+        property="og:image"
+        content="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FBike-Eletrica-Smart-Vela-Bikes.jpg?alt=media&token=83330a4b-06f4-4931-8b4f-e8afbff476c9"
+      />
     </Head>
-    <div className='cover'>
+    <div className="cover">
       <HomeImage />
-      <div className='cta-bf'>
-        <div className='slogan'>
+      <div className="cta-bf">
+        <div className="slogan">
           <h1>Smartbike Vela 2</h1>
           <h3>Pedale com a gente para cidades mais saudáveis</h3>
-          <h4>A bicicleta elétrica e smart para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes.</h4>
-          <a href='/vela2'><Button primary>Monte a sua</Button></a>
+          <h4>
+            A bicicleta elétrica e smart para quem busca eficiência, qualidade
+            de vida e deslocamentos menos estressantes.
+          </h4>
+          <a href="/vela2">
+            <Button primary>Monte a sua</Button>
+          </a>
         </div>
       </div>
     </div>
-    <div className='cover'>
+    <div className="cover">
       <HomeVideo />
-      <div className='cta'>
-        <div className='slogan'>
-          <h2>Feita com cuidado.<br /> No Brasil.</h2>
+      <div className="cta">
+        <div className="slogan">
+          <h2>
+            Feita com cuidado.
+            <br /> No Brasil.
+          </h2>
           <h3>Cadeia produtiva sustentável e produção artesanal.</h3>
-          <h4>Cada bike é montada sob medida, com a combinação e tamanho feitos para você.</h4>
-          <a href='/vela'><Button primary>Saiba mais</Button></a>
+          <h4>
+            Cada bike é montada sob medida, com a combinação e tamanho feitos
+            para você.
+          </h4>
+          <a href="/vela">
+            <Button primary>Saiba mais</Button>
+          </a>
         </div>
       </div>
     </div>
     <Highlight />
-    <div className='home-store'>
-      <a href='/blog'>
-        <div className='store-title'>
+    <div className="home-store">
+      <a href="/blog">
+        <div className="store-title">
           <h3>Blog</h3>
         </div>
       </a>
     </div>
     <br />
-    <PaddedView style={{backgroundColor: '#EFEFEF'}}> 
+    <PaddedView style={{ backgroundColor: "#EFEFEF" }}>
       {/* {images && <HomeAlbum images={images} />} */}
       <PostHighlight post={highlight} />
       <HomeBanner />
     </PaddedView>
-    <PaddedView style={{backgroundColor: '#FFFEFE'}}>
+    <PaddedView style={{ backgroundColor: "#FFFEFE" }}>
       <VelaPoint />
     </PaddedView>
     <style jsx>{`
@@ -75,9 +109,9 @@ const HomePage = ({ highlight }) =>
         background-color: ${offWhite};
       }
       .cover {
-         position: relative;
-         background-color: ${offWhite};
-         width: 100%;
+        position: relative;
+        background-color: ${offWhite};
+        width: 100%;
       }
       .cta-bf {
         text-align: center;
@@ -101,7 +135,10 @@ const HomePage = ({ highlight }) =>
       .cta h2 {
         color: ${velaGreen};
       }
-      .cta h3, .cta h4, .cta small, .cta p {
+      .cta h3,
+      .cta h4,
+      .cta small,
+      .cta p {
         color: ${offBlack};
       }
       h1 {
@@ -125,7 +162,8 @@ const HomePage = ({ highlight }) =>
         padding: 1em 2em 0.5em 2em;
         margin-bottom: -2em;
       }
-      .cta :global(button), .cta-bf :global(button) {
+      .cta :global(button),
+      .cta-bf :global(button) {
         margin: 1em 0 1em 0;
       }
       @media only screen and (min-width: 768px) {
@@ -137,18 +175,24 @@ const HomePage = ({ highlight }) =>
           font-size: 4rem;
           font-weight: 700;
         }
-        .cta h3, .cta h2, .cta small, .cta h4, .cta p {
-          color: ${offBlack}
+        .cta h3,
+        .cta h2,
+        .cta small,
+        .cta h4,
+        .cta p {
+          color: ${offBlack};
         }
         .cta h2 {
           font-size: 2rem;
         }
 
         .cta-bf h1 {
-          color: ${offWhite}
+          color: ${offWhite};
         }
-        .cta-bf h3, .cta-bf h4, .cta-bf p {
-          color: ${offWhite}
+        .cta-bf h3,
+        .cta-bf h4,
+        .cta-bf p {
+          color: ${offWhite};
         }
         .cta {
           position: absolute;
@@ -180,19 +224,20 @@ const HomePage = ({ highlight }) =>
       }
     `}</style>
   </div>
+);
 
 HomePage.propTypes = {
-  highlight: PropTypes.object
-}
+  highlight: PropTypes.object,
+};
 
 HomePage.getInitialProps = async ({ req }) => {
-  const api = await getPrismic(req)
+  const api = await getPrismic(req);
   const { results } = await api.query(
-    Predicates.at('document.type', 'blog_post'),
-    { pageSize: 30, orderings: '[my.blog_post.post_date desc]' }
-  )
-  return ({ highlight: results[0] })
-}
+    Predicates.at("document.type", "blog_post"),
+    { pageSize: 30, orderings: "[my.blog_post.post_date desc]" }
+  );
+  return { highlight: results[0] };
+};
 
 /* HomePage.getInitialProps = async ({ req }) => {
   try {
@@ -212,4 +257,4 @@ HomePage.getInitialProps = async ({ req }) => {
   }
 } */
 
-export default HomePage
+export default HomePage;
