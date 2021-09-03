@@ -6,7 +6,7 @@ import Freshchat from "components/head/Freshchat";
 import Modal from "components/Modal";
 
 const CustomHead = () => {
-  const [showModal, setShowModal] = useState(false);
+/*   const [showModal, setShowModal] = useState(false);
 
   const handleShowModal = () => {
     const show = !showModal;
@@ -18,7 +18,7 @@ const CustomHead = () => {
       setShowModal(true);
     }, 25000);
     return () => clearTimeout(timeout)
-  }, []);
+  }, []); */
 
   return (
     <div className="Head">
@@ -76,7 +76,7 @@ const CustomHead = () => {
           color: ${offBlack};
           background-color: ${white};
           font-family: Barlow, sans-serif;
-          overflow: ${showModal ? "hidden" : "auto"};
+          overflow: auto;
         }
         h1,
         h2,
