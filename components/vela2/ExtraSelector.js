@@ -87,14 +87,16 @@ const ExtraSelector = ({ collection, onSelect, selected, model }) => {
 
             return product.node.handle !== filter
           })
-          .map(product => (
+          .map(product => {
+            if (model.size != 'P' && product.node.handle === 'bagageiro-dianteiro-1') return
+            return (
             <Item
               onSelect={onSelect}
               selected={selected}
               model={model}
               {...product}
             />
-          ))}
+          )})}
         </div>
         <style jsx>{`
           .core {
