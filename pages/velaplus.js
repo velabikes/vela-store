@@ -111,8 +111,8 @@ const VelaPlus = ({checkout, checkoutLineItemsAdd, handleCheckoutCreation}) => {
             Benefícios com parceiros
           </p>
           <hr />
-          <h3>R$ 89,90/mês</h3>
-          <h2>R$ 69,90/mês</h2>
+          {/* <h3>R$ 89,90/mês</h3> */}
+          <h2>R$ 89,90/mês</h2>
           <h5>
             Pacote anual cobrado em até 12x sem juros no cartão de crédito.
           </h5>
