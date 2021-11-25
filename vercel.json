@@ -28,6 +28,7 @@
     { "src": "/contato", "dest": "/contact" },
     { "src": "/contato", "dest": "/contact" },
     { "src": "/loja/pecas", "dest": "/store/parts" },
+    { "src": "/loja/servicos", "dest": "/store/services" },
     { "src": "/investir", "dest": "/invest" },
     { "src": "/termosdealuguel", "dest": "/terms-of-rent" },
     { "src": "/velamais", "dest": "/velaplus" },
