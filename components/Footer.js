@@ -35,6 +35,11 @@ const Footer = () => (
                   <a>Peças</a>
                 </Link>
               </li>
+              <li>
+                <Link href="/store/services" as="/loja/servicos">
+                  <a>Serviços</a>
+                </Link>
+              </li>
             </ul>
           </nav>
           <nav className="about">

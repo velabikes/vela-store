@@ -21,8 +21,7 @@ const Bar = ({ onContinue, extra, step, checkout, model, activeButton }) => {
           <br /> 4 até 8 semanas
         </div>
         <p>
-          A Vela é um produto sob medida e artesanal. Por conta do COVID-19, o
-          prazo de entrega se encontra estendido e pode sofrer alterações.
+          A Vela é um produto sob medida e artesanal.
         </p>
       </div>
       <div className="bottom">

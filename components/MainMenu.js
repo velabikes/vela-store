@@ -17,6 +17,9 @@ const MainMenu = () =>
       <li><Link href='/store/parts' as='/loja/pecas'><a>
         Peças
       </a></Link></li>
+      <li><Link href='/store/services' as='/loja/servicos'><a>
+        Serviços
+      </a></Link></li>
       {/* <li><Link href='/network/stores' as='/rede/lojas'><a>
         Nossas lojas
       </a></Link></li> */}
