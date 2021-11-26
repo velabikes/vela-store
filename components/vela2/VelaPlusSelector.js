@@ -7,14 +7,14 @@ const ServiceItem = ({ node: { title, images, variants, handle, sku }, onSelect,
   const isSelected = selected.includes(variants.edges[0].node)
 
   return (
-    <div onClick={() => onSelect(variants.edges[variantIndex].node)}>
+    <div onClick={() => onSelect(variants.edges[0].node)}>
       <div className='selector'>
         {isSelected === false && <AddIcon fill={white} />}
         {isSelected === true && <CloseIcon color={white} />}
       </div>
       <img src={images && images.edges[0].node.src} alt={title} />
       <h4>{title}</h4>
-      <Price value={variants.edges[variantIndex].node.priceV2.amount} />
+      <Price value={variants.edges[0].node.priceV2.amount} />
       <style jsx>{`
         div {
           max-width: 100%;
