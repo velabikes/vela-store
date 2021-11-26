@@ -4,8 +4,7 @@ import { offWhite, lightGreen, white, velaRed, velaGreen } from '../../style/col
 import { AddIcon, CloseIcon } from '../Icons'
 
 const ServiceItem = ({ node: { title, images, variants, handle, sku }, onSelect, selected }) => {
-  const variantIndex = sku === 'VEL-PLUS-REV1-06M' ? 0 : 'VEL-PLUS-REV1-12M' ? 1 : 2
-  const isSelected = selected.includes(variants.edges[variantIndex].node)
+  const isSelected = selected.includes(variants.edges[0].node)
 
   return (
     <div onClick={() => onSelect(variants.edges[variantIndex].node)}>
