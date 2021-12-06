@@ -686,6 +686,21 @@ module.exports = async (req, res) => {
         type: ['service']
       },
       {
+        name: 'Técnico Marcos',
+        address: [
+          'Atendimento a domicílio ou retirada e entrega em casa',
+          'São Paulo, Brasil'
+        ],
+        moreInfo: "Marcos, 3 anos de experiência com manutenções da Vela 1 e Vela 2. Faz retirada e atendimento a domicílio;",
+        phone: '(11) 99767-1544',
+        pos: {
+          lat: -23.5669254,
+          lng: -46.6917018
+        },
+        googlePlace: 'ChIJUVnQr6FXzpQRZbltEm-s3H4',
+        type: ['service']
+      },
+      {
         name: 'Vela Bikes',
         address: [
           'R. Joaquim Antunes, 631',

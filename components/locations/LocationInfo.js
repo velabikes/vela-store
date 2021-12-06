@@ -2,12 +2,13 @@ import PropTypes from 'prop-types'
 import LocationTag from 'components/locations/LocationTag'
 import ParkingButton from 'components/locations/ParkingButton'
 
-const LocationsInfo = ({ name, address, hours, phone, type }) =>
+const LocationsInfo = ({ name, address, hours, phone, type, moreInfo }) =>
   <article className='LocationsInfo'>
     <h2>
       {name}
     </h2>
     <address>{address[0]} - {address[1]}</address>
+    <p>{moreInfo}</p>
     <p>{phone}</p>
     <table className='hours'>
       {hours && hours.map(hour =>
