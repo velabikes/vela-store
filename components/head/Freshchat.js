@@ -4,7 +4,7 @@ import { compose, lifecycle } from 'recompose'
 
 const Freshchat = () =>
   <Head>
-    <script src='https://wchat.freshchat.com/js/widget.js' />>
+    <script src='https://wchat.freshchat.com/js/widget.js' />
   </Head>
 
 const initWidget = () => {

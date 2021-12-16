@@ -10,21 +10,27 @@ const Pop = () => {
 
   return (
     <div className='Pop'>
-      <div className='close'>
-        <CloseIcon color={offBlack} onClick={() => setClosed(true)} />
+      <div className='close' onClick={() => setClosed(true)}>
+        <CloseIcon color={offBlack} />
       </div>
-      <h3>Aviso!</h3>
-      <h6>Por conta da segunda onda do COVID-19, nossas lojas estão fechadas até 30/03.</h6>
-      <p><small>O <b>atendimento online</b> segue de seg à sex das 10h às 18h.</small></p>
+      <h3>Comunicado!</h3>
+      <br />
+      <h6>Em razão do recesso coletivo de final do ano nossos produtos serão enviados a partir de Janeiro e nossa loja estará fechada até 04/01.</h6>
+      <br />
+      <p><small>O <b>atendimento online</b> segue de seg à sex das 10h às 17h.</small></p>
+      <h2>Boas Festas!</h2>
       <style jsx>{`
     .Pop {
-        background-color: ${velaYellow};
+        background-color: ${'white'};
         padding: 2em;
         position: fixed;
-        right: 2em;
-        bottom: 2em;
+        left: 3em;
+        bottom: 3em;
         z-index: 3;
         max-width: 14em;
+    }
+    h2 {
+      color: ${velaGreen};
     }
     h3 {
       color: ${offBlack};
