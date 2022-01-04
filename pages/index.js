@@ -11,11 +11,8 @@ import VelaPoint from "../components/charge/VelaPoint";
 import { offBlack, offWhite, velaGreen, white } from "../style/colors";
 import HomeImage from "../components/home/HomeImage";
 
-import Pop from '../components/home/Pop'
-
 const HomePage = ({ highlight }) => (
   <div className="HomePage">
-    <Pop />
     <Head>
       <title>Vela 2: A bicicleta elétrica smart do Brasil - Vela Bikes</title>
       <link rel="alternate" hrefLang="pt-br" href="https://velabikes.com.br" />
