@@ -4,21 +4,6 @@ module.exports = async (req, res) => {
   return res.end(
     JSON.stringify([
       {
-        name: 'BotaniKafé Jardins',
-        address: [
-          'Alameda Lorena, 1765',
-          'Jardins, São Paulo',
-          'SP, 01424-002, Brasil'
-        ],
-        phone: '(11) 3064-6570',
-        pos: {
-          lat: -23.5625497,
-          lng: -46.6677741
-        },
-        googlePlace: 'ChIJazzL3K5ZzpQRD9IIOo6VVGo',
-        type: ['charger']
-      },
-      {
         name: 'Alva Coworking',
         address: [
           'R. Simão Álvares, 97',
@@ -136,21 +121,6 @@ module.exports = async (req, res) => {
           lng: -46.6554557
         },
         googlePlace: 'ChIJ47W0GDdYzpQRGw-IqYoHn3k',
-        type: ['charger']
-      },
-      {
-        name: 'Torteria Pinheiros',
-        address: [
-          'R. Fradique Coutinho, 39',
-          'Pinheiros, São Paulo',
-          'SP, 05416-010, Brasil'
-        ],
-        phone: '(11) 4306-6918',
-        pos: {
-          lat: -23.5660344,
-          lng: -46.6846147
-        },
-        googlePlace: 'ChIJixk9BXZXzpQRY2FAH25PxPU',
         type: ['charger']
       },
       {
@@ -469,22 +439,6 @@ module.exports = async (req, res) => {
         },
         googlePlace: 'ChIJk6zVqYYDzpQRsZpUOCLGA8s',
         type: ['service', 'charger']
-      },
-      {
-        name: 'Bike Café Sportix Tatuapé',
-        address: [
-          'R. Francisco Marengo, 189',
-          'Tatuapé, São Paulo',
-          'SP, 03313-000, Brasil'
-        ],
-        phone: '(11) 2096-2136',
-        open: true,
-        pos: {
-          lat: -23.5373773197085,
-          lng: -46.5584795697085
-        },
-        googlePlace: 'ChIJOeGEaFNfzpQRBMjvcEj6tj8',
-        type: ['service']
       },
       {
         name: 'Reciclo Bikes',
