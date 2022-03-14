@@ -4,18 +4,17 @@ import { compose, lifecycle } from 'recompose'
 
 const Freshchat = () =>
   <Head>
-    <script src='https://wchat.freshchat.com/js/widget.js' />
+    <script dangerouslySetInnerHTML={{
+      __html: `
+      (function (o, c, t, a, d, e, s, k) {
+        o.octadesk = o.octadesk || {};
+        s = c.getElementsByTagName(“body”)[0];
+        k = c.createElement(“script”);
+        k.async = 1;
+        k.src = t + ‘/’ + a + ‘?showButton=’ +  d + ‘&openOnMessage=’ + e;
+        s.appendChild(k);
+      })(window, document, ‘https://chat.octadesk.services/api/widget’, ‘velabikes1’,  true, true);
+    `}} />
   </Head>
 
-const initWidget = () => {
-  window.fcWidget.init({
-    token: '12f717bd-d0db-4f9d-b288-e8e1e27e98c2',
-    host: 'https://wchat.freshchat.com'
-  })
-}
-
-export default compose(
-  lifecycle({
-    componentDidMount: () => setTimeout(initWidget, 3500)
-  })
-)(Freshchat)
+export default Freshchat
