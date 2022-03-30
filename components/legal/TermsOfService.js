@@ -144,6 +144,23 @@ const TermsOfService = () => (
         critério exclusivo. Reservamos o direito de descontinuar qualquer
         produto a qualquer momento. Qualquer oferta feita por qualquer produto
         ou serviço nesse site é nula onde for proibido por lei.
+         </p>
+      <p>
+        Reembolso de custos de transporte por alteração no prazo de entrega ou serviço:
+
+        Você entende e concorda que a Vela Bikes não se responsabilizará por qualquer 
+        custo de terceiros gerados relacionados com o prazo de entrega para a produção, 
+        realização de serviços, envio de acessórios, agendamento de manutenções entre 
+        outros, como: taxi, Uber (UberX/Black/Flash), 99 (POP/Comfort), passagens de 
+        ônibus, metrô, trem entre outros aplicativos de carona e meios de locomoção 
+        individuais e/ou coletivos.
+ </p>
+      <p>
+        Você entende e concorda que os prazos que a Vela Bikes repassa aos clientes 
+        são estimativas e podem sofrer variações à depender da capacidade da produção 
+        e/ou realização de serviços, fornecimento de peças e outros componentes por parte 
+        de fornecedores e outros terceiros prestadores de serviços, diagnósticos e 
+        disponibilidade da equipe técnica atuante. 
       </p>
       <p>
         Não garantimos que a qualidade de quaisquer produtos, serviços,
