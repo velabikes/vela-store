@@ -6,14 +6,14 @@ const Warranty = () => (
     <br />
     <h2>Termos de Garantia</h2>
     <Section>
-      <p>
+      {/* <p>
         Por intermédio do presente termo de garantia das bicicletas elétricas
         modelo VELA, a VELA BIKES COMÉRCIO E SERVIÇOS DE BICICLETAS EIRELI -EPP,
         devidamente inscrita no CNPJ/MF sob no 20.430.806/0001-27, com sede na
         Rua Joaquim Antunes 631, Pinheiros, São Paulo, SP, CEP 05421-100, doravante
         apenas “VELA” assegura o produto acima citado em favor do adquirente,
         nos seguintes e estritos termos:
-      </p>
+      </p> */}
       <p>
         1. A VELA assegura garantia contra defeitos de fabricação da parte
         elétrica de suas bicicletas pelo período de 1 (um) ano, sendo 2 anos

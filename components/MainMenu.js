@@ -32,9 +32,9 @@ const MainMenu = () =>
       <li><Link href='/network/map' as='/rede/mapa'><a>
         Rede
       </a></Link></li>
-      <li><Link href='/testride' as='/test-ride'><a>
+      {/* <li><Link href='/testride' as='/test-ride'><a>
         Test-ride
-      </a></Link></li>
+      </a></Link></li> */}
       <li><Link href='/blog'><a>
         Blog
       </a></Link></li>

@@ -653,31 +653,31 @@ module.exports = async (req, res) => {
         },
         googlePlace: 'ChIJUVnQr6FXzpQRZbltEm-s3H4',
         type: ['service']
-      },
-      {
-        name: 'Vela Bikes',
-        address: [
-          'R. Joaquim Antunes, 631',
-          'Pinheiros, São Paulo',
-          'SP, 05415-011, Brasil'
-        ],
-        open: true,
-        hours: [
-          ['Seg', 'Fechado'],
-          ['Ter', 'Fechado'],
-          ['Qua', '10:00 – 19:00'],
-          ['Qui', '10:00 – 19:00'],
-          ['Sex', '10:00 – 19:00'],
-          ['Sáb', '10:00 – 19:00'],
-          ['Dom', '10:00 – 19:00']
-        ],
-        pos: {
-          lat: -23.563341,
-          lng: -46.682386
-        },
-        googlePlace: 'ChIJL-xzGGFXzpQR_X4Kin8W9lQ',
-        type: ['store', 'charger']
       }
+      // ,{
+      //   name: 'Vela Bikes',
+      //   address: [
+      //     'R. Joaquim Antunes, 631',
+      //     'Pinheiros, São Paulo',
+      //     'SP, 05415-011, Brasil'
+      //   ],
+      //   open: true,
+      //   hours: [
+      //     ['Seg', 'Fechado'],
+      //     ['Ter', 'Fechado'],
+      //     ['Qua', '10:00 – 19:00'],
+      //     ['Qui', '10:00 – 19:00'],
+      //     ['Sex', '10:00 – 19:00'],
+      //     ['Sáb', '10:00 – 19:00'],
+      //     ['Dom', '10:00 – 19:00']
+      //   ],
+      //   pos: {
+      //     lat: -23.563341,
+      //     lng: -46.682386
+      //   },
+      //   googlePlace: 'ChIJL-xzGGFXzpQR_X4Kin8W9lQ',
+      //   type: ['store', 'charger']
+      // }
     ])
   )
 
