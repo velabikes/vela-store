@@ -14,9 +14,9 @@ const TestRideBanner = () => (
           O teste é gratuito e sem compromisso, pode ser realizado sozinho, com
           amigos ou acompanhado de um especialista Vela. Agende um horário online e venha pedalar!
         </p>
-        <p>
+        {/* <p>
           <i>R. Joaquim Antunes, 631 - Pinheiros</i>
-        </p>
+        </p> */}
         <div className="actions">
           <a href="https://vela-bikes.reservio.com/">
             <Button primary>Agendar</Button>

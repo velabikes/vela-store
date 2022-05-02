@@ -50,11 +50,11 @@ const Footer = () => (
                   <a>Rede</a>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="/test-ride" as="/rede/testride">
                   <a>Test-ride</a>
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href="/blog">
                   <a>Blog</a>
