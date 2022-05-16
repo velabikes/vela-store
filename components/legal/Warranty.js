@@ -20,8 +20,7 @@ const Warranty = () => (
         para a bateria e 3 anos para defeitos de fabricação referentes à
         construção dos quadros, não incluindo paralamas, protetor de corrente,
         acessórios e suas partes, já incluído em ambos os casos o prazo legal de
-        garantia de 90 dias, contados a partir da data de emissão da Nota Fiscal
-        ao consumidor.
+        garantia de 90 dias, contados a partir da data de entrega do produto ao consumidor.
       </p>
       <p>
         2. Toda e qualquer reclamação do comprador quanto a defeitos observados
