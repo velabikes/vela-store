@@ -653,6 +653,21 @@ module.exports = async (req, res) => {
         },
         googlePlace: 'ChIJUVnQr6FXzpQRZbltEm-s3H4',
         type: ['service']
+      },
+      {
+        name: 'Jhon Jhon Veículos Elétricos',
+        address: [
+          'QNN 24 Conjunto N, 7',
+          'Ceilândia Sul',
+          'DF, 72220-254, Brasil'
+        ],
+        phone: '(61) 98311-9472',
+        pos: {
+          lat: -15.840563,
+          lng: -48.106063
+        },
+        googlePlace: 'ChIJT1maORrNW5MRUhx5Myo_cWs',
+        type: ['service']
       }
       // ,{
       //   name: 'Vela Bikes',
