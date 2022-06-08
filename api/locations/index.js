@@ -650,6 +650,9 @@ module.exports = async (req, res) => {
         pos: {
           lat: -23.5669254,
           lng: -46.6917018
+        }, 
+        googlePlace: 'ChIJUVnQr6FXzpQRZbltEm-s3H4',
+        type: ['service']
         },
         {
         name: 'Fábrica Vela',
