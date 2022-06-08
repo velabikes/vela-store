@@ -642,17 +642,33 @@ module.exports = async (req, res) => {
       {
         name: 'Técnico Marcos',
         address: [
-          'Atendimento a domicílio ou retirada e entrega em casa',
-          'São Paulo, Brasil'
+          'R. General Julio Marcondes Salgado, 106',
+          'Santa Cecília, São Paulo',
+          'SP, 01201-020, Brasil'
         ],
-        moreInfo: "Marcos, 3 anos de experiência com manutenções da Vela 1 e Vela 2. Faz retirada e atendimento a domicílio;",
-        phone: '(11) 99767-1544',
+        moreInfo: "Fábrica, loja e oficina Matriz da Vela Brasil",
+        phone: '(11) 9.6393-4737',
         pos: {
           lat: -23.5669254,
           lng: -46.6917018
         },
         googlePlace: 'ChIJUVnQr6FXzpQRZbltEm-s3H4',
         type: ['service']
+      },
+      {
+        name: 'Fabrica Vela',
+        address: [
+          'Atendimento a domicílio ou retirada e entrega em casa',
+          'São Paulo, Brasil'
+        ],
+        moreInfo: "Marcos, 3 anos de experiência com manutenções da Vela 1 e Vela 2. Faz retirada e atendimento a domicílio;",
+        phone: '(11) 99767-1544',
+        pos: {
+          lat: -23.535952,
+          lng: -46.650572
+        },
+        googlePlace: 'ChIJwUtbbUBYzpQRqFfbLYX1-Ro',
+        type: ['service', 'charger', 'store]
       }
       // ,{
       //   name: 'Vela Bikes',
