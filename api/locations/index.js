@@ -651,8 +651,21 @@ module.exports = async (req, res) => {
           lat: -23.5669254,
           lng: -46.6917018
         },
-        googlePlace: 'ChIJUVnQr6FXzpQRZbltEm-s3H4',
-        type: ['service']
+        {
+        name: 'Fábrica Vela',
+        address: [
+          'Rua General Julio Marcondes Salgado, 106',
+          'Santa Cecília, São Paulo',
+          'SP, 01201-020, Brasil'
+        ],
+        moreInfo: "Centro de produção, manutenção e vendas da Vela.",
+        phone: '(11) 96393-4737',
+        pos: {
+          lat: -23.535952,
+          lng: -46.650572
+        },
+        googlePlace: 'ChIJwUtbbUBYzpQRqFfbLYX1-Ro',
+        type: ['service', 'store', charger']
       }
       // ,{
       //   name: 'Vela Bikes',
