@@ -653,6 +653,22 @@ module.exports = async (req, res) => {
         },
         googlePlace: 'ChIJUVnQr6FXzpQRZbltEm-s3H4',
         type: ['service']
+      },
+      {
+        name: 'Fábrica Vela Brasil',
+        address: [
+          'Rua General Julio Marcondes Salgado, 106',
+          'Santa Cecília, São Paulo',
+          'SP, 01201-020, Brasil'
+        ],
+        moreInfo: "Fábrica, loja e oficina da Matriz Vela Brasil",
+        phone: '(11) 9.6393-4737',
+        pos: {
+          lat: -23.535952,
+          lng: -46.650572
+        },
+        googlePlace: 'ChIJwUtbbUBYzpQRqFfbLYX1-Ro',
+        type: ['service', 'store', 'charger']
       }
       // ,{
       //   name: 'Vela Bikes',
