@@ -391,7 +391,7 @@ module.exports = async (req, res) => {
         type: ['charger']
       },
       {
-        name: 'Bicicletaria Oficina',
+        name: 'Vélo 27',
         address: [
           'Condomínio do Centro Comercial Long Beach',
           'Av. Hugo Viola, 955',
@@ -399,7 +399,7 @@ module.exports = async (req, res) => {
           'Mata da Praia, Vitória',
           'ES, 29065-475, Brasil'
         ],
-        phone: '(27) 3024-6755',
+        phone: '(27) 9.9251-5669',
         open: true,
         pos: {
           lat: -20.2792453,
@@ -473,21 +473,6 @@ module.exports = async (req, res) => {
         },
         googlePlace: 'ChIJKcPVzHI7WpMRaU9RkzCJHTY',
         type: ['service', 'charger']
-      },
-      {
-        name: 'MUUVE - Bicicletas elétricas',
-        address: [
-          'R. Santa Helena, 1967',
-          'Jardim Estoril, Marília',
-          'SP, 14514-411, Brasil'
-        ],
-        phone: '(14) 99833-2323',
-        pos: {
-          lat: -22.191865,
-          lng: -49.9330992
-        },
-        googlePlace: 'ChIJkx4WygPXv5QR4Xyde_WDwps',
-        type: ['service']
       },
       {
         name: 'Magrela Oficina e Café',
