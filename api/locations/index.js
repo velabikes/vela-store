@@ -391,7 +391,7 @@ module.exports = async (req, res) => {
         type: ['charger']
       },
       {
-        name: 'Bicicletaria Oficina',
+        name: 'Vélo 27',
         address: [
           'Condomínio do Centro Comercial Long Beach',
           'Av. Hugo Viola, 955',
@@ -399,7 +399,7 @@ module.exports = async (req, res) => {
           'Mata da Praia, Vitória',
           'ES, 29065-475, Brasil'
         ],
-        phone: '(27) 3024-6755',
+        phone: '(27) 9.9251-5669',
         open: true,
         pos: {
           lat: -20.2792453,
