@@ -475,21 +475,6 @@ module.exports = async (req, res) => {
         type: ['service', 'charger']
       },
       {
-        name: 'MUUVE - Bicicletas elétricas',
-        address: [
-          'R. Santa Helena, 1967',
-          'Jardim Estoril, Marília',
-          'SP, 14514-411, Brasil'
-        ],
-        phone: '(14) 99833-2323',
-        pos: {
-          lat: -22.191865,
-          lng: -49.9330992
-        },
-        googlePlace: 'ChIJkx4WygPXv5QR4Xyde_WDwps',
-        type: ['service']
-      },
-      {
         name: 'Magrela Oficina e Café',
         address: [
           'Estr. José Chies, 150',
