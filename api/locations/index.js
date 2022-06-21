@@ -391,6 +391,23 @@ module.exports = async (req, res) => {
         type: ['charger']
       },
       {
+        name: 'Bike House',
+        address: [
+          'Rua Cardeal Arcoverde, 2062',
+          'Pinheiros',
+          'São Paulo - SP',
+          'SP, 05408-002, Brasil'
+        ],
+        phone: '(11) 9.6541-7538',
+        open: true,
+        pos: {
+          lat: -23.562933,
+          lng: -46.69088
+        },
+        googlePlace: 'ChIJcyCY9qFXzpQREiC7QlNLwDY',
+        type: ['service']
+      },
+      {
         name: 'Vélo 27',
         address: [
           'Condomínio do Centro Comercial Long Beach',
