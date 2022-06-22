@@ -9,7 +9,7 @@ const Bar = ({ onContinue, extra, step, checkout }) => {
   return (
     <div className='Bar'>
       <div className='top'>
-        <p className='right'>Entrega em até<br/> 8 semanas</p><small>A Vela é um produto sob medida e artesanal.</small>
+        <p className='right'>Prazo de produção<br/> de 2 à 3 semanas</p><small>A Vela é feita sob emcomenda em São Paulo.</small>
       </div>
       <div className='bottom'>
         <div className='left'>
