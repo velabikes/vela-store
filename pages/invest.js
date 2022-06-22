@@ -17,13 +17,13 @@ const Invest = () => (
       <meta name="twitter:site" content="@velabikes" /> 
       <meta name="twitter:title" content="Investir - Vela  Bikes" />
       <meta name="twitter:description" content="UVamos mudar o desenvolvimento da mobilidade urbana no Brasil!" />
-      <meta name="twitter:image" content="https://drive.google.com/file/d/1LJNPq3lytOXrv77Gqk_3ZQ4G3Oj6NvOs/view?usp=sharing" />
+      <meta name="twitter:image" content="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FScreen%20Shot%202022-06-22%20at%2009.16.30.png?alt=media&token=1fccef22-b003-4703-bced-283cfbedadb6" />
       <meta property='og:url' content='https://velabikes.com.br/investir' />
       <meta property='og:type' content='website' />
       <meta property='og:title' content='Investir - Vela Bikes' />
       <meta property='og:locale' content='pt_BR' />
       <meta property='og:description' content='Vamos mudar o desenvolvimento da mobilidade urbana no Brasil!' />
-      <meta property='og:image' content='https://drive.google.com/file/d/1LJNPq3lytOXrv77Gqk_3ZQ4G3Oj6NvOs/view?usp=sharing' />
+      <meta property='og:image' content='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FScreen%20Shot%202022-06-22%20at%2009.16.30.png?alt=media&token=1fccef22-b003-4703-bced-283cfbedadb6' />
     </Head>
     <InvestImage />
     <PaddedView style={{ background: `${white}` }}>
