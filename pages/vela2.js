@@ -129,12 +129,12 @@ const Vela2 = ({ checkout, checkoutLineItemsAdd, handleCheckoutCreation }) => {
         <meta property='og:title' content='Monte a sua - Vela Bikes' />
         <meta property='og:locale' content='pt_BR' />
         <meta property='og:description' content='Escolha o modelo da sua Vela 2, os acessórios essenciais para a cidade e aproveite para pedalar smart!' />
-        <meta property='og:image' content='https://images.prismic.io/velabikes/3aec68d3-2a0b-4aaf-a56a-24abba68dae0__MG_4306+%281%29.jpg?auto=compress,format&rect=0,10,5006,3337&w=3000&h=2000' />
+        <meta property='og:image' content='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FScreen%20Shot%202022-06-22%20at%2009.15.06.png?alt=media&token=35763e05-5cc3-47f8-ac71-5b0d75d8f9d6' />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@velabikes" /> 
         <meta name="twitter:title" content="Monte a sua - Vela Bikes" />
         <meta name="twitter:description" content="Escolha o modelo da sua Vela 2, os acessórios essenciais para a cidade e aproveite para pedalar smart!'" />
-        <meta name="twitter:image" content="https://images.prismic.io/velabikes/3aec68d3-2a0b-4aaf-a56a-24abba68dae0__MG_4306+%281%29.jpg?auto=compress,format&rect=0,10,5006,3337&w=3000&h=2000" />
+        <meta name="twitter:image" content="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FScreen%20Shot%202022-06-22%20at%2009.15.06.png?alt=media&token=35763e05-5cc3-47f8-ac71-5b0d75d8f9d6" />
       </Head>
       <div className='content'>
         <Display model={selectedModel} />
