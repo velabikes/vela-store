@@ -17,13 +17,13 @@ const Invest = () => (
       <meta name="twitter:site" content="@velabikes" /> 
       <meta name="twitter:title" content="Investir - Vela  Bikes" />
       <meta name="twitter:description" content="UVamos mudar o desenvolvimento da mobilidade urbana no Brasil!" />
-      <meta name="twitter:image" content="https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/47ff67fa-48d6-4539-9a69-daf428127c64.jpeg" />
+      <meta name="twitter:image" content="https://drive.google.com/file/d/1LJNPq3lytOXrv77Gqk_3ZQ4G3Oj6NvOs/view?usp=sharing" />
       <meta property='og:url' content='https://velabikes.com.br/investir' />
       <meta property='og:type' content='website' />
       <meta property='og:title' content='Investir - Vela Bikes' />
       <meta property='og:locale' content='pt_BR' />
       <meta property='og:description' content='Vamos mudar o desenvolvimento da mobilidade urbana no Brasil!' />
-      <meta property='og:image' content='https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/47ff67fa-48d6-4539-9a69-daf428127c64.jpeg' />
+      <meta property='og:image' content='https://drive.google.com/file/d/1LJNPq3lytOXrv77Gqk_3ZQ4G3Oj6NvOs/view?usp=sharing' />
     </Head>
     <InvestImage />
     <PaddedView style={{ background: `${white}` }}>
