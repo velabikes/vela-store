@@ -19,12 +19,12 @@ const Vela = () =>
       <meta property='og:title' content='Smartbike Vela 2 - Vela Bikes' />
       <meta property='og:locale' content='pt_BR' />
       <meta property='og:description' content='Conheça a geração smart de bikes elétricas da Vela. Conectada com as ruas, com seu celular e com você.' />
-      <meta property='og:image' content='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FSmartbike.jpg?alt=media&token=db783cf6-c08e-49ae-98d8-3816c3d06ddf' />
+      <meta property='og:image' content='hhttps://drive.google.com/file/d/1-FVNFf2MNV76u4Zt29QpDSr5hDlAvKJP/view?usp=sharing' />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content="@velabikes" /> 
       <meta name="twitter:title" content="Smartbike Vela 2 - Vela Bikes" />
       <meta name="twitter:description" content="Conheça a geração smart de bikes elétricas da Vela. Conectada com as ruas, com seu celular e com você." />
-      <meta name="twitter:image" content="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FSmartbike.jpg?alt=media&token=db783cf6-c08e-49ae-98d8-3816c3d06ddf" />
+      <meta name="twitter:image" content="https://drive.google.com/file/d/1-FVNFf2MNV76u4Zt29QpDSr5hDlAvKJP/view?usp=sharing" />
     </Head>
     <div className='cover'>
       <LandingImage />
