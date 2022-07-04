@@ -74,7 +74,7 @@ const Contact = () => (
             src="https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/e28953c8-5547-4bf1-8acf-521f38934af8.png"
             alt="Perguntas Frequentes"
           />
-          <div className="left-content">
+          {/* <div className="left-content">
             <h2>FAQ</h2>
             <h4>Confira as perguntas frequentes para uma resposta imediata</h4>
             <p>
@@ -83,7 +83,7 @@ const Contact = () => (
               <a href="https://velabikes.freshdesk.com/support/home">tópicos</a>{" "}
               mais comentados.
             </p>
-          </div>
+          </div> */}
         </div>
         <div className="right">
           <div className="right-content">
