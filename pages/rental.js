@@ -256,14 +256,14 @@ const Rental = () => {
               <p>
                 <a href="/legal">Política de Privacidade</a>
               </p>
-              <div className="action">
+              {/* <div className="action">
                 <a
                   href="https://velabikes.freshdesk.com/support/home"
                   target="_blank"
                 >
                   <Button primary>Todas as FAQs</Button>
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </PaddedView>

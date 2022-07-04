@@ -315,11 +315,11 @@ const VelaPlus = ({checkout, checkoutLineItemsAdd, handleCheckoutCreation}) => {
             <p><a href="/legal">Termos de Serviço do Plano Vela+</a></p>
             <p><a href="https://drive.google.com/file/d/1OQfVi4WnUNVd-8xQhs6Hn7vFTDH5vGev/view?usp=sharing">Modelo de Contrato do Plano Vela+</a></p>
             <p><a href="/legal">Política de Privacidade</a></p>
-            <div className="action">
+            {/* <div className="action">
               <a href="https://velabikes.freshdesk.com/support/home" target="_blank">
                 <Button primary>Todas as FAQs</Button>
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
         </PaddedView>

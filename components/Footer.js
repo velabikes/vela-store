@@ -75,11 +75,11 @@ const Footer = () => (
                   <a>Contato</a>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <a href="https://velabikes.freshdesk.com/support/home" target="_blank">
                   FAQ
                 </a>
-              </li>
+              </li> */}
               <li>
                 <Link href="/legal">
                   <a>Termos</a>
