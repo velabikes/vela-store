@@ -18,7 +18,7 @@ const options = {
     {
       icon:
         "https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelabikescom%2Fassets%2FMidnight.png?alt=media&token=7907c973-ad1b-4134-9fab-849bac650bb5",
-      label: "Preto Meia-noite",
+      label: "Azul Meia-noite",
       option: "Preto",
     },
     {
