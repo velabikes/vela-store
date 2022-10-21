@@ -560,8 +560,8 @@ module.exports = async (req, res) => {
         ],
         phone: '(11) 97422-8054',
         pos: {
-          lat: -23.5771711,
-          lng: -46.6328599
+          lat: -23.5771712,
+          lng: -46.6328598
         },
         googlePlace: 'ChIJUb-kvoJZzpQRcKWYxtrRZY0',
         type: ['store']
