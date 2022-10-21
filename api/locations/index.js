@@ -332,20 +332,6 @@ module.exports = async (req, res) => {
         type: ['charger']
       },
       {
-        name: 'SFco179',
-        address: [
-          'R. São Francisco, 179',
-          'Centro, Curitiba',
-          'PR, 80020-190, Brasil'
-        ],
-        pos: {
-          lat: -25.428206,
-          lng: -49.2701972
-        },
-        googlePlace: 'ChIJnzOe4Rfl3JQRkkbNTZnH4K0',
-        type: ['charger']
-      },
-      {
         name: 'Rause Café + Vinho',
         address: [
           'Alameda Dr. Carlos de Carvalho, 696',
