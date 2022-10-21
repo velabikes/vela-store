@@ -94,36 +94,6 @@ module.exports = async (req, res) => {
         type: ['charger']
       },
       {
-        name: 'Torteria Morumbi',
-        address: [
-          'Rua dos Três Irmãos, 654',
-          'Vila Progredior, São Paulo',
-          'SP, 05615-190, Brasil'
-        ],
-        phone: '(11) 2935-0886',
-        pos: {
-          lat: -23.590182,
-          lng: -46.715656
-        },
-        googlePlace: 'ChIJy9BBJORWzpQReEuaiOtk0kU',
-        type: ['charger']
-      },
-      {
-        name: 'Torteria Higienópolis',
-        address: [
-          'R. Sabará, 585',
-          'Consolacao, São Paulo',
-          'SP, 01239-011, Brasil'
-        ],
-        phone: '(11) 2306-9755',
-        pos: {
-          lat: -23.5484736,
-          lng: -46.6554557
-        },
-        googlePlace: 'ChIJ47W0GDdYzpQRGw-IqYoHn3k',
-        type: ['charger']
-      },
-      {
         name: 'De Lá Do Pão',
         address: [
           'Rua Harmonia, 1158',
@@ -611,21 +581,6 @@ module.exports = async (req, res) => {
         googlePlace: 'ChIJr5wbjnChh5MRLdm1W9GOU_g',
         type: ['service']
       },
-      {
-        name: 'Técnico Marcos',
-        address: [
-          'Atendimento a domicílio ou retirada e entrega em casa',
-          'São Paulo, Brasil'
-        ],
-        moreInfo: "Marcos, 3 anos de experiência com manutenções da Vela 1 e Vela 2. Faz retirada e atendimento a domicílio;",
-        phone: '(11) 99767-1544',
-        pos: {
-          lat: -23.5669254,
-          lng: -46.6917018
-        },
-        googlePlace: 'ChIJUVnQr6FXzpQRZbltEm-s3H4',
-        type: ['service']
-      }
       // ,{
       //   name: 'Vela Bikes',
       //   address: [
