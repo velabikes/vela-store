@@ -564,7 +564,22 @@ module.exports = async (req, res) => {
           lng: -46.6328599
         },
         googlePlace: 'ChIJUb-kvoJZzpQRcKWYxtrRZY0',
-        type: ['service', 'store']
+        type: ['store']
+      },
+      {
+        name: 'Saluh Oficina',
+        address: [
+          'R. Batista Cepelos, 283',
+          'Vila Mariana, São Paulo',
+          'SP, 04109-120, Brasil'
+        ],
+        phone: '(11) 97422-8054',
+        pos: {
+          lat: -23.5771711,
+          lng: -46.6328599
+        },
+        googlePlace: 'ChIJUb-kvoJZzpQRcKWYxtrRZY0',
+        type: ['service']
       },
       {
         name: 'Tamanduá Bike Store LTDA',
