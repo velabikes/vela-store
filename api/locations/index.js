@@ -19,6 +19,21 @@ module.exports = async (req, res) => {
         type: ['charger']
       },
       {
+        name: 'Flitzz eBike',
+        address: [
+          'R. das Cerejeiras, 411',
+          'Carvoeira, Florianópolis',
+          'SC, 88040-5410, Brasil'
+        ],
+        phone: '(48) 99110-8989',
+        pos: {
+          lat: -27.605697,
+          lng: -48.52817
+        },
+        googlePlace: 'ChIJl4mz8q05J5URL6V8HZBJm60',
+        type: ['service']
+      },
+      {
         name: 'Pró-Bike',
         address: [
           'Av. Marcelino Pires, 2831',
