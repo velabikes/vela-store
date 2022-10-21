@@ -27,8 +27,8 @@ module.exports = async (req, res) => {
         ],
         phone: '(67) 3427-5035',
         pos: {
-          lat: -22.2265510,
-          lng: -54.8014040
+          lat: -22.226551,
+          lng: -54.801404
         },
         googlePlace: 'ChIJGe5wTDGoiZQRtOU_mEtGCIg',
         type: ['service']
