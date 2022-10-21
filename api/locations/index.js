@@ -376,21 +376,6 @@ module.exports = async (req, res) => {
         type: ['charger']
       },
       {
-        name: 'O Pudim Perfeito',
-        address: [
-          'Alameda Dr. Carlos de Carvalho, 1612 Loja B',
-          'Bigorrilho, São Paulo',
-          'PR, 80730-201, Brasil'
-        ],
-        phone: '(41) 98781-5381',
-        pos: {
-          lat: -25.4356163197085,
-          lng: -49.28880031970851
-        },
-        googlePlace: 'ChIJ-RWmK5Tj3JQRsVUJr9-lCRE',
-        type: ['charger']
-      },
-      {
         name: 'Bike House',
         address: [
           'Rua Cardeal Arcoverde, 2062',
