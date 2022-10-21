@@ -507,21 +507,6 @@ module.exports = async (req, res) => {
         type: ['service', 'charger']
       },
       {
-        name: 'Bike4U - Bike para Você',
-        address: [
-          'Av. Manoel Ribas, 1901',
-          'Mercês, Curitiba',
-          'PR, 80810-002, Brasil'
-        ],
-        phone: '(41) 3014-5762',
-        pos: {
-          lat: -25.4176432,
-          lng: -49.2944859
-        },
-        googlePlace: 'ChIJHd72H1jh3JQRTBA9mMMznpg',
-        type: ['service', 'charger']
-      },
-      {
         name: 'Bicicletaria Urbana Bike Viva',
         address: [
           'Av. Washington Soares, 2565',
@@ -624,21 +609,6 @@ module.exports = async (req, res) => {
           lng: -57.654644
         },
         googlePlace: 'ChIJr5wbjnChh5MRLdm1W9GOU_g',
-        type: ['service']
-      },
-      {
-        name: 'Tito',
-        address: [
-          'Rua Professora Antonia Reginato Vianna, 794',
-          'Capão da Imbuia, Curitiba',
-          'PR, 82810-300, Brasil'
-        ],
-        phone: '(41) 99651-1135',
-        pos: {
-          lat: -25.4334753,
-          lng: -49.2161606
-        },
-        googlePlace: 'ChIJH4KmwHvl3JQRyCMugpwaUNg',
         type: ['service']
       },
       {
