@@ -462,6 +462,22 @@ module.exports = async (req, res) => {
         type: ['service', 'charger']
       },
       {
+        name: 'Bruno Bike',
+        address: [
+          'Rua Vitalina, 31',
+          'Vila São Luís, Nova Iguaçu',
+          'RJ, 26012-410, Brasil'
+        ],
+        phone: '(21) 98121-8727',
+        open: true,
+        pos: {
+          lat: -22.739496,
+          lng: -43.436614
+        },
+        googlePlace: 'ChIJo-1_azdmmQARM9b1IhpUdRo',
+        type: ['service']
+      },
+      {
         name: 'Magrela Oficina e Café',
         address: [
           'Estr. José Chies, 150',
