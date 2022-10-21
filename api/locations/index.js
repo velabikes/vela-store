@@ -19,6 +19,21 @@ module.exports = async (req, res) => {
         type: ['charger']
       },
       {
+        name: 'Pró-Bike',
+        address: [
+          'Av. Marcelino Pires, 2831',
+          'Jardim Climax, Dourados',
+          'MS, 79800-003, Brasil'
+        ],
+        phone: '(67) 3427-5035',
+        pos: {
+          lat: -22.2265510,
+          lng: -54.8014040
+        },
+        googlePlace: 'ChIJGe5wTDGoiZQRtOU_mEtGCIg',
+        type: ['service']
+      },
+      {
         name: 'Dopê Casual Food',
         address: [
           'Rua Haddock Lobo, 90',
