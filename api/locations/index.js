@@ -552,7 +552,7 @@ module.exports = async (req, res) => {
         type: ['service']
       },
       {
-        name: 'Saluh Oficina',
+        name: 'Saluh Loja',
         address: [
           'R. Batista Cepelos, 283',
           'Vila Mariana, São Paulo',
