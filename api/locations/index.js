@@ -19,6 +19,21 @@ module.exports = async (req, res) => {
         type: ['charger']
       },
       {
+        name: 'Fat Bit Floripa',
+        address: [
+          'Rod. Dr. Antônio Luiz Moura Gonzaga, 3339 - A12',
+          'Rio Tavares, Florianópolis',
+          'SC, 88048-301, Brasil'
+        ],
+        phone: '(48) 99912-5999',
+        pos: {
+          lat: -27.657597,
+          lng: -48.486085
+        },
+        googlePlace: 'ChIJb2-Lz5s7J5URVfq9PsVKyfI',
+        type: ['service']
+      },
+      {
         name: 'Clinica das Bicicletas',
         address: [
           'R. Arthur de Azevêdo Machado, 1250',
