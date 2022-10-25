@@ -49,21 +49,6 @@ module.exports = async (req, res) => {
         type: ['service']
       },
       {
-        name: 'Dopê Casual Food',
-        address: [
-          'Rua Haddock Lobo, 90',
-          'Cerqueira César, São Paulo',
-          'SP, 01414-000, Brasil'
-        ],
-        phone: '(11) 3796-6230',
-        pos: {
-          lat: -23.554589,
-          lng: -46.658292
-        },
-        googlePlace: 'ChIJ1aPPuV5ZzpQR4BIHucm4vGQ',
-        type: ['charger']
-      },
-      {
         name: 'Bacio di Latte',
         address: [
           'R. Vupabussu, 61',
@@ -91,36 +76,6 @@ module.exports = async (req, res) => {
           lng: -46.6254545
         },
         googlePlace: 'ChIJ-0Zi6PxZzpQR-b6maQjQjSA',
-        type: ['charger']
-      },
-      {
-        name: 'Cupping Café',
-        address: [
-          'R. Wisard, 171',
-          'Vila Madalena, São Paulo',
-          'SP, 05434-080, Brasil'
-        ],
-        phone: '(11) 3813-6154',
-        pos: {
-          lat: -23.55494819999999,
-          lng: -46.68882139999999
-        },
-        googlePlace: 'ChIJe45oNJZXzpQRUXYN4bE42h8',
-        type: ['charger']
-      },
-      {
-        name: 'SP Lovers Café e Vinho',
-        address: [
-          'R. Oscar Freire, 1921',
-          'Pinheiros, São Paulo',
-          'SP, 05409-011, Brasil'
-        ],
-        phone: '(11) 3294-2799',
-        pos: {
-          lat: -23.555822,
-          lng: -46.675354
-        },
-        googlePlace: 'ChIJlVqH9KVXzpQRgkyOBRW-Peo',
         type: ['charger']
       },
       {
@@ -168,20 +123,6 @@ module.exports = async (req, res) => {
         type: ['charger']
       },
       {
-        name: 'Cubo Itaú',
-        address: [
-          'Alameda Vicente Pinzon, 54',
-          'Vila Olímpia, São Paulo',
-          'SP, 04547-130, Brasil'
-        ],
-        pos: {
-          lat: -23.5966179,
-          lng: -46.68681609999999
-        },
-        googlePlace: 'ChIJDdNzek5XzpQRcaNlJ3QxKoY',
-        type: ['charger']
-      },
-      {
         name: 'Bacio di Latte Moema',
         address: [
           'R. Gaivota, 544',
@@ -224,21 +165,6 @@ module.exports = async (req, res) => {
           lng: -46.6821703
         },
         googlePlace: 'ChIJcw9c6shXzpQRHtUh-HBq6-M',
-        type: ['charger']
-      },
-      {
-        name: 'Wheat Biopadaria',
-        address: [
-          'R. Carlos Weber, 1622',
-          'Vila Leopoldina, São Paulo',
-          'SP, 05303-000, Brasil'
-        ],
-        phone: '(11) 3628-8209',
-        pos: {
-          lat: -23.5334425,
-          lng: -46.7255175
-        },
-        googlePlace: 'ChIJdXKRuZn4zpQRgF9owALNIQw',
         type: ['charger']
       },
       {
@@ -329,36 +255,6 @@ module.exports = async (req, res) => {
           lng: -46.659321
         },
         googlePlace: 'ChIJNd83zRBYzpQR4XZlFQLIh5Q',
-        type: ['charger']
-      },
-      {
-        name: 'Rause Café + Vinho',
-        address: [
-          'Alameda Dr. Carlos de Carvalho, 696',
-          'Centro, Curitiba',
-          'PR, 80430-180, Brasil'
-        ],
-        phone: '(41) 3242-9999',
-        pos: {
-          lat: -25.4335544,
-          lng: -49.2817704
-        },
-        googlePlace: 'ChIJ0WMwKQvk3JQRKscraBW4ma0',
-        type: ['charger']
-      },
-      {
-        name: 'Everybike',
-        address: [
-          'R. França Pinto, 421',
-          'Vila Mariana, São Paulo',
-          'SP, 04016-032, Brasil'
-        ],
-        phone: '(11) 5539-0125',
-        pos: {
-          lat: -23.587214,
-          lng: -46.640451
-        },
-        googlePlace: 'ChIJIdkhwIdZzpQRI1U5jULyGwY',
         type: ['charger']
       },
       {
