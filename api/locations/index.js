@@ -19,6 +19,21 @@ module.exports = async (req, res) => {
         type: ['charger']
       },
       {
+        name: 'Top Bike',
+        address: [
+          'Rua Pium-Í, 344',
+          'Cruzeiro, Belo Horizonte',
+          'MG, 30310-080, Brasil'
+        ],
+        phone: '(31) 99313-4888',
+        pos: {
+          lat: -19.942624,
+          lng: -43.930013
+        },
+        googlePlace: 'ChIJS5IjOM-ZpgARucuoR3nIWoI',
+        type: ['service']
+      },
+      {
         name: 'Flitzz eBike',
         address: [
           'R. das Cerejeiras, 411',
