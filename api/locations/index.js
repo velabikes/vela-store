@@ -19,6 +19,21 @@ module.exports = async (req, res) => {
         type: ['charger']
       },
       {
+        name: 'Clinica das Bicicletas',
+        address: [
+          'R. Arthur de Azevêdo Machado, 1250',
+          'STIEP, Salvador',
+          'BA, 41760-000, Brasil'
+        ],
+        phone: '(71) 3014-6717',
+        pos: {
+          lat: -12.988539,
+          lng: -38.447918 
+        },
+        googlePlace: 'ChIJVVXMUwkbFgcRZlxt-2rLBl8',
+        type: ['service']
+      },
+      {
         name: 'Top Bike',
         address: [
           'Rua Pium-Í, 344',
