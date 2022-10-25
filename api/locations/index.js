@@ -19,6 +19,21 @@ module.exports = async (req, res) => {
         type: ['charger']
       },
       {
+        name: 'Pacheco Bike',
+        address: [
+          'Atende em Domicilio',
+          'Adilson Pacheco tem anos de experiência',
+          'com bicicletas elétricas. Toda Rio de Janeiro.'
+        ],
+        phone: '(21) 96440-9727',
+        pos: {
+          lat: -22.987231,
+          lng: -43.191036
+        },
+        googlePlace: 'ChIJh7Vk0DzVmwAReYwPxnXuByI',
+        type: ['service']
+      },
+      {
         name: 'Fat Bit Floripa',
         address: [
           'Rod. Dr. Antônio Luiz Moura Gonzaga, 3339 - A12',
