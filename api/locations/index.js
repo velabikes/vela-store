@@ -34,7 +34,7 @@ module.exports = async (req, res) => {
         type: ['service']
       },
       {
-        name: 'Fat Bit Floripa',
+        name: 'Fat Bike Floripa',
         address: [
           'Rod. Dr. Antônio Luiz Moura Gonzaga, 3339 - A12',
           'Rio Tavares, Florianópolis',
