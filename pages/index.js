@@ -57,7 +57,6 @@ const HomePage = ({ highlight }) => (
       <div className="cta-bf">
         <div className="slogan">
           <h1>Bicicletas elétricas brasileiras.</h1>
-          </h4>
           <a href="/vela2">
             <Button primary>Monte a sua</Button>
           </a>
