@@ -56,7 +56,7 @@ const HomePage = ({ highlight }) => (
       <HomeImage />
       <div className="cta-bf">
         <div className="slogan">
-          <h1>Vela: Bicicleta Elétricas Brasileiras</h1>
+          <h1>Vela: Bicicletas Elétricas Brasileiras</h1>
           <h3>Adote um estilo de vida mais sustentável e saudável.</h3>
           <h4>
             Vela 2: A smartbike para quem busca eficiência, qualidade
