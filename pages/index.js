@@ -56,11 +56,11 @@ const HomePage = ({ highlight }) => (
       <HomeImage />
       <div className="cta-bf">
         <div className="slogan">
-          <h1>Smartbike Vela 2</h1>
-          <h3>Pedale com a gente para cidades mais saudáveis</h3>
+          <h1>Vela: Bicicleta Elétricas Brasileiras</h1>
+          <h3>Adote um estilo de vida mais sustentável e saudável.</h3>
           <h4>
-            A bicicleta elétrica e smart para quem busca eficiência, qualidade
-            de vida e deslocamentos menos estressantes.
+            Vela 2: A smartbike para quem busca eficiência, qualidade
+            de vida e deslocamentos mais agradáveis.
           </h4>
           <a href="/vela2">
             <Button primary>Monte a sua</Button>
@@ -76,7 +76,7 @@ const HomePage = ({ highlight }) => (
             Feita com cuidado.
             <br /> No Brasil.
           </h2>
-          <h3>Cadeia produtiva sustentável e produção artesanal.</h3>
+          <h3>Cadeia produtiva sustentável e produção artesanal no Brasil.</h3>
           <h4>
             Cada bike é montada sob medida, com a combinação e tamanho feitos
             para você.
