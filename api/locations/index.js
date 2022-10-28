@@ -19,6 +19,21 @@ module.exports = async (req, res) => {
         type: ['charger']
       },
       {
+        name: 'Conserta Bike Rio Claro',
+        address: [
+          'Avenida 61, 1040 - Térreo',
+          'Jardim Itapuã, Rio Claro',
+          'SP, 13501-613, Brasil'
+        ],
+        phone: '(19) 99426-1010',
+        pos: {
+          lat: -22.438018,
+          lng: -47.563659
+        },
+        googlePlace: 'ChIJx3pF7n7ax5QRFVQG0nTnhZ0',
+        type: ['charger','service','store']
+      },
+      {
         name: 'Pacheco Bike',
         address: [
           'Atende em Domicilio',
@@ -124,21 +139,6 @@ module.exports = async (req, res) => {
         type: ['charger']
       },
       {
-        name: 'Casa Toffo',
-        address: [
-          'R. Paulo Orozimbo, 613',
-          'Aclimação, São Paulo',
-          'SP, 01535-000, Brasil'
-        ],
-        phone: '(11) 3271-8331',
-        pos: {
-          lat: -23.5728727,
-          lng: -46.6254545
-        },
-        googlePlace: 'ChIJ-0Zi6PxZzpQR-b6maQjQjSA',
-        type: ['charger']
-      },
-      {
         name: 'De Lá Do Pão',
         address: [
           'Rua Harmonia, 1158',
@@ -225,21 +225,6 @@ module.exports = async (req, res) => {
           lng: -46.6821703
         },
         googlePlace: 'ChIJcw9c6shXzpQRHtUh-HBq6-M',
-        type: ['charger']
-      },
-      {
-        name: 'Prestinaria A Casa dos Pães',
-        address: [
-          'R. Euclides da Cunha, 699 C',
-          'Bigorrilho, Curitiba',
-          'PR, 80730-360, Brasil'
-        ],
-        phone: '(41) 3342-4576',
-        pos: {
-          lat: -25.4389499,
-          lng: -49.29604529999999
-        },
-        googlePlace: 'ChIJoxBMMO3j3JQRSjOnxx6TOLg',
         type: ['charger']
       },
       {
