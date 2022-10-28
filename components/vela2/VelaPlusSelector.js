@@ -61,7 +61,7 @@ const VelaPlusSelector = ({ collection, onSelect, selected }) => {
   return (
     <>
       <h4>Proteja sua bike:</h4>
-      <p>Assine o pacote anual do <a href="/velamais" target="_blank">Plano Vela+</a> em 12 parcelas mensais pra ter uma expecirência ainda melhor.</p>
+      <p>Assine o pacote anual do <a href="/velamais" target="_blank">Plano Vela+</a> em 12 parcelas mensais pra ter uma experiëncia ainda melhor.</p>
       <div className="add">
           <p>
             <AddIcon style={{ width: "1.2em" }} />
