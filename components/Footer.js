@@ -92,7 +92,7 @@ const Footer = () => (
           <SubscribeForm showText />
           <div className="social">
           <div className="social-icon">
-            <a href="https://www.instagram.com/velabikes/"target="_blank">
+            <a href="https://www.instagram.com/velabikesbrasil/"target="_blank">
                 <Instagram />
             </a>
           </div>
