@@ -1,7 +1,7 @@
 const fetch = require('isomorphic-fetch')
 
 const instagramGetImages = async () => {
-  const response = await fetch('https://www.instagram.com/velabikes/?__a=1')
+  const response = await fetch('https://www.instagram.com/velabikesbrasil/?__a=1')
   const {
     graphql: { user: { edge_owner_to_timeline_media: { edges } } }
   } = await response.json()
