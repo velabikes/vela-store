@@ -94,7 +94,7 @@ module.exports = async (req, res) => {
         type: ['service']
       },
       {
-        name: 'Flitzz eBike',
+        name: 'Fitzz eBike',
         address: [
           'R. das Cerejeiras, 411',
           'Carvoeira, Florianópolis',
