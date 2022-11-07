@@ -21,8 +21,8 @@ const typeToLabel = type => {
       return 'Loja'
     case 'service':
       return 'Autorizada'
-    case 'parking':
-      return 'Vagas'
+    case 'grudi':
+      return 'Grudi'
     default:
       return '?'
   }
@@ -36,7 +36,7 @@ const typeToIcon = type => {
       return <MarkerStoreIcon />
     case 'service':
       return <MarkerServiceIcon />
-    case 'parking':
+    case 'grudi':
       return <MarkerParkingIcon />
     default:
       return '?'
