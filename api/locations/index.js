@@ -18,6 +18,21 @@ module.exports = async (req, res) => {
         googlePlace: 'ChIJM0wFcdxXzpQRo_-Wyy4K_qE',
         type: ['charger']
       },
+{
+        name: 'Voltage Bikes',
+        address: [
+          'R. Fernandes de Barros, 832',
+          'Alto da XV, Curitiba',
+          'PR, 80045-390, Brasil'
+        ],
+        phone: '(41) 3535-0330',
+        pos: {
+          lat: -25.423713,
+          lng: -49.24581
+        },
+        googlePlace: 'ChIJ11w58Urk3JQRmxITqDuv1OI',
+        type: ['service','store']
+      },
       {
         name: 'Conserta Bike Rio Claro',
         address: [
