@@ -180,8 +180,8 @@ export const MarkerServiceIcon = props => (
   </svg>
 )
 
-export const MarkerGrudiIcon = props =>
-  <svg
+export const MarkerGrudiIcon = props => (
+<svg
     width={19}
     height={24}
     viewBox="0 0 19 24"
@@ -218,8 +218,7 @@ export const MarkerGrudiIcon = props =>
       />
     </defs>
   </svg>
-);
-export default SVGComponent;
+)
 
 export const Instagram = props =>
   <svg viewBox='0 0 24 24' fill='none' {...props}>
