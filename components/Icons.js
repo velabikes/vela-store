@@ -166,7 +166,7 @@ export const MarkerChargerIcon = props =>
     />
   </svg>
 
-export const MarkerServiceIcon = props => (
+export const MarkerServiceIcon = props => 
   <svg viewBox='0 0 48 48' fill='none' {...props}>
     <path d='M0 0h48v48H0z' />
     <path
@@ -178,9 +178,9 @@ export const MarkerServiceIcon = props => (
       fill={white}
     />
   </svg>
-)
 
-export const MarkerGrudiIcon = props => (
+
+export const MarkerGrudiIcon = props => 
 <svg viewBox='0 0 48 48' fill='none' {...props}>
     <path d='M0 0h48v48H0z' />
     <path
@@ -192,7 +192,6 @@ export const MarkerGrudiIcon = props => (
       fill={white}
     />
   </svg>
-)
 
 export const Instagram = props =>
   <svg viewBox='0 0 24 24' fill='none' {...props}>
