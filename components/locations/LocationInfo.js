@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import LocationTag from 'components/locations/LocationTag'
-import ParkingButton from 'components/locations/ParkingButton'
+import GrudiButton from 'components/locations/GrudiButton'
 
 const LocationsInfo = ({ name, address, hours, phone, type, moreInfo }) =>
   <article className='LocationsInfo'>
@@ -22,7 +22,7 @@ const LocationsInfo = ({ name, address, hours, phone, type, moreInfo }) =>
     {type && <div className='tags'>{type.map(type => <LocationTag type={type} />)}</div>}
     {
       {
-        'parking': <ParkingButton />,
+        'grudi': <GrudiButton />,
         default: ('')
       }[type]
     }
