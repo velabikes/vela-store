@@ -3,7 +3,7 @@ import { velaGreen } from 'style/colors'
 
 const GrudiButton = () =>
   <div className='grudiButton'>
-    <a href='http://www.velabikes.com.br'>Grudi</a>
+    <a href='https://velabikes.com.br/loja/produto/grudi'>Grudi</a>
     <style jsx>{`
       .grudiButton{
           text-align: left;
