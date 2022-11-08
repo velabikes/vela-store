@@ -1,7 +1,7 @@
 
 const PlusImage = () =>
   <div>
-    <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FSegurancaBikeEletrica.png?alt=media&token=8a5011f9-bbda-4f4f-9a82-431ddc678dda' className='desktop' alt='Assinatura Segurança Bike Elétrica' />
+    <img src='/plus/SegurancaBikeEletrica.png' className='desktop' alt='Assinatura Segurança Bike Elétrica' />
     <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FSeguran%C3%A7aBikeEletricaGPS.png?alt=media&token=ecece5f5-6eae-4627-9253-1d3f137a3edd' className='mobile' alt='Segurança Vela Bikes pelo App' />
     <div className='animatedBG'>
       <div className='circle xxlarge shade1'></div>
