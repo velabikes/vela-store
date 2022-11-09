@@ -507,7 +507,7 @@ module.exports = async (req, res) => {
           lng: -46.6328599
         },
         googlePlace: 'ChIJUb-kvoJZzpQRcKWYxtrRZY0',
-        type: ['grudi']
+        type: ['grudi', 'service', 'store']
       },
       {
         name: 'Tamanduá Bike Store LTDA',
