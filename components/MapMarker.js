@@ -1,19 +1,8 @@
 import PropTypes from 'prop-types'
-import { MarkerStoreIcon, MarkerChargerIcon, MarkerServiceIcon, MarkerGrudiIcon } from './Icons'
+import { MarkerPlaceIcon } from './Icons'
 
 const MapMarkerIcon = ({ type }) => {
-  switch (type) {
-    case 'charger':
-      return <MarkerChargerIcon />
-    case 'store':
-      return <MarkerStoreIcon />
-    case 'service':
-      return <MarkerServiceIcon />
-    case 'grudi':
-      return <MarkerGrudiIcon />
-    default:
-      return null
-  }
+  return <MarkerPlaceIcon />
 }
 
 MapMarkerIcon.propTypes = {
