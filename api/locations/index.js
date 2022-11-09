@@ -258,36 +258,6 @@ module.exports = async (req, res) => {
         type: ['charger']
       },
       {
-        name: 'Les Terroirs',
-        address: [
-          'Alameda Prudente de Moraes, 1069',
-          'Centro, Curitiba',
-          'PR, 80430-234, Brasil'
-        ],
-        phone: '(41) 3044-6682',
-        pos: {
-          lat: -25.431196,
-          lng: -49.281841
-        },
-        googlePlace: 'ChIJbxoCUgrk3JQRRmffu3l-VCo',
-        type: ['charger']
-      },
-      {
-        name: 'Camelo Bike Tour Brasília',
-        address: [
-          'SHS Quadra 06 Conjunto A, Bloco A, Loja 17',
-          'Centro Empresarial Brasil 21 - Asa Sul, Brasília',
-          'DF, 70316-102, Brasil'
-        ],
-        phone: '(61) 99303-8196',
-        pos: {
-          lat: -15.7933051,
-          lng: -47.8930601
-        },
-        googlePlace: 'ChIJlZr18bE7WpMRB_hHg-ImCzc',
-        type: ['charger']
-      },
-      {
         name: 'Luiz Volpato Arq',
         address: [
           'R. Jerônimo Durski, 897',
