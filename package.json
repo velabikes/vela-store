@@ -13,9 +13,6 @@
     "lint": "eslint .",
     "lint-fix": "eslint --fix ."
   },
-  "pre-commit": [
-    "lint"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/velabikes/vela-store.git"
