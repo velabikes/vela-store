@@ -20,6 +20,10 @@ const HomePage = ({ highlight }) => (
           __html: `!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,“script”,“https://chimpstatic.com/mcjs-connected/js/users/68a0cce7cc109d78a8b44d7a0/ceccec399fdedf3f455913279.js”);`,
         }}
       />
+      <script
+        async={1}
+        src="https://chimpstatic.com/mcjs-connected/js/users/68a0cce7cc109d78a8b44d7a0/ceccec399fdedf3f455913279.js"
+      />
       <meta httpEquiv="content-language" content="pt-br" />
       <meta name="application-name" content="Vela Bikes Store" />
       <meta
