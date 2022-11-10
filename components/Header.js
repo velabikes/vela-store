@@ -47,13 +47,16 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
         <div className='left'><Link href='/blog'><a>
           Blog
         </a></Link></div>
-        <div className='left'><a href='/invest' as='/investir'>
+        <div className='left'><Link href='/invest' as='/investir'><a>
           Investir
-        </a></div>
-      </div>
+        </a></Link></div>
+        <div className='left'><Link href='https://bit.ly/BFVela22' as='https://bit.ly/BFVela22'><a>
+          | Black Friday |
+      </a></Link></div>
+     </div>
       <div className='right'>
         <HeaderMenu />
-      </div>
+    </div>
     </header>
     <div className='app-content' onClick={handleContentClick}>
       {children}
