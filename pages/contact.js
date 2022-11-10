@@ -40,7 +40,13 @@ const Contact = () => (
         <h3>E-mail:</h3>
         <h4>
           <a href="mailto:contato@velabikes.com.br">contato@velabikes.com.br</a>
-          <br />Iremos responder sua solicitação em até <b>72 horas</b>.
+          <br />Iremos responder sua solicitação em até <b>48 horas</b>.
+        </h4>
+        <br />
+        <h3>WhatsApp:</h3>
+        <h4>
+          <a href="https://api.whatsapp.com/send?phone=5511963934737">((11) 9.6393-4737</a>
+          <br />Fuciona dentro do horário comercial e é a forma mais ágil de comunicação. <b>72 horas</b>.
         </h4>
         <br />
         <h3>Chat:</h3>
