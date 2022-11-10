@@ -45,7 +45,7 @@ const Contact = () => (
         <br />
         <h3>WhatsApp:</h3>
         <h4>
-          <a href="https://api.whatsapp.com/send?phone=5511963934737">((11) 9.6393-4737</a>
+          <a href="https://api.whatsapp.com/send?phone=5511963934737">(11) 9.6393-4737</a>
           <br />Fuciona dentro do horário comercial e é a forma mais ágil de comunicação.
         </h4>
         <br />
