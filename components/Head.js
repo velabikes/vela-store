@@ -6,7 +6,7 @@ import Freshchat from "components/head/Freshchat";
 import Modal from "components/Modal";
 
 const CustomHead = () => {
-/*   const [showModal, setShowModal] = useState(false);
+  /*   const [showModal, setShowModal] = useState(false);
 
   const handleShowModal = () => {
     const show = !showModal;

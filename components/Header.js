@@ -1,64 +1,88 @@
-import { compose, withProps, withHandlers } from 'recompose'
-import PropTypes from 'prop-types'
-import Link from 'next/link'
-import { toggleDrawer } from '../lib/redux'
-import { white, offWhite, velaGreen, offBlack } from '../style/colors'
-import withOpenDrawer from '../containers/withOpenDrawer'
-import Cart from './store/Cart'
-import HeaderDrawer from './HeaderDrawer'
-import HeaderMenu from './HeaderMenu'
-import MainMenu from './MainMenu'
-import Footer from './Footer'
-import { Logo } from './Icons'
+import { compose, withProps, withHandlers } from "recompose";
+import PropTypes from "prop-types";
+import Link from "next/link";
+import { toggleDrawer } from "../lib/redux";
+import { white, offWhite, velaGreen, offBlack } from "../style/colors";
+import withOpenDrawer from "../containers/withOpenDrawer";
+import Cart from "./store/Cart";
+import HeaderDrawer from "./HeaderDrawer";
+import HeaderMenu from "./HeaderMenu";
+import MainMenu from "./MainMenu";
+import Footer from "./Footer";
+import { Logo } from "./Icons";
 
 /* eslint-disable */
-const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
+const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) => (
   <>
-    <HeaderDrawer visible={isCartOpen}><Cart /></HeaderDrawer>
+    <HeaderDrawer visible={isCartOpen}>
+      <Cart />
+    </HeaderDrawer>
     <HeaderDrawer visible={isMenuOpen}>
       <MainMenu />
     </HeaderDrawer>
-    <header className='header'>
-      <div className='top'>
-        <div className='logo'><Link href='/'><a>
-          <Logo />
-        </a></Link></div>
-        <div className='left'><Link href='/vela'><a>
-          Vela 2
-        </a></Link></div>
-        <div className='left'><Link href='/velaplus' as='/velamais'><a>
-          Vela+
-        </a></Link></div>
-        <div className='left'><Link href='/store' as='/loja'><a>
-          Acessórios
-        </a></Link></div>
-        <div className='left'><Link href='/store/parts' as='/loja/pecas'><a>
-          Peças
-        </a></Link></div>
-        <div className='left'><Link href='/store/services' as='/loja/servicos'><a>
-          Serviços
-        </a></Link></div>
-        <div className='left'><Link href='/network/map' as='/rede/mapa'><a>
-          Rede
-        </a></Link></div>
+    <header className="header">
+      <div className="top">
+        <div className="logo">
+          <Link href="/">
+            <a>
+              <Logo />
+            </a>
+          </Link>
+        </div>
+        <div className="left">
+          <Link href="/vela">
+            <a>Vela 2</a>
+          </Link>
+        </div>
+        <div className="left">
+          <Link href="/velaplus" as="/velamais">
+            <a>Vela+</a>
+          </Link>
+        </div>
+        <div className="left">
+          <Link href="/store" as="/loja">
+            <a>Acessórios</a>
+          </Link>
+        </div>
+        <div className="left">
+          <Link href="/store/parts" as="/loja/pecas">
+            <a>Peças</a>
+          </Link>
+        </div>
+        <div className="left">
+          <Link href="/store/services" as="/loja/servicos">
+            <a>Serviços</a>
+          </Link>
+        </div>
+        <div className="left">
+          <Link href="/network/map" as="/rede/mapa">
+            <a>Rede</a>
+          </Link>
+        </div>
         {/* <div className='left'><Link href='/testride'><a>
           Test-ride
         </a></Link></div> */}
-        <div className='left'><Link href='/blog'><a>
-          Blog
-        </a></Link></div>
-        <div className='left'><Link href='/invest' as='/investir'><a>
-          Investir
-        </a></Link></div>
-        <div className='left'><Link href='https://bit.ly/BFVela22' as='https://bit.ly/BFVela22'><a>
-          | Black Friday |
-      </a></Link></div>
-     </div>
-      <div className='right'>
+        <div className="left">
+          <Link href="/blog">
+            <a>Blog</a>
+          </Link>
+        </div>
+        <div className="left">
+          <Link href="/invest" as="/investir">
+            <a>Investir</a>
+          </Link>
+        </div>
+        <div className="left blackfriday">
+          <Link href="https://bit.ly/BFVela22" as="https://bit.ly/BFVela22">
+            <a>| Black Friday |</a>
+          </Link>
+        </div>
+      </div>
+      <div className="right">
         <HeaderMenu />
-    </div>
+      </div>
     </header>
-    <div className='app-content' onClick={handleContentClick}>
+    <div className="app-content" onClick={handleContentClick}>
       {children}
     </div>
     <Footer />
@@ -101,13 +125,17 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
       }
       .top .left {
         display: none;
-      } 
+      }
       .right {
         right: 0;
         padding: 0.25rem;
       }
       .right :global(a) {
         min-width: 3rem;
+      }
+      .blackfriday a {
+        font-weight: bold;
+        color: yellow;
       }
       @media only screen and (min-width: 768px) {
         header {
@@ -126,7 +154,7 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
         .top .left {
           display: flex;
           padding: 0 1.2rem;
-        } 
+        }
         .right {
           right: 0;
           background-color: ${velaGreen};
@@ -137,20 +165,24 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) =>
       }
     `}</style>
   </>
+);
 
 Header.propTypes = {
   children: PropTypes.node,
   handleContentClick: PropTypes.func,
   isMenuOpen: PropTypes.bool,
-  isCartOpen: PropTypes.bool
-}
+  isCartOpen: PropTypes.bool,
+};
 
 export default compose(
   withOpenDrawer,
-  withProps(({ openDrawer }) => ({ isCartOpen: openDrawer === 'CART', isMenuOpen: openDrawer === 'MENU' })),
+  withProps(({ openDrawer }) => ({
+    isCartOpen: openDrawer === "CART",
+    isMenuOpen: openDrawer === "MENU",
+  })),
   withHandlers({
-    handleContentClick: ({ dispatch, isCartOpen, isMenuOpen }) => e => {
-      return (isCartOpen || isMenuOpen) && dispatch(toggleDrawer(null))
-    }
+    handleContentClick: ({ dispatch, isCartOpen, isMenuOpen }) => (e) => {
+      return (isCartOpen || isMenuOpen) && dispatch(toggleDrawer(null));
+    },
   })
-)(Header)
+)(Header);
