@@ -1,0 +1,5 @@
+{
+  "label": "Run",
+  "type": "shell",
+  "command": "npm run dev"
+}
