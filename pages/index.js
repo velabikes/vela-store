@@ -1,71 +1,76 @@
-import Head from 'next/head'
-import { getPrismic, Predicates } from 'lib/prismic'
-import PropTypes from 'prop-types'
-import HomeVideo from 'components/home/HomeVideo'
-import HomeBanner from 'components/home/HomeBanner'
-import Highlight from 'components/home/Highlight'
-import PostHighlight from 'components/blog/PostHighlight'
-import PaddedView from 'components/PaddedView'
-import Button from '../components/Button'
-import VelaPoint from '../components/charge/VelaPoint'
-import { offBlack, offWhite, velaGreen, white } from '../style/colors'
-import HomeImage from '../components/home/HomeImage'
+import Head from "next/head";
+import { getPrismic, Predicates } from "lib/prismic";
+import PropTypes from "prop-types";
+import HomeVideo from "components/home/HomeVideo";
+import HomeBanner from "components/home/HomeBanner";
+import Highlight from "components/home/Highlight";
+import PostHighlight from "components/blog/PostHighlight";
+import PaddedView from "components/PaddedView";
+import Button from "../components/Button";
+import VelaPoint from "../components/charge/VelaPoint";
+import { offBlack, offWhite, velaGreen, white } from "../style/colors";
+import HomeImage from "../components/home/HomeImage";
 
 const HomePage = ({ highlight }) => (
-  <div className='HomePage'>
+  <div className="HomePage">
     <Head>
-      <script id='mcjs' dangerouslySetinnerHTML={{ __html: `!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,“script”,“https://chimpstatic.com/mcjs-connected/js/users/68a0cce7cc109d78a8b44d7a0/ceccec399fdedf3f455913279.js”);` }} />
-      <meta httpEquiv='content-language' content='pt-br' />
-      <meta name='application-name' content='Vela Bikes Store' />
-      <meta
-        name='description'
-        content='Uma bicicleta elétrica & smart para quem busca eficiência, qualidade de vida e deslocamentos mais ágeis, sem abrir mão do estilo.'
+      <script
+        id="mcjs"
+        dangerouslySetInnerHTML={{
+          __html: `!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,“script”,“https://chimpstatic.com/mcjs-connected/js/users/68a0cce7cc109d78a8b44d7a0/ceccec399fdedf3f455913279.js”);`,
+        }}
       />
-      <meta name='twitter:card' content='summary' />
-      <meta name='twitter:site' content='@velabikes' />
+      <meta httpEquiv="content-language" content="pt-br" />
+      <meta name="application-name" content="Vela Bikes Store" />
       <meta
-        name='twitter:title'
-        content='Vela 2: A bicicleta elétrica smart do Brasil - Vela Bikes'
+        name="description"
+        content="Uma bicicleta elétrica & smart para quem busca eficiência, qualidade de vida e deslocamentos mais ágeis, sem abrir mão do estilo."
       />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:site" content="@velabikes" />
       <meta
-        name='twitter:description'
-        content='Uma bicicleta elétrica & smart para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes, sem abrir mão do estilo.'
-      />
-      <meta
-        name='twitter:image'
-        content='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FBike-Eletrica-Smart-Vela-Bikes.jpg?alt=media&token=83330a4b-06f4-4931-8b4f-e8afbff476c9'
-      />
-      <meta property='og:url' content='https://velabikes.com.br' />
-      <meta property='og:type' content='website' />
-      <meta
-        property='og:title'
-        content='Vela 2: A bicicleta elétrica smart do Brasil - Vela Bikes'
-      />
-      <meta property='og:locale' content='pt_BR' />
-      <meta
-        property='og:description'
-        content='Uma bicicleta elétrica & smart para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes, sem abrir mão do estilo.'
+        name="twitter:title"
+        content="Vela 2: A bicicleta elétrica smart do Brasil - Vela Bikes"
       />
       <meta
-        property='og:image'
-        content='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FBike-Eletrica-Smart-Vela-Bikes.jpg?alt=media&token=83330a4b-06f4-4931-8b4f-e8afbff476c9'
+        name="twitter:description"
+        content="Uma bicicleta elétrica & smart para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes, sem abrir mão do estilo."
+      />
+      <meta
+        name="twitter:image"
+        content="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FBike-Eletrica-Smart-Vela-Bikes.jpg?alt=media&token=83330a4b-06f4-4931-8b4f-e8afbff476c9"
+      />
+      <meta property="og:url" content="https://velabikes.com.br" />
+      <meta property="og:type" content="website" />
+      <meta
+        property="og:title"
+        content="Vela 2: A bicicleta elétrica smart do Brasil - Vela Bikes"
+      />
+      <meta property="og:locale" content="pt_BR" />
+      <meta
+        property="og:description"
+        content="Uma bicicleta elétrica & smart para quem busca eficiência, qualidade de vida e deslocamentos menos estressantes, sem abrir mão do estilo."
+      />
+      <meta
+        property="og:image"
+        content="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FBike-Eletrica-Smart-Vela-Bikes.jpg?alt=media&token=83330a4b-06f4-4931-8b4f-e8afbff476c9"
       />
     </Head>
-    <div className='cover'>
+    <div className="cover">
       <HomeImage />
-      <div className='cta-bf'>
-        <div className='slogan'>
+      <div className="cta-bf">
+        <div className="slogan">
           <h1>Bicicletas elétricas brasileiras.</h1>
-          <a href='/vela2'>
+          <a href="/vela2">
             <Button primary>Monte a sua</Button>
           </a>
         </div>
       </div>
     </div>
-    <div className='cover'>
+    <div className="cover">
       <HomeVideo />
-      <div className='cta'>
-        <div className='slogan'>
+      <div className="cta">
+        <div className="slogan">
           <h2>
             Feita com cuidado.
             <br /> No Brasil.
@@ -75,32 +80,32 @@ const HomePage = ({ highlight }) => (
             Cada bike é montada sob medida, com a combinação e tamanho feitos
             para você.
           </h4>
-          <a href='/vela'>
+          <a href="/vela">
             <Button primary>Saiba mais</Button>
           </a>
         </div>
       </div>
     </div>
     <Highlight />
-    <div className='home-store'>
-      <a href='/blog'>
-        <div className='store-title'>
+    <div className="home-store">
+      <a href="/blog">
+        <div className="store-title">
           <h3>Blog</h3>
         </div>
       </a>
     </div>
     <br />
-    <PaddedView style={{ backgroundColor: '#EFEFEF' }}>
+    <PaddedView style={{ backgroundColor: "#EFEFEF" }}>
       {/* {images && <HomeAlbum images={images} />} */}
       <PostHighlight post={highlight} />
       <HomeBanner />
     </PaddedView>
-    <PaddedView style={{ backgroundColor: '#FFFEFE' }}>
+    <PaddedView style={{ backgroundColor: "#FFFEFE" }}>
       <VelaPoint />
     </PaddedView>
     <style jsx>{`
       .HomePage {
-      background-color: ${offWhite};
+        background-color: ${offWhite};
       }
       .cover {
         position: relative;
@@ -218,21 +223,21 @@ const HomePage = ({ highlight }) => (
       }
     `}</style>
   </div>
-)
+);
 
 HomePage.propTypes = {
-  highlight: PropTypes.object
-}
+  highlight: PropTypes.object,
+};
 
 HomePage.getInitialProps = async ({ req }) => {
-  const api = await getPrismic(req)
+  const api = await getPrismic(req);
   const { results } = await api.query(
-    Predicates.at('document.type', 'blog_post'),
-    { pageSize: 30, orderings: '[my.blog_post.post_date desc]' }
-  )
+    Predicates.at("document.type", "blog_post"),
+    { pageSize: 30, orderings: "[my.blog_post.post_date desc]" }
+  );
 
-  return { highlight: results[0] }
-}
+  return { highlight: results[0] };
+};
 
 /* HomePage.getInitialProps = async ({ req }) => {
   try {
@@ -252,4 +257,4 @@ HomePage.getInitialProps = async ({ req }) => {
   }
 } */
 
-export default HomePage
+export default HomePage;
