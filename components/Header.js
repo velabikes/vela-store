@@ -73,12 +73,8 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) => (
           </Link>
         </div>
         <div className="left blackfriday">
-          <Link
-            href="https://bit.ly/BFVela22"
-            as="https://bit.ly/BFVela22"
-            target="_blank"
-          >
-            <a>| Black Friday |</a>
+          <Link href="https://bit.ly/BFVela22" as="https://bit.ly/BFVela22">
+            <a target="_blank">| Black Friday |</a>
           </Link>
         </div>
       </div>
