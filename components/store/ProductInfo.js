@@ -39,76 +39,82 @@ const ProductInfo = ({
   setAvailableVariants,
   availableVariants,
   selectedVariant,
-}) => (
-  <div className="ProductInfo">
-    <div>
-      {product.variants && (
-        <>
-          <ProductVariantImage
-            variant={
-              availableVariants
-                ? availableVariants.edges[0]
-                : product.variants.edges[0]
-            }
-          />
-          <img src="/product/images/vendida.png" className="sold" />
-        </>
-      )}
-      <HideOnMobile>
-        <ProductImageGallery product={product} />
-      </HideOnMobile>
-    </div>
-    <div>
-      <h1>{product.title}</h1>
-      <div className="price">
-        <ProductPrice
-          product={product}
-          variant={selectedVariant}
-          showInstallment
-        />
+}) => {
+  const isSelected = !!selectedVariant;
+  const isAvailable = selectedVariant?.node?.availableForSale;
+  return (
+    <div className="ProductInfo">
+      <div>
+        {product.variants && (
+          <>
+            <ProductVariantImage
+              variant={
+                availableVariants
+                  ? availableVariants.edges[0]
+                  : product.variants.edges[0]
+              }
+            />
+            {isSelected && !isAvailable && (
+              <img src="/product/images/vendida.png" className="sold" />
+            )}
+          </>
+        )}
+        <HideOnMobile>
+          <ProductImageGallery product={product} />
+        </HideOnMobile>
       </div>
-      <hr />
-      <ProductForm
-        product={product}
-        selectedVariant={availableVariants}
-        sVariant={selectedVariant}
-        availableVariants={availableVariants}
-        onVariantSelect={setAvailableVariants}
-      />
-      <div dangerouslySetInnerHTML={{ __html: product.descriptionHtml }} />
-      <br />
-      <HideOnDesktop>
-        <ProductImageGallery product={product} />
-      </HideOnDesktop>
+      <div>
+        <h1>{product.title}</h1>
+        <div className="price">
+          <ProductPrice
+            product={product}
+            variant={selectedVariant}
+            showInstallment
+          />
+        </div>
+        <hr />
+        <ProductForm
+          product={product}
+          selectedVariant={availableVariants}
+          sVariant={selectedVariant}
+          availableVariants={availableVariants}
+          onVariantSelect={setAvailableVariants}
+        />
+        <div dangerouslySetInnerHTML={{ __html: product.descriptionHtml }} />
+        <br />
+        <HideOnDesktop>
+          <ProductImageGallery product={product} />
+        </HideOnDesktop>
+      </div>
+      <style jsx>{`
+        .price {
+          font-size: 1.25em;
+        }
+        .sold {
+          margin-top: -100%;
+          position: relative;
+          z-index: 1;
+          top: -15px;
+        }
+        @media only screen and (min-width: 768px) {
+          .ProductInfo {
+            display: flex;
+          }
+          .ProductInfo > div {
+            flex: 1;
+          }
+          .ProductInfo > div:first-child {
+            flex: 1.61;
+            padding-right: 2em;
+          }
+          .ProductInfo :global(.ProductImage) {
+            margin: 1em auto;
+          }
+        }
+      `}</style>
     </div>
-    <style jsx>{`
-      .price {
-        font-size: 1.25em;
-      }
-      .sold {
-        margin-top: -100%;
-        position: relative;
-        z-index: 1;
-        top: -15px;
-      }
-      @media only screen and (min-width: 768px) {
-        .ProductInfo {
-          display: flex;
-        }
-        .ProductInfo > div {
-          flex: 1;
-        }
-        .ProductInfo > div:first-child {
-          flex: 1.61;
-          padding-right: 2em;
-        }
-        .ProductInfo :global(.ProductImage) {
-          margin: 1em auto;
-        }
-      }
-    `}</style>
-  </div>
-);
+  );
+};
 
 ProductInfo.propTypes = {
   product: PropTypes.object,
