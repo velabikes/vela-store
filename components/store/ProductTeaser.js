@@ -13,6 +13,12 @@ const ProductTeaser = ({ product }) => (
         <ProductImage
           src={product.images && product.images.edges[0].node.src}
         />
+<<<<<<< HEAD
+=======
+        {!product.variants.edges[0].node.availableForSale && (
+          <img src="/product/images/vendida.png" className="sold" />
+        )}
+>>>>>>> f4650379570c6e26599630395c5096e3984966d5
         <h3>{product.title}</h3>
         <ProductPrice
           product={product}
@@ -24,9 +30,18 @@ const ProductTeaser = ({ product }) => (
     </Link>
     <style jsx>{`
       h3 {
+<<<<<<< HEAD
         color: #173d2e;
+=======
+>>>>>>> f4650379570c6e26599630395c5096e3984966d5
         margin: 0.5rem 0 0;
         font-size: 1.25rem;
+      }
+      .sold {
+        margin-top: -100%;
+        z-index: 1;
+        position: relative;
+        top: -15px;
       }
     `}</style>
   </div>
