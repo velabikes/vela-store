@@ -1,44 +1,58 @@
-import PaddedView from 'components/PaddedView'
-import { offWhite, offBlack, white } from '../../style/colors'
-import Button from '../Button'
+import PaddedView from "components/PaddedView";
+import { offWhite, offBlack, white } from "../../style/colors";
+import Button from "../Button";
 
 const Highlight = () => {
   return (
-    <PaddedView style={{ background: '#272727' }}>
-      <div className='Highlight'>
-        <div className='content'>
-          <p>A smartbike que oferece o melhor desempenho para a cidade, em dois modelos diferentes.</p>
+    <PaddedView style={{ background: "#173d2e" }}>
+      <div className="Highlight">
+        <div className="content">
+          <p>
+            A smartbike que oferece o melhor desempenho para a cidade, em dois
+            modelos diferentes.
+          </p>
         </div>
-        <div className='models'>
-            <div className='qr'>
-              <a href="/vela">
-                <img alt='Vela 2 Quadro reto' src='/static/vela2/models/VEL-V2-550-29-VERDE-PRETO.png' />
-                <div className='models-content'>
-                  <h3>Quadro reto</h3>
-                  <span>3 tamanhos</span>
-                  <span>1,58m até 2m</span>
-                </div>
-              </a>
-            </div>
-            <div className='qb'>
-              <a href="/vela">
-                <img alt='Vela 2 Quadro baixo' src='/static/vela2/models/VEL-V2-490-29-VERDE-PRETO.png' />
-                <div className='models-content'>
-                  <h3>Quadro baixo</h3>
-                  <span>2 tamanhos</span>
-                  <span>1,58m até 1,90m</span>
-                </div>
-              </a>
-            </div>
+        <div className="models">
+          <div className="qr">
+            <a href="/vela">
+              <img
+                alt="Vela 2 Quadro reto"
+                src="/static/vela2/models/VEL-V2-550-29-VERDE-PRETO.png"
+              />
+              <div className="models-content">
+                <h3>Quadro reto</h3>
+                <span>3 tamanhos</span>
+                <span>1,58m até 2m</span>
+              </div>
+            </a>
+          </div>
+          <div className="qb">
+            <a href="/vela">
+              <img
+                alt="Vela 2 Quadro baixo"
+                src="/static/vela2/models/VEL-V2-490-29-VERDE-PRETO.png"
+              />
+              <div className="models-content">
+                <h3>Quadro baixo</h3>
+                <span>2 tamanhos</span>
+                <span>1,58m até 1,90m</span>
+              </div>
+            </a>
+          </div>
         </div>
-        <div className='color'>
-          <p>Única no Brasil com aplicativo companheiro, freio regenerativo e rastreamento GPS.</p>
+        <div className="color">
+          <p>
+            Única no Brasil com aplicativo companheiro, freio regenerativo e
+            rastreamento GPS.
+          </p>
         </div>
       </div>
-      <div className='price'>
+      <div className="price">
         <h2>Faça parte do futuro. Agora.</h2>
-        <div className='actions'>
-          <a href='/vela'><Button primary>Saiba mais</Button></a>
+        <div className="actions">
+          <a href="/vela">
+            <Button primary>Saiba mais</Button>
+          </a>
         </div>
       </div>
       <style jsx>{`
@@ -165,7 +179,7 @@ const Highlight = () => {
           }
         `}</style>
     </PaddedView>
-  )
-}
+  );
+};
 
-export default Highlight
+export default Highlight;

@@ -96,6 +96,13 @@ const ProductInfo = ({
           z-index: 1;
           top: -15px;
         }
+        h1 {
+          color: #173d2e;
+        }
+        h3 {
+          color: #173d2e;
+        }
+
         @media only screen and (min-width: 768px) {
           .ProductInfo {
             display: flex;

@@ -91,32 +91,41 @@ const Footer = () => (
         <div className="news">
           <SubscribeForm showText />
           <div className="social">
-          <div className="social-icon">
-            <a href="https://www.instagram.com/velabikesbrasil/"target="_blank">
+            <div className="social-icon">
+              <a
+                href="https://www.instagram.com/velabikesbrasil/"
+                target="_blank"
+              >
                 <Instagram />
-            </a>
-          </div>
-          <div className="social-icon">
-            <a href="https://www.facebook.com/velabikes" target="_blank">
-              <Facebook />
-            </a>
-          </div>
-          <div className="social-icon">
-            <a href="https://www.linkedin.com/company/velabikes" target="_blank">
+              </a>
+            </div>
+            <div className="social-icon">
+              <a href="https://www.facebook.com/velabikes" target="_blank">
+                <Facebook />
+              </a>
+            </div>
+            <div className="social-icon">
+              <a
+                href="https://www.linkedin.com/company/velabikes"
+                target="_blank"
+              >
                 <Linkedin />
-            </a>
-          </div>
-          <div className="social-icon">
-            <a href="https://twitter.com/VelaBikes" target="_blank">
-                <Twitter/>
-            </a>
-          </div>
-          <div className="social-icon">
-            <a href="https://www.youtube.com/channel/UCa9GuqmiV3VbulKx9T2rjCw" target="_blank">
+              </a>
+            </div>
+            <div className="social-icon">
+              <a href="https://twitter.com/VelaBikes" target="_blank">
+                <Twitter />
+              </a>
+            </div>
+            <div className="social-icon">
+              <a
+                href="https://www.youtube.com/channel/UCa9GuqmiV3VbulKx9T2rjCw"
+                target="_blank"
+              >
                 <YouTube />
-            </a>
+              </a>
+            </div>
           </div>
-        </div>
         </div>
       </div>
       <div className="copyright">
@@ -188,7 +197,7 @@ const Footer = () => (
           margin: 1em 0.8em 0 0.8em;
         }
 
-        @media only screen and (min-width:768px){
+        @media only screen and (min-width: 768px) {
           .footer-navigation {
             flex-direction: row;
             padding: 2rem 1rem 1rem 2rem;
@@ -225,7 +234,7 @@ const Footer = () => (
             text-align: right;
           }
         }
-        @media only screen and (min-width:1000px){
+        @media only screen and (min-width: 1000px) {
           .footer-navigation .footer-links > nav {
             min-width: 10em;
             margin: 0;

@@ -135,7 +135,7 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) => (
       }
       .blackfriday a {
         font-weight: bold;
-        color: yellow;
+        color: #8acca8;
       }
       @media only screen and (min-width: 768px) {
         header {
