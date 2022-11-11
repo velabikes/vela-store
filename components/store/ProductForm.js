@@ -21,7 +21,8 @@ const ProductForm = ({
   selectedVariant,
   hasOptions,
 }) => {
-  const isAvailable = selectedVariant?.edges[0].node.availableForSale;
+  const isSelected = !!sVariant;
+  const isAvailable = sVariant?.node?.availableForSale;
   return (
     <div className="ProductForm">
       {hasOptions && (
@@ -31,7 +32,6 @@ const ProductForm = ({
         />
       )}
       <div className="actions">
-        {console.log(selectedVariant)}
         <Button
           onClick={handleAddToCartClick}
           disabled={!isAvailable}
@@ -40,6 +40,8 @@ const ProductForm = ({
         >
           {isAddToCartLoading
             ? "Carregando..."
+            : !isSelected
+            ? "Selecione"
             : !isAvailable
             ? "Indisponivel"
             : "Comprar"}
