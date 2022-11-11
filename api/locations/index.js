@@ -1,528 +1,527 @@
-const GoogleMaps = require('@google/maps')
+const GoogleMaps = require("@google/maps");
 
 module.exports = async (req, res) => {
   return res.end(
     JSON.stringify([
       {
-        name: 'Alva Coworking',
+        name: "Alva Coworking",
         address: [
-          'R. Simão Álvares, 97',
-          'Pinheiros, São Paulo',
-          'SP, 05417-030, Brasil'
+          "R. Simão Álvares, 97",
+          "Pinheiros, São Paulo",
+          "SP, 05417-030, Brasil",
         ],
-        phone: '(11) 4550-4701',
+        phone: "(11) 4550-4701",
         pos: {
           lat: -23.566483,
-          lng: -46.6870085
+          lng: -46.6870085,
         },
-        googlePlace: 'ChIJM0wFcdxXzpQRo_-Wyy4K_qE',
-        type: ['charger']
+        googlePlace: "ChIJM0wFcdxXzpQRo_-Wyy4K_qE",
+        type: ["charger"],
       },
-{
-        name: 'Voltage Bikes',
+      {
+        name: "Voltage Bikes",
         address: [
-          'R. Fernandes de Barros, 832',
-          'Alto da XV, Curitiba',
-          'PR, 80045-390, Brasil'
+          "R. Fernandes de Barros, 832",
+          "Alto da XV, Curitiba",
+          "PR, 80045-390, Brasil",
         ],
-        phone: '(41) 3535-0330',
+        phone: "(41) 3535-0330",
         pos: {
           lat: -25.423713,
-          lng: -49.24581
+          lng: -49.24581,
         },
-        googlePlace: 'ChIJ11w58Urk3JQRmxITqDuv1OI',
-        type: ['service','store']
+        googlePlace: "ChIJ11w58Urk3JQRmxITqDuv1OI",
+        type: ["service", "store"],
       },
       {
-        name: 'Conserta Bike Rio Claro',
+        name: "Conserta Bike Rio Claro",
         address: [
-          'Avenida 61, 1040 - Térreo',
-          'Jardim Itapuã, Rio Claro',
-          'SP, 13501-613, Brasil'
+          "Avenida 61, 1040 - Térreo",
+          "Jardim Itapuã, Rio Claro",
+          "SP, 13501-613, Brasil",
         ],
-        phone: '(19) 99426-1010',
+        phone: "(19) 99426-1010",
         pos: {
           lat: -22.438018,
-          lng: -47.563659
+          lng: -47.563659,
         },
-        googlePlace: 'ChIJx3pF7n7ax5QRFVQG0nTnhZ0',
-        type: ['charger','service','store']
+        googlePlace: "ChIJx3pF7n7ax5QRFVQG0nTnhZ0",
+        type: ["charger", "service", "store"],
       },
       {
-        name: 'Pacheco Bike',
+        name: "Pacheco Bike",
         address: [
-          'Atende em Domicilio',
-          'Adilson Pacheco tem anos de experiência',
-          'com bicicletas elétricas. Toda Rio de Janeiro.'
+          "Atende em Domicilio",
+          "Adilson Pacheco tem anos de experiência com bicicletas elétricas. Atende em toda Rio de Janeiro.",
         ],
-        phone: '(21) 96440-9727',
+        phone: "(21) 96440-9727",
         pos: {
           lat: -22.987231,
-          lng: -43.191036
+          lng: -43.191036,
         },
-        googlePlace: 'ChIJh7Vk0DzVmwAReYwPxnXuByI',
-        type: ['service']
+        googlePlace: "ChIJh7Vk0DzVmwAReYwPxnXuByI",
+        type: ["service"],
       },
       {
-        name: 'Fat Bike Floripa',
+        name: "Fat Bike Floripa",
         address: [
-          'Rod. Dr. Antônio Luiz Moura Gonzaga, 3339 - A12',
-          'Rio Tavares, Florianópolis',
-          'SC, 88048-301, Brasil'
+          "Rod. Dr. Antônio Luiz Moura Gonzaga, 3339 - A12",
+          "Rio Tavares, Florianópolis",
+          "SC, 88048-301, Brasil",
         ],
-        phone: '(48) 99912-5999',
+        phone: "(48) 99912-5999",
         pos: {
           lat: -27.657597,
-          lng: -48.486085
+          lng: -48.486085,
         },
-        googlePlace: 'ChIJb2-Lz5s7J5URVfq9PsVKyfI',
-        type: ['service']
+        googlePlace: "ChIJb2-Lz5s7J5URVfq9PsVKyfI",
+        type: ["service"],
       },
       {
-        name: 'Clinica das Bicicletas',
+        name: "Clinica das Bicicletas",
         address: [
-          'R. Arthur de Azevêdo Machado, 1250',
-          'STIEP, Salvador',
-          'BA, 41760-000, Brasil'
+          "R. Arthur de Azevêdo Machado, 1250",
+          "STIEP, Salvador",
+          "BA, 41760-000, Brasil",
         ],
-        phone: '(71) 3014-6717',
+        phone: "(71) 3014-6717",
         pos: {
           lat: -12.988539,
-          lng: -38.447918 
+          lng: -38.447918,
         },
-        googlePlace: 'ChIJVVXMUwkbFgcRZlxt-2rLBl8',
-        type: ['service']
+        googlePlace: "ChIJVVXMUwkbFgcRZlxt-2rLBl8",
+        type: ["service"],
       },
       {
-        name: 'Top Bike',
+        name: "Top Bike",
         address: [
-          'Rua Pium-Í, 344',
-          'Cruzeiro, Belo Horizonte',
-          'MG, 30310-080, Brasil'
+          "Rua Pium-Í, 344",
+          "Cruzeiro, Belo Horizonte",
+          "MG, 30310-080, Brasil",
         ],
-        phone: '(31) 99313-4888',
+        phone: "(31) 99313-4888",
         pos: {
           lat: -19.942624,
-          lng: -43.930013
+          lng: -43.930013,
         },
-        googlePlace: 'ChIJS5IjOM-ZpgARucuoR3nIWoI',
-        type: ['service']
+        googlePlace: "ChIJS5IjOM-ZpgARucuoR3nIWoI",
+        type: ["service"],
       },
       {
-        name: 'Fitzz eBike',
+        name: "Fitzz eBike",
         address: [
-          'R. das Cerejeiras, 411',
-          'Carvoeira, Florianópolis',
-          'SC, 88040-5410, Brasil'
+          "R. das Cerejeiras, 411",
+          "Carvoeira, Florianópolis",
+          "SC, 88040-5410, Brasil",
         ],
-        phone: '(48) 99110-8989',
+        phone: "(48) 99110-8989",
         pos: {
           lat: -27.605697,
-          lng: -48.528170
+          lng: -48.52817,
         },
-        googlePlace: 'ChIJl4mz8q05J5URL6V8HZBJm60',
-        type: ['service']
+        googlePlace: "ChIJl4mz8q05J5URL6V8HZBJm60",
+        type: ["service"],
       },
       {
-        name: 'Pró-Bike',
+        name: "Pró-Bike",
         address: [
-          'Av. Marcelino Pires, 2831',
-          'Jardim Climax, Dourados',
-          'MS, 79800-003, Brasil'
+          "Av. Marcelino Pires, 2831",
+          "Jardim Climax, Dourados",
+          "MS, 79800-003, Brasil",
         ],
-        phone: '(67) 3427-5035',
+        phone: "(67) 3427-5035",
         pos: {
           lat: -22.226551,
-          lng: -54.801404
+          lng: -54.801404,
         },
-        googlePlace: 'ChIJGe5wTDGoiZQRtOU_mEtGCIg',
-        type: ['service']
+        googlePlace: "ChIJGe5wTDGoiZQRtOU_mEtGCIg",
+        type: ["service"],
       },
       {
-        name: 'Bacio di Latte',
+        name: "Bacio di Latte",
         address: [
-          'R. Vupabussu, 61',
-          'Pinheiros, São Paulo',
-          'SP, 05429-040, Brasil'
+          "R. Vupabussu, 61",
+          "Pinheiros, São Paulo",
+          "SP, 05429-040, Brasil",
         ],
-        phone: '(11) 3031-1092',
+        phone: "(11) 3031-1092",
         pos: {
           lat: -23.5600874,
-          lng: -46.6971429
+          lng: -46.6971429,
         },
-        googlePlace: 'ChIJbSxi-w9XzpQRxor0_L36Djs',
-        type: ['charger']
+        googlePlace: "ChIJbSxi-w9XzpQRxor0_L36Djs",
+        type: ["charger"],
       },
       {
-        name: 'De Lá Do Pão',
+        name: "De Lá Do Pão",
         address: [
-          'Rua Harmonia, 1158',
-          'Vila Madalena, São Paulo',
-          'SP, 05435-001, Brasil'
+          "Rua Harmonia, 1158",
+          "Vila Madalena, São Paulo",
+          "SP, 05435-001, Brasil",
         ],
-        phone: '(11) 99693-1212',
+        phone: "(11) 99693-1212",
         pos: {
           lat: -23.5486881,
-          lng: -46.69166939999999
+          lng: -46.69166939999999,
         },
-        googlePlace: 'ChIJyUY7cy9XzpQRHUOkTVXkURY',
-        type: ['charger']
+        googlePlace: "ChIJyUY7cy9XzpQRHUOkTVXkURY",
+        type: ["charger"],
       },
       {
-        name: 'SOW Cake Lounge',
+        name: "SOW Cake Lounge",
         address: [
-          'Av. Conselheiro Rodrigues Alves, 456',
-          'Vila Mariana, São Paulo',
-          'SP, 04014-001, Brasil'
+          "Av. Conselheiro Rodrigues Alves, 456",
+          "Vila Mariana, São Paulo",
+          "SP, 04014-001, Brasil",
         ],
-        phone: '(11) 4328-0008',
+        phone: "(11) 4328-0008",
         pos: {
           lat: -23.5839645,
-          lng: -46.6424742
+          lng: -46.6424742,
         },
-        googlePlace: 'ChIJc7C0To9ZzpQRxI8xZGKRSRM',
-        type: ['charger']
+        googlePlace: "ChIJc7C0To9ZzpQRxI8xZGKRSRM",
+        type: ["charger"],
       },
       {
-        name: 'The Coffee Oscar Freire',
+        name: "The Coffee Oscar Freire",
         address: [
-          'R. Oscar Freire, 1149',
-          'Cerqueira César, São Paulo',
-          'SP, 01426-003, Brasil'
+          "R. Oscar Freire, 1149",
+          "Cerqueira César, São Paulo",
+          "SP, 01426-003, Brasil",
         ],
         pos: {
           lat: -23.561599,
-          lng: -46.6709301
+          lng: -46.6709301,
         },
-        googlePlace: 'ChIJn6sjxaVXzpQR6YVQqQ5PgYE',
-        type: ['charger']
+        googlePlace: "ChIJn6sjxaVXzpQR6YVQqQ5PgYE",
+        type: ["charger"],
       },
       {
-        name: 'Bacio di Latte Moema',
+        name: "Bacio di Latte Moema",
         address: [
-          'R. Gaivota, 544',
-          'Moema, São Paulo',
-          'SP, 04522-031, Brasil'
+          "R. Gaivota, 544",
+          "Moema, São Paulo",
+          "SP, 04522-031, Brasil",
         ],
-        phone: '(11) 3063-2084',
+        phone: "(11) 3063-2084",
         pos: {
           lat: -23.6011841,
-          lng: -46.6656548
+          lng: -46.6656548,
         },
-        googlePlace: 'ChIJAQCU4gNazpQRgrm7yhcWeKU',
-        type: ['charger']
+        googlePlace: "ChIJAQCU4gNazpQRgrm7yhcWeKU",
+        type: ["charger"],
       },
       {
-        name: 'Mango Tree',
+        name: "Mango Tree",
         address: [
-          'R. Prudente de Morais, 594',
-          'Ipanema, Rio de Janeiro',
-          'RJ, 22420-040, Brasil'
+          "R. Prudente de Morais, 594",
+          "Ipanema, Rio de Janeiro",
+          "RJ, 22420-040, Brasil",
         ],
-        phone: '(21) 3083-5031',
+        phone: "(21) 3083-5031",
         pos: {
           lat: -22.98523339999999,
-          lng: -43.2023853
+          lng: -43.2023853,
         },
-        googlePlace: 'ChIJ8zgq6hrVmwARf6ihPDuvaac',
-        type: ['charger']
+        googlePlace: "ChIJ8zgq6hrVmwARf6ihPDuvaac",
+        type: ["charger"],
       },
       {
-        name: 'Bacio di Latte Pinheiros',
+        name: "Bacio di Latte Pinheiros",
         address: [
-          'R. dos Pinheiros, 404',
-          'Pinheiros, São Paulo',
-          'SP, 05422-000, Brasil'
+          "R. dos Pinheiros, 404",
+          "Pinheiros, São Paulo",
+          "SP, 05422-000, Brasil",
         ],
-        phone: '(11) 3064-0827',
+        phone: "(11) 3064-0827",
         pos: {
           lat: -23.5651858,
-          lng: -46.6821703
+          lng: -46.6821703,
         },
-        googlePlace: 'ChIJcw9c6shXzpQRHtUh-HBq6-M',
-        type: ['charger']
+        googlePlace: "ChIJcw9c6shXzpQRHtUh-HBq6-M",
+        type: ["charger"],
       },
       {
-        name: 'Bacio di Latte Itaim Bibi',
+        name: "Bacio di Latte Itaim Bibi",
         address: [
-          'R. Manuel Guedes, 77',
-          'Itaim Bibi, São Paulo',
-          'SP, 01407-200, Brasil'
+          "R. Manuel Guedes, 77",
+          "Itaim Bibi, São Paulo",
+          "SP, 01407-200, Brasil",
         ],
-        phone: '(11) 3168-7187',
+        phone: "(11) 3168-7187",
         pos: {
           lat: -23.5811913,
-          lng: -46.6798443
+          lng: -46.6798443,
         },
-        googlePlace: 'ChIJ_elqH0FXzpQRRoAPxQyLNvs',
-        type: ['charger']
+        googlePlace: "ChIJ_elqH0FXzpQRRoAPxQyLNvs",
+        type: ["charger"],
       },
       {
-        name: 'Luiz Volpato Arq',
+        name: "Luiz Volpato Arq",
         address: [
-          'R. Jerônimo Durski, 897',
-          'Bigorrilho, Curitiba',
-          'PR, 80730-290, Brasil'
+          "R. Jerônimo Durski, 897",
+          "Bigorrilho, Curitiba",
+          "PR, 80730-290, Brasil",
         ],
-        phone: '(41) 3018-1701',
+        phone: "(41) 3018-1701",
         pos: {
           lat: -25.439504,
-          lng: -49.300724
+          lng: -49.300724,
         },
-        googlePlace: 'ChIJNcnhu33k3JQRhmvMJll-Of4',
-        type: ['charger']
+        googlePlace: "ChIJNcnhu33k3JQRhmvMJll-Of4",
+        type: ["charger"],
       },
       {
-        name: 'Velodrome',
+        name: "Velodrome",
         address: [
-          'R. Conselheiro Brotero, 744',
-          'Santa Cecilia, São Paulo',
-          'SP, 01232-010, Brasil'
+          "R. Conselheiro Brotero, 744",
+          "Santa Cecilia, São Paulo",
+          "SP, 01232-010, Brasil",
         ],
-        phone: '(11) 2872-5852',
+        phone: "(11) 2872-5852",
         pos: {
           lat: -23.5328478,
-          lng: -46.659321
+          lng: -46.659321,
         },
-        googlePlace: 'ChIJNd83zRBYzpQR4XZlFQLIh5Q',
-        type: ['charger']
+        googlePlace: "ChIJNd83zRBYzpQR4XZlFQLIh5Q",
+        type: ["charger"],
       },
       {
-        name: 'Bike House',
+        name: "Bike House",
         address: [
-          'Rua Cardeal Arcoverde, 2062',
-          'Pinheiros',
-          'São Paulo - SP',
-          'SP, 05408-002, Brasil'
+          "Rua Cardeal Arcoverde, 2062",
+          "Pinheiros",
+          "São Paulo - SP",
+          "SP, 05408-002, Brasil",
         ],
-        phone: '(11) 9.6541-7538',
+        phone: "(11) 9.6541-7538",
         open: true,
         pos: {
           lat: -23.562933,
-          lng: -46.69088
+          lng: -46.69088,
         },
-        googlePlace: 'ChIJcyCY9qFXzpQREiC7QlNLwDY',
-        type: ['service']
+        googlePlace: "ChIJcyCY9qFXzpQREiC7QlNLwDY",
+        type: ["service"],
       },
       {
-        name: 'Vélo 27',
+        name: "Vélo 27",
         address: [
-          'Condomínio do Centro Comercial Long Beach',
-          'Av. Hugo Viola, 955',
-          'Loja 8',
-          'Mata da Praia, Vitória',
-          'ES, 29065-475, Brasil'
+          "Condomínio do Centro Comercial Long Beach",
+          "Av. Hugo Viola, 955",
+          "Loja 8",
+          "Mata da Praia, Vitória",
+          "ES, 29065-475, Brasil",
         ],
-        phone: '(27) 9.9251-5669',
+        phone: "(27) 9.9251-5669",
         open: true,
         pos: {
           lat: -20.2792453,
-          lng: -40.2953256
+          lng: -40.2953256,
         },
-        googlePlace: 'ChIJiQg_EPkXuAARDOheZGROQDY',
-        type: ['service']
+        googlePlace: "ChIJiQg_EPkXuAARDOheZGROQDY",
+        type: ["service"],
       },
       {
-        name: 'Super Bike 101',
+        name: "Super Bike 101",
         address: [
-          'CLSW 101 Bloco C, s/n',
-          'Loja 30/32',
-          'Cruzeiro / Sudoeste / Octogonal, Brasília',
-          'DF, 70670-503, Brasil'
+          "CLSW 101 Bloco C, s/n",
+          "Loja 30/32",
+          "Cruzeiro / Sudoeste / Octogonal, Brasília",
+          "DF, 70670-503, Brasil",
         ],
-        phone: '(61) 3344-8042',
+        phone: "(61) 3344-8042",
         open: true,
         pos: {
           lat: -15.7986565,
-          lng: -47.9209296
+          lng: -47.9209296,
         },
-        googlePlace: 'ChIJ_fqvTp06WpMR1dgVjHcw6Js',
-        type: ['service', 'charger']
+        googlePlace: "ChIJ_fqvTp06WpMR1dgVjHcw6Js",
+        type: ["service", "charger"],
       },
       {
-        name: 'Moto7Mobility - Goo Eletricos Santos e Litoral SP',
+        name: "Moto7Mobility - Goo Eletricos Santos e Litoral SP",
         address: [
-          'Av. Alm. Saldanha da Gama, 115',
-          'Ponta da Praia, Santos',
-          'SP, 11030-400, Brasil'
+          "Av. Alm. Saldanha da Gama, 115",
+          "Ponta da Praia, Santos",
+          "SP, 11030-400, Brasil",
         ],
-        phone: '(13) 99727-5470',
+        phone: "(13) 99727-5470",
         pos: {
           lat: -23.989678,
-          lng: -46.29947199999999
+          lng: -46.29947199999999,
         },
-        googlePlace: 'ChIJk6zVqYYDzpQRsZpUOCLGA8s',
-        type: ['service', 'charger']
+        googlePlace: "ChIJk6zVqYYDzpQRsZpUOCLGA8s",
+        type: ["service", "charger"],
       },
       {
-        name: 'Reciclo Bikes',
+        name: "Reciclo Bikes",
         address: [
-          'Mercado da Encruzilhada',
-          'R. Dr. José Maria, s/n',
-          'box 220',
-          'Encruzilhada, Recife',
-          'PE, 52041-015, Brasil'
+          "Mercado da Encruzilhada",
+          "R. Dr. José Maria, s/n",
+          "box 220",
+          "Encruzilhada, Recife",
+          "PE, 52041-015, Brasil",
         ],
-        phone: '(81) 3048-4050',
+        phone: "(81) 3048-4050",
         open: true,
         pos: {
           lat: -8.0366288,
-          lng: -34.8920891
+          lng: -34.8920891,
         },
-        googlePlace: 'ChIJWz5XtfAYqwcRPowRixw4slA',
-        type: ['service', 'charger']
+        googlePlace: "ChIJWz5XtfAYqwcRPowRixw4slA",
+        type: ["service", "charger"],
       },
       {
-        name: 'Giro Master Bike Shop',
+        name: "Giro Master Bike Shop",
         address: [
-          'CLN 406 Bl A Loj 42/46',
-          'Asa Norte, Brasília',
-          'DF, 70847-510, Brasil'
+          "CLN 406 Bl A Loj 42/46",
+          "Asa Norte, Brasília",
+          "DF, 70847-510, Brasil",
         ],
-        phone: '(61) 3202-2775',
+        phone: "(61) 3202-2775",
         open: true,
         pos: {
           lat: -15.7669266,
-          lng: -47.8786118
+          lng: -47.8786118,
         },
-        googlePlace: 'ChIJKcPVzHI7WpMRaU9RkzCJHTY',
-        type: ['service', 'charger']
+        googlePlace: "ChIJKcPVzHI7WpMRaU9RkzCJHTY",
+        type: ["service", "charger"],
       },
       {
-        name: 'Bruno Bike',
+        name: "Bruno Bike",
         address: [
-          'Rua Vitalina, 31',
-          'Vila São Luís, Nova Iguaçu',
-          'RJ, 26012-410, Brasil'
+          "Rua Vitalina, 31",
+          "Vila São Luís, Nova Iguaçu",
+          "RJ, 26012-410, Brasil",
         ],
-        phone: '(21) 98121-8727',
+        phone: "(21) 98121-8727",
         open: true,
         pos: {
-          lat: -22.7394960,
-          lng: -43.4366140
+          lat: -22.739496,
+          lng: -43.436614,
         },
-        googlePlace: 'ChIJo-1_azdmmQARM9b1IhpUdRo',
-        type: ['service']
+        googlePlace: "ChIJo-1_azdmmQARM9b1IhpUdRo",
+        type: ["service"],
       },
       {
-        name: 'Magrela Oficina e Café',
+        name: "Magrela Oficina e Café",
         address: [
-          'Estr. José Chies, 150',
-          'Pte. Sêca, Carlos Barbosa',
-          'RS, 95185-000, Brasil'
+          "Estr. José Chies, 150",
+          "Pte. Sêca, Carlos Barbosa",
+          "RS, 95185-000, Brasil",
         ],
-        phone: '(54) 99184-0145',
+        phone: "(54) 99184-0145",
         pos: {
           lat: -29.3096603,
-          lng: -51.49419049999999
+          lng: -51.49419049999999,
         },
-        googlePlace: 'ChIJcexbQKAbHJURcWBerIApvFI',
-        type: ['service', 'charger']
+        googlePlace: "ChIJcexbQKAbHJURcWBerIApvFI",
+        type: ["service", "charger"],
       },
       {
-        name: 'Bicicletaria Urbana Bike Viva',
+        name: "Bicicletaria Urbana Bike Viva",
         address: [
-          'Av. Washington Soares, 2565',
-          'Edson Queiroz, Fortaleza',
-          'CE, 60811-341, Brasil'
+          "Av. Washington Soares, 2565",
+          "Edson Queiroz, Fortaleza",
+          "CE, 60811-341, Brasil",
         ],
-        phone: '(85) 99205-3891',
+        phone: "(85) 99205-3891",
         pos: {
           lat: -3.7850419,
-          lng: -38.4825672
+          lng: -38.4825672,
         },
-        googlePlace: 'ChIJBzUXeYVIxwcRrjy1Utb3VCs',
-        type: ['service']
+        googlePlace: "ChIJBzUXeYVIxwcRrjy1Utb3VCs",
+        type: ["service"],
       },
       {
-        name: 'Bicicletaria Cross Bike',
+        name: "Bicicletaria Cross Bike",
         address: [
-          'R. Henrique Martarello, 559',
-          'Vila Brasil, São João da Boa Vista',
-          'SP, 13875-031, Brasil'
+          "R. Henrique Martarello, 559",
+          "Vila Brasil, São João da Boa Vista",
+          "SP, 13875-031, Brasil",
         ],
-        phone: '(19) 3631-0034',
+        phone: "(19) 3631-0034",
         pos: {
           lat: -21.986355,
-          lng: -46.781424
+          lng: -46.781424,
         },
-        googlePlace: 'ChIJbYBYc6bLyZQRR_tQCYahjaE',
-        type: ['service',  'charger']
+        googlePlace: "ChIJbYBYc6bLyZQRR_tQCYahjaE",
+        type: ["service", "charger"],
       },
       {
-        name: 'Vila Velô',
+        name: "Vila Velô",
         address: [
-          'Rua Sete de Abril, 291',
-          'Floresta, Porto Alegre',
-          'RS, 90220-130 Brasil'
+          "Rua Sete de Abril, 291",
+          "Floresta, Porto Alegre",
+          "RS, 90220-130 Brasil",
         ],
-        phone: '(51) 3092-0070',
+        phone: "(51) 3092-0070",
         pos: {
           lat: -30.018188631201216,
-          lng: -51.2087267387078
+          lng: -51.2087267387078,
         },
-        googlePlace: 'ChIJ4UcEfrx5GZURpNp9gu16Gq0',
-        type: ['service']
+        googlePlace: "ChIJ4UcEfrx5GZURpNp9gu16Gq0",
+        type: ["service"],
       },
       {
-        name: 'Ciclo Cerrado',
+        name: "Ciclo Cerrado",
         address: [
-          'Av. João Naves de Ávila, 7285',
-          'Santa Mônica, Uberlândia',
-          'MG, 38408-311, Brasil'
+          "Av. João Naves de Ávila, 7285",
+          "Santa Mônica, Uberlândia",
+          "MG, 38408-311, Brasil",
         ],
-        phone: '(34) 3229-6664',
+        phone: "(34) 3229-6664",
         pos: {
           lat: -18.9388577,
-          lng: -48.224602
+          lng: -48.224602,
         },
-        googlePlace: 'ChIJb_VMpotPpJQREA-m3334ZD8',
-        type: ['service', 'charger']
+        googlePlace: "ChIJb_VMpotPpJQREA-m3334ZD8",
+        type: ["service", "charger"],
       },
       {
-        name: 'Bicicletaria Recreio',
+        name: "Bicicletaria Recreio",
         address: [
-          'R. Rebouças, 250',
-          'Vitoria, Londrina',
-          'PR, 86060-680, Brasil'
+          "R. Rebouças, 250",
+          "Vitoria, Londrina",
+          "PR, 86060-680, Brasil",
         ],
-        phone: '(43) 3327-6295',
+        phone: "(43) 3327-6295",
         pos: {
           lat: -23.3037226,
-          lng: -51.178016
+          lng: -51.178016,
         },
-        googlePlace: 'ChIJu8ETGbNE65QRo_9GRkhKXio',
-        type: ['service']
+        googlePlace: "ChIJu8ETGbNE65QRo_9GRkhKXio",
+        type: ["service"],
       },
       {
-        name: 'Saluh Oficina',
+        name: "Saluh Oficina",
         address: [
-          'R. Batista Cepelos, 283',
-          'Vila Mariana, São Paulo',
-          'SP, 04109-120, Brasil'
+          "R. Batista Cepelos, 283",
+          "Vila Mariana, São Paulo",
+          "SP, 04109-120, Brasil",
         ],
-        phone: '(11) 97422-8054',
+        phone: "(11) 97422-8054",
         pos: {
           lat: -23.5771711,
-          lng: -46.6328599
+          lng: -46.6328599,
         },
-        googlePlace: 'ChIJUb-kvoJZzpQRcKWYxtrRZY0',
-        type: ['grudi', 'service', 'store']
+        googlePlace: "ChIJUb-kvoJZzpQRcKWYxtrRZY0",
+        type: ["grudi", "service", "store"],
       },
       {
-        name: 'Tamanduá Bike Store LTDA',
+        name: "Tamanduá Bike Store LTDA",
         address: [
-          'R. Sete de Setembro, 1495',
-          'Aeroporto, Corumbá',
-          'MS, 79332-010, Brasil'
+          "R. Sete de Setembro, 1495",
+          "Aeroporto, Corumbá",
+          "MS, 79332-010, Brasil",
         ],
-        phone: '(67) 3232-9743',
+        phone: "(67) 3232-9743",
         pos: {
           lat: -19.0110916,
-          lng: -57.654644
+          lng: -57.654644,
         },
-        googlePlace: 'ChIJr5wbjnChh5MRLdm1W9GOU_g',
-        type: ['service']
+        googlePlace: "ChIJr5wbjnChh5MRLdm1W9GOU_g",
+        type: ["service"],
       },
       // ,{
       //   name: 'Vela Bikes',
@@ -549,50 +548,61 @@ module.exports = async (req, res) => {
       //   type: ['store', 'charger']
       // }
     ])
-  )
+  );
 
   const googleMapsClient = GoogleMaps.createClient({
-    key: process.env.GOOGLE_SERVER_KEY
-  })
+    key: process.env.GOOGLE_SERVER_KEY,
+  });
 
-  const fetchLocationData = location =>
+  const fetchLocationData = (location) =>
     new Promise((resolve, reject) =>
-      googleMapsClient.place({ placeid: location.googlePlace, language: 'pt-BR' }, (err, result) => {
-        if (!err) {
-          return resolve({
-            ...normalizePlace(result.json.result),
-            ...location
-          })
+      googleMapsClient.place(
+        { placeid: location.googlePlace, language: "pt-BR" },
+        (err, result) => {
+          if (!err) {
+            return resolve({
+              ...normalizePlace(result.json.result),
+              ...location,
+            });
+          }
+
+          return reject(err);
         }
+      )
+    );
 
-        return reject(err)
-      })
-    )
+  const normalizeAddress = (address) => address.split(" - ");
 
-  const normalizeAddress = address => address.split(' - ')
-
-  const normalizeOpeningText = day => day.split(/:(.+)/).filter((_, i) => i !== 2)
+  const normalizeOpeningText = (day) =>
+    day.split(/:(.+)/).filter((_, i) => i !== 2);
 
   /* eslint-disable camelcase */
-  const normalizePlace = ({ name, formatted_address, formatted_phone_number, opening_hours, geometry }) => ({
+  const normalizePlace = ({
+    name,
+    formatted_address,
+    formatted_phone_number,
+    opening_hours,
+    geometry,
+  }) => ({
     name: name,
     address: normalizeAddress(formatted_address),
     phone: formatted_phone_number,
     open: opening_hours && opening_hours.open_now,
-    hours: opening_hours && opening_hours.weekday_text.map(normalizeOpeningText),
-    pos: geometry.location
-  })
+    hours:
+      opening_hours && opening_hours.weekday_text.map(normalizeOpeningText),
+    pos: geometry.location,
+  });
   /* eslint-enable camelcase */
 
   try {
-    const placeArray = await Promise.all(locations.map(fetchLocationData))
-    res.setHeader('Content-Type', 'application/json')
-    res.setHeader('Cache-Control', 's-maxage=86400')
+    const placeArray = await Promise.all(locations.map(fetchLocationData));
+    res.setHeader("Content-Type", "application/json");
+    res.setHeader("Cache-Control", "s-maxage=86400");
 
-    return res.end(JSON.stringify(placeArray))
+    return res.end(JSON.stringify(placeArray));
   } catch (err) {
-    res.statusCode = 500
+    res.statusCode = 500;
 
-    return res.end()
+    return res.end();
   }
-}
+};

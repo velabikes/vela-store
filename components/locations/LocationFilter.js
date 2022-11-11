@@ -1,28 +1,28 @@
-import PropTypes from 'prop-types'
-import LocationTag from 'components/locations/LocationTag'
-import { white } from '../../style/colors'
+import PropTypes from "prop-types";
+import LocationTag from "components/locations/LocationTag";
+import { white } from "../../style/colors";
 
-const LocationFilter = ({ onFilterSelect, selectedFilter }) =>
+const LocationFilter = ({ onFilterSelect, selectedFilter }) => (
   <div>
     <LocationTag
-      onClick={() => onFilterSelect('store')}
-      selected={selectedFilter === 'store'}
-      type='store'
+      onClick={() => onFilterSelect("store")}
+      selected={selectedFilter === "store"}
+      type="store"
     />
     <LocationTag
-      onClick={() => onFilterSelect('charger')}
-      selected={selectedFilter === 'charger'}
-      type='charger'
+      onClick={() => onFilterSelect("charger")}
+      selected={selectedFilter === "charger"}
+      type="charger"
     />
     <LocationTag
-      onClick={() => onFilterSelect('service')}
-      selected={selectedFilter === 'service'}
-      type='service'
+      onClick={() => onFilterSelect("service")}
+      selected={selectedFilter === "service"}
+      type="service"
     />
     <LocationTag
-      onClick={() => onFilterSelect('grudi')}
-      selected={selectedFilter === 'grudi'}
-      type='grudi'
+      onClick={() => onFilterSelect("grudi")}
+      selected={selectedFilter === "grudi"}
+      type="grudi"
     />
     <style jsx>{`
       div {
@@ -32,10 +32,11 @@ const LocationFilter = ({ onFilterSelect, selectedFilter }) =>
       }
     `}</style>
   </div>
+);
 
 LocationFilter.propTypes = {
   selectedFilter: PropTypes.string,
-  onFilterSelect: PropTypes.func
-}
+  onFilterSelect: PropTypes.func,
+};
 
-export default LocationFilter
+export default LocationFilter;
