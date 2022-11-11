@@ -2,11 +2,15 @@ import PropTypes from "prop-types";
 import { compose, withProps } from "recompose";
 import Price from "components/Price";
 
-const InstallmentPrice = ({ count, installmentValue }) => (
-  <span>
-    em {count}x de <Price value={installmentValue} /> sem juros.
-  </span>
-);
+const InstallmentPrice = ({ count, installmentValue, value }) => {
+  const avista = (value / 1.1).toFixed(2);
+  return (
+    <span>
+      em {count}x de <Price value={installmentValue} /> <br></br>ou R$ {avista}{" "}
+      à vista.
+    </span>
+  );
+};
 
 InstallmentPrice.propTypes = {
   count: PropTypes.number,
