@@ -4,7 +4,7 @@ import Price from "components/Price";
 
 const InstallmentPrice = ({ count, installmentValue }) => (
   <span>
-    ou {count}x de <Price value={installmentValue} /> sem juros.
+    em {count}x de <Price value={installmentValue} /> sem juros.
   </span>
 );
 
