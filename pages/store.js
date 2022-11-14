@@ -16,7 +16,7 @@ const Store = ({ collection, isCollectionLoading }) => {
     setFilter(filter === selectedFilter ? null : selectedFilter);
   const products = collection?.products?.edges;
   const filteredProducts = products?.filter((i) =>
-    i.node.title.includes(filter)
+    i.node.title.toLowerCase().includes(filter)
   );
 
   return (
