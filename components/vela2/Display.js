@@ -14,7 +14,6 @@ const Display = ({ model: { frame, size, color } }) => {
       <style jsx>{`
       .Display {
         background-color: ${offWhite};
-        padding: 1em 0 0 0;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -22,6 +21,7 @@ const Display = ({ model: { frame, size, color } }) => {
         flex: 1;
         position: fixed;
         z-index: 5;
+        width:100%;
       }
       h1 {
         color: ${darkGray};
@@ -29,9 +29,9 @@ const Display = ({ model: { frame, size, color } }) => {
         text-align: center;
       }
       .Display img {
-        object-fit: cover;
-        max-height: 25vh;
-        object-position: 50% -20%;
+        object-fit: contain;
+        height: 100%;
+        max-height: calc(25vh);
       }
 
       @media only screen and (min-width: 768px) {

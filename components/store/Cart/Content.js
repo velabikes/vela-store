@@ -30,13 +30,14 @@ const CartContent = ({ checkout }) =>
         min-height: 0;
         max-width: 100%;
         margin-top: 1em;
+        text-align:right;
       }
       .items table {
         border-spacing: 0 1rem;
       }
       .footer {
         padding-top: 1em;
-        align-self: flex-start;
+        align-self: center;
       }
     `}</style>
   </section>
