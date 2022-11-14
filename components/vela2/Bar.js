@@ -1,32 +1,54 @@
 /* eslint-disable react/prop-types */
-import { compose } from 'recompose'
-import { lightGray, darkGray } from '../../style/colors'
-import withCheckout from '../../containers/withCheckout'
-import Button from '../Button'
-import Price from '../Price'
+import { compose } from "recompose";
+import { lightGray, darkGray } from "../../style/colors";
+import withCheckout from "../../containers/withCheckout";
+import Button from "../Button";
+import Price from "../Price";
 
 const Bar = ({ onContinue, extra, step, checkout }) => {
   return (
-    <div className='Bar'>
-      <div className='top'>
-        <p className='right'>Prazo de produção<br/> de 2 à 3 semanas</p><small>A Vela é feita sob encomenda em São Paulo.</small>
+    <div className="Bar">
+      <div className="top">
+        <p className="right">
+          Prazo de
+          <br /> 2 à 3 semanas
+        </p>
+        <small>A Vela é feita sob encomenda em São Paulo.</small>
       </div>
-      <div className='bottom'>
-        <div className='left'>
+      <div className="bottom">
+        <div className="left">
           <h2>
             {step === 1 && <Price value={10890} />}
-            {step === 2 && <Price value={10890 + extra.reduce((a, b) => a + parseInt(b.priceV2.amount), 0)} />}
-            {step === 3 && <Price value={10890 + extra.reduce((c, d) => c + parseInt(d.priceV2.amount), 0)} />}
-            {step === 4 && 'Total:' && <Price value={checkout.totalPrice} />}
+            {step === 2 && (
+              <Price
+                value={
+                  10890 +
+                  extra.reduce((a, b) => a + parseInt(b.priceV2.amount), 0)
+                }
+              />
+            )}
+            {step === 3 && (
+              <Price
+                value={
+                  10890 +
+                  extra.reduce((c, d) => c + parseInt(d.priceV2.amount), 0)
+                }
+              />
+            )}
+            {step === 4 && "Total:" && <Price value={checkout.totalPrice} />}
           </h2>
         </div>
-        <div className='actions'>
+        <div className="actions">
           <Button primary onClick={onContinue}>
-            {step === 1 ? 'Continuar' : 
-              step === 2 ? 'Adicionar' :
-              step === 3 ? 'Adicionar' :
-              checkout.lineItems.edges.length ? 'Finalizar' : 'Voltar'
-            }
+            {step === 1
+              ? "Continuar"
+              : step === 2
+              ? "Adicionar"
+              : step === 3
+              ? "Adicionar"
+              : checkout.lineItems.edges.length
+              ? "Finalizar"
+              : "Voltar"}
           </Button>
         </div>
       </div>
@@ -117,9 +139,7 @@ const Bar = ({ onContinue, extra, step, checkout }) => {
       }
     `}</style>
     </div>
-  )
-}
+  );
+};
 
-export default compose(
-  withCheckout
-)(Bar)
+export default compose(withCheckout)(Bar);
