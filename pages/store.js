@@ -11,15 +11,14 @@ import { darkGray, velaGreen } from "../style/colors";
 import { useState } from "react";
 
 const Store = ({ collection, isCollectionLoading }) => {
-  const [selectedFilter, setSelectedFilter] = useState([]);
-  const onSelectedFilter = (filter) => {
-    if(selectedFilter.includes(filter)){
-      setSelectedFilter(selectedFilter.filter(f => f !== filter))
-    }
-    else{
-      setSelectedFilter([...selectedFilter, filter])
-    }
-  }
+  const [filter, setFilter] = useState(null);
+  const onSelectedFilter = (selectedFilter) =>
+    setFilter(filter === selectedFilter ? null : selectedFilter);
+  const products = collection?.products?.edges;
+  const filteredProducts = products?.filter((i) =>
+    i.node.title.includes(filter)
+  );
+
   return (
     <PaddedView>
       <Main>
@@ -31,21 +30,29 @@ const Store = ({ collection, isCollectionLoading }) => {
           <h2>{collection && collection.descriptionHtml}</h2>
         </div>
         <div className="filter-container">
-          <div onClick={()=>onSelectedFilter('outlet')} className={selectedFilter.includes('outlet')?'selected':''}>
+          <div
+            onClick={() => onSelectedFilter("outlet")}
+            className={filter === "outlet" && "selected"}
+          >
             <h3>outlet</h3>
           </div>
-          <div onClick={()=>onSelectedFilter('seminova')} className={selectedFilter.includes('seminova')?'selected':''}>
+          <div
+            onClick={() => onSelectedFilter("seminova")}
+            className={filter === "seminova" && "selected"}
+          >
             <h3>semi-nova</h3>
           </div>
-          <div onClick={()=>onSelectedFilter('nova')} className={selectedFilter.includes('nova')?'selected':''}>
+          <div
+            onClick={() => onSelectedFilter("nova")}
+            className={filter === "nova" && "selected"}
+          >
             <h3>nova</h3>
           </div>
         </div>
         <br />
         <ProductList
-          products={collection && collection.products}
+          products={filter ? filteredProducts : products}
           loading={isCollectionLoading}
-          selectedFilter={selectedFilter}
         />
       </Main>
       <style jsx>
@@ -61,25 +68,24 @@ const Store = ({ collection, isCollectionLoading }) => {
           .filter-container {
             display: flex;
             flex-direction: row;
-            width:100%;
+            width: 100%;
           }
-          .filter-container *{
+          .filter-container * {
             color: ${velaGreen} !important;
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
             transition: all 0.3s ease;
-
           }
-          .selected *{
-            color:${darkGray} !important;
+          .selected * {
+            color: ${darkGray} !important;
           }
         `}
       </style>
     </PaddedView>
   );
-}
+};
 
 export default compose(
   withRouter,
