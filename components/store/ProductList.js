@@ -9,13 +9,12 @@ const ProductListLoading = () =>
     <ProductTeaser product={{}} key={1} />
   </>
 
-const ProductList = ({ products, loading }) =>{
-  console.log(products)
+const ProductList = ({ products, loading, selectedFilter }) =>{
   return(
     <Grid className='ProductList' template={'repeat(auto-fit, minmax(220px, 1fr))'} >
-    { loading && <ProductListLoading /> }
-    { !loading && products && products.edges && products.edges.map(product => <ProductTeaser product={product.node} key={product.node.id} />) }
-  </Grid>
+      { loading && <ProductListLoading /> }
+      { !loading && products && products.edges && products.edges.map(product => <ProductTeaser selectedFilter={selectedFilter} product={product.node} key={product.node.id} />) }
+    </Grid>
   )
 }
 

@@ -7,37 +7,79 @@ import MainHeader from "components/MainHeader";
 import ProductList from "../components/store/ProductList";
 import PaddedView from "../components/PaddedView";
 import withCollectionByHandle from "../containers/withCollectionByHandle";
+import { darkGray, velaGreen } from "../style/colors";
+import { useState } from "react";
 
-const Store = ({ collection, isCollectionLoading }) => (
-  <PaddedView>
-    <Main>
-      <Head>
-        <title>{collection && collection.title} - Vela Bikes</title>
-      </Head>
-      <div className="title">
-        <MainHeader title={collection && collection.title} />
-        <h2>{collection && collection.descriptionHtml}</h2>
-      </div>
-      <br />
-      <ProductList
-        products={collection && collection.products}
-        loading={isCollectionLoading}
-      />
-    </Main>
-    <style jsx>
-      {`
-        .title {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-between;
-        }
-        .title p {
-          margin-top: 0.8em;
-        }
-      `}
-    </style>
-  </PaddedView>
-);
+const Store = ({ collection, isCollectionLoading }) => {
+  const [selectedFilter, setSelectedFilter] = useState([]);
+  const onSelectedFilter = (filter) => {
+    if(selectedFilter.includes(filter)){
+      setSelectedFilter(selectedFilter.filter(f => f !== filter))
+    }
+    else{
+      setSelectedFilter([...selectedFilter, filter])
+    }
+  }
+  return (
+    <PaddedView>
+      <Main>
+        <Head>
+          <title>{collection && collection.title} - Vela Bikes</title>
+        </Head>
+        <div className="title">
+          <MainHeader title={collection && collection.title} />
+          <h2>{collection && collection.descriptionHtml}</h2>
+        </div>
+        <div className="filter-container">
+          <div onClick={()=>onSelectedFilter('outlet')} className={selectedFilter.includes('outlet')?'selected':''}>
+            <h3>outlet</h3>
+          </div>
+          <div onClick={()=>onSelectedFilter('seminova')} className={selectedFilter.includes('seminova')?'selected':''}>
+            <h3>semi-nova</h3>
+          </div>
+          <div onClick={()=>onSelectedFilter('nova')} className={selectedFilter.includes('nova')?'selected':''}>
+            <h3>nova</h3>
+          </div>
+        </div>
+        <br />
+        <ProductList
+          products={collection && collection.products}
+          loading={isCollectionLoading}
+          selectedFilter={selectedFilter}
+        />
+      </Main>
+      <style jsx>
+        {`
+          .title {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+          }
+          .title p {
+            margin-top: 0.8em;
+          }
+          .filter-container {
+            display: flex;
+            flex-direction: row;
+            width:100%;
+          }
+          .filter-container *{
+            color: ${velaGreen} !important;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease;
+
+          }
+          .selected *{
+            color:${darkGray} !important;
+          }
+        `}
+      </style>
+    </PaddedView>
+  );
+}
 
 export default compose(
   withRouter,
