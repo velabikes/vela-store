@@ -32,19 +32,19 @@ const Store = ({ collection, isCollectionLoading }) => {
         <div className="filter-container">
           <div
             onClick={() => onSelectedFilter("Outlet")}
-            className={filter === "outlet" && "selected"}
+            className={filter === "Outlet" && "selected"}
           >
             <h3>outlet</h3>
           </div>
           <div
             onClick={() => onSelectedFilter("Seminova")}
-            className={filter === "seminova" && "selected"}
+            className={filter === "Seminova" && "selected"}
           >
             <h3>semi-nova</h3>
           </div>
           <div
             onClick={() => onSelectedFilter("Nova")}
-            className={filter === "nova" && "selected"}
+            className={filter === "Nova" && "selected"}
           >
             <h3>nova</h3>
           </div>
