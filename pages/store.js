@@ -40,13 +40,13 @@ const Store = ({ collection, isCollectionLoading }) => {
             onClick={() => onSelectedFilter("Seminova")}
             className={filter === "Seminova" && "selected"}
           >
-            <h3>Seminova</h3>
+            <h3>Seminovas</h3>
           </div>
           <div
             onClick={() => onSelectedFilter("Nova")}
             className={filter === "Nova" && "selected"}
           >
-            <h3>Nova</h3>
+            <h3>Novas</h3>
           </div>
         </div>
         <br />
