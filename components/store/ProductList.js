@@ -9,11 +9,15 @@ const ProductListLoading = () =>
     <ProductTeaser product={{}} key={1} />
   </>
 
-const ProductList = ({ products, loading }) =>
-  <Grid className='ProductList' template={'repeat(auto-fit, minmax(220px, 1fr))'} >
+const ProductList = ({ products, loading }) =>{
+  console.log(products)
+  return(
+    <Grid className='ProductList' template={'repeat(auto-fit, minmax(220px, 1fr))'} >
     { loading && <ProductListLoading /> }
     { !loading && products && products.edges && products.edges.map(product => <ProductTeaser product={product.node} key={product.node.id} />) }
   </Grid>
+  )
+}
 
 ProductList.propTypes = {
   products: PropTypes.object,
