@@ -1,25 +1,31 @@
-import PropTypes from 'prop-types'
-import Price from 'components/Price'
-import InstallmentPrice from 'components/store/InstallmentPrice'
+import PropTypes from "prop-types";
+import Price from "components/Price";
+import InstallmentPrice from "components/store/InstallmentPrice";
 
 /* eslint-disable */
-const CartPrice = ({ checkout }) =>
-  <div className='CartPrice'>
-    { console.log(checkout) }
+const CartPrice = ({ checkout }) => (
+  <div className="CartPrice">
+    {console.log(checkout)}
     <table>
       <tbody>
-        <tr className='total'>
-          <td><label>Total:</label></td>
-          <td><Price value={checkout.totalPrice} /></td>
+        <tr className="total">
+          <td>
+            <label>Total:</label>
+          </td>
+          <td>
+            <Price value={checkout.totalPrice} />
+          </td>
         </tr>
         <tr>
-         <td><InstallmentPrice count={12} value={checkout.totalPrice} /></td>
+          <td>
+            <InstallmentPrice count={12} value={checkout.totalPrice} />
+          </td>
         </tr>
       </tbody>
     </table>
     <style jsx>{`
       td:last-child {
-        text-align: right;
+        text-align: left;
       }
       tr.total td {
         font-size: 1.25em;
@@ -27,10 +33,11 @@ const CartPrice = ({ checkout }) =>
       }
     `}</style>
   </div>
+);
 /* eslint-enable */
 
 CartPrice.propTypes = {
-  checkout: PropTypes.object
-}
+  checkout: PropTypes.object,
+};
 
-export default CartPrice
+export default CartPrice;
