@@ -16,7 +16,7 @@ const Store = ({ collection, isCollectionLoading }) => {
     setFilter(filter === selectedFilter ? null : selectedFilter);
   const products = collection?.products?.edges;
   const filteredProducts = products?.filter((i) =>
-    i.node.title.toLowerCase().includes(filter)
+    i.node.title.includes(filter)
   );
 
   return (
@@ -31,19 +31,19 @@ const Store = ({ collection, isCollectionLoading }) => {
         </div>
         <div className="filter-container">
           <div
-            onClick={() => onSelectedFilter("outlet")}
+            onClick={() => onSelectedFilter("Outlet")}
             className={filter === "outlet" && "selected"}
           >
             <h3>outlet</h3>
           </div>
           <div
-            onClick={() => onSelectedFilter("seminova")}
+            onClick={() => onSelectedFilter("Seminova")}
             className={filter === "seminova" && "selected"}
           >
             <h3>semi-nova</h3>
           </div>
           <div
-            onClick={() => onSelectedFilter("nova")}
+            onClick={() => onSelectedFilter("Nova")}
             className={filter === "nova" && "selected"}
           >
             <h3>nova</h3>
