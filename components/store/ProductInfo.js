@@ -95,7 +95,7 @@ const ProductInfo = ({
           margin-top: -100%;
           position: relative;
           z-index: 1;
-          top: -15px;
+          top: -28px;
         }
         h1 {
           color: ${offBlack};

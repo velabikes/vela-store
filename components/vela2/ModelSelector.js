@@ -6,19 +6,19 @@ const options = {
     {
       icon:
         "https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelabikescom%2Fassets%2FGreen.png?alt=media&token=7ccad21a-f7df-4e45-afc6-b2abd5c868c6",
-      label: "Verde Floresta",
+      label: "Floresta",
       option: "Verde",
     },
     {
       icon:
         "https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelabikescom%2Fassets%2FBlue.png?alt=media&token=a41a1f25-ca21-4ff1-9cb7-399434d5637e",
-      label: "Azul Atlântico",
+      label: "Atlântico",
       option: "Azul",
     },
     {
       icon:
         "https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelabikescom%2Fassets%2FMidnight.png?alt=media&token=7907c973-ad1b-4134-9fab-849bac650bb5",
-      label: "Azul Meia-noite",
+      label: "Meia-noite",
       option: "Preto",
     },
     {

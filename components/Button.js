@@ -64,13 +64,13 @@ Button.propTypes = {
 };
 
 export default compose(
-  defaultProps({ color: midGray, textColor: offBlack, bgColor: "#ffffff" }),
+  defaultProps({ color: midGray, textColor: offBlack, bgColor: offBlack }),
   withProps(
     ({ primary }) =>
       primary && {
         color: lightGreen,
         bgColor: lightGreen,
-        textColor: "#ffffff",
+        textColor: offBlack,
       }
   ),
   withProps(
@@ -83,7 +83,7 @@ export default compose(
   ),
   withProps(
     ({ bf }) =>
-      bf && { color: "#F99E0B", bgColor: "#F99E0B", textColor: "#ffffff" }
+      bf && { color: "#F99E0B", bgColor: "#F99E0B", textColor: offBlack }
   ),
   withProps(
     ({ outline, color }) =>
