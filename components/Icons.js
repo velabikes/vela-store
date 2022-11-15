@@ -105,7 +105,7 @@ export const CartIcon = compose(withCheckout)(
         .CartIcon {
           transition: 0.3s all;
           position: relative;
-          fill: ${velaGreen};
+          fill: ${offWhite};
         }
         .count {
           transition: 0.5s all;
@@ -147,7 +147,7 @@ export const Logo = (props) => (
     </svg>
     <style jsx>{`
       .Logo {
-        fill: ${velaGreen};
+        fill: ${lightGreen};
       }
       @keyframes colorchange {
         0% {

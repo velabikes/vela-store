@@ -2,6 +2,7 @@ import PropTypes from "prop-types";
 import Link from "next/link";
 import ProductPrice from "components/store/ProductPrice";
 import ProductImage from "./ProductImage";
+import { offBlack } from "../../style/colors";
 
 const ProductTeaser = ({ product }) => (
   <div className="ProductTeaser">
@@ -27,7 +28,7 @@ const ProductTeaser = ({ product }) => (
     </Link>
     <style jsx>{`
       h3 {
-        color: #173d2e;
+        color: ${offBlack};
         margin: 0.5rem 0 0;
         font-size: 1.25rem;
       }

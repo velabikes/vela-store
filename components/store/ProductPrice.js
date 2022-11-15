@@ -3,6 +3,7 @@ import { compose, withProps } from "recompose";
 import Price from "components/Price";
 import InstallmentPrice from "components/store/InstallmentPrice";
 import { velaRed, offBlack } from "style/colors";
+import { darkGray } from "../../style/colors";
 
 const ProductPrice = ({ baseValue, maxValue, compareAt, showInstallment }) => (
   <div className="ProductPrice">
@@ -28,7 +29,7 @@ const ProductPrice = ({ baseValue, maxValue, compareAt, showInstallment }) => (
     )}
     <style jsx>{`
       .ProductPrice {
-        color: #173d2e;
+        color: ${darkGray};
       }
       .compare {
         text-decoration: line-through;
@@ -37,7 +38,7 @@ const ProductPrice = ({ baseValue, maxValue, compareAt, showInstallment }) => (
       .min,
       .max {
         color: ${compareAt ? velaRed : "inherit"};
-        font-weight: 700;
+        font-weight: 400;
       }
       .installment {
         font-size: 0.9em;

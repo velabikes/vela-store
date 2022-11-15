@@ -1,41 +1,52 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import Head from "next/head";
-import { compose } from 'recompose'
-import withCheckoutLineItemsAdd from '../containers/withCheckoutLineItemsAdd'
-import withCheckout from '../containers/withCheckout'
+import { compose } from "recompose";
+import withCheckoutLineItemsAdd from "../containers/withCheckoutLineItemsAdd";
+import withCheckout from "../containers/withCheckout";
 import Accordion from "../components/Accordion";
 import PaddedView from "../components/PaddedView";
 import { offBlack, offWhite, velaGreen, white } from "../style/colors";
-import { AddIcon, BadgePlus, Chat, GPS, Notifications } from "../components/Icons";
+import {
+  AddIcon,
+  BadgePlus,
+  Chat,
+  GPS,
+  Notifications,
+} from "../components/Icons";
 import Button from "../components/Button";
 import PlusImage from "components/velaplus/PlusImage";
 import ProtectionImage from "components/velaplus/ProtectionImage";
 
-const VelaPlus = ({checkout, checkoutLineItemsAdd, handleCheckoutCreation}) => {
-  const [mustRedirect, setMustRedirect] = useState(false)
+const VelaPlus = ({
+  checkout,
+  checkoutLineItemsAdd,
+  handleCheckoutCreation,
+}) => {
+  const [mustRedirect, setMustRedirect] = useState(false);
   useEffect(() => {
     if (mustRedirect) {
-      window.location.replace(checkout.webUrl)
+      window.location.replace(checkout.webUrl);
     }
-  }, [mustRedirect, checkout])
+  }, [mustRedirect, checkout]);
   const handleVelaPlusCta = async () => {
     const checkoutId = await handleCheckoutCreation();
     await checkoutLineItemsAdd({
       variables: {
         checkoutId,
         lineItems: {
-          variantId: 'Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zOTI3ODk3OTc0Mzc5OQ==',
+          variantId:
+            "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zOTI3ODk3OTc0Mzc5OQ==",
           quantity: 1,
-        }
-      }
-    })
-    setMustRedirect(true)
+        },
+      },
+    });
+    setMustRedirect(true);
   };
 
   return (
     <div className="velaplus">
       <Head>
-        <title>Vela+ Plano Anual -  Vela Bikes</title>
+        <title>Vela+ Plano Anual - Vela Bikes</title>
         <link
           rel="alternate"
           hrefLang="pt-br"
@@ -116,7 +127,9 @@ const VelaPlus = ({checkout, checkoutLineItemsAdd, handleCheckoutCreation}) => {
             Pacote anual cobrado em até 12x sem juros no cartão de crédito.
           </h5>
           <div className="action">
-            <Button primary onClick={handleVelaPlusCta}>Assinar</Button>
+            <Button primary onClick={handleVelaPlusCta}>
+              Assinar
+            </Button>
           </div>
         </div>
         <div className="description">
@@ -164,28 +177,44 @@ const VelaPlus = ({checkout, checkoutLineItemsAdd, handleCheckoutCreation}) => {
         <ProtectionImage />
         <div className="cta">
           <h2>
-            Proteção contra <br/>roubo e furto
+            Proteção contra <br />
+            roubo e furto
           </h2>
-          <h4>Segurança em primeiro lugar para você pedalar pela cidade sem medo!</h4>
-          <p>Assinando o Plano Vela+ você conta com mais segurança. Bloqueamos sua bike, ajudamos na busca, e, caso não seja possível resgatá-la, substituímos ela para você.</p>
+          <h4>
+            Segurança em primeiro lugar para você pedalar pela cidade sem medo!
+          </h4>
+          <p>
+            Assinando o Plano Vela+ você conta com mais segurança. Bloqueamos
+            sua bike, ajudamos na busca, e, caso não seja possível resgatá-la,
+            substituímos ela para você.
+          </p>
         </div>
       </div>
       <div className="app">
         <img src="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FFun%C3%A7oesAppBikeEletrica.png?alt=media&token=73ba9faa-e4ec-444f-9a91-82b656c058e0" />
         <div className="apptext">
           <h2>Funções e atualizações exclusivas</h2>
-          <h5>Surpresas positivas são sempre bem vindas. Com as atualizações e funcionalidades exclusivas para os cliente Vela+, você tem total acesso a nossa tecnologia de ponta antes de todo mundo.</h5>
-          <p>Já imaginou saber onde sua bike está? Pois é, essa função existe e mantém você super conectado com sua V2. Além disso, você receberá notificações, se houver qualquer movimentação suspeita, e acesso exclusivo a um canal de comunicação direto com nossa equipe.</p>
-          <div className='bfunctions'>
-            <div className='bleft'>
+          <h5>
+            Surpresas positivas são sempre bem vindas. Com as atualizações e
+            funcionalidades exclusivas para os cliente Vela+, você tem total
+            acesso a nossa tecnologia de ponta antes de todo mundo.
+          </h5>
+          <p>
+            Já imaginou saber onde sua bike está? Pois é, essa função existe e
+            mantém você super conectado com sua V2. Além disso, você receberá
+            notificações, se houver qualquer movimentação suspeita, e acesso
+            exclusivo a um canal de comunicação direto com nossa equipe.
+          </p>
+          <div className="bfunctions">
+            <div className="bleft">
               <Chat />
               <h4>Chat exclusivo e dedicado</h4>
             </div>
-            <div className='bcenter'>
+            <div className="bcenter">
               <GPS />
               <h4>Rastreamento GPS integrado</h4>
             </div>
-            <div className='bright'>
+            <div className="bright">
               <Notifications />
               <h4>Notificações remotas</h4>
             </div>
@@ -195,7 +224,7 @@ const VelaPlus = ({checkout, checkoutLineItemsAdd, handleCheckoutCreation}) => {
       <div className="models-content">
         <div className="models">
           <div className="m1">
-          <img src="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2F01.png?alt=media&token=8de570ad-5d83-43a6-8fd9-fa8c6621aed6" />
+            <img src="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2F01.png?alt=media&token=8de570ad-5d83-43a6-8fd9-fa8c6621aed6" />
             <h3>Desconto em novas baterias</h3>
             <p>
               Sabemos da importância da bateria para a nossa relação e, por
@@ -217,13 +246,15 @@ const VelaPlus = ({checkout, checkoutLineItemsAdd, handleCheckoutCreation}) => {
             <h3>Benefícios com parceiros</h3>
             <p>
               Nossos Velejadores terão benefícios com todos os nossos parceiros
-              atuais e que estão por vir. Descontos, brindes e outras vantagens exclusivas
-              para quem assina.
+              atuais e que estão por vir. Descontos, brindes e outras vantagens
+              exclusivas para quem assina.
             </p>
           </div>
         </div>
         <div className="action">
-          <Button primary onClick={handleVelaPlusCta}>Assinar</Button>
+          <Button primary onClick={handleVelaPlusCta}>
+            Assinar
+          </Button>
         </div>
       </div>
       <div className="questions">
@@ -231,70 +262,70 @@ const VelaPlus = ({checkout, checkoutLineItemsAdd, handleCheckoutCreation}) => {
           <h2>Possui dúvidas?</h2>
           <Accordion
             color={white}
-            hoverColor={'#DCF5EB'}
+            hoverColor={"#DCF5EB"}
             textColor={offBlack}
             title="1. Quais os passos caso eu tenha a minha Vela roubada ou furtada?"
             content="O primeiro passo é enviar um email para a nossa equipe de atendimento (contato@velabikes.com.br) com as suas informações de pedido, nome, contato, data, hora juntamente com uma cópia do boletim de ocorrência. Nossa equipe vai dar início ao bloqueio da conta, bloqueio da bike e à busca da sua Vela. Caso não seja recuperada num prazo de 30 dias corridos (“período de busca”), seguiremos com as etapas para a produção e substituição por uma nova bike."
           />
           <Accordion
             color={white}
-            hoverColor={'#DCF5EB'}
+            hoverColor={"#DCF5EB"}
             textColor={offBlack}
             title="2. Qual o prazo de entrega da nova bike de substituição da roubada/furtada?"
             content="O prazo esperado para a produção de uma nova unidade da Vela 2 é de 30 dias (“período de produção”) após o término do “período de busca”. A Vela não se responsabiliza por custos que envolvem o deslocamento do cliente durante o “período de busca” e o “período de produção”."
           />
           <Accordion
             color={white}
-            hoverColor={'#DCF5EB'}
+            hoverColor={"#DCF5EB"}
             textColor={offBlack}
             title="3. Existe algum custo fixo que devo pagar, caso minha Vela seja roubada/furtada, para ter direito a uma nova bike?"
             content="Dada a aprovação da restituição de uma nova unidade da Vela 2, o cliente terá um desconto para a compra de uma nova unidade da Vela 2. O pedido da bike de restituição deverá acontecer exclusivamente através do site oficial da marca (www.velabikes.com.br)  e o desconto para essa nova aquisição será de 80% no caso de roubo e 70% no caso de furto. O valor deverá ser pago por meio de um cartão de crédito podendo ser parcelado em até 12x sem juros."
           />
           <Accordion
             color={white}
-            hoverColor={'#DCF5EB'}
+            hoverColor={"#DCF5EB"}
             textColor={offBlack}
             title="4. Posso cancelar antes do término dos 12 meses?"
             content="Como o plano inclui uma proteção contra roubo/furto e a Vela possui contratos de ativação do sinal e segurança durante o prazo de 12 meses, o cancelamento da assinatura poderá ser solicitado durante o período contratado mediante ao pagamento de uma taxa equivalente a 50% com base na proporção do período que permanecerá em aberto."
           />
           <Accordion
             color={white}
-            hoverColor={'#DCF5EB'}
+            hoverColor={"#DCF5EB"}
             textColor={offBlack}
             title="5. A proteção cobre acidentes?"
             content="A proteção não cobre acidentes, peças de reposição, peças consumíveis, revisões e outros custos envolvidos no uso regular da Vela."
           />
           <Accordion
             color={white}
-            hoverColor={'#DCF5EB'}
+            hoverColor={"#DCF5EB"}
             textColor={offBlack}
             title="6. A proteção cobre os custos dos acessórios, se estiverem instalados na bike?"
             content="A proteção está atrelada exclusivamente à bicicleta em questão e a Vela não se responsabiliza ou cobre custos envolvidos com acessórios instalados na bike, sejam de terceiros, adquiridos na Vela ou qualquer outro item ou produto do cliente que possa ter sido roubado ou furtado na ocasião."
           />
           <Accordion
             color={white}
-            hoverColor={'#DCF5EB'}
+            hoverColor={"#DCF5EB"}
             textColor={offBlack}
             title="7. A cobertura do plano é nacional ou apenas em São Paulo?"
             content="Os itens diretamente relacionados com a operação da Vela terão validade para todo o território nacional (proteção contra roubo/furto, notificações remotas, rastreamento GPS, desconto nos produtos e serviços, funções e atualizações exclusivas), mas os benefícios com parceiros podem variar de acordo com a infraestrutura Vela em sua cidade."
           />
           <Accordion
             color={white}
-            hoverColor={'#DCF5EB'}
+            hoverColor={"#DCF5EB"}
             textColor={offBlack}
             title="8. Como garantir que não vou perder o benefício da proteção contra roubo e furto? Quais as principais condições para ser validada?"
             content="Para ter acesso ao período de busca e, possivelmente, à bicicleta de reposição, o cliente deve seguir as indicações da Vela para manter seu plano ativo. Os principais pontos para furto são: boletim de ocorrência, estar com a Vela com a trava eletromagnética ativada no momento do acontecimento e estar utilizando qualquer cadeado do modelo U-lock. Já para roubo, requisitamos apenas o boletim de ocorrência."
           />
           <Accordion
             color={white}
-            hoverColor={'#DCF5EB'}
+            hoverColor={"#DCF5EB"}
             textColor={offBlack}
             title="9. Como funciona o pagamento do plano?"
             content="O pagamento do pacote do plano anual de assinatura do Vela+ deverá ser realizado através do site da Vela, sendo cobrado no cartão de crédito e podendo ser parcelado em até 12x sem juros."
           />
           <Accordion
             color={white}
-            hoverColor={'#DCF5EB'}
+            hoverColor={"#DCF5EB"}
             textColor={offBlack}
             title="10. O que está incluso nessa parte de “funções e atualizações exclusivas”?"
             content="A Vela tem como política manter a performance e funcionamento da bicicleta (produto físico) equivalente para todos os clientes, com ou sem a assinatura do plano Vela+, mas temos funcionalidades dentro do aplicativo exclusivas para os assinantes do plano, como as notificações de segurança e o rastreamento GPS."
@@ -303,25 +334,43 @@ const VelaPlus = ({checkout, checkoutLineItemsAdd, handleCheckoutCreation}) => {
       </div>
       <div className="legal">
         <PaddedView>
-        <div className="legal-container">
-          <div className="infos">
-            <h3>Informações Legais</h3>
-            <p>Esta página é um resumo da assinatura, consulte o contrato e as condições gerais para obter todos os detalhes da sua cobertura.</p>
-            <p>O presente contrato é celebrado pelo período de um ano e, se desejado, deve ser renovado tacitamente por períodos consecutivos após um ano.</p>
-            <p>O contrato de assinatura e os Termos de Serviço estão sujeitos à lei brasileira e ao Código de Defesa do Consumidor.</p>
-          </div>
-          <div className="docs">
-            <h3>Documentos</h3>
-            <p><a href="/legal">Termos de Serviço do Plano Vela+</a></p>
-            <p><a href="https://drive.google.com/file/d/1OQfVi4WnUNVd-8xQhs6Hn7vFTDH5vGev/view?usp=sharing">Modelo de Contrato do Plano Vela+</a></p>
-            <p><a href="/legal">Política de Privacidade</a></p>
-            {/* <div className="action">
+          <div className="legal-container">
+            <div className="infos">
+              <h3>Informações Legais</h3>
+              <p>
+                Esta página é um resumo da assinatura, consulte o contrato e as
+                condições gerais para obter todos os detalhes da sua cobertura.
+              </p>
+              <p>
+                O presente contrato é celebrado pelo período de um ano e, se
+                desejado, deve ser renovado tacitamente por períodos
+                consecutivos após um ano.
+              </p>
+              <p>
+                O contrato de assinatura e os Termos de Serviço estão sujeitos à
+                lei brasileira e ao Código de Defesa do Consumidor.
+              </p>
+            </div>
+            <div className="docs">
+              <h3>Documentos</h3>
+              <p>
+                <a href="/legal">Termos de Serviço do Plano Vela+</a>
+              </p>
+              <p>
+                <a href="https://drive.google.com/file/d/1OQfVi4WnUNVd-8xQhs6Hn7vFTDH5vGev/view?usp=sharing">
+                  Modelo de Contrato do Plano Vela+
+                </a>
+              </p>
+              <p>
+                <a href="/legal">Política de Privacidade</a>
+              </p>
+              {/* <div className="action">
               <a href="https://velabikes.freshdesk.com/support/home" target="_blank">
                 <Button primary>Todas as FAQs</Button>
               </a>
             </div> */}
+            </div>
           </div>
-        </div>
         </PaddedView>
       </div>
       <style jsx>
@@ -655,7 +704,4 @@ const VelaPlus = ({checkout, checkoutLineItemsAdd, handleCheckoutCreation}) => {
   );
 };
 
-export default compose(
-  withCheckout,
-  withCheckoutLineItemsAdd
-)(VelaPlus)
+export default compose(withCheckout, withCheckoutLineItemsAdd)(VelaPlus);

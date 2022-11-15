@@ -93,7 +93,7 @@ const CustomHead = () => {
         h2,
         h3 {
           font-weight: 700;
-          color: ${velaGreen};
+          color: ${offBlack};
           line-height: 1.25em;
         }
         h4,

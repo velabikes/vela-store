@@ -4,6 +4,7 @@ import ProductPrice from "components/store/ProductPrice";
 import { HideOnDesktop, HideOnMobile } from "../HideOn";
 import ProductImage from "./ProductImage";
 import ProductForm from "./ProductForm";
+import { offBlack } from "../../style/colors";
 
 const ProductVariantImage = ({ variant }) => (
   <ProductImage src={variant.node && variant.node.image.src} />
@@ -97,10 +98,10 @@ const ProductInfo = ({
           top: -15px;
         }
         h1 {
-          color: #173d2e;
+          color: ${offBlack};
         }
         h3 {
-          color: #173d2e;
+          color: ${offBlack};
         }
 
         @media only screen and (min-width: 768px) {
