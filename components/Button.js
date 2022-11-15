@@ -11,6 +11,7 @@ import {
   velaGreen,
   velaRed,
   velaYellow,
+  darkGray,
 } from "../style/colors";
 
 const Button = ({
@@ -63,17 +64,26 @@ Button.propTypes = {
 };
 
 export default compose(
-  defaultProps({ color: midGray, textColor: offBlack, bgColor: offWhite }),
+  defaultProps({ color: midGray, textColor: offBlack, bgColor: "#ffffff" }),
   withProps(
     ({ primary }) =>
-      primary && { color: lightGreen, bgColor: velaYellow, textColor: white }
+      primary && {
+        color: lightGreen,
+        bgColor: lightGreen,
+        textColor: "#ffffff",
+      }
   ),
   withProps(
     ({ secondary }) =>
-      secondary && { color: velaRed, bgColor: velaYellow, textColor: white }
+      secondary && {
+        color: lightGreen,
+        bgColor: lightGreen,
+        textColor: darkGray,
+      }
   ),
   withProps(
-    ({ bf }) => bf && { color: "#F99E0B", bgColor: "#F99E0B", textColor: white }
+    ({ bf }) =>
+      bf && { color: "#F99E0B", bgColor: "#F99E0B", textColor: "#ffffff" }
   ),
   withProps(
     ({ outline, color }) =>
