@@ -1,20 +1,26 @@
-import Price from '../Price'
-import withCollectionByHandle from '../../containers/withCollectionByHandle'
-import { offWhite, lightGreen, white, velaRed } from '../../style/colors'
-import { AddIcon, CloseIcon } from '../Icons'
+import Price from "../Price";
+import withCollectionByHandle from "../../containers/withCollectionByHandle";
+import { offWhite, lightGreen, white, velaRed } from "../../style/colors";
+import { AddIcon, CloseIcon } from "../Icons";
 
 const rackmap = {
-    Baixo: 0,
-    Reto: 2
-}
+  Baixo: 0,
+  Reto: 2,
+};
 
-const Item = ({ node: { title, images, variants, handle }, onSelect, selected, model }) => {
-  const variantIndex = handle === 'bagageiro-traseiro' ? rackmap[model.frame] : 0
-  const isSelected = selected.includes(variants.edges[variantIndex].node)
+const Item = ({
+  node: { title, images, variants, handle },
+  onSelect,
+  selected,
+  model,
+}) => {
+  const variantIndex =
+    handle === "bagageiro-traseiro" ? rackmap[model.frame] : 0;
+  const isSelected = selected.includes(variants.edges[variantIndex].node);
 
   return (
     <div onClick={() => onSelect(variants.edges[variantIndex].node)}>
-      <div className='selector'>
+      <div className="selector">
         {isSelected === false && <AddIcon fill={white} />}
         {isSelected === true && <CloseIcon color={white} />}
       </div>
@@ -49,23 +55,23 @@ const Item = ({ node: { title, images, variants, handle }, onSelect, selected, m
           margin-right: -0.5em;
           background-color: ${lightGreen};
           ${isSelected === true &&
-            `
+          `
           background-color: ${velaRed};
         `}
         }
       `}</style>
     </div>
-  )
-}
+  );
+};
 
 const ExtraSelector = ({ collection, onSelect, selected, model }) => {
-  if (!collection) return <p />
-  if (!collection.products) return <p />
+  if (!collection) return <p />;
+  if (!collection.products) return <p />;
 
   return (
     <>
       <h4>O que já está incluso?</h4>
-      <div className='core'>
+      <div className="core">
         <p>✔ Carregador padrão Vela</p>
         <p>✔ Ferramentas essenciais</p>
         <p>✔ Kit de paralamas</p>
@@ -73,18 +79,20 @@ const ExtraSelector = ({ collection, onSelect, selected, model }) => {
         <p>✔ Mudflaps</p>
       </div>
       <h4>Personalize com mais acessórios:</h4>
-      <p>Os ítens extras adicionados ao pedido não serão alugados e sim vendidos.</p>
-      <div className='extraitems'>
+      <p>
+        Os ítens extras adicionados ao pedido não serão alugados e sim vendidos.
+      </p>
+      <div className="extraitems">
         {collection.products.edges
-          .filter(product => {
+          .filter((product) => {
             const filter =
-              model.frame === 'Reto'
-                ? 'bagageiro-dianteiro-1'
-                : 'bagageiro-dianteiro-bambu'
+              model.frame === "Reto"
+                ? "bagageiro-dianteiro-1"
+                : "bagageiro-dianteiro-bambu";
 
-            return product.node.handle !== filter
+            return product.node.handle !== filter;
           })
-          .map(product => (
+          .map((product) => (
             <Item
               onSelect={onSelect}
               selected={selected}
@@ -92,28 +100,28 @@ const ExtraSelector = ({ collection, onSelect, selected, model }) => {
               {...product}
             />
           ))}
-        </div>
-        <style jsx>{`
-          .core {
-            background-color: ${offWhite};
-            padding: 1em;
-            margin-bottom: 1em;
-          }
-          .core p {
-            font-size: 0.9em;
-          }
-          .extraitems {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
-            max-width: 100%;
-            flex-wrap: wrap;
-          }
-        `}</style>
+      </div>
+      <style jsx>{`
+        .core {
+          background-color: ${offWhite};
+          padding: 1em;
+          margin-bottom: 1em;
+        }
+        .core p {
+          font-size: 1em;
+        }
+        .extraitems {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          max-width: 100%;
+          flex-wrap: wrap;
+        }
+      `}</style>
     </>
-  )
-}
+  );
+};
 
-export default withCollectionByHandle('essentials', {
-  filterUnavailable: true
-})(ExtraSelector)
+export default withCollectionByHandle("essentials", {
+  filterUnavailable: true,
+})(ExtraSelector);

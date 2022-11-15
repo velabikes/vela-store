@@ -1,11 +1,11 @@
-export const velaGreen = "#8acca8";
-export const lightGreen = "#173d2e";
+export const velaGreen = "#173d2e";
+export const lightGreen = "#8acca8";
 export const velaBlue = "#21C2E0";
 export const velaRed = "#D54521";
 export const velaYellow = "#db9612";
-export const offBlack = "#173d2e";
-export const darkGray = "#4B4A4A";
+export const offBlack = "#2f2f2f";
+export const darkGray = "#928c86";
 export const midGray = "#7B7B7B";
 export const lightGray = "#D6D4D4";
-export const offWhite = "#EFEFEF";
-export const white = "#EFEFEF";
+export const offWhite = "#f5f1ec";
+export const white = "#fbfaf8";

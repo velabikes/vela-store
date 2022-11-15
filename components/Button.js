@@ -28,12 +28,12 @@ const Button = ({
       button {
         padding: 0.8em 1.2em;
         margin: 0 0.5em 0.5em 0;
-        font-size: 0.9em;
+        font-size: 1em;
         border: 2px solid #8acca8;
         background: ${bgColor};
         border-radius: 0.5em;
         ${!disabled && "box-shadow: 0px 3px 3px -2px rgba(0,0,0,0.15)"};
-        color: ${textColor};
+        color: ${offBlack};
         font-weight: 600;
         transition: 0.2s transform, 0.2s box-shadow, 0.3s background linear,
           0.3s border linear;

@@ -165,7 +165,7 @@ const Footer = () => (
           list-style: none;
           line-height: 2em;
           font-weight: 500;
-          font-size: 1em;
+          font-size: 1.1em;
           min-width: 100%;
           margin: 0em;
           text-align: center;
