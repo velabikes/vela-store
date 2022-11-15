@@ -103,7 +103,6 @@ export default compose(
     filterUnavailable: false,
   })
 )(Store);
-teste;
 Store.propTypes = {
   collection: PropTypes.object,
   isCollectionLoading: PropTypes.bool,
