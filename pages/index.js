@@ -48,7 +48,7 @@ const HomePage = ({ highlight }) => (
       <meta property="og:type" content="website" />
       <meta
         property="og:title"
-        content="Vela 2: A bicicleta elétrica smart do Brasil - Vela Bikes"
+        content="Vela Bikes: bicicletas elétricas brasileiras."
       />
       <meta property="og:locale" content="pt_BR" />
       <meta
