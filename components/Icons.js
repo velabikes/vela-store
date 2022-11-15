@@ -120,7 +120,7 @@ export const CartIcon = compose(withCheckout)(
           height: 1rem;
           line-height: 1.75em;
           text-align: center;
-          font-size: 0.6em;
+          font-size: 0.9em;
           font-weight: 700;
           color: ${white};
           opacity: ${checkout && checkout.lineItems.edges.length ? 1 : 0};

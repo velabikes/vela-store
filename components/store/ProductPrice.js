@@ -40,7 +40,7 @@ const ProductPrice = ({ baseValue, maxValue, compareAt, showInstallment }) => (
         font-weight: 700;
       }
       .installment {
-        font-size: 0.75em;
+        font-size: 0.9em;
       }
     `}</style>
   </div>

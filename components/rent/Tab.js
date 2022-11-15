@@ -1,17 +1,14 @@
-import { lightGray, velaGreen, white, offWhite } from '../../style/colors'
+import { lightGray, velaGreen, white, offWhite } from "../../style/colors";
 
 const Tab = ({ children, step, onStep }) => {
-
   return (
-    <div className='Tab'>
-      <div className='TabSelector'>
-        <div className={step === 1 ? 'active' : 'inactive'}>
-          1. Montar
-        </div>
-        <div className={step === 2 ? 'active' : 'inactive'}>2. Extras</div>
-        <div className={step === 3 ? 'active' : 'inactive'}>3. Pagar</div>
+    <div className="Tab">
+      <div className="TabSelector">
+        <div className={step === 1 ? "active" : "inactive"}>1. Montar</div>
+        <div className={step === 2 ? "active" : "inactive"}>2. Extras</div>
+        <div className={step === 3 ? "active" : "inactive"}>3. Pagar</div>
       </div>
-      <div className='TabContent'>
+      <div className="TabContent">
         {step === 1 && children[0]}
         {step === 2 && children[1]}
         {step === 3 && children[2]}
@@ -28,11 +25,12 @@ const Tab = ({ children, step, onStep }) => {
           display: flex;
           flex-direction: row;
           width: 100%;
-          font-size: 0.9em;
+          font-size: 1em;
           text-align: center;
           background-color: ${white};
           margin-top: 12.8em;
-          box-shadow: rgb(0 0 0 / 3%) 0px -7px 7px 0px, rgb(0 0 0 / 17%) 0px 8px 10px -7px;
+          box-shadow: rgb(0 0 0 / 3%) 0px -7px 7px 0px,
+            rgb(0 0 0 / 17%) 0px 8px 10px -7px;
         }
         .TabSelector > div {
           border: 1px solid ${lightGray};
@@ -63,9 +61,9 @@ const Tab = ({ children, step, onStep }) => {
             margin-top: 0;
           }
         }
-    `}</style>
+      `}</style>
     </div>
-  )
-}
+  );
+};
 
-export default Tab
+export default Tab;

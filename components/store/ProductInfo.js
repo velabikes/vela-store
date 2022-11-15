@@ -88,7 +88,7 @@ const ProductInfo = ({
       </div>
       <style jsx>{`
         .price {
-          font-size: 1.25em;
+          font-size: 1.3em;
         }
         .sold {
           margin-top: -100%;
