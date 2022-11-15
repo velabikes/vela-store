@@ -39,7 +39,7 @@ const Tab = ({ children, step, onStep }) => {
         }
         .active {
           color: ${velaGreen};
-          font-weight: 600;
+          font-weight: 500;
           cursor: auto;
         }
         .TabContent {

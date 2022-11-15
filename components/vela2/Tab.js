@@ -1,18 +1,35 @@
-import { lightGray, velaGreen, white, offWhite } from '../../style/colors'
+import { lightGray, velaGreen, white, offWhite } from "../../style/colors";
 
 const Tab = ({ children, step, onStep }) => {
-
   return (
-    <div className='Tab'>
-      <div className='TabSelector'>
-        <div onClick={() => onStep(1)} className={step === 1 ? 'active' : 'inactive'}>
+    <div className="Tab">
+      <div className="TabSelector">
+        <div
+          onClick={() => onStep(1)}
+          className={step === 1 ? "active" : "inactive"}
+        >
           1. Montar
         </div>
-        <div onClick={() => onStep(2)} className={step === 2 ? 'active' : 'inactive'}>2. Extras</div>
-        <div onClick={() => onStep(3)} className={step === 3 ? 'active' : 'inactive'}>3. Vela+</div>
-        <div onClick={() => onStep(4)} className={step === 4 ? 'active' : 'inactive'}>4. Pagar</div>
+        <div
+          onClick={() => onStep(2)}
+          className={step === 2 ? "active" : "inactive"}
+        >
+          2. Extras
+        </div>
+        <div
+          onClick={() => onStep(3)}
+          className={step === 3 ? "active" : "inactive"}
+        >
+          3. Vela+
+        </div>
+        <div
+          onClick={() => onStep(4)}
+          className={step === 4 ? "active" : "inactive"}
+        >
+          4. Pagar
+        </div>
       </div>
-      <div className='TabContent'>
+      <div className="TabContent">
         {step === 1 && children[0]}
         {step === 2 && children[1]}
         {step === 3 && children[2]}
@@ -34,7 +51,8 @@ const Tab = ({ children, step, onStep }) => {
           text-align: center;
           background-color: ${white};
           margin-top: 12.8em;
-          box-shadow: rgb(0 0 0 / 3%) 0px -7px 7px 0px, rgb(0 0 0 / 17%) 0px 8px 10px -7px;
+          box-shadow: rgb(0 0 0 / 3%) 0px -7px 7px 0px,
+            rgb(0 0 0 / 17%) 0px 8px 10px -7px;
         }
         .TabSelector > div {
           border: 1px solid ${lightGray};
@@ -43,7 +61,7 @@ const Tab = ({ children, step, onStep }) => {
         }
         .active {
           color: ${velaGreen};
-          font-weight: 600;
+          font-weight: 500;
           cursor: auto;
         }
         .inactive {
@@ -71,9 +89,9 @@ const Tab = ({ children, step, onStep }) => {
             margin-top: 0;
           }
         }
-    `}</style>
+      `}</style>
     </div>
-  )
-}
+  );
+};
 
-export default Tab
+export default Tab;

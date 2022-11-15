@@ -76,7 +76,7 @@ const MainMenu = () => (
       li {
         list-style: none;
         line-height: 2em;
-        font-weight: 600;
+        font-weight: 500;
         font-size: 1em;
       }
       li .outlet {

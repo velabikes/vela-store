@@ -175,7 +175,7 @@ const HomePage = ({ highlight }) => (
           justify-content: center;
         }
         h1 {
-          font-size: 4rem;
+          font-size: 3.8rem;
           font-weight: 700;
         }
         .cta h3,

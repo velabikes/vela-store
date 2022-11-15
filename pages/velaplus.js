@@ -413,7 +413,7 @@ const VelaPlus = ({
         }
         .protection .cta p {
           color: ${offWhite};
-          font-weight: 600;
+          font-weight: 500;
         }
         .call {
           display: flex;

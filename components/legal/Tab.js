@@ -1,4 +1,10 @@
-import { lightGray, offWhite, velaGreen, white, midGray } from "../../style/colors";
+import {
+  lightGray,
+  offWhite,
+  velaGreen,
+  white,
+  midGray,
+} from "../../style/colors";
 
 const Tab = ({ children, step, onStep }) => {
   return (
@@ -72,7 +78,7 @@ const Tab = ({ children, step, onStep }) => {
           color: ${white};
           background-color: ${velaGreen};
           cursor: auto;
-          font-weight: 600;
+          font-weight: 500;
         }
         .inactive {
           cursor: pointer;

@@ -37,10 +37,7 @@ const CustomHead = () => {
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
         />
         <meta charSet="utf-8" />
-        <link
-          href="https://fonts.googleapis.com/css?family=Barlow:400,500,600,700,900&display=swap"
-          rel="stylesheet"
-        />
+        <link href="https://use.typekit.net/mda3zwt.css" rel="stylesheet" />
         <link
           rel="icon"
           type="image/png"
@@ -75,7 +72,7 @@ const CustomHead = () => {
           width: 100%;
           color: ${offBlack};
           background-color: ${white};
-          font-family: Barlow, sans-serif;
+          font-family: filson-pro, sans-serif;
           overflow: auto;
         }
         h1,
@@ -84,7 +81,7 @@ const CustomHead = () => {
         h4,
         h5,
         h6 {
-          font-family: Barlow, sans-serif;
+          font-family: filson-pro, sans-serif;
           margin-top: 0;
           margin-bottom: 0.5rem;
           text-transform: none;
@@ -146,7 +143,7 @@ const CustomHead = () => {
         }
         p {
           line-height: 1.5em;
-          font-family: Barlow, sans-serif;
+          font-family: filson-pro, sans-serif;
           margin-top: 0;
           margin-bottom: 0.8em;
         }
@@ -161,7 +158,7 @@ const CustomHead = () => {
           line-height: 1.5em;
           color: ${offBlack};
           margin: 0.2em;
-          font-family: Barlow, sans-serif;
+          font-family: filson-pro, sans-serif;
         }
         table {
           width: 100%;
@@ -181,7 +178,7 @@ const CustomHead = () => {
           margin-bottom: 0.61em;
         }
         label {
-          font-weight: 600;
+          font-weight: 500;
           color: ${offBlack};
         }
         input:not([type="checkbox"]):not([type="radio"]) {
@@ -193,7 +190,7 @@ const CustomHead = () => {
           border-radius: 0.5em;
           display: block;
           font-size: 1rem;
-          font-family: Barlow, sans-serif;
+          font-family: filson-pro, sans-serif;
           box-sizing: border-box;
           background: ${white};
           box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05),

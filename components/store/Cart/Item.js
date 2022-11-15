@@ -56,7 +56,7 @@ const CartItem = ({ item, handleLessClick }) => (
         line-height: 1.8em;
         text-align: center;
         font-size: 1em;
-        font-weight: 600;
+        font-weight: 500;
         color: white;
       }
       td.name {
@@ -64,7 +64,7 @@ const CartItem = ({ item, handleLessClick }) => (
         overflow: hidden;
         text-overflow: ellipsis;
         padding-left: 1rem;
-        font-weight: 600;
+        font-weight: 500;
       }
       td.quantity {
         min-width: 1.5em;

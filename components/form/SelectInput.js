@@ -1,19 +1,16 @@
-import { white } from 'style/colors'
-import PropTypes from 'prop-types'
+import { white } from "style/colors";
+import PropTypes from "prop-types";
 
-const SelectInput = ({ children, field, ...props }) =>
+const SelectInput = ({ children, field, ...props }) => (
   <div>
-    <select
-      {...field}
-      {...props}
-    >
+    <select {...field} {...props}>
       {children}
     </select>
     <span />
     <style jsx>{`
       div {
         position: relative;
-        margin: 0.61em 0 0.61em;;
+        margin: 0.61em 0 0.61em;
       }
       select {
         -moz-appearance: none;
@@ -24,10 +21,10 @@ const SelectInput = ({ children, field, ...props }) =>
         border-radius: 5px;
         width: 100%;
         font-size: 1rem;
-        font-family: Barlow, sans-serif;
+        font-family: filson-pro, sans-serif;
         box-sizing: border-box;
         background: ${white};
-        box-shadow: 0 2px 3px rgba(0,0,0,0.05), 0 2px 3px rgba(0,0,0,0.05);
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.05), 0 2px 3px rgba(0, 0, 0, 0.05);
       }
       span {
         display: block;
@@ -43,11 +40,12 @@ const SelectInput = ({ children, field, ...props }) =>
       }
     `}</style>
   </div>
+);
 
 SelectInput.propTypes = {
   children: PropTypes.any,
   label: PropTypes.any,
-  field: PropTypes.any
-}
+  field: PropTypes.any,
+};
 
-export default SelectInput
+export default SelectInput;

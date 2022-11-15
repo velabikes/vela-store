@@ -17,12 +17,12 @@ const CartPrice = ({ checkout }) => (
           </td>
         </tr>
       </tbody>
-        <tr>
-          <td></td>
-          <td className="installment">
-            <InstallmentPrice count={12} value={checkout.totalPrice} />
-          </td>
-        </tr>
+      <tr>
+        <td></td>
+        <td className="installment">
+          <InstallmentPrice count={12} value={checkout.totalPrice} />
+        </td>
+      </tr>
     </table>
     <style jsx>{`
       td:last-child {
@@ -30,18 +30,17 @@ const CartPrice = ({ checkout }) => (
       }
       tr.total td {
         font-size: 1.25em;
-        font-weight: 600;
-        
+        font-weight: 500;
       }
       .installment {
         text-align: right !important;
-        display:flex;
-        justify-content: flex-end;        
+        display: flex;
+        justify-content: flex-end;
       }
-      .price-container{
+      .price-container {
         text-align: right !important;
-        display:flex;
-        justify-content: flex-end;   
+        display: flex;
+        justify-content: flex-end;
       }
     `}</style>
   </div>

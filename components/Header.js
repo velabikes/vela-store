@@ -117,7 +117,7 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) => (
         justify-content: center;
         align-items: center;
         color: ${offWhite};
-        font-weight: 600;
+        font-weight: 500;
         min-height: 3rem;
         font-size: 1rem;
       }
