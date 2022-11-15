@@ -109,9 +109,9 @@ const Vela = () => (
         </div>
         <div className="right">
           <div className="right-content">
-            <h2>Freio regenerativo</h2>
+            <h2>Sistema regenerativo</h2>
             <h4>
-              Recupera energia para a bateria nas descidas, com até <b>60km</b>{" "}
+              Recupera energia para a bateria nas descidas, com até <b>50km</b>{" "}
               de autonomia em trajetos
             </h4>
             <p>
