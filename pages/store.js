@@ -18,7 +18,7 @@ const Store = ({ collection, isCollectionLoading, router }) => {
   const filteredProducts = products?.filter((i) =>
     i.node.title.includes(filter)
   );
-  const isBf22 = (router.asPath = "/loja/bf22");
+  const isBf22 = router.asPath == "/loja/bf22";
 
   return (
     <PaddedView>
