@@ -6,6 +6,7 @@ import withCheckoutLineItemsUpdate from "containers/withCheckoutLineItemsUpdate"
 import { velaBlue } from "style/colors";
 import ProductImage from "components/store/ProductImage";
 import { Trash } from "../../Icons";
+import { velaRed } from "../../../style/colors";
 
 /* eslint-disable */
 const CartItem = ({ item, handleLessClick }) => (
@@ -46,9 +47,9 @@ const CartItem = ({ item, handleLessClick }) => (
       }
       td:first-child span {
         position: absolute;
-        top: -0.4em;
+        top: -0.2em;
         right: -0.4em;
-        background: ${velaBlue};
+        background: ${velaRed};
         border-radius: 1em;
         width: 1.8em;
         height: 1.8em;
