@@ -7,7 +7,14 @@ import MainHeader from "components/MainHeader";
 import ProductList from "../components/store/ProductList";
 import PaddedView from "../components/PaddedView";
 import withCollectionByHandle from "../containers/withCollectionByHandle";
-import { darkGray, velaGreen } from "../style/colors";
+import {
+  darkGray,
+  lightGray,
+  lightGreen,
+  midGray,
+  velaGreen,
+  velaRed,
+} from "../style/colors";
 import { useState } from "react";
 
 const Store = ({ collection, isCollectionLoading, router }) => {
@@ -74,7 +81,7 @@ const Store = ({ collection, isCollectionLoading, router }) => {
             width: 100%;
           }
           .filter-container * {
-            color: ${velaGreen} !important;
+            color: ${midGray} !important;
             width: 100%;
             display: flex;
             justify-content: center;
@@ -82,7 +89,7 @@ const Store = ({ collection, isCollectionLoading, router }) => {
             transition: all 0.3s ease;
           }
           .selected * {
-            color: ${darkGray} !important;
+            color: ${velaRed} !important;
           }
         `}
       </style>
