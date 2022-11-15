@@ -1,10 +1,17 @@
 import PaddedView from "components/PaddedView";
-import { offWhite, offBlack, white } from "../../style/colors";
+import {
+  offWhite,
+  offBlack,
+  white,
+  lightGray,
+  velaGreen,
+  midGray,
+} from "../../style/colors";
 import Button from "../Button";
 
 const Highlight = () => {
   return (
-    <PaddedView style={{ background: "#173d2e" }}>
+    <PaddedView style={{ background: { lightGray } }}>
       <div className="Highlight">
         <div className="content">
           <p>
@@ -60,11 +67,11 @@ const Highlight = () => {
             padding: 2em 0em;
           }
           .content{
-            background-color: ${offBlack};
+            background-color: ${midGray};
             padding: 1rem 1rem;
           }
           .content p, .color p {
-            color: ${offWhite};
+            color: ${offBlack};
             text-align: center;
           }
           .models {
@@ -92,7 +99,7 @@ const Highlight = () => {
             display: block;
           }
           .color {
-            background-color: ${offBlack};
+            background-color: ${midGray};
             padding: 1rem;
           }
           .price {
@@ -103,7 +110,7 @@ const Highlight = () => {
             justify-content: center;
           }
           .price h2{
-            color: ${offWhite};
+            color: ${offBlack};
             text-align: center;
           }
           .price h3{

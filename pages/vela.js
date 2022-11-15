@@ -690,10 +690,10 @@ const Vela = () => (
         background: ${offBlack};
       }
       .specs-content table tr td:first-child {
-        font-weight: 600;
+        font-weight: 500;
       }
       .specs-tech-content table tr td:first-child {
-        font-weight: 600;
+        font-weight: 500;
       }
       .actions :global(button) {
         margin: 1em 0 0 0;
@@ -782,7 +782,7 @@ const Vela = () => (
           color: ${offBlack};          
         }
         .tagline h4 {
-          font-weight: 600;
+          font-weight: 500;
           color: ${offBlack};    
         }
         .app-img {

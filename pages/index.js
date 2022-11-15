@@ -8,7 +8,15 @@ import PostHighlight from "components/blog/PostHighlight";
 import PaddedView from "components/PaddedView";
 import Button from "../components/Button";
 import VelaPoint from "../components/charge/VelaPoint";
-import { offBlack, offWhite, velaGreen, white } from "../style/colors";
+import {
+  midGray,
+  offBlack,
+  offWhite,
+  velaBlue,
+  velaGreen,
+  velaRed,
+  white,
+} from "../style/colors";
 import HomeImage from "../components/home/HomeImage";
 
 const HomePage = ({ highlight }) => (
@@ -79,11 +87,11 @@ const HomePage = ({ highlight }) => (
             Feita com cuidado.
             <br /> No Brasil.
           </h2>
-          <h3>Cadeia produtiva sustentável e produção artesanal no Brasil.</h3>
-          <h4>
+          <h5>Cadeia produtiva sustentável e produção artesanal no Brasil.</h5>
+          <h5>
             Cada bike é montada sob medida, com a combinação e tamanho feitos
             para você.
-          </h4>
+          </h5>
           <a href="/vela">
             <Button primary>Saiba mais</Button>
           </a>
@@ -91,20 +99,13 @@ const HomePage = ({ highlight }) => (
       </div>
     </div>
     <Highlight />
-    <div className="home-store">
-      <a href="/blog">
-        <div className="store-title">
-          <h3>Blog</h3>
-        </div>
-      </a>
-    </div>
     <br />
-    <PaddedView style={{ backgroundColor: "#EFEFEF" }}>
+    <PaddedView style={{ backgroundColor: offWhite }}>
       {/* {images && <HomeAlbum images={images} />} */}
       <PostHighlight post={highlight} />
       <HomeBanner />
     </PaddedView>
-    <PaddedView style={{ backgroundColor: "#FFFEFE" }}>
+    <PaddedView style={{ backgroundColor: offWhite }}>
       <VelaPoint />
     </PaddedView>
     <style jsx>{`
@@ -119,13 +120,16 @@ const HomePage = ({ highlight }) => (
       .cta-bf {
         text-align: center;
         padding: 2rem 3rem 2rem 3rem;
-        background-color: ${offBlack};
+        background-color: ${offWhite};
       }
       .cta-bf h1 {
         color: ${offWhite};
       }
       .cta-bf h3 {
         color: ${offWhite};
+      }
+      .cta-bf h5 {
+        color: ${offBlack};
       }
       .cta-bf h4 {
         color: ${offWhite};
@@ -142,7 +146,7 @@ const HomePage = ({ highlight }) => (
       .cta h4,
       .cta small,
       .cta p {
-        color: ${offBlack};
+        color: ${offWhite};
       }
       h1 {
         color: ${offWhite};
@@ -155,15 +159,16 @@ const HomePage = ({ highlight }) => (
         color: ${offWhite};
       }
       .home-store {
-        background-color: #272727;
+        background-color: ${offWhite};
         display: flex;
         justify-content: center;
         margin-bottom: 3em;
       }
       .store-title {
-        background-color: ${white};
+        background-color: ${offWhite};
         padding: 1em 2em 0.5em 2em;
         margin-bottom: -2em;
+        color: ${offBlack};
       }
       .cta :global(button),
       .cta-bf :global(button) {
@@ -175,7 +180,7 @@ const HomePage = ({ highlight }) => (
           justify-content: center;
         }
         h1 {
-          font-size: 3.8rem;
+          font-size: 2rem;
           font-weight: 700;
         }
         .cta h3,
@@ -202,20 +207,20 @@ const HomePage = ({ highlight }) => (
           justify-content: center;
           max-width: 23em;
           left: 2em;
-          top: 3em;
+          top: 19em;
           text-align: left;
-          background-color: ${white};
+          background-color: ${offWhite};
           padding: 2em;
           z-index: 2;
         }
         .cta-bf {
           position: absolute;
           justify-content: center;
-          max-width: 40em;
+          max-width: 23em;
           text-align: center;
           padding: 2em;
-          bottom: 1em;
-          background-color: transparent;
+          bottom: 2em;
+          background-color: ${offBlack};
           z-index: 2;
         }
         @media only screen and (min-width: 1300px) {
