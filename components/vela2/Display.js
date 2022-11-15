@@ -13,29 +13,29 @@ const Display = ({ model: { frame, size, color } }) => {
         alt="Vela 2"
       />
       <style jsx>{`
-        .Display {
-          background-color: ${offWhite};
-          padding: 1em 2.5em;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-direction: column;
-          flex: 1;
-          position: fixed;
-          z-index: 5;
-        }
-        h1 {
-          color: ${darkGray};
-          font-size: 4.5rem;
-          text-align: center;
-        }
-        .Display img {
-          object-fit: cover;
-          max-height: 25vh;
-          object-position: 50% -20%;
-        }
+      .Display {
+        background-color: ${offWhite};
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        flex: 1;
+        position: fixed;
+        z-index: 5;
+        width:100%;
+      }
+      h1 {
+        color: ${darkGray};
+        font-size: 4.5rem;
+        text-align: center;
+      }
+      .Display img {
+        object-fit: contain;
+        height: 100%;
+        max-height: calc(25vh);
+      }
 
-        @media only screen and (min-width: 768px) {
+      @media only screen and (min-width: 768px) {
           .Display {
             position: relative;
           }

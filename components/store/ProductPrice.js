@@ -21,7 +21,7 @@ const ProductPrice = ({ baseValue, maxValue, compareAt, showInstallment }) => (
       </span>
     )}
     {showInstallment && (
-      <div className="istallment">
+      <div className="installment">
         <small>
           <InstallmentPrice count={12} value={baseValue} />
         </small>
@@ -41,6 +41,7 @@ const ProductPrice = ({ baseValue, maxValue, compareAt, showInstallment }) => (
         font-weight: 400;
       }
       .installment {
+        text-align:left;
         font-size: 0.9em;
       }
     `}</style>
