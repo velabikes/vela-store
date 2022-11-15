@@ -68,7 +68,7 @@ export default compose(
   withProps(
     ({ primary }) =>
       primary && {
-        color: lightGreen,
+        color: velaGreen,
         bgColor: lightGreen,
         textColor: offBlack,
       }
@@ -76,9 +76,9 @@ export default compose(
   withProps(
     ({ secondary }) =>
       secondary && {
-        color: lightGreen,
+        color: velaGreen,
         bgColor: lightGreen,
-        textColor: darkGray,
+        textColor: lightGray,
       }
   ),
   withProps(
@@ -102,6 +102,6 @@ export default compose(
   ),
   withProps(
     ({ disabled }) =>
-      disabled && { bgColor: lightGray, textColor: midGray, color: lightGray }
+      disabled && { bgColor: lightGray, textColor: darkGray, color: lightGray }
   )
 )(Button);
