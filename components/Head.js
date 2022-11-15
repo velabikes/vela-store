@@ -106,26 +106,26 @@ const CustomHead = () => {
           line-height: 1.5em;
         }
         h1 {
-          font-size: 2rem;
+          font-size: 2.1rem;
         }
         h2 {
-          font-size: 1.5rem;
+          font-size: 1.6rem;
         }
         h3 {
-          font-size: 1.2rem;
+          font-size: 1.3rem;
         }
         h4 {
-          font-size: 1.1rem;
+          font-size: 1.2rem;
         }
         h5 {
-          font-size: 1rem;
+          font-size: 1.1rem;
         }
         h6 {
-          font-size: 0.9rem;
+          font-size: 1rem;
         }
         section h1,
         nav h1 {
-          font-size: 2rem;
+          font-size: 2.1rem;
         }
         hr {
           margin: 1.3rem 0;
