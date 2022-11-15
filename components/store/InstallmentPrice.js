@@ -6,10 +6,14 @@ const InstallmentPrice = ({ count, installmentValue, value }) => {
   const avista = (value * 0.9).toFixed(2);
   return (
     <span>
-      em {count}x de <Price value={installmentValue} /> <br></br>ou{" "}
-      <b>
-        <Price value={avista} /> à vista.
-      </b>
+      em {count}x de <Price value={installmentValue} /> <br></br>
+      <br></br>ou
+      <h4>
+        <b>
+          <br></br>
+          <Price value={avista} /> à vista.*
+        </b>
+      </h4>
     </span>
   );
 };
