@@ -168,7 +168,6 @@ const HomePage = ({ highlight }) => (
         background-color: ${offWhite};
         padding: 1em 2em 0.5em 2em;
         margin-bottom: -2em;
-        color: ${offBlack};
       }
       .cta :global(button),
       .cta-bf :global(button) {
