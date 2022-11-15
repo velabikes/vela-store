@@ -29,6 +29,7 @@ const ProductTeaser = ({ product }) => (
         color: ${offBlack};
         margin: 0.5rem 0 0;
         font-size: 1.25rem;
+        font-weight: 700;
       }
       .sold {
         margin-top: -100%;
