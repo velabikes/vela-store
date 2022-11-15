@@ -9,6 +9,8 @@ import {
   velaBlue,
   offWhite,
   velaGreen,
+  velaRed,
+  velaYellow,
 } from "../style/colors";
 
 const Button = ({
@@ -29,11 +31,11 @@ const Button = ({
         padding: 0.8em 1.2em;
         margin: 0 0.5em 0.5em 0;
         font-size: 1em;
-        border: 2px solid #8acca8;
+        border: 0px solid ${lightGray};
         background: ${bgColor};
         border-radius: 0.5em;
         ${!disabled && "box-shadow: 0px 3px 3px -2px rgba(0,0,0,0.15)"};
-        color: ${offBlack};
+        color: ${textColor};
         font-weight: 600;
         transition: 0.2s transform, 0.2s box-shadow, 0.3s background linear,
           0.3s border linear;
@@ -61,14 +63,14 @@ Button.propTypes = {
 };
 
 export default compose(
-  defaultProps({ color: offWhite, textColor: offBlack, bgColor: offWhite }),
+  defaultProps({ color: midGray, textColor: offBlack, bgColor: offWhite }),
   withProps(
     ({ primary }) =>
-      primary && { color: lightGreen, bgColor: lightGreen, textColor: white }
+      primary && { color: lightGreen, bgColor: velaYellow, textColor: white }
   ),
   withProps(
     ({ secondary }) =>
-      secondary && { color: velaBlue, bgColor: velaBlue, textColor: white }
+      secondary && { color: velaRed, bgColor: velaYellow, textColor: white }
   ),
   withProps(
     ({ bf }) => bf && { color: "#F99E0B", bgColor: "#F99E0B", textColor: white }
