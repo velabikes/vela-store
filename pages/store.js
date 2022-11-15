@@ -10,7 +10,7 @@ import withCollectionByHandle from "../containers/withCollectionByHandle";
 import { darkGray, velaGreen } from "../style/colors";
 import { useState } from "react";
 
-const Store = ({ collection, isCollectionLoading }) => {
+const Store = ({ collection, isCollectionLoading, router }) => {
   const [filter, setFilter] = useState(null);
   const onSelectedFilter = (selectedFilter) =>
     setFilter(filter === selectedFilter ? null : selectedFilter);
@@ -18,6 +18,7 @@ const Store = ({ collection, isCollectionLoading }) => {
   const filteredProducts = products?.filter((i) =>
     i.node.title.includes(filter)
   );
+  const isBf22 = (router.asPath = "/loja/bf22");
 
   return (
     <PaddedView>
@@ -29,26 +30,28 @@ const Store = ({ collection, isCollectionLoading }) => {
           <MainHeader title={collection && collection.title} />
           <h2>{collection && collection.descriptionHtml}</h2>
         </div>
-        <div className="filter-container">
-          <div
-            onClick={() => onSelectedFilter("Outlet")}
-            className={filter === "Outlet" && "selected"}
-          >
-            <h3>Outlet</h3>
+        {isBf22 && (
+          <div className="filter-container">
+            <div
+              onClick={() => onSelectedFilter("Outlet")}
+              className={filter === "Outlet" && "selected"}
+            >
+              <h3>Outlet</h3>
+            </div>
+            <div
+              onClick={() => onSelectedFilter("Seminova")}
+              className={filter === "Seminova" && "selected"}
+            >
+              <h3>Seminovas</h3>
+            </div>
+            <div
+              onClick={() => onSelectedFilter("Nova")}
+              className={filter === "Nova" && "selected"}
+            >
+              <h3>Novas</h3>
+            </div>
           </div>
-          <div
-            onClick={() => onSelectedFilter("Seminova")}
-            className={filter === "Seminova" && "selected"}
-          >
-            <h3>Seminovas</h3>
-          </div>
-          <div
-            onClick={() => onSelectedFilter("Nova")}
-            className={filter === "Nova" && "selected"}
-          >
-            <h3>Novas</h3>
-          </div>
-        </div>
+        )}
         <br />
         <ProductList
           products={filter ? filteredProducts : products}
