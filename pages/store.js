@@ -12,8 +12,11 @@ import {
   lightGray,
   lightGreen,
   midGray,
+  offBlack,
+  offWhite,
   velaGreen,
   velaRed,
+  white,
 } from "../style/colors";
 import { useState } from "react";
 
@@ -78,11 +81,17 @@ const Store = ({ collection, isCollectionLoading, router }) => {
           .filter-container {
             display: flex;
             flex-direction: row;
-            width: 100%;
+            width: 80%;
           }
           .filter-container * {
-            color: ${midGray} !important;
-            width: 100%;
+            color: ${white} !important;
+            background-color: ${midGray};
+            width: 60%;
+            border-radius: 0.5em;
+            margin-top: 0.5rem;
+            margin-left: 2em;
+            margin-right: 2em;
+
             display: flex;
             justify-content: center;
             align-items: center;
