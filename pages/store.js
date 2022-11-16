@@ -29,34 +29,38 @@ const Store = ({ collection, isCollectionLoading, router }) => {
           <h2>{collection && collection.descriptionHtml}</h2>
         </div>
         {isBf22 && (
-          <div className="filter-container">
-            <div
-              onClick={() => setFilter(null)}
-              className={filter === null && "selected"}
-            >
-              <h3>Todas</h3>
+          <div className="filter-wrapper">
+            <div className="filter-container">
+              <div
+                onClick={() => setFilter(null)}
+                className={filter === null && "selected"}
+              >
+                <h3>Todas</h3>
+              </div>
+              <div
+                onClick={() => setFilter("Outlet")}
+                className={filter === "Outlet" && "selected"}
+              >
+                <h3>Outlet</h3>
+              </div>
+              <div
+                onClick={() => setFilter("Seminova")}
+                className={filter === "Seminova" && "selected"}
+              >
+                <h3>Seminovas</h3>
+              </div>
+              <div
+                onClick={() => setFilter("Nova")}
+                className={filter === "Nova" && "selected"}
+              >
+                <h3>Novas</h3>
+              </div>
             </div>
-            <div
-              onClick={() => setFilter("Outlet")}
-              className={filter === "Outlet" && "selected"}
-            >
-              <h3>Outlet</h3>
-            </div>
-            <div
-              onClick={() => setFilter("Seminova")}
-              className={filter === "Seminova" && "selected"}
-            >
-              <h3>Seminovas</h3>
-            </div>
-            <div
-              onClick={() => setFilter("Nova")}
-              className={filter === "Nova" && "selected"}
-            >
-              <h3>Novas</h3>
+            <div className="filter-description">
+              {descriptionDictionary[filter]}
             </div>
           </div>
         )}
-        <br />
         <ProductList
           products={filter ? filteredProducts : products}
           loading={isCollectionLoading}
@@ -77,7 +81,8 @@ const Store = ({ collection, isCollectionLoading, router }) => {
             flex-direction: row;
             width: 80%;
           }
-          .filter-container * {
+          .filter-container div {
+            cursor: pointer;
             color: ${white} !important;
             background-color: ${midGray};
             width: 60%;
@@ -91,13 +96,27 @@ const Store = ({ collection, isCollectionLoading, router }) => {
             align-items: center;
             transition: all 0.3s ease;
           }
-          .selected * {
+          .filter-description {
+            margin: 1rem 0;
+            font-size: 0.8rem;
+          }
+          .selected h3 {
             color: ${velaRed} !important;
           }
         `}
       </style>
     </PaddedView>
   );
+};
+
+const descriptionDictionary = {
+  [null]:
+    "as unidades da Black Friday, incluindo as unidades de Outlet e Seminovas. serão entregues com baterias e acessórios novos e protegidas sob garantia completa fornecida pela própria Vela: 1 ano para todos os componentes, 2 anos para a bateria, 3 anos para o motor e 5 anos para o quadro.",
+  Outlet:
+    "unidades novas que podem possuir algum detalhe cosmético, normalmente um arranhão na pintura ou marca gerada durante alguma etapa da montagem. Elas não atendem nosso padrão de qualidade para serem vendidas como novas, mas tem perfeitas condições de funcionamento.",
+  Seminova:
+    "unidades que já rodaram alguns quilômetros além do teste padrão da Vela. A origem delas pode variar desde bikes que eram da nossa frota de experimentação, test-ride, vitrine até unidades da Vela 1 que recebemos como base de troca na compra de uma Vela 2, por exemplo.",
+  Nova: "poucas unidades 100% novas que finalizamos nas últimas semanas. Não possuem detalhes ou marcas, mas também querem participar dessa grande festa.",
 };
 
 export default compose(
