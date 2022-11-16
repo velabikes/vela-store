@@ -122,9 +122,6 @@ const HomePage = ({ highlight }) => (
         padding: 2rem 3rem 2rem 3rem;
         background-color: ${offWhite};
       }
-      .cta-bf h1 {
-        color: ${offWhite};
-      }
       .cta-bf h3 {
         color: ${offWhite};
       }
@@ -192,10 +189,6 @@ const HomePage = ({ highlight }) => (
         }
         .cta h2 {
           font-size: 2rem;
-        }
-
-        .cta-bf h1 {
-          color: ${offWhite};
         }
         .cta-bf h3,
         .cta-bf h4,
