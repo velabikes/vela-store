@@ -7,10 +7,9 @@ const InstallmentPrice = ({ count, installmentValue, value }) => {
   return (
     <span>
       em {count}x de <Price value={installmentValue} /> <br></br>
-      <br></br>ou
+      <br></br>
       <h4>
         <b>
-          <br></br>
           <Price value={avista} /> à vista.*
         </b>
       </h4>
