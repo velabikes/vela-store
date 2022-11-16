@@ -149,8 +149,8 @@ const HomePage = ({ highlight }) => (
         color: ${offWhite};
       }
       h1 {
-        color: ${offWhite};
         font-size: 1.8rem;
+        color: ${offBlack};
       }
       h2 {
         color: ${offBlack};
@@ -179,6 +179,7 @@ const HomePage = ({ highlight }) => (
           justify-content: center;
         }
         h1 {
+          color: ${offWhite};
           font-size: 2rem;
           font-weight: 700;
         }
