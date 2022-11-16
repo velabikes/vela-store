@@ -7,23 +7,11 @@ import MainHeader from "components/MainHeader";
 import ProductList from "../components/store/ProductList";
 import PaddedView from "../components/PaddedView";
 import withCollectionByHandle from "../containers/withCollectionByHandle";
-import {
-  darkGray,
-  lightGray,
-  lightGreen,
-  midGray,
-  offBlack,
-  offWhite,
-  velaGreen,
-  velaRed,
-  white,
-} from "../style/colors";
+import { midGray, velaRed, white } from "../style/colors";
 import { useState } from "react";
 
 const Store = ({ collection, isCollectionLoading, router }) => {
   const [filter, setFilter] = useState(null);
-  const onSelectedFilter = (selectedFilter) =>
-    setFilter(filter === selectedFilter ? null : selectedFilter);
   const products = collection?.products?.edges;
   const filteredProducts = products?.filter((i) =>
     i.node.title.includes(filter)
@@ -43,19 +31,25 @@ const Store = ({ collection, isCollectionLoading, router }) => {
         {isBf22 && (
           <div className="filter-container">
             <div
-              onClick={() => onSelectedFilter("Outlet")}
+              onClick={() => setFilter(null)}
+              className={filter === null && "selected"}
+            >
+              <h3>Todas</h3>
+            </div>
+            <div
+              onClick={() => setFilter("Outlet")}
               className={filter === "Outlet" && "selected"}
             >
               <h3>Outlet</h3>
             </div>
             <div
-              onClick={() => onSelectedFilter("Seminova")}
+              onClick={() => setFilter("Seminova")}
               className={filter === "Seminova" && "selected"}
             >
               <h3>Seminovas</h3>
             </div>
             <div
-              onClick={() => onSelectedFilter("Nova")}
+              onClick={() => setFilter("Nova")}
               className={filter === "Nova" && "selected"}
             >
               <h3>Novas</h3>
