@@ -9,6 +9,7 @@ import PaddedView from "../components/PaddedView";
 import withCollectionByHandle from "../containers/withCollectionByHandle";
 import { midGray, velaRed, white } from "../style/colors";
 import { useState } from "react";
+import Button from "../components/Button";
 
 const Store = ({ collection, isCollectionLoading, router }) => {
   const [filter, setFilter] = useState(null);
@@ -32,30 +33,34 @@ const Store = ({ collection, isCollectionLoading, router }) => {
           <>
             <div className="filter-wrapper">
               <div className="filter-container">
-                <div
+                <Button
                   onClick={() => setFilter(null)}
-                  className={filter === null && "selected"}
+                  secondary={filter === null}
+                  outline
                 >
-                  <h3>Todas</h3>
-                </div>
-                <div
+                  Todas
+                </Button>
+                <Button
                   onClick={() => setFilter("Outlet")}
-                  className={filter === "Outlet" && "selected"}
+                  secondary={filter === "Outlet"}
+                  outline
                 >
-                  <h3>Outlet</h3>
-                </div>
-                <div
+                  Outlet
+                </Button>
+                <Button
                   onClick={() => setFilter("Seminova")}
-                  className={filter === "Seminova" && "selected"}
+                  secondary={filter === "Seminova"}
+                  outline
                 >
-                  <h3>Seminovas</h3>
-                </div>
-                <div
+                  Seminovas
+                </Button>
+                <Button
                   onClick={() => setFilter("Nova")}
-                  className={filter === "Nova" && "selected"}
+                  secondary={filter === "Nova"}
+                  outline
                 >
-                  <h3>Novas</h3>
-                </div>
+                  Novas
+                </Button>
               </div>
               <div className="filter-description">
                 {descriptionDictionary[filter]}
@@ -79,17 +84,6 @@ const Store = ({ collection, isCollectionLoading, router }) => {
           .title p {
             margin-top: 0.8em;
           }
-          .filter-container div {
-            cursor: pointer;
-            color: ${white} !important;
-            background-color: ${midGray};
-            border-radius: 0.5em;
-            transition: all 0.3s ease;
-            padding: 0.8rem;
-            text-align: center;
-            display: inline-block;
-            margin: 0 1rem 1rem 0;
-          }
 
           h3 {
             margin-bottom: 0;
@@ -99,7 +93,7 @@ const Store = ({ collection, isCollectionLoading, router }) => {
           }
 
           .filter-description {
-            margin: 0 0 1rem 0;
+            margin: 1rem 0;
             font-size: 0.8rem;
           }
         `}
