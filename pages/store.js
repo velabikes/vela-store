@@ -97,12 +97,12 @@ const Store = ({ collection, isCollectionLoading, router }) => {
 
 const descriptionDictionary = {
   [null]:
-    "as unidades da Black Friday, incluindo as unidades de Outlet e Seminovas. serão entregues com baterias e acessórios novos e protegidas sob garantia completa fornecida pela própria Vela: 1 ano para todos os componentes, 2 anos para a bateria, 3 anos para o motor e 5 anos para o quadro.",
+    "As unidades da Black Friday, incluindo as unidades de Outlet e Seminovas. serão entregues com baterias e acessórios novos e protegidas sob garantia completa fornecida pela própria Vela: 1 ano para todos os componentes, 2 anos para a bateria, 3 anos para o motor e 5 anos para o quadro.",
   Outlet:
-    "unidades novas que podem possuir algum detalhe cosmético, normalmente um arranhão na pintura ou marca gerada durante alguma etapa da montagem. Elas não atendem nosso padrão de qualidade para serem vendidas como novas, mas tem perfeitas condições de funcionamento.",
+    "Unidades novas que podem possuir algum detalhe cosmético, normalmente um arranhão na pintura ou marca gerada durante alguma etapa da montagem. Elas não atendem nosso padrão de qualidade para serem vendidas como novas, mas tem perfeitas condições de funcionamento.",
   Seminova:
-    "unidades que já rodaram alguns quilômetros além do teste padrão da Vela. A origem delas pode variar desde bikes que eram da nossa frota de experimentação, test-ride, vitrine até unidades da Vela 1 que recebemos como base de troca na compra de uma Vela 2, por exemplo.",
-  Nova: "poucas unidades 100% novas que finalizamos nas últimas semanas. Não possuem detalhes ou marcas, mas também querem participar dessa grande festa.",
+    "Unidades que já rodaram alguns quilômetros além do teste padrão da Vela. A origem delas pode variar desde bikes que eram da nossa frota de experimentação, test-ride, vitrine até unidades da Vela 1 que recebemos como base de troca na compra de uma Vela 2, por exemplo.",
+  Nova: "Poucas unidades 100% novas que finalizamos nas últimas semanas. Não possuem detalhes ou marcas, mas também querem participar dessa grande festa.",
 };
 
 export default compose(
