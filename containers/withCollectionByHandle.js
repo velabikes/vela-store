@@ -10,7 +10,7 @@ const collectionByHandle = gql`
         image(maxWidth: 2000) {
           transformedSrc
         }
-        products(first: 50) {
+        products(first: 100) {
           edges {
             node {
               id
