@@ -12,6 +12,7 @@ const ProductPrice = ({ baseValue, maxValue, compareAt, showInstallment }) => (
         <Price value={compareAt} />
       </span>
     )}
+    <br />
     <span className="min">
       <Price value={baseValue} />
     </span>
