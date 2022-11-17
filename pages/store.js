@@ -87,6 +87,7 @@ const Store = ({ collection, isCollectionLoading, router }) => {
           .filter-description {
             margin: 1rem 0;
             font-size: 0.8rem;
+            max-width: 600px;
           }
         `}
       </style>
