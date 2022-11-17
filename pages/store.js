@@ -29,38 +29,41 @@ const Store = ({ collection, isCollectionLoading, router }) => {
           <h2>{collection && collection.descriptionHtml}</h2>
         </div>
         {isBf22 && (
-          <div className="filter-wrapper">
-            <div className="filter-container">
-              <div
-                onClick={() => setFilter(null)}
-                className={filter === null && "selected"}
-              >
-                <h3>Todas</h3>
+          <>
+            <div className="filter-wrapper">
+              <div className="filter-container">
+                <div
+                  onClick={() => setFilter(null)}
+                  className={filter === null && "selected"}
+                >
+                  <h3>Todas</h3>
+                </div>
+                <div
+                  onClick={() => setFilter("Outlet")}
+                  className={filter === "Outlet" && "selected"}
+                >
+                  <h3>Outlet</h3>
+                </div>
+                <div
+                  onClick={() => setFilter("Seminova")}
+                  className={filter === "Seminova" && "selected"}
+                >
+                  <h3>Seminovas</h3>
+                </div>
+                <div
+                  onClick={() => setFilter("Nova")}
+                  className={filter === "Nova" && "selected"}
+                >
+                  <h3>Novas</h3>
+                </div>
               </div>
-              <div
-                onClick={() => setFilter("Outlet")}
-                className={filter === "Outlet" && "selected"}
-              >
-                <h3>Outlet</h3>
-              </div>
-              <div
-                onClick={() => setFilter("Seminova")}
-                className={filter === "Seminova" && "selected"}
-              >
-                <h3>Seminovas</h3>
-              </div>
-              <div
-                onClick={() => setFilter("Nova")}
-                className={filter === "Nova" && "selected"}
-              >
-                <h3>Novas</h3>
+              <div className="filter-description">
+                {descriptionDictionary[filter]}
               </div>
             </div>
-            <div className="filter-description">
-              {descriptionDictionary[filter]}
-            </div>
-          </div>
+          </>
         )}
+        <span />
         <ProductList
           products={filter ? filteredProducts : products}
           loading={isCollectionLoading}
@@ -76,32 +79,28 @@ const Store = ({ collection, isCollectionLoading, router }) => {
           .title p {
             margin-top: 0.8em;
           }
-          .filter-container {
-            display: flex;
-            flex-direction: row;
-            width: 80%;
-          }
           .filter-container div {
             cursor: pointer;
             color: ${white} !important;
             background-color: ${midGray};
-            width: 60%;
             border-radius: 0.5em;
-            margin-top: 0.5rem;
-            margin-left: 2em;
-            margin-right: 2em;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
             transition: all 0.3s ease;
+            padding: 0.8rem;
+            text-align: center;
+            display: inline-block;
+            margin: 0 1rem 1rem 0;
           }
-          .filter-description {
-            margin: 1rem 0;
-            font-size: 0.8rem;
+
+          h3 {
+            margin-bottom: 0;
           }
           .selected h3 {
             color: ${velaRed} !important;
+          }
+
+          .filter-description {
+            margin: 0 0 1rem 0;
+            font-size: 0.8rem;
           }
         `}
       </style>
