@@ -1,39 +1,40 @@
-import { graphql } from 'react-apollo'
-import gql from 'graphql-tag'
+import { graphql } from "react-apollo";
+import gql from "graphql-tag";
 
 const collectionByHandle = gql`
-query collectionByHandleQuery($handle: String!) {
-  shop {
-    collectionByHandle(handle: $handle) {
-      title
-      descriptionHtml
-      image(maxWidth: 2000) {
-        transformedSrc
-      }
-      products(first: 36) {
-        edges {
-          node {
-            id
-            title
-            handle
-            images(first: 1, maxWidth: 800) {
-              edges {
-                node {
-                  src
+  query collectionByHandleQuery($handle: String!) {
+    shop {
+      collectionByHandle(handle: $handle) {
+        title
+        descriptionHtml
+        image(maxWidth: 2000) {
+          transformedSrc
+        }
+        products(first: 50) {
+          edges {
+            node {
+              id
+              title
+              handle
+              images(first: 1, maxWidth: 800) {
+                edges {
+                  node {
+                    src
+                  }
                 }
               }
-            }
-            variants(first: 250) {
-              edges {
-                node {
-                  id
-                  priceV2 {
-                    amount
+              variants(first: 250) {
+                edges {
+                  node {
+                    id
+                    priceV2 {
+                      amount
+                    }
+                    compareAtPriceV2 {
+                      amount
+                    }
+                    availableForSale
                   }
-                  compareAtPriceV2 {
-                    amount
-                  }
-                  availableForSale
                 }
               }
             }
@@ -42,35 +43,38 @@ query collectionByHandleQuery($handle: String!) {
       }
     }
   }
-}
-`
+`;
 
-const filter = collection => {
-  const filteredEdges = collection.products.edges.filter(product => product.node.variants.edges[0].node.availableForSale)
+const filter = (collection) => {
+  const filteredEdges = collection.products.edges.filter(
+    (product) => product.node.variants.edges[0].node.availableForSale
+  );
 
-  return Object.assign({}, collection, { products: { edges: filteredEdges } })
-}
+  return Object.assign({}, collection, { products: { edges: filteredEdges } });
+};
 
-export default (handle, { filterUnavailable }) => graphql(collectionByHandle, {
-  alias: 'withCollectionByHandle',
+export default (handle, { filterUnavailable }) =>
+  graphql(collectionByHandle, {
+    alias: "withCollectionByHandle",
 
-  props: ({ data: { shop }, loading }) => {
-    const collection = !shop ? {}
-      : filterUnavailable
+    props: ({ data: { shop }, loading }) => {
+      const collection = !shop
+        ? {}
+        : filterUnavailable
         ? filter(shop.collectionByHandle)
-        : shop.collectionByHandle
+        : shop.collectionByHandle;
 
-    return {
-      collection: collection,
-      isCollectionLoading: loading
-    }
-  },
+      return {
+        collection: collection,
+        isCollectionLoading: loading,
+      };
+    },
 
-  options (props) {
-    return {
-      variables: {
-        handle: handle instanceof Function ? handle(props) : handle
-      }
-    }
-  }
-})
+    options(props) {
+      return {
+        variables: {
+          handle: handle instanceof Function ? handle(props) : handle,
+        },
+      };
+    },
+  });
