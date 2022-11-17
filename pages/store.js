@@ -68,7 +68,7 @@ const Store = ({ collection, isCollectionLoading, router }) => {
             </div>
           </>
         )}
-        <span />
+        <div />
         <ProductList
           products={filter ? filteredProducts : products}
           loading={isCollectionLoading}
@@ -84,14 +84,6 @@ const Store = ({ collection, isCollectionLoading, router }) => {
           .title p {
             margin-top: 0.8em;
           }
-
-          h3 {
-            margin-bottom: 0;
-          }
-          .selected h3 {
-            color: ${velaRed} !important;
-          }
-
           .filter-description {
             margin: 1rem 0;
             font-size: 0.8rem;
