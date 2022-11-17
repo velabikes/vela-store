@@ -38,6 +38,7 @@ const Button = ({
         ${!disabled && "box-shadow: 0px 3px 3px -2px rgba(0,0,0,0.15)"};
         color: ${textColor};
         font-weight: 700;
+        font-family: filson-pro, sans-serif;
         transition: 0.2s transform, 0.2s box-shadow, 0.3s background linear,
           0.3s border linear;
         -webkit-tap-highlight-color: transparent;
