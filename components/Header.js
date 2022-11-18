@@ -80,7 +80,10 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) => (
           </Link>
         </div>
         <div className="left blackfriday">
-          <Link href="https://bit.ly/BFVela22" as="https://bit.ly/BFVela22">
+          <Link
+            href="https://mailchi.mp/velabikes/bf22"
+            as="https://mailchi.mp/velabikes/bf22"
+          >
             <a target="_blank">| Black Friday |</a>
           </Link>
         </div>
@@ -188,8 +191,10 @@ export default compose(
     isMenuOpen: openDrawer === "MENU",
   })),
   withHandlers({
-    handleContentClick: ({ dispatch, isCartOpen, isMenuOpen }) => (e) => {
-      return (isCartOpen || isMenuOpen) && dispatch(toggleDrawer(null));
-    },
+    handleContentClick:
+      ({ dispatch, isCartOpen, isMenuOpen }) =>
+      (e) => {
+        return (isCartOpen || isMenuOpen) && dispatch(toggleDrawer(null));
+      },
   })
 )(Header);
