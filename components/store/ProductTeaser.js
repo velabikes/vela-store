@@ -13,7 +13,7 @@ const ProductTeaser = ({ product }) => (
       <a>
         <ProductImage src={product?.images?.edges[0]?.node.src} />
         {!product.variants.edges[0].node.availableForSale && (
-          <img src="/product/images/vendida.png" className="sold" />
+          <img src="/images/vendida.png" className="sold" />
         )}
         <h3>{product.title}</h3>
         <ProductPrice

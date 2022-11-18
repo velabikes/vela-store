@@ -56,7 +56,7 @@ const ProductInfo = ({
               }
             />
             {isSelected && !isAvailable && (
-              <img src="/product/images/vendida.png" className="sold" />
+              <img src="/images/vendida.png" className="sold" />
             )}
           </>
         )}
