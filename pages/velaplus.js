@@ -5,7 +5,7 @@ import withCheckoutLineItemsAdd from "../containers/withCheckoutLineItemsAdd";
 import withCheckout from "../containers/withCheckout";
 import Accordion from "../components/Accordion";
 import PaddedView from "../components/PaddedView";
-import { offBlack, offWhite, velaGreen, white } from "../style/colors";
+import { offBlack, offWhite, velaGreen, velaRed, white } from "../style/colors";
 import {
   AddIcon,
   BadgePlus,
@@ -122,7 +122,9 @@ const VelaPlus = ({
             Benefícios com parceiros
           </p>
           <hr />
-          <h2>R$ 89,90/mês</h2>
+          <h22>
+            <b>R$ 69,90/mês</b> <b>Na Black Friday 2022</b>
+          </h22>
           <h5>
             Pacote anual cobrado em até 12x sem juros no cartão de crédito.
           </h5>
@@ -423,7 +425,13 @@ const VelaPlus = ({
         }
         .add h3 {
           color: ${offBlack};
-          text-decoration: line-through;
+          font-weight: 500;
+          
+        }
+         .add h22 {
+          color: ${velaRed};
+          font-size: 1.7em;
+          font-weight: 500;
         }
         .add {
           padding: 1.5em;
