@@ -81,8 +81,8 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) => (
         </div>
         <div className="left blackfriday">
           <Link
-            href="https://mailchi.mp/velabikes/bf22"
-            as="https://mailchi.mp/velabikes/bf22"
+            href="https://velabikes.com.br/loja/bf22"
+            as="https://velabikes.com.br/loja/bf22"
           >
             <a target="_blank">| Black Friday |</a>
           </Link>
