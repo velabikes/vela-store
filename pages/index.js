@@ -72,9 +72,9 @@ const HomePage = ({ highlight }) => (
       <HomeImage />
       <div className="cta-bf">
         <div className="slogan">
-          <h1>Black Friday com Poucas Unidades.</h1>
+          <h1>A Black Friday da Vela acontece hoje!</h1>
           <a href="/loja/bf22">
-            <Button primary>Participe</Button>
+            <Button primary>Participe Aqui</Button>
           </a>
         </div>
       </div>
