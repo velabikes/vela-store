@@ -57,11 +57,6 @@ const MainMenu = () => (
           <a>Contato</a>
         </Link>
       </li>
-      <li>
-        <a href="https://bit.ly/BFVela22" target="_blank">
-          | Black Friday |
-        </a>
-      </li>
     </ul>
     <style jsx>{`
       h2 {

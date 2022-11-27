@@ -79,14 +79,6 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) => (
             <a>Investir</a>
           </Link>
         </div>
-        <div className="left blackfriday">
-          <Link
-            href="https://velabikes.com.br/loja/bf22"
-            as="https://velabikes.com.br/loja/bf22"
-          >
-            <a target="_blank">| Black Friday |</a>
-          </Link>
-        </div>
       </div>
       <div className="right">
         <HeaderMenu />
