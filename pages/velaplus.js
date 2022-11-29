@@ -123,7 +123,7 @@ const VelaPlus = ({
           </p>
           <hr />
           <h22>
-            <b>R$ 69,90/mês</b> <b>Na Black Friday 2022</b>
+            <b>R$ 89,90/mês</b>
           </h22>
           <h5>
             Pacote anual cobrado em até 12x sem juros no cartão de crédito.
