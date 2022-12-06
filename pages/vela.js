@@ -185,11 +185,12 @@ const Vela = () => (
               <div className="left-content">
                 <h2>Rastreamento GPS</h2>
                 <h4>
-                  Observe sua Vela de qualquer distância, em qualquer lugar.
+                  Podemos localizar a sua Vela em casos de roubo ou furto com o
+                  Plano Vela+.
                 </h4>
                 <p>
-                  Sua smartbike sempre visível e ao seu alcance. Cuidamos da sua
-                  segurança, para um deslocamento sem preocupações.
+                  Sua smartbike sempre visível e ao nosso alcance. Cuidamos da
+                  sua segurança, para um deslocamento sem preocupações.
                 </p>
               </div>
             </div>
@@ -230,8 +231,8 @@ const Vela = () => (
         />
         <h2>Botão multifunções</h2>
         <h4>
-          Integrado ao guidão da Vela 2, o acionador em aço inox é totalmente à
-          prova d'água e resistente a impactos
+          Integrado ao guidão da Vela 2, o acionador em aço inox é resistente a
+          impactos e água.
         </h4>
         <div className="bfunctions">
           <div className="bleft">
@@ -242,7 +243,7 @@ const Vela = () => (
           <div className="bcenter">
             <Boost />
             <h3>Boost</h3>
-            <p>Aperte 2x para obter o impulso máximo na potência.</p>
+            <p>Pressione para acionar a potência máxima da sua Vela 2.</p>
           </div>
         </div>
       </div>
