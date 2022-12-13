@@ -39,11 +39,11 @@ const ProductPrice = ({ baseValue, maxValue, compareAt, showInstallment }) => (
       .min,
       .max {
         color: ${compareAt ? velaRed : "inherit"};
-        font-weight: 500;
+        font-weight: 400;
       }
       .installment {
         text-align: left;
-        font-size: 0.9em;
+        font-size: 1em;
       }
     `}</style>
   </div>
