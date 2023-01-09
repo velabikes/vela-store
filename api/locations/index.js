@@ -339,21 +339,6 @@ module.exports = async (req, res) => {
         type: ["service", "charger"],
       },
       {
-        name: "Moto7Mobility - Goo Eletricos Santos e Litoral SP",
-        address: [
-          "Av. Alm. Saldanha da Gama, 115",
-          "Ponta da Praia, Santos",
-          "SP, 11030-400, Brasil",
-        ],
-        phone: "(13) 99727-5470",
-        pos: {
-          lat: -23.989678,
-          lng: -46.29947199999999,
-        },
-        googlePlace: "ChIJk6zVqYYDzpQRsZpUOCLGA8s",
-        type: ["service", "charger"],
-      },
-      {
         name: "Reciclo Bikes",
         address: [
           "Mercado da Encruzilhada",
