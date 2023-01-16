@@ -11,13 +11,15 @@ import { midGray, velaRed, white } from "../style/colors";
 import { useState } from "react";
 import Button from "../components/Button";
 
+const filters = ["Cadeado", "Bolsa", "Bagageiro"];
+
 const Store = ({ collection, isCollectionLoading, router }) => {
   const [filter, setFilter] = useState(null);
   const products = collection?.products?.edges;
   const filteredProducts = products?.filter((i) =>
     i.node.title.includes(filter)
   );
-  const isBf22 = router.asPath == "/loja/bf22";
+  const isBf22 = router.asPath == "/loja";
 
   return (
     <PaddedView>
@@ -40,27 +42,15 @@ const Store = ({ collection, isCollectionLoading, router }) => {
                 >
                   Todas
                 </Button>
-                <Button
-                  onClick={() => setFilter("Outlet")}
-                  secondary={filter === "Outlet"}
-                  outline
-                >
-                  Outlet
-                </Button>
-                <Button
-                  onClick={() => setFilter("Seminova")}
-                  secondary={filter === "Seminova"}
-                  outline
-                >
-                  Seminovas
-                </Button>
-                <Button
-                  onClick={() => setFilter("Nova")}
-                  secondary={filter === "Nova"}
-                  outline
-                >
-                  Novas
-                </Button>
+                {filters.map((i) => (
+                  <Button
+                    onClick={() => setFilter(i)}
+                    secondary={filter === i}
+                    outline
+                  >
+                    {i}
+                  </Button>
+                ))}
               </div>
               <div className="filter-description">
                 {descriptionDictionary[filter]}
