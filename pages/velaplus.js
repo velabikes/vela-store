@@ -139,9 +139,9 @@ const VelaPlus = ({
             Frete grátis no site Vela.
           </p>
           <hr />
-          <h22>
+          <h4>
             <b>R$ 99/mês</b>
-          </h22>
+          </h4>
           <h5>
             Pacote anual cobrado em até 12x sem juros no cartão de crédito.
           </h5>
