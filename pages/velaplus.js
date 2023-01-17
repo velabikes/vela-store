@@ -101,7 +101,10 @@ const VelaPlus = ({
           <br></br>
           <br></br>
           <br></br>
-          <h3>Agora com AirTag e compatível também com a Vela 1 e Vela S</h3>
+          <h3>
+            Agora com AirTag integrado e compatível também com a Vela 1 e Vela
+            S.
+          </h3>
         </div>
       </div>
       <div className="call">
@@ -151,12 +154,12 @@ const VelaPlus = ({
           </h5>
           <div className="action">
             <Button primary onClick={handleVelaPlusCta}>
-              Assinar Agora
+              Em Breve
             </Button>
           </div>
         </div>
         <div className="description">
-          <h2>2023 com uma experiêcnia ainda mais completa</h2>
+          <h2>2023 com uma experiêcnia ainda mais completa.</h2>
           <br></br>
           <br></br>
           <h4>
@@ -285,7 +288,7 @@ const VelaPlus = ({
         </div>
         <div className="action">
           <Button primary onClick={handleVelaPlusCta}>
-            Assinar Agora
+            Em Breve
           </Button>
         </div>
       </div>
