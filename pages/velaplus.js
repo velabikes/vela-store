@@ -425,7 +425,7 @@ const VelaPlus = ({
             padding: 1em;
         }
         .cover .cta h1 {
-          font-size: 4em;
+          font-size: 3.5em;
           color: ${offBlack};
         }
         .protection {
