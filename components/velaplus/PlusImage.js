@@ -40,8 +40,8 @@ const PlusImage = () => (
       .background img {
         object-fit: cover;
         z-index: 1;
-        opacity: 0.4;
-        height: 90vh;
+        opacity: 0.5;
+        height: 100vh;
       }
       .desktop {
         display: none;
@@ -51,12 +51,12 @@ const PlusImage = () => (
         height: 70em;
         overflow: hidden;
         position: absolute;
-        z-index: 1;
+        z-index: 1; 
       }
       .circle{
         position: absolute;
         border-radius: 50%;
-        background: #B2F1FF;
+        background: #fbfaf8;
         animation: scaleIn 5s infinite;
         box-shadow: 0px 0px 1px 0px #B2F1FF;
       }
