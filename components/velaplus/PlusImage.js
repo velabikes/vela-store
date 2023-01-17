@@ -10,16 +10,6 @@ const PlusImage = () => (
       className="mobile"
       alt="Segurança Vela Bikes pelo App"
     />
-    <img
-      src="ext-ext-ezgif-2-10e8a9d3a0.gif"
-      className="desktop"
-      alt="Vela Mais AirTag"
-    />
-    <img
-      src="ext-ext-ezgif-2-10e8a9d3a0.gif"
-      className="mobile"
-      alt="AirTag Vela Mais"
-    />
     <div className="animatedBG">
       <div className="circle xxlarge shade1"></div>
       <div className="circle xlarge shade2"></div>
