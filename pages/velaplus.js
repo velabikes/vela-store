@@ -86,9 +86,22 @@ const VelaPlus = ({
       <div className="cover">
         <div className="cta">
           <h1>
-            Vela<span style={{ display: "none" }}>Mais</span>
+            Novo Vela<span style={{ display: "none" }}>Mais</span>
           </h1>
           <BadgePlus />
+        </div>
+        <div className="cta">
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <br></br>
+          <h3>Agora com AirTag e compatível também com a Vela 1 e Vela S</h3>
         </div>
       </div>
       <div className="call">
@@ -138,16 +151,20 @@ const VelaPlus = ({
           </h5>
           <div className="action">
             <Button primary onClick={handleVelaPlusCta}>
-              Assinar
+              Assinar Agora
             </Button>
           </div>
         </div>
         <div className="description">
-          <h2>Uma experiêcnia ainda mais completa</h2>
+          <h2>2023 com uma experiêcnia ainda mais completa</h2>
+          <br></br>
+          <br></br>
           <h4>
             Muito mais do que proteção contra roubo e furto, o plano oferece uma
             série de vantagens exclusivas para você e para sua Vela.
           </h4>
+          <br></br>
+          <br></br>
           <p>
             Compatível com todas as unidades da Vela já produzidas: Vela 1, Vela
             S, Vela 1.5 (upgrade) e Vela 2.
@@ -166,6 +183,7 @@ const VelaPlus = ({
                 Com o rastreamento AirTag integrado de autonomia para até 15
                 anos, a sua única preodupação vai ser aproveitar o vento no
                 rosto.
+                <br></br>
               </h4>
             </div>
           </div>
@@ -174,6 +192,7 @@ const VelaPlus = ({
               <img src="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FBikeEletricaSegura.png?alt=media&token=b48d1a38-99bb-436f-b32e-d8cd4809a543" />
             </div>
             <div className="cdescript">
+              <br></br>
               <h2>Você+ Protegido</h2>
               <h4>
                 Uma experiência completa com todos os novos benefícios de
@@ -191,9 +210,11 @@ const VelaPlus = ({
             Proteção contra <br />
             roubo e furto
           </h2>
+          <br></br>
           <h4>
             Segurança em primeiro lugar para você pedalar pela cidade sem medo!
           </h4>
+          <br></br>
           <p>
             Assinando o Plano Vela+ você conta com mais segurança. Bloqueamos
             sua bike, ajudamos na busca, e, caso não seja possível resgatá-la,
@@ -264,7 +285,7 @@ const VelaPlus = ({
         </div>
         <div className="action">
           <Button primary onClick={handleVelaPlusCta}>
-            Assinar
+            Assinar Agora
           </Button>
         </div>
       </div>
