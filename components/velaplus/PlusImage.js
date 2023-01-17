@@ -23,7 +23,7 @@ const PlusImage = () => (
     </div>
     <style jsx>{`
       div {
-        background-color: #FFFEFE;
+        background-color: #fbfaf8;
         height: auto;
         display: flex;;
         align-items: center;
