@@ -117,10 +117,6 @@ const VelaPlus = ({
           </p>
           <p>
             <AddIcon style={{ width: "1.1em" }} />
-            Compatível com iOS e Android;
-          </p>
-          <p>
-            <AddIcon style={{ width: "1.1em" }} />
             10% OFF em novas bikes;
           </p>
           <p>
