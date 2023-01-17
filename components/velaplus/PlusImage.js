@@ -8,7 +8,7 @@ const PlusImage = () => (
     <img
       src="/plus/Studio_Project-6-2.gif"
       className="mobile"
-      alt="Segurança Vela Bikes"
+      alt="Segurança Vela"
     />
     <div className="animatedBG">
       <div className="circle xxlarge shade1"></div>
