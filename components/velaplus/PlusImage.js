@@ -10,11 +10,6 @@ const PlusImage = () => (
       className="mobile"
       alt="Segurança Vela Bikes pelo App"
     />
-    <img
-      src="/plus/ezgif.com-gif-maker-2.gif"
-      className="desktop"
-      alt="Assinatura Segurança Bike Elétrica"
-    />
     <div className="animatedBG">
       <div className="circle xxlarge shade1"></div>
       <div className="circle xlarge shade2"></div>
