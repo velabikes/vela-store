@@ -137,7 +137,7 @@ const VelaPlus = ({
           </p>
           <p>
             <AddIcon style={{ width: "1.1em" }} />
-            Frete grátis no site Vela;
+            Frete grátis no site Vela.
           </p>
           <hr />
           <h22>
