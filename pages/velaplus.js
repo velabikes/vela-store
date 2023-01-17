@@ -94,36 +94,44 @@ const VelaPlus = ({
       <div className="call">
         <div className="add">
           <p>
-            <AddIcon style={{ width: "1.2em" }} />
-            Proteção contra roubo e furto
+            <AddIcon style={{ width: "1.1em" }} />
+            Proteção contra roubo e furto;
           </p>
           <p>
-            <AddIcon style={{ width: "1.2em" }} />
-            Notificações remotas
+            <AddIcon style={{ width: "1.1em" }} />
+            Rastreamento AirTag integrado;
           </p>
           <p>
-            <AddIcon style={{ width: "1.2em" }} />
-            Rastreamento GPS
+            <AddIcon style={{ width: "1.1em" }} />
+            Compatível com iOS e Android;
           </p>
           <p>
-            <AddIcon style={{ width: "1.2em" }} />
-            Descontos em produtos e serviços
+            <AddIcon style={{ width: "1.1em" }} />
+            10% OFF em novas bikes;
           </p>
           <p>
-            <AddIcon style={{ width: "1.2em" }} />
-            Funções e atualizações exclusivas
+            <AddIcon style={{ width: "1.1em" }} />
+            20% OFF em serviços e acessórios;
           </p>
           <p>
-            <AddIcon style={{ width: "1.2em" }} />
-            Desconto em novas baterias
+            <AddIcon style={{ width: "1.1em" }} />
+            30% OFF em cadeados e baterias;
           </p>
           <p>
-            <AddIcon style={{ width: "1.2em" }} />
-            Benefícios com parceiros
+            <AddIcon style={{ width: "1.1em" }} />
+            Serviços Leva&Traz gratuitos*;
+          </p>
+          <p>
+            <AddIcon style={{ width: "1.1em" }} />
+            Promoções exclusivas;
+          </p>
+          <p>
+            <AddIcon style={{ width: "1.1em" }} />
+            Frete grátis no site Vela;
           </p>
           <hr />
           <h22>
-            <b>R$ 89,90/mês</b>
+            <b>R$ 99/mês</b>
           </h22>
           <h5>
             Pacote anual cobrado em até 12x sem juros no cartão de crédito.
@@ -135,15 +143,14 @@ const VelaPlus = ({
           </div>
         </div>
         <div className="description">
-          <h2>Você e a Vela: um relacionamento sério</h2>
+          <h2>Uma experiêcnia ainda mais completa</h2>
           <h4>
             Muito mais do que proteção contra roubo e furto, o plano oferece uma
             série de vantagens exclusivas para você e para sua Vela.
           </h4>
           <p>
-            A assinatura pode ser feita ao comprar sua Vela 2 ou diretamente
-            nessa página em apenas 3 clicks. Simples e rápido, como nossa
-            smartbike.
+            Compatível com todas as unidades da Vela já produzidas: Vela 1, Vela
+            S, Vela 1.5 (upgrade) e Vela 2.
           </p>
         </div>
       </div>
@@ -154,10 +161,11 @@ const VelaPlus = ({
               <img src="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FAssistenciaTecnicaBikeEletrica.png?alt=media&token=65fde0d1-61d3-4e90-818a-f45b54c4f4ab" />
             </div>
             <div className="sdescript">
-              <h2>Sua Vela + segura</h2>
+              <h2>Sua Vela+ Segura</h2>
               <h4>
-                Com rastreamento GPS integrado e desconto em produtos, peças e
-                serviços. Você não precisa se preocupar, apenas Velejar!
+                Com o rastreamento AirTag integrado de autonomia para até 15
+                anos, a sua única preodupação vai ser aproveitar o vento no
+                rosto.
               </h4>
             </div>
           </div>
@@ -166,10 +174,11 @@ const VelaPlus = ({
               <img src="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FBikeEletricaSegura.png?alt=media&token=b48d1a38-99bb-436f-b32e-d8cd4809a543" />
             </div>
             <div className="cdescript">
-              <h2>Você + conectado</h2>
+              <h2>Você+ Protegido</h2>
               <h4>
-                Funções exclusivas no Vela App, atendimento exclusivo em até 24
-                horas e todo o suporte que você precisa para sua bike.
+                Uma experiência completa com todos os novos benefícios de
+                desconto para bikes, serviços, acessóris, baterias e cadeados.
+                Além do Leva&Traz sem custo para toda a Grande São Paulo.
               </h4>
             </div>
           </div>

@@ -1,15 +1,22 @@
-
-const PlusImage = () =>
+const PlusImage = () => (
   <div>
-    <img src='/plus/SegurancaBikeEletrica.png' className='desktop' alt='Assinatura Segurança Bike Elétrica' />
-    <img src='/plus/SegurancaBikeEletrica.png' className='mobile' alt='Segurança Vela Bikes pelo App' />
-    <div className='animatedBG'>
-      <div className='circle xxlarge shade1'></div>
-      <div className='circle xlarge shade2'></div>
-      <div className='circle large shade3'></div>
-      <div className='circle medium shade4'></div>
-      <div className='circle small shade5'></div>
-      <div className='circle xsmall shade5'></div>
+    <img
+      src="/plus/VelaPlus2023.gif"
+      className="desktop"
+      alt="Assinatura Segurança Bike Elétrica"
+    />
+    <img
+      src="/plus/VelaPlus2023.gif"
+      className="mobile"
+      alt="Segurança Vela Bikes pelo App"
+    />
+    <div className="animatedBG">
+      <div className="circle xxlarge shade1"></div>
+      <div className="circle xlarge shade2"></div>
+      <div className="circle large shade3"></div>
+      <div className="circle medium shade4"></div>
+      <div className="circle small shade5"></div>
+      <div className="circle xsmall shade5"></div>
     </div>
     <div className="background">
       <img src="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FBackgroundVelaMais.png?alt=media&token=52c11c62-9743-45ac-89f5-1ab7d6cdcd17" />
@@ -162,5 +169,6 @@ const PlusImage = () =>
     }
     `}</style>
   </div>
+);
 
-export default PlusImage
+export default PlusImage;
