@@ -95,13 +95,12 @@ const VelaPlus = ({
         <br></br>
         <br></br>
         <br></br>
+        <br></br>
 
         <div className="cta">
           <h3>
             Agora com AirTag integrado e compatível também com a Vela 1 e Vela
             S.
-            <br></br>
-            <br></br>
           </h3>
         </div>
       </div>
@@ -301,14 +300,14 @@ const VelaPlus = ({
             hoverColor={"#DCF5EB"}
             textColor={offBlack}
             title="2. Qual o prazo de entrega da nova bike de substituição da roubada/furtada?"
-            content="O prazo esperado para a produção de uma nova unidade da Vela 2 é de 30 dias (“período de produção”) após o término do “período de busca”. A Vela não se responsabiliza por custos que envolvem o deslocamento do cliente durante o “período de busca” e o “período de produção”."
+            content="O prazo esperado para a produção de uma nova unidade da Vela é de 30 dias (“período de produção”) após o término do “período de busca”. A Vela não se responsabiliza por custos que envolvem o deslocamento do cliente durante o “período de busca” e o “período de produção”."
           />
           <Accordion
             color={white}
             hoverColor={"#DCF5EB"}
             textColor={offBlack}
             title="3. Existe algum custo fixo que devo pagar, caso minha Vela seja roubada/furtada, para ter direito a uma nova bike?"
-            content="Dada a aprovação da restituição de uma nova unidade da Vela 2, o cliente terá um desconto para a compra de uma nova unidade da Vela 2. O pedido da bike de restituição deverá acontecer exclusivamente através do site oficial da marca (www.velabikes.com.br)  e o desconto para essa nova aquisição será de 80% no caso de roubo e 70% no caso de furto. O valor deverá ser pago por meio de um cartão de crédito podendo ser parcelado em até 12x sem juros."
+            content="Dada a aprovação da restituição de uma nova unidade da Vela, o cliente terá um desconto para a compra de uma nova unidade da Vela 2. O pedido da bike de restituição deverá acontecer exclusivamente através do site oficial da marca (www.velabikes.com.br) e o desconto para essa nova aquisição será de 80% no caso de roubo e 70% no caso de furto. O valor deverá ser pago por meio de um cartão de crédito podendo ser parcelado em até 12x sem juros."
           />
           <Accordion
             color={white}
@@ -321,43 +320,50 @@ const VelaPlus = ({
             color={white}
             hoverColor={"#DCF5EB"}
             textColor={offBlack}
-            title="5. A proteção cobre acidentes?"
+            title="5. Como funciona o rastreamento via AirTag?"
+            content="A integração do AirTag com o sistema da Vela permite que esse dispositivo de rastreamento permaneca ativo por até 15 anos, mesmo sem a alimentação da bateria da bike.  O dispositivo é instalado na parte interna do painel, não pode ser acessado sem que o painel/sistema seja violado/danificado e a instalação pode ser realizada em qualquer oficina autorizada da Vela. O sistema de rastreamento é nativamente compatível com todos os iPhones, iPod Touch e iPads com iOS 14.5 ou superior, basta aproximar seu iPhone do painel e adicionar o dispositivo à sua Apple ID com a localização feita diretamente com o aplicativo ''Buscar''. O rastreamento para clientes com dispositivos Android deve ser solicitado para nossa equipe via WhatsApp para que a localização seja fornecida de forma ágil. Para mais informações a respeito dos dispositivos AirTag, acesse o link: https://www.apple.com/br/airtag/"
+          />
+          <Accordion
+            color={white}
+            hoverColor={"#DCF5EB"}
+            textColor={offBlack}
+            title="6. A proteção cobre acidentes?"
             content="A proteção não cobre acidentes, peças de reposição, peças consumíveis, revisões e outros custos envolvidos no uso regular da Vela."
           />
           <Accordion
             color={white}
             hoverColor={"#DCF5EB"}
             textColor={offBlack}
-            title="6. A proteção cobre os custos dos acessórios, se estiverem instalados na bike?"
+            title="7. A proteção cobre os custos dos acessórios, se estiverem instalados na bike?"
             content="A proteção está atrelada exclusivamente à bicicleta em questão e a Vela não se responsabiliza ou cobre custos envolvidos com acessórios instalados na bike, sejam de terceiros, adquiridos na Vela ou qualquer outro item ou produto do cliente que possa ter sido roubado ou furtado na ocasião."
           />
           <Accordion
             color={white}
             hoverColor={"#DCF5EB"}
             textColor={offBlack}
-            title="7. A cobertura do plano é nacional ou apenas em São Paulo?"
-            content="Os itens diretamente relacionados com a operação da Vela terão validade para todo o território nacional (proteção contra roubo/furto, notificações remotas, rastreamento GPS, desconto nos produtos e serviços, funções e atualizações exclusivas), mas os benefícios com parceiros podem variar de acordo com a infraestrutura Vela em sua cidade."
+            title="8. A cobertura do plano é nacional?"
+            content="Sim, os benefícios listados tem abrangência para todo o território nacional, mas taxas de embalagens e transporte podem ser aplicadas caso necessário."
           />
           <Accordion
             color={white}
             hoverColor={"#DCF5EB"}
             textColor={offBlack}
-            title="8. Como garantir que não vou perder o benefício da proteção contra roubo e furto? Quais as principais condições para ser validada?"
-            content="Para ter acesso ao período de busca e, possivelmente, à bicicleta de reposição, o cliente deve seguir as indicações da Vela para manter seu plano ativo. Os principais pontos para furto são: boletim de ocorrência, estar com a Vela com a trava eletromagnética ativada no momento do acontecimento e estar utilizando qualquer cadeado do modelo U-lock. Já para roubo, requisitamos apenas o boletim de ocorrência."
+            title="9. Como garantir que não vou perder o benefício da proteção contra roubo e furto? Quais as principais condições para ser validada?"
+            content="Para ter acesso ao período de busca e, possivelmente, à bicicleta de reposição, o cliente deve seguir as indicações da Vela para manter seu plano ativo. Os principais pontos para furto são: boletim de ocorrência, estar com a Vela com cadeado no momento do ocorrido e estar utilizando qualquer cadeado do modelo U-lock. Já para roubo, requisitamos apenas o boletim de ocorrência."
           />
           <Accordion
             color={white}
             hoverColor={"#DCF5EB"}
             textColor={offBlack}
-            title="9. Como funciona o pagamento do plano?"
+            title="10. Como funciona o pagamento do plano?"
             content="O pagamento do pacote do plano anual de assinatura do Vela+ deverá ser realizado através do site da Vela, sendo cobrado no cartão de crédito e podendo ser parcelado em até 12x sem juros."
           />
           <Accordion
             color={white}
             hoverColor={"#DCF5EB"}
             textColor={offBlack}
-            title="10. O que está incluso nessa parte de “funções e atualizações exclusivas”?"
-            content="A Vela tem como política manter a performance e funcionamento da bicicleta (produto físico) equivalente para todos os clientes, com ou sem a assinatura do plano Vela+, mas temos funcionalidades dentro do aplicativo exclusivas para os assinantes do plano, como as notificações de segurança e o rastreamento GPS."
+            title="11. Quais são as condições para a gratuidade dos Serviços Leva&Traz?"
+            content="A gratuidade autualmente é válida apenas para a Grande São Paulo e pode ser acionada para a realização de serviços exclusivamente com a Vela. Exemplo: a gratuidade vale para o transporte para a realização de uma revisão ou reparo na fábirca da Vela."
           />
         </PaddedView>
       </div>
@@ -419,7 +425,7 @@ const VelaPlus = ({
             padding: 1em;
         }
         .cover .cta h1 {
-          font-size: 6em;
+          font-size: 4em;
           color: ${offBlack};
         }
         .protection {
