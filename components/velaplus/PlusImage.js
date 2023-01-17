@@ -1,12 +1,12 @@
 const PlusImage = () => (
   <div>
     <img
-      src="/plus/VelaPlus2023.gif"
+      src="SegurancaBikeEletrica.png"
       className="desktop"
       alt="Assinatura Segurança Bike Elétrica"
     />
     <img
-      src="/plus/VelaPlus2023.gif"
+      src="SegurancaBikeEletrica.png"
       className="mobile"
       alt="Segurança Vela Bikes pelo App"
     />
