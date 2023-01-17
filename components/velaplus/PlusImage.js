@@ -56,8 +56,8 @@ const PlusImage = () => (
       .circle{
         position: absolute;
         border-radius: 50%;
-        background: #fbfaf8;
-        animation: scaleIn 5s infinite;
+        background: #B2F1FF;
+        animation: scaleIn 2s infinite;
         box-shadow: 0px 0px 1px 0px #B2F1FF;
       }
 
