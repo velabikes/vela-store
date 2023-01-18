@@ -196,7 +196,7 @@ const VelaPlus = ({
               <h2>Você+ Protegido</h2>
               <h4>
                 Uma experiência completa com todos os novos benefícios de
-                desconto para bikes, serviços, acessóris, baterias e cadeados.
+                desconto para bikes, serviços, acessórios, baterias e cadeados.
                 Além do Leva&Traz sem custo para toda a Grande São Paulo.
               </h4>
             </div>
