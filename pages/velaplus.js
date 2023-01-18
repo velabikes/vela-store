@@ -289,6 +289,25 @@ const VelaPlus = ({
           </Button>
         </div>
       </div>
+      <div className="protection">
+        <ProtectionImage />
+        <div className="cta">
+          <h2>
+            Proteção contra <br />
+            roubo e furto
+          </h2>
+          <br></br>
+          <h4>
+            Segurança em primeiro lugar para você pedalar pela cidade sem medo!
+          </h4>
+          <br></br>
+          <p>
+            Assinando o Plano Vela+ você conta com mais segurança. Bloqueamos
+            sua bike, ajudamos na busca, e, caso não seja possível resgatá-la,
+            substituímos ela para você.
+          </p>
+        </div>
+      </div>
       <div className="service">
         <PaddedView>
           <div className="security">
