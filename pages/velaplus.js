@@ -96,6 +96,7 @@ const VelaPlus = ({
         <br></br>
         <br></br>
         <br></br>
+        <br></br>
 
         <div className="cta">
           <h3>
@@ -103,6 +104,7 @@ const VelaPlus = ({
             S.
           </h3>
         </div>
+        <br></br>
       </div>
       <div className="call">
         <div className="add">
@@ -670,7 +672,7 @@ const VelaPlus = ({
             align-items: flex-end;
             justify-content: flex-start;
             width: 100%;
-            background-color: ${offBlack};
+            background-color: ${velaRed};
           }
           .protection .cta {
             width: 22em;
