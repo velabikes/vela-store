@@ -57,7 +57,7 @@ const PlusImage = () => (
         position: absolute;
         border-radius: 50%;
         background: #B2F1FF;
-        animation: scaleIn 1.8s infinite;
+        animation: scaleIn 2s infinite;
         box-shadow: 0px 0px 1px 0px #B2F1FF;
       }
 
@@ -97,22 +97,22 @@ const PlusImage = () => (
       }
 
       .shade1{
-        opacity: 0.1;
+        opacity: 1;
       }
       .shade2{
-        opacity: 0;
+        opacity: 1;
       }
       
       .shade3{
-        opacity: 0;
+        opacity: 1;
       }
       
       .shade4{
-        opacity: 0;
+        opacity: 1;
       }
       
       .shade5{
-        opacity: 0;
+        opacity: 1;
       }
       
       @keyframes scaleIn {
@@ -123,7 +123,7 @@ const PlusImage = () => (
        
         50% {
           transform: scale(1);
-          opacity: 0.6;
+          opacity: 0.5;
         }
         100% {
           transform: scale(1);
