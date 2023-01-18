@@ -107,6 +107,21 @@ const VelaPlus = ({
         <br></br>
       </div>
       <div className="call">
+        <div className="description">
+          <h2>2023 com uma experiêcnia ainda mais completa.</h2>
+          <br></br>
+          <br></br>
+          <h4>
+            Muito mais do que proteção contra roubo e furto, o plano oferece uma
+            série de vantagens exclusivas para você e para sua Vela.
+          </h4>
+          <br></br>
+          <br></br>
+          <p>
+            Compatível com todas as unidades da Vela já produzidas: Vela 1, Vela
+            S, Vela 1.5 (upgrade) e Vela 2.
+          </p>
+        </div>
         <div className="add">
           <p>
             <AddIcon style={{ width: "1.1em" }} />
@@ -156,21 +171,6 @@ const VelaPlus = ({
               Em Breve
             </Button>
           </div>
-        </div>
-        <div className="description">
-          <h2>2023 com uma experiêcnia ainda mais completa.</h2>
-          <br></br>
-          <br></br>
-          <h4>
-            Muito mais do que proteção contra roubo e furto, o plano oferece uma
-            série de vantagens exclusivas para você e para sua Vela.
-          </h4>
-          <br></br>
-          <br></br>
-          <p>
-            Compatível com todas as unidades da Vela já produzidas: Vela 1, Vela
-            S, Vela 1.5 (upgrade) e Vela 2.
-          </p>
         </div>
       </div>
       <div className="protection">
@@ -548,7 +548,8 @@ const VelaPlus = ({
         }
         .action {
           margin-top: 2em;
-          margin-bottom: 1em;
+          margin-bottom: em;
+          margin-left: 5.5em;
         }
         .models-content {
           padding: 1em 2em 2em 2em;
@@ -676,7 +677,7 @@ const VelaPlus = ({
           }
           .protection .cta {
             width: 22em;
-            text-align: right;
+            text-align: left;
             padding: 4em;
             position: absolute;
             z-index: 4;
