@@ -189,7 +189,7 @@ const VelaPlus = ({
           </div>
           <div className="callcenter">
             <div className="cimg">
-              <img src="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FBikeEletricaSegura.png?alt=media&token=b48d1a38-99bb-436f-b32e-d8cd4809a543" />
+              <img src="/plus/BikeEletricaSegura-2.png" />
             </div>
             <div className="cdescript">
               <br></br>
