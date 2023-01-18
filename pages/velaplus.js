@@ -171,38 +171,6 @@ const VelaPlus = ({
           </p>
         </div>
       </div>
-      <div className="service">
-        <PaddedView>
-          <div className="security">
-            <div className="simg">
-              <img src="/plus/AssistenciaTecnicaBikeEletrica (1)-2.png" />
-            </div>
-            <div className="sdescript">
-              <h2>Sua Vela+ Segura</h2>
-              <h4>
-                Com o rastreamento AirTag integrado de autonomia para até 15
-                anos, a sua única preodupação vai ser aproveitar o vento no
-                rosto.
-                <br></br>
-              </h4>
-            </div>
-          </div>
-          <div className="callcenter">
-            <div className="cimg">
-              <img src="/plus/BikeEletricaSegura-2.png" />
-            </div>
-            <div className="cdescript">
-              <br></br>
-              <h2>Você+ Protegido</h2>
-              <h4>
-                Uma experiência completa com todos os novos benefícios de
-                desconto para bikes, serviços, acessórios, baterias e cadeados.
-                Além do Leva&Traz sem custo para toda a Grande São Paulo.
-              </h4>
-            </div>
-          </div>
-        </PaddedView>
-      </div>
       <div className="protection">
         <ProtectionImage />
         <div className="cta">
@@ -253,6 +221,38 @@ const VelaPlus = ({
           </div>
         </div>
       </div>
+      <div className="service">
+        <PaddedView>
+          <div className="security">
+            <div className="simg">
+              <img src="/plus/AssistenciaTecnicaBikeEletrica (1)-2.png" />
+            </div>
+            <div className="sdescript">
+              <h2>Sua Vela+ Segura</h2>
+              <h4>
+                Com o rastreamento AirTag integrado de autonomia para até 15
+                anos, a sua única preodupação vai ser aproveitar o vento no
+                rosto.
+                <br></br>
+              </h4>
+            </div>
+          </div>
+          <div className="callcenter">
+            <div className="cimg">
+              <img src="/plus/BikeEletricaSegura-2.png" />
+            </div>
+            <div className="cdescript">
+              <br></br>
+              <h2>Você+ Protegido</h2>
+              <h4>
+                Uma experiência completa com todos os novos benefícios de
+                desconto para bikes, serviços, acessórios, baterias e cadeados.
+                Além do Leva&Traz sem custo para toda a Grande São Paulo.
+              </h4>
+            </div>
+          </div>
+        </PaddedView>
+      </div>
       <div className="models-content">
         <div className="models">
           <div className="m1">
@@ -288,6 +288,38 @@ const VelaPlus = ({
             Em Breve
           </Button>
         </div>
+      </div>
+      <div className="service">
+        <PaddedView>
+          <div className="security">
+            <div className="simg">
+              <img src="/plus/AssistenciaTecnicaBikeEletrica (1)-2.png" />
+            </div>
+            <div className="sdescript">
+              <h2>Sua Vela+ Segura</h2>
+              <h4>
+                Com o rastreamento AirTag integrado de autonomia para até 15
+                anos, a sua única preodupação vai ser aproveitar o vento no
+                rosto.
+                <br></br>
+              </h4>
+            </div>
+          </div>
+          <div className="callcenter">
+            <div className="cimg">
+              <img src="/plus/BikeEletricaSegura-2.png" />
+            </div>
+            <div className="cdescript">
+              <br></br>
+              <h2>Você+ Protegido</h2>
+              <h4>
+                Uma experiência completa com todos os novos benefícios de
+                desconto para bikes, serviços, acessórios, baterias e cadeados.
+                Além do Leva&Traz sem custo para toda a Grande São Paulo.
+              </h4>
+            </div>
+          </div>
+        </PaddedView>
       </div>
       <div className="questions">
         <PaddedView>
