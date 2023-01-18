@@ -41,7 +41,7 @@ const PlusImage = () => (
         object-fit: cover;
         z-index: 1;
         opacity: 1;
-        height: 100vh;
+        height: 80vh;
       }
       .desktop {
         display: none;

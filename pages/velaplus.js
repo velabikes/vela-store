@@ -111,12 +111,10 @@ const VelaPlus = ({
         <div className="description">
           <h2>2023 com uma experiêcnia ainda mais completa.</h2>
           <br></br>
-          <br></br>
           <h4>
             Muito mais do que proteção contra roubo e furto, o plano oferece uma
             série de vantagens exclusivas para você e para sua Vela.
           </h4>
-          <br></br>
           <br></br>
           <p>
             Compatível com todas as unidades da Vela já produzidas: Vela 1, Vela
@@ -169,7 +167,7 @@ const VelaPlus = ({
           </h5>
           <div className="action">
             <Button primary onClick={handleVelaPlusCta}>
-              Em Breve
+              Assinar
             </Button>
           </div>
         </div>
@@ -256,6 +254,38 @@ const VelaPlus = ({
           </div>
         </PaddedView>
       </div>
+      <div className="service">
+        <PaddedView>
+          <div className="security">
+            <div className="simg">
+              <img src="/plus/AssistenciaTecnicaBikeEletrica (1)-2.png" />
+            </div>
+            <div className="sdescript">
+              <h2>Sua Vela+ Segura</h2>
+              <h4>
+                Com o rastreamento AirTag integrado de autonomia para até 15
+                anos, a sua única preodupação vai ser aproveitar o vento no
+                rosto.
+                <br></br>
+              </h4>
+            </div>
+          </div>
+          <div className="callcenter">
+            <div className="cimg">
+              <img src="/plus/BikeEletricaSegura-2.png" />
+            </div>
+            <div className="cdescript">
+              <br></br>
+              <h2>Você+ Protegido</h2>
+              <h4>
+                Uma experiência completa com todos os novos benefícios de
+                desconto para bikes, serviços, acessórios, baterias e cadeados.
+                Além do Leva&Traz sem custo para toda a Grande São Paulo.
+              </h4>
+            </div>
+          </div>
+        </PaddedView>
+      </div>
       <div className="models-content">
         <div className="models">
           <div className="m1">
@@ -288,44 +318,12 @@ const VelaPlus = ({
         </div>
         <div className="action">
           <Button primary onClick={handleVelaPlusCta}>
-            Em Breve
+            Assinar
           </Button>
         </div>
       </div>
       <div className="protection2">
         <ProtectionImage2 />
-      </div>
-      <div className="service">
-        <PaddedView>
-          <div className="security">
-            <div className="simg">
-              <img src="/plus/AssistenciaTecnicaBikeEletrica (1)-2.png" />
-            </div>
-            <div className="sdescript">
-              <h2>Sua Vela+ Segura</h2>
-              <h4>
-                Com o rastreamento AirTag integrado de autonomia para até 15
-                anos, a sua única preodupação vai ser aproveitar o vento no
-                rosto.
-                <br></br>
-              </h4>
-            </div>
-          </div>
-          <div className="callcenter">
-            <div className="cimg">
-              <img src="/plus/BikeEletricaSegura-2.png" />
-            </div>
-            <div className="cdescript">
-              <br></br>
-              <h2>Você+ Protegido</h2>
-              <h4>
-                Uma experiência completa com todos os novos benefícios de
-                desconto para bikes, serviços, acessórios, baterias e cadeados.
-                Além do Leva&Traz sem custo para toda a Grande São Paulo.
-              </h4>
-            </div>
-          </div>
-        </PaddedView>
       </div>
       <div className="questions">
         <PaddedView>
@@ -497,6 +495,7 @@ const VelaPlus = ({
           align-items: center;
           flex-direction: column;
           justify-content: center;
+          margin: 2em;
         }
         .add h3 {
           color: ${offBlack};
@@ -534,7 +533,8 @@ const VelaPlus = ({
         .action {
           margin-top: 2em;
           margin-bottom: em;
-          margin-left: 5.5em;
+          margin-left: 5.4em;
+          margin-right: 5.1em;
         }
         .models-content {
           padding: 1em 2em 2em 2em;
@@ -637,7 +637,7 @@ const VelaPlus = ({
         @media only screen and (min-width: 768px) {
           .call {
             flex-direction: row;
-            padding-bottom: 2em;
+            padding-bottom: 3em;
           }
           .add {
             width: 22em;
