@@ -171,7 +171,7 @@ const VelaPlus = ({
         <PaddedView>
           <div className="security">
             <div className="simg">
-              <img src="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FAssistenciaTecnicaBikeEletrica.png?alt=media&token=65fde0d1-61d3-4e90-818a-f45b54c4f4ab" />
+              <img src="/plus/AssistenciaTecnicaBikeEletrica (1)-2.png" />
             </div>
             <div className="sdescript">
               <h2>Sua Vela+ Segura</h2>
