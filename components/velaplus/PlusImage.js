@@ -40,7 +40,7 @@ const PlusImage = () => (
       .background img {
         object-fit: cover;
         z-index: 1;
-        opacity: 0.5;
+        opacity: 1;
         height: 100vh;
       }
       .desktop {
