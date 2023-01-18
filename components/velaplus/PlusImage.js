@@ -97,33 +97,33 @@ const PlusImage = () => (
       }
 
       .shade1{
-        opacity: 0.2;
+        opacity: 0.1;
       }
       .shade2{
-        opacity: 0.5;
+        opacity: 0;
       }
       
       .shade3{
-        opacity: 0.7;
+        opacity: 0;
       }
       
       .shade4{
-        opacity: 0.8;
+        opacity: 0;
       }
       
       .shade5{
-        opacity: 0.9;
+        opacity: 0;
       }
       
       @keyframes scaleIn {
         0% {
           transform: scale(0.1);
-          opacity: 0.6;
+          opacity: 1;
         }
        
         50% {
           transform: scale(1);
-          opacity: 0.2;
+          opacity: 0.6;
         }
         100% {
           transform: scale(1);
