@@ -139,11 +139,15 @@ const VelaPlus = ({
             Frete grátis no site Vela.
           </p>
           <hr />
-          <h4>
-            <b>R$ 99/mês</b>
-          </h4>
+          <h22>
+            <b>Por apenas R$ 99/mês</b>
+          </h22>
+          <b></b>
+          <b></b>
+          <b></b>
           <h5>
-            Pacote anual cobrado em até 12x sem juros no cartão de crédito.
+            <br></br>
+            No pacote anual parcelado em até 12x sem juros no cartão.
           </h5>
           <div className="action">
             <Button primary onClick={handleVelaPlusCta}>
@@ -463,7 +467,7 @@ const VelaPlus = ({
         }
          .add h22 {
           color: ${velaRed};
-          font-size: 1.7em;
+          font-size: 1.2em;
           font-weight: 500;
         }
         .add {
