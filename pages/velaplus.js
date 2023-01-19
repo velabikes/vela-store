@@ -428,7 +428,9 @@ const VelaPlus = ({
             flex-direction: row;
             align-items: center;
             justify-content: center;
-            padding: 2em;
+            padding: 1em;
+            padding-top: 3em;
+          
         }
         .cover .cta h1 {
           font-size: 3.5em;
@@ -632,6 +634,8 @@ const VelaPlus = ({
             align-items: center;
             justify-content: center;
             padding: 1.5em;
+                padding-left: 8em;
+            padding-right: 8em;
           }
           .add {
             width: 22em;
