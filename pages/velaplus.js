@@ -101,8 +101,8 @@ const VelaPlus = ({
 
         <div className="cta">
           <h3>
-            Agora com AirTag integrado e compatível também com a Vela 1 e Vela
-            S.
+            Agora com AirTag ou SmartTag integrados e compatíveis também com a
+            Vela 1 e Vela S.
           </h3>
         </div>
         <br></br>

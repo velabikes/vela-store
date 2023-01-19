@@ -29,7 +29,7 @@ const ProtectionImage = () => (
 
       @media only screen and (min-width: 768px) {
         img {
-          height: 100vh;
+          height: 80vh;
           width: 100%;
           object-position: 50% 50%;
         }
@@ -44,7 +44,7 @@ const ProtectionImage = () => (
             justify-content: flex-start;
           }
           img {
-            height: 95vh;
+            height: 80vh;
             width: 65vw;
             object-position: left;
           }
