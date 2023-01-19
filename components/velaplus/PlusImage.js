@@ -23,7 +23,7 @@ const PlusImage = () => (
     </div>
     <style jsx>{`
       div {
-        background-color: #fbfaf8;
+        background-color: #D6451;
         height: auto;
         display: flex;;
         align-items: center;
@@ -56,7 +56,7 @@ const PlusImage = () => (
       .circle{
         position: absolute;
         border-radius: 50%;
-        background: #B2F1FF;
+        background: #21C2E0;
         animation: scaleIn 2.1s infinite;
         box-shadow: 0px 0px 1px 0px #B2F1FF;
       }
@@ -97,33 +97,33 @@ const PlusImage = () => (
       }
 
       .shade1{
-        opacity: 1;
+        opacity: 0.5;
       }
       .shade2{
-        opacity: 1;
+        opacity: 0.5;
       }
       
       .shade3{
-        opacity: 1;
+        opacity: 0.5;
       }
       
       .shade4{
-        opacity: 1;
+        opacity: 0.5;
       }
       
       .shade5{
-        opacity: 1;
+        opacity: 0.5;
       }
       
       @keyframes scaleIn {
         0% {
           transform: scale(0.1);
-          opacity: 1;
+          opacity: 0.7;
         }
        
         50% {
           transform: scale(1);
-          opacity: 0.5;
+          opacity: 0.3;
         }
         100% {
           transform: scale(1);

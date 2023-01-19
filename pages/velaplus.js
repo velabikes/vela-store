@@ -109,10 +109,10 @@ const VelaPlus = ({
       </div>
       <div className="call">
         <div className="description">
-          <h2>2023 com uma experiêcnia ainda mais completa.</h2>
+          <h2>2023 com uma experiência ainda mais completa.</h2>
           <br></br>
           <h4>
-            Muito mais do que proteção contra roubo e furto, o plano oferece uma
+            Muito além de uma proteção contra roubo e furto, o plano oferece uma
             série de vantagens exclusivas para você e para sua Vela.
           </h4>
           <br></br>
@@ -185,9 +185,9 @@ const VelaPlus = ({
           </h4>
           <br></br>
           <p>
-            Assinando o Plano Vela+ você conta com mais segurança. Bloqueamos
-            sua bike, ajudamos na busca, e, caso não seja possível resgatá-la,
-            substituímos ela para você.
+            Com a assinatura do Novo Plano Vela+ você conta com mais segurança.
+            Bloqueamos sua bike (Vela 1.5 e 2), ajudamos na busca, e, caso não
+            seja possível resgatá-la, substituímos ela para você.
           </p>
         </div>
       </div>
@@ -221,70 +221,6 @@ const VelaPlus = ({
             </div>
           </div>
         </div>
-      </div>
-      <div className="service">
-        <PaddedView>
-          <div className="security">
-            <div className="simg">
-              <img src="/plus/AssistenciaTecnicaBikeEletrica (1)-2.png" />
-            </div>
-            <div className="sdescript">
-              <h2>Sua Vela+ Segura</h2>
-              <h4>
-                Com o rastreamento AirTag integrado de autonomia para até 15
-                anos, a sua única preodupação vai ser aproveitar o vento no
-                rosto.
-                <br></br>
-              </h4>
-            </div>
-          </div>
-          <div className="callcenter">
-            <div className="cimg">
-              <img src="/plus/BikeEletricaSegura-2.png" />
-            </div>
-            <div className="cdescript">
-              <br></br>
-              <h2>Você+ Protegido</h2>
-              <h4>
-                Uma experiência completa com todos os novos benefícios de
-                desconto para bikes, serviços, acessórios, baterias e cadeados.
-                Além do Leva&Traz sem custo para toda a Grande São Paulo.
-              </h4>
-            </div>
-          </div>
-        </PaddedView>
-      </div>
-      <div className="service">
-        <PaddedView>
-          <div className="security">
-            <div className="simg">
-              <img src="/plus/AssistenciaTecnicaBikeEletrica (1)-2.png" />
-            </div>
-            <div className="sdescript">
-              <h2>Sua Vela+ Segura</h2>
-              <h4>
-                Com o rastreamento AirTag integrado de autonomia para até 15
-                anos, a sua única preodupação vai ser aproveitar o vento no
-                rosto.
-                <br></br>
-              </h4>
-            </div>
-          </div>
-          <div className="callcenter">
-            <div className="cimg">
-              <img src="/plus/BikeEletricaSegura-2.png" />
-            </div>
-            <div className="cdescript">
-              <br></br>
-              <h2>Você+ Protegido</h2>
-              <h4>
-                Uma experiência completa com todos os novos benefícios de
-                desconto para bikes, serviços, acessórios, baterias e cadeados.
-                Além do Leva&Traz sem custo para toda a Grande São Paulo.
-              </h4>
-            </div>
-          </div>
-        </PaddedView>
       </div>
       <div className="models-content">
         <div className="models">
