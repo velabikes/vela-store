@@ -99,68 +99,35 @@ const VelaPlus = ({
           </h2>
         </div>
       </div>
-      <div className="call">
-        <div className="description">
-          <h2>2023 com uma experiência ainda mais completa.</h2>
-          <br></br>
-          <h4>
-            Muito além de uma proteção contra roubo e furto, o plano oferece uma
-            série de vantagens exclusivas para você e para sua Vela.
-          </h4>
-          <br></br>
-          <p>
-            Compatível com todas as unidades da Vela já produzidas: Vela 1, Vela
-            S, Vela 1.5 (upgrade) e Vela 2.
-          </p>
-        </div>
-        <div className="add">
-          <p>
-            <AddIcon style={{ width: "1.1em" }} />
-            Proteção contra roubo e furto;
-          </p>
-          <p>
-            <AddIcon style={{ width: "1.1em" }} />
-            Rastreamento AirTag integrado;
-          </p>
-          <p>
-            <AddIcon style={{ width: "1.1em" }} />
-            10% OFF em novas bikes;
-          </p>
-          <p>
-            <AddIcon style={{ width: "1.1em" }} />
-            20% OFF em serviços e acessórios;
-          </p>
-          <p>
-            <AddIcon style={{ width: "1.1em" }} />
-            30% OFF em cadeados e baterias;
-          </p>
-          <p>
-            <AddIcon style={{ width: "1.1em" }} />
-            Serviços Leva&Traz gratuitos*;
-          </p>
-          <p>
-            <AddIcon style={{ width: "1.1em" }} />
-            Promoções exclusivas;
-          </p>
-          <p>
-            <AddIcon style={{ width: "1.1em" }} />
-            Frete grátis no site Vela.
-          </p>
-          <hr />
-          <h22>
-            <b>Por apenas R$ 99/mês</b>
-          </h22>
-          <b></b>
-          <b></b>
-          <b></b>
+      <div className="app">
+        <img src="/plus/app.gif" />
+        <div className="apptext">
+          <h2>Localização em tempo real na palma da sua mão</h2>
           <h5>
             <br></br>
-            No pacote anual parcelado em até 12x sem juros no cartão.
+            Segurança nunca é demais. Com o rastreamento via AirTag ou SmartTag,
+            a localização da sua vela está sempre ao seu alcance com toda a
+            conveniência e praticidade que os dispositivos oferecem.
           </h5>
-          <div className="action">
-            <Button primary onClick={handleVelaPlusCta}>
-              Assinar
-            </Button>
+          <br></br>
+          <p>
+            Já imaginou saber onde sua bike está a qualquer momento? Pois é,
+            essa função existe e mantém você super conectado com sua Vela,
+            independente do modelo: Vela 1, Vela S, Vela 1.5 ou Vela 2. Com a
+            bateria 15x mais potente, nosso rastreamento integrado possui
+            autonomia para até 15 anos, mesmo sem a alimentação da bateria da
+            bike.
+          </p>
+
+          <div className="bfunctions">
+            <div className="bleft">
+              <Chat />
+              <h4>Chat exclusivo e dedicado</h4>
+            </div>
+            <div className="bcenter">
+              <GPS />
+              <h4>Rastreamento GPS integrado</h4>
+            </div>
           </div>
         </div>
       </div>
@@ -178,42 +145,12 @@ const VelaPlus = ({
           <br></br>
           <p>
             Com a assinatura do Novo Plano Vela+ você conta com mais segurança.
-            Bloqueamos sua bike (Vela 1.5 e 2), ajudamos na busca, e, caso não
-            seja possível resgatá-la, substituímos ela para você.
+            Ajudamos na busca, e, caso não seja possível resgatá-la,
+            substituímos ela para você.
           </p>
         </div>
       </div>
-      <div className="app">
-        <img src="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FFun%C3%A7oesAppBikeEletrica.png?alt=media&token=73ba9faa-e4ec-444f-9a91-82b656c058e0" />
-        <div className="apptext">
-          <h2>Funções e atualizações exclusivas</h2>
-          <h5>
-            Surpresas positivas são sempre bem vindas. Com as atualizações e
-            funcionalidades exclusivas para os cliente Vela+, você tem total
-            acesso a nossa tecnologia de ponta antes de todo mundo.
-          </h5>
-          <p>
-            Já imaginou saber onde sua bike está? Pois é, essa função existe e
-            mantém você super conectado com sua V2. Além disso, você receberá
-            notificações, se houver qualquer movimentação suspeita, e acesso
-            exclusivo a um canal de comunicação direto com nossa equipe.
-          </p>
-          <div className="bfunctions">
-            <div className="bleft">
-              <Chat />
-              <h4>Chat exclusivo e dedicado</h4>
-            </div>
-            <div className="bcenter">
-              <GPS />
-              <h4>Rastreamento GPS integrado</h4>
-            </div>
-            <div className="bright">
-              <Notifications />
-              <h4>Notificações remotas</h4>
-            </div>
-          </div>
-        </div>
-      </div>
+
       <div className="models-content2">
         <h1>
           <br></br> 6 benefícios:
@@ -280,9 +217,62 @@ const VelaPlus = ({
           </div>
         </div>
       </div>
+      <div className="call">
+        <div className="add">
+          <p>
+            <AddIcon style={{ width: "1.1em" }} />
+            Proteção contra roubo e furto;
+          </p>
+          <p>
+            <AddIcon style={{ width: "1.1em" }} />
+            Rastreamento AirTag integrado;
+          </p>
+          <p>
+            <AddIcon style={{ width: "1.1em" }} />
+            10% OFF em novas bikes;
+          </p>
+          <p>
+            <AddIcon style={{ width: "1.1em" }} />
+            20% OFF em serviços e acessórios;
+          </p>
+          <p>
+            <AddIcon style={{ width: "1.1em" }} />
+            30% OFF em cadeados e baterias;
+          </p>
+          <p>
+            <AddIcon style={{ width: "1.1em" }} />
+            Serviços Leva&Traz gratuitos*;
+          </p>
+          <p>
+            <AddIcon style={{ width: "1.1em" }} />
+            Promoções exclusivas;
+          </p>
+          <p>
+            <AddIcon style={{ width: "1.1em" }} />
+            Frete grátis no site Vela.
+          </p>
+          <hr />
+          <h22>
+            <b>Por apenas R$ 99/mês</b>
+          </h22>
+          <b></b>
+          <b></b>
+          <b></b>
+          <h5>
+            <br></br>
+            No pacote anual parcelado em até 12x sem juros no cartão.
+          </h5>
+          <div className="action">
+            <Button primary onClick={handleVelaPlusCta}>
+              Assinar
+            </Button>
+          </div>
+        </div>
+      </div>
       <div className="protection2">
         <ProtectionImage2 />
       </div>
+
       <div className="questions">
         <PaddedView>
           <h1>
