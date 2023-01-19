@@ -41,14 +41,14 @@ const PlusImage = () => (
         object-fit: cover;
         z-index: 1;
         opacity: 1;
-        height: 80vh;
+        height: 100vh;
       }
       .desktop {
         display: none;
       }
       .animatedBG {
         width: 100vw;
-        height: 70em;
+        height: 100em;
         overflow: hidden;
         position: absolute;
         z-index: 1; 
@@ -134,8 +134,8 @@ const PlusImage = () => (
       
       @media only screen and (min-width: 768px) {
           img {
-            max-height: 85vh;
-            width: 80%;
+            max-height: 100vh;
+            width: 100%;
           }
           .mobile {
             display: none;
@@ -145,24 +145,24 @@ const PlusImage = () => (
           }
           .animatedBG {
             overflow: hidden;
-            width: 100%;
-            height: 80em;
+            width: 150%;
+            height: 150em;
             z-index: 1;
           }
           .background img {
-            width: 100%;
-            height: 100%;
+            width: 150%;
+            height: 120%;
           }
           @media only screen and (min-width: 1200px) {
             .background img {
-              min-height: 95vh;
+              min-height: 100vh;
             }
       @media only screen and (min-width: 1680px) {
           img {
-            max-height: 70%;
+            max-height: 100%;
           }
           .background img {
-            height: 90%;
+            height: 100%;
           }
         }
       }

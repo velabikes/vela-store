@@ -92,18 +92,11 @@ const VelaPlus = ({
           <BadgePlus />
         </div>
 
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-        <br></br>
-
         <div className="cta">
-          <h3>
+          <h2>
             Agora também com AirTag ou SmartTag integrados e compatível com a
             Vela 1 e Vela S.
-          </h3>
+          </h2>
         </div>
         <br></br>
       </div>
@@ -424,9 +417,11 @@ const VelaPlus = ({
             z-index: 2;
           }
         .cover .cta {
-            width: 100%;
+            width: 80%;
             text-align: center;
             margin-top: -2em;
+            margin-left: 0em;
+            margin-right: 5em;
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -629,6 +624,7 @@ const VelaPlus = ({
           }
           .cover .cta {
             margin-top: -8em;
+            margin-left: 1em;
           }
           .protection {
             align-items: flex-end;
