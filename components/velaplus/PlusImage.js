@@ -146,7 +146,7 @@ const PlusImage = () => (
           .animatedBG {
             overflow: hidden;
             width: 150%;
-            height: 150em;
+            height: 100em;
             z-index: 1;
           }
           .background img {

@@ -98,7 +98,6 @@ const VelaPlus = ({
             Vela 1 e Vela S.
           </h2>
         </div>
-        <br></br>
       </div>
       <div className="call">
         <div className="description">
@@ -414,19 +413,22 @@ const VelaPlus = ({
         {`
         .cover {
             position: relative;
-            z-index: 2;
+            z-index: 10;
+            margin-top: 0em;
+            padding-top: 3em;
           }
         .cover .cta {
-            width: 80%;
+            width: 100%;
             text-align: center;
-            margin-top: -2em;
+            margin-top: 2em;
             margin-left: 0em;
             margin-right: 5em;
+            margin-bottom: -5em;
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: center;
-            padding: 1em;
+            padding: 2em;
         }
         .cover .cta h1 {
           font-size: 3.5em;
@@ -610,6 +612,27 @@ const VelaPlus = ({
             flex-direction: row;
             padding-bottom: 3em;
           }
+          .cover {
+            position: relative;
+            z-index: 5;
+            margin-top: 10em;
+            padding: 3em;
+            padding-top: 8em;
+            margin-bottom: 0em;
+          }
+          .cover .cta {
+            width: 100%;
+            text-align: center;
+            margin-top: 2em;
+            margin-left: 0em;
+            margin-right: 5em;
+            margin-bottom: -2em;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5em;
+          }
           .add {
             width: 22em;
             padding: 2em;
@@ -623,8 +646,9 @@ const VelaPlus = ({
             text-align: left;
           }
           .cover .cta {
-            margin-top: -8em;
+            margin-top: -2em;
             margin-left: 1em;
+            padding: -2em;
           }
           .protection {
             align-items: flex-end;
@@ -716,6 +740,12 @@ const VelaPlus = ({
           .models-content2 {
             margin-bottom: -4em; 
             padding: 2em;
+          }
+           }
+          .cover {
+            margin-top: -15em;
+            margin-left: 1em;
+            padding: -5em;
           }
            .models-content {
             margin-bottom: 0em; 
