@@ -222,6 +222,41 @@ const VelaPlus = ({
           </div>
         </div>
       </div>
+      <div className="models-content2">
+        <h1>
+          <br></br> 6 benefícios:
+          <br></br>{" "}
+        </h1>
+        <div className="models">
+          <div className="m1">
+            <img src="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2F01.png?alt=media&token=8de570ad-5d83-43a6-8fd9-fa8c6621aed6" />
+            <h3>Desconto em novas baterias</h3>
+            <p>
+              Sabemos da importância da bateria para a nossa relação e, por
+              isso, oferecemos 30% de desconto na compra de uma nova. Sempre bom
+              ter uma reserva, né?
+            </p>
+          </div>
+          <div className="m2">
+            <img src="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2F02.png?alt=media&token=0effc50e-94d0-4d4e-9b59-812a6a825a34" />
+            <h3>10% de desconto no site Vela</h3>
+            <p>
+              Em qualquer produto ou serviço da Vela. Acessórios lindos, peças
+              de manutenção e revisões para os assinantes. Inclusive na compra
+              de uma nova bike!
+            </p>
+          </div>
+          <div className="m3">
+            <img src="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2F03.png?alt=media&token=adce9b28-be43-4884-b08a-f91a3bbdb2ca" />
+            <h3>Benefícios com parceiros</h3>
+            <p>
+              Nossos Velejadores terão benefícios com todos os nossos parceiros
+              atuais e que estão por vir. Descontos, brindes e outras vantagens
+              exclusivas para quem assina.
+            </p>
+          </div>
+        </div>
+      </div>
       <div className="models-content">
         <div className="models">
           <div className="m1">
@@ -252,18 +287,16 @@ const VelaPlus = ({
             </p>
           </div>
         </div>
-        <div className="action">
-          <Button primary onClick={handleVelaPlusCta}>
-            Assinar
-          </Button>
-        </div>
       </div>
       <div className="protection2">
         <ProtectionImage2 />
       </div>
       <div className="questions">
         <PaddedView>
-          <h2>Possui dúvidas?</h2>
+          <h1>
+            Possui dúvidas?
+            <br></br> <br></br>{" "}
+          </h1>
           <Accordion
             color={white}
             hoverColor={"#DCF5EB"}
@@ -443,6 +476,13 @@ const VelaPlus = ({
           font-size: 1.2em;
           font-weight: 500;
         }
+
+         .add h23 {
+          color: ${velaRed};
+          font-size: 1em;
+          font-weight: 500;
+        }
+
         .add {
           padding: 1.5em;
           border-radius: 10px;
@@ -474,7 +514,6 @@ const VelaPlus = ({
         }
         .models-content {
           padding: 1em 2em 2em 2em;
-          background-color: ${offWhite};
         }
         .models {
           display: flex;
@@ -483,7 +522,7 @@ const VelaPlus = ({
         .models > * {
           margin: 2em 0;
           padding: 1em 2em 2em 2em;
-          background-color: ${white};
+          background-color: ${offWhite};
           box-shadow: 0px .75rem 1rem -1.25rem rgba(20,20,20, 0.8);
           display: flex;
           align-items: center;
@@ -497,7 +536,8 @@ const VelaPlus = ({
         }
         .models > * > img {
           max-width: 10em;
-          padding-bottom: 1em;
+          padding-bottom: 2em;
+          padding-top: 2em;
         }
         .service {
           background-color: ${offWhite};
@@ -675,9 +715,14 @@ const VelaPlus = ({
             margin-top: 2em;
           }
         }
+        
         @media only screen and (min-width: 770px) {
-          .models-content {
-            margin: 0 auto; 
+          .models-content2 {
+            margin-bottom: -4em; 
+            padding: 2em;
+          }
+           .models-content {
+            margin-bottom: 0em; 
             padding: 2em;
           }
           .models {
@@ -685,9 +730,9 @@ const VelaPlus = ({
             justify-content: center;
           }
           .models > * {
-            width: 21em;
-            margin: 2em;
-            padding: 1em 2em 2em 2em;
+            width: 22em;
+            margin: 1em;
+            padding: 0em 1em 1em 1em;
           }
           .models > * > .profile {
             font-size: 0.8em;
