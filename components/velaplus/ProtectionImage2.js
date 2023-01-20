@@ -1,12 +1,12 @@
 const ProtectionImage2 = () => (
   <div>
     <img
-      src="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FVela-Mais-Seguranca-Bike-Eletrica.jpg?alt=media&token=f94b3cfc-2a4f-4974-9b20-1955be5744b5"
+      src="/plus/Group-10-2-2.png"
       className="desktop"
       alt="Alarme e Segurança para Bike Elétrica"
     />
     <img
-      src="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FVela-Mais-Seguranca-Bike-Eletrica.jpg?alt=media&token=f94b3cfc-2a4f-4974-9b20-1955be5744b5"
+      src=""
       className="mobile"
       alt="Proteção contra Roubo e Furto para Bikes Elétricas"
     />

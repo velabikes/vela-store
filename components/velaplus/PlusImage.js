@@ -6,7 +6,7 @@ const PlusImage = () => (
       alt="Assinatura Segurança Bike Elétrica"
     />
     <img
-      src="/plus/Studio_Project-7-2.png"
+      src="/plus/Studio_Project-5-2.png"
       className="mobile"
       alt="Segurança Vela"
     />
