@@ -99,6 +99,9 @@ const VelaPlus = ({
           </h2>
         </div>
       </div>
+      <div className="protection2">
+        <ProtectionImage2 />
+      </div>
       <div className="app">
         <img src="/plus/app.gif" />
         <div className="apptext">
