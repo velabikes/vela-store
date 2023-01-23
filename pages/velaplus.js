@@ -249,7 +249,7 @@ const VelaPlus = ({
           <p>
             <AddIcon style={{ width: "1.1em" }} />
             Promoções exclusivas;
-          </p>
+          </p>/plus/Group-10-2-2.png
           <p>
             <AddIcon style={{ width: "1.1em" }} />
             Frete grátis no site Vela;

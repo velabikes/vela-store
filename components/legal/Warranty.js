@@ -20,7 +20,8 @@ const Warranty = () => (
         para a bateria e 3 anos para defeitos de fabricação referentes à
         construção dos quadros, não incluindo paralamas, protetor de corrente,
         acessórios e suas partes, já incluído em ambos os casos o prazo legal de
-        garantia de 90 dias, contados a partir da data de entrega do produto ao consumidor.
+        garantia de 90 dias, contados a partir da data de entrega do produto ao
+        consumidor.
       </p>
       <p>
         2. Toda e qualquer reclamação do comprador quanto a defeitos observados
@@ -86,8 +87,8 @@ const Warranty = () => (
         disponibilidade de prestação dos serviços no local indicado.
       </p>
       <p>
-        9. A expectativa de vida útil da bateria é de aproximadamente 3 (três)
-        anos ou 1000 ciclos completos de recarga, cabendo ao cliente após esse
+        9. A expectativa de vida útil da bateria pode variar entre 2 e 5 anos
+        anos a depender das condições e uso, cabendo ao cliente após esse
         período levar a sua bicicleta a oficina da VELA para realizar a
         substituição. É de responsabilidade exclusiva do cliente realizar ao
         menos 1 recarga completa a cada 2 meses e/ou sempre antes de armazenar a
