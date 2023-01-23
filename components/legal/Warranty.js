@@ -163,7 +163,6 @@ const Warranty = () => (
           parte do grupo de parceiros indicados ou em uma das lojas VELA.
         </li>
       </ul>
-      <small>Revisado e atualizado em 11 de março de 2021.</small>
     </Section>
   </div>
 );
