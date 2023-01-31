@@ -49,7 +49,37 @@ module.exports = async (req, res) => {
         type: ["charger", "service", "store"],
       },
       {
-        name: "Pacheco Bike",
+        name: "Barcellos Ipanema",
+        address: [
+          "Avenida Rainha Elisabeth, 440",
+          "Ipanema, Rio de Janeiro",
+          "RJ, 22081-042, Brasil",
+        ],
+        phone: "(21) 3489-9368",
+        pos: {
+          lat: -22.985616,
+          lng: -43.193712,
+        },
+        googlePlace: "ChIJhyeAVaXVmwAROY_7-MDCOLw",
+        type: ["service", "charger", "store"],
+      },
+      {
+        name: "Barcellos Sports Niterói",
+        address: [
+          "Rua Joaquim Távora, 33, Loja 03",
+          "Icaraí, Niterói",
+          "RJ, 24230-541, Brasil",
+        ],
+        phone: "(21) 2710-8069",
+        pos: {
+          lat: -22.912072,
+          lng: -43.108285,
+        },
+        googlePlace: "ChIJhyeAVaXVmwAROY_7-MDCOLw",
+        type: ["service", "charger", "store"],
+      },
+      {
+        name: "Adilson Pacheco",
         address: [
           "Atende em Domicilio",
           "Adilson Pacheco tem anos de experiência com bicicletas elétricas. Atende em toda Rio de Janeiro.",
@@ -59,7 +89,7 @@ module.exports = async (req, res) => {
           lat: -22.987231,
           lng: -43.191036,
         },
-        googlePlace: "ChIJh7Vk0DzVmwAReYwPxnXuByI",
+        googlePlace: "ChIJgQnGRliBmQARyunB2KoKiEI",
         type: ["service"],
       },
       {

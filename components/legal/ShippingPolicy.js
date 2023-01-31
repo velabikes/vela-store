@@ -57,7 +57,7 @@ const ShippingPolicy = () => (
         contato conosco via telefone, chat ou e-mail e solicitar a autorização
         de troca ou devolução.
       </p>
-      <small>Revisado e atualizado em 11 de março de 2021.</small>
+
     </Section>
   </div>
 );

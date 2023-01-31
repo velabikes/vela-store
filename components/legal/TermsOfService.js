@@ -455,7 +455,7 @@ const TermsOfService = () => (
         As perguntas sobre os Termos de Serviço devem ser enviadas para nós
         através do contato@velabikes.com.br.
       </p>
-      <small>Revisado e atualizado em 11 de março de 2021.</small>
+    
     </Section>
   </div>
 );

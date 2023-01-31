@@ -622,7 +622,7 @@ const PrivacyPolicy = () => (
         Recomendamos que os usuários revejam periodicamente este aviso para
         saber as informações mais recentes sobre nossas práticas de privacidade.
       </p>
-      <small>Revisado e atualizado em 11 de março de 2021.</small>
+    
     </Section>
   </div>
 );

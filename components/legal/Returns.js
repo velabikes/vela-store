@@ -64,7 +64,7 @@ const Returns = () => (
       <p>- Código do produto – conforme consta na nota fiscal, ao lado da descrição do produto</p>
       <p>- O motivo da troca</p>
       <p>Nossa Política de Troca e Devolução está de acordo com o Código de Defesa do Consumidor, preservando todos os seus direitos.</p>
-      <small>Revisado e atualizado em 11 de março de 2021.</small>
+
     </Section>
   </div>
 );

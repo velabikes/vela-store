@@ -83,7 +83,7 @@ const TermsOfVelaPlus = () => (
         <li>5.7 Se você for elegível para uma nova bicicleta no serviço Vela+, após 30 dias corridos caso sua bicicleta não for recuperada e todos os pontos do presente termos cumpridos, você receberá uma da mesma (ou melhor) idade e condição, mediante pagamento do valor de franquia definido em contrato;</li>
         <li>5.8 Se você for elegível para uma nova bicicleta sob o serviço Vela+, você receberá uma apenas sob a condição de transferir o título de propriedade da bicicleta antiga para a Vela. Isso permite que a Vela resgate a bicicleta velha caso ela seja eventualmente recuperada no decorrer dos meses ou anos subsequentes.</li>
       </ul>
-      <small>Revisado e atualizado em 11 de março de 2021.</small>
+     
     </Section>
   </div>
 );
