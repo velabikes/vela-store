@@ -19,11 +19,7 @@ const LocationFilter = ({ onFilterSelect, selectedFilter }) => (
       selected={selectedFilter === "service"}
       type="service"
     />
-    <LocationTag
-      onClick={() => onFilterSelect("grudi")}
-      selected={selectedFilter === "grudi"}
-      type="grudi"
-    />
+
     <style jsx>{`
       div {
         background: ${white};

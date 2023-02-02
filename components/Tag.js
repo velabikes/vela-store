@@ -26,9 +26,9 @@ const Tag = ({ label, icon, selected, onClick, ...props }) => (
       .icon > :global(*) {
         font-size: 1em;
         position: absolute;
-        width: 32px;
-        left: 0em;
-        bottom: -1px;
+        width: 36px;
+        left: 0.3em;
+        bottom: 0px;
         margin-right: 1em;
       }
       .label {
