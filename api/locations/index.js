@@ -86,10 +86,10 @@ module.exports = async (req, res) => {
         ],
         phone: "(21) 96440-9727",
         pos: {
-          lat: -22.987231,
-          lng: -43.191036,
+          lat: -22.808638,
+          lng: -43.328631,
         },
-        googlePlace: "ChIJgQnGRliBmQARyunB2KoKiEI",
+        googlePlace: "ChIJ_dGYdS17mQAR0ZpXZNonYKM",
         type: ["service"],
       },
       {
