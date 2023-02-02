@@ -5,6 +5,7 @@ const PlusImage = () => (
       className="desktop"
       alt="Assinatura Segurança Bike Elétrica"
     />
+    <img src="/plus/new_vplus.png" className="desktop" alt="Plano Vela+" />
     <img src="/plus/main_mobile.gif" className="mobile" alt="Segurança Vela" />
 
     <div className="animatedBG">
@@ -131,8 +132,9 @@ const PlusImage = () => (
       
       @media only screen and (min-width: 768px) {
           img {
-            max-height: 100vh;
-            width: 100%;
+            max-height: 500vh;
+            width: 50%;
+            margin-top: 20em;
           }
           .mobile {
             display: none;
@@ -143,6 +145,8 @@ const PlusImage = () => (
           .animatedBG {
             overflow: hidden;
             width: 150%;
+            margin-left: 12em;
+            margin-top: 8em;
             height: 100em;
             z-index: 2;
           }
