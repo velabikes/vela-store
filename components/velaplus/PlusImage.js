@@ -15,7 +15,7 @@ const PlusImage = () => (
       <div className="circle xsmall shade5"></div>
     </div>
     <div className="background">
-      <img src="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FBackgroundVelaMais.png?alt=media&token=52c11c62-9743-45ac-89f5-1ab7d6cdcd17" />
+      <img src="/plus/BG_Vplus.png" />
     </div>
     <style jsx>{`
       div {
