@@ -1,12 +1,18 @@
 const PlusImage = () => (
   <div>
-    <img
-      src="/plus/Main_bike_desktop.png"
-      className="desktop"
-      alt="Assinatura Segurança Bike Elétrica"
-    />
-    <img src="/plus/new_vplus.png" className="desktop" alt="Plano Vela+" />
-    <img src="/plus/main_mobile.gif" className="mobile" alt="Segurança Vela" />
+    <div>
+      <img
+        src="/plus/Main_bike_desktop.png"
+        className="desktop"
+        alt="Assinatura Segurança Bike Elétrica"
+      />
+
+      <img
+        src="/plus/main_mobile.gif"
+        className="mobile"
+        alt="Segurança Vela"
+      />
+    </div>
 
     <div className="animatedBG">
       <div className="circle xxlarge shade1"></div>
@@ -16,9 +22,15 @@ const PlusImage = () => (
       <div className="circle small shade5"></div>
       <div className="circle xsmall shade5"></div>
     </div>
+
     <div className="background">
       <img src="/plus/BG_Vplus.png" />
     </div>
+
+    <div className="title">
+      <img src="/plus/new_vplus.png" />
+    </div>
+
     <style jsx>{`
       div {
         background-color: #D6451;
@@ -141,6 +153,13 @@ const PlusImage = () => (
           }
           .desktop {
             display: initial;
+          }
+          .title img {
+            width: 50%;
+            height: 50%;
+            margin: 30em;
+            position: relative;
+            z-index: 3;
           }
           .animatedBG {
             overflow: hidden;
