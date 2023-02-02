@@ -32,10 +32,10 @@ const typeToIcon = (type) => {
   switch (type) {
     case "charger":
       return <MarkerChargerIcon />;
-    case "store":
-      return <MarkerStoreIcon />;
     case "service":
       return <MarkerServiceIcon />;
+    case "store":
+      return <MarkerStoreIcon />;
 
     default:
       return "?";
