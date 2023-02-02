@@ -1,11 +1,12 @@
 const PlusImage = () => (
   <div>
     <img
-      src="/plus/main_desktop.gif"
+      src="/plus/Main_bike_desktop.png"
       className="desktop"
       alt="Assinatura Segurança Bike Elétrica"
     />
     <img src="/plus/main_mobile.gif" className="mobile" alt="Segurança Vela" />
+
     <div className="animatedBG">
       <div className="circle xxlarge shade1"></div>
       <div className="circle xlarge shade2"></div>
@@ -35,7 +36,7 @@ const PlusImage = () => (
       }
       .background img {
         object-fit: cover;
-        z-index: 1;
+        z-index: 0;
         opacity: 1;
         height: 100vh;
       }
@@ -47,12 +48,12 @@ const PlusImage = () => (
         height: 100em;
         overflow: hidden;
         position: absolute;
-        z-index: 1; 
+        z-index: 2; 
       }
       .circle{
         position: absolute;
         border-radius: 50%;
-        background: #21C2E0;
+        background: #8acca8;
         animation: scaleIn 2.1s infinite;
         box-shadow: 0px 0px 1px 0px #B2F1FF;
       }
@@ -143,7 +144,7 @@ const PlusImage = () => (
             overflow: hidden;
             width: 150%;
             height: 100em;
-            z-index: 1;
+            z-index: 2;
           }
           .background img {
             width: 150%;
