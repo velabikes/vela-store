@@ -46,7 +46,7 @@ module.exports = async (req, res) => {
           lng: -47.563659,
         },
         googlePlace: "ChIJx3pF7n7ax5QRFVQG0nTnhZ0",
-        type: ["charger", "service", "store"],
+        type: ["store", "charger", "service"],
       },
       {
         name: "Barcellos Ipanema",
@@ -61,7 +61,7 @@ module.exports = async (req, res) => {
           lng: -43.193712,
         },
         googlePlace: "ChIJhyeAVaXVmwAROY_7-MDCOLw",
-        type: ["service", "charger", "store"],
+        type: ["store", "service", "charger"],
       },
       {
         name: "Barcellos Sports Niterói",
@@ -76,7 +76,7 @@ module.exports = async (req, res) => {
           lng: -43.108285,
         },
         googlePlace: "ChIJhyeAVaXVmwAROY_7-MDCOLw",
-        type: ["service", "charger", "store"],
+        type: ["store", "service", "charger"],
       },
       {
         name: "Adilson Pacheco",
