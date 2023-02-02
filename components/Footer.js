@@ -20,11 +20,7 @@ const Footer = () => (
                   <a>Vela 2</a>
                 </Link>
               </li>
-              <li>
-                <Link href="/velaplus" as="/velamais">
-                  <a>Vela+</a>
-                </Link>
-              </li>
+
               <li>
                 <Link href="/store" as="/loja">
                   <a>Acessórios</a>
