@@ -84,21 +84,7 @@ const VelaPlus = ({
         />
       </Head>
       <PlusImage />
-      <div className="cover">
-        <div className="cta">
-          <h1>
-            Novo Vela<span style={{ display: "none" }}>Mais</span>
-          </h1>
-          <BadgePlus />
-        </div>
-
-        <div className="cta">
-          <h2>
-            Agora também com AirTag ou SmartTag integrados e compatível com a
-            Vela 1 e Vela S.
-          </h2>
-        </div>
-      </div>
+      <div className="cover"></div>
       <div className="protection2">
         <ProtectionImage2 />
       </div>
@@ -249,7 +235,8 @@ const VelaPlus = ({
           <p>
             <AddIcon style={{ width: "1.1em" }} />
             Promoções exclusivas;
-          </p>/plus/Group-10-2-2.png
+          </p>
+          /plus/Group-10-2-2.png
           <p>
             <AddIcon style={{ width: "1.1em" }} />
             Frete grátis no site Vela;
