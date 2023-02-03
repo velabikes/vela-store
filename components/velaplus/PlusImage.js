@@ -50,6 +50,7 @@ const PlusImage = () => (
       .tags {
         max-width: 300px;
         margin-top: 3em;
+        z-index: 3;
       }
       
       .title {
@@ -70,8 +71,11 @@ const PlusImage = () => (
         display: none;
       }
       .animatedBG {
-        width: 10vw;
-        height: 10em;
+        position: absolute;
+        margin-top: 43em;
+        margin-left 12em;
+        width: 30px;
+        height: 30px;
         z-index: 1; 
       }
       .circle{
