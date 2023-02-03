@@ -1,7 +1,7 @@
 const PlusImage = () => (
   <div className="root">
     <div className="limiter">
-      <img className="title" src="/plus/new_vplus.png" alt="Title" />
+      <img className="title" src="/plus/new_vplus.svg" alt="Title" />
       <h1 className="text1">
         Agora com AirTag ou SmartTag integrados à sua Vela.
       </h1>
