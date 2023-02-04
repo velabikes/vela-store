@@ -43,7 +43,8 @@ const PlusImage = () => (
       }
 
       .bike1 {
-        max-width: 60em;
+        max-width: 45em;
+        margin-bottom:5em;
         z-index: 3;
       }
 
@@ -73,7 +74,7 @@ const PlusImage = () => (
       .animatedBG {
         position: absolute;
         margin-top: 43em;
-        margin-left 12em;
+        margin-left 0em;
         width: 30px;
         height: 30px;
         z-index: 1; 

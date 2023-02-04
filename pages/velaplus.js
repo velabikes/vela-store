@@ -85,8 +85,12 @@ const VelaPlus = ({
       </Head>
       <PlusImage />
       <div className="cover"></div>
-      <div className="protection2">
-        <ProtectionImage2 />
+      <div className="hands-block">
+        <img className="hands-bg" src="/plus/hands-bg.png" />
+        <img className="hands" src="/plus/hands.png" />
+        <p className="hands-text">
+          Compatível com<br></br>Apple ou Samsung
+        </p>
       </div>
       <div className="app">
         <img src="/plus/app.gif" />
@@ -429,6 +433,32 @@ const VelaPlus = ({
           justify-content: center;
           width: 100%;
           background-color: ${velaRed};
+        }
+        
+        .hands-bg {
+          position: absolute; 
+           width: 100%;
+           z-index: 1;
+        }
+
+        .hands {
+          position: absolute;
+          margin-bottom: 0px;
+          margin-top: 2.2em;
+          z-index: 1;
+          width: 60%;
+        }
+
+        .hands-text {
+          position: absolute;
+          z-index: 5;
+          width: 50%;
+          text-align: center;
+          margin-top: 39%;
+          margin-left: 4%;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 120%;
         }
         .protection .cta {
           width: 20em;
