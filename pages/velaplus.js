@@ -14,9 +14,11 @@ import {
   Notifications,
 } from "../components/Icons";
 import Button from "../components/Button";
-import PlusImage from "components/velaplus/PlusImage";
+import Cover from "components/velaplus/Cover";
+import Tracking from "components/velaplus/Tracking";
 import ProtectionImage from "components/velaplus/ProtectionImage";
 import ProtectionImage2 from "components/velaplus/ProtectionImage2";
+import Theft from "../components/velaplus/Theft";
 
 const VelaPlus = ({
   checkout,
@@ -83,69 +85,9 @@ const VelaPlus = ({
           content="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FPlanoVelaMais.png?alt=media&token=4a7061bc-bbc8-418c-af4b-ea0c8a3fc428"
         />
       </Head>
-      <PlusImage />
-      <div className="cover"></div>
-      <div className="hands-block">
-        <img className="hands-bg" src="/plus/hands-bg.png" />
-        <img className="hands" src="/plus/hands.png" />
-        <p className="hands-text">
-          Compatível com<br></br>Apple ou Samsung
-        </p>
-        <img className="AppBoxBG" src="/plus/AppBoxBG.png" />
-        <p className="AppBoxText1">Em tempo real na palma da sua mão.</p>{" "}
-      </div>
-      <div className="app">
-        <img src="/plus/app.gif" />
-        <div className="apptext">
-          <h2>Localização em tempo real na palma da sua mão</h2>
-          <h5>
-            <br></br>
-            Localização em tempo real com o rastreamento via AirTag ou
-            SmartTag.Você conectado com sua Vela, independente do modelo.
-            Integrado com a parte eletrônica, possui um sistema de backup capaz
-            de atingir até 15 anos em pleno funcionamento.
-          </h5>
-          <br></br>
-          <p>
-            Já imaginou saber onde sua bike está a qualquer momento? Pois é,
-            essa função existe e mantém você super conectado com sua Vela,
-            independente do modelo: Vela 1, Vela S, Vela 1.5 ou Vela 2. Com a
-            bateria 15x mais potente, nosso rastreamento integrado possui
-            autonomia para até 15 anos, mesmo sem a alimentação da bateria da
-            bike.
-          </p>
-
-          <div className="bfunctions">
-            <div className="bleft">
-              <Chat />
-              <h4>Chat exclusivo e dedicado</h4>
-            </div>
-            <div className="bcenter">
-              <GPS />
-              <h4>Rastreamento GPS integrado</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="protection">
-        <ProtectionImage />
-        <div className="cta">
-          <h2>
-            Proteção contra <br />
-            roubo e furto
-          </h2>
-          <br></br>
-          <h4>
-            Segurança em primeiro lugar para você pedalar pela cidade sem medo!
-          </h4>
-          <br></br>
-          <p>
-            Com a assinatura do Novo Plano Vela+ você conta com mais segurança.
-            Ajudamos na busca, e, caso não seja possível resgatá-la,
-            substituímos ela para você.
-          </p>
-        </div>
-      </div>
+      <Cover />
+      <Tracking />
+      <Theft />
 
       <div className="models-content2">
         <h1>
@@ -402,67 +344,8 @@ const VelaPlus = ({
       </div>
       <style jsx>
         {`
-        .cover {
-            position: relative;
-            z-index: -2;
-            margin-top: 0em;
-            padding-top: 3em;
-          }
-        .cover .cta {
-            width: 100%;
-            text-align: center;
-            margin-top: 2em;
-            margin-left: 0em;
-            margin-right: 5em;
-            margin-bottom: -5em;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            padding: 1em;
-            padding-top: 3em;
-          
-        }
-        .cover .cta h1 {
-          font-size: 3.5em;
-          color: ${offBlack};
-        }
-        .protection {
-          z-index: 3;
-          position: relative;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          width: 100%;
-          background-color: ${velaRed};
-        }
+    
         
-        .hands-bg {
-          position: absolute; 
-           width: 100%;
-           z-index: 3;
-        }
-
-        .hands {
-          position: absolute;
-          margin-bottom: 0px;
-          margin-top: 2.2em;
-          z-index: 4;
-          width: 60%;
-        }
-
-        .hands-text {
-          position: absolute;
-          z-index: 5;
-          width: 50%;
-          text-align: center;
-          margin-top: 39%;
-          margin-left: 4%;
-          font-size: 16px;
-          font-weight: 600;
-          line-height: 120%;
-        }
 
         .AppBoxText1 {
 position: absolute;
