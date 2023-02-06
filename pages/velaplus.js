@@ -91,6 +91,8 @@ const VelaPlus = ({
         <p className="hands-text">
           Compatível com<br></br>Apple ou Samsung
         </p>
+        <img className="AppBoxBG" src="/plus/AppBoxBG.png" />
+        <p className="AppBoxText1">Em tempo real na palma da sua mão.</p>{" "}
       </div>
       <div className="app">
         <img src="/plus/app.gif" />
@@ -98,9 +100,10 @@ const VelaPlus = ({
           <h2>Localização em tempo real na palma da sua mão</h2>
           <h5>
             <br></br>
-            Segurança nunca é demais. Com o rastreamento via AirTag ou SmartTag,
-            a localização da sua vela está sempre ao seu alcance com toda a
-            conveniência e praticidade que os dispositivos oferecem.
+            Localização em tempo real com o rastreamento via AirTag ou
+            SmartTag.Você conectado com sua Vela, independente do modelo.
+            Integrado com a parte eletrônica, possui um sistema de backup capaz
+            de atingir até 15 anos em pleno funcionamento.
           </h5>
           <br></br>
           <p>
@@ -401,7 +404,7 @@ const VelaPlus = ({
         {`
         .cover {
             position: relative;
-            z-index: 10;
+            z-index: -2;
             margin-top: 0em;
             padding-top: 3em;
           }
@@ -438,14 +441,14 @@ const VelaPlus = ({
         .hands-bg {
           position: absolute; 
            width: 100%;
-           z-index: 1;
+           z-index: 3;
         }
 
         .hands {
           position: absolute;
           margin-bottom: 0px;
           margin-top: 2.2em;
-          z-index: 1;
+          z-index: 4;
           width: 60%;
         }
 
@@ -460,6 +463,19 @@ const VelaPlus = ({
           font-weight: 600;
           line-height: 120%;
         }
+
+        .AppBoxText1 {
+position: absolute;
+          z-index: 5;
+          width: 50%;
+          text-align: center;
+          margin-top: 10%;
+          margin-left: 60%;
+          font-size: 16px;
+          font-weight: 600;
+          line-height: 120%;
+        }
+
         .protection .cta {
           width: 20em;
           text-align: center;
@@ -483,6 +499,14 @@ const VelaPlus = ({
           color: ${offBlack};
           font-weight: 500;
           
+        }
+        .AppBoxBG {
+          position: relative;
+          z-index: 5;
+          height: 400px;
+          width: 410px;
+          margin-left: 65%;
+          margin-top: 15%;
         }
          .add h22 {
           color: ${velaRed};

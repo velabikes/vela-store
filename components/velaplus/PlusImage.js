@@ -43,9 +43,9 @@ const PlusImage = () => (
       }
 
       .bike1 {
-        max-width: 45em;
-        margin-bottom:5em;
-        z-index: 3;
+        max-width: 60em;
+        margin-bottom: -17em;
+        z-index: 2;
       }
 
       .tags {
