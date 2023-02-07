@@ -11,7 +11,7 @@ const Security = () => {
         </p>
         <div className="slider">
           <div className="slider-card">
-            <img src="/plus/slider-card-10.png" />
+            <img src="/plus/slider-card-10.svg" />
             <h3>10% OFF na sua Vela</h3>
             <p className="card-text">
               Assine e ganhe R$1.000 de desconto na compra da sua Vela.
@@ -20,7 +20,8 @@ const Security = () => {
             </p>
           </div>
           <div className="slider-card">
-            <img src="/plus/slider-card-10.png" /> <h3>Bike Reserva</h3>
+            <img src="/plus/slider-card-10.svg" />
+            <h3>Bike Reserva</h3>
             <p className="card-text">
               Ficar sem bike? Nem pensar. Clientes Vela+ tem acesso à uma bike
               reserva enquanto sua Vela estiver passando por manutenções. Válido
@@ -28,7 +29,7 @@ const Security = () => {
             </p>
           </div>
           <div className="slider-card">
-            <img src="/plus/slider-card-10.png" />{" "}
+            <img src="/plus/slider-card-10.svg" />
             <h3>Leva & Traz sem custo</h3>
             <p className="card-text">
               Para revisões e manutenções na nossa central, a retirada e entrega
@@ -36,7 +37,7 @@ const Security = () => {
             </p>
           </div>
           <div className="slider-card">
-            <img src="/plus/slider-card-10.png" />{" "}
+            <img src="/plus/slider-card-10.svg" />
             <h3>Frete grátis para todo Brasil</h3>
             <p className="card-text">
               Pedidos realizados no nosso site entregues sem custo para
@@ -44,7 +45,7 @@ const Security = () => {
             </p>
           </div>
           <div className="slider-card">
-            <img src="/plus/slider-card-10.png" />{" "}
+            <img src="/plus/slider-card-10.svg" />
             <h3>Baterias com desconto</h3>
             <p className="card-text">
               A bateria é super importante para o Velejador. Por isso,
@@ -53,7 +54,8 @@ const Security = () => {
             </p>
           </div>
           <div className="slider-card">
-            <img src="/plus/slider-card-10.png" /> <h3>Promoções exclusivas</h3>
+            <img src="/plus/slider-card-10.svg" />
+            <h3>Promoções exclusivas</h3>
             <p className="card-text">
               Segurança nunca é demais. Assinantes garantem 30% de desconto na
               compra de cadeados e 20% de desconto em todos os acessórios.
