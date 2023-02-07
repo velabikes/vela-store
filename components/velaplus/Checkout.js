@@ -23,7 +23,9 @@ const Checkout = () => {
           <div className="buy">
             <h2 className="desktop">Tudo que sua Vela precisa está aqui.</h2>
             <div className="button-action">
-              <h3>Apenas R$ 99/mês</h3>
+              <h3>
+                Apenas <s>R$ 99/mês</s> <p>R$ 79/mês</p>
+              </h3>
               <p>Pacote anual parcelado em até 12x sem juros no cartão.</p>
               <img src="/plus/button.svg" />
             </div>
@@ -32,7 +34,7 @@ const Checkout = () => {
       </div>
       <style jsx>{`
         .root {
-          background: linear-gradient(221.51deg, #8ecec9 1.22%, #8acca8 100%);
+          background: linear-gradient(221.51deg, #8ecec9 1.22%, #8acca8 180%);
         }
         .limiter {
           max-width: 1100px;
@@ -82,7 +84,13 @@ const Checkout = () => {
           font-weight: 700;
           font-size: 20px;
         }
-
+        .price {
+          text-decoration: line-through;
+          color: ${velaRed};
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 28.8px;
+        }
         .button-action img {
           width: 30%;
           height: auto;

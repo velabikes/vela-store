@@ -20,7 +20,7 @@ const Security = () => {
             </p>
           </div>
           <div className="slider-card">
-            <img src="/plus/slider-card-10.svg" />
+            <img src="/plus/slider-card-reserva.svg" />
             <h3>Bike Reserva</h3>
             <p className="card-text">
               Ficar sem bike? Nem pensar. Clientes Vela+ tem acesso à uma bike
@@ -29,7 +29,7 @@ const Security = () => {
             </p>
           </div>
           <div className="slider-card">
-            <img src="/plus/slider-card-10.svg" />
+            <img src="/plus/slider-card-levaetraz.svg" />
             <h3>Leva & Traz sem custo</h3>
             <p className="card-text">
               Para revisões e manutenções na nossa central, a retirada e entrega
@@ -37,7 +37,7 @@ const Security = () => {
             </p>
           </div>
           <div className="slider-card">
-            <img src="/plus/slider-card-10.svg" />
+            <img src="/plus/slider-card-frete.svg" />
             <h3>Frete grátis para todo Brasil</h3>
             <p className="card-text">
               Pedidos realizados no nosso site entregues sem custo para
@@ -45,7 +45,7 @@ const Security = () => {
             </p>
           </div>
           <div className="slider-card">
-            <img src="/plus/slider-card-10.svg" />
+            <img src="/plus/slider-card-baterias.svg" />
             <h3>Baterias com desconto</h3>
             <p className="card-text">
               A bateria é super importante para o Velejador. Por isso,
@@ -54,7 +54,7 @@ const Security = () => {
             </p>
           </div>
           <div className="slider-card">
-            <img src="/plus/slider-card-10.svg" />
+            <img src="/plus/slider-card-promocoes.svg" />
             <h3>Promoções exclusivas</h3>
             <p className="card-text">
               Segurança nunca é demais. Assinantes garantem 30% de desconto na
@@ -118,7 +118,7 @@ const Security = () => {
         }
 
         .slider-card {
-          height: 500px;
+          height: 380px;
           background: #f5f1ec;
           padding: 20px;
         }
