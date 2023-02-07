@@ -6,7 +6,7 @@ const Checkout = () => {
       <div className="limiter">
         <div className="box">
           <div className="list">
-            <h2 className="mobile">Tudo que sua Vela precisa está aqui.</h2>
+            <h2 className="mobile">Tudo que sua Vela precisa:</h2>
             <ul>
               <li>+ Proteção contra roubo, furto e acidentes</li>
               <li>+ Rastreamento AirTag ou SmartTag integrado</li>
@@ -60,9 +60,11 @@ const Checkout = () => {
         }
 
         h2 {
-          text-algin: left;
-          font-weight: 425;
-          font-size: 32px;
+       
+          font-size: 40px;
+          font-weight: 700;
+          line-height: 48px;
+        
           margin-top: 30%;
           padding: 16px;
           margin-bottom: 10%;
@@ -137,6 +139,11 @@ const Checkout = () => {
           .buy {
             margin-top: 15%;
           }
+
+          .button-action img {
+          width: 40%;
+          height: auto;
+          margin-top: 10px;
         }
       `}</style>
     </div>
