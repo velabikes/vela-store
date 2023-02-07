@@ -96,14 +96,14 @@ const VelaPlus = ({
       <div className="questions">
         <PaddedView>
           <h1>
-            Possui dúvidas?
+            Dúvidas frequêntes?
             <br></br> <br></br>{" "}
           </h1>
           <Accordion
             color={white}
             hoverColor={"#DCF5EB"}
             textColor={offBlack}
-            title="1. O que eu preciso para poder contratar a assinatura do plano?"
+            title="1. O que eu preciso para contratar a assinatura do plano?"
             content="Basta você ser um cliente Vela e possui um dos modelos que já fabricamos: Vela 1, Vela S e Vela 2. Também vamos precisar de alguns documentos, como nota fiscal e comprovante de residência para análise e elaboração do contrato com os termos."
           />
           <Accordion
