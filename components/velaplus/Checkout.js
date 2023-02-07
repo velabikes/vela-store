@@ -6,6 +6,7 @@ const Checkout = () => {
       <div className="limiter">
         <div className="box">
           <div className="list">
+            <h2 className="mobile">Tudo que sua Vela precisa está aqui.</h2>
             <ul>
               <li>+ Proteção contra roubo, furto e acidentes</li>
               <li>+ Rastreamento AirTag ou SmartTag integrado</li>
@@ -20,7 +21,7 @@ const Checkout = () => {
             <small>*Exclusivo para Grande São Paulo</small>
           </div>
           <div className="buy">
-            <h2>Tudo que sua Vela precisa está aqui.</h2>
+            <h2 className="desktop">Tudo que sua Vela precisa está aqui.</h2>
             <div className="button-action">
               <h3>Apenas R$ 99/mês</h3>
               <p>Pacote anual parcelado em até 12x sem juros no cartão.</p>
@@ -65,6 +66,10 @@ const Checkout = () => {
           margin-bottom: 10%;
         }
 
+        .mobile {
+          display: none;
+        }
+
         h3 {
           color: ${velaRed};
           font-size: 24px;
@@ -93,6 +98,32 @@ const Checkout = () => {
           .list,
           .buy {
             width: 45%;
+          }
+        }
+
+        @media (max-width: 500px) {
+          h2 {
+            padding: 0px;
+          }
+
+          .list {
+            padding-top: 50px;
+          }
+
+          ul {
+            padding-top: 30px;
+          }
+
+          .mobile {
+            display: initial;
+          }
+
+          .desktop {
+            display: none;
+          }
+
+          .buy {
+            margin-top: 15%;
           }
         }
       `}</style>
