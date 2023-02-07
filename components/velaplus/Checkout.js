@@ -110,6 +110,10 @@ const Checkout = () => {
         }
 
         @media (max-width: 500px) {
+          .limiter {
+            padding: 32px 32px;
+          }
+
           h2 {
             padding: 0px;
           }

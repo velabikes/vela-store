@@ -30,7 +30,7 @@ const Tracking = () => {
           line-height: 48px;
         }
         .bg {
-          background-image: url("/plus/hands.png");
+          background-image: url("/plus/hands2.png");
           background-repeat: no-repeat;
           background-position: bottom center;
         }
@@ -57,10 +57,10 @@ const Tracking = () => {
         }
         @media (min-width: 768px) {
           .bg {
-            background-position: calc(50% - 300px) bottom;
+            background-position: calc(55% - 300px) bottom;
           }
           .bg-text {
-            left: calc(50% - 300px);
+            left: calc(52% - 300px);
             transform: translateX(-50%);
             bottom: 40px;
           }
@@ -71,25 +71,25 @@ const Tracking = () => {
             min-height: 720px;
           }
           .box {
-            min-width: 400px;
+            min-width: 300px;
             width: 40%;
           }
         }
         @media (max-width: 768px) {
           .bg {
-            background-size: 153%;
-            background-position: 57% 2em;
+            background-size: 165%;
+            background-position: 55% 5em;
           }
           .bg-text {
             left: 50%;
             transform: translateX(-50%);
-            top: 100vw;
+            top: 120vw;
           }
           .limiter {
             display: flex;
           }
           .box {
-            margin-top: 500px;
+            margin-top: 600px;
           }
         }
       `}</style>
