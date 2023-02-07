@@ -72,9 +72,9 @@ const Security = () => {
         }
 
         h2 {
+          font-size: 40px;
           font-weight: 700;
-          font-size: 32px;
-          line-height: 120%;
+          line-height: 48px;
           text-align: center;
           font-family: "filson-pro";
           padding: 48px 32px 0px 32px;

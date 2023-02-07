@@ -23,6 +23,12 @@ const Tracking = () => {
           background-size: cover;
           position: relative;
         }
+
+        h2 {
+          font-size: 40px;
+          font-weight: 700;
+          line-height: 48px;
+        }
         .bg {
           background-image: url("/plus/hands.png");
           background-repeat: no-repeat;
