@@ -26,7 +26,7 @@ const Theft = () => {
           position: relative;
         }
         .limiter {
-          max-width: 1100px;
+          max-width: 1200px;
           margin: 0 auto;
         }
         .box {

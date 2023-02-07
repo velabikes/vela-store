@@ -33,15 +33,16 @@ const Tracking = () => {
           background-image: url("/plus/hands2.png");
           background-repeat: no-repeat;
           background-position: bottom center;
+          background-size: 50vw;
         }
         .limiter {
-          max-width: 1100px;
+          max-width: 1200px;
           margin: 0 auto;
         }
         .bg-text {
           position: absolute;
           text-align: center;
-          font-size: 16px;
+          font-size: 20px;
           font-weight: 600;
           line-height: 120%;
         }
@@ -55,9 +56,12 @@ const Tracking = () => {
           gap: 16px;
           margin: 32px;
         }
-        @media (min-width: 768px) {
+
+        @media (min-width: 500px) {
           .bg {
             background-position: calc(55% - 300px) bottom;
+            background-size: 70%;
+            background-height: 60%;
           }
           .bg-text {
             left: calc(52% - 300px);
@@ -75,7 +79,7 @@ const Tracking = () => {
             width: 40%;
           }
         }
-        @media (max-width: 768px) {
+        @media (max-width: 500px) {
           .bg {
             background-size: 165%;
             background-position: 55% 5em;

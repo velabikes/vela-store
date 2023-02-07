@@ -27,11 +27,14 @@ const Checkout = () => {
                 Apenas <s>R$ 99/mês</s> <p>R$ 79/mês</p>
               </h3>
               <p>Pacote anual parcelado em até 12x sem juros no cartão.</p>
-              <img src="/plus/button.svg" />
+              <div>
+                <img src="/plus/button.svg" />
+              </div>
             </div>
           </div>
         </div>
       </div>
+
       <style jsx>{`
         .root {
           background: linear-gradient(221.51deg, #8ecec9 1.22%, #8acca8 180%);
