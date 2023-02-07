@@ -12,37 +12,52 @@ const Security = () => {
         <div className="slider">
           <div className="slider-card">
             <img src="/plus/slider-card-10.png" />
-            <h3>10% OFF na compra da sua Vela</h3>
+            <h3>10% OFF na sua Vela</h3>
             <p className="card-text">
               Assine e ganhe R$1.000 de desconto na compra da sua Vela.
-              Aproveite esse desconto exclusivo no momento da compra ou para
-              presentear alguém especial.
+              Aproveite esse desconto exclusivo para você ou para presentear
+              alguém especial.
             </p>
           </div>
           <div className="slider-card">
-            <img src="" />
-            <h3>10% OFF</h3>
-            <p className="card-text">testando a descrição dessa parte</p>
+            <img src="/plus/slider-card-10.png" /> <h3>Bike Reserva</h3>
+            <p className="card-text">
+              Ficar sem bike? Nem pensar. Clientes Vela+ tem acesso à uma bike
+              reserva enquanto sua Vela estiver passando por manutenções. Válido
+              para a Grande SP.
+            </p>
           </div>
           <div className="slider-card">
-            <img src="" />
-            <h3>10% OFF</h3>
-            <p className="card-text">testando a descrição dessa parte</p>
+            <img src="/plus/slider-card-10.png" />{" "}
+            <h3>Leva & Traz sem custo</h3>
+            <p className="card-text">
+              Para revisões e manutenções na nossa central, a retirada e entrega
+              da sua Vela é por nossa conta. Válido para a Grande SP.
+            </p>
           </div>
           <div className="slider-card">
-            <img src="" />
-            <h3>10% OFF</h3>
-            <p className="card-text">testando a descrição dessa parte</p>
+            <img src="/plus/slider-card-10.png" />{" "}
+            <h3>Frete grátis para todo Brasil</h3>
+            <p className="card-text">
+              Pedidos realizados no nosso site entregues sem custo para
+              assinantes. Válido em todo território nacional.
+            </p>
           </div>
           <div className="slider-card">
-            <img src="" />
-            <h3>10% OFF</h3>
-            <p className="card-text">testando a descrição dessa parte</p>
+            <img src="/plus/slider-card-10.png" />{" "}
+            <h3>Baterias com desconto</h3>
+            <p className="card-text">
+              A bateria é super importante para o Velejador. Por isso,
+              assinantes do Novo Plano Vela + garantem 30% de desconto na compra
+              de bateria extra.
+            </p>
           </div>
           <div className="slider-card">
-            <img src="" />
-            <h3>10% OFF</h3>
-            <p className="card-text">testando a descrição dessa parte</p>
+            <img src="/plus/slider-card-10.png" /> <h3>Promoções exclusivas</h3>
+            <p className="card-text">
+              Segurança nunca é demais. Assinantes garantem 30% de desconto na
+              compra de cadeados e 20% de desconto em todos os acessórios.
+            </p>
           </div>
         </div>
       </div>
