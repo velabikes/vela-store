@@ -131,77 +131,70 @@ const VelaPlus = ({
             color={white}
             hoverColor={"#DCF5EB"}
             textColor={offBlack}
-            title="5. Posso cancelar antes do término dos 12 meses?"
-            content="Como o plano inclui uma proteção contra roubo/furto e a Vela possui contratos de ativação do sinal e segurança durante o prazo de 12 meses, o cancelamento da assinatura poderá ser solicitado durante o período contratado mediante ao pagamento de uma taxa equivalente a 50% com base na proporção do período que permanecerá em aberto."
-          />
-          <Accordion
-            color={white}
-            hoverColor={"#DCF5EB"}
-            textColor={offBlack}
-            title="6. Já sou assinante Vela+, como posso usufruir do Novo Plano Vela+?"
+            title="5. Já sou assinante Vela+, como posso usufruir do Novo Plano Vela+?"
             content="Os benefícios acrescentados no Novo Plano Vela+ já estão disponíveis para os atuais assinantes, é só começar a usar. Para agendar a instalação do localizador AirTag ou SmartTag, basta fazer a renovação e adicionar mais um ano de benefícios."
           />
           <Accordion
             color={white}
             hoverColor={"#DCF5EB"}
             textColor={offBlack}
-            title="7. Minha Vela foi comprada de segunda mão. Posso contratar o Novo Plano Vela+?"
+            title="6. Minha Vela foi comprada de segunda mão. Posso contratar o Novo Plano Vela+?"
             content="Sim, é possível contratar o Novo Plano Vela+ desde que o assinante possua a nota fiscal da bicicleta."
           />
           <Accordion
             color={white}
             hoverColor={"#DCF5EB"}
             textColor={offBlack}
-            title="8. A proteção cobre acidentes?"
+            title="7. A proteção cobre acidentes?"
             content="O Novo Plano Vela+ garante desconto de 50% para o conserto da Vela em casos de acidente causados por terceiros, sendo obrigatório, a apresentação do boletim de ocorrência. O plano cobre apenas os danos causados na bike, não restituído nenhum valor para terceiros."
           />
           <Accordion
             color={white}
             hoverColor={"#DCF5EB"}
             textColor={offBlack}
-            title="9. Quais os passos caso eu tenha a minha Vela roubada ou furtada?"
+            title="8. Quais os passos caso eu tenha a minha Vela roubada ou furtada?"
             content="O primeiro passo é enviar um email para a nossa equipe de atendimento (contato@velabikes.com.br) com as suas informações de pedido, nome, contato, data, hora juntamente com uma cópia do boletim de ocorrência. Nossa equipe vai dar início ao bloqueio da conta, bloqueio da bike e à busca pela sua Vela. Caso não seja recuperada num prazo de 45 dias corridos (“período de busca”), seguiremos com as etapas para a produção e substituição por uma nova bike."
           />
           <Accordion
             color={white}
             hoverColor={"#DCF5EB"}
             textColor={offBlack}
-            title="10. Qual o prazo de entrega da nova bike de substituição da roubada/furtada?"
+            title="9. Qual o prazo de entrega da nova bike de substituição da roubada/furtada?"
             content="O prazo esperado para a produção de uma nova unidade da Vela é de 15 dias (“período de produção”) após o término do “período de busca”. Para sua comodidade, é possível solicitar o empréstimo de uma Vela da nossa frota para seu uso durante o “período de busca” e “período de produção”, basta solicitar através da nossa equipe de atendimento."
           />
           <Accordion
             color={white}
             hoverColor={"#DCF5EB"}
             textColor={offBlack}
-            title="11. Existe algum custo fixo que devo pagar, caso minha Vela seja roubada/furtada, para ter direito a uma nova bike?"
+            title="10. Existe algum custo fixo que devo pagar, caso minha Vela seja roubada/furtada, para ter direito a uma nova bike?"
             content="Dada a aprovação da restituição de uma nova unidade da Vela, o cliente terá um desconto para a compra de uma nova Vela, mediante modelos disponíveis no site da marca. O pedido da bike de restituição deverá acontecer exclusivamente através do site oficial da marca (www.velabikes.com.br) e o desconto para essa nova aquisição será de 80% no caso de roubo e 70% no caso de furto. O valor deverá ser pago por meio de um cartão de crédito podendo ser parcelado em até 12x sem juros."
           />
           <Accordion
             color={white}
             hoverColor={"#DCF5EB"}
             textColor={offBlack}
-            title="12. Como garantir que não vou perder o benefício da proteção contra roubo e furto? Quais as principais condições para ser validada?"
+            title="11. Como garantir que não vou perder o benefício da proteção contra roubo e furto? Quais as principais condições para ser validada?"
             content="Para ter acesso ao período de busca e, possivelmente, à bicicleta de reposição, o cliente deve seguir as indicações da Vela para manter seu plano ativo. Os principais pontos para furto são: boletim de ocorrência e estar utilizando qualquer cadeado do modelo U-lock. Já para roubo, apenas o boletim de ocorrência é suficiente."
           />
           <Accordion
             color={white}
             hoverColor={"#DCF5EB"}
             textColor={offBlack}
-            title="13. A proteção cobre os custos dos acessórios, se estiverem instalados na bike?"
+            title="12. A proteção cobre os custos dos acessórios, se estiverem instalados na bike?"
             content="A proteção está atrelada exclusivamente à bicicleta em questão e a Vela não se responsabiliza ou cobre custos envolvidos com acessórios instalados na bike, sejam de terceiros, adquiridos na Vela ou qualquer outro item ou produto do cliente que possa ter sido roubado ou furtado na ocasião."
           />
           <Accordion
             color={white}
             hoverColor={"#DCF5EB"}
             textColor={offBlack}
-            title="14. Quais são as condições para a gratuidade dos Serviços Leva&Traz?"
+            title="13. Quais são as condições para a gratuidade dos Serviços Leva&Traz?"
             content="A gratuidade atualmente é válida apenas para a Grande São Paulo e pode ser acionada para a realização de serviços exclusivamente com a Vela. Exemplo: a gratuidade vale para o transporte para a realização de uma revisão ou reparo na fábrica da Vela."
           />
           <Accordion
             color={white}
             hoverColor={"#DCF5EB"}
             textColor={offBlack}
-            title="15. Como funciona o rastreamento via AirTag ou SmartTag?"
+            title="14. Como funciona o rastreamento via AirTag ou SmartTag?"
             content="Os dois dispositivos funcionam de forma muito similar, um para cada tipo de sistema operacional. Basta sincronizar seu celular com o dispositivo e rastreá-lo através dos respectivos aplicativos.  A integração do AirTag/SmartTag com o sistema da Vela permite que esse dispositivo de rastreamento permaneça ativo por até 15 anos, mesmo sem a alimentação da bateria da bike. O dispositivo é instalado na parte interna do painel, não pode ser acessado sem que o painel/sistema seja violado/danificado e a instalação pode ser realizada em qualquer oficina autorizada da Vela. 
 Para mais informações a respeito dos dispositivos AirTag, acesse o link: https://www.apple.com/br/airtag/ 
 Para mais informações a respeito dos dispositivos SmartTag, acesse o link: https://www.samsung.com/br/mobile-accessories/galaxy-smarttag-black-ei-t5300bbegbr/  "
