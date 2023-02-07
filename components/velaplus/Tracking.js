@@ -10,7 +10,7 @@ const Tracking = () => {
             <h2>Na palma da mão.</h2>
             <p>
               Localização em tempo real com o rastreamento via AirTag ou
-              SmartTag.Você conectado com sua Vela, independente do modelo.
+              SmartTag. Você conectado com sua Vela, independente do modelo.
               Integrado com a parte eletrônica, possui um sistema de backup
               capaz de atingir até 15 anos em pleno funcionamento.
             </p>
