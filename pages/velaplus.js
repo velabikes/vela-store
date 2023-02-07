@@ -403,6 +403,12 @@ position: absolute;
           font-weight: 500;
         }
 
+         .add h24 {
+          color: ${offWhite};
+          font-size: 1em;
+          font-weight: 500;
+        }
+
         .add {
           padding: 1.5em;
           border-radius: 10px;

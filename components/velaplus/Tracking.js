@@ -71,19 +71,19 @@ const Tracking = () => {
         }
         @media (max-width: 768px) {
           .bg {
-            background-size: 143%;
+            background-size: 153%;
             background-position: 57% 2em;
           }
           .bg-text {
             left: 50%;
             transform: translateX(-50%);
-            top: 93vw;
+            top: 100vw;
           }
           .limiter {
             display: flex;
           }
           .box {
-            margin-top: 490px;
+            margin-top: 655px;
           }
         }
       `}</style>
