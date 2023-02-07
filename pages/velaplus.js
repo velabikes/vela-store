@@ -104,7 +104,7 @@ const VelaPlus = ({
             hoverColor={"#DCF5EB"}
             textColor={offBlack}
             title="1. O que eu preciso para contratar a assinatura do plano?"
-            content="Basta você ser um cliente Vela e possui um dos modelos que já fabricamos: Vela 1, Vela S e Vela 2. Também vamos precisar de alguns documentos, como nota fiscal e comprovante de residência para análise e elaboração do contrato com os termos."
+            content="Basta você ser um cliente Vela e possuir um dos modelos que já fabricamos: Vela 1, Vela S e Vela 2. Também vamos precisar de alguns documentos, como nota fiscal e comprovante de residência para análise e elaboração do contrato com os termos."
           />
           <Accordion
             color={white}

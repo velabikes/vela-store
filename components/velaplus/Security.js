@@ -4,7 +4,7 @@ const Security = () => {
   return (
     <div className="root">
       <div className="limiter">
-        <h2>Segurança e tecnologia.</h2>
+        <h2>Vantagens exclusivas.</h2>
         <p className="subtitle">
           Além da proteção contra roubo e furto, o novo Plano Vela+ oferece uma
           série de vantagens exclusivas para você e para sua Vela.
