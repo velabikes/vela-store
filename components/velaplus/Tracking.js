@@ -83,7 +83,7 @@ const Tracking = () => {
             display: flex;
           }
           .box {
-            margin-top: 655px;
+            margin-top: 500px;
           }
         }
       `}</style>

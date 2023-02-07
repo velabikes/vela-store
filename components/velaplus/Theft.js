@@ -20,7 +20,7 @@ const Theft = () => {
       </div>
       <style jsx>{`
         .root {
-          background-image: url("/plus/theft_protection_bg.png");
+          background-image: url("/plus/theft_protection_bg_mobile.jpg");
           background-position: center center;
           background-size: cover;
           position: relative;
@@ -47,12 +47,18 @@ const Theft = () => {
 
         .box-text-title {
           color: ${offWhite};
-          font-size: 1.6rem;
+          font-size: 40px;
           font-weight: 700;
-          line-height: 1.5em;
+          line-height: 48px;
           margin-bottom: 0.8em;
         }
-        @media (min-width: 768px) {
+        @media (min-width: 500px) {
+          .root {
+            background-image: url("/plus/theft_protection_bg.png");
+            background-position: center center;
+            background-size: cover;
+            position: relative;
+          }
           .limiter {
             display: flex;
             flex-direction: row-reverse;
@@ -64,11 +70,7 @@ const Theft = () => {
             width: 40%;
           }
         }
-        @media (max-width: 768px) {
-          .root {
-            background-position: 42% bottom;
-            background-size: 400%;
-          }
+        @media (max-width: 500px) {
           .limiter {
             display: flex;
           }
