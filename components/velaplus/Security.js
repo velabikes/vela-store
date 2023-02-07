@@ -12,8 +12,12 @@ const Security = () => {
         <div className="slider">
           <div className="slider-card">
             <img src="/plus/slider-card-10.png" />
-            <h3>10% OFF</h3>
-            <p className="card-text">testando a descrição dessa parte</p>
+            <h3>10% OFF na compra da sua Vela</h3>
+            <p className="card-text">
+              Assine e ganhe R$1.000 de desconto na compra da sua Vela.
+              Aproveite esse desconto exclusivo no momento da compra ou para
+              presentear alguém especial.
+            </p>
           </div>
           <div className="slider-card">
             <img src="" />
@@ -80,7 +84,9 @@ const Security = () => {
           font-weight: 400;
           font-size: 16px;
           line-height: 150%;
-          padding: 32px 32px 16px 32px;
+          padding: 32px 32px 32px 32px;
+          max-width: 580px;
+          margin: 0 auto;
         }
         .box-text-title {
           color: ${offWhite};
@@ -91,17 +97,11 @@ const Security = () => {
         }
 
         .slider {
-          display: flex;
-          gap: 10px;
-          padding: 32px;
-
-          overflow-x: scroll;
           text-align: left;
         }
 
         .slider-card {
-          min-width: 80vw;
-          height: 410px;
+          height: 500px;
           background: #f5f1ec;
           padding: 20px;
         }
@@ -111,21 +111,31 @@ const Security = () => {
           margin-bottom: 12px;
         }
         @media (min-width: 500px) {
-          .root {
-            background-image: url("/plus/theft_protection_bg.png");
-            background-position: center center;
-            background-size: cover;
-            position: relative;
+          .limiter {
+            padding-bottom: 64px;
           }
 
-          .box {
-            min-width: 400px;
-            width: 40%;
+          h2 {
+            padding-top: 128px;
+          }
+
+          .slider {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-top: 32px;
           }
         }
         @media (max-width: 500px) {
-          .box {
-            margin-top: 600px;
+          .slider {
+            display: flex;
+            gap: 10px;
+            padding: 32px;
+            overflow-x: scroll;
+          }
+          .slider-card {
+            min-width: 80vw;
+            max-width: 80vw;
           }
         }
       `}</style>

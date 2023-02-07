@@ -20,6 +20,7 @@ import ProtectionImage from "components/velaplus/ProtectionImage";
 import ProtectionImage2 from "components/velaplus/ProtectionImage2";
 import Theft from "../components/velaplus/Theft";
 import Security from "../components/velaplus/Security";
+import Checkout from "../components/velaplus/Checkout";
 
 const VelaPlus = ({
   checkout,
@@ -90,6 +91,7 @@ const VelaPlus = ({
       <Tracking />
       <Theft />
       <Security />
+      <Checkout />
 
       <div className="models-content2">
         <h1>
