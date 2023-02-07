@@ -53,6 +53,7 @@ const Checkout = () => {
 
         small {
           margin-left: 5%;
+          font-style: italic;
         }
 
         h2 {
