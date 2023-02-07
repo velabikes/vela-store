@@ -93,133 +93,6 @@ const VelaPlus = ({
       <Security />
       <Checkout />
 
-      <div className="models-content2">
-        <h1>
-          <br></br> 6 benefícios:
-          <br></br>{" "}
-        </h1>
-        <div className="models">
-          <div className="m1">
-            <img src="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2F01.png?alt=media&token=8de570ad-5d83-43a6-8fd9-fa8c6621aed6" />
-            <h3>Desconto em novas baterias</h3>
-            <p>
-              Sabemos da importância da bateria para a nossa relação e, por
-              isso, oferecemos 30% de desconto na compra de uma nova. Sempre bom
-              ter uma reserva, né?
-            </p>
-          </div>
-          <div className="m2">
-            <img src="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2F02.png?alt=media&token=0effc50e-94d0-4d4e-9b59-812a6a825a34" />
-            <h3>10% de desconto no site Vela</h3>
-            <p>
-              Em qualquer produto ou serviço da Vela. Acessórios lindos, peças
-              de manutenção e revisões para os assinantes. Inclusive na compra
-              de uma nova bike!
-            </p>
-          </div>
-          <div className="m3">
-            <img src="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2F03.png?alt=media&token=adce9b28-be43-4884-b08a-f91a3bbdb2ca" />
-            <h3>Benefícios com parceiros</h3>
-            <p>
-              Nossos Velejadores terão benefícios com todos os nossos parceiros
-              atuais e que estão por vir. Descontos, brindes e outras vantagens
-              exclusivas para quem assina.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div className="models-content">
-        <div className="models">
-          <div className="m1">
-            <img src="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2F01.png?alt=media&token=8de570ad-5d83-43a6-8fd9-fa8c6621aed6" />
-            <h3>Desconto em novas baterias</h3>
-            <p>
-              Sabemos da importância da bateria para a nossa relação e, por
-              isso, oferecemos 30% de desconto na compra de uma nova. Sempre bom
-              ter uma reserva, né?
-            </p>
-          </div>
-          <div className="m2">
-            <img src="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2F02.png?alt=media&token=0effc50e-94d0-4d4e-9b59-812a6a825a34" />
-            <h3>10% de desconto no site Vela</h3>
-            <p>
-              Em qualquer produto ou serviço da Vela. Acessórios lindos, peças
-              de manutenção e revisões para os assinantes. Inclusive na compra
-              de uma nova bike!
-            </p>
-          </div>
-          <div className="m3">
-            <img src="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2F03.png?alt=media&token=adce9b28-be43-4884-b08a-f91a3bbdb2ca" />
-            <h3>Benefícios com parceiros</h3>
-            <p>
-              Nossos Velejadores terão benefícios com todos os nossos parceiros
-              atuais e que estão por vir. Descontos, brindes e outras vantagens
-              exclusivas para quem assina.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div className="call">
-        <div className="add">
-          <p>
-            <AddIcon style={{ width: "1.1em" }} />
-            Proteção contra roubo e furto;
-          </p>
-          <p>
-            <AddIcon style={{ width: "1.1em" }} />
-            Rastreamento AirTag integrado;
-          </p>
-          <p>
-            <AddIcon style={{ width: "1.1em" }} />
-            10% OFF em novas bikes;
-          </p>
-          <p>
-            <AddIcon style={{ width: "1.1em" }} />
-            20% OFF em serviços e acessórios;
-          </p>
-          <p>
-            <AddIcon style={{ width: "1.1em" }} />
-            30% OFF em cadeados e baterias;
-          </p>
-          <p>
-            <AddIcon style={{ width: "1.1em" }} />
-            Serviços Leva&Traz gratuitos*;
-          </p>
-          <p>
-            <AddIcon style={{ width: "1.1em" }} />
-            Promoções exclusivas;
-          </p>
-          /plus/Group-10-2-2.png
-          <p>
-            <AddIcon style={{ width: "1.1em" }} />
-            Frete grátis no site Vela;
-          </p>
-          <p>
-            <AddIcon style={{ width: "1.1em" }} />
-            Vela reserva.
-          </p>
-          <hr />
-          <h22>
-            <b>Por apenas R$ 99/mês</b>
-          </h22>
-          <b></b>
-          <b></b>
-          <b></b>
-          <h5>
-            <br></br>
-            No pacote anual parcelado em até 12x sem juros no cartão.
-          </h5>
-          <div className="action">
-            <Button primary onClick={handleVelaPlusCta}>
-              Assinar
-            </Button>
-          </div>
-        </div>
-      </div>
-      <div className="protection2">
-        <ProtectionImage2 />
-      </div>
-
       <div className="questions">
         <PaddedView>
           <h1>
@@ -350,6 +223,9 @@ const VelaPlus = ({
         {`
     
         
+.velaplus * {
+  font-family: filson-pro;
+}
 
         .AppBoxText1 {
 position: absolute;
