@@ -1,6 +1,6 @@
 import { velaRed } from "../../style/colors";
-import withCheckoutLineItemsAdd from "../containers/withCheckoutLineItemsAdd";
-import withCheckout from "../containers/withCheckout";
+import withCheckoutLineItemsAdd from "../../containers/withCheckoutLineItemsAdd";
+import withCheckout from "../../containers/withCheckout";
 import { useState, useEffect } from "react";
 
 const Checkout = () => {
