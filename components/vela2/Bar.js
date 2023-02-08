@@ -10,10 +10,10 @@ const Bar = ({ onContinue, extra, step, checkout }) => {
     <div className="Bar">
       <div className="top">
         <p className="right">
-          Prazo de
-          <br /> 2 à 3 semanas
+          Prazo:
+          <br /> 1 à 2 semanas
         </p>
-        <small>A Vela é feita sob encomenda em São Paulo.</small>
+        <small>A Vela é feita sob encomenda na cidade de São Paulo.</small>
       </div>
       <div className="bottom">
         <div className="left">
@@ -79,10 +79,11 @@ const Bar = ({ onContinue, extra, step, checkout }) => {
         padding: 0.5em 0.5em 1.5em 0.5em;
       }
       .top p {
-        max-width: 6rem;
+     max-width: 15rem;
       }
       .right {
         text-align: left;
+        font-size: 18px;
       }
       .left {
         display: flex;
@@ -96,7 +97,8 @@ const Bar = ({ onContinue, extra, step, checkout }) => {
         margin: 0;
       }
       small {
-        max-width: 15em;
+        max-width: 200px;
+        font-size: 14px;
       }
       @media only screen and (min-width: 768px) {
         .Bar {
@@ -117,13 +119,14 @@ const Bar = ({ onContinue, extra, step, checkout }) => {
           padding: 0 0 0 6em;
         }
         .top p{
-          max-width: 6rem;
+          max-width: 10rem;
           text-align: center;
           margin: 0;
         }
         .top .right {
           text-align: right;
           margin-right: 0.8em;
+
         }
         .left {
           flex-direction: column;
@@ -134,7 +137,7 @@ const Bar = ({ onContinue, extra, step, checkout }) => {
         small {
           border-left: 1px ${lightGray} solid;
           padding-left: 1em;
-          max-width: 20em;
+          max-width: 15em;
         }
       }
     `}</style>

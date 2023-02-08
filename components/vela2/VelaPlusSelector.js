@@ -81,35 +81,35 @@ const VelaPlusSelector = ({ collection, onSelect, selected }) => {
       <div className="add">
         <p>
           <AddIcon style={{ width: "1.2em" }} />
-          Proteção contra roubo e furto
+          Proteção contra roubo, furto e acidentes
         </p>
         <p>
           <AddIcon style={{ width: "1.2em" }} />
-          Rastreamento via AirTag integrado
+          Rastreamento AirTag ou SmartTag
         </p>
         <p>
           <AddIcon style={{ width: "1.2em" }} />
-          Desconto de 10% para compra de novas bikes
+          10% OFF em novas bikes
         </p>
         <p>
           <AddIcon style={{ width: "1.2em" }} />
-          Desconto de 20% para contratação de serviços e compra de acessórios
+          20% OFF em serviços e acessórios
         </p>
         <p>
           <AddIcon style={{ width: "1.2em" }} />
-          Desconto de 30% para compra de cadeados e novas baterias
+          30% OFF em cadeados e baterias
         </p>
         <p>
           <AddIcon style={{ width: "1.2em" }} />
-          Serviços Leva & Traz gratuitos*
+          Leva & Traz gratuitos
         </p>
         <p>
           <AddIcon style={{ width: "1.2em" }} />
-          Acesso à promoções e novidades exclusivas/antecipadas
+          Promoções e novidades exclusivas
         </p>
         <p>
           <AddIcon style={{ width: "1.2em" }} />
-          Frete grátis para pedidos no site para todo o Brasil
+          Frete grátis para todo o Brasil
         </p>
       </div>
       <div className="extraitems">
