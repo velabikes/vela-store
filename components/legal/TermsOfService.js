@@ -161,7 +161,7 @@ const TermsOfService = () => (
         capacidade da produção e/ou realização de serviços, fornecimento de
         peças e outros componentes por parte de fornecedores e outros terceiros
         prestadores de serviços, diagnósticos e disponibilidade da equipe
-        técnica atuante. 
+        técnica atuante.
       </p>
       <p>
         Não garantimos que a qualidade de quaisquer produtos, serviços,
@@ -434,8 +434,8 @@ const TermsOfService = () => (
       <p>
         Esses Termos de serviço e quaisquer acordos separados em que nós lhe
         fornecemos os Serviços devem ser regidos e interpretados de acordo com
-        as leis de Rua Joaquim Antunes, 631 - Pinheiros, São Paulo, SP,
-        05421000, Brazil.
+        as leis de Rua General Julio Marcondes Salgado, 106, Campos Elísios, São
+        Paulo/SP CEP 01201-020, Brasil.
       </p>
       <h3>SEÇÃO 19 - ALTERAÇÕES DOS TERMOS DE SERVIÇO</h3>
       <p>
@@ -455,7 +455,6 @@ const TermsOfService = () => (
         As perguntas sobre os Termos de Serviço devem ser enviadas para nós
         através do contato@velabikes.com.br.
       </p>
-    
     </Section>
   </div>
 );

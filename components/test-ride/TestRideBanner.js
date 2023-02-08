@@ -1,6 +1,6 @@
 import Section from "components/Section";
 import SectionHeader from "components/SectionHeader";
-import Button from "components/Button"
+import Button from "components/Button";
 
 const TestRideBanner = () => (
   <Section>
@@ -12,7 +12,8 @@ const TestRideBanner = () => (
         />
         <p>
           O teste é gratuito e sem compromisso, pode ser realizado sozinho, com
-          amigos ou acompanhado de um especialista Vela. Agende um horário online e venha pedalar!
+          amigos ou acompanhado de um especialista Vela. Agende um horário
+          online e venha pedalar!
         </p>
         {/* <p>
           <i>R. Joaquim Antunes, 631 - Pinheiros</i>

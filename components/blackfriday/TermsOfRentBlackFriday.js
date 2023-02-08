@@ -8,8 +8,7 @@ const TermsOfRentBlackFriday = () => (
     <Section>
       {/* <p>
         VELA BIKE COMÉRCIO E SERVIÇOS DE BICICLETAS EIRELI “VELA”​, inscrita no
-        CNPJ sob no 20.430.806/0001-27, estabelecida na Rua Joaquim Antunes 631,
-        Pinheiros, São Paulo – SP, CEP 05421-000, daqui adiante denominada
+        CNPJ sob no 20.430.806/0001-27, estabelecida na Rua General Julio Marcondes Salgado, 106, Campos Elísios, São Paulo/SP CEP 01201-020, daqui adiante denominada
         “LOCADORA”, e do outro lado, o contratante do pacote de aluguel, daqui
         adiante denominado “LOCATÁRIO”.
       </p> */}
