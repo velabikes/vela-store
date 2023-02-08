@@ -1,53 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Head from "next/head";
-import { compose } from "recompose";
-import withCheckoutLineItemsAdd from "../containers/withCheckoutLineItemsAdd";
-import withCheckout from "../containers/withCheckout";
 import Accordion from "../components/Accordion";
 import PaddedView from "../components/PaddedView";
 import { offBlack, offWhite, velaGreen, velaRed, white } from "../style/colors";
-import {
-  AddIcon,
-  BadgePlus,
-  Chat,
-  GPS,
-  Notifications,
-} from "../components/Icons";
-import Button from "../components/Button";
 import Cover from "components/velaplus/Cover";
 import Tracking from "components/velaplus/Tracking";
-import ProtectionImage from "components/velaplus/ProtectionImage";
-import ProtectionImage2 from "components/velaplus/ProtectionImage2";
 import Theft from "../components/velaplus/Theft";
 import Security from "../components/velaplus/Security";
 import Checkout from "../components/velaplus/Checkout";
 
-const VelaPlus = ({
-  checkout,
-  checkoutLineItemsAdd,
-  handleCheckoutCreation,
-}) => {
-  const [mustRedirect, setMustRedirect] = useState(false);
-  useEffect(() => {
-    if (mustRedirect) {
-      window.location.replace(checkout.webUrl);
-    }
-  }, [mustRedirect, checkout]);
-  const handleVelaPlusCta = async () => {
-    const checkoutId = await handleCheckoutCreation();
-    await checkoutLineItemsAdd({
-      variables: {
-        checkoutId,
-        lineItems: {
-          variantId:
-            "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zOTI3ODk3OTc0Mzc5OQ==",
-          quantity: 1,
-        },
-      },
-    });
-    setMustRedirect(true);
-  };
-
+const VelaPlus = () => {
   return (
     <div className="velaplus">
       <Head>
@@ -643,4 +605,4 @@ position: absolute;
   );
 };
 
-export default compose(withCheckout, withCheckoutLineItemsAdd)(VelaPlus);
+export default VelaPlus;

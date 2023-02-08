@@ -1,6 +1,30 @@
-import { offWhite, velaRed } from "../../style/colors";
+import { velaRed } from "../../style/colors";
+import withCheckoutLineItemsAdd from "../containers/withCheckoutLineItemsAdd";
+import withCheckout from "../containers/withCheckout";
+import { useState, useEffect } from "react";
 
 const Checkout = () => {
+  const [mustRedirect, setMustRedirect] = useState(false);
+  useEffect(() => {
+    if (mustRedirect) {
+      window.location.replace(checkout.webUrl);
+    }
+  }, [mustRedirect, checkout]);
+  const handleVelaPlusCta = async () => {
+    const checkoutId = await handleCheckoutCreation();
+    await checkoutLineItemsAdd({
+      variables: {
+        checkoutId,
+        lineItems: {
+          variantId:
+            "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zOTI3ODk3OTc0Mzc5OQ==",
+          quantity: 1,
+        },
+      },
+    });
+    setMustRedirect(true);
+  };
+
   return (
     <div className="root">
       <div className="limiter">
@@ -28,7 +52,7 @@ const Checkout = () => {
               </h3>
               <p>Pacote anual parcelado em até 12x sem juros no cartão.</p>
               <div>
-                <img src="/plus/button.svg" />
+                <img onClick={handleVelaPlusCta} src="/plus/button.svg" />
               </div>
             </div>
           </div>
@@ -155,4 +179,4 @@ const Checkout = () => {
   );
 };
 
-export default Checkout;
+export default compose(withCheckout, withCheckoutLineItemsAdd)(Checkout);
