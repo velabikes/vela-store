@@ -2,8 +2,13 @@ import { velaRed } from "../../style/colors";
 import withCheckoutLineItemsAdd from "../../containers/withCheckoutLineItemsAdd";
 import withCheckout from "../../containers/withCheckout";
 import { useState, useEffect } from "react";
+import { compose } from "recompose";
 
-const Checkout = () => {
+const Checkout = ({
+  checkout,
+  checkoutLineItemsAdd,
+  handleCheckoutCreation,
+}) => {
   const [mustRedirect, setMustRedirect] = useState(false);
   useEffect(() => {
     if (mustRedirect) {
