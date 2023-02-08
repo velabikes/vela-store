@@ -56,7 +56,7 @@ const Checkout = ({
                 Apenas <s>R$ 99/mês</s> <p>R$ 79/mês</p>
               </h3>
               <p>Pacote anual parcelado em até 12x sem juros no cartão.</p>
-              <div>
+              <div className="button-svg">
                 <img onClick={handleVelaPlusCta} src="/plus/button.svg" />
               </div>
             </div>
@@ -129,6 +129,10 @@ const Checkout = ({
           width: 30%;
           height: auto;
           margin-left: 0px;
+        }
+
+        .button-svg {
+          cursor: pointer;
         }
 
         @media (min-width: 500px) {
