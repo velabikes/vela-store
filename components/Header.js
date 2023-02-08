@@ -42,6 +42,11 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) => (
           </Link>
         </div>
         <div className="left">
+          <Link href="/velamais">
+            <a>Vela+</a>
+          </Link>
+        </div>
+        <div className="left">
           <Link href="/store" as="/loja">
             <a>Acessórios</a>
           </Link>

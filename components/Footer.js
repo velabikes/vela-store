@@ -20,6 +20,11 @@ const Footer = () => (
                   <a>Vela 2</a>
                 </Link>
               </li>
+              <li>
+                <Link href="/velamais">
+                  <a>Vela+</a>
+                </Link>
+              </li>
 
               <li>
                 <Link href="/store" as="/loja">
