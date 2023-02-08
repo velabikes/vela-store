@@ -2,7 +2,14 @@ import React from "react";
 import Head from "next/head";
 import Accordion from "../components/Accordion";
 import PaddedView from "../components/PaddedView";
-import { offBlack, offWhite, velaGreen, velaRed, white } from "../style/colors";
+import {
+  offBlack,
+  offWhite,
+  velaBlue,
+  velaGreen,
+  velaRed,
+  white,
+} from "../style/colors";
 import Cover from "components/velaplus/Cover";
 import Tracking from "components/velaplus/Tracking";
 import Theft from "../components/velaplus/Theft";
@@ -196,7 +203,10 @@ Para mais informações a respeito dos dispositivos SmartTag, acesse o link: htt
                   <a href="/legal"> Informações Legais</a>
                 </p>
                 <p>
-                  <a href="/public/vplus/Termo de Assinatura - Plano Vela+ 12 meses">
+                  <a
+                    href="/plus/termo_velamais_anual.pdf
+                "
+                  >
                     Modelo de Termo do Plano Vela+
                   </a>
                 </p>
@@ -363,7 +373,7 @@ position: absolute;
           margin-bottom: 1em;
         }
         .legal {
-          background-color: ${offWhite};
+          background-color: #ebbd99;
           padding: 2em 0 2em 0;
         }
         .legal-container {
@@ -374,7 +384,7 @@ position: absolute;
           color: ${offBlack};
         }
         .docs h3 {
-          color: ${velaRed};
+          color: ${offBlack};
           margin-bottom: 1em;
           margin-top: 1em;
         }
@@ -384,6 +394,7 @@ position: absolute;
           font-style: italic;
           font-size: 16px;
           font-weight: 400;
+          text-color: ${velaGreen}
         }
         .app {
           display: flex;
