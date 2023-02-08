@@ -125,10 +125,12 @@ const Checkout = () => {
 
           .list {
             padding-top: 50px;
+          
           }
 
           ul {
             padding-top: 30px;
+            padding-left: 0px;
           }
 
           .mobile {

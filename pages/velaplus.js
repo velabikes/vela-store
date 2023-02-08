@@ -203,7 +203,7 @@ Para mais informações a respeito dos dispositivos SmartTag, acesse o link: htt
             color={white}
             hoverColor={"#DCF5EB"}
             textColor={offBlack}
-            title="16. Como é feita a instalação da AirTag ou SmartTag?"
+            title="15. Como é feita a instalação da AirTag ou SmartTag?"
             content="Os dispositivos de rastreio podem ser instalados na nossa fábrica em São Paulo, em qualquer autorizada ou oficina de sua confiança. A instalação é simples e normalmente é feita em até 24h."
           />
         </PaddedView>
@@ -228,18 +228,18 @@ Para mais informações a respeito dos dispositivos SmartTag, acesse o link: htt
               </p>
             </div>
             <div className="docs">
-              <h3>Documentos</h3>
-              <p>
-                <a href="/legal">Termos de Serviço do Plano Vela+</a>
-              </p>
-              <p>
-                <a href="https://drive.google.com/file/d/1OQfVi4WnUNVd-8xQhs6Hn7vFTDH5vGev/view?usp=sharing">
-                  Modelo de Contrato do Plano Vela+
-                </a>
-              </p>
-              <p>
-                <a href="/legal">Política de Privacidade</a>
-              </p>
+              <h3>Documentos e Termos</h3>
+              <h2>
+                <p>
+                  <a href="/legal"> Informações Legais</a>
+                </p>
+                <p>
+                  <a href="/public/vplus/Termo de Assinatura - Plano Vela+ 12 meses">
+                    Modelo de Termo do Plano Vela+
+                  </a>
+                </p>
+              </h2>
+
               {/* <div className="action">
               <a href="https://velabikes.freshdesk.com/support/home" target="_blank">
                 <Button primary>Todas as FAQs</Button>
@@ -412,9 +412,16 @@ position: absolute;
           color: ${offBlack};
         }
         .docs h3 {
-          color: ${offBlack};
+          color: ${velaRed};
           margin-bottom: 1em;
           margin-top: 1em;
+        }
+
+        .docs h2 {
+          text-decoration: underline;
+          font-style: italic;
+          font-size: 16px;
+          font-weight: 400;
         }
         .app {
           display: flex;
