@@ -52,7 +52,7 @@ const Theft = () => {
           line-height: 48px;
           margin-bottom: 0.8em;
         }
-        @media (min-width: 500px) {
+        @media (min-width: 880px) {
           .root {
             background-image: url("/plus/theft_protection_bg.png");
             background-position: center center;
@@ -75,12 +75,38 @@ const Theft = () => {
             line-height: 150%;
           }
         }
-        @media (max-width: 500px) {
+        @media (max-width: 880px) {
           .limiter {
             display: flex;
           }
           .box {
             margin-top: 600px;
+          }
+        }
+        @media (min-width: 1800px) {
+          .root {
+            background-image: url("/plus/theft_protection_bg_max.png");
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            position: relative;
+          }
+          .limiter {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: end;
+            min-height: 1000px;
+            max-width: 1200px;
+          }
+          .box {
+            min-width: 400px;
+
+            width: 40%;
+            font-family: "Filson-Pro";
+            font-style: normal;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 150%;
           }
         }
       `}</style>

@@ -64,9 +64,9 @@ const Tracking = () => {
         }
 
         .box-icons {
-          width: 80%;
+          width: 250px;
         }
-        @media (min-width: 500px) {
+        @media (min-width: 880px) {
           .root {
             padding-top: 50px;
           }
@@ -92,7 +92,7 @@ const Tracking = () => {
             margin-top: 00px;
           }
         }
-        @media (max-width: 500px) {
+        @media (max-width: 880px) {
           .bg {
             background-size: 155%;
             background-position: 52% 5em;
@@ -107,6 +107,32 @@ const Tracking = () => {
           }
           .box {
             margin-top: 600px;
+          }
+        }
+        @media (min-width: 1800px) {
+          .root {
+            padding-top: 50px;
+          }
+
+          .bg {
+            background-position: calc(56% - 300px) bottom;
+            background-size: contain;
+          }
+          .bg-text {
+            left: calc(52% - 300px);
+            transform: translateX(-50%);
+            bottom: 40px;
+          }
+          .limiter {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: end;
+            min-height: 1000px;
+          }
+          .box {
+            min-width: 300px;
+            width: 40%;
+            margin-top: 00px;
           }
         }
       `}</style>

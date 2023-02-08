@@ -71,7 +71,7 @@ const Cover = () => (
         transform: translateX(-50%);
       }
 
-      @media only screen and (min-width: 500px) {
+      @media only screen and (min-width: 880px) {
         .mobile {
           display: none;
         }
@@ -80,7 +80,7 @@ const Cover = () => (
         }
       }
 
-      @media only screen and (max-width: 500px) {
+      @media only screen and (max-width: 880px) {
         .bike1 {
           position: relative;
           left: -15%;

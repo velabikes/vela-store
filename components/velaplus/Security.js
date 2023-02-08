@@ -127,7 +127,7 @@ const Security = () => {
           margin-top: 32px;
           margin-bottom: 12px;
         }
-        @media (min-width: 500px) {
+        @media (min-width: 880px) {
           .limiter {
             padding-bottom: 64px;
           }
@@ -143,7 +143,7 @@ const Security = () => {
             margin-top: 32px;
           }
         }
-        @media (max-width: 500px) {
+        @media (max-width: 880px) {
           .slider {
             display: flex;
             gap: 10px;

@@ -137,7 +137,7 @@ const Checkout = ({
           cursor: pointer;
         }
 
-        @media (min-width: 500px) {
+        @media (min-width: 880px) {
           .box {
             display: flex;
             justify-content: space-between;
@@ -149,7 +149,7 @@ const Checkout = ({
           }
         }
 
-        @media (max-width: 500px) {
+        @media (max-width: 880px) {
           .limiter {
             padding: 32px 32px;
           }
