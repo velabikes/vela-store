@@ -58,10 +58,13 @@ const Tracking = () => {
         }
 
         @media (min-width: 500px) {
+          .root {
+            padding-top: 50px;
+          }
+
           .bg {
             background-position: calc(55% - 300px) bottom;
-            background-size: 70%;
-            background-height: 60%;
+            background-size: contain;
           }
           .bg-text {
             left: calc(52% - 300px);
@@ -77,6 +80,7 @@ const Tracking = () => {
           .box {
             min-width: 300px;
             width: 40%;
+            margin-top: 00px;
           }
         }
         @media (max-width: 500px) {
