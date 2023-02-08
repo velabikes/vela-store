@@ -382,11 +382,13 @@ position: absolute;
         }
         .legal h3 {
           color: ${offBlack};
+             font-size: 32px;
         }
         .docs h3 {
           color: ${offBlack};
           margin-bottom: 1em;
           margin-top: 1em;
+          font-size: 32px;
         }
 
         .docs h2 {

@@ -99,7 +99,7 @@ const Security = () => {
 
         p.subtitle {
           font-weight: 400;
-          font-size: 16px;
+          font-size: 18px;
           line-height: 150%;
           padding: 32px 32px 32px 32px;
           max-width: 580px;
