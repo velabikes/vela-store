@@ -51,16 +51,6 @@ const Footer = () => (
                   <a>Test-ride</a>
                 </Link>
               </li> */}
-              <li>
-                <Link href="/blog">
-                  <a>Blog</a>
-                </Link>
-              </li>
-              <li>
-                <Link href="/invest" as="/investir">
-                  <a>Investir</a>
-                </Link>
-              </li>
             </ul>
           </nav>
           <nav className="help">
@@ -126,8 +116,8 @@ const Footer = () => (
       </div>
       <div className="copyright">
         <small>
-          Copyright (C) 2021. Vela Bikes. Todos os direitos reservados. CNPJ
-          20.430.806/0001-27.
+          Copyright (C) 2023. Vela Bikes Brasil. Todos os direitos reservados.
+          CNPJ 20.430.806/0001-27.
         </small>
       </div>
       <style jsx>{`

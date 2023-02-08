@@ -43,11 +43,7 @@ const MainMenu = () => (
       {/* <li><Link href='/testride' as='/test-ride'><a>
         Test-ride
       </a></Link></li> */}
-      <li>
-        <Link href="/blog">
-          <a>Blog</a>
-        </Link>
-      </li>
+
       <li>
         <Link href="/contact" as="/contato">
           <a>Contato</a>

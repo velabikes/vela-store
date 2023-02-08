@@ -64,16 +64,6 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) => (
         {/* <div className='left'><Link href='/testride'><a>
           Test-ride
         </a></Link></div> */}
-        <div className="left">
-          <Link href="/blog">
-            <a>Blog</a>
-          </Link>
-        </div>
-        <div className="left">
-          <Link href="/invest" as="/investir">
-            <a>Investir</a>
-          </Link>
-        </div>
       </div>
       <div className="right">
         <HeaderMenu />

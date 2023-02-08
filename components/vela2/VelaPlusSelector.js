@@ -111,7 +111,12 @@ const VelaPlusSelector = ({ collection, onSelect, selected }) => {
           <AddIcon style={{ width: "1.2em" }} />
           Frete grátis para todo o Brasil
         </p>
+
+        <a className="more-details" href="/velamais">
+          Conheça aqui
+        </a>
       </div>
+
       <div className="extraitems">
         {collection.products.edges.map((product) => (
           <ServiceItem onSelect={onSelect} selected={selected} {...product} />
@@ -145,6 +150,11 @@ const VelaPlusSelector = ({ collection, onSelect, selected }) => {
           flex-direction: row;
           align-items: center;
           font-size: 0.8em;
+        }
+        .more-details {
+          color: ${velaRed};
+          font-style: italic;
+          text-align: center;
         }
       `}</style>
     </>
