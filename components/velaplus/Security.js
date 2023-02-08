@@ -24,8 +24,8 @@ const Security = () => {
             <h3>Bike Reserva</h3>
             <p className="card-text">
               Ficar sem bike? Nem pensar. Clientes Vela+ tem acesso à uma bike
-              reserva enquanto sua Vela estiver passando por manutenções. Válido
-              para a Grande SP.
+              reserva enquanto sua Vela estiver passando por manutenções.
+              Verifique a disponibilidade da sua região.
             </p>
           </div>
           <div className="slider-card">

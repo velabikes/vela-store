@@ -48,7 +48,7 @@ const Checkout = ({
               <li>+ Frete grátis no site Vela</li>
               <li>+ Vela reserva de reposição*</li>
             </ul>
-            <small>*Exclusivo para Grande São Paulo</small>
+            <small>*Consulte a disponibilidade na sua região.</small>
           </div>
           <div className="buy">
             <h2 className="desktop">Tudo que sua Vela precisa está aqui.</h2>

@@ -12,8 +12,10 @@ const Theft = () => {
             <p>
               Segurança em primeiro lugar para Velejar sem medo. Em caso de
               roubo ou furto, bloqueamos sua bike, ajudamos na busca, e, caso
-              não seja possível recuperá-la, faremos a reposição para você. Sua
-              única preocupação vai ser aproveitar o vento no rosto.
+              não seja possível recuperá-la, faremos a reposição para você.
+              Verifique as condições do contrato para receber sua nova Vela.
+              Nosso objetivo é que a sua única preocupação seja curtir o vento
+              no rosto.
             </p>
           </div>
         </div>
@@ -54,7 +56,7 @@ const Theft = () => {
         }
         @media (min-width: 880px) {
           .root {
-            background-image: url("/plus/theft_protection_bg.png");
+            background-image: url("/plus/theft_protection_bg.jpg");
             background-position: center center;
             background-size: cover;
             position: relative;
@@ -85,7 +87,7 @@ const Theft = () => {
         }
         @media (min-width: 1800px) {
           .root {
-            background-image: url("/plus/theft_protection_bg_max.png");
+            background-image: url("/plus/theft_protection_bg_max.jpg");
             background-position: center center;
             background-repeat: no-repeat;
             background-size: 101%;

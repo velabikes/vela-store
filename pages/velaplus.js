@@ -122,7 +122,7 @@ const VelaPlus = () => {
             hoverColor={"#DCF5EB"}
             textColor={offBlack}
             title="8. Quais os passos caso eu tenha a minha Vela roubada ou furtada?"
-            content="O primeiro passo é enviar um email para a nossa equipe de atendimento (contato@velabikes.com.br) com as suas informações de pedido, nome, contato, data, hora juntamente com uma cópia do boletim de ocorrência. Nossa equipe vai dar início ao bloqueio da conta, bloqueio da bike e à busca pela sua Vela. Caso não seja recuperada num prazo de 45 dias corridos (“período de busca”), seguiremos com as etapas para a produção e substituição por uma nova bike."
+            content="O primeiro passo é enviar um email para a nossa equipe de atendimento (contato@velabikes.com.br) com as suas informações de pedido, nome, contato, data e hora, juntamente com uma cópia do boletim de ocorrência. Nossa equipe vai dar início ao bloqueio da conta, bloqueio da bike e à busca pela sua Vela. Caso não seja recuperada num prazo de 45 dias corridos (“período de busca”), seguiremos com as etapas para a produção e substituição por uma nova bike."
           />
           <Accordion
             color={white}
