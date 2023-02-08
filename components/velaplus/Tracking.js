@@ -14,6 +14,7 @@ const Tracking = () => {
               Integrado com a parte eletrônica, possui um sistema de backup
               capaz de atingir até 15 anos em pleno funcionamento.
             </p>
+            <img className="box-icons" src="/plus/hands-box-icons.svg" />
           </div>
         </div>
       </div>
@@ -55,8 +56,16 @@ const Tracking = () => {
           padding: 32px;
           gap: 16px;
           margin: 32px;
+          font-family: "Filson Pro";
+          font-style: normal;
+          font-weight: 300;
+          font-size: 16px;
+          line-height: 150%;
         }
 
+        .box-icons {
+          width: 80%;
+        }
         @media (min-width: 500px) {
           .root {
             padding-top: 50px;
