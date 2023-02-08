@@ -56,7 +56,7 @@ const Tracking = () => {
           padding: 32px;
           gap: 16px;
           margin: 32px;
-          font-family: "Filson Pro";
+          font-family: "Filson-Pro";
           font-style: normal;
           font-weight: 300;
           font-size: 16px;

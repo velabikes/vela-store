@@ -68,6 +68,11 @@ const Theft = () => {
           .box {
             min-width: 400px;
             width: 40%;
+            font-family: "Filson-Pro";
+            font-style: normal;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 150%;
           }
         }
         @media (max-width: 500px) {
