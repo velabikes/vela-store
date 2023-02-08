@@ -96,7 +96,7 @@ const VelaPlus = ({
       <div className="questions">
         <PaddedView>
           <h1>
-            Dúvidas frequêntes:
+            Dúvidas frequentes:
             <br></br> <br></br>{" "}
           </h1>
           <Accordion
