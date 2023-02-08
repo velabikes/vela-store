@@ -54,7 +54,7 @@ const Security = () => {
             </p>
           </div>
           <div className="slider-card">
-            <img src="/plus/slider-card-promocoes.png" />
+            <img src="/plus/slider-card-promocoes.svg" />
             <h3>Promoções exclusivas</h3>
             <p className="card-text">
               Segurança nunca é demais. Assinantes garantem 30% de desconto na
