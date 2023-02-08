@@ -88,7 +88,7 @@ const Theft = () => {
             background-image: url("/plus/theft_protection_bg_max.png");
             background-position: center center;
             background-repeat: no-repeat;
-            background-size: 100%;
+            background-size: 101%;
             position: relative;
           }
           .limiter {
