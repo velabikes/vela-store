@@ -72,7 +72,7 @@ const Tracking = () => {
           }
 
           .bg {
-            background-position: calc(55% - 300px) bottom;
+            background-position: calc(56% - 300px) bottom;
             background-size: contain;
           }
           .bg-text {
@@ -94,8 +94,8 @@ const Tracking = () => {
         }
         @media (max-width: 500px) {
           .bg {
-            background-size: 165%;
-            background-position: 55% 5em;
+            background-size: 155%;
+            background-position: 52% 5em;
           }
           .bg-text {
             left: 50%;

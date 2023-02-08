@@ -37,8 +37,9 @@ const Checkout = ({
           <div className="list">
             <h2 className="mobile">Tudo que sua Vela precisa:</h2>
             <ul>
-              <li>+ Proteção contra roubo, furto e acidentes</li>
-              <li>+ Rastreamento AirTag ou SmartTag integrado</li>
+              <li>+ Proteção contra roubo e furto</li>
+              <li>+ Proteção contra acidentes</li>
+              <li>+ Rastreamento AirTag ou SmartTag</li>
               <li>+ 10% OFF em novas bikes</li>
               <li>+ 20% OFF em serviços e acessórios</li>
               <li>+ 30% OFF em cadeados e baterias</li>
@@ -69,13 +70,13 @@ const Checkout = ({
           background: linear-gradient(221.51deg, #8ecec9 1.22%, #8acca8 180%);
         }
         .limiter {
-          max-width: 1100px;
+          max-width: 1200px;
           margin: 0 auto;
           padding: 128px 0px;
         }
         .box {
           background: #f5f1ec;
-          padding: 32px;
+          padding: 16px;
         }
         .list li {
           list-style-type: none;
@@ -84,6 +85,7 @@ const Checkout = ({
           padding-bottom: 12px;
           font-weight: 700;
           border-bottom: 1px solid #d2c9bd;
+         
         }
 
         small {
