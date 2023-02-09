@@ -64,7 +64,7 @@ const Tracking = () => {
         }
 
         .box-icons {
-          width: 250px;
+          width: 270px;
         }
         @media (min-width: 880px) {
           .root {
