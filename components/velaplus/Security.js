@@ -12,11 +12,11 @@ const Security = () => {
         <div className="slider">
           <div className="slider-card">
             <img src="/plus/slider-card-10.svg" />
-            <h3>10% OFF na sua Vela</h3>
+            <h3>10% OFF em novas bikes</h3>
             <p className="card-text">
-              Assine e ganhe R$1.000 de desconto na compra da sua Vela.
-              Aproveite esse desconto exclusivo para você ou para presentear
-              alguém especial.
+              Assine e ganhe mais de R$1.000 de desconto na compra uma nova
+              Vela. Aproveite esse desconto exclusivo para você ou para
+              presentear alguém especial.
             </p>
           </div>
           <div className="slider-card">
