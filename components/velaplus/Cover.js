@@ -10,7 +10,7 @@ const Cover = () => (
       <h1 className="text1">
         Agora com AirTag ou SmartTag integrados à sua Vela.
       </h1>
-      <h2 className="text2">Compatível com a Vela 1, Vela S e Vela 2.</h2>
+      <h2 className="text2">Disponível para a Vela 1, Vela S e Vela 2.</h2>
       <img className="tags" src="/plus/Tags.gif" alt="Tags" />
       <img
         className="bike1"
