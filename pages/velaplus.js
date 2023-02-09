@@ -203,7 +203,7 @@ Para mais informações a respeito dos dispositivos SmartTag, acesse o link: htt
                   <a href="/legal"> Informações Legais</a>
                 </p>
                 <p>
-                  <a href="/plus/termo_novo_vela_mais.pdf">
+                  <a href="/plus/TermoNovoVelaMais.pdf">
                     Modelo de Termo do Plano Vela+
                   </a>
                 </p>
