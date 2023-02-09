@@ -30,31 +30,25 @@ const VelaPlus = () => {
         <meta name="application-name" content="Vela Bikes Store" />
         <meta
           name="description"
-          content="Você e a Vela: um relacionamento sério. Assine nosso plano com rastreamento GPS, proteção contra roubo e furto e muitos mais para sua bike elétrica!"
+          content="Você e a Vela: um relacionamento sério. Assine nosso plano com rastreamento, proteção contra roubo e furto e muitos mais para sua Vela!"
         />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@velabikes" />
         <meta name="twitter:title" content="Vela+ Plano Anual - Vela Bikes" />
         <meta
           name="twitter:description"
-          content="Você e a Vela: um relacionamento sério. Assine nosso plano com rastreamento GPS, proteção contra roubo e furto e muitos mais para sua bike elétrica!"
+          content="Você e a Vela: um relacionamento sério. Assine nosso plano com rastreamento, proteção contra roubo e furto e muitos mais para sua Vela!"
         />
-        <meta
-          name="twitter:image"
-          content="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FPlanoVelaMais.png?alt=media&token=4a7061bc-bbc8-418c-af4b-ea0c8a3fc428"
-        />
+        <meta name="twitter:image" content="/plus/PlanoVelaMais.jpg" />
         <meta property="og:url" content="https://velabikes.com.br" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Vela+ Plano Anual - Vela Bikes" />
         <meta property="og:locale" content="pt_BR" />
         <meta
           property="og:description"
-          content="Você e a Vela: um relacionamento sério. Assine nosso plano com rastreamento GPS, proteção contra roubo e furto e muitos mais para sua bike elétrica!"
+          content="Você e a Vela: um relacionamento sério. Assine nosso plano com rastreamento, proteção contra roubo e furto e muitos mais para sua Vela!"
         />
-        <meta
-          property="og:image"
-          content="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FPlanoVelaMais.png?alt=media&token=4a7061bc-bbc8-418c-af4b-ea0c8a3fc428"
-        />
+        <meta property="og:image" content="/plus/PlanoVelaMais.jpg" />
       </Head>
       <Cover />
       <Tracking />
