@@ -8,7 +8,7 @@ const Cover = () => (
     <div className="limiter">
       <img className="title" src="/plus/new_vplus.svg" alt="Title" />
       <h1 className="text1">
-        Agora com AirTag ou SmartTag integrados à sua Vela.
+        Sua Vela ainda mais segura com AirTag ou SmartTag integrados.
       </h1>
       <h2 className="text2">Disponível para a Vela 1, Vela S e Vela 2.</h2>
       <img className="tags" src="/plus/Tags.gif" alt="Tags" />
