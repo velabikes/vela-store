@@ -128,7 +128,7 @@ const Checkout = ({
           line-height: 28.8px;
         }
         .button-action img {
-          width: 30%;
+          width: 25%;
           height: auto;
           margin-left: 0px;
         }
@@ -181,7 +181,7 @@ const Checkout = ({
           }
 
           .button-action img {
-          width: 40%;
+          width: 25%;
           height: auto;
           margin-top: 10px;
         }
