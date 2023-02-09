@@ -1,7 +1,15 @@
-const LandingImage = () =>
-  <div className='cover'>
-    <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FSmartbike.jpg?alt=media&token=db783cf6-c08e-49ae-98d8-3816c3d06ddf' className='desktop' alt='Vela 2 - Smartbike' />
-    <img src='https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FSmartbike.jpg?alt=media&token=db783cf6-c08e-49ae-98d8-3816c3d06ddf' className='mobile' alt='Vela 2 - Smartbike' />
+const LandingImage = () => (
+  <div className="cover">
+    <img
+      src="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FSmartbike.jpg?alt=media&token=db783cf6-c08e-49ae-98d8-3816c3d06ddf"
+      className="desktop"
+      alt="Vela 2 - Smartbike"
+    />
+    <img
+      src="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FSmartbike.jpg?alt=media&token=db783cf6-c08e-49ae-98d8-3816c3d06ddf"
+      className="mobile"
+      alt="Vela 2 - Smartbike"
+    />
     <style jsx>{`
       img {
         height: 45vh;
@@ -15,7 +23,7 @@ const LandingImage = () =>
         img {
           object-fit: cover;
           max-width: 100%;
-          height: calc(100vh - 3.5em);
+          height: calc(101vh - 3.5em);
           object-position: 50% 70%;
         }
         .mobile {
@@ -29,5 +37,6 @@ const LandingImage = () =>
       }
     `}</style>
   </div>
+);
 
-export default LandingImage
+export default LandingImage;
