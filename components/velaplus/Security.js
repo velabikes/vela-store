@@ -25,7 +25,7 @@ const Security = () => {
             <p className="card-text">
               Ficar sem bike? Nem pensar. Clientes Vela+ tem acesso à uma bike
               reserva enquanto sua Vela estiver passando por manutenções.
-              Verifique a disponibilidade da sua região.
+              Verifique a disponibilidade na sua região.
             </p>
           </div>
           <div className="slider-card">
@@ -33,7 +33,8 @@ const Security = () => {
             <h3>Leva & Traz sem custo</h3>
             <p className="card-text">
               Para revisões e manutenções na nossa central, a retirada e entrega
-              da sua Vela é por nossa conta. Válido para a Grande SP.
+              da sua Vela é por nossa conta. Verifique a disponibilidade na sua
+              região.
             </p>
           </div>
           <div className="slider-card">
