@@ -80,7 +80,7 @@ const VelaPlus = () => {
             hoverColor={"#DCF5EB"}
             textColor={offBlack}
             title="2. A cobertura do plano é nacional?"
-            content="Sim, os benefícios listados têm abrangência para todo o território nacional, mas taxas de embalagens e transporte podem ser aplicadas caso necessário."
+            content="Sim, os benefícios listados têm abrangência para todo o território nacional, mas algumas taxas de embalagens e transporte podem ser aplicadas caso necessário."
           />
           <Accordion
             color={white}
