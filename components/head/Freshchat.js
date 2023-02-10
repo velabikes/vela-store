@@ -6,7 +6,7 @@ import Button from "../Button";
 const Freshchat = () => (
   <div className="whats">
     <a href="https://wa.me/5511963934737" target="_blank">
-      <img src="/Head/whatsapp-icon.svg" />
+      <img src="/Head/whatsapp-icon-velagreen.svg" />
     </a>
 
     <style jsx>{`
