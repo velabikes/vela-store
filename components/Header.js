@@ -66,10 +66,12 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) => (
             <a>Rede</a>
           </Link>
         </div>
+
         {/* <div className='left'><Link href='/testride'><a>
           Test-ride
         </a></Link></div> */}
       </div>
+
       <div className="right">
         <HeaderMenu />
       </div>
@@ -78,6 +80,7 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) => (
       {children}
     </div>
     <Footer />
+
     <style jsx>{`
       .header {
         display: flex;
