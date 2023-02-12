@@ -65,7 +65,7 @@
     "redux-persist": "^5.10.0",
     "redux-thunk": "^2.3.0",
     "styled-components": "^5.2.1",
-    "vercel": "^24.2.0"
+    "vercel": "^28.15.3"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
