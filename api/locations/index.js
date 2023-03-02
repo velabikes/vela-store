@@ -524,6 +524,51 @@ module.exports = async (req, res) => {
         type: ["service"],
       },
       {
+        name: "Saluh Oficina",
+        address: [
+          "R. Batista Cepelos, 283",
+          "Vila Mariana, São Paulo",
+          "SP, 04109-120, Brasil",
+        ],
+        phone: "(11) 97422-8054",
+        pos: {
+          lat: -23.5771711,
+          lng: -46.6328599,
+        },
+        googlePlace: "ChIJUb-kvoJZzpQRcKWYxtrRZY0",
+        type: ["service"],
+      },
+      {
+        name: "Papa Fina Restaurante",
+        address: [
+          "R. Vinícius de Moraes, 153,
+          "Ipanema, Rio de Janeiro",
+          "RJ, 22411-010, Brasil",
+        ],
+        phone: "(21) 2287-2065",
+        pos: {
+          lat:  -22.982887,
+          lng: -43.202873,
+        },
+        googlePlace: "ChIJhdz_ExDVmwARhGN0UMj0m4c",
+        type: ["charger"],
+      },
+      /// {
+      //  name: "Leva & Traz",
+      //  address: [
+      //   "Região de atendimento do serviço de retidada e entrega da sua Vela. Para serviços realizados com a fábrica",
+      //   "São Paulo - SP",
+      //  "São Paulo - SP",
+      //   ],
+      //  phone: "WhatsApp - (11) 96393-4737",
+      //  pos: {
+      //   lat: -23.535952,
+      //   lng: -46.650572,
+      // },
+      // googlePlace: "ChIJwUtbbUBYzpQRqFfbLYX1-Ro",
+      //   type: ["delivery"],
+      //   },
+      {
         name: "Tamanduá Bike Store LTDA",
         address: [
           "R. Sete de Setembro, 1495",
@@ -538,6 +583,7 @@ module.exports = async (req, res) => {
         googlePlace: "ChIJr5wbjnChh5MRLdm1W9GOU_g",
         type: ["service"],
       },
+
       // ,{
       //   name: 'Vela Bikes',
       //   address: [
