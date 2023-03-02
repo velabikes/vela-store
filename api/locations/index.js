@@ -521,7 +521,7 @@ module.exports = async (req, res) => {
           lng: -46.6328599,
         },
         googlePlace: "ChIJUb-kvoJZzpQRcKWYxtrRZY0",
-        type: ["service"],
+        type: ["service", "charger"],
       },
 
       {
