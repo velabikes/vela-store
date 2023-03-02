@@ -1,3 +1,5 @@
+
+
 const { json } = require("micro");
 const correios = require("node-correios")();
 const fetch = require("node-fetch");
@@ -154,7 +156,7 @@ const mapCorreiosResultToRate = (result) =>
       service_name: `Sedex`,
       service_code: r.Codigo,
       total_price: parseFloat(r.Valor.split(",").join(".") * 100),
-      description: `${Number(r.PrazoEntrega) + 2} dias úteis`,
+      description: `${Number(r.PrazoEntrega) + 5} dias úteis`,
       currency: `BRL`,
     };
 

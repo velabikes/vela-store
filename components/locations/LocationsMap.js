@@ -60,6 +60,7 @@ const LocationsMap = ({
         right: 1rem;
         background-color: #f5f5f5;
       }
+      
       .filter {
         position: absolute;
         top: 0rem;

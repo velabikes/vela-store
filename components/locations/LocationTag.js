@@ -4,7 +4,8 @@ import {
   MarkerChargerIcon,
   MarkerStoreIcon,
   MarkerServiceIcon,
-  MarkerGrudiIcon,
+  MarkerAreaIcon,
+  MarkerDeliveryIcon,
 } from "components/Icons";
 
 const LocationTag = ({ type, ...props }) => (
@@ -23,6 +24,8 @@ const typeToLabel = (type) => {
       return "Loja";
     case "service":
       return "Autorizada";
+    case "delivery":
+      return "Leva & Traz";
     default:
       return "?";
   }
@@ -36,6 +39,8 @@ const typeToIcon = (type) => {
       return <MarkerServiceIcon />;
     case "store":
       return <MarkerStoreIcon />;
+    case "delivery":
+      return <MarkerDeliveryIcon />;
 
     default:
       return "?";

@@ -1,33 +1,41 @@
-import PropTypes from 'prop-types'
-import LocationTag from 'components/locations/LocationTag'
-import GrudiButton from 'components/locations/GrudiButton'
+import PropTypes from "prop-types";
+import LocationTag from "components/locations/LocationTag";
+import GrudiButton from "components/locations/GrudiButton";
 
-const LocationsInfo = ({ name, address, hours, phone, type, moreInfo }) =>
-  <article className='LocationsInfo'>
-    <h2>
-      {name}
-    </h2>
-    <address>{address[0]} - {address[1]}</address>
+const LocationsInfo = ({ name, address, hours, phone, type, moreInfo }) => (
+  <article className="LocationsInfo">
+    <h2>{name}</h2>
+    <address>
+      {address[0]} - {address[1]}
+    </address>
     <p>{moreInfo}</p>
     <p>{phone}</p>
-    <table className='hours'>
-      {hours && hours.map(hour =>
-        <tr>
-          <td>{hour[0]}</td>
-          <td>{hour[1]}</td>
-        </tr>
-      )}
+    <table className="hours">
+      {hours &&
+        hours.map((hour) => (
+          <tr>
+            <td>{hour[0]}</td>
+            <td>{hour[1]}</td>
+          </tr>
+        ))}
     </table>
-    <br/>
-    {type && <div className='tags'>{type.map(type => <LocationTag type={type} />)}</div>}
+    <br />
+    {type && (
+      <div className="tags">
+        {type.map((type) => (
+          <LocationTag type={type} />
+        ))}
+      </div>
+    )}
     {
       {
-        'grudi': <GrudiButton />,
-        default: ('')
+        grudi: <GrudiButton />,
+        default: "",
       }[type]
     }
     <style jsx>{`
-      .tags, address {
+      .tags,
+      address {
         margin-bottom: 1rem;
         font-style: normal;
       }
@@ -37,12 +45,13 @@ const LocationsInfo = ({ name, address, hours, phone, type, moreInfo }) =>
       }
     `}</style>
   </article>
+);
 
 LocationsInfo.propTypes = {
   name: PropTypes.string,
   address: PropTypes.object,
   hours: PropTypes.object,
-  type: PropTypes.string
-}
+  type: PropTypes.string,
+};
 
-export default LocationsInfo
+export default LocationsInfo;

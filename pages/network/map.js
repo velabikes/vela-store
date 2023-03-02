@@ -1,9 +1,9 @@
-import PropTypes from 'prop-types'
-import fetch from 'isomorphic-fetch'
-import Head from 'next/head'
-import LocationsMap from 'components/locations/LocationsMap'
+import PropTypes from "prop-types";
+import fetch from "isomorphic-fetch";
+import Head from "next/head";
+import LocationsMap from "components/locations/LocationsMap";
 
-const LocationsMapPage = ({ locations }) =>
+const LocationsMapPage = ({ locations }) => (
   <div>
     <Head>
       <title>Rede - Vela Bikes</title>
@@ -18,7 +18,7 @@ const LocationsMapPage = ({ locations }) =>
         left: 0;
         bottom: 0;
       }
-      :global(footer){
+      :global(footer) {
         display: none;
       }
       :global(body) {
@@ -26,21 +26,22 @@ const LocationsMapPage = ({ locations }) =>
       }
     `}</style>
   </div>
+);
 
 LocationsMapPage.propTypes = {
-  locations: PropTypes.object
-}
+  locations: PropTypes.object,
+};
 
 LocationsMapPage.getInitialProps = async ({ req }) => {
   const baseUrl = req
-    ? process.env.NODE_ENV === 'development'
-      ? 'http://localhost:3000'
+    ? process.env.NODE_ENV === "development"
+      ? "http://localhost:3000"
       : `https://${req.headers.host}`
-    : ''
-  const response = await fetch(`${baseUrl}/api/locations`)
-  const locations = await response.json()
+    : "";
+  const response = await fetch(`${baseUrl}/api/locations`);
+  const locations = await response.json();
 
-  return { locations }
-}
+  return { locations };
+};
 
-export default LocationsMapPage
+export default LocationsMapPage;
