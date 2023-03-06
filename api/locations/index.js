@@ -241,21 +241,7 @@ module.exports = async (req, res) => {
         googlePlace: "ChIJAQCU4gNazpQRgrm7yhcWeKU",
         type: ["charger"],
       },
-      {
-        name: "Mango Tree",
-        address: [
-          "R. Prudente de Morais, 594",
-          "Ipanema, Rio de Janeiro",
-          "RJ, 22420-040, Brasil",
-        ],
-        phone: "(21) 3083-5031",
-        pos: {
-          lat: -22.98523339999999,
-          lng: -43.2023853,
-        },
-        googlePlace: "ChIJ8zgq6hrVmwARf6ihPDuvaac",
-        type: ["charger"],
-      },
+
       {
         name: "Bacio di Latte Pinheiros",
         address: [
@@ -524,21 +510,6 @@ module.exports = async (req, res) => {
         type: ["service", "charger"],
       },
 
-      {
-        name: "Papa Fina Restaurante",
-        address: [
-          "R. Vinícius de Moraes, 153,",
-          "Ipanema, Rio de Janeiro",
-          "RJ, 22411-010, Brasil",
-        ],
-        phone: "(21) 2287-2065",
-        pos: {
-          lat: -22.982887,
-          lng: -43.202873,
-        },
-        googlePlace: "ChIJhdz_ExDVmwARhGN0UMj0m4c",
-        type: ["charger"],
-      },
       /// {
       //  name: "Leva & Traz",
       //  address: [
