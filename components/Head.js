@@ -58,6 +58,10 @@ const CustomHead = () => {
         />
         <link rel="icon" type="image/x-icon" href="/static/fav/favicon.ico" />
         <meta name="theme-color" content="#ffffff" />
+        <meta
+          name="facebook-domain-verification"
+          content="nbpc6vpjkbfrcrdtbxxdksupxy3l3b"
+        />
       </Head>
       <Freshchat />
       <style jsx global>{`

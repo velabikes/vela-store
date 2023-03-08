@@ -51,6 +51,10 @@ const Blog = ({ posts, highlight }) => (
             property="og:image"
             content="https://images.prismic.io/velabikes/3b2541d4-3894-48fa-8f84-76c3d064daa0_e03.jpg?auto=compress,format&rect=0,0,1333,889&w=3000&h=2000"
           />
+          <meta
+            name="facebook-domain-verification"
+            content="nbpc6vpjkbfrcrdtbxxdksupxy3l3b"
+          />
         </Head>
         <section>
           <br />
