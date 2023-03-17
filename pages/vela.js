@@ -387,7 +387,10 @@ const Vela = () => (
             </tr>
             <tr>
               <td>Autonomia</td>
-              <td>Até 60 km no modo Econômico. Média de 25km no modo Boost.</td>
+              <td>
+                Até 50km no modo econômico. A média entre os nossos clientes é
+                de 30km.
+              </td>
             </tr>
             <tr>
               <td>Bateria</td>
@@ -399,7 +402,7 @@ const Vela = () => (
             <tr>
               <td>Carregador</td>
               <td>
-                75W | Recarga completa em até 4-5 horas | Compatível com recarga
+                75W | Recarga completa em até 4 horas | Compatível com recarga
                 rápida.
               </td>
             </tr>
