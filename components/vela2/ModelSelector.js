@@ -92,7 +92,7 @@ const ModelSelector = ({ onModelChange }) => {
   const [selectedModel, setSelectedModel] = useState({
     size: availableSizes[0].option,
     color: options.color[0].option,
-    tire: options.tire[0].option,
+    tire: options.tire[1].option,
   });
 
   const updateModel = (type, value) => {
