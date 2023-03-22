@@ -82,50 +82,28 @@ const options = {
   ],
 };
 
-const ModelSelector = ({ onModelChange, model }) => {
-  const [selectedFrame, setSelectedFrame] = useState({
-    label: "Quadro baixo",
-    option: "Baixo",
-    sizes: "BP",
-    color: "Verde",
-    tire: "Creme",
+const ModelSelector = ({ onModelChange }) => {
+  const [selectedFrame, setSelectedFrame] = useState(options.frame[0]);
+
+  const availableSizes = options.size.filter((size) =>
+    selectedFrame.sizes.includes(size.option)
+  );
+
+  const [selectedModel, setSelectedModel] = useState({
+    size: availableSizes[0].option,
+    color: options.color[0].option,
+    tire: options.tire[0].option,
   });
 
-  const [filteredSizes, setFilteredSizes] = useState(options.size);
-  const validate = (type, value) => {
-    const currentModel = { ...model };
-    currentModel[type] = value;
-    onModelChange(currentModel);
+  const updateModel = (type, value) => {
+    const newModel = { ...selectedModel, [type]: value };
+    setSelectedModel(newModel);
+    onModelChange(newModel);
   };
 
   useEffect(() => {
-    const frame = getModelFrame(model);
-    setSelectedFrame(frame);
-    filterSizes(frame);
-  }, [model]);
-
-  const getModelFrame = (model) => {
-    if (model.size === "BP" || model.size === "BM")
-      return options.frame.filter((frame) => frame.option === "Baixo")[0];
-    return options.frame.filter((frame) => frame.option === "Reto")[0];
-  };
-
-  const filterSizes = (frame) => {
-    const sizes = options.size.filter((size) =>
-      frame.sizes.includes(size.option)
-    );
-    setFilteredSizes(sizes);
-  };
-
-  const selectFrame = (type, value) => {
-    const frame = options.frame.find((frameItem) => frameItem.option === value);
-    if (selectedFrame.option !== frame.option) {
-      validate("size", frame.sizes[0]);
-    }
-
-    setSelectedFrame(frame);
-    filterSizes(frame);
-  };
+    updateModel("size", availableSizes[0].option);
+  }, [selectedFrame]);
 
   return (
     <div>
@@ -133,29 +111,31 @@ const ModelSelector = ({ onModelChange, model }) => {
         label="Geometria:"
         name="frame"
         options={options.frame}
-        onSelectOption={selectFrame}
+        onSelectOption={(_, value) =>
+          setSelectedFrame(options.frame.find((i) => i.option === value))
+        }
         selected={selectedFrame.option}
       />
       <ControlField
         label="Cor:"
         name="color"
         options={options.color}
-        onSelectOption={validate}
-        selected={model.color}
+        onSelectOption={updateModel}
+        selected={selectedModel.color}
       />
       <ControlField
         label="Tamanho:"
         name="size"
-        options={filteredSizes}
-        onSelectOption={validate}
-        selected={model.size}
+        options={availableSizes}
+        onSelectOption={updateModel}
+        selected={selectedModel.size}
       />
       <ControlField
         label="Pneu:"
         name="tire"
         options={options.tire}
-        onSelectOption={validate}
-        selected={model.tire}
+        onSelectOption={updateModel}
+        selected={selectedModel.tire}
       />
     </div>
   );
