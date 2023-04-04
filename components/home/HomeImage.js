@@ -1,12 +1,12 @@
 const HomeImage = () => (
   <div>
     <img
-      src="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FBike-Eletrica-Smart-Vela-Bikes.jpg?alt=media&token=ef280aea-c08d-4c0b-8689-26d72bc8fac7"
+      src="/images/Vela_Bikes_Quadro_Baixo_Azul_Home_Banner_Main_Desktop.webp"
       className="desktop"
       alt="Vela 2 - Vela Bikes"
     />
     <img
-      src="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FBike-Eletrica-Smart-Vela-Bikes.jpg?alt=media&token=ef280aea-c08d-4c0b-8689-26d72bc8fac7"
+      src="/images/Vela_Bikes_Quadro_Baixo_Azul_Home_Banner_Main_Mobile.webp"
       className="mobile"
       alt="Smartbike - Vela Bikes"
     />

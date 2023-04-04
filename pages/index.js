@@ -72,7 +72,9 @@ const HomePage = ({ highlight }) => (
       <HomeImage />
       <div className="cta-bf">
         <div className="slogan">
-          <h1>Bicicletas Elétricas Brasileiras.</h1>
+          <h1>
+            Bicicletas <br></br> Elétricas<br></br> Brasileiras.
+          </h1>
           <a href="/vela">
             <Button primary>Conheça</Button>
           </a>
@@ -119,7 +121,7 @@ const HomePage = ({ highlight }) => (
       }
       .cta-bf {
         text-align: center;
-        padding: 2rem 3rem 2rem 3rem;
+        padding: 1rem 3rem 2rem 3rem;
         background-color: ${offWhite};
       }
       .cta-bf h3 {
@@ -168,7 +170,7 @@ const HomePage = ({ highlight }) => (
       }
       .cta :global(button),
       .cta-bf :global(button) {
-        margin: 1em 0 1em 0;
+        margin: 1em 0em 1em 0;
       }
       @media only screen and (min-width: 768px) {
         .cover {
@@ -208,12 +210,14 @@ const HomePage = ({ highlight }) => (
         }
         .cta-bf {
           position: absolute;
-          justify-content: center;
-          max-width: 23em;
-          text-align: center;
-          padding: 2em;
-          bottom: 2em;
-          background-color: ${offBlack};
+          justify-content: right;
+          max-width: 25em;
+          padding-top: 2.5em;
+          text-align: right;
+          top: 4em;
+          right: 4em;
+          background-color: rgba(25, 25, 25, 0.8);
+
           z-index: 2;
         }
         @media only screen and (min-width: 1300px) {
