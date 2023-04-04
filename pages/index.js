@@ -89,11 +89,11 @@ const HomePage = ({ highlight }) => (
             Feita com cuidado.
             <br /> No Brasil.
           </h2>
-          <h5>Cadeia produtiva sustentável e produção artesanal no Brasil.</h5>
           <h5>
-            Cada bike é montada sob medida, com a combinação e tamanho feitos
-            para você.
+            Nascida na capital paulista, a Vela desenvolve e produz bicicletas
+            elétricas para cidades mais saudáveis desde 2012.
           </h5>
+
           <a href="/vela">
             <Button primary>Saiba mais</Button>
           </a>

@@ -15,6 +15,7 @@ const HomeImage = () => (
         min-height: 50vh;
         object-fit: cover;
         object-position: right;
+            object-position: top;
         width: 100%;
       }
       .desktop {

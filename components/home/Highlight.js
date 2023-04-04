@@ -15,8 +15,8 @@ const Highlight = () => {
       <div className="Highlight">
         <div className="content">
           <p>
-            A smartbike que oferece o melhor desempenho para a cidade, em dois
-            modelos diferentes.
+            Dois modelos diferentes pra você escolher, além de várias cores e
+            combinações:
           </p>
         </div>
         <div className="models">
@@ -24,7 +24,7 @@ const Highlight = () => {
             <a href="/vela">
               <img
                 alt="Vela 2 Quadro reto"
-                src="/static/vela2/models/VEL-V2-550-29-VERDE-PRETO.png"
+                src="/static/Vela_Bikes_Vela2_Quadro_Reto_Verde_Creme.webp"
               />
               <div className="models-content">
                 <h3>Quadro reto</h3>
@@ -37,12 +37,12 @@ const Highlight = () => {
             <a href="/vela">
               <img
                 alt="Vela 2 Quadro baixo"
-                src="/static/vela2/models/VEL-V2-490-29-VERDE-PRETO.png"
+                src="/static/Vela_Bikes_Vela2_Quadro_Baixo_Azul_Creme.webp"
               />
               <div className="models-content">
                 <h3>Quadro baixo</h3>
                 <span>2 tamanhos</span>
-                <span>1,58m até 1,90m</span>
+                <span>1,58m até 1,85m</span>
               </div>
             </a>
           </div>
