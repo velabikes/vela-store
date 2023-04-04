@@ -15,7 +15,8 @@ const HomeImage = () => (
         min-height: 50vh;
         object-fit: cover;
         object-position: right;
-            object-position: top;
+        object-position: top;
+      
         width: 100%;
       }
       .desktop {
@@ -23,10 +24,10 @@ const HomeImage = () => (
       }
       @media only screen and (min-width: 768px) {
         img {
-          margin-top: 0em;
+          margin-top: -5em;
           object-fit: cover;
-          width: 101vw;
-          height: calc(101vh - 3.5em);
+          width: 100vw;
+          height: calc(100vh - 3.5em);
           object-position: bottom-right;
         }
         .mobile {

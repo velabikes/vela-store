@@ -509,6 +509,21 @@ module.exports = async (req, res) => {
         googlePlace: "ChIJUb-kvoJZzpQRcKWYxtrRZY0",
         type: ["service", "charger"],
       },
+      {
+        name: "Fábrica Vela Brasil",
+        address: [
+          "Rua General Julio Marcondes Salgado, 106",
+          "Santa Cecília, São Paulo",
+          "SP, 01201-020, Brasil",
+        ],
+        phone: "(11) 96393-4737",
+        pos: {
+          lat: -23.535952,
+          lng: -46.650572,
+        },
+        googlePlace: "ChIJwUtbbUBYzpQRqFfbLYX1-Ro",
+        type: ["store", "charger", "service"],
+      },
 
       /// {
       //  name: "Leva & Traz",
