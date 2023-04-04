@@ -29,7 +29,7 @@ const Highlight = () => {
               <div className="models-content">
                 <h3>Quadro reto</h3>
                 <span>3 tamanhos</span>
-                <span>1,58m até 2m</span>
+                <span>1,60m até 2m</span>
               </div>
             </a>
           </div>
@@ -42,14 +42,14 @@ const Highlight = () => {
               <div className="models-content">
                 <h3>Quadro baixo</h3>
                 <span>2 tamanhos</span>
-                <span>1,58m até 1,85m</span>
+                <span>1,50m até 1,85m</span>
               </div>
             </a>
           </div>
         </div>
         <div className="color">
           <p>
-            Única no Brasil com aplicativo companheiro, freio regenerativo e
+            Única no Brasil com aplicativo companheiro, sistema regenerativo e
             rastreamento GPS.
           </p>
         </div>
