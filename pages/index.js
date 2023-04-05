@@ -104,7 +104,6 @@ const HomePage = ({ highlight }) => (
     <br />
     <PaddedView style={{ backgroundColor: offWhite }}>
       {/* {images && <HomeAlbum images={images} />} */}
-      <PostHighlight post={highlight} />
     </PaddedView>
     <PaddedView style={{ backgroundColor: offWhite }}>
       <VelaPoint />
