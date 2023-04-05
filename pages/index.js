@@ -105,10 +105,11 @@ const HomePage = ({ highlight }) => (
     <PaddedView style={{ backgroundColor: offWhite }}>
       {/* {images && <HomeAlbum images={images} />} */}
       <PostHighlight post={highlight} />
-      <HomeBanner />
     </PaddedView>
     <PaddedView style={{ backgroundColor: offWhite }}>
       <VelaPoint />
+      <br></br>
+      <HomeBanner />
     </PaddedView>
     <style jsx>{`
       .HomePage {

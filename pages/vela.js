@@ -127,7 +127,7 @@ const Vela = () => (
           <a href="/vela2">
             <img
               src="https://mcusercontent.com/68a0cce7cc109d78a8b44d7a0/images/c9f6a1b6-4dba-4bfb-a8de-129a47036d9b.jpg"
-              alt="Freio regenerativo bike"
+              alt="Ssitema regenerativo bike"
             />
           </a>
         </div>

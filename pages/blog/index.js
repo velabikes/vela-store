@@ -87,7 +87,7 @@ const Blog = ({ posts, highlight }) => (
       </Main>
       <style jsx>{`
         .actions {
-          position: absolute;
+          position: relative;
           bottom: 24px;
           right: 24px;
           display: flex;

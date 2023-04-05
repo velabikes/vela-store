@@ -42,7 +42,7 @@ const PostHightlight = ({
       .content {
         display: flex;
         flex-direction: column;
-        height: 100%;
+        height: 0%;
         text-align: center;
       }
       .content > div:first-child {

@@ -17,6 +17,9 @@ const Card = ({ children, onBackClick, media, horizontal }) => (
         position: relative;
         background: ${white};
         text-align: center;
+        margin-bottom: 0rem;
+        opacity: 0;
+        height: 0px;
       }
       .content {
         padding: 2rem;
@@ -39,7 +42,9 @@ const Card = ({ children, onBackClick, media, horizontal }) => (
           display: flex;
           flex-direction: ${horizontal ? "row" : "column"};
           text-align: left;
-          margin-bottom: 10rem;
+          margin-bottom: 0rem;
+          opacity: 0;
+          height: 0px;
         }
       }
     `}</style>

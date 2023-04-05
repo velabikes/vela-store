@@ -55,7 +55,9 @@ const Highlight = () => {
         </div>
       </div>
       <div className="price">
-        <h2>Faça parte do futuro. Agora.</h2>
+        <h1>
+          Faça parte do futuro. <br></br>Agora.
+        </h1>
         <div className="actions">
           <a href="/vela">
             <Button primary>Saiba mais</Button>
@@ -107,6 +109,13 @@ const Highlight = () => {
             flex-direction: column;
             color: ${offWhite};
             padding: 0em 2em 2em 2em;
+            justify-content: center;
+          }
+           .price h1{
+            display: flex;
+            flex-direction: column;
+            color: ${offBlack};
+            text-align: center;
             justify-content: center;
           }
           .price h2{
