@@ -16,10 +16,7 @@ const VelaPoint = () => (
         </a>
       </div>
       <div className="BannerImage">
-        <img
-          src="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FRedeVela.png?alt=media&token=d63d5018-1ab5-4874-b5f3-7cc623619a41"
-          alt="Rede de serviços Vela"
-        />
+        <img src="/Vela_Bikes_Rede.jpg" alt="Rede de serviços Vela" />
       </div>
       <style jsx>{`
         .PointBanner {
