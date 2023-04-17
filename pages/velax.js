@@ -1,6 +1,6 @@
 import Head from "next/head";
 import Link from "next/link";
-import LandingImage from "components/vela/LandingImage v2x";
+import LandingImage from "components/vela/LandingImage vx";
 import Button from "../components/Button";
 import PaddedView from "../components/PaddedView";
 import {
@@ -20,7 +20,7 @@ const Vela = () => (
       <link
         rel="alternate"
         hrefLang="pt-br"
-        href="https://velabikes.com.br/vela2x"
+        href="https://velabikes.com.br/velax"
       />
       <meta name="application-name" content="Vela Bikes Store" />
       <meta
@@ -60,7 +60,7 @@ const Vela = () => (
           <h4>Conheça a geração smart da Vela!</h4>
         </div>
         <div className="actions">
-          <a href="/vela2x">
+          <a href="/velax">
             <Button primary>Monte a sua</Button>
           </a>
         </div>

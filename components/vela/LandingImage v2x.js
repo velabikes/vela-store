@@ -1,7 +1,7 @@
 const LandingImage = () => (
   <div className="cover">
-    <img src="/images/v2x.png" className="desktop" alt="Vela 2 - Smartbike" />
-    <img src="/images/v2x.png" className="mobile" alt="Vela 2 - Smartbike" />
+    <img src="/images/vx.png" className="desktop" alt="Vela 2 - Smartbike" />
+    <img src="/images/vx.png" className="mobile" alt="Vela 2 - Smartbike" />
     <style jsx>{`
       img {
         height: 55vh;
