@@ -213,20 +213,6 @@ module.exports = async (req, res) => {
         type: ["charger"],
       },
       {
-        name: "The Coffee Oscar Freire",
-        address: [
-          "R. Oscar Freire, 1149",
-          "Cerqueira César, São Paulo",
-          "SP, 01426-003, Brasil",
-        ],
-        pos: {
-          lat: -23.561599,
-          lng: -46.6709301,
-        },
-        googlePlace: "ChIJn6sjxaVXzpQR6YVQqQ5PgYE",
-        type: ["charger"],
-      },
-      {
         name: "Bacio di Latte Moema",
         address: [
           "R. Gaivota, 544",
