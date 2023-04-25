@@ -1,7 +1,7 @@
 const LandingImage = () => (
   <div className="cover">
-    <img src="/images/vx.png" className="desktop" alt="Vela 2 - Smartbike" />
-    <img src="/images/vx.png" className="mobile" alt="Vela 2 - Smartbike" />
+    <img src="/images/vxdt.png" className="desktop" alt="Vela 2 - Smartbike" />
+    <img src="/images/vxm.png" className="mobile" alt="Vela 2 - Smartbike" />
     <style jsx>{`
       img {
         height: 55vh;
@@ -15,7 +15,7 @@ const LandingImage = () => (
         img {
           object-fit: cover;
           max-width: 100%;
-          height: calc(101vh - 3.5em);
+          height: calc(103vh - 3.5em);
           object-position: 50% 70%;
         }
         .mobile {

@@ -41,10 +41,9 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) => (
             <a>Vela 2</a>
           </Link>
         </div>
-
         <div className="left">
-          <Link href="/velamais">
-            <a>Vela+</a>
+          <Link href="/velax">
+            <a>Vela X</a>
           </Link>
         </div>
         <div className="left">
@@ -55,6 +54,11 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) => (
         <div className="left">
           <Link href="/store/parts" as="/loja/pecas">
             <a>Peças</a>
+          </Link>
+        </div>
+        <div className="left">
+          <Link href="/velamais">
+            <a>Vela+</a>
           </Link>
         </div>
         <div className="left">
