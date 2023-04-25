@@ -61,11 +61,11 @@ const Vela = () => (
         font-weight: 900;
         color: ${offBlack};
         line-height: 1em;
-        margin-left: 0.1em;
+        margin-left: 0em;
       }
       .slogan h3 {
         color: ${offBlack};
-        margin-left: 1em;
+        margin-left: 0em;
       }
       .slogan {
         max-width: 13em;
@@ -312,6 +312,7 @@ const Vela = () => (
         .slogan h1 {
           font-size: 8em;
           font-weight: 900;
+          marging-left: 1em;
         }
         .cta {
           position: absolute;
@@ -320,8 +321,8 @@ const Vela = () => (
           text-align: right;
           right: 4em;
           top: 4em;
-          padding: 1em 2em 2em 1em;
-          background-color: ${white};
+          padding: 1em 2em 2em 2em;
+          background-color: ${offWhite};
         }
         .cta .actions {
           margin-top: 0em;
