@@ -9,6 +9,10 @@ import {
   offBlack,
   lightGreen,
   velaRed,
+  lightGray,
+  midGray,
+  darkGray,
+  velaYellow,
 } from "../style/colors";
 import withOpenDrawer from "../containers/withOpenDrawer";
 import Cart from "./store/Cart";
@@ -41,7 +45,7 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) => (
             <a>Vela 2</a>
           </Link>
         </div>
-        <div className="left">
+        <div className="blackfriday">
           <Link href="/velax">
             <a>Vela X</a>
           </Link>
@@ -161,6 +165,13 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) => (
         }
         .right :global(.CartIcon) {
           fill: ${offWhite};
+        }
+        .blackfriday a {
+          display: flex;
+          margin-top: 4px;
+          padding: 0 1.2rem;
+          font-weight: 500;
+          color: #ede6de;
         }
       }
     `}</style>
