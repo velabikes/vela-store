@@ -43,52 +43,6 @@ const Vela = () => (
           <h1>VX</h1>
           <h3>Em breve.</h3>
         </div>
-        <p>
-          5 Dicas para diminuir a ansiedade: 1. Inspire e expire A ansiedade
-          estimula a hiperventilação, ou seja, a inalação rápida do ar. Assim, o
-          controle da respiração é fundamental para que o equilíbrio do corpo
-          volte ao normal e você se sinta melhor. O importante, segundo
-          especialistas, é respirar corretamente, usando a musculatura do
-          diafragma. Procure contar dez respirações com pausas inspiratórias e
-          expiratórias. Parece balela, mas antes mesmo de chegar à décima você
-          estará muito mais relaxado! 2. Tenha boas noites de sono Além de te
-          deixar cansado, a ausência de sono prejudica as funções cognitivas –
-          ou seja, não adianta ficar até tarde achando que vai conseguir estudar
-          mais para aquela temida prova ou apresentação, porque, provavelmente,
-          você não estará absorvendo conteúdo da mesma maneira após muito tempo
-          acordado.  Então, nada de ficar imaginando como será o dia seguinte
-          nem superdimensionando os problemas: busque se afastar de eletrônicos
-          e outras distrações e tente dormir cedo e de maneira confortável. 3.
-          Coma bem Alguns alimentos têm nutrientes que podem ajudar a aplacar a
-          ansiedade, como grão-de-bico, aveia, coco, abacate e iogurtes naturais
-          integrais. Nozes, amêndoas e cacau, por exemplo, também são bons
-          aliados: combatem o estresse e podem te ajudar a matar a vontade de
-          comer doce.  Evitar alimentos com muita cafeína também é importante,
-          pois eles induzem uma liberação de adrenalina maior do que o comum.
-          Mas lembre-se: comer bem não é comer muito. Os sintomas da ansiedade
-          podem facilitar o aparecimento de compulsões alimentares, que podem
-          levar a excesso de peso e doenças cardiovasculares. Se preciso,
-          consulte um nutricionista para não deixar o cardápio desandar. 4.
-          Estimule seu corpo Todo mundo tem preocupações, em menor ou maior
-          escala, mas é importante determinar um tempo para isso. Organizar um
-          local para o trabalho ou estudo (ou seja o que for que está te
-          deixando fora de tempo) ajuda a separar essas preocupações do seu
-          horário de lazer, e, desse modo, te estimula a aproveitar o tempo
-          livre sem sofrimento.  Leia, faça atividades físicas, procure se
-          encontrar com pessoas fora de casa – enfim, não se torne refém dos
-          maus sentimentos. O importante é fazer algo que você goste: não
-          adianta se obrigar a fazer musculação se você gosta mais de atividades
-          aeróbicas, por exemplo. 5. Não tenha medo de procurar ajuda Se sentir
-          necessidade, converse com amigos e familiares sobre esses sentimentos
-          e procure dividi-los. No entanto, é preciso saber diferenciar a
-          ansiedade normal da patológica. Aquele mal-estar ou nervosismo ante
-          uma situação diferente ou complicada é comum, mas, se você vem se
-          sentindo dessa forma com frequência e/ou sem motivo certo, é adequado
-          procurar um profissional.  O transtorno de ansiedade generalizada
-          (TAG) é um distúrbio sério e que deve ser acompanhado para uma melhor
-          qualidade de vida. Além disso, é importante lembrar: cuidar de dentro
-          também é preciso!
-        </p>
       </div>
     </div>
     <style jsx>{`
