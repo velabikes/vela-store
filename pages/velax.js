@@ -40,8 +40,7 @@ const Vela = () => (
       <LandingImage />
       <div className="cta">
         <div className="slogan">
-          <h1>VX</h1>
-          <h3>Em breve.</h3>
+          <h3>Em breve...</h3>
         </div>
       </div>
     </div>
@@ -55,6 +54,9 @@ const Vela = () => (
         align-items: center;
         flex-direction: column;
         text-align: center;
+        margin-top: -1em;
+        padding-bottom: 2em;
+        background-color: #000000;
       }
       .slogan h1 {
         font-size: 6em;
@@ -64,7 +66,7 @@ const Vela = () => (
         margin-left: 0em;
       }
       .slogan h3 {
-        color: ${offBlack};
+        color: ${offWhite};
         margin-left: 0em;
       }
       .slogan {
@@ -313,11 +315,12 @@ const Vela = () => (
           font-size: 8em;
           font-weight: 900;
           marging-left: 1em;
-          color: ${darkGray};
+          color: #000000;
+          opacity; 0;
 
         }
       .slogan h3 {
-        color: ${darkGray};
+        color: ${offWhite};
         margin-left: 0em;
       }
         .cta {
@@ -325,8 +328,8 @@ const Vela = () => (
           justify-content: flex-end;
           align-items: flex-end;
           text-align: right;
-          right: 4em;
-          top: 4em;
+  margin-left: 10%;
+          top: 10%;
           padding: 1em 2em 2em 2em;
           background-color: transparent;
         }
