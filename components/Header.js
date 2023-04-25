@@ -100,7 +100,9 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) => (
         right: 0;
         z-index: 1001;
         width: 100%;
+        height: 57px;
         background-color: ${offBlack};
+        opacity: 1;
       }
       .app-content {
         margin-top: 3.5rem;
@@ -168,7 +170,7 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) => (
         }
         .blackfriday a {
           display: flex;
-          margin-top: 4px;
+          margin-top: 5px;
           padding: 0 1.2rem;
           font-weight: 500;
           color: #ede6de;

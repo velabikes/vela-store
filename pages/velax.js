@@ -313,7 +313,13 @@ const Vela = () => (
           font-size: 8em;
           font-weight: 900;
           marging-left: 1em;
+          color: ${darkGray};
+
         }
+      .slogan h3 {
+        color: ${darkGray};
+        margin-left: 0em;
+      }
         .cta {
           position: absolute;
           justify-content: flex-end;
@@ -322,7 +328,7 @@ const Vela = () => (
           right: 4em;
           top: 4em;
           padding: 1em 2em 2em 2em;
-          background-color: ${offWhite};
+          background-color: transparent;
         }
         .cta .actions {
           margin-top: 0em;
@@ -333,6 +339,7 @@ const Vela = () => (
           padding: 0;
           max-width: 12em;
           text-align: right;
+          text-color: ${offWhite};
         }
         .cta .slogan h4 {
           padding: 0;
