@@ -23,33 +23,18 @@ const Vela = () => (
         href="https://velabikes.com.br/velax"
       />
       <meta name="application-name" content="Vela Bikes Store" />
-      <meta
-        name="description"
-        content="Conheça a geração smart de bikes elétricas da Vela. Conectada com as ruas, com seu celular e com você."
-      />
+      <meta name="description" content="Conheça a Vela X." />
       <meta property="og:url" content="https://velabikes.com.br/velax" />
       <meta property="og:type" content="website" />
-      <meta property="og:title" content="Smartbike Vela 2 - Vela Bikes" />
+      <meta property="og:title" content="Vela X" />
       <meta property="og:locale" content="pt_BR" />
-      <meta
-        property="og:description"
-        content="Conheça a geração smart de bikes elétricas da Vela. Conectada com as ruas, com seu celular e com você."
-      />
-      <meta
-        property="og:image"
-        content="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FSmartbike.jpg?alt=media&token=db783cf6-c08e-49ae-98d8-3816c3d06ddf"
-      />
+      <meta property="og:description" content="Conheça a Vela X." />
+      <meta property="og:image" content="/images/vxdt.png" />
       <meta name="twitter:card" content="summary" />
       <meta name="twitter:site" content="@velabikes" />
-      <meta name="twitter:title" content="Smartbike Vela 2 - Vela Bikes" />
-      <meta
-        name="twitter:description"
-        content="Conheça a geração smart de bikes elétricas da Vela. Conectada com as ruas, com seu celular e com você."
-      />
-      <meta
-        name="twitter:image"
-        content="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FSmartbike.jpg?alt=media&token=db783cf6-c08e-49ae-98d8-3816c3d06ddf"
-      />
+      <meta name="twitter:title" content="Vela X" />
+      <meta name="twitter:description" content="Conheça a Vela X." />
+      <meta name="twitter:image" content="/images/vxdt.png" />
     </Head>
     <div className="cover">
       <LandingImage />
