@@ -142,6 +142,7 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) => (
       .blackfriday a {
         font-weight: bold;
         color: #db9612;
+        opacity: 0;
       }
       @media only screen and (min-width: 768px) {
         header {
@@ -173,7 +174,8 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) => (
           margin-top: 5px;
           padding: 0 1.2rem;
           font-weight: 500;
-          color: #ede6de;
+          color: ${midGray};
+          opacity: 1;
         }
       }
     `}</style>
