@@ -15,7 +15,7 @@ import { Assist, Boost } from "../components/Icons";
 const Vela = () => (
   <div className="HomePage">
     <Head>
-      <title>Smartbike Vela 2 - Vela Bikes</title>
+      <title>Vela X - Em Breve.</title>
       <meta httpEquiv="content-language" content="pt-br" />
       <link
         rel="alternate"
