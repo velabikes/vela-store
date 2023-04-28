@@ -45,11 +45,7 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) => (
             <a>Vela 2</a>
           </Link>
         </div>
-        <div className="blackfriday">
-          <Link href="/velax">
-            <a>Vela X</a>
-          </Link>
-        </div>
+
         <div className="left">
           <Link href="/store" as="/loja">
             <a>Acessórios</a>
