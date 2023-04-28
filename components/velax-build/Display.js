@@ -10,7 +10,7 @@ const Display = ({ model: { frame, size, color, tire } }) => {
     <div className="Display">
       <img
         src={selectedModelData.photos && selectedModelData.photos[0]}
-        alt="Vela 2"
+        alt="Vela X"
       />
       <style jsx>{`
         .Display {
