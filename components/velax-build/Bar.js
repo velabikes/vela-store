@@ -11,9 +11,9 @@ const Bar = ({ onContinue, extra, step, checkout }) => {
       <div className="top">
         <p className="right">
           Prazo:
-          <br /> 1 à 2 semanas
+          <br />
         </p>
-        <small>A Vela X é montada sob encomenda em São Paulo.</small>
+        <small>Disponível à pronta entrega na cidade de São Paulo.</small>
       </div>
       <div className="bottom">
         <div className="left">
