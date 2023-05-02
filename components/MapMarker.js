@@ -3,8 +3,7 @@ import {
   MarkerStoreIcon,
   MarkerChargerIcon,
   MarkerServiceIcon,
-  MarkerDeliveryIcon,
-  MarkerAreaIcon,
+  DeliveryServiceRegion,
 } from "./Icons";
 
 const MapMarkerIcon = ({ type }) => {
@@ -16,7 +15,7 @@ const MapMarkerIcon = ({ type }) => {
     case "service":
       return <MarkerServiceIcon />;
     case "delivery":
-      return <MarkerAreaIcon />;
+      return <DeliveryServiceRegion />;
 
     default:
       return null;

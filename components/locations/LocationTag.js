@@ -4,7 +4,7 @@ import {
   MarkerChargerIcon,
   MarkerStoreIcon,
   MarkerServiceIcon,
-  MarkerAreaIcon,
+  DeliveryServiceRegion,
   MarkerDeliveryIcon,
 } from "components/Icons";
 
