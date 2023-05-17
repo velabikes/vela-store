@@ -4,9 +4,9 @@ import Head from "next/head";
 const VelaX = () => {
   const [currentFrame, setCurrentFrame] = useState(1);
   const maxFrames = 236; // substitua pelo número total de frames que você possui
-  const scrollContainerHeight = 800; // substitua pela altura real do seu scroll container
+  const scrollContainerHeight = 900; // substitua pela altura real do seu scroll container
   const lastFrame = maxFrames; // número do último quadro
-  const scrollTriggerPosition = 150; // posição da rolagem na página em que os frames devem começar a alterar
+  const scrollTriggerPosition = 500; // posição da rolagem na página em que os frames devem começar a alterar
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,6 +34,18 @@ const VelaX = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [lastFrame, scrollTriggerPosition]);
+
+  useEffect(() => {
+    // Pré-carrega todos os frames
+    const preLoadFrames = () => {
+      for (let i = 1; i <= maxFrames; i++) {
+        const image = new Image();
+        image.src = `/velax/frames/frame${i}.png`;
+      }
+    };
+
+    preLoadFrames();
+  }, [maxFrames]);
 
   return (
     <div className="VelaX Landing">
