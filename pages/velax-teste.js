@@ -2,44 +2,60 @@ import React, { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 
 const VelaX = () => {
-  const [currentFrame, setCurrentFrame] = useState(1);
-  const [videoLoaded, setVideoLoaded] = useState(false);
+  const [isScrolling, setIsScrolling] = useState(false);
+  const [isReversed, setIsReversed] = useState(false);
   const videoRef = useRef(null);
-  const maxFrames = 236; // substitua pelo número total de frames que você possui
-  const scrollContainerHeight = 900; // substitua pela altura real do seu scroll container
-  const lastFrame = maxFrames; // número do último quadro
-  const scrollTriggerPosition = 500; // posição da rolagem na página em que os frames devem começar a alterar
+  const lastScrollTop = useRef(0);
 
   useEffect(() => {
+    let timeoutId;
+
     const handleScroll = () => {
-      const scrollTop =
+      clearTimeout(timeoutId);
+      setIsScrolling(true);
+
+      const currentScrollTop =
         window.pageYOffset || document.documentElement.scrollTop;
 
-      if (scrollTop >= scrollTriggerPosition) {
-        // Mapeia a posição de rolagem para o número do quadro
-        const frameNumber =
-          Math.floor(
-            ((scrollTop - scrollTriggerPosition) / scrollContainerHeight) *
-              maxFrames
-          ) + 1;
-        setCurrentFrame(frameNumber);
-
-        if (frameNumber === lastFrame) {
-          // O último quadro foi atingido, permitir a continuação da rolagem
-          window.removeEventListener("scroll", handleScroll);
-        }
+      if (currentScrollTop > lastScrollTop.current) {
+        // Scroll Down
+        setIsReversed(false);
+        if (videoRef.current.paused) videoRef.current.play();
+      } else {
+        // Scroll Up
+        setIsReversed(true);
+        if (videoRef.current.paused) videoRef.current.play();
       }
+      lastScrollTop.current = currentScrollTop <= 0 ? 0 : currentScrollTop;
+
+      timeoutId = setTimeout(() => {
+        setIsScrolling(false);
+        if (!videoRef.current.paused) videoRef.current.pause();
+      }, 200);
     };
 
     window.addEventListener("scroll", handleScroll);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      clearTimeout(timeoutId);
     };
-  }, [lastFrame, scrollTriggerPosition]);
+  }, []);
 
-  const handleVideoPlay = () => {
-    setVideoLoaded(true);
-  };
+  useEffect(() => {
+    if (videoRef.current) {
+      const intervalId = setInterval(() => {
+        if (isScrolling) {
+          if (isReversed) {
+            videoRef.current.currentTime -= 0.05;
+          } else {
+            videoRef.current.currentTime += 0.05;
+          }
+        }
+      }, 50);
+      return () => clearInterval(intervalId);
+    }
+  }, [isScrolling, isReversed]);
 
   return (
     <div className="VelaX Landing">
@@ -63,14 +79,19 @@ const VelaX = () => {
         />
       </div>
       <div className="TopVideo">
-        <img
-          src={`/velax/frames/frame${currentFrame}.png`}
-          alt="Current Frame"
-          style={{
-            width: "100%",
-            height: "auto",
-          }}
-        />
+        <div className="VideoContainer">
+          <video
+            ref={videoRef}
+            src="/velax/vx-animation1.mp4"
+            autoPlay
+            muted
+            loop
+            style={{
+              width: "100%",
+              height: "auto",
+            }}
+          />
+        </div>
       </div>
       <div id="scroll-steps">
         <div id="step1"></div>
@@ -93,7 +114,6 @@ const VelaX = () => {
           position: relative;
           overflow: hidden;
         }
-
         .VelaX.Landing {
           background-color: #000000;
         }
