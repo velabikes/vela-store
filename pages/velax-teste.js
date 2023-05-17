@@ -99,21 +99,20 @@ const VelaX = () => {
           }}
         />
       </div>
-      {!videoEnded && (
-        <div className="TopVideo">
-          <div className="VideoContainer">
-            <video
-              ref={videoRef}
-              src="/velax/vx-animation1.mp4"
-              muted
-              style={{
-                width: "100%",
-                height: "auto",
-              }}
-            />
-          </div>
+
+      <div className="TopVideo">
+        <div className="VideoContainer">
+          <video
+            ref={videoRef}
+            src="/velax/vx-animation1.mp4"
+            muted
+            style={{
+              width: "100%",
+              height: "auto",
+            }}
+          />
         </div>
-      )}
+      </div>
       <div id="scroll-steps">
         <div id="step1"></div>
         <div id="step2"></div>
