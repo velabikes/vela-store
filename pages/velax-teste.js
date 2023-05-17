@@ -1,25 +1,31 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Head from "next/head";
 
 const VelaX = () => {
   const [currentFrame, setCurrentFrame] = useState(1);
   const maxFrames = 236; // substitua pelo número total de frames que você possui
-  const scrollContainerHeight = 900; // substitua pela altura real do seu scroll container
+  const scrollContainerHeight = 800; // substitua pela altura real do seu scroll container
   const lastFrame = maxFrames; // número do último quadro
+  const scrollTriggerPosition = 150; // posição da rolagem na página em que os frames devem começar a alterar
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop =
         window.pageYOffset || document.documentElement.scrollTop;
 
-      // Mapeia a posição de rolagem para o número do quadro
-      const frameNumber =
-        Math.floor((scrollTop / scrollContainerHeight) * maxFrames) + 1;
-      setCurrentFrame(frameNumber);
+      if (scrollTop >= scrollTriggerPosition) {
+        // Mapeia a posição de rolagem para o número do quadro
+        const frameNumber =
+          Math.floor(
+            ((scrollTop - scrollTriggerPosition) / scrollContainerHeight) *
+              maxFrames
+          ) + 1;
+        setCurrentFrame(frameNumber);
 
-      if (frameNumber === lastFrame) {
-        // O último quadro foi atingido, permitir a continuação da rolagem
-        window.removeEventListener("scroll", handleScroll);
+        if (frameNumber === lastFrame) {
+          // O último quadro foi atingido, permitir a continuação da rolagem
+          window.removeEventListener("scroll", handleScroll);
+        }
       }
     };
 
@@ -27,7 +33,7 @@ const VelaX = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [lastFrame]);
+  }, [lastFrame, scrollTriggerPosition]);
 
   return (
     <div className="VelaX Landing">
