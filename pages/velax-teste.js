@@ -80,9 +80,7 @@ const VelaX = () => {
             <video
               ref={videoRef}
               src="/velax/vx-animation1.mp4"
-              autoPlay
               muted
-              loop
               style={{
                 width: "100%",
                 height: "auto",
@@ -111,8 +109,7 @@ const VelaX = () => {
         .TopVideo {
           background-color: #1d1d1d;
           position: relative;
-          overflow: hidden;
-          height: 70vh;
+          height: 90vh;
         }
 
         .VelaX.Landing {
