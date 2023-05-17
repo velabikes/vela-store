@@ -37,10 +37,28 @@ const VelaX = () => {
 
   useEffect(() => {
     // Pré-carrega todos os frames
-    const preLoadFrames = () => {
+    const preLoadFrames = async () => {
+      const loadImage = (src) => {
+        return new Promise((resolve, reject) => {
+          const img = new Image();
+          img.onload = resolve;
+          img.onerror = reject;
+          img.src = src;
+        });
+      };
+
+      const framePromises = [];
       for (let i = 1; i <= maxFrames; i++) {
-        const image = new Image();
-        image.src = `/velax/frames/frame${i}.png`;
+        const frameSrc = `/velax/frames/frame${i}.png`;
+        const framePromise = loadImage(frameSrc);
+        framePromises.push(framePromise);
+      }
+
+      try {
+        await Promise.all(framePromises);
+        console.log("Todos os frames foram pré-carregados.");
+      } catch (error) {
+        console.error("Erro ao pré-carregar os frames:", error);
       }
     };
 
