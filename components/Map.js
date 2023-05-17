@@ -5,7 +5,7 @@ import styles from "components/MapStyles";
 const Map = ({ children, initialCenter, isLoading, ...props }) =>
   !isLoading && (
     <GoogleMapReact
-      bootstrapURLKeys={{ key: "AIzaSyDPIMs29240aTRj5izYnWSRfmKucLR0cwY" }}
+      bootstrapURLKeys={{ key: "AIzaSyBrrPA1Bxkep6H53DDe5GrQVTFM90Xawag" }}
       defaultZoom={13}
       defaultCenter={initialCenter || { lat: -23.535, lng: -46.7053 }}
       options={{
@@ -17,6 +17,9 @@ const Map = ({ children, initialCenter, isLoading, ...props }) =>
         gestureHandling: "greedy",
       }}
       {...props}
+      onGoogleApiLoaded={({ map, maps }) =>
+        props.onMapObjectsLoaded({ map, maps })
+      }
     >
       {children}
     </GoogleMapReact>
