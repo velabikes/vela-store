@@ -1,37 +1,48 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Head from "next/head";
 
 const VelaX = () => {
-  const [isScrolling, setIsScrolling] = useState(false);
-  const [isReversed, setIsReversed] = useState(false);
   const videoRef = useRef(null);
   const lastScrollTop = useRef(0);
+  const [videoEnded, setVideoEnded] = useState(false);
 
   useEffect(() => {
     let timeoutId;
 
     const handleScroll = () => {
       clearTimeout(timeoutId);
-      setIsScrolling(true);
 
       const currentScrollTop =
         window.pageYOffset || document.documentElement.scrollTop;
+      const maxScrollTop =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+
+      if (videoRef.current) {
+        const progress = currentScrollTop / maxScrollTop;
+        videoRef.current.currentTime = progress * videoRef.current.duration;
+      }
 
       if (currentScrollTop > lastScrollTop.current) {
         // Scroll Down
-        setIsReversed(false);
         if (videoRef.current.paused) videoRef.current.play();
       } else {
         // Scroll Up
-        setIsReversed(true);
         if (videoRef.current.paused) videoRef.current.play();
       }
+
       lastScrollTop.current = currentScrollTop <= 0 ? 0 : currentScrollTop;
 
       timeoutId = setTimeout(() => {
-        setIsScrolling(false);
         if (!videoRef.current.paused) videoRef.current.pause();
-      }, 200);
+
+        // Check if the video has ended
+        if (videoRef.current.ended) {
+          setVideoEnded(true);
+        } else {
+          setVideoEnded(false);
+        }
+      }, 1);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -41,21 +52,6 @@ const VelaX = () => {
       clearTimeout(timeoutId);
     };
   }, []);
-
-  useEffect(() => {
-    if (videoRef.current) {
-      const intervalId = setInterval(() => {
-        if (isScrolling) {
-          if (isReversed) {
-            videoRef.current.currentTime -= 0.05;
-          } else {
-            videoRef.current.currentTime += 0.05;
-          }
-        }
-      }, 50);
-      return () => clearInterval(intervalId);
-    }
-  }, [isScrolling, isReversed]);
 
   return (
     <div className="VelaX Landing">
@@ -78,21 +74,23 @@ const VelaX = () => {
           }}
         />
       </div>
-      <div className="TopVideo">
-        <div className="VideoContainer">
-          <video
-            ref={videoRef}
-            src="/velax/vx-animation1.mp4"
-            autoPlay
-            muted
-            loop
-            style={{
-              width: "100%",
-              height: "auto",
-            }}
-          />
+      {!videoEnded && (
+        <div className="TopVideo">
+          <div className="VideoContainer">
+            <video
+              ref={videoRef}
+              src="/velax/vx-animation1.mp4"
+              autoPlay
+              muted
+              loop
+              style={{
+                width: "100%",
+                height: "auto",
+              }}
+            />
+          </div>
         </div>
-      </div>
+      )}
       <div id="scroll-steps">
         <div id="step1"></div>
         <div id="step2"></div>
@@ -103,6 +101,7 @@ const VelaX = () => {
         .VideoContainer {
           max-width: 100%;
           overflow: hidden;
+          max-height: 90vh;
         }
 
         .VideoContainer video {
@@ -113,7 +112,9 @@ const VelaX = () => {
           background-color: #1d1d1d;
           position: relative;
           overflow: hidden;
+          height: 70vh;
         }
+
         .VelaX.Landing {
           background-color: #000000;
         }
