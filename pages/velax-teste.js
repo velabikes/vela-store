@@ -18,26 +18,44 @@ const VelaX = () => {
         document.documentElement.scrollHeight -
         document.documentElement.clientHeight;
 
-      if (videoRef.current) {
+      if (videoRef.current && videoRef.current.paused !== undefined) {
         const progress = currentScrollTop / maxScrollTop;
-        videoRef.current.currentTime = progress * videoRef.current.duration;
+        const currentTime = progress * videoRef.current.duration;
+
+        // Adjust the speed
+        const speed = 1.4; // Change this value to adjust the speed
+
+        videoRef.current.currentTime = currentTime * speed;
       }
 
       if (currentScrollTop > lastScrollTop.current) {
         // Scroll Down
-        if (videoRef.current.paused) videoRef.current.play();
+        if (
+          currentScrollTop > 1000 &&
+          videoRef.current &&
+          videoRef.current.paused
+        ) {
+          videoRef.current.play();
+        }
       } else {
         // Scroll Up
-        if (videoRef.current.paused) videoRef.current.play();
+        if (
+          currentScrollTop < 1000 &&
+          videoRef.current &&
+          !videoRef.current.paused
+        ) {
+          videoRef.current.pause();
+        }
       }
 
       lastScrollTop.current = currentScrollTop <= 0 ? 0 : currentScrollTop;
 
       timeoutId = setTimeout(() => {
-        if (!videoRef.current.paused) videoRef.current.pause();
+        if (videoRef.current && !videoRef.current.paused)
+          videoRef.current.pause();
 
         // Check if the video has ended
-        if (videoRef.current.ended) {
+        if (videoRef.current && videoRef.current.ended) {
           setVideoEnded(true);
         } else {
           setVideoEnded(false);
@@ -52,6 +70,13 @@ const VelaX = () => {
       clearTimeout(timeoutId);
     };
   }, []);
+
+  useEffect(() => {
+    if (videoRef.current && videoEnded) {
+      // Set the position to the last frame
+      videoRef.current.currentTime = videoRef.current.duration;
+    }
+  }, [videoEnded]);
 
   return (
     <div className="VelaX Landing">
@@ -97,9 +122,9 @@ const VelaX = () => {
       </div>
       <style jsx>{`
         .VideoContainer {
-          max-width: 100%;
+          max-height: 80vh;
+          max-width: auto%;
           overflow: hidden;
-          max-height: 90vh;
         }
 
         .VideoContainer video {
@@ -109,7 +134,7 @@ const VelaX = () => {
         .TopVideo {
           background-color: #1d1d1d;
           position: relative;
-          height: 90vh;
+          height: 100vh;
         }
 
         .VelaX.Landing {
