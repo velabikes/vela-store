@@ -1,5 +1,3 @@
-
-
 const { json } = require("micro");
 const correios = require("node-correios")();
 const fetch = require("node-fetch");
@@ -82,7 +80,7 @@ module.exports = async (req, res) => {
             service_name: "Frete Grátis",
             service_code: "FG",
             total_price: "0",
-            description: "6-11 dias úteis",
+            description: "3-6 dias úteis",
             currency: "BRL",
           },
         ],
