@@ -38,51 +38,49 @@ const LocationsMap = ({
         onFilterSelect={(newFilter) => {
           setFilter(filter === newFilter ? null : newFilter);
           setSelected(null);
-          }}
-          selectedFilter={filter}
-        />
-      </div>
-      {selected !== null && (
-        <div className="info">
-          <Card onBackClick={() => setSelected(null)}>
-            <LocationInfo {...locationsData[selected]} />
-          </Card>
-        </div>
-      )}
-      <style jsx>{`
-        .LocationsMap {
-          position: relative;
-          height: 100%;
-          z-index: 1;
-        }
-        .info {
-          position: absolute;
-          top: 1rem;
-          left: 1rem;
-          right: 1rem;
-          background-color: #f5f5f5;
-        }
-
-        .filter {
-          position: absolute;
-          top: 0rem;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        @media only screen and (min-width: 768px) {
-          .info {
-            max-width: 340px;
-          }
-          .filter {
-            top: auto;
-            bottom: 1rem;
-          }
-        }
-      `}</style>
+        }}
+        selectedFilter={filter}
+      />
     </div>
-  );
-};
+    {selected !== null && (
+      <div className="info">
+        <Card onBackClick={() => setSelected(null)}>
+          <LocationInfo {...locationsData[selected]} />
+        </Card>
+      </div>
+    )}
+    <style jsx>{`
+      .LocationsMap {
+        position: relative;
+        height: 100%;
+        z-index: 1;
+      }
+      .info {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        right: 1rem;
+        background-color: #f5f5f5;
+      }
 
+      .filter {
+        position: absolute;
+        top: 0rem;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      @media only screen and (min-width: 768px) {
+        .info {
+          max-width: 340px;
+        }
+        .filter {
+          top: auto;
+          bottom: 1rem;
+        }
+      }
+    `}</style>
+  </div>
+);
 LocationsMap.propTypes = {
   locationsData: PropTypes.array,
   filterLocations: PropTypes.array,
