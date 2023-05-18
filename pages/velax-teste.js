@@ -68,7 +68,7 @@ const VelaX = () => {
       </div>
       <div className="scroll-video-container">
         <div className="scroll-video-1" ref={videoRef}>
-          <video ref={scrollVideoRef} width="100%" muted loop>
+          <video ref={scrollVideoRef} width="100%" muted loop playsInline>
             <source src="/velax/teste-animation-2.mp4" type="video/mp4" />
           </video>
         </div>
