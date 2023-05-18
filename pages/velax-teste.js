@@ -1,143 +1,65 @@
-import React, { useEffect, useRef, useState } from "react";
-import Head from "next/head";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const VelaX = () => {
-  const videoRef = useRef(null);
-  const lastScrollTop = useRef(0);
-  const [videoEnded, setVideoEnded] = useState(false);
+  const scrollVideoRef = useRef(null);
 
   useEffect(() => {
-    let timeoutId;
-
-    const handleScroll = () => {
-      clearTimeout(timeoutId);
-
-      const currentScrollTop =
-        window.pageYOffset || document.documentElement.scrollTop;
-      const maxScrollTop =
-        document.documentElement.scrollHeight -
-        document.documentElement.clientHeight;
-
-      if (videoRef.current && videoRef.current.paused !== undefined) {
-        const progress = currentScrollTop / maxScrollTop;
-        const currentTime = progress * videoRef.current.duration;
-
-        // Adjust the speed
-        const speed = 1.4; // Change this value to adjust the speed
-
-        videoRef.current.currentTime = currentTime * speed;
-      }
-
-      if (currentScrollTop > lastScrollTop.current) {
-        // Scroll Down
-        if (
-          currentScrollTop > 1000 &&
-          videoRef.current &&
-          videoRef.current.paused
-        ) {
-          videoRef.current.play();
-        }
-      } else {
-        // Scroll Up
-        if (
-          currentScrollTop < 1000 &&
-          videoRef.current &&
-          !videoRef.current.paused
-        ) {
-          videoRef.current.pause();
-        }
-      }
-
-      lastScrollTop.current = currentScrollTop <= 0 ? 0 : currentScrollTop;
-
-      timeoutId = setTimeout(() => {
-        if (videoRef.current && !videoRef.current.paused)
-          videoRef.current.pause();
-
-        // Check if the video has ended
-        if (videoRef.current && videoRef.current.ended) {
-          setVideoEnded(true);
-        } else {
-          setVideoEnded(false);
-        }
-      }, 1);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      clearTimeout(timeoutId);
-    };
+    let videoDuration = scrollVideoRef.current.duration;
+    gsap.to(scrollVideoRef.current, {
+      currentTime: videoDuration,
+      scrollTrigger: {
+        trigger: ".scroll-video-1",
+        scrub: 50,
+        start: "top 80%",
+        end: "50% 50%",
+        markers: true,
+      },
+    });
   }, []);
-
-  useEffect(() => {
-    if (videoRef.current && videoEnded) {
-      // Set the position to the last frame
-      videoRef.current.currentTime = videoRef.current.duration;
-    }
-  }, [videoEnded]);
 
   return (
     <div className="VelaX Landing">
-      <Head>
-        <title>Vela X</title>
-        <meta httpEquiv="content-language" content="pt-br" />
-        <link
-          rel="alternate"
-          hrefLang="pt-br"
-          href="https://velabikes.com.br/velax-teste"
-        />
-      </Head>
-      <div className="VideoContainer">
-        <video
-          src="/velax/velax-release.mp4"
-          controls
-          style={{
-            width: "100%",
-            height: "auto",
-          }}
-        />
+      <div className="play-video">
+        <video width="100%" height="100%" controls>
+          <source src="/velax/velax-release.mp4" type="video/mp4" />
+        </video>
       </div>
-
-      <div className="TopVideo">
-        <div className="VideoContainer">
-          <video
-            ref={videoRef}
-            src="/velax/vx-animation1.mp4"
-            muted
-            style={{
-              width: "100%",
-              height: "auto",
-            }}
-          />
-        </div>
+      <div className="scroll-video-1">
+        <video ref={scrollVideoRef} width="100%" muted loop>
+          <source src="/velax/teste-animation-2.mp4" type="video/mp4" />
+        </video>
       </div>
-      <div id="scroll-steps">
-        <div id="step1"></div>
-        <div id="step2"></div>
-        <div id="step3"></div>
-        <div id="step4"></div>
+      <div className="image-1">
+        <img src="/velax/teste1.png" alt="Image 1" />
+      </div>
+      <div className="image-2">
+        <img src="/velax/teste2.png" alt="Image 2" />
       </div>
       <style jsx>{`
-        .VideoContainer {
-          max-height: 80vh;
-          max-width: auto%;
-          overflow: hidden;
+        .VelaX {
+          width: 100%;
+          height: 100%;
+          background-color: #000000;
         }
-
-        .VideoContainer video {
-          object-fit: cover;
-        }
-
-        .TopVideo {
-          background-color: #1d1d1d;
-          position: relative;
+        .play-video {
+          width: 100%;
           height: 100vh;
         }
-
-        .VelaX.Landing {
-          background-color: #000000;
+        .scroll-video-1 {
+          width: auto;
+          height: 90vh;
+        }
+        .image-1 {
+          width: 100%;
+          height: 90vh;
+        }
+        .image-2 {
+          width: 100%;
+          height: 90vh;
         }
       `}</style>
     </div>
