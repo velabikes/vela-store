@@ -40,6 +40,7 @@
     "graphql-request": "^1.8.2",
     "gsap": "^3.11.5",
     "isomorphic-fetch": "^2.2.1",
+    "locomotive-scroll": "^4.1.4",
     "logrocket": "^1.0.1",
     "micro": "^9.3.4",
     "next": "^9.3.2",

@@ -49,10 +49,10 @@ const VelaX = () => {
         scrollTrigger: {
           trigger: videoElement,
           start: "top top",
-          end: "bottom -50%",
+          end: "bottom -500px",
           pin: true,
-          scrub: 1,
-          pinSpacing: false,
+          scrub: 0.1,
+          pinSpacing: true,
           markers: false,
         },
       });
@@ -68,8 +68,8 @@ const VelaX = () => {
       </div>
       <div className="scroll-video-container">
         <div className="scroll-video-1" ref={videoRef}>
-          <video ref={scrollVideoRef} width="100%" muted loop playsInline>
-            <source src="/velax/teste-animation-2.mp4" type="video/mp4" />
+          <video ref={scrollVideoRef} width="100%" muted loop>
+            <source src="/velax/scroll-video-1.mp4" type="video/mp4" />
           </video>
         </div>
       </div>
@@ -100,7 +100,7 @@ const VelaX = () => {
         }
         .image-1 {
           width: 100%;
-          height: 90vh;
+          height: 160vh;
         }
         .image-2 {
           width: 100%;
