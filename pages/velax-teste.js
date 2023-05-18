@@ -51,7 +51,7 @@ const VelaX = () => {
           start: "top top",
           end: "bottom -500px",
           pin: true,
-          scrub: 0.2,
+          scrub: 0.1,
           pinSpacing: true,
           markers: false,
         },
