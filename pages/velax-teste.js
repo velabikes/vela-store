@@ -1,24 +1,62 @@
 import React, { useEffect, useRef } from "react";
+import { useInView } from "react-intersection-observer";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const VelaX = () => {
   const scrollVideoRef = useRef(null);
+  const [videoRef, inView] = useInView({
+    triggerOnce: true,
+  });
 
   useEffect(() => {
-    let videoDuration = scrollVideoRef.current.duration;
-    gsap.to(scrollVideoRef.current, {
-      currentTime: videoDuration,
-      scrollTrigger: {
-        trigger: ".scroll-video-1",
-        scrub: 50,
-        start: "top 80%",
-        end: "50% 50%",
-        markers: false,
-      },
-    });
+    const videoElement = scrollVideoRef.current;
+    const duration = videoElement.duration;
+
+    const handleScroll = () => {
+      if (inView) {
+        const scrollPercentage =
+          window.scrollY / (document.body.scrollHeight - window.innerHeight);
+        const currentTime = duration * scrollPercentage;
+        videoElement.currentTime = currentTime;
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [inView]);
+
+  useEffect(() => {
+    const videoElement = videoRef.current;
+    if (videoElement) {
+      if (inView) {
+        videoElement.play();
+      } else {
+        videoElement.pause();
+      }
+    }
+  }, [inView, videoRef]);
+
+  useEffect(() => {
+    const videoElement = scrollVideoRef.current;
+    if (videoElement) {
+      gsap.to(videoElement, {
+        scrollTrigger: {
+          trigger: videoElement,
+          start: "top top",
+          end: "bottom -50%",
+          pin: true,
+          scrub: 1,
+          pinSpacing: false,
+          markers: false,
+        },
+      });
+    }
   }, []);
 
   return (
@@ -28,10 +66,12 @@ const VelaX = () => {
           <source src="/velax/velax-release.mp4" type="video/mp4" />
         </video>
       </div>
-      <div className="scroll-video-1">
-        <video ref={scrollVideoRef} width="100%" muted loop>
-          <source src="/velax/teste-animation-2.mp4" type="video/mp4" />
-        </video>
+      <div className="scroll-video-container">
+        <div className="scroll-video-1" ref={videoRef}>
+          <video ref={scrollVideoRef} width="100%" muted loop>
+            <source src="/velax/teste-animation-2.mp4" type="video/mp4" />
+          </video>
+        </div>
       </div>
       <div className="image-1">
         <img src="/velax/teste1.png" alt="Image 1" />
@@ -49,9 +89,14 @@ const VelaX = () => {
           width: 100%;
           height: 100vh;
         }
+        .scroll-video-container {
+          position: sticky;
+          top: 0;
+          height: 100vh;
+        }
         .scroll-video-1 {
+          height: 100%;
           width: auto;
-          height: 90vh;
         }
         .image-1 {
           width: 100%;
