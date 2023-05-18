@@ -53,7 +53,7 @@ const VelaX = () => {
           pin: true,
           scrub: 0.1,
           pinSpacing: true,
-          markers: false,
+          markers: true,
         },
       });
     }
