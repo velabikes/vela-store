@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import { compose, withState, withProps, withHandlers } from "recompose";
+import { compose, withState, withProps } from "recompose";
 import Map from "components/Map";
 import MapMarker from "components/MapMarker";
 import LocationInfo from "components/locations/LocationInfo";
@@ -9,52 +9,35 @@ import LocationFilter from "./LocationFilter";
 import ServiceAreaPolygon from "./ServiceAreaPolygon";
 
 const LocationsMap = ({
-  locationsData,
+  locations,
   filterLocations,
   setSelected,
   selected,
   setFilter,
   filter,
-}) => {
-  const [mapObjects, setMapObjects] = useState(null);
-
-  useEffect(() => {
-    if (mapObjects && mapObjects.map && mapObjects.maps) {
-      console.log("Map objects are ready");
-    }
-  }, [mapObjects]);
-
-  return (
-    <div className="LocationsMap">
-      <Map
-        onMapObjectsLoaded={(mapObjects) => {
-          setMapObjects(mapObjects);
-        }}
-      >
-        {mapObjects && mapObjects.map && mapObjects.maps && (
-          <ServiceAreaPolygon map={mapObjects.map} maps={mapObjects.maps} />
-        )}
-
-        {locationsData.map(({ pos, type, googlePlace }, i) => (
-          <MapMarker
-            lat={pos.lat}
-            lng={pos.lng}
-            type={type[0]}
-            onClick={() => setSelected(i)}
-            selected={selected === i}
-            disabled={selected !== null && selected !== i}
-            hidden={
-              filterLocations && !filterLocations.includes(locationsData[i])
-            }
-            key={googlePlace}
-          />
-        ))}
-      </Map>
-      <div className="filter">
-        <LocationFilter
-          onFilterSelect={(newFilter) => {
-            setFilter(filter === newFilter ? null : newFilter);
-            setSelected(null);
+}) => (
+  <div className="LocationsMap">
+    <Map
+      onClick={(e) => e.event.target.nodeName === "DIV" && setSelected(null)}
+    >
+      {locations.map(({ pos, type, googlePlace }, i) => (
+        <MapMarker
+          lat={pos.lat}
+          lng={pos.lng}
+          type={type[0]}
+          onClick={() => setSelected(i)}
+          selected={selected === i}
+          disabled={selected !== null && selected !== i}
+          hidden={filterLocations && !filterLocations.includes(locations[i])}
+          key={googlePlace}
+        />
+      ))}
+    </Map>
+    <div className="filter">
+      <LocationFilter
+        onFilterSelect={(newFilter) => {
+          setFilter(filter === newFilter ? null : newFilter);
+          setSelected(null);
           }}
           selectedFilter={filter}
         />
