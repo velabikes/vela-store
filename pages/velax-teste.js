@@ -16,7 +16,7 @@ const VelaX = () => {
         scrub: 50,
         start: "top 80%",
         end: "50% 50%",
-        markers: true,
+        markers: false,
       },
     });
   }, []);
