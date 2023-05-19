@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import { compose, withState, withProps } from "recompose";
 import Map from "components/Map";
@@ -6,7 +5,6 @@ import MapMarker from "components/MapMarker";
 import LocationInfo from "components/locations/LocationInfo";
 import Card from "components/Card";
 import LocationFilter from "./LocationFilter";
-import ServiceAreaPolygon from "./ServiceAreaPolygon";
 
 const LocationsMap = ({
   locations,
@@ -45,7 +43,7 @@ const LocationsMap = ({
     {selected !== null && (
       <div className="info">
         <Card onBackClick={() => setSelected(null)}>
-          <LocationInfo {...locationsData[selected]} />
+          <LocationInfo {...locations[selected]} />
         </Card>
       </div>
     )}
@@ -62,7 +60,7 @@ const LocationsMap = ({
         right: 1rem;
         background-color: #f5f5f5;
       }
-
+      
       .filter {
         position: absolute;
         top: 0rem;
@@ -81,21 +79,22 @@ const LocationsMap = ({
     `}</style>
   </div>
 );
+
 LocationsMap.propTypes = {
-  locationsData: PropTypes.array,
-  filterLocations: PropTypes.array,
+  locations: PropTypes.object,
+  filterLocations: PropTypes.object,
   setSelected: PropTypes.func,
-  selected: PropTypes.number,
+  selected: PropTypes.string,
   setFilter: PropTypes.func,
-  filter: PropTypes.string,
+  filter: PropTypes.object,
 };
 
 export default compose(
   withState("selected", "setSelected", null),
   withState("filter", "setFilter", null),
-  withProps(({ filter, locationsData }) => ({
+  withProps(({ filter, locations }) => ({
     filterLocations: filter
-      ? locationsData.filter(({ type }) => type.includes(filter))
+      ? locations.filter(({ type }) => type.includes(filter))
       : null,
   }))
 )(LocationsMap);

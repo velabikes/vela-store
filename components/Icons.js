@@ -281,7 +281,7 @@ export const MarkerDeliveryIcon = (props) => (
   </svg>
 );
 
-export const DeliveryServiceRegion = (props) => (
+export const MarkerAreaIcon = (props) => (
   <svg
     width="500"
     height="500"
