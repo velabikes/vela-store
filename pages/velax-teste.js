@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useInView } from "react-intersection-observer";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
@@ -6,21 +6,21 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const VelaX = () => {
-  const scrollVideoRef = useRef(null);
-  const [videoRef, inView] = useInView({
+  const scrollContainerRef = useRef(null);
+  const [containerRef, inView] = useInView({
     triggerOnce: true,
   });
 
-  useEffect(() => {
-    const videoElement = scrollVideoRef.current;
-    const duration = videoElement.duration;
+  const [currentImage, setCurrentImage] = useState(0);
+  const imageCount = 262; // Replace this with the number of images in your sequence
 
+  useEffect(() => {
     const handleScroll = () => {
       if (inView) {
         const scrollPercentage =
           window.scrollY / (document.body.scrollHeight - window.innerHeight);
-        const currentTime = duration * scrollPercentage;
-        videoElement.currentTime = currentTime;
+        const currentImageIndex = Math.floor(scrollPercentage * imageCount);
+        setCurrentImage(currentImageIndex);
       }
     };
 
@@ -29,34 +29,20 @@ const VelaX = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [inView]);
+  }, [inView, imageCount]);
 
   useEffect(() => {
-    const videoElement = videoRef.current;
-    if (videoElement) {
-      if (inView) {
-        videoElement.play();
-      } else {
-        videoElement.pause();
-      }
-    }
-  }, [inView, videoRef]);
-
-  useEffect(() => {
-    const videoElement = scrollVideoRef.current;
-    if (videoElement) {
-      gsap.to(videoElement, {
+    const scrollContainerElement = scrollContainerRef.current;
+    if (scrollContainerElement) {
+      gsap.to(scrollContainerElement, {
         scrollTrigger: {
-          trigger: videoElement,
-          start: "top top",
-          end: "bottom -500px",
+          trigger: scrollContainerElement,
+          start: "-50vh top",
+          end: "bottom -600%",
           pin: true,
           scrub: 0.1,
           pinSpacing: true,
-          markers: false,
-          muted: true,
-          playsinline: true,
-          preload: "auto",
+          markers: true,
         },
       });
     }
@@ -69,12 +55,12 @@ const VelaX = () => {
           <source src="/velax/velax-release.mp4" type="video/mp4" />
         </video>
       </div>
-      <div className="scroll-video-container">
-        <div className="scroll-video-1" ref={videoRef}>
-          <video ref={scrollVideoRef} width="100%" muted loop>
-            <source src="/velax/scroll-video-1.mp4" type="video/mp4" />
-          </video>
-        </div>
+      <div className="scroll-image-container" ref={containerRef}>
+        <img
+          ref={scrollContainerRef}
+          src={`/velax/image-scroll-1/scroll-image-sequence-${currentImage}.webp`}
+          alt="Scrolling image sequence"
+        />
       </div>
       <div className="image-1">
         <img src="/velax/teste1.png" alt="Image 1" />
@@ -85,27 +71,22 @@ const VelaX = () => {
       <style jsx>{`
         .VelaX {
           width: 100%;
-          height: 100%;
+          height: auto;
           background-color: #000000;
         }
         .play-video {
           width: 100%;
           height: 100vh;
         }
-        .scroll-video-container {
+        .scroll-image-container {
           position: sticky;
-          top: 0;
-          height: 100vh;
-          z-index: 2;
-        }
-        .scroll-video-1 {
+          marging-top: 0px;
           height: 100%;
-          width: auto;
           z-index: 2;
         }
         .image-1 {
           width: 100%;
-          height: 160vh;
+          height: 100vh;
         }
         .image-2 {
           width: 100%;
