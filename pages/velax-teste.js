@@ -26,7 +26,6 @@ const VelaX = () => {
         <div className="mask-container">
           <Mask maskSize="100vw" />
         </div>
-        <ScrollImageContainer />
         <div className="image-text-wrapper">
           <p
             className="image-text"
@@ -35,6 +34,7 @@ const VelaX = () => {
             Vela X
           </p>
         </div>
+        <ScrollImageContainer />
       </div>
       <div className="image-2">
         <img src="/velax/teste2.png" alt="Image 2" />
@@ -54,7 +54,7 @@ const VelaX = () => {
         }
         .mask-container {
           position: absolute;
-          height: 20%;
+
           z-index: 2;
         }
         .scroll-image-container {
@@ -67,7 +67,7 @@ const VelaX = () => {
         }
         .image-text-wrapper {
           position: absolute;
-          top: 18%;
+          top: 25%;
           left: 50%;
           transform: translate(-50%, -50%);
           width: 100%;
