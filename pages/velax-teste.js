@@ -47,7 +47,7 @@ const VelaX = () => {
         <div className="image-text-wrapper">
           <p
             className="image-text"
-            style={{ transform: `translateY(-${scrollOffset * 0.4}px)` }}
+            style={{ transform: `translateY(-${scrollOffset * 0.45}px)` }}
           >
             Vela X
           </p>
@@ -88,9 +88,10 @@ const VelaX = () => {
           top: 0;
           left: 0;
           width: auto;
-          height: 100vh;
+          height: 100%;
           z-index: 2;
         }
+
         .scroll-image-container {
           position: relative;
           z-index: 1;
@@ -116,12 +117,12 @@ const VelaX = () => {
           justify-content: center;
           vertical-align: middle;
           width: auto;
-          height: 100vh;
+          height: 100%;
         }
 
         .image-text-wrapper {
           position: absolute;
-          top: 15%;
+          top: 18%;
           left: 50%;
           transform: translate(-50%, -50%);
           width: 100%;
@@ -134,7 +135,6 @@ const VelaX = () => {
         .darkhero {
           position: relative;
           height: 100vh;
-          min-height: 100vh;
         }
 
         .image-text {

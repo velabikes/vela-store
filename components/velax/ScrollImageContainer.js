@@ -38,7 +38,7 @@ const ScrollImageContainer = () => {
         scrollTrigger: {
           trigger: scrollContainerElement,
           start: "-50vh top",
-          end: "400% -600%",
+          end: "300% -600%",
           pin: true,
           scrub: 0.1,
           pinSpacing: true,
