@@ -47,7 +47,7 @@ const VelaX = () => {
         <div className="image-text-wrapper">
           <p
             className="image-text"
-            style={{ transform: `translateY(-${scrollOffset * 0.5}px)` }}
+            style={{ transform: `translateY(-${scrollOffset * 0.4}px)` }}
           >
             Vela X
           </p>
@@ -107,7 +107,7 @@ const VelaX = () => {
 
         .image-2 img {
           height: 100%;
-          width: 100%;
+          width: 100vw;
           object-fit: cover;
         }
         .image-3 {
@@ -139,7 +139,7 @@ const VelaX = () => {
 
         .image-text {
           color: ${offWhite};
-          font-size: 10em;
+          font-size: 15vw;
           font-weight: 500;
           font-family: filson-pro;
           transition: transform 0.1s ease;
