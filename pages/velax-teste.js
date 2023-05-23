@@ -1,27 +1,15 @@
-import React, { useEffect, useState, useRef } from "react";
-import { useInView } from "react-intersection-observer";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
+import React, { useState, useEffect } from "react";
+import ScrollImageContainer from "/components/velax/ScrollImageContainer";
+import PlayVideo from "/components/velax/PlayVideo";
+import Mask from "/components/velax/Mask";
+import { offWhite } from "../style/colors";
 
 const VelaX = () => {
-  const scrollContainerRef = useRef(null);
-  const [containerRef, inView] = useInView({
-    triggerOnce: true,
-  });
-
-  const [currentImage, setCurrentImage] = useState(0);
-  const imageCount = 262; // Replace this with the number of images in your sequence
+  const [scrollOffset, setScrollOffset] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (inView) {
-        const scrollPercentage =
-          window.scrollY / (document.body.scrollHeight - window.innerHeight);
-        const currentImageIndex = Math.floor(scrollPercentage * imageCount);
-        setCurrentImage(currentImageIndex);
-      }
+      setScrollOffset(window.pageYOffset);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -29,42 +17,24 @@ const VelaX = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [inView, imageCount]);
-
-  useEffect(() => {
-    const scrollContainerElement = scrollContainerRef.current;
-    if (scrollContainerElement) {
-      gsap.to(scrollContainerElement, {
-        scrollTrigger: {
-          trigger: scrollContainerElement,
-          start: "-50vh top",
-          end: "bottom -600%",
-          pin: true,
-          scrub: 0.1,
-          pinSpacing: true,
-          markers: true,
-        },
-      });
-    }
   }, []);
 
   return (
-    <div className="VelaX Landing">
-      <div className="play-video">
-        <video width="100%" height="100%" controls>
-          <source src="/velax/velax-release.mp4" type="video/mp4" />
-        </video>
-      </div>
-      <div className="scroll-image-container" ref={containerRef}>
-        <img
-          ref={scrollContainerRef}
-          src={`/velax/image-scroll-1/scroll-image-sequence-${currentImage}.webp`}
-          alt="Scrolling image sequence"
-          style={{ objectFit: "cover", height: "100vh", width: "100%" }} // adjust the height and width here
-        />
-      </div>
-      <div className="image-1">
-        <img src="/velax/teste1.png" alt="Image 1" />
+    <div className="VelaX landing">
+      <PlayVideo />
+      <div className="image-container">
+        <div className="mask-container">
+          <Mask maskSize="100vw" />
+        </div>
+        <ScrollImageContainer />
+        <div className="image-text-wrapper">
+          <p
+            className="image-text"
+            style={{ transform: `translateY(-${scrollOffset * 0.7}px)` }}
+          >
+            Vela X
+          </p>
+        </div>
       </div>
       <div className="image-2">
         <img src="/velax/teste2.png" alt="Image 2" />
@@ -75,22 +45,41 @@ const VelaX = () => {
           height: auto;
           background-color: #000000;
         }
-        .play-video {
-          width: 100%;
-          height: 100vh;
+        .landing {
+          max-width: 100%;
         }
-        .scroll-image-container {
-          position: sticky;
-          marging-top: 0px;
+        .image-container {
+          position: relative;
+          width: 100%;
+        }
+        .mask-container {
+          position: absolute;
+          height: 20%;
           z-index: 2;
         }
-        .image-1 {
-          width: 100%;
-          height: 100vh;
+        .scroll-image-container {
+          position: relative;
+          z-index: 1;
         }
         .image-2 {
           width: 100%;
           height: 90vh;
+        }
+        .image-text-wrapper {
+          position: absolute;
+          top: 18%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+          text-align: center;
+          z-index: 3;
+        }
+        .image-text {
+          color: ${offWhite};
+          font-size: 10em;
+          font-weight: 500;
+          font-family: filson-pro;
+          transition: transform 0.2s ease;
         }
       `}</style>
     </div>

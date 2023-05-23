@@ -67,6 +67,7 @@
     "react-parallax": "^3.5.1",
     "react-player": "^2.12.0",
     "react-redux": "^7.0.3",
+    "react-responsive": "^9.0.2",
     "react-scroll": "^1.8.9",
     "react-scrollmagic": "^2.3.0",
     "recompose": "^0.30.0",
