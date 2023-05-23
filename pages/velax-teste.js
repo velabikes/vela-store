@@ -72,24 +72,23 @@ const VelaX = () => {
           background-color: #000000;
           overflow: hidden;
         }
-        .landing {
-          max-width: 100%;
-        }
         .image-container {
           position: relative;
-          width: 100%;
         }
         .mask-container {
+          display: flex;
           position: absolute;
+          overflow: hidden;
           top: -1px;
           z-index: 2;
         }
         .mask2-container {
+          display: flex;
           position: absolute;
           top: 0;
           left: 0;
-          width: 100%;
-          height: 100%;
+          width: auto;
+          height: 100vh;
           z-index: 2;
         }
         .scroll-image-container {
@@ -97,12 +96,19 @@ const VelaX = () => {
           z-index: 1;
         }
         .image-2 {
+          display: flex;
           position: absolute;
           top: 85%;
           left: 0;
-          width: 100%;
           height: 100vh;
+          overflow: hidden;
           transform: translateY(${image2Offset * 0.4}px);
+        }
+
+        .image-2 img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
         }
         .image-3 {
           display: flex;
