@@ -114,7 +114,9 @@ const VelaX = () => {
           display: flex;
           align-items: center;
           justify-content: center;
-          min-height: 100vh;
+          vertical-align: middle;
+          width: auto;
+          height: 100vh;
         }
 
         .image-text-wrapper {
@@ -125,10 +127,13 @@ const VelaX = () => {
           width: 100%;
           text-align: center;
           z-index: 3;
+          vertical-align: middle;
+          width: auto;
+          height: 100vh;
         }
         .darkhero {
           position: relative;
-          height: auto;
+          height: 100vh;
           min-height: 100vh;
         }
 
