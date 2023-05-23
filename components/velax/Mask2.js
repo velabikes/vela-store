@@ -4,7 +4,7 @@ const Mask = ({ maskSize }) => {
   return (
     <svg
       width="100vw"
-      height="auto"
+      height="100vh"
       viewBox="0 0 3773 2069"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
