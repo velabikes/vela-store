@@ -81,6 +81,7 @@ const VelaX = () => {
         }
         .mask-container {
           position: absolute;
+          top: -1px;
           z-index: 2;
         }
         .mask2-container {
