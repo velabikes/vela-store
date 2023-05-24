@@ -112,7 +112,12 @@ module.exports = async (req, res) => {
       );
     });
   } else {
-    if (freeShippingArray.includes(normalizeText(cityName))) {
+    const normalizedCityName = normalizeText(cityName);
+    const isFreeShippingCity = freeShippingArray.some((city) =>
+      normalizedCityName.includes(normalizeText(city))
+    );
+
+    if (isFreeShippingCity) {
       return res.end(
         JSON.stringify({
           rates: [

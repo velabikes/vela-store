@@ -132,8 +132,8 @@ const Warranty = () => (
         <li>
           c) Mau uso, esforços indevidos, ou qualquer tipo de uso diferente
           daquele proposto pela VELA geram a perda da garantia do quadro e seus
-          componentes: limite de 1 (um) adulto de até 150kg. Crianças de até
-          20kg podem ser transportadas no bagageiro traseiro. O peso máximo
+          componentes: limite de 1 (um) adulto de até 130kg. Crianças de até
+          15kg podem ser transportadas no bagageiro traseiro. O peso máximo
           transportado pela VELA não poderá ultrapassar os 150kg entre condutor
           e garupa, danos causados pelas vias (buracos, calçadas, guias, quedas,
           circulação estradas de terra, areia e outras situações que não fazem
