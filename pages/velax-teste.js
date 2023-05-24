@@ -8,7 +8,9 @@ import { offWhite } from "../style/colors";
 const VelaX = () => {
   const [scrollOffset, setScrollOffset] = useState(0);
   const [image2Offset, setImage2Offset] = useState(0);
+  const [image3Offset, setImage3Offset] = useState(0);
   const image2Ref = useRef(null);
+  const image3Ref = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,7 +59,7 @@ const VelaX = () => {
       <div className="image-2" ref={image2Ref}>
         <img src="/velax/teste2.png" alt="Image 2" />
       </div>
-      <div className="darkhero">
+      <div className="darkhero" ref={image3Ref}>
         <div className="mask2-container">
           <Mask2 width="100vw" />
         </div>
@@ -99,11 +101,11 @@ const VelaX = () => {
         .image-2 {
           display: flex;
           position: absolute;
-          top: 85%;
+          top: 77%;
           left: 0;
-          height: 100vh;
+          height: 90vh;
           overflow: hidden;
-          transform: translateY(${image2Offset * 0.4}px);
+          transform: translateY(${image2Offset * 0.3}px);
         }
 
         .image-2 img {
@@ -122,7 +124,7 @@ const VelaX = () => {
 
         .image-text-wrapper {
           position: absolute;
-          top: 18%;
+          top: 30%;
           left: 50%;
           transform: translate(-50%, -50%);
           width: 100%;
@@ -135,6 +137,7 @@ const VelaX = () => {
         .darkhero {
           position: relative;
           height: 100vh;
+          transform: translateY(${image3Offset * 0.2}px);
         }
 
         .image-text {
