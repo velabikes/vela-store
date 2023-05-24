@@ -114,7 +114,7 @@ module.exports = async (req, res) => {
   } else {
     const normalizedCityName = normalizeText(cityName);
     const isFreeShippingCity = freeShippingArray.some((city) =>
-      normalizedCityName.includes(normalizeText(city))
+      normalizeText(cityName).includes(normalizeText(city))
     );
 
     if (isFreeShippingCity) {
