@@ -1,5 +1,3 @@
-
-
 const { json } = require("micro");
 const correios = require("node-correios")();
 const fetch = require("node-fetch");
@@ -55,10 +53,9 @@ module.exports = async (req, res) => {
   const totalPrice = items.map((item) => item.price).reduce((b, a) => b + a, 0);
   const cepAvailable = destination.postal_code.replace("-", "").padEnd(8, "0");
 
-  let response;
   let cityName;
   try {
-    response = await timeout(
+    const response = await timeout(
       5000,
       fetch(`http://www.cepaberto.com/api/v3/cep?cep=${cepAvailable}`, {
         headers: {
@@ -75,7 +72,7 @@ module.exports = async (req, res) => {
   }
 
   if (items.length === 1 && items[0].sku === "VEL-GRU19") {
-    res.end(
+    return res.end(
       JSON.stringify({
         rates: [
           {
@@ -104,7 +101,7 @@ module.exports = async (req, res) => {
       nVlValorDeclarado: Math.max(totalPrice / 100, 21),
     };
 
-    return correios.calcPrecoPrazo(queryArgs, (err, result) => {
+    correios.calcPrecoPrazo(queryArgs, (err, result) => {
       if (err) return;
       console.log(items);
       console.log("\n");
@@ -115,8 +112,7 @@ module.exports = async (req, res) => {
       );
     });
   } else {
-    // eslint-disable-line
-    if (freeShippingArray.includes(cityName)) {
+    if (freeShippingArray.includes(normalizeText(cityName))) {
       return res.end(
         JSON.stringify({
           rates: [
@@ -131,7 +127,7 @@ module.exports = async (req, res) => {
         })
       );
     } else {
-      const totalShippingPrice = 39000 * Math.round(totalGrams / 26000); // Shipping price Vela
+      const totalShippingPrice = 39000 * Math.ceil(totalGrams / 26000); // Shipping price Vela
       return res.end(
         JSON.stringify({
           rates: [
@@ -152,10 +148,9 @@ module.exports = async (req, res) => {
 const mapCorreiosResultToRate = (result) =>
   result.map((r) => {
     const correiosReturn = {
-      // map here or map out?
       service_name: `Sedex`,
       service_code: r.Codigo,
-      total_price: parseFloat(r.Valor.split(",").join(".") * 100),
+      total_price: parseFloat(r.Valor.replace(",", ".")) * 100,
       description: `${Number(r.PrazoEntrega) + 5} dias úteis`,
       currency: `BRL`,
     };
