@@ -388,7 +388,7 @@ const Vela = () => (
             <tr>
               <td>Autonomia</td>
               <td>
-                Até 50km no modo econômico. A média entre os nossos clientes é
+                De 20 até 50km no modo econômico. A média entre os nossos clientes é
                 de 30km.
               </td>
             </tr>
