@@ -389,7 +389,7 @@ const Vela = () => (
               <td>Autonomia</td>
               <td>
                 De 20 até 50km no modo econômico. A média entre os nossos clientes é
-                de 30km.
+                de 30km com uma recarga.
               </td>
             </tr>
             <tr>
