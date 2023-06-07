@@ -167,21 +167,7 @@ module.exports = async (req, res) => {
         googlePlace: "ChIJGe5wTDGoiZQRtOU_mEtGCIg",
         type: ["service"],
       },
-      {
-        name: "Bacio di Latte",
-        address: [
-          "R. Vupabussu, 61",
-          "Pinheiros, São Paulo",
-          "SP, 05429-040, Brasil",
-        ],
-        phone: "(11) 3031-1092",
-        pos: {
-          lat: -23.5600874,
-          lng: -46.6971429,
-        },
-        googlePlace: "ChIJbSxi-w9XzpQRxor0_L36Djs",
-        type: ["charger"],
-      },
+      
       {
         name: "De Lá Do Pão",
         address: [
