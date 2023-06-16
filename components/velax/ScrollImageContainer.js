@@ -12,7 +12,7 @@ const ScrollImageContainer = () => {
   });
 
   const [currentImage, setCurrentImage] = useState(0);
-  const imageCount = 201; // Replace this with the number of images in your sequence
+  const imageCount = 177; // Replace this with the number of images in your sequence
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,7 +52,7 @@ const ScrollImageContainer = () => {
     <div className="scroll-image-container" ref={containerRef}>
       <img
         ref={scrollContainerRef}
-        src={`/velax/image-scroll-1/scroll-image-sequence-${currentImage}.webp`}
+        src={`/velax/image-scroll-1/VX-Path-Scroll-${currentImage}.webp`}
         alt="Scrolling image sequence"
         style={{ objectFit: "cover", height: "100vh", width: "101%" }} // adjust the height and width here
       />

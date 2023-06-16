@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import ScrollImageContainer from "/components/velax/ScrollImageContainer";
 import PlayVideo from "/components/velax/PlayVideo";
 import Mask from "/components/velax/Mask";
+import AutoplayRender1 from "/components/velax/AutoplayRender1";
 import Mask2 from "/components/velax/Mask2";
 import { offWhite } from "../style/colors";
 
@@ -28,7 +29,8 @@ const VelaX = () => {
     const handleScroll = () => {
       const scrollPosition = window.pageYOffset;
       const containerOffset = scrollPosition - image2Ref.current.offsetTop;
-      setImage2Offset(containerOffset);
+      const offset = containerOffset + 2500; // Subtract 200 pixels from the container offset
+      setImage2Offset(offset);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -41,9 +43,10 @@ const VelaX = () => {
   return (
     <div className="VelaX landing">
       <PlayVideo />
+
       <div className="image-container">
         <div className="mask-container">
-          <Mask maskSize="100vw" />
+          <Mask maskSize="80vw" />
         </div>
 
         <div className="image-text-wrapper">
@@ -57,16 +60,13 @@ const VelaX = () => {
         <ScrollImageContainer />
       </div>
       <div className="image-2" ref={image2Ref}>
-        <img src="/velax/teste2.png" alt="Image 2" />
+        <img src="/velax/VX-1.jpg" alt="Image 2" />
       </div>
-      <div className="darkhero" ref={image3Ref}>
-        <div className="mask2-container">
-          <Mask2 width="100vw" />
-        </div>
-        <div className="image-3">
-          <img src="/velax/darkhero.png" alt="Image 3" />
-        </div>
+      <div className="profile">
+        <img src="/velax/profile.jpg" alt="Image 2" />
       </div>
+      <AutoplayRender1 />
+
       <style jsx>{`
         .VelaX {
           width: 100%;
@@ -92,6 +92,7 @@ const VelaX = () => {
           width: auto;
           height: 100%;
           z-index: 2;
+          opacity: 0;
         }
 
         .scroll-image-container {
@@ -100,12 +101,13 @@ const VelaX = () => {
         }
         .image-2 {
           display: flex;
-          position: absolute;
-          top: 77%;
           left: 0;
           height: 90vh;
-          overflow: hidden;
-          transform: translateY(${image2Offset * 0.3}px);
+        }
+        .profile {
+          display: flex;
+          width: 100vw;
+          height: auto;
         }
 
         .image-2 img {
