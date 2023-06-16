@@ -3,6 +3,7 @@ import ScrollImageContainer from "/components/velax/ScrollImageContainer";
 import PlayVideo from "/components/velax/PlayVideo";
 import Mask from "/components/velax/Mask";
 import AutoplayRender1 from "/components/velax/AutoplayRender1";
+import AutoplayRender2 from "/components/velax/AutoplayRender2";
 import Mask2 from "/components/velax/Mask2";
 import { offWhite } from "../style/colors";
 
@@ -66,6 +67,7 @@ const VelaX = () => {
         <img src="/velax/profile.jpg" alt="Image 2" />
       </div>
       <AutoplayRender1 />
+      <AutoplayRender2 />
 
       <style jsx>{`
         .VelaX {
