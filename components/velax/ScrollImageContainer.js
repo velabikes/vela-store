@@ -12,7 +12,7 @@ const ScrollImageContainer = () => {
   });
 
   const [currentImage, setCurrentImage] = useState(0);
-  const imageCount = 177; // Replace this with the number of images in your sequence
+  const imageCount = 258; // Replace this with the number of images in your sequence
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,12 +37,12 @@ const ScrollImageContainer = () => {
       gsap.to(scrollContainerElement, {
         scrollTrigger: {
           trigger: scrollContainerElement,
-          start: "-50vh top",
-          end: "500% -00%",
+          start: "top 0",
+          end: "700%  0 ",
           pin: true,
           scrub: 0.1,
           pinSpacing: true,
-          markers: false,
+          markers: true,
         },
       });
     }
@@ -54,7 +54,7 @@ const ScrollImageContainer = () => {
         ref={scrollContainerRef}
         src={`/velax/image-scroll-1/VX-Path-Scroll-${currentImage}.webp`}
         alt="Scrolling image sequence"
-        style={{ objectFit: "cover", height: "100vh", width: "101%" }} // adjust the height and width here
+        style={{ objectFit: "cover", height: "100vh", width: "100vw" }} // adjust the height and width here
       />
     </div>
   );

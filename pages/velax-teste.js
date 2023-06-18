@@ -53,7 +53,7 @@ const VelaX = () => {
         <div className="image-text-wrapper">
           <p
             className="image-text"
-            style={{ transform: `translateY(-${scrollOffset * 0.45}px)` }}
+            style={{ transform: `translateY(-${scrollOffset * 0.65}px)` }}
           >
             Vela X
           </p>
@@ -97,19 +97,22 @@ const VelaX = () => {
           opacity: 0;
         }
 
-        .scroll-image-container {
+        .image-container {
           position: relative;
+          padding-bottom: 0;
           z-index: 1;
         }
         .image-2 {
           display: flex;
           left: 0;
+          position: relative;
           height: 90vh;
         }
         .profile {
           display: flex;
           width: 100vw;
           height: auto;
+          position: relative;
         }
 
         .image-2 img {
