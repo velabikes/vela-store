@@ -42,7 +42,7 @@ const ScrollImageContainer = () => {
           pin: true,
           scrub: 0.1,
           pinSpacing: true,
-          markers: true,
+          markers: false,
         },
       });
     }
