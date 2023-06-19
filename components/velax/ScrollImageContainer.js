@@ -12,7 +12,7 @@ const ScrollImageContainer = () => {
   });
 
   const [currentImage, setCurrentImage] = useState(0);
-  const imageCount = 258; // Replace this with the number of images in your sequence
+  const imageCount = 256; // Replace this with the number of images in your sequence
 
   useEffect(() => {
     const handleScroll = () => {
