@@ -60,6 +60,8 @@ const VelaX = () => {
         </div>
         <ScrollImageContainer />
       </div>
+      <PlayVideo />
+
       <div className="image-2" ref={image2Ref}>
         <img src="/velax/VX-1.jpg" alt="Image 2" />
       </div>
