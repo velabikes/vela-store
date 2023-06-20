@@ -12,7 +12,7 @@ const ScrollImageContainer = () => {
   });
 
   const [currentImage, setCurrentImage] = useState(0);
-  const imageCount = 256; // Replace this with the number of images in your sequence
+  const imageCount = 397; // Replace this with the number of images in your sequence
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,7 +38,7 @@ const ScrollImageContainer = () => {
         scrollTrigger: {
           trigger: scrollContainerElement,
           start: "top 0",
-          end: "700%  0 ",
+          end: "500%  0 ",
           pin: true,
           scrub: 0.1,
           pinSpacing: true,
