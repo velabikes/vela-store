@@ -9,6 +9,7 @@ import AutoplayRender2 from "/components/velax/AutoplayRender2";
 import Mask2 from "/components/velax/Mask2";
 import { offWhite } from "../style/colors";
 import { useMediaQuery } from "react-responsive";
+import PlayVideo2 from "../components/velax/PlayVideo2";
 
 const VelaX = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 762px)" });
@@ -48,6 +49,7 @@ const VelaX = () => {
 
   return (
     <div className="VelaX landing">
+      <PlayVideo2 />
       <div className="image-container">
         <div className="mask-container">
           <Mask maskSize="80vw" />
