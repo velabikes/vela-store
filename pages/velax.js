@@ -56,7 +56,7 @@ const VelaX = () => {
         <div className="image-text-wrapper">
           <p
             className="image-text"
-            style={{ transform: `translateY(-${scrollOffset * 0.5}px)` }}
+            style={{ transform: `translateY(-${scrollOffset * 1.2}px)` }}
           >
             Vela X
           </p>
@@ -66,12 +66,12 @@ const VelaX = () => {
       </div>
 
       <PlayVideo />
-      <div className="image-2" ref={image2Ref}>
-        <img src="/velax/VX-1.jpg" alt="Image 2" />
-      </div>
-
       <div className="profile">
         <img src="/velax/profile.jpg" alt="Image 2" />
+      </div>
+
+      <div className="image-2" ref={image2Ref}>
+        <img src="/velax/VX-1.jpg" alt="Image 2" />
       </div>
 
       {isMobile ? <AutoplayRender1Mob /> : <AutoplayRender1 />}
