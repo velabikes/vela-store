@@ -1,13 +1,17 @@
 import React, { useState, useEffect, useRef } from "react";
 import ScrollImageContainer from "/components/velax/ScrollImageContainer";
+import ScrollImageContainerMob from "/components/velax/ScrollImageContainerMob";
 import PlayVideo from "/components/velax/PlayVideo";
 import Mask from "/components/velax/Mask";
 import AutoplayRender1 from "/components/velax/AutoplayRender1";
 import AutoplayRender2 from "/components/velax/AutoplayRender2";
 import Mask2 from "/components/velax/Mask2";
 import { offWhite } from "../style/colors";
+import { useMediaQuery } from "react-responsive";
 
 const VelaX = () => {
+  const isMobile = useMediaQuery({ query: "(max-width: 762px)" });
+
   const [scrollOffset, setScrollOffset] = useState(0);
   const [image2Offset, setImage2Offset] = useState(0);
   const [image3Offset, setImage3Offset] = useState(0);
@@ -58,16 +62,20 @@ const VelaX = () => {
             Vela X
           </p>
         </div>
-        <ScrollImageContainer />
+
+        {isMobile ? <ScrollImageContainerMob /> : <ScrollImageContainer />}
       </div>
+
       <PlayVideo />
 
       <div className="image-2" ref={image2Ref}>
         <img src="/velax/VX-1.jpg" alt="Image 2" />
       </div>
+
       <div className="profile">
         <img src="/velax/profile.jpg" alt="Image 2" />
       </div>
+
       <AutoplayRender1 />
       <AutoplayRender2 />
 
@@ -78,9 +86,11 @@ const VelaX = () => {
           background-color: #000000;
           overflow: hidden;
         }
+
         .image-container {
           position: relative;
         }
+
         .mask-container {
           display: flex;
           position: absolute;
@@ -88,28 +98,35 @@ const VelaX = () => {
           top: -1px;
           z-index: 2;
         }
-        .mask2-container {
-          display: flex;
+
+        .image-text-wrapper {
           position: absolute;
-          top: 0;
-          left: 0;
+          top: 30%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 100%;
+          text-align: center;
+          z-index: 3;
+          vertical-align: middle;
           width: auto;
-          height: 100%;
-          z-index: 2;
-          opacity: 0;
+          height: 100vh;
         }
 
-        .image-container {
-          position: relative;
-          padding-bottom: 0;
-          z-index: 1;
+        .image-text {
+          color: ${offWhite};
+          font-size: 15vw;
+          font-weight: 500;
+          font-family: filson-pro;
+          transition: transform 0.1s ease;
         }
+
         .image-2 {
           display: flex;
           left: 0;
           position: relative;
           height: 90vh;
         }
+
         .profile {
           display: flex;
           width: 100vw;
@@ -155,6 +172,10 @@ const VelaX = () => {
           font-weight: 500;
           font-family: filson-pro;
           transition: transform 0.1s ease;
+        }
+
+        .play-video {
+          position: relative;
         }
       `}</style>
     </div>
