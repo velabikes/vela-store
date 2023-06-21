@@ -4,6 +4,7 @@ import ScrollImageContainerMob from "/components/velax/ScrollImageContainerMob";
 import PlayVideo from "/components/velax/PlayVideo";
 import Mask from "/components/velax/Mask";
 import AutoplayRender1 from "/components/velax/AutoplayRender1";
+import AutoplayRender1Mob from "/components/velax/AutoplayRender1Mob";
 import AutoplayRender2 from "/components/velax/AutoplayRender2";
 import Mask2 from "/components/velax/Mask2";
 import { offWhite } from "../style/colors";
@@ -76,7 +77,7 @@ const VelaX = () => {
         <img src="/velax/profile.jpg" alt="Image 2" />
       </div>
 
-      <AutoplayRender1 />
+      {isMobile ? <AutoplayRender1Mob /> : <AutoplayRender1 />}
       <AutoplayRender2 />
 
       <style jsx>{`
