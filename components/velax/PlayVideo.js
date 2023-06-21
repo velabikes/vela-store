@@ -2,9 +2,9 @@ import React from "react";
 
 const PlayVideo = () => {
   return (
-    <div className="play-video">
-      <video height="100%" width="100%" controls poster="/velax/darkhero.jpg">
-        <source src="/velax/velax-release.mp4" type="video/mp4" />
+    <div className="autoplay-video">
+      <video width="100%" height="100%" autoPlay muted loop playsInline>
+        <source src="/velax/velax-release2.mp4" type="video/mp4" />
       </video>
     </div>
   );

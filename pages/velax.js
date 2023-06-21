@@ -48,8 +48,6 @@ const VelaX = () => {
 
   return (
     <div className="VelaX landing">
-      <PlayVideo />
-
       <div className="image-container">
         <div className="mask-container">
           <Mask maskSize="80vw" />
@@ -58,7 +56,7 @@ const VelaX = () => {
         <div className="image-text-wrapper">
           <p
             className="image-text"
-            style={{ transform: `translateY(-${scrollOffset * 0.65}px)` }}
+            style={{ transform: `translateY(-${scrollOffset * 0.5}px)` }}
           >
             Vela X
           </p>
@@ -68,7 +66,6 @@ const VelaX = () => {
       </div>
 
       <PlayVideo />
-
       <div className="image-2" ref={image2Ref}>
         <img src="/velax/VX-1.jpg" alt="Image 2" />
       </div>
@@ -81,8 +78,9 @@ const VelaX = () => {
       <AutoplayRender2 />
 
       <style jsx>{`
-        .VelaX {
+        .VelaX landing {
           width: 100%;
+
           height: auto;
           background-color: #000000;
           overflow: hidden;
@@ -90,6 +88,7 @@ const VelaX = () => {
 
         .image-container {
           position: relative;
+          top: -60px;
         }
 
         .mask-container {
