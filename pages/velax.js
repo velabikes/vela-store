@@ -10,6 +10,13 @@ import Mask2 from "/components/velax/Mask2";
 import { offWhite } from "/style/colors";
 import { useMediaQuery } from "react-responsive";
 import IntroDark from "/components/velax/IntroDark";
+import {
+  darkGray,
+  offBlack,
+  velaBlue,
+  velaGreen,
+  velaRed,
+} from "../style/colors";
 
 const VelaX = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 962px)" });
@@ -19,6 +26,10 @@ const VelaX = () => {
   const [image3Offset, setImage3Offset] = useState(0);
   const image2Ref = useRef(null);
   const image3Ref = useRef(null);
+
+  const redirectToBuildPage = () => {
+    window.location.href = "https://www.velabikes.com.br/velax-build";
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,6 +60,18 @@ const VelaX = () => {
 
   return (
     <div className="VelaX landing">
+      <div className="topcta">
+        <p className="VelaX header"> VELA X</p>
+        <p className="price">
+          {" "}
+          R$ 10.890 <br />
+          em até 12x sem juros
+        </p>
+        <button className="button" onClick={redirectToBuildPage}>
+          MONTE A SUA
+        </button>
+      </div>
+
       {isMobile ? <IntroDarkMob /> : <IntroDark />}
 
       <div className="image-container">
@@ -84,11 +107,63 @@ const VelaX = () => {
       <AutoplayRender2 />
 
       <style jsx>{`
-        .VelaX landing {
+        .VelaX {
           width: 100%;
           height: auto;
-
           overflow: hidden;
+        }
+
+        .topcta {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          align-items: center;
+          position: fixed;
+          top: 30;
+          left: 0;
+          right: 0;
+          background-color: rgba(0, 0, 0, 1);
+          padding: 0px;
+          z-index: 999;
+
+          z-index: 10;
+        }
+
+        .VelaX .header {
+          align-self: flex-start;
+          width: 4em;
+          margin-left: 2vw;
+          font-size: 1.3em;
+          font-weight: 500;
+          align-items: center;
+          text-align: center;
+          margin-top: 0.7em;
+          color: ${offWhite};
+        }
+
+        .price {
+          width: 30vw;
+          text-align: center;
+          font-size: 0.8em;
+          font-weight: 300;
+          margin-top: 0.8em;
+          margin-left: 4vw;
+          color: ${offWhite};
+        }
+
+        .button {
+          margin-right: vw;
+          align-items: center;
+          font-size: 1em;
+          font-weight: 400;
+          text-align: center;
+          background-color: ${offBlack};
+          margin-top: 0em;
+          border: none;
+
+          padding: 1.4em 2vw;
+          color: white;
+          cursor: pointer;
         }
 
         .image-container {
