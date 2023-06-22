@@ -61,12 +61,6 @@ const VelaX = () => {
   return (
     <div className="VelaX landing">
       <div className="topcta">
-        <p className="VelaX header"> VELA X</p>
-        <p className="price">
-          {" "}
-          R$ 10.890 <br />
-          em até 12x sem juros
-        </p>
         <button className="button" onClick={redirectToBuildPage}>
           MONTE A SUA
         </button>
@@ -114,54 +108,23 @@ const VelaX = () => {
         }
 
         .topcta {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          align-items: center;
           position: fixed;
-          top: 30;
-          left: 0;
-          right: 0;
-          background-color: rgba(0, 0, 0, 1);
-          padding: 0px;
+          top: 5px;
+          right: 110px;
           z-index: 999;
-
-          z-index: 10;
-        }
-
-        .VelaX .header {
-          align-self: flex-start;
-          width: 4em;
-          margin-left: 2vw;
-          font-size: 1.3em;
-          font-weight: 500;
-          align-items: center;
-          text-align: center;
-          margin-top: 0.7em;
-          color: ${offWhite};
-        }
-
-        .price {
-          width: 30vw;
-          text-align: center;
-          font-size: 0.8em;
-          font-weight: 300;
-          margin-top: 0.8em;
-          margin-left: 4vw;
-          color: ${offWhite};
         }
 
         .button {
-          margin-right: vw;
-          align-items: center;
+          width: 9em;
+          align-items: right;
           font-size: 1em;
-          font-weight: 400;
+          font-weight: 600;
           text-align: center;
-          background-color: ${offBlack};
-          margin-top: 0em;
+          background-color: ${velaRed};
+          margin-top: 6px;
           border: none;
-
-          padding: 1.4em 2vw;
+          border-radius: 20px;
+          padding: 0.5em 0.5em;
           color: white;
           cursor: pointer;
         }

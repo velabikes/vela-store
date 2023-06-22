@@ -94,7 +94,7 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) => (
         top: 0;
         left: 0;
         right: 0;
-        z-index: 1001;
+        z-index: 998;
         width: 100%;
         height: 57px;
         background-color: ${offBlack};
@@ -140,7 +140,7 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) => (
         color: #db9612;
         opacity: 0;
       }
-      @media only screen and (min-width: 768px) {
+      @media only screen and (min-width: 868px) {
         header {
           flex-direction: row;
           height: 3.5rem;
