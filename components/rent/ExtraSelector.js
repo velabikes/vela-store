@@ -77,6 +77,8 @@ const ExtraSelector = ({ collection, onSelect, selected, model }) => {
         <p>✔ Kit de paralamas</p>
         <p>✔ Faróis integrados</p>
         <p>✔ Mudflaps</p>
+        <p>✔ Retrovisor esquerdo</p>
+        <p>✔ Campainha dourada</p>
       </div>
       <h4>Personalize com mais acessórios:</h4>
       <p>
