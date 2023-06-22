@@ -1,18 +1,18 @@
 import React, { useState, useEffect, useRef } from "react";
 import ScrollImageContainer from "/components/velax/ScrollImageContainer";
 import ScrollImageContainerMob from "/components/velax/ScrollImageContainerMob";
-import PlayVideo from "/components/velax/PlayVideo";
+import IntroDarkMob from "/components/velax/IntroDarkMob";
 import Mask from "/components/velax/Mask";
 import AutoplayRender1 from "/components/velax/AutoplayRender1";
 import AutoplayRender1Mob from "/components/velax/AutoplayRender1Mob";
 import AutoplayRender2 from "/components/velax/AutoplayRender2";
 import Mask2 from "/components/velax/Mask2";
-import { offWhite } from "../style/colors";
+import { offWhite } from "/style/colors";
 import { useMediaQuery } from "react-responsive";
-import PlayVideo2 from "../components/velax/PlayVideo2";
+import IntroDark from "/components/velax/IntroDark";
 
 const VelaX = () => {
-  const isMobile = useMediaQuery({ query: "(max-width: 762px)" });
+  const isMobile = useMediaQuery({ query: "(max-width: 962px)" });
 
   const [scrollOffset, setScrollOffset] = useState(0);
   const [image2Offset, setImage2Offset] = useState(0);
@@ -49,7 +49,8 @@ const VelaX = () => {
 
   return (
     <div className="VelaX landing">
-      <PlayVideo2 />
+      {isMobile ? <IntroDarkMob /> : <IntroDark />}
+
       <div className="image-container">
         <div className="mask-container">
           <Mask maskSize="80vw" />
@@ -71,7 +72,6 @@ const VelaX = () => {
         <img src="/velax/profile.jpg" alt="Image 2" />
       </div>
 
-      <PlayVideo />
       <div className="profile">
         <img src="/velax/profile.jpg" alt="Image 2" />
       </div>

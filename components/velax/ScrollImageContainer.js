@@ -56,7 +56,7 @@ const ScrollImageContainer = () => {
         alt="Scrolling image sequence"
         style={{
           objectFit: "cover",
-          height: "auto",
+          height: "100vh",
           width: "100vw",
         }} // adjust the height and width here
       />
