@@ -54,7 +54,11 @@ const ScrollImageContainer = () => {
         ref={scrollContainerRef}
         src={`/velax/image-scroll-1/VX-Path-Scroll-${currentImage}.webp`}
         alt="Scrolling image sequence"
-        style={{ objectFit: "cover", height: "100vh", width: "100vw" }} // adjust the height and width here
+        style={{
+          objectFit: "cover",
+          height: "auto",
+          width: "100vw",
+        }} // adjust the height and width here
       />
     </div>
   );

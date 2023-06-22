@@ -58,13 +58,17 @@ const VelaX = () => {
         <div className="image-text-wrapper">
           <p
             className="image-text"
-            style={{ transform: `translateY(-${scrollOffset * 1.2}px)` }}
+            style={{ transform: `translateY(-${scrollOffset * 0.55}px)` }}
           >
             Vela X
           </p>
         </div>
 
         {isMobile ? <ScrollImageContainerMob /> : <ScrollImageContainer />}
+      </div>
+
+      <div className="motor1">
+        <img src="/velax/profile.jpg" alt="Image 2" />
       </div>
 
       <PlayVideo />
@@ -82,22 +86,21 @@ const VelaX = () => {
       <style jsx>{`
         .VelaX landing {
           width: 100%;
-
           height: auto;
-          background-color: #000000;
+
           overflow: hidden;
         }
 
         .image-container {
           position: relative;
-          top: -60px;
+          top: 0px;
         }
 
         .mask-container {
           display: flex;
           position: absolute;
           overflow: hidden;
-          top: -1px;
+          top: -50px;
           z-index: 2;
         }
 
