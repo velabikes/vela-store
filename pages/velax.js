@@ -19,26 +19,68 @@ import {
 } from "../style/colors";
 
 const LazyScrollImageContainer = React.lazy(() =>
-  import("/components/velax/ScrollImageContainer")
+  import("/components/velax/ScrollImageContainer").then((module) => {
+    // Preload the component
+    module.default.preload();
+    return module;
+  })
 );
 const LazyScrollImageContainerMob = React.lazy(() =>
-  import("/components/velax/ScrollImageContainerMob")
+  import("/components/velax/ScrollImageContainerMob").then((module) => {
+    // Preload the component
+    module.default.preload();
+    return module;
+  })
 );
 const LazyIntroDarkMob = React.lazy(() =>
-  import("/components/velax/IntroDarkMob")
+  import("/components/velax/IntroDarkMob").then((module) => {
+    // Preload the component
+    module.default.preload();
+    return module;
+  })
 );
-const LazyMask = React.lazy(() => import("/components/velax/Mask"));
+const LazyMask = React.lazy(() =>
+  import("/components/velax/Mask").then((module) => {
+    // Preload the component
+    module.default.preload();
+    return module;
+  })
+);
 const LazyAutoplayRender1 = React.lazy(() =>
-  import("/components/velax/AutoplayRender1")
+  import("/components/velax/AutoplayRender1").then((module) => {
+    // Preload the component
+    module.default.preload();
+    return module;
+  })
 );
 const LazyAutoplayRender1Mob = React.lazy(() =>
-  import("/components/velax/AutoplayRender1Mob")
+  import("/components/velax/AutoplayRender1Mob").then((module) => {
+    // Preload the component
+    module.default.preload();
+    return module;
+  })
 );
 const LazyAutoplayRender2 = React.lazy(() =>
-  import("/components/velax/AutoplayRender2")
+  import("/components/velax/AutoplayRender2").then((module) => {
+    // Preload the component
+    module.default.preload();
+    return module;
+  })
 );
-const LazyMask2 = React.lazy(() => import("/components/velax/Mask2"));
-const LazyIntroDark = React.lazy(() => import("/components/velax/IntroDark"));
+const LazyMask2 = React.lazy(() =>
+  import("/components/velax/Mask2").then((module) => {
+    // Preload the component
+    module.default.preload();
+    return module;
+  })
+);
+const LazyIntroDark = React.lazy(() =>
+  import("/components/velax/IntroDark").then((module) => {
+    // Preload the component
+    module.default.preload();
+    return module;
+  })
+);
 
 const VelaX = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 868px)" });
