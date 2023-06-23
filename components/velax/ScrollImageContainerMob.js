@@ -12,7 +12,9 @@ const ScrollImageContainerMob = () => {
   });
 
   const [currentImage, setCurrentImage] = useState(0);
+  const [preloadedImages, setPreloadedImages] = useState([]);
   const imageCount = 320; // Replace this with the number of images in your sequence
+
   useEffect(() => {
     const handleScroll = () => {
       if (inView) {
@@ -20,6 +22,34 @@ const ScrollImageContainerMob = () => {
           window.scrollY / (document.body.scrollHeight - window.innerHeight);
         const currentImageIndex = Math.floor(scrollPercentage * imageCount);
         setCurrentImage(currentImageIndex);
+
+        // Pré-carregar imagens adicionais
+        const preloadRange = 300; // Defina o número de frames para pré-carregar
+        const startIndex = Math.max(0, currentImageIndex - preloadRange);
+        const endIndex = Math.min(
+          imageCount - 1,
+          currentImageIndex + preloadRange
+        );
+        const imagesToPreload = [];
+
+        for (let i = startIndex; i <= endIndex; i++) {
+          imagesToPreload.push(
+            new Promise((resolve, reject) => {
+              const img = new Image();
+              img.src = `/velax/image-scroll-1mob/VX-Pathmob-Scroll-${i}.webp`;
+              img.onload = resolve;
+              img.onerror = reject;
+            })
+          );
+        }
+
+        Promise.all(imagesToPreload)
+          .then(() => {
+            setPreloadedImages(imagesToPreload);
+          })
+          .catch((error) => {
+            console.error("Error preloading images:", error);
+          });
       }
     };
 
@@ -39,7 +69,7 @@ const ScrollImageContainerMob = () => {
           start: "top 0",
           end: "500%  0 ",
           pin: true,
-          scrub: 1.1,
+          scrub: 0.001,
           pinSpacing: true,
           markers: false,
         },
@@ -49,12 +79,14 @@ const ScrollImageContainerMob = () => {
 
   return (
     <div className="scroll-image-container" ref={containerRef}>
-      <img
-        ref={scrollContainerRef}
-        src={`/velax/image-scroll-1mob/VX-Pathmob-Scroll-${currentImage}.webp`}
-        alt="Scrolling image sequence"
-        style={{ objectFit: "cover", height: "100vh", width: "100vw" }} // adjust the height and width here
-      />
+      {preloadedImages.length > 0 ? (
+        <img
+          ref={scrollContainerRef}
+          src={`/velax/image-scroll-1mob/VX-Pathmob-Scroll-${currentImage}.webp`}
+          alt="Scrolling image sequence"
+          style={{ objectFit: "cover", height: "100vh", width: "100vw" }}
+        />
+      ) : null}
     </div>
   );
 };
