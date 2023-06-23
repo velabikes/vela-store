@@ -19,7 +19,7 @@ import {
 } from "../style/colors";
 
 const VelaX = () => {
-  const isMobile = useMediaQuery({ query: "(max-width: 962px)" });
+  const isMobile = useMediaQuery({ query: "(max-width: 868px)" });
 
   const [scrollOffset, setScrollOffset] = useState(0);
   const [image2Offset, setImage2Offset] = useState(0);
@@ -66,7 +66,11 @@ const VelaX = () => {
         </button>
       </div>
 
-      {isMobile ? <IntroDarkMob /> : <IntroDark />}
+      {isMobile ? (
+        <IntroDarkMob className="introdarkmob" />
+      ) : (
+        <IntroDark className="introdark" />
+      )}
 
       <div className="image-container">
         <div className="mask-container">
@@ -76,7 +80,7 @@ const VelaX = () => {
         <div className="image-text-wrapper">
           <p
             className="image-text"
-            style={{ transform: `translateY(-${scrollOffset * 0.55}px)` }}
+            style={{ transform: `translateY(-${scrollOffset * 0.6}px)` }}
           >
             Vela X
           </p>
@@ -127,6 +131,11 @@ const VelaX = () => {
           padding: 0.5em 0.5em;
           color: white;
           cursor: pointer;
+        }
+
+        .introdarkmob {
+
+        
         }
 
         .image-container {
@@ -220,6 +229,8 @@ const VelaX = () => {
         .play-video {
           position: relative;
         }
+
+      
       `}</style>
     </div>
   );
