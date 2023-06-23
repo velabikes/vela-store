@@ -18,6 +18,28 @@ import {
   velaRed,
 } from "../style/colors";
 
+const LazyScrollImageContainer = React.lazy(() =>
+  import("/components/velax/ScrollImageContainer")
+);
+const LazyScrollImageContainerMob = React.lazy(() =>
+  import("/components/velax/ScrollImageContainerMob")
+);
+const LazyIntroDarkMob = React.lazy(() =>
+  import("/components/velax/IntroDarkMob")
+);
+const LazyMask = React.lazy(() => import("/components/velax/Mask"));
+const LazyAutoplayRender1 = React.lazy(() =>
+  import("/components/velax/AutoplayRender1")
+);
+const LazyAutoplayRender1Mob = React.lazy(() =>
+  import("/components/velax/AutoplayRender1Mob")
+);
+const LazyAutoplayRender2 = React.lazy(() =>
+  import("/components/velax/AutoplayRender2")
+);
+const LazyMask2 = React.lazy(() => import("/components/velax/Mask2"));
+const LazyIntroDark = React.lazy(() => import("/components/velax/IntroDark"));
+
 const VelaX = () => {
   const isMobile = useMediaQuery({ query: "(max-width: 868px)" });
 
@@ -134,8 +156,6 @@ const VelaX = () => {
         }
 
         .introdarkmob {
-
-        
         }
 
         .image-container {
@@ -229,8 +249,6 @@ const VelaX = () => {
         .play-video {
           position: relative;
         }
-
-      
       `}</style>
     </div>
   );
