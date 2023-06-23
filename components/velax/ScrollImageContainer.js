@@ -12,7 +12,7 @@ const ScrollImageContainer = () => {
   });
 
   const [currentImage, setCurrentImage] = useState(0);
-  const imageCount = 403; // Replace this with the number of images in your sequence
+  const imageCount = 650; // Replace this with the number of images in your sequence
 
   useEffect(() => {
     const handleScroll = () => {
@@ -38,7 +38,7 @@ const ScrollImageContainer = () => {
         scrollTrigger: {
           trigger: scrollContainerElement,
           start: "top 0",
-          end: "600%  0 ",
+          end: "530%  0 ",
           pin: true,
           scrub: 0.1,
           pinSpacing: true,
@@ -62,7 +62,7 @@ const ScrollImageContainer = () => {
         });
 
         // Set the image source
-        image.src = `/velax/image-scroll-1/VX-Path-Scroll-${i}.webp`;
+        image.src = `/velax/image-scroll-1/VX-Scroll-${i}.webp`;
 
         // Wait for the image to load before resolving the promise
         await promise;
@@ -80,7 +80,7 @@ const ScrollImageContainer = () => {
     <div className="scroll-image-container" ref={containerRef}>
       <img
         ref={scrollContainerRef}
-        src={`/velax/image-scroll-1/VX-Path-Scroll-${currentImage}.webp`}
+        src={`/velax/image-scroll-1/VX-Scroll-${currentImage}.webp`}
         alt="Scrolling image sequence"
         style={{
           objectFit: "cover",

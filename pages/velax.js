@@ -82,10 +82,6 @@ const VelaX = () => {
         </button>
       </div>
 
-      <div className="scroll-preload">
-        {isMobile ? <ScrollImageContainerMob /> : <ScrollImageContainer />}
-      </div>
-
       {isMobile ? (
         <IntroDarkMob className="introdarkmob" />
       ) : (
@@ -100,10 +96,13 @@ const VelaX = () => {
         <div className="image-text-wrapper">
           <p
             className="image-text"
-            style={{ transform: `translateY(-${scrollOffset * 0.6}px)` }}
+            style={{ transform: `translateY(-${scrollOffset * 0.55}px)` }}
           >
             Vela X
           </p>
+          {scrollOffset >= 2500 && (
+            <p className="end-text">ELÉTRICA E CONECTADA</p>
+          )}
         </div>
 
         {isMobile ? <ScrollImageContainerMob /> : <ScrollImageContainer />}
@@ -130,6 +129,7 @@ const VelaX = () => {
           margin-top: -6px;
           height: auto;
           overflow: hidden;
+          background-color: #dbd7ce;
         }
 
         .topcta {
@@ -162,6 +162,7 @@ const VelaX = () => {
 
         .introdarkmob {
           height: 50%;
+          z-index: 5;
         }
 
         .image-container {
@@ -200,6 +201,18 @@ const VelaX = () => {
           font-weight: 500;
           font-family: filson-pro;
           transition: transform 0.1s ease;
+        }
+
+        .end-text {
+          position: absolute;
+          top: 450%;
+          left: 50%;
+          transform: translate(-50%, -50%) scale(1.2);
+          color: ${offBlack};
+          font-size: 10vw;
+          font-weight: 800;
+          font-family: filson-pro;
+          transition: transform 0.5s ease;
         }
 
         .image-2 {
