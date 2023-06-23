@@ -107,7 +107,7 @@ const VelaX = () => {
 
       <style jsx>{`
         .VelaX {
-          width: 100%;
+          width: 101%;
           margin-top: -6px;
           height: auto;
           overflow: hidden;
