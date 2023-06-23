@@ -96,7 +96,7 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) => (
         right: 0;
         z-index: 998;
         width: 100%;
-        height: 57px;
+        height: 50px;
         background-color: ${offBlack};
         opacity: 1;
       }
@@ -112,7 +112,7 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) => (
         justify-content: center;
         align-items: center;
         color: ${offWhite};
-        font-weight: 500;
+        font-weight: 400;
         min-height: 3rem;
         font-size: 1rem;
       }

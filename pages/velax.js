@@ -6,10 +6,11 @@ import Mask from "/components/velax/Mask";
 import AutoplayRender1 from "/components/velax/AutoplayRender1";
 import AutoplayRender1Mob from "/components/velax/AutoplayRender1Mob";
 import AutoplayRender2 from "/components/velax/AutoplayRender2";
-import Mask2 from "/components/velax/Mask2";
+import Maskmob from "/components/velax/Maskmob";
 import { offWhite } from "/style/colors";
 import { useMediaQuery } from "react-responsive";
 import IntroDark from "/components/velax/IntroDark";
+
 import {
   darkGray,
   offBlack,
@@ -74,7 +75,7 @@ const VelaX = () => {
 
       <div className="image-container">
         <div className="mask-container">
-          <Mask maskSize="80vw" />
+          {isMobile ? <Maskmob maskSize="30vw" /> : <Mask maskSize="80vw" />}
         </div>
 
         <div className="image-text-wrapper">
@@ -107,6 +108,7 @@ const VelaX = () => {
       <style jsx>{`
         .VelaX {
           width: 100%;
+          margin-top: -6px;
           height: auto;
           overflow: hidden;
         }
@@ -121,11 +123,11 @@ const VelaX = () => {
         .button {
           width: 9em;
           align-items: right;
-          font-size: 1em;
-          font-weight: 600;
+          font-size: 0.8em;
+          font-weight: 500;
           text-align: center;
           background-color: ${velaRed};
-          margin-top: 6px;
+          margin-top: 7px;
           border: none;
           border-radius: 20px;
           padding: 0.5em 0.5em;
@@ -134,6 +136,7 @@ const VelaX = () => {
         }
 
         .introdarkmob {
+          height: 50%;
         }
 
         .image-container {
@@ -147,6 +150,10 @@ const VelaX = () => {
           overflow: hidden;
           top: -50px;
           z-index: 2;
+        }
+
+        .Maskmob {
+          width: 100%;
         }
 
         .image-text-wrapper {
@@ -227,6 +234,21 @@ const VelaX = () => {
         .play-video {
           position: relative;
         }
+
+        @media only screen and (max-width: 768px)
+         {
+
+          .image-text {
+            color: ${offWhite};
+            font-size: 16vw;
+            font-weight: 500;
+            font-family: filson-pro;
+            transition: transform 0.1s ease;
+          }
+         }
+
+      
+    }
       `}</style>
     </div>
   );
