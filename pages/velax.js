@@ -96,7 +96,7 @@ const VelaX = () => {
         <div className="image-text-wrapper">
           <p
             className="image-text"
-            style={{ transform: `translateY(-${scrollOffset * 0.55}px)` }}
+            style={{ transform: `translateY(-${scrollOffset * 1.8}px)` }}
           >
             Vela X
           </p>
@@ -184,7 +184,7 @@ const VelaX = () => {
 
         .image-text-wrapper {
           position: absolute;
-          top: 30%;
+          margin-top: 90%;
           left: 50%;
           transform: translate(-50%, -50%);
           width: 100%;
@@ -197,15 +197,16 @@ const VelaX = () => {
 
         .image-text {
           color: ${offWhite};
+          top: 0%;
           font-size: 15vw;
           font-weight: 500;
           font-family: filson-pro;
-          transition: transform 0.1s ease;
+          transition: transform 0.5s ease;
         }
 
         .end-text {
           position: absolute;
-          top: 450%;
+          top: 250%;
           left: 50%;
           transform: translate(-50%, -50%) scale(1.2);
           color: ${offBlack};
@@ -245,7 +246,7 @@ const VelaX = () => {
 
         .image-text-wrapper {
           position: absolute;
-          top: 30%;
+          top: 35%;
           left: 50%;
           transform: translate(-50%, -50%);
           width: 100%;
