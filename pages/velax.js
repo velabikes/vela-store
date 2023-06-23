@@ -164,17 +164,22 @@ const VelaX = () => {
           height: 50%;
           z-index: 5;
         }
+        .introdark {
+          height: 50%;
+          z-index: 5;
+        }
 
         .image-container {
           position: relative;
           top: 0px;
+          
         }
 
         .mask-container {
           display: flex;
           position: absolute;
           overflow: hidden;
-          top: -50px;
+          top: -8px;
           z-index: 2;
         }
 
@@ -206,7 +211,7 @@ const VelaX = () => {
 
         .end-text {
           position: absolute;
-          top: 250%;
+          top: 240%;
           left: 50%;
           transform: translate(-50%, -50%) scale(1.2);
           color: ${offBlack};
@@ -274,7 +279,7 @@ const VelaX = () => {
           position: relative;
         }
 
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 868px) {
           .image-text {
             color: ${offWhite};
             font-size: 15vw;
@@ -282,6 +287,17 @@ const VelaX = () => {
             font-family: filson-pro;
             transition: transform 0.1s ease;
           }
+        
+        .end-text {
+          position: absolute;
+          top: 420%;
+          left: 50%;
+          transform: translate(-50%, -50%) scale(1.2);
+          color: ${offBlack};
+          font-size: 10vw;
+          font-weight: 800;
+          font-family: filson-pro;
+          transition: transform 0.5s ease;
         }
       `}</style>
     </div>
