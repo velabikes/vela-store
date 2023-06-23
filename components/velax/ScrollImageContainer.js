@@ -48,6 +48,34 @@ const ScrollImageContainer = () => {
     }
   }, []);
 
+  useEffect(() => {
+    const preLoadImages = () => {
+      const imagePromises = [];
+
+      for (let i = 0; i < imageCount; i++) {
+        const image = new Image();
+        image.src = `/velax/image-scroll-1/VX-Path-Scroll-${i}.webp`;
+
+        const promise = new Promise((resolve, reject) => {
+          image.onload = resolve;
+          image.onerror = reject;
+        });
+
+        imagePromises.push(promise);
+      }
+
+      Promise.all(imagePromises)
+        .then(() => {
+          console.log("All images pre-loaded");
+        })
+        .catch((error) => {
+          console.error("Error pre-loading images:", error);
+        });
+    };
+
+    preLoadImages();
+  }, [imageCount]);
+
   return (
     <div className="scroll-image-container" ref={containerRef}>
       <img
