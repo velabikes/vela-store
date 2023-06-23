@@ -20,8 +20,7 @@ import {
 } from "../style/colors";
 
 const VelaX = () => {
-  const isMobile = useMediaQuery({ query: "(max-width: 868px)" });
-
+  const [isMobile, setIsMobile] = useState(false);
   const [scrollOffset, setScrollOffset] = useState(0);
   const [image2Offset, setImage2Offset] = useState(0);
   const [image3Offset, setImage3Offset] = useState(0);
@@ -59,12 +58,32 @@ const VelaX = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 868);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth <= 868);
+  }, []);
+
   return (
     <div className="VelaX landing">
       <div className="topcta">
         <button className="button" onClick={redirectToBuildPage}>
           MONTE A SUA
         </button>
+      </div>
+
+      <div className="scroll-preload">
+        {isMobile ? <ScrollImageContainerMob /> : <ScrollImageContainer />}
       </div>
 
       {isMobile ? (
@@ -120,6 +139,12 @@ const VelaX = () => {
           z-index: 999;
         }
 
+        .scroll-preload {
+          position: absolute;
+          height: 1vh;
+          z-index: -2;
+        }
+
         .button {
           width: 9em;
           align-items: right;
@@ -153,7 +178,7 @@ const VelaX = () => {
         }
 
         .Maskmob {
-          top:0
+          top: 0;
         }
 
         .image-text-wrapper {
@@ -235,9 +260,7 @@ const VelaX = () => {
           position: relative;
         }
 
-        @media only screen and (max-width: 768px)
-         {
-
+        @media only screen and (max-width: 768px) {
           .image-text {
             color: ${offWhite};
             font-size: 15vw;
@@ -245,10 +268,7 @@ const VelaX = () => {
             font-family: filson-pro;
             transition: transform 0.1s ease;
           }
-         }
-
-      
-    }
+        }
       `}</style>
     </div>
   );
