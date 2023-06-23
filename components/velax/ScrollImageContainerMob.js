@@ -39,7 +39,7 @@ const ScrollImageContainerMob = () => {
           start: "top 0",
           end: "500%  0 ",
           pin: true,
-          scrub: 0.1,
+          scrub: 1.1,
           pinSpacing: true,
           markers: false,
         },
