@@ -153,7 +153,7 @@ const VelaX = () => {
         }
 
         .Maskmob {
-          width: 100%;
+          top:0
         }
 
         .image-text-wrapper {
@@ -240,7 +240,7 @@ const VelaX = () => {
 
           .image-text {
             color: ${offWhite};
-            font-size: 16vw;
+            font-size: 15vw;
             font-weight: 500;
             font-family: filson-pro;
             transition: transform 0.1s ease;
