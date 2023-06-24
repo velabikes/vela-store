@@ -7,6 +7,9 @@ import AutoplayRender1 from "/components/velax/AutoplayRender1";
 import AutoplayRender1Mob from "/components/velax/AutoplayRender1Mob";
 import AutoplayRender2 from "/components/velax/AutoplayRender2";
 import Maskmob from "/components/velax/Maskmob";
+import Speed from "/components/velax/Speed";
+import Power from "/components/velax/Power";
+import Regen from "/components/velax/Regen";
 import { offWhite } from "/style/colors";
 import { useMediaQuery } from "react-responsive";
 import IntroDark from "/components/velax/IntroDark";
@@ -108,14 +111,10 @@ const VelaX = () => {
         {isMobile ? <ScrollImageContainerMob /> : <ScrollImageContainer />}
       </div>
 
-      <div className="motor1">
-        <img src="/velax/profile.jpg" alt="Image 2" />
-      </div>
+      <Speed />
 
-      <div className="profile">
-        <img src="/velax/profile.jpg" alt="Image 2" />
-      </div>
-
+      <Power />
+      <Regen />
       <div className="image-2" ref={image2Ref}>
         <img src="/velax/VX-1.jpg" alt="Image 2" />
       </div>
@@ -151,12 +150,12 @@ const VelaX = () => {
           font-size: 0.8em;
           font-weight: 500;
           text-align: center;
-          background-color: ${velaRed};
+          background-color: #8acca8;
           margin-top: 7px;
           border: none;
           border-radius: 20px;
           padding: 0.5em 0.5em;
-          color: white;
+          color: 
           cursor: pointer;
         }
 
@@ -166,13 +165,12 @@ const VelaX = () => {
         }
         .introdark {
           height: 50%;
-          z-index: 5;
+          z-index: 99;
         }
 
         .image-container {
           position: relative;
           top: 0px;
-          
         }
 
         .mask-container {
@@ -221,12 +219,9 @@ const VelaX = () => {
           transition: transform 0.5s ease;
         }
 
-        .image-2 {
-          display: flex;
-          left: 0;
-          position: relative;
-          height: 90vh;
-        }
+       
+
+
 
         .profile {
           display: flex;
@@ -235,11 +230,19 @@ const VelaX = () => {
           position: relative;
         }
 
+        .image-2 {
+          display: flex;
+          left: 0;
+          position: relative;
+          height: 90vh;
+        }
+
         .image-2 img {
           height: 100%;
           width: 100vw;
           object-fit: cover;
         }
+
         .image-3 {
           display: flex;
           align-items: center;
@@ -287,17 +290,18 @@ const VelaX = () => {
             font-family: filson-pro;
             transition: transform 0.1s ease;
           }
-        
-        .end-text {
-          position: absolute;
-          top: 420%;
-          left: 50%;
-          transform: translate(-50%, -50%) scale(1.2);
-          color: ${offBlack};
-          font-size: 10vw;
-          font-weight: 800;
-          font-family: filson-pro;
-          transition: transform 0.5s ease;
+
+          .end-text {
+            position: absolute;
+            top: 420%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(1.2);
+            color: ${offBlack};
+            font-size: 10vw;
+            font-weight: 800;
+            font-family: filson-pro;
+            transition: transform 0.5s ease;
+          }
         }
       `}</style>
     </div>

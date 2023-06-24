@@ -3,8 +3,8 @@ import React from "react";
 const Maskmob = ({ maskSize }) => {
   return (
     <svg
-      width="auto"
-      height="120vh"
+      width="100vw"
+      height="auto"
       viewBox="0 0 390 844"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
