@@ -11,11 +11,13 @@ const Power = () => {
       <div className="power-text-container">
         <p className="power-text">
           <span className="power-text-small">Até </span>{" "}
-          <span className="power-text-large"> 550W</span>
+          <span className="power-text-large">
+            {" "}
+            550<span className="power-text-small">W</span>
+          </span>
         </p>
         <p className="power-text-details">
-          Potência de pico com o acionamento <br></br>do boost e 45 N.m de
-          torque na roda.
+          Potência com o acionamento <br></br>do boost e 45 Nm de torque.
         </p>
       </div>
 
