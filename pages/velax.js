@@ -1,34 +1,31 @@
-import React, { useState, useEffect, useRef } from "react";
-import ScrollImageContainer from "/components/velax/ScrollImageContainer";
-import ScrollImageContainerMob from "/components/velax/ScrollImageContainerMob";
-import IntroDarkMob from "/components/velax/IntroDarkMob";
-import Mask from "/components/velax/Mask";
-import AutoplayRender1 from "/components/velax/AutoplayRender1";
-import AutoplayRender1Mob from "/components/velax/AutoplayRender1Mob";
-import AutoplayRender2 from "/components/velax/AutoplayRender2";
-import Maskmob from "/components/velax/Maskmob";
-import Speed from "/components/velax/Speed";
-import Power from "/components/velax/Power";
-import Regen from "/components/velax/Regen";
-import { offWhite } from "/style/colors";
+import React, { useState, useEffect, useRef, lazy, Suspense } from "react";
+import { offWhite, offBlack } from "/style/colors";
 import { useMediaQuery } from "react-responsive";
-import IntroDark from "/components/velax/IntroDark";
 
-import {
-  darkGray,
-  offBlack,
-  velaBlue,
-  velaGreen,
-  velaRed,
-} from "../style/colors";
+const ScrollImageContainer = lazy(() =>
+  import("/components/velax/ScrollImageContainer")
+);
+const ScrollImageContainerMob = lazy(() =>
+  import("/components/velax/ScrollImageContainerMob")
+);
+const IntroDarkMob = lazy(() => import("/components/velax/IntroDarkMob"));
+const Mask = lazy(() => import("/components/velax/Mask"));
+const AutoplayRender1 = lazy(() => import("/components/velax/AutoplayRender1"));
+const AutoplayRender1Mob = lazy(() =>
+  import("/components/velax/AutoplayRender1Mob")
+);
+const AutoplayRender2 = lazy(() => import("/components/velax/AutoplayRender2"));
+const Maskmob = lazy(() => import("/components/velax/Maskmob"));
+const Speed = lazy(() => import("/components/velax/Speed"));
+const Power = lazy(() => import("/components/velax/Power"));
+const Regen = lazy(() => import("/components/velax/Regen"));
+const IntroDark = lazy(() => import("/components/velax/IntroDark"));
 
 const VelaX = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [scrollOffset, setScrollOffset] = useState(0);
   const [image2Offset, setImage2Offset] = useState(0);
-  const [image3Offset, setImage3Offset] = useState(0);
   const image2Ref = useRef(null);
-  const image3Ref = useRef(null);
 
   const redirectToBuildPage = () => {
     window.location.href = "https://www.velabikes.com.br/velax-build";
@@ -85,42 +82,41 @@ const VelaX = () => {
         </button>
       </div>
 
-      {isMobile ? (
-        <IntroDarkMob className="introdarkmob" />
-      ) : (
-        <IntroDark className="introdark" />
-      )}
+      <Suspense fallback={<div>Loading...</div>}>
+        {isMobile ? (
+          <IntroDarkMob className="introdarkmob" />
+        ) : (
+          <IntroDark className="introdark" />
+        )}
 
-      <div className="image-container">
-        <div className="mask-container">
-          {isMobile ? <Maskmob maskSize="30vw" /> : <Mask maskSize="80vw" />}
+        <div className="image-container">
+          <div className="mask-container">
+            {isMobile ? <Maskmob maskSize="30vw" /> : <Mask maskSize="80vw" />}
+          </div>
+
+          <div className="image-text-wrapper">
+            <p
+              className="image-text"
+              style={{ transform: `translateY(-${scrollOffset * 0.3}px)` }}
+            >
+              Vela X
+            </p>
+          </div>
+
+          {isMobile ? <ScrollImageContainerMob /> : <ScrollImageContainer />}
         </div>
 
-        <div className="image-text-wrapper">
-          <p
-            className="image-text"
-            style={{ transform: `translateY(-${scrollOffset * 1.8}px)` }}
-          >
-            Vela X
-          </p>
-          {scrollOffset >= 2500 && (
-            <p className="end-text">ELÉTRICA E CONECTADA</p>
-          )}
+        <Speed />
+
+        <Power />
+        <Regen />
+        <div className="image-2" ref={image2Ref}>
+          <img src="/velax/VX-1.jpg" alt="Image 2" />
         </div>
 
-        {isMobile ? <ScrollImageContainerMob /> : <ScrollImageContainer />}
-      </div>
-
-      <Speed />
-
-      <Power />
-      <Regen />
-      <div className="image-2" ref={image2Ref}>
-        <img src="/velax/VX-1.jpg" alt="Image 2" />
-      </div>
-
-      {isMobile ? <AutoplayRender1Mob /> : <AutoplayRender1 />}
-      <AutoplayRender2 />
+        {isMobile ? <AutoplayRender1Mob /> : <AutoplayRender1 />}
+        <AutoplayRender2 />
+      </Suspense>
 
       <style jsx>{`
         .VelaX {
@@ -138,12 +134,6 @@ const VelaX = () => {
           z-index: 999;
         }
 
-        .scroll-preload {
-          position: absolute;
-          height: 1vh;
-          z-index: -2;
-        }
-
         .button {
           width: 9em;
           align-items: right;
@@ -155,7 +145,7 @@ const VelaX = () => {
           border: none;
           border-radius: 20px;
           padding: 0.5em 0.5em;
-          color: 
+          color: ${offWhite};
           cursor: pointer;
         }
 
@@ -163,6 +153,7 @@ const VelaX = () => {
           height: 50%;
           z-index: 5;
         }
+
         .introdark {
           height: 50%;
           z-index: 99;
@@ -200,28 +191,12 @@ const VelaX = () => {
 
         .image-text {
           color: ${offWhite};
-          top: 0%;
+          margin-top: -550%;
           font-size: 15vw;
           font-weight: 500;
           font-family: filson-pro;
           transition: transform 0.5s ease;
         }
-
-        .end-text {
-          position: absolute;
-          top: 240%;
-          left: 50%;
-          transform: translate(-50%, -50%) scale(1.2);
-          color: ${offBlack};
-          font-size: 10vw;
-          font-weight: 800;
-          font-family: filson-pro;
-          transition: transform 0.5s ease;
-        }
-
-       
-
-
 
         .profile {
           display: flex;
@@ -243,39 +218,10 @@ const VelaX = () => {
           object-fit: cover;
         }
 
-        .image-3 {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          vertical-align: middle;
-          width: auto;
-          height: 100%;
-        }
-
-        .image-text-wrapper {
-          position: absolute;
-          top: 35%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          width: 100%;
-          text-align: center;
-          z-index: 3;
-          vertical-align: middle;
-          width: auto;
-          height: 100vh;
-        }
         .darkhero {
           position: relative;
           height: 100vh;
-          transform: translateY(${image3Offset * 0.2}px);
-        }
-
-        .image-text {
-          color: ${offWhite};
-          font-size: 15vw;
-          font-weight: 500;
-          font-family: filson-pro;
-          transition: transform 0.1s ease;
+          transform: translateY(${image2Offset * 0.2}px);
         }
 
         .play-video {
@@ -293,7 +239,7 @@ const VelaX = () => {
 
           .end-text {
             position: absolute;
-            top: 420%;
+            top: 250%;
             left: 50%;
             transform: translate(-50%, -50%) scale(1.2);
             color: ${offBlack};

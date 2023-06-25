@@ -23,18 +23,20 @@ const Power = () => {
 
       <style jsx>{`
         .power {
-          display: flex;
+          display: cover;
         }
 
         .power-image {
-          width: 60%;
+          width: 80%;
         }
 
         .power-text-container {
+          positionÇ absolute;
           text-align: left;
+          top: 30%;
           font-weight: 500;
-          margin-top: 14vw;
-          margin-left: 6vw;
+          margin-top: -30vw;
+          margin-left: 76vw;
         }
 
         .power-text-small {

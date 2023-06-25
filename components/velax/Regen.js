@@ -26,12 +26,13 @@ const Regen = () => {
 
         .regen-image {
           width: 60%;
+          margin-top: 30vw;
         }
 
         .regen-text-container {
           text-align: left;
           font-weight: 500;
-          margin-top: 14vw;
+          margin-top: 30vw;
           margin-left: 7vw;
         }
 
