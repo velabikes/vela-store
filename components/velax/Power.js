@@ -5,8 +5,8 @@ const Power = () => {
     <div className="power">
       <img
         className="power-image"
-        src="/velax/power.png"
-        alt="Vela x - Power"
+        src="/velax/power.jpg"
+        alt="Vela x - Lights Specs"
       />
       <div className="power-text-container">
         <p className="power-text">

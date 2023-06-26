@@ -15,6 +15,7 @@ import Power from "/components/velax/Power";
 import Regen from "/components/velax/Regen";
 import { useMediaQuery } from "react-responsive";
 import IntroDark from "/components/velax/IntroDark";
+import Lightspecs from "components/velax/Lightspecs";
 
 import {
   darkGray,
@@ -152,7 +153,14 @@ const VelaX = () => {
       ) : (
         <Lights className="Lightsmob" />
       )}
-      {isMobile ? <AutoplayRender1Mob /> : <AutoplayRender1 />}
+
+      <Lightspecs />
+
+      {isMobile ? (
+        <AutoplayRender1Mob />
+      ) : (
+        <AutoplayRender1 className="AutoplayRender1" />
+      )}
       <AutoplayRender2 />
 
       <style jsx>{`
@@ -161,7 +169,7 @@ const VelaX = () => {
           margin-top: -6px;
           height: auto;
           overflow: hidden;
-          background-color: #dbd7ce;
+          background-color: #ede6de;
         }
 
         .topcta {
@@ -310,7 +318,11 @@ const VelaX = () => {
           font-family: filson-pro;
           transition: transform 0.1s ease;
         }
-
+.AutoplayRender1 {
+  position: relative;
+  margin-top: 300%;
+  z-index: 5;
+}
         @media only screen and (max-width: 868px) {
           .image-text {
             color: ${offWhite};
