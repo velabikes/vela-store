@@ -234,7 +234,7 @@ const VelaX = () => {
 
         .image-text {
           color: ${offWhite};
-          margin-top: -300%;
+          margin-top: -320%;
           font-size: 15vw;
           font-weight: 800;
           font-family: filson-pro;
