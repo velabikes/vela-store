@@ -10,7 +10,6 @@ import Maskmob from "/components/velax/Maskmob";
 import Speed from "/components/velax/Speed";
 import Power from "/components/velax/Power";
 import Regen from "/components/velax/Regen";
-import { offWhite } from "/style/colors";
 import { useMediaQuery } from "react-responsive";
 import IntroDark from "/components/velax/IntroDark";
 
@@ -20,6 +19,7 @@ import {
   velaBlue,
   velaGreen,
   velaRed,
+  offWhite,
 } from "../style/colors";
 
 const VelaX = () => {
@@ -221,7 +221,7 @@ const VelaX = () => {
           color: ${offWhite};
           margin-top: -300%;
           font-size: 15vw;
-          font-weight: 500;
+          font-weight: 800;
           font-family: filson-pro;
           transition: transform 0.5s ease;
         }
@@ -297,7 +297,7 @@ const VelaX = () => {
           position: relative;
         }
 
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 868px) {
           .image-text {
             color: ${offWhite};
             margin-top: -500%;
@@ -305,6 +305,21 @@ const VelaX = () => {
             font-weight: 500;
             font-family: filson-pro;
             transition: transform 0.1s ease;
+          }
+
+          .button {
+            width: 9em;
+            align-items: right;
+            font-size: 0.8em;
+            font-weight: 500;
+            text-align: center;
+            background-color: #8acca8;
+            margin-top: 7px;
+            border: none;
+            border-radius: 20px;
+            padding: 0.5em 0.5em;
+            color: ${offBlack}
+            cursor: pointer;
           }
         }
       `}</style>

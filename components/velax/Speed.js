@@ -35,7 +35,7 @@ const Speed = () => {
       <Parallax
         bgImage="/velax/vx-speed.jpg"
         bgImageAlt="Vela X Speed Iamge"
-        strength={300} // Ajuste o valor para alterar a intensidade do efeito
+        strength={700} // Ajuste o valor para alterar a intensidade do efeito
       >
         <div className="speed-image" />
 
@@ -54,7 +54,7 @@ const Speed = () => {
             <span className="speed-text-medium">km/h</span>
           </p>
           <p className="speed-text-details">
-            <br></br>Velocidade máxima de <br></br>assistência do motor.
+            <br></br>Velocidade máxima de assistência do motor.
           </p>
         </div>
       </Parallax>
@@ -110,13 +110,13 @@ const Speed = () => {
         }
 
         .speed-text-details {
-          font-size: 1.6vw;
-          font-weight: 300;
+          font-size: 1.8vw;
+          font-weight: 200;
           color: ${offWhite};
-          margin: -3em;
+          margin-top: -7vw;
         }
 
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 868px) {
           .speed-image {
             object-fit: cover;
             margin-right: 300px;
@@ -162,10 +162,12 @@ const Speed = () => {
           }
 
           .speed-text-details {
-            font-size: 4vw;
+            font-size: 5vw;
+            width: 60vw;
             font-weight: 300;
             color: ${offWhite};
-            margin: -3em;
+            margin-left: 20vw;
+            margin-top: -15vw;
           }
         }
       `}</style>
