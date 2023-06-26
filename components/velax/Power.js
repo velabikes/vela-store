@@ -11,10 +11,7 @@ const Power = () => {
       <div className="power-text-container">
         <p className="power-text">
           <span className="power-text-small">Até </span>{" "}
-          <span className="power-text-large">
-            {" "}
-            550<span className="power-text-small">W</span>
-          </span>
+          <span className="power-text-large"> 550W</span>
         </p>
         <p className="power-text-details">
           Potência com o acionamento <br></br>do boost e 45 Nm de torque.
@@ -40,11 +37,11 @@ const Power = () => {
         }
 
         .power-text-small {
-          font-size: 2vw;
+          font-size: 1.35vw;
         }
 
         .power-text-large {
-          font-size: 7vw;
+          font-size: 5.5vw;
           font-weight: 800;
         }
 

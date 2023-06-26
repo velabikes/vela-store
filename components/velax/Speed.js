@@ -54,7 +54,7 @@ const Speed = () => {
             <span className="speed-text-medium">km/h</span>
           </p>
           <p className="speed-text-details">
-            Velocidade máxima de assistência do motor.
+            <br></br>Velocidade máxima de <br></br>assistência do motor.
           </p>
         </div>
       </Parallax>
@@ -114,6 +114,59 @@ const Speed = () => {
           font-weight: 300;
           color: ${offWhite};
           margin: -3em;
+        }
+
+        @media only screen and (max-width: 768px) {
+          .speed-image {
+            object-fit: cover;
+            margin-right: 300px;
+            width: auto;
+            height: 80vh;
+          }
+
+          .speed-text-container {
+            position: absolute;
+            width: 100vw;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 1; // Garante que o texto fique acima da imagem
+          }
+
+          .speed-text {
+            font-size: 20vw;
+            font-weight: 800;
+            color: ${offWhite};
+            margin: 0;
+          }
+
+          .speed-text-small,
+          .speed-text-medium {
+            display: inline-block;
+            font-weight: 300;
+            color: ${offWhite};
+          }
+
+          .speed-text-small {
+            font-size: 8vw;
+          }
+
+          .speed-text-medium {
+            font-size: 8vw;
+          }
+
+          .speed-text-count {
+            font-size: 10vw;
+            font-weight: 800;
+          }
+
+          .speed-text-details {
+            font-size: 4vw;
+            font-weight: 300;
+            color: ${offWhite};
+            margin: -3em;
+          }
         }
       `}</style>
     </div>
