@@ -33,7 +33,7 @@ const Speed = () => {
   return (
     <div className="speed">
       <Parallax
-        bgImage="/velax/vx-speed.jpg"
+        bgImage="/velax/speed.jpg"
         bgImageAlt="Vela X Speed Iamge"
         strength={700} // Ajuste o valor para alterar a intensidade do efeito
       >
@@ -69,7 +69,7 @@ const Speed = () => {
           object-fit: cover;
           margin-right: 300px;
           width: auto;
-          height: 80vh;
+          height: 90vh;
         }
 
         .speed-text-container {

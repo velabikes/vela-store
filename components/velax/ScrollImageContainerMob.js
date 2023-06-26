@@ -32,35 +32,6 @@ const ScrollImageContainerMob = () => {
   }, [inView, imageCount]);
 
   useEffect(() => {
-    const preLoadImages = async () => {
-      const imagePromises = [];
-
-      for (let i = 0; i < imageCount; i++) {
-        const image = new Image();
-
-        // Wrap the image loading in a promise
-        const promise = new Promise((resolve, reject) => {
-          image.onload = resolve;
-          image.onerror = reject;
-        });
-
-        // Set the image source
-        image.src = `/velax/image-scroll-1mob/VX-Scrollmob-${i}.webp`;
-
-        // Push the promise to the array
-        imagePromises.push(promise);
-      }
-
-      // Wait for all image promises to resolve
-      await Promise.all(imagePromises);
-
-      console.log("All images pre-loaded");
-    };
-
-    preLoadImages();
-  }, []);
-
-  useEffect(() => {
     const scrollContainerElement = scrollContainerRef.current;
     if (scrollContainerElement) {
       gsap.to(scrollContainerElement, {

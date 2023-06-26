@@ -4,7 +4,7 @@ import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 import { offWhite } from "/style/colors";
 
-const Speed = () => {
+const Speedmob = () => {
   const [startAnimation, setStartAnimation] = useState(false);
 
   const onVisibilityChange = (isVisible) => {
@@ -33,7 +33,7 @@ const Speed = () => {
   return (
     <div className="speed">
       <Parallax
-        bgImage="/velax/speedmob.png"
+        bgImage="/velax/speedmob.jpg"
         bgImageAlt="Vela X Speed Iamge"
         strength={200} // Ajuste o valor para alterar a intensidade do efeito
       >
@@ -67,8 +67,7 @@ const Speed = () => {
 
         .speed-image {
           object-fit: cover;
-          margin-right: 300px;
-          width: auto;
+          margin-right: 500px;
           height: 100vh;
         }
 
@@ -175,4 +174,4 @@ const Speed = () => {
   );
 };
 
-export default Speed;
+export default Speedmob;

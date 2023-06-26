@@ -8,7 +8,9 @@ import AutoplayRender1Mob from "/components/velax/AutoplayRender1Mob";
 import AutoplayRender2 from "/components/velax/AutoplayRender2";
 import Maskmob from "/components/velax/Maskmob";
 import Speed from "/components/velax/Speed";
+import Lights from "/components/velax/Lights";
 import Speedmob from "/components/velax/Speedmob";
+import Lightsmob from "/components/velax/Lightsmob";
 import Power from "/components/velax/Power";
 import Regen from "/components/velax/Regen";
 import { useMediaQuery } from "react-responsive";
@@ -116,7 +118,7 @@ const VelaX = () => {
 
       <div className="image-container">
         <div className="mask-container">
-          {isMobile ? <Maskmob maskSize="30vw" /> : <Mask maskSize="80vw" />}
+          {isMobile ? <Maskmob maskSize="30vw" /> : <Mask maskSize="120vw" />}
         </div>
 
         <div className="image-text-wrapper">
@@ -138,11 +140,18 @@ const VelaX = () => {
       )}
 
       <Power />
-      <Regen />
+
+      <Regen className="Regen" />
+
       <div className="image-2" ref={image2Ref}>
         <img src="/velax/VX-1.jpg" alt="Image 2" />
       </div>
 
+      {isMobile ? (
+        <Lightsmob className="Lightmob" />
+      ) : (
+        <Lights className="Lightsmob" />
+      )}
       {isMobile ? <AutoplayRender1Mob /> : <AutoplayRender1 />}
       <AutoplayRender2 />
 
@@ -188,13 +197,14 @@ const VelaX = () => {
           z-index: 5;
         }
         .introdark {
-          height: 50%;
+          height: 100vh;
           z-index: 99;
         }
 
         .image-container {
           position: relative;
           top: 0px;
+          z-index: 3;
         }
 
         .mask-container {
@@ -253,7 +263,8 @@ const VelaX = () => {
         .image-2 {
           display: flex;
           left: 0;
-          position: relative;
+          position: absolute;
+          visibility: hidden;
           height: 90vh;
         }
 
@@ -298,10 +309,6 @@ const VelaX = () => {
           font-weight: 500;
           font-family: filson-pro;
           transition: transform 0.1s ease;
-        }
-
-        .play-video {
-          position: relative;
         }
 
         @media only screen and (max-width: 868px) {

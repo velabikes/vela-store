@@ -14,6 +14,9 @@ const ScrollImageContainer = () => {
   const [currentImage, setCurrentImage] = useState(0);
   const imageCount = 819; // Replace this with the number of images in your sequence
 
+  const lastFrameTimeRef = useRef(0);
+  const previousImageRef = useRef(null);
+
   useEffect(() => {
     const handleScroll = () => {
       if (inView) {
@@ -64,17 +67,46 @@ const ScrollImageContainer = () => {
         // Set the image source
         image.src = `/velax/image-scroll-1/VX-Scroll-${i}.webp`;
 
-        // Push the promise to the array
+        // Wait for the image to load before resolving the promise
+        await promise;
+
         imagePromises.push(promise);
       }
-
-      // Wait for all image promises to resolve
-      await Promise.all(imagePromises);
 
       console.log("All images pre-loaded");
     };
 
     preLoadImages();
+  }, []);
+
+  const renderFrame = (timestamp) => {
+    const timeDiff = timestamp - lastFrameTimeRef.current;
+    const minFrameTime = 1000 / 10; // Minimum frame time for 30fps
+
+    if (timeDiff >= minFrameTime) {
+      lastFrameTimeRef.current = timestamp;
+      // Render frame logic here
+      const currentImageElement = scrollContainerRef.current;
+      const previousImageElement = previousImageRef.current;
+
+      if (currentImageElement) {
+        currentImageElement.style.opacity = 1;
+        if (previousImageElement) {
+          previousImageElement.style.opacity = 0;
+        }
+        previousImageRef.current = currentImageElement.cloneNode(true);
+      }
+    }
+
+    requestAnimationFrame(renderFrame);
+  };
+
+  useEffect(() => {
+    requestAnimationFrame(renderFrame);
+
+    return () => {
+      cancelAnimationFrame(renderFrame);
+    };
   }, []);
 
   return (
