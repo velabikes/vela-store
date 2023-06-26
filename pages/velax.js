@@ -139,9 +139,9 @@ const VelaX = () => {
         <Speed className="Speed" />
       )}
 
-      <Power />
-
       <Regen className="Regen" />
+
+      <Power />
 
       <div className="image-2" ref={image2Ref}>
         <img src="/velax/VX-1.jpg" alt="Image 2" />

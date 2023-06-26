@@ -35,7 +35,7 @@ const Speed = () => {
       <Parallax
         bgImage="/velax/speed.jpg"
         bgImageAlt="Vela X Speed Iamge"
-        strength={700} // Ajuste o valor para alterar a intensidade do efeito
+        strength={300} // Ajuste o valor para alterar a intensidade do efeito
       >
         <div className="speed-image" />
 
@@ -47,7 +47,7 @@ const Speed = () => {
                 key={startAnimation ? "start" : "reset"}
                 start={startAnimation ? null : 0}
                 end={32}
-                duration={6}
+                duration={4}
                 className="speed-text-count"
               />
             </VisibilitySensor>
@@ -69,7 +69,7 @@ const Speed = () => {
           object-fit: cover;
           margin-right: 300px;
           width: auto;
-          height: 90vh;
+          height: 80vh;
         }
 
         .speed-text-container {

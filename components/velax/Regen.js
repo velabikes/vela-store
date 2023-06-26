@@ -25,16 +25,17 @@ const Regen = () => {
 
         .regen-image {
           height: auto;
-          width: 80vw;
+          width: 90vw;
+          margin-left: -8vw;
         }
 
         .regen-text-container {
           position: absolute;
           text-align: left;
-          top: 30%;
           font-weight: 500;
-          margin-top: -30vw;
+          margin-top: 200vw;
           margin-left: 76vw;
+          z-indez: 999;
         }
 
         .regen-text-small {
