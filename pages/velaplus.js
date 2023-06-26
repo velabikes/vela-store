@@ -81,7 +81,7 @@ const VelaPlus = () => {
             hoverColor={"#DCF5EB"}
             textColor={offBlack}
             title="3. Como funciona o rastreamento via AirTag ou SmartTag?"
-            content="Os dois dispositivos funcionam de forma muito similar, um para cada tipo de sistema operacional. Basta sincronizar seu celular com o dispositivo e rastreá-lo através dos respectivos aplicativos.  A integração do AirTag/SmartTag com o sistema da Vela permite que esse dispositivo de rastreamento permaneça ativo por até 15 anos, mesmo sem a alimentação da bateria da bike. O dispositivo é instalado na parte interna do painel, não pode ser acessado sem que o painel/sistema seja violado/danificado e a instalação pode ser realizada em qualquer oficina autorizada da Vela. 
+            content="Os dois dispositivos funcionam de forma muito similar, um para cada tipo de sistema operacional. Basta sincronizar seu celular com o dispositivo e rastreá-lo através dos respectivos aplicativos.  A integração do AirTag/SmartTag com o sistema da Vela permite que esse dispositivo de rastreamento permaneça ativo por até 15 anos, mesmo sem a alimentação da bateria da bike. O dispositivo é instalado na parte interna do painel, não pode ser acessado sem que o painel/sistema seja violado/danificado e a instalação pode ser realizada em qualquer bicicletaria recomendada pelos nossos clientes.
 Para mais informações a respeito dos dispositivos AirTag, acesse o link: https://www.apple.com/br/airtag/ 
 Para mais informações a respeito dos dispositivos SmartTag, acesse o link: https://www.samsung.com/br/mobile-accessories/galaxy-smarttag-black-ei-t5300bbegbr/  "
           />

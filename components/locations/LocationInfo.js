@@ -1,8 +1,17 @@
 import PropTypes from "prop-types";
 import LocationTag from "components/locations/LocationTag";
 import GrudiButton from "components/locations/GrudiButton";
+import { darkGray, lightGray } from "../../style/colors";
 
-const LocationsInfo = ({ name, address, hours, phone, type, moreInfo }) => (
+const LocationsInfo = ({
+  name,
+  address,
+  hours,
+  phone,
+  type,
+  moreInfo,
+  extra,
+}) => (
   <article className="LocationsInfo">
     <h2>{name}</h2>
     <address>
@@ -10,6 +19,7 @@ const LocationsInfo = ({ name, address, hours, phone, type, moreInfo }) => (
     </address>
     <p>{moreInfo}</p>
     <p>{phone}</p>
+    <p className="disclaimer">{extra}</p>
     <table className="hours">
       {hours &&
         hours.map((hour) => (
@@ -42,6 +52,11 @@ const LocationsInfo = ({ name, address, hours, phone, type, moreInfo }) => (
       tr {
         text-transform: capitalize;
         font-size: 0.8em;
+      }
+      .disclaimer {
+        font-size: 0.8em;
+        font-wight: 30;
+        color: ${darkGray};
       }
     `}</style>
   </article>

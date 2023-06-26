@@ -288,6 +288,8 @@ const VelaX = () => {
         .image-text {
           color: ${offWhite};
           font-size: 15vw;
+          position: relative;
+          margin-bottom: 0%;
           font-weight: 500;
           font-family: filson-pro;
           transition: transform 0.1s ease;

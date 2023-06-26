@@ -64,11 +64,12 @@ const ScrollImageContainer = () => {
         // Set the image source
         image.src = `/velax/image-scroll-1/VX-Scroll-${i}.webp`;
 
-        // Wait for the image to load before resolving the promise
-        await promise;
-
+        // Push the promise to the array
         imagePromises.push(promise);
       }
+
+      // Wait for all image promises to resolve
+      await Promise.all(imagePromises);
 
       console.log("All images pre-loaded");
     };

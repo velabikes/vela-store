@@ -167,7 +167,7 @@ module.exports = async (req, res) => {
         googlePlace: "ChIJGe5wTDGoiZQRtOU_mEtGCIg",
         type: ["service"],
       },
-      
+
       {
         name: "De Lá Do Pão",
         address: [
@@ -283,6 +283,8 @@ module.exports = async (req, res) => {
           "SP, 05408-002, Brasil",
         ],
         phone: "(11) 9.6541-7538",
+        extra:
+          "Essa é uma oficina recomendada pelos nossos clientes. Apesar de passar por uma validação e treinamento, a Vela não é responsável pelo serviço prestado no local.",
         open: true,
         pos: {
           lat: -23.562933,

@@ -23,7 +23,7 @@ const typeToLabel = (type) => {
     case "store":
       return "Loja";
     case "service":
-      return "Autorizada";
+      return "Oficina";
     case "delivery":
       return "Leva & Traz";
     default:

@@ -8,7 +8,7 @@ const VelaPoint = () => (
       <div className="BannerTitle">
         <SectionHeader
           title="Conheça nossa Rede"
-          tagline="No mapa você encontra as lojas da Vela, pontos de recarga pela cidade e assistência autorizada."
+          tagline="No mapa você encontra as lojas da Vela, pontos de recarga pela cidade e bicicletarias recomendadas pelos nossos clientes."
         />
         <p></p>
         <a href="/rede/mapa">
