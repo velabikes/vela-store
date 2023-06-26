@@ -8,6 +8,7 @@ import AutoplayRender1Mob from "/components/velax/AutoplayRender1Mob";
 import AutoplayRender2 from "/components/velax/AutoplayRender2";
 import Maskmob from "/components/velax/Maskmob";
 import Speed from "/components/velax/Speed";
+import Speedmob from "/components/velax/Speedmob";
 import Power from "/components/velax/Power";
 import Regen from "/components/velax/Regen";
 import { useMediaQuery } from "react-responsive";
@@ -130,7 +131,11 @@ const VelaX = () => {
         {isMobile ? <ScrollImageContainerMob /> : <ScrollImageContainer />}
       </div>
 
-      <Speed />
+      {isMobile ? (
+        <Speedmob className="Speedmob" />
+      ) : (
+        <Speed className="Speed" />
+      )}
 
       <Power />
       <Regen />
