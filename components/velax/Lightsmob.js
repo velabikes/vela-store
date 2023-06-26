@@ -31,47 +31,29 @@ const Lightsmob = () => {
   }, []);
 
   return (
-    <div className="speed">
-      <Parallax
-        bgImage="/velax/speedmob.jpg"
-        bgImageAlt="Vela X Speed Iamge"
-        strength={200} // Ajuste o valor para alterar a intensidade do efeito
-      >
-        <div className="speed-image" />
+    <div className="lights">
+      <video autoPlay muted loop className="lights-video">
+        <source src="/velax/lightsmob.mp4" type="video/mp4" />
+      </video>
 
-        <div className="speed-text-container">
-          <p className="speed-text">
-            <span className="speed-text-small">Até</span>{" "}
-            <VisibilitySensor onChange={onVisibilityChange}>
-              <CountUp
-                key={startAnimation ? "start" : "reset"}
-                start={startAnimation ? null : 0}
-                end={32}
-                duration={6}
-                className="speed-text-count"
-              />
-            </VisibilitySensor>
-            <span className="speed-text-medium">km/h</span>
-          </p>
-          <p className="speed-text-details">
-            <br></br>Velocidade máxima de assistência do motor.
-          </p>
-        </div>
-      </Parallax>
+      <div className="lights-text-container">
+        <p className="lights-text">MUITA LUZ</p>
+      </div>
 
       <style jsx>{`
-        .speed {
+        .lights {
           position: relative;
           height: auto;
         }
 
-        .speed-image {
+        .lights-video {
           object-fit: cover;
-          margin-right: 500px;
-          height: 100vh;
+          margin-right: 300px;
+          width: 100vw;
+          height: 70vh;
         }
 
-        .speed-text-container {
+        .lights-text-container {
           position: absolute;
           width: 100vw;
           top: 50%;
@@ -81,49 +63,22 @@ const Lightsmob = () => {
           z-index: 1; // Garante que o texto fique acima da imagem
         }
 
-        .speed-text {
-          font-size: 10vw;
-          font-weight: 800;
+        .lights-text {
+          font-size: 13vw;
+          font-weight: 1000;
           color: ${offWhite};
           margin: 0;
         }
 
-        .speed-text-small,
-        .speed-text-medium {
-          display: inline-block;
-          font-weight: 300;
-          color: ${offWhite};
-        }
-
-        .speed-text-small {
-          font-size: 4vw;
-        }
-
-        .speed-text-medium {
-          font-size: 4vw;
-        }
-
-        .speed-text-count {
-          font-size: 10vw;
-          font-weight: 800;
-        }
-
-        .speed-text-details {
-          font-size: 1.8vw;
-          font-weight: 200;
-          color: ${offWhite};
-          margin-top: -7vw;
-        }
-
         @media only screen and (max-width: 868px) {
-          .speed-image {
+          .lights-image {
             object-fit: cover;
             margin-right: 300px;
             width: auto;
             height: 80vh;
           }
 
-          .speed-text-container {
+          .lights-text-container {
             position: absolute;
             width: 100vw;
             top: 50%;
@@ -133,34 +88,14 @@ const Lightsmob = () => {
             z-index: 1; // Garante que o texto fique acima da imagem
           }
 
-          .speed-text {
-            font-size: 20vw;
-            font-weight: 800;
-            color: ${offWhite};
-            margin: 0;
-          }
-
-          .speed-text-small,
-          .speed-text-medium {
+          .lights-text-small,
+          .lights-text-medium {
             display: inline-block;
             font-weight: 300;
             color: ${offWhite};
           }
 
-          .speed-text-small {
-            font-size: 8vw;
-          }
-
-          .speed-text-medium {
-            font-size: 8vw;
-          }
-
-          .speed-text-count {
-            font-size: 10vw;
-            font-weight: 800;
-          }
-
-          .speed-text-details {
+          .lights-text-details {
             font-size: 5vw;
             width: 60vw;
             font-weight: 300;

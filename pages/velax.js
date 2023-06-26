@@ -66,7 +66,7 @@ const VelaX = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 868);
+      setIsMobile(window.innerWidth <= 968);
     };
 
     window.addEventListener("resize", handleResize);
@@ -118,7 +118,7 @@ const VelaX = () => {
 
       <div className="image-container">
         <div className="mask-container">
-          {isMobile ? <Maskmob maskSize="30vw" /> : <Mask maskSize="120vw" />}
+          {isMobile ? <Maskmob maskSize="30vw" /> : <Mask maskSize="100vw" />}
         </div>
 
         <div className="image-text-wrapper">
