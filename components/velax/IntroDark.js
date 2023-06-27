@@ -49,7 +49,7 @@ const IntroDark = () => {
     width: "100%",
     height: "100%",
     objectFit: "cover",
-    zIndex: 9999,
+    zIndex: 99,
     opacity: isPlaying ? 1 : 0,
   };
 

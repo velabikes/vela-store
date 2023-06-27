@@ -15,7 +15,8 @@ import Power from "/components/velax/Power";
 import Regen from "/components/velax/Regen";
 import { useMediaQuery } from "react-responsive";
 import IntroDark from "/components/velax/IntroDark";
-import Lightspecs from "components/velax/Lightspecs";
+import Lightspecs from "/components/velax/Lightspecs";
+import Battery from "/components/velax/Battery";
 
 import {
   darkGray,
@@ -143,6 +144,8 @@ const VelaX = () => {
       <Regen className="Regen" />
 
       <Power />
+
+      <Battery />
 
       <div className="image-2" ref={image2Ref}>
         <img src="/velax/VX-1.jpg" alt="Image 2" />
