@@ -4,7 +4,7 @@ import CountUp from "react-countup";
 import VisibilitySensor from "react-visibility-sensor";
 import { offWhite } from "/style/colors";
 
-const Lights = () => {
+const Batterymob = () => {
   const [startAnimation, setStartAnimation] = useState(false);
 
   const onVisibilityChange = (isVisible) => {
@@ -31,30 +31,30 @@ const Lights = () => {
   }, []);
 
   return (
-    <div className="lights">
-      <video autoPlay muted loop preload="auto" className="lights-video">
-        <source src="/velax/lights.mp4" type="video/mp4" />
+    <div className="battery">
+      <video autoPlay muted loop preload="auto" className="battery-video">
+        <source src="/velax/battery.mp4" type="video/mp4" />
       </video>
 
-      <div className="lights-text-container">
-        <p className="lights-text-tittle">Muita Luz</p>
-        <p className="lights-text">Pra ver e ser visto.</p>
+      <div className="battery-text-container">
+        <p className="battery-text-tittle">Bateria</p>
+        <p className="battery-text">Claro, a bateria da Vela.</p>
       </div>
 
       <style jsx>{`
-        .lights {
+        .battery {
           position: relative;
           height: auto;
         }
 
-        .lights-video {
+        .battery-video {
           object-fit: cover;
           margin-right: 300px;
           width: 100vw;
           height: 90vh;
         }
 
-        .lights-text-container {
+        .battery-text-container {
           position: absolute;
           width: 100vw;
           top: 50%;
@@ -64,15 +64,15 @@ const Lights = () => {
           z-index: 1; // Garante que o texto fique acima da imagem
         }
 
-        .lights-text {
-          font-size: 3.8vw;
+        .battery-text {
+          font-size: 6vw;
           font-weight: 600;
           color: #ffffff;
           top: 70%;
           margin: 0;
         }
-        .lights-text-tittle {
-          font-size: 1.6vw;
+        .battery-text-tittle {
+          font-size: 3vw;
           font-weight: 500;
           color: #ffffff;
           top: 90%;
@@ -80,14 +80,14 @@ const Lights = () => {
         }
 
         @media only screen and (max-width: 868px) {
-          .lights-image {
+          .battery-image {
             object-fit: cover;
             margin-right: 300px;
             width: auto;
-            height: 90vh;
+            height: 80vh;
           }
 
-          .lights-text-container {
+          .battery-text-container {
             position: absolute;
             width: 100vw;
             top: 50%;
@@ -97,14 +97,14 @@ const Lights = () => {
             z-index: 1; // Garante que o texto fique acima da imagem
           }
 
-          .lights-text-small,
-          .lights-text-medium {
+          .battery-text-small,
+          .battery-text-medium {
             display: inline-block;
             font-weight: 300;
             color: ${offWhite};
           }
 
-          .lights-text-details {
+          .battery-text-details {
             font-size: 5vw;
             width: 60vw;
             font-weight: 300;
@@ -118,4 +118,4 @@ const Lights = () => {
   );
 };
 
-export default Lights;
+export default Batterymob;

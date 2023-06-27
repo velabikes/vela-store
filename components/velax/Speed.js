@@ -47,7 +47,7 @@ const Speed = () => {
                 key={startAnimation ? "start" : "reset"}
                 start={startAnimation ? null : 0}
                 end={32}
-                duration={4}
+                duration={8}
                 className="speed-text-count"
               />
             </VisibilitySensor>

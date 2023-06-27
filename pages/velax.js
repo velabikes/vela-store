@@ -17,6 +17,7 @@ import { useMediaQuery } from "react-responsive";
 import IntroDark from "/components/velax/IntroDark";
 import Lightspecs from "/components/velax/Lightspecs";
 import Battery from "/components/velax/Battery";
+import Batterymob from "/components/velax/Batterymob";
 
 import {
   darkGray,
@@ -134,7 +135,11 @@ const VelaX = () => {
 
       <Regen className="Regen" />
 
-      <Battery />
+      {isMobile ? (
+        <Batterymob className="Batterymob" />
+      ) : (
+        <Battery className="Battery" />
+      )}
 
       <div className="image-2" ref={image2Ref}>
         <img src="/velax/VX-1.jpg" alt="Image 2" />

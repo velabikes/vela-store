@@ -47,7 +47,7 @@ const Speedmob = () => {
                 key={startAnimation ? "start" : "reset"}
                 start={startAnimation ? null : 0}
                 end={32}
-                duration={6}
+                duration={8}
                 className="speed-text-count"
               />
             </VisibilitySensor>
@@ -96,7 +96,7 @@ const Speedmob = () => {
         }
 
         .speed-text-small {
-          font-size: 4vw;
+          font-size: vw;
         }
 
         .speed-text-medium {
@@ -143,7 +143,7 @@ const Speedmob = () => {
           .speed-text-small,
           .speed-text-medium {
             display: inline-block;
-            font-weight: 300;
+            font-weight: 500;
             color: ${offWhite};
           }
 
@@ -163,7 +163,7 @@ const Speedmob = () => {
           .speed-text-details {
             font-size: 5vw;
             width: 60vw;
-            font-weight: 300;
+            font-weight: 400;
             color: ${offWhite};
             margin-left: 20vw;
             margin-top: -15vw;

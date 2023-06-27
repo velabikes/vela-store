@@ -37,7 +37,8 @@ const Lightsmob = () => {
       </video>
 
       <div className="lights-text-container">
-        <p className="lights-text">MUITA LUZ</p>
+        <p className="lights-text-tittle">Muita Luz</p>
+        <p className="lights-text">Pra ver e ser visto.</p>
       </div>
 
       <style jsx>{`
@@ -75,7 +76,7 @@ const Lightsmob = () => {
             object-fit: cover;
             margin-right: 300px;
             width: auto;
-            height: 80vh;
+            height: 90vh;
           }
 
           .lights-text-container {
@@ -95,13 +96,19 @@ const Lightsmob = () => {
             color: ${offWhite};
           }
 
-          .lights-text-details {
-            font-size: 5vw;
-            width: 60vw;
-            font-weight: 300;
-            color: ${offWhite};
-            margin-left: 20vw;
-            margin-top: -15vw;
+          .lights-text {
+            font-size: 6vw;
+            font-weight: 600;
+            color: #ffffff;
+            top: 70%;
+            margin: 0;
+          }
+          .lights-text-tittle {
+            font-size: 3vw;
+            font-weight: 500;
+            color: #ffffff;
+            top: 90%;
+            margin-bottom: -1vw;
           }
         }
       `}</style>
