@@ -37,7 +37,7 @@ const Lights = () => {
       </video>
 
       <div className="lights-text-container">
-        <p className="lights-text">MUITA LUZ</p>
+        <p className="lights-text">Muita luz para ver e ser visto.</p>
       </div>
 
       <style jsx>{`
@@ -64,9 +64,10 @@ const Lights = () => {
         }
 
         .lights-text {
-          font-size: 13vw;
-          font-weight: 1000;
-          color: ${offWhite};
+          font-size: 3.5  vw;
+          font-weight: 600;
+          color: #ffffff;
+          top: 70%;
           margin: 0;
         }
 

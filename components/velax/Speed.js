@@ -92,7 +92,7 @@ const Speed = () => {
         .speed-text-small,
         .speed-text-medium {
           display: inline-block;
-          font-weight: 300;
+          font-weight: 500;
           color: ${offWhite};
         }
 
@@ -111,7 +111,7 @@ const Speed = () => {
 
         .speed-text-details {
           font-size: 1.8vw;
-          font-weight: 200;
+          font-weight: 400;
           color: ${offWhite};
           margin-top: -7vw;
         }
