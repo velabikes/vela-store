@@ -12,7 +12,7 @@ const ScrollImageContainer = () => {
   });
 
   const [currentImage, setCurrentImage] = useState(0);
-  const imageCount = 835; // Replace this with the number of images in your sequence
+  const imageCount = 859; // Replace this with the number of images in your sequence
 
   const lastFrameTimeRef = useRef(0);
   const previousImageRef = useRef(null);

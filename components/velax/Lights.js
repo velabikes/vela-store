@@ -32,12 +32,13 @@ const Lights = () => {
 
   return (
     <div className="lights">
-      <video autoPlay muted loop className="lights-video">
+      <video autoPlay muted loop preload="auto" className="lights-video">
         <source src="/velax/lights.mp4" type="video/mp4" />
       </video>
 
       <div className="lights-text-container">
-        <p className="lights-text">Muita luz para ver e ser visto.</p>
+        <p className="lights-text-tittle">Muita Luz</p>
+        <p className="lights-text">Para ver e ser visto.</p>
       </div>
 
       <style jsx>{`
@@ -64,11 +65,18 @@ const Lights = () => {
         }
 
         .lights-text {
-          font-size: 3.5  vw;
+          font-size: 3.8vw;
           font-weight: 600;
           color: #ffffff;
           top: 70%;
           margin: 0;
+        }
+        .lights-text-tittle {
+          font-size: 1.6vw;
+          font-weight: 500;
+          color: #ffffff;
+          top: 90%;
+          margin-bottom: -1vw;
         }
 
         @media only screen and (max-width: 868px) {
