@@ -123,15 +123,6 @@ const VelaX = () => {
           {isMobile ? <Maskmob maskSize="30vw" /> : <Mask maskSize="100vw" />}
         </div>
 
-        <div className="image-text-wrapper">
-          <p
-            className="image-text"
-            style={{ transform: `translateY(-${scrollOffset * 0.3}px)` }}
-          >
-            Vela X
-          </p>
-        </div>
-
         {isMobile ? <ScrollImageContainerMob /> : <ScrollImageContainer />}
       </div>
 
