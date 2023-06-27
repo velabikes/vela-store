@@ -59,11 +59,14 @@ const IntroDark = () => {
     top: "48%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    fontSize: "50px",
+    fontSize: "20px",
+    fontWeight: 50,
+    fontFamily: "Filson-pro", // Ajuste da família da fonte
     padding: "10px 20px",
-    border: "none",
+    border: "1px solid gray",
+    borderRadius: "0%",
     backgroundColor: "transparent",
-    color: "white",
+    color: "gray",
     cursor: "pointer",
   };
 
@@ -92,16 +95,15 @@ const IntroDark = () => {
         type="video/mp4"
         controls
       />
-      <button
-        className={hideIntroDarkClass}
-        style={playButtonStyle}
-        onClick={toggleVideo}
-      >
-        ▶
-      </button>
-      <p className={hideIntroDarkClass} style={captionStyle}>
-        Assista ao vídeo completo.
-      </p>
+      {!isPlaying && (
+        <button
+          className={hideIntroDarkClass}
+          style={playButtonStyle}
+          onClick={toggleVideo}
+        >
+          Assista ao vídeo completo.
+        </button>
+      )}
     </div>
   );
 };

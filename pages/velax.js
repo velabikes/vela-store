@@ -143,8 +143,6 @@ const VelaX = () => {
 
       <Regen className="Regen" />
 
-      <Power />
-
       <Battery />
 
       <div className="image-2" ref={image2Ref}>
