@@ -32,7 +32,14 @@ const Batterymob = () => {
 
   return (
     <div className="battery">
-      <video autoPlay muted loop preload="auto" className="battery-video">
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        className="battery-video"
+      >
         <source src="/velax/battery.mp4" type="video/mp4" />
       </video>
 

@@ -32,7 +32,7 @@ const Lightsmob = () => {
 
   return (
     <div className="lights">
-      <video autoPlay muted loop className="lights-video">
+      <video autoPlay muted loop playsInline className="lights-video">
         <source src="/velax/lightsmob.mp4" type="video/mp4" />
       </video>
 

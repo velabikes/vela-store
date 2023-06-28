@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 
-const IntroDark = () => {
+const IntroDarkMob = () => {
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -59,7 +59,7 @@ const IntroDark = () => {
     top: "48%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    fontSize: "20px",
+    fontSize: "10px",
     fontWeight: 50,
     fontFamily: "Filson-pro", // Ajuste da família da fonte
     padding: "10px 20px",
@@ -77,7 +77,7 @@ const IntroDark = () => {
     left: "50%",
     transform: "translate(-50%, -50%)",
     color: "white",
-    fontSize: "25px",
+    fontSize: "15px",
     textAlign: "center",
   };
 
@@ -108,4 +108,4 @@ const IntroDark = () => {
   );
 };
 
-export default IntroDark;
+export default IntroDarkMob;
