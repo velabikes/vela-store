@@ -18,6 +18,7 @@ import IntroDark from "/components/velax/IntroDark";
 import Lightspecs from "/components/velax/Lightspecs";
 import Battery from "/components/velax/Battery";
 import Batterymob from "/components/velax/Batterymob";
+import Colors from "/components/velax/Colors";
 
 import {
   darkGray,
@@ -133,7 +134,7 @@ const VelaX = () => {
         <Speed className="Speed" />
       )}
 
-      <Regen className="Regen" />
+      <Power />
 
       {isMobile ? (
         <Batterymob className="Batterymob" />
@@ -153,6 +154,8 @@ const VelaX = () => {
 
       <Lightspecs />
 
+      <Colors />
+
       {isMobile ? (
         <AutoplayRender1Mob />
       ) : (
@@ -162,7 +165,7 @@ const VelaX = () => {
 
       <style jsx>{`
         .VelaX {
-          width: 101%;
+          width: 100%;
           margin-top: -6px;
           height: auto;
           overflow: hidden;

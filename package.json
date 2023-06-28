@@ -71,6 +71,7 @@
     "react-redux": "^7.0.3",
     "react-responsive": "^9.0.2",
     "react-scroll": "^1.8.9",
+    "react-scroll-parallax": "^3.4.2",
     "react-scrollmagic": "^2.3.0",
     "react-visibility-sensor": "^5.1.1",
     "recompose": "^0.30.0",
