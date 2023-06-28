@@ -64,10 +64,10 @@ const IntroDarkMob = () => {
     fontWeight: 50,
     fontFamily: "Filson-pro", // Ajuste da família da fonte
     padding: "10px 10px",
-    border: "1px solid gray",
+    border: "1px solid white",
     borderRadius: "0%",
     backgroundColor: "transparent",
-    color: "gray",
+    color: "white",
     cursor: "pointer",
   };
 
