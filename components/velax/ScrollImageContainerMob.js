@@ -48,6 +48,31 @@ const ScrollImageContainerMob = () => {
     }
   }, []);
 
+  useEffect(() => {
+    const preLoadImages = () => {
+      const imagePromises = [];
+
+      for (let i = 0; i < imageCount; i++) {
+        const image = new Image();
+
+        const promise = new Promise((resolve, reject) => {
+          image.onload = resolve;
+          image.onerror = reject;
+        });
+
+        image.src = `/velax/image-scroll-1mob/VX-Scrollmob-${i}.webp`;
+
+        imagePromises.push(promise);
+      }
+
+      Promise.all(imagePromises).then(() => {
+        console.log("All images pre-loaded");
+      });
+    };
+
+    preLoadImages();
+  }, [imageCount]);
+
   return (
     <div className="scroll-image-container" ref={containerRef}>
       <img
@@ -58,7 +83,7 @@ const ScrollImageContainerMob = () => {
           objectFit: "cover",
           height: "100vh",
           width: "100vw",
-        }} // adjust the height and width here
+        }}
       />
     </div>
   );
