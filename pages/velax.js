@@ -134,8 +134,6 @@ const VelaX = () => {
         <Speed className="Speed" />
       )}
 
-      <Power />
-
       {isMobile ? (
         <Batterymob className="Batterymob" />
       ) : (
@@ -151,17 +149,6 @@ const VelaX = () => {
       ) : (
         <Lights className="Lightsmob" />
       )}
-
-      <Lightspecs />
-
-      <Colors />
-
-      {isMobile ? (
-        <AutoplayRender1Mob />
-      ) : (
-        <AutoplayRender1 className="AutoplayRender1" />
-      )}
-      <AutoplayRender2 />
 
       <style jsx>{`
         .VelaX {

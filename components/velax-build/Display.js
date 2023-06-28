@@ -14,7 +14,7 @@ const Display = ({ model: { frame, size, color, tire } }) => {
       />
       <style jsx>{`
         .Display {
-          background-color: #000000;
+          background-color: #ede6de;
           display: flex;
           align-items: center;
           justify-content: center;
