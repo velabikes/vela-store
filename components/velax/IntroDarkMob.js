@@ -47,7 +47,7 @@ const IntroDarkMob = () => {
     top: 0,
     left: 0,
     width: "100%",
-    height: "95%",
+    height: "90%",
     objectFit: "cover",
     zIndex: 99,
     opacity: isPlaying ? 1 : 0,
@@ -59,26 +59,16 @@ const IntroDarkMob = () => {
     top: "48%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    fontSize: "10px",
+    fontSize: "13px",
+    width: "100vw,",
     fontWeight: 50,
     fontFamily: "Filson-pro", // Ajuste da família da fonte
-    padding: "10px 20px",
+    padding: "10px 10px",
     border: "1px solid gray",
     borderRadius: "0%",
     backgroundColor: "transparent",
     color: "gray",
     cursor: "pointer",
-  };
-
-  const captionStyle = {
-    display: isPlaying ? "none" : "block",
-    position: "absolute",
-    top: "calc(50% + 50px)",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    color: "white",
-    fontSize: "15px",
-    textAlign: "center",
   };
 
   const hideIntroDarkClass = isPlaying ? "hide-intro-dark" : "";

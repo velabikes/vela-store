@@ -193,8 +193,8 @@ const VelaX = () => {
           border: none;
           border-radius: 20px;
           padding: 0.5em 0.5em;
-          color: ${offBlack}
           cursor: pointer;
+          color: ${offBlack};
         }
 
         .introdarkmob {
@@ -315,11 +315,11 @@ const VelaX = () => {
           font-family: filson-pro;
           transition: transform 0.1s ease;
         }
-.AutoplayRender1 {
-  position: relative;
-  margin-top: 300%;
-  z-index: 5;
-}
+        .AutoplayRender1 {
+          position: relative;
+          margin-top: 300%;
+          z-index: 5;
+        }
         @media only screen and (max-width: 868px) {
           .image-text {
             color: ${offWhite};
@@ -341,8 +341,8 @@ const VelaX = () => {
             border: none;
             border-radius: 20px;
             padding: 0.5em 0.5em;
-            color: ${offBlack}
             cursor: pointer;
+            color: ${offBlack};
           }
         }
       `}</style>

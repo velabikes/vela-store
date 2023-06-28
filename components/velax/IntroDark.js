@@ -59,7 +59,7 @@ const IntroDark = () => {
     top: "48%",
     left: "50%",
     transform: "translate(-50%, -50%)",
-    fontSize: "20px",
+    fontSize: "15px",
     fontWeight: 50,
     fontFamily: "Filson-pro", // Ajuste da família da fonte
     padding: "10px 20px",
@@ -68,17 +68,6 @@ const IntroDark = () => {
     backgroundColor: "transparent",
     color: "gray",
     cursor: "pointer",
-  };
-
-  const captionStyle = {
-    display: isPlaying ? "none" : "block",
-    position: "absolute",
-    top: "calc(50% + 50px)",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    color: "white",
-    fontSize: "25px",
-    textAlign: "center",
   };
 
   const hideIntroDarkClass = isPlaying ? "hide-intro-dark" : "";
