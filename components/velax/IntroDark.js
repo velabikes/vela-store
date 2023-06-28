@@ -90,7 +90,7 @@ const IntroDark = () => {
           style={playButtonStyle}
           onClick={toggleVideo}
         >
-          Assista ao vídeo completo.
+          Assista ao vídeo.
         </button>
       )}
     </div>
