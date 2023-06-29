@@ -70,7 +70,7 @@ const VelaX = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 968);
+      setIsMobile(window.innerWidth <= 868);
     };
 
     window.addEventListener("resize", handleResize);
