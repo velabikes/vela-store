@@ -1,6 +1,6 @@
 export default {
   '{"size":"M"}': {
-    id: "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC8zMTcyNjk0NTIwNjMyNw==",
+    id: "Z2lkOi8vc2hvcGlmeS9Qcm9kdWN0VmFyaWFudC80MDE1MTE4Njg2NjIzMQ==",
     photos: ["/images/velax/VXM-AVATAR.png"],
   },
   '{"size":"G"}': {
