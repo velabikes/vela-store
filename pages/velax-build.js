@@ -186,13 +186,17 @@ const Vela2 = ({ checkout, checkoutLineItemsAdd, handleCheckoutCreation }) => {
         step={step}
       />
       <style jsx>{`
+        .velax {
+          margin-top: -10px;
+        }
+
         .mobiledisplay {
-          margin-top: 10em;
+          margin-top: 2em;
         }
         @media only screen and (min-width: 768px) {
           .content {
             display: flex;
-            height: calc(100vh - 130px);
+            height: 80vh;
             flex-direction: row;
           }
         }

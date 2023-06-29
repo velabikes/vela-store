@@ -50,7 +50,7 @@ const Tab = ({ children, step, onStep }) => {
           font-size: 0.9em;
           text-align: center;
           background-color: ${white};
-          margin-top: 12.8em;
+          margin-top: 18em;
           box-shadow: rgb(0 0 0 / 3%) 0px -7px 7px 0px,
             rgb(0 0 0 / 17%) 0px 8px 10px -7px;
         }
@@ -77,6 +77,7 @@ const Tab = ({ children, step, onStep }) => {
         }
         @media only screen and (min-width: 768px) {
           .Tab {
+            height: 80vh;
             width: 26em;
             overflow-y: auto;
           }

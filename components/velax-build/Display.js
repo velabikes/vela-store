@@ -31,20 +31,23 @@ const Display = ({ model: { frame, size, color, tire } }) => {
         }
         .Display img {
           object-fit: contain;
-          height: 100%;
-          max-height: calc(25vh);
+          height: 30vh;
+          max-height: calc(80vh);
         }
 
         @media only screen and (min-width: 768px) {
           .Display {
             position: relative;
+            height: 80vh;
           }
           h1 {
             font-size: 5rem;
           }
           .Display img {
             position: relative;
-            max-width: 70vw;
+            height: 100%;
+            width: 100%;
+
             object-fit: cover;
             max-height: 100%;
             object-position: 50% 50%;

@@ -7,15 +7,15 @@ const AddedToCart = ({ checkout }) => {
   return (
     <div>
       <h3>Itens adicionados ao carrinho</h3>
-      <h5>Finalize agora o pedido da sua Vela 2!</h5>
+      <h5>Finalize agora o pedido da sua Vela X!</h5>
       <div className="conditions">
         <p>
-          1. A Vela é feita sob encomenda, o prazo atual é de 2 à 3 semanas para
-          produção.
+          1. A Vela X é feita sob encomenda, o prazo atual é de 2 à 3 semanas
+          para produção.
         </p>
         <p>
-          2. Possui alguma dúvida? Envie uma mensagem no nosso WhatsApp em azul
-          à direita da tela!
+          2. Possui alguma dúvida? Envie uma mensagem no nosso WhatsApp aqui no
+          canto inferior direito da tela!
         </p>
         <p>
           3. Você receberá o status de acompanhamento do seu pedido por e-mail.

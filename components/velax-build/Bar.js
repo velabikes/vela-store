@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import { compose } from "recompose";
-import { lightGray, darkGray } from "../../style/colors";
+import { lightGray, darkGray, offWhite, white } from "../../style/colors";
 import withCheckout from "../../containers/withCheckout";
 import Button from "../Button";
 import Price from "../Price";
@@ -13,7 +13,10 @@ const Bar = ({ onContinue, extra, step, checkout }) => {
           Prazo:
           <br />
         </p>
-        <small>Disponível à pronta entrega na cidade de São Paulo.</small>
+        <small>
+          {" "}
+          Quantidade limitada do primeiro lote com o prazo de 2-3 semanas.
+        </small>
       </div>
       <div className="bottom">
         <div className="left">
@@ -103,7 +106,12 @@ const Bar = ({ onContinue, extra, step, checkout }) => {
       @media only screen and (min-width: 768px) {
         .Bar {
           width: 100%;
+          height: 10vh;
           flex-direction: row;
+          position: relative;
+          margin-top: 0
+          z-index: 5;
+          background-color: ${white};
         }
         .bottom {
           padding: 0 6em 0 0;
