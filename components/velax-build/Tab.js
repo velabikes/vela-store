@@ -50,7 +50,7 @@ const Tab = ({ children, step, onStep }) => {
           font-size: 0.9em;
           text-align: center;
           background-color: ${white};
-          margin-top: 18em;
+          margin-top: 40vh;
           box-shadow: rgb(0 0 0 / 3%) 0px -7px 7px 0px,
             rgb(0 0 0 / 17%) 0px 8px 10px -7px;
         }
@@ -58,6 +58,7 @@ const Tab = ({ children, step, onStep }) => {
           border: 1px solid ${lightGray};
           padding: 1em;
           flex: 1;
+          margin-top: 0em;
         }
         .active {
           color: ${velaGreen};
@@ -73,9 +74,9 @@ const Tab = ({ children, step, onStep }) => {
         .TabContent {
           background-color: ${white};
           padding: 2em 1em 1em 2em;
-          margin-top: 14em;
+          margin-top: 45vh;
         }
-        @media only screen and (min-width: 768px) {
+        @media only screen and (min-width: 868px) {
           .Tab {
             height: 80vh;
             width: 26em;

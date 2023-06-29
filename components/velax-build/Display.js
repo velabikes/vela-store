@@ -8,10 +8,18 @@ const Display = ({ model: { frame, size, color, tire } }) => {
 
   return (
     <div className="Display">
-      <img
-        src={selectedModelData.photos && selectedModelData.photos[0]}
-        alt="Vela X"
-      />
+      {selectedModelData.photos && selectedModelData.photos[0] && (
+        <video
+          className="video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          key={selectedModelData.photos[0]}
+        >
+          <source src={selectedModelData.photos[0]} type="video/mp4" />
+        </video>
+      )}
       <style jsx>{`
         .Display {
           background-color: #ede6de;
@@ -29,28 +37,25 @@ const Display = ({ model: { frame, size, color, tire } }) => {
           font-size: 4.5rem;
           text-align: center;
         }
-        .Display img {
-          object-fit: contain;
-          height: 30vh;
-          max-height: calc(80vh);
+
+        .video {
+          max-height: 50vh;
+          width: 140vw;
         }
 
-        @media only screen and (min-width: 768px) {
+        @media only screen and (min-width: 868px) {
           .Display {
             position: relative;
             height: 80vh;
           }
-          h1 {
-            font-size: 5rem;
-          }
-          .Display img {
-            position: relative;
+          .video {
             height: 100%;
             width: 100%;
+            max-height: 80vh;
+          }
 
-            object-fit: cover;
-            max-height: 100%;
-            object-position: 50% 50%;
+          h1 {
+            font-size: 5rem;
           }
         }
       `}</style>

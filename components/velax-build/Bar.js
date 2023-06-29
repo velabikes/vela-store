@@ -64,6 +64,9 @@ const Bar = ({ onContinue, extra, step, checkout }) => {
       }
       h2 { 
         color: ${darkGray};
+
+        font-size: 2vh;
+        font-weight: 300;
       }
       .bottom {
         display: flex;
@@ -92,10 +95,10 @@ const Bar = ({ onContinue, extra, step, checkout }) => {
         display: flex;
         flex-direction: row;
         align-items: center;
+    
+      
       }
-      .left h1 {
-        margin-bottom: 0;
-      }
+
       .actions :global(button) {
         margin: 0;
       }
@@ -103,7 +106,7 @@ const Bar = ({ onContinue, extra, step, checkout }) => {
         max-width: 200px;
         font-size: 14px;
       }
-      @media only screen and (min-width: 768px) {
+      @media only screen and (min-width: 868px) {
         .Bar {
           width: 100%;
           height: 10vh;

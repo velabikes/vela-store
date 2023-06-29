@@ -136,7 +136,7 @@ const Vela2 = ({ checkout, checkoutLineItemsAdd, handleCheckoutCreation }) => {
           content="https://firebasestorage.googleapis.com/v0/b/vela-c1f68.appspot.com/o/public%2Fvelastore%2FScreen%20Shot%202022-06-22%20at%2009.15.06.png?alt=media&token=35763e05-5cc3-47f8-ac71-5b0d75d8f9d6"
         />
         <meta name="twitter:card" content="summary" />
-        <meta name="twitter:site" content="@velabikes" />
+        <meta name="twitter:site" content="@velabikesbrasil" />
         <meta name="twitter:title" content="Monte a sua - Vela Bikes" />
         <meta
           name="twitter:description"
@@ -149,7 +149,7 @@ const Vela2 = ({ checkout, checkoutLineItemsAdd, handleCheckoutCreation }) => {
       </Head>
       <div className="content">
         <Display model={selectedModel} />
-        <Tab step={step} onStep={setStep}>
+        <Tab className="tabcontent" step={step} onStep={setStep}>
           <ModelSelector
             onModelChange={setSelectedModel}
             model={selectedModel}
@@ -191,9 +191,9 @@ const Vela2 = ({ checkout, checkoutLineItemsAdd, handleCheckoutCreation }) => {
         }
 
         .mobiledisplay {
-          margin-top: 2em;
+          margin-top: 10em;
         }
-        @media only screen and (min-width: 768px) {
+        @media only screen and (min-width: 868px) {
           .content {
             display: flex;
             height: 80vh;
