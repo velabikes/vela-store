@@ -45,7 +45,7 @@ const Fork = () => {
 
       <div className="Fork-text-container">
         <p className="Fork-text-tittle">Robusta</p>
-        <p className="Fork-text">Uma urbana que topa qualquer rota.</p>
+        <p className="Fork-text">Uma urbana pra qualquer rota.</p>
       </div>
 
       <style jsx>{`
