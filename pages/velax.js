@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import IntroDarkMob from "/components/velax/IntroDarkMob";
 import IntroDark from "/components/velax/IntroDark";
-import ScrollImageContainer from "/components/velax/ScrollImageContainer";
-import ScrollImageContainerMob from "/components/velax/ScrollImageContainerMob";
 import Mask from "/components/velax/Mask";
 import Maskmob from "/components/velax/Maskmob";
+import ScrollImageContainer from "/components/velax/ScrollImageContainer";
+import ScrollImageContainerMob from "/components/velax/ScrollImageContainerMob";
 import Speed from "/components/velax/Speed";
 import Lights from "/components/velax/Lights";
 import Speedmob from "/components/velax/Speedmob";
@@ -16,6 +16,7 @@ import Lightspecs from "/components/velax/Lightspecs";
 import Battery from "/components/velax/Battery";
 import Batterymob from "/components/velax/Batterymob";
 import Colors from "/components/velax/Colors";
+import Fork from "/components/velax/Fork";
 
 import {
   darkGray,
@@ -146,6 +147,8 @@ const VelaX = () => {
       ) : (
         <Lights className="Lightsmob" />
       )}
+
+      <Fork />
 
       <style jsx>{`
         .VelaX {
