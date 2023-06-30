@@ -18,6 +18,7 @@ import Battery from "/components/velax/Battery";
 import Batterymob from "/components/velax/Batterymob";
 import Colors from "/components/velax/Colors";
 import Fork from "/components/velax/Fork";
+import Boost from "/components/velax/Boost";
 
 import {
   darkGray,
@@ -132,6 +133,8 @@ const VelaX = () => {
       ) : (
         <Speed className="Speed" />
       )}
+
+      <Boost />
 
       {isMobile ? (
         <Batterymob className="Batterymob" />
