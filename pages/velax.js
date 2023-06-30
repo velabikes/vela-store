@@ -13,6 +13,7 @@ import Power from "/components/velax/Power";
 import Regen from "/components/velax/Regen";
 import { useMediaQuery } from "react-responsive";
 import Lightspecs from "/components/velax/Lightspecs";
+import Comparelights from "/components/velax/Comparelights";
 import Battery from "/components/velax/Battery";
 import Batterymob from "/components/velax/Batterymob";
 import Colors from "/components/velax/Colors";

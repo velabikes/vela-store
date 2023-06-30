@@ -349,9 +349,9 @@ module.exports = async (req, res) => {
       {
         name: "Giro Master Bike Shop",
         address: [
-          "CLN 406 Bl A Loj 42/46",
+          "CLN 406 Bl B Loj 2, 6 e 8",
           "Asa Norte, Brasília",
-          "DF, 70847-510, Brasil",
+          "DF, 70847-520, Brasil",
         ],
         phone: "(61) 3202-2775",
         open: true,
