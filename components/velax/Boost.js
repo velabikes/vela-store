@@ -40,9 +40,9 @@ const Boost = () => {
         .Boost-video {
           object-fit: cover;
 
-          margin-top: 15vh;
+          margin-top: 10vh;
           margin-bottom: 10vw;
-          width: auto;
+          width: 100%;
           height: auto;
         }
 
@@ -97,7 +97,7 @@ const Boost = () => {
             z-index: 1;
             opacity: 0;
             transition: opacity 0.5s ease;
-            transition-delay: 5s; /* Add a 5-second delay */
+            transition-delay: 0.5s;
           }
 
           .Boost-text-container.fade-in {
