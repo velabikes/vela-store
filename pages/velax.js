@@ -19,6 +19,13 @@ import Batterymob from "/components/velax/Batterymob";
 import Colors from "/components/velax/Colors";
 import Fork from "/components/velax/Fork";
 import Boost from "/components/velax/Boost";
+import Explode from "../components/velax/Explode";
+import Uphill from "../components/velax/Uphill";
+import Forkrender from "../components/velax/Forkrender";
+import App from "../components/velax/App";
+import Range from "../components/velax/Range";
+import Batteryrender from "../components/velax/Batteryrender";
+import Motorbrake from "../components/velax/Motorbrake";
 
 import {
   darkGray,
@@ -136,11 +143,19 @@ const VelaX = () => {
 
       <Boost />
 
+      <Uphill />
+
+      <Motorbrake />
+
       {isMobile ? (
         <Batterymob className="Batterymob" />
       ) : (
         <Battery className="Battery" />
       )}
+
+      <Range />
+
+      <Batteryrender />
 
       <div className="image-2" ref={image2Ref}>
         <img src="/velax/VX-1.jpg" alt="Image 2" />
@@ -154,6 +169,16 @@ const VelaX = () => {
 
       <Fork />
 
+      <Forkrender />
+
+      <div className="apptittle">
+        <p>App</p>
+      </div>
+
+      <App className="app" />
+
+      <Explode className="explode" />
+
       <style jsx>{`
         .VelaX {
           width: 100%;
@@ -163,6 +188,13 @@ const VelaX = () => {
           background-color: #ede6de;
         }
 
+        .app {
+          z-index: -1;
+        }
+        .explode {
+          z-index: 99;
+          maring-top: 50vw;
+        }
         .topcta {
           position: fixed;
           top: 5px;
@@ -170,6 +202,19 @@ const VelaX = () => {
           z-index: 999;
         }
 
+        .apptittle{
+          position: relative;
+          background-color: #ebbd99;
+          font-size: 5vw;
+          margin-top: 0vw;
+          padding-top: 20vw;
+          padding-left: 4vw;
+          font-weight: 500;
+          text-align: center;
+          color: ${offWhite}
+          width: 100vw;
+          height: 40vw;
+        }
         .scroll-preload {
           position: absolute;
           height: 1vh;

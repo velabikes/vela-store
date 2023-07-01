@@ -69,7 +69,7 @@ const Speed = () => {
           object-fit: cover;
           margin-right: 300px;
           width: auto;
-          height: 90vh;
+          height: 100vh;
         }
 
         .speed-text-container {

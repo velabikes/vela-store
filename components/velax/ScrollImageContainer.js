@@ -12,7 +12,7 @@ const ScrollImageContainer = () => {
   });
 
   const [currentImage, setCurrentImage] = useState(0);
-  const imageCount = 701; // Replace this with the number of images in your sequence
+  const imageCount = 885; // Replace this with the number of images in your sequence
 
   const lastFrameTimeRef = useRef(0);
   const previousImageRef = useRef(null);
@@ -41,7 +41,7 @@ const ScrollImageContainer = () => {
         scrollTrigger: {
           trigger: scrollContainerElement,
           start: "top 0",
-          end: "1000%  0 ",
+          end: "15000vh  0 ",
           pin: true,
           scrub: 0.1,
           pinSpacing: true,

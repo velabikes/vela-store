@@ -39,10 +39,9 @@ const Boost = () => {
 
         .Boost-video {
           object-fit: cover;
-
           margin-top: 10vh;
           margin-bottom: 10vw;
-          width: 100%;
+          width: 80%;
           height: auto;
         }
 
