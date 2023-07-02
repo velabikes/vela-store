@@ -170,8 +170,8 @@ const Explode = ({ maskSize }) => {
       </div>
 
       <style jsx>{`
-
-        .explodeimage {}
+        .explodeimage {
+        }
 
         .specs-content,
         .specs-tech-content {

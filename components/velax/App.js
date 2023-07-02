@@ -1,47 +1,32 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 
 const App = () => {
   const [scrollY, setScrollY] = useState(0);
-  const [parallaxStart, setParallaxStart] = useState(0);
-  const [appStartPercentage, setAppStartPercentage] = useState(0.83);
-
-  const handleScroll = () => {
-    setScrollY(window.scrollY);
-  };
-
-  const updatePageHeight = () => {
-    const pageHeight =
-      document.documentElement.scrollHeight - window.innerHeight;
-    const parallaxStartOffset = pageHeight * appStartPercentage + 320;
-    setParallaxStart(parallaxStartOffset);
-  };
+  const appRef = useRef(null);
 
   useEffect(() => {
-    updatePageHeight();
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
     window.addEventListener("scroll", handleScroll);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
-    };
-  }, [appStartPercentage]);
-
-  useEffect(() => {
-    // Update page height whenever the window is resized
-    window.addEventListener("resize", updatePageHeight);
-    return () => {
-      window.removeEventListener("resize", updatePageHeight);
     };
   }, []);
 
   const calculateScrollSpeed = (speed) => {
-    if (scrollY >= parallaxStart) {
-      return (scrollY - parallaxStart) * speed;
+    if (appRef.current) {
+      const rect = appRef.current.getBoundingClientRect();
+      const appStart = rect.top + window.scrollY;
+      return (scrollY - appStart) * speed;
     }
     return 0;
   };
-
   return (
     <div className="app-container">
-      <div className="App">
+      <div className="App" ref={appRef}>
         <div className="parallax-images">
           <img
             className="trees"
@@ -151,18 +136,22 @@ const App = () => {
       <style jsx>{`
         .app-container {
           position: relative;
-          height: 138vw;
+          height: 300vh;
           width: 100vw;
           background-color: #ebbd99;
+          overflow: hidden;
+          margin-bottom: -80vh;
+        }
+        .disable-scroll {
           overflow: hidden;
         }
 
         .App {
-          position: absolute;
+          position: relative;
           top: 0;
           left: 0;
           width: 100%;
-          height: 100%;
+          height: 300vh;
           overflow: auto;
           overflow-x: hidden;
         }
@@ -170,7 +159,7 @@ const App = () => {
         .parallax-images {
           position: relative;
           height: 100%;
-          width: 100%;
+          width: 100vw;
           transform-style: preserve-3d;
         }
 

@@ -132,7 +132,11 @@ const VelaX = () => {
           {isMobile ? <Maskmob maskSize="30vw" /> : <Mask maskSize="100vw" />}
         </div>
 
-        {isMobile ? <ScrollImageContainerMob /> : <ScrollImageContainer />}
+        {isMobile ? (
+          <ScrollImageContainerMob />
+        ) : (
+          <ScrollImageContainer className="scroll-image" />
+        )}
       </div>
 
       {isMobile ? (
@@ -175,7 +179,11 @@ const VelaX = () => {
         <p>App</p>
       </div>
 
-      <App className="app" />
+      <div className="app-container">
+        <div className="app">
+          <App />
+        </div>
+      </div>
 
       <Explode className="explode" />
 
@@ -188,12 +196,20 @@ const VelaX = () => {
           background-color: #ede6de;
         }
 
+        .app-container {
+          position: relative;
+          width: 100%;
+          overflow: hidden;
+        }
+
         .app {
-          z-index: -1;
+          position: relative;
+          z-index: 3;
         }
         .explode {
           z-index: 99;
-          maring-top: 50vw;
+         
+        
         }
         .topcta {
           position: fixed;
@@ -207,19 +223,22 @@ const VelaX = () => {
           background-color: #ebbd99;
           font-size: 5vw;
           margin-top: 0vw;
-          padding-top: 20vw;
-          padding-left: 4vw;
+          padding-top: 40vh;
+          padding-left: 0vw;
           font-weight: 500;
           text-align: center;
           color: ${offWhite}
           width: 100vw;
-          height: 40vw;
+          height: 100vh;
+          z-index: 1;
         }
         .scroll-preload {
           position: absolute;
           height: 1vh;
           z-index: -2;
         }
+
+        
 
         .button {
           width: 9em;
