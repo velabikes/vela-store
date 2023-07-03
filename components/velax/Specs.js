@@ -1,17 +1,9 @@
 import React from "react";
 import { offBlack, offWhite } from "../../style/colors";
 
-const Explode = ({ maskSize }) => {
+const Specs = ({ maskSize }) => {
   return (
-    <div className="explodecontainer">
-      <div className="explodeiamge" style={{ backgroundColor: "#ede6de" }}>
-        <img
-          src="/velax/explode.png"
-          alt="Exploded View"
-          style={{ width: "100vw", height: "auto" }}
-        />
-      </div>
-
+    <div className="Specscontainer">
       <div className="specs-content">
         <table className="table-specs">
           <tbody>
@@ -170,7 +162,8 @@ const Explode = ({ maskSize }) => {
       </div>
 
       <style jsx>{`
-        .explodeimage {
+        .Specsdcontainer {
+          maring-top: 100vh;
         }
 
         .specs-content,
@@ -185,7 +178,7 @@ const Explode = ({ maskSize }) => {
           padding: 1em 0.5em 0 0.5em;
         }
 
-        .explodeimage {
+        .Specsimage {
           z-index: 99;
         }
 
@@ -222,4 +215,4 @@ const Explode = ({ maskSize }) => {
   );
 };
 
-export default Explode;
+export default Specs;

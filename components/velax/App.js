@@ -136,14 +136,51 @@ const App = () => {
       <style jsx>{`
         .app-container {
           position: relative;
-          height: 300vh;
+          height: 400vh;
           width: 100vw;
           background-color: #ebbd99;
           overflow: hidden;
-          margin-bottom: -80vh;
+          margin-bottom: -190vh;
         }
-        .disable-scroll {
-          overflow: hidden;
+
+        @media only screen and (min-width: 880px) {
+          .app-container {
+            margin-bottom: -250vh;
+          }
+        }
+
+        @media only screen and (min-width: 1100px) {
+          .app-container {
+            margin-bottom: -220vh;
+          }
+        }
+
+        @media only screen and (min-width: 1300px) {
+          .app-container {
+            margin-bottom: -190vh;
+          }
+        }
+        @media only screen and (min-width: 1500px) {
+          .app-container {
+            margin-bottom: -148vh;
+          }
+        }
+        @media only screen and (min-width: 1700px) {
+          .app-container {
+            margin-bottom: -115vh;
+          }
+        }
+
+        @media only screen and (min-width: 1900px) {
+          .app-container {
+            margin-bottom: -75vh;
+          }
+        }
+
+        @media only screen and (min-width: 2100px) {
+          .app-container {
+            margin-bottom: -40vh;
+          }
         }
 
         .App {
@@ -151,15 +188,17 @@ const App = () => {
           top: 0;
           left: 0;
           width: 100%;
-          height: 300vh;
+          height: 400vh;
           overflow: auto;
           overflow-x: hidden;
+          margin-top: 0vh;
         }
 
         .parallax-images {
           position: relative;
           height: 100%;
           width: 100vw;
+
           transform-style: preserve-3d;
         }
 
@@ -168,6 +207,13 @@ const App = () => {
           height: auto;
           width: 100%;
           max-width: 100%;
+          margin-top: 25vh;
+        }
+
+        @media only screen and (max-width: 1200px) {
+          .parallax-images img {
+            margin-top: 30vh;
+          }
         }
 
         /* Image-specific styles */

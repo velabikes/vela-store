@@ -28,7 +28,7 @@ const Batteryrender = () => {
           display: flex;
           width: 100vw;
           height: 100vh;
-          background-color: #ede6de;
+          background-color: #0e0e0e;
         }
 
         .Batteryrender-text-container {
@@ -36,18 +36,18 @@ const Batteryrender = () => {
           text-align: left;
           width: 32vw;
           font-weight: 500;
-          color: ${offBlack};
+          color: ${offWhite};
           margin-top: 10%;
           margin-left: 10vw;
         }
 
         .Batteryrender-image {
           margin-top: 3vw;
-          margin-bottom: 3vw;
+          margin-bottom: 0vw;
           margin-left: 10vw;
           width: 60vw;
           height: auto;
-          background-color: #ede6de;
+          background-color: #0e0e0e;
           object-fit: contain;
         }
 

@@ -19,13 +19,15 @@ import Batterymob from "/components/velax/Batterymob";
 import Colors from "/components/velax/Colors";
 import Fork from "/components/velax/Fork";
 import Boost from "/components/velax/Boost";
-import Explode from "../components/velax/Explode";
+import Explode from "../components/velax/Specs";
 import Uphill from "../components/velax/Uphill";
 import Forkrender from "../components/velax/Forkrender";
 import App from "../components/velax/App";
 import Range from "../components/velax/Range";
 import Batteryrender from "../components/velax/Batteryrender";
 import Motorbrake from "../components/velax/Motorbrake";
+import Specs from "../components/velax/Specs";
+import Explosion from "../components/velax/Explosion";
 
 import {
   darkGray,
@@ -35,6 +37,7 @@ import {
   velaRed,
   offWhite,
 } from "../style/colors";
+import Appmob from "../components/velax/Appmob";
 
 const VelaX = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -156,9 +159,7 @@ const VelaX = () => {
       ) : (
         <Battery className="Battery" />
       )}
-
       <Range />
-
       <Batteryrender />
 
       <div className="image-2" ref={image2Ref}>
@@ -174,18 +175,23 @@ const VelaX = () => {
       <Fork />
 
       <Forkrender />
-
       <div className="apptittle">
         <p>App</p>
       </div>
 
       <div className="app-container">
         <div className="app">
-          <App />
+          {isMobile ? (
+            <Appmob className="Appmob" />
+          ) : (
+            <App className="Appdkp" />
+          )}
         </div>
       </div>
 
-      <Explode className="explode" />
+      <Explosion className="explosion" />
+
+      <Specs className="specs" />
 
       <style jsx>{`
         .VelaX {
@@ -202,14 +208,16 @@ const VelaX = () => {
           overflow: hidden;
         }
 
+        .explosion {
+          position: relative;
+        }
+
         .app {
           position: relative;
           z-index: 3;
         }
         .explode {
           z-index: 99;
-         
-        
         }
         .topcta {
           position: fixed;
@@ -218,7 +226,7 @@ const VelaX = () => {
           z-index: 999;
         }
 
-        .apptittle{
+        .apptittle {
           position: relative;
           background-color: #ebbd99;
           font-size: 5vw;
@@ -227,7 +235,7 @@ const VelaX = () => {
           padding-left: 0vw;
           font-weight: 500;
           text-align: center;
-          color: ${offWhite}
+          color: white;
           width: 100vw;
           height: 100vh;
           z-index: 1;
@@ -237,8 +245,6 @@ const VelaX = () => {
           height: 1vh;
           z-index: -2;
         }
-
-        
 
         .button {
           width: 9em;

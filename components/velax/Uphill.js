@@ -30,7 +30,7 @@ const Uphill = () => {
 
         .Uphill-image {
           object-fit: cover;
-          width: 100%;
+          width: 100vw;
           height: auto;
         }
 

@@ -1,13 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import VisibilitySensor from "react-visibility-sensor";
 import { offBlack } from "../../style/colors";
 
 const Forkrender = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [playVideo, setPlayVideo] = useState(false);
 
   const onVisibilityChange = (visible) => {
     setIsVisible(visible);
   };
+
+  useEffect(() => {
+    let timeout;
+    if (isVisible) {
+      timeout = setTimeout(() => {
+        setPlayVideo(true);
+      }, 1500); // 3-second delay
+    }
+    return () => clearTimeout(timeout);
+  }, [isVisible]);
 
   return (
     <div className="Forkrender">
@@ -17,8 +28,9 @@ const Forkrender = () => {
         playsInline
         preload="auto"
         className="Forkrender-video"
+        poster="/velax/Forkrender-poster.jpg" // Add the poster image URL here
       >
-        <source src="/velax/Forkrender.mp4" type="video/mp4" />
+        {playVideo && <source src="/velax/Forkrender.mp4" type="video/mp4" />}
       </video>
 
       <VisibilitySensor onChange={onVisibilityChange} partialVisibility>

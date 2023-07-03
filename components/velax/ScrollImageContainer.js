@@ -41,7 +41,7 @@ const ScrollImageContainer = () => {
         scrollTrigger: {
           trigger: scrollContainerElement,
           start: "top 0",
-          end: "15000vh  0 ",
+          end: getScrollTriggerEnd(),
           pin: true,
           scrub: 0.1,
           pinSpacing: true,
@@ -108,6 +108,25 @@ const ScrollImageContainer = () => {
       cancelAnimationFrame(renderFrame);
     };
   }, []);
+
+  const getScrollTriggerEnd = () => {
+    const screenWidth = window.innerWidth;
+    let scrollTriggerEnd;
+
+    if (screenWidth < 1000) {
+      scrollTriggerEnd = "11000vh 0";
+    } else if (screenWidth < 1200) {
+      scrollTriggerEnd = "12000vh 0";
+    } else if (screenWidth < 1600) {
+      scrollTriggerEnd = "13000vh 0";
+    } else if (screenWidth < 1800) {
+      scrollTriggerEnd = "14000vh 0";
+    } else {
+      scrollTriggerEnd = "18000vh 0";
+    }
+
+    return scrollTriggerEnd;
+  };
 
   return (
     <div className="scroll-image-container" ref={containerRef}>

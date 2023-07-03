@@ -1,65 +1,154 @@
-import React from "react";
-import { offBlack, offWhite } from "../../style/colors";
+import React, { useState } from "react";
+import {
+  lightGreen,
+  velaBlue,
+  velaGreen,
+  offWhite,
+  offBlack,
+  midGray,
+  lightGray,
+  darkGray,
+} from "../../style/colors";
 
 const Range = () => {
+  const [imagemVisivel, setImagemVisivel] = useState("/velax/sp.png");
+
+  const imagens = [
+    "/velax/sp.png",
+    "/velax/rj.png",
+    "/velax/bh.png",
+    "/velax/bsb.png",
+    "/velax/gyn.png",
+    "/velax/cwb.png",
+    "/velax/cpq.png",
+    "/velax/ssa.png",
+    "/velax/poa.png",
+    "/velax/fln.png",
+  ];
+
+  const exibirImagem = (index) => {
+    const fadeElements = document.getElementsByClassName("fade");
+    for (let i = 0; i < fadeElements.length; i++) {
+      fadeElements[i].classList.remove("active");
+    }
+    fadeElements[index].classList.add("active");
+    setImagemVisivel(imagens[index]);
+  };
+
+  const obterTextoBotao = (imagem) => {
+    const nomeImagem = imagem.substring(
+      imagem.lastIndexOf("/") + 1,
+      imagem.lastIndexOf(".")
+    );
+    return nomeImagem.toUpperCase();
+  };
+
   return (
-    <div className="Range">
-      <img
-        className="Range-image"
-        src="/velax/range.jpg"
-        alt="Vela x - Lights Specs"
-      />
-      <div className="Range-text-container">
-        <p className="Range-text">
-          <span className="Range-text-small">Autonomia</span> <br />
-          <br />
-          <span className="Range-text-large">20 à 40km</span>
-        </p>
-        <p className="Range-text-details">
-          Suficiente pra ir longe num trajeto diário e voltar com segurança
-        </p>
+    <div className="container">
+      <div className="buttons-container">
+        {imagens.map((imagem, index) => (
+          <button
+            key={index}
+            onClick={() => exibirImagem(index)}
+            className={imagemVisivel === imagem ? "selecionado" : ""}
+            style={{
+              zIndex: 2,
+              position: "absolute",
+              left: `${(index / imagens.length) * 100}%`,
+            }}
+          >
+            {obterTextoBotao(imagem)}
+          </button>
+        ))}
+      </div>
+      <div className="content-container">
+        <div className="image-container">
+          {imagens.map((imagem, index) => (
+            <img
+              key={index}
+              src={imagem}
+              alt="Imagem"
+              className={`fade ${imagemVisivel === imagem ? "active" : ""}`}
+            />
+          ))}
+        </div>
+        <div className="text-container">
+          <h2>Título do Texto</h2>
+          <p>Este é um exemplo de texto que será exibido ao lado da imagem.</p>
+        </div>
       </div>
 
       <style jsx>{`
-        .Range {
-          display: flex;
-          width: 100vw;
-          height: 100vh;
-          background-color: #ede6de;
-        }
-
-        .Range-image {
-          margin-top: 3vw;
-          margin-bottom: 3vw;
-          width: 60%;
-          height: auto;
-          background-color: #ede6de;
-          object-fit: contain;
-        }
-
-        .Range-text-container {
+        .container {
           position: relative;
-          text-align: left;
-          width: 25vw;
-          font-weight: 500;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          height: 80vh;
+          margin-top: 5vh;
+          margin-left: 5vw;
+          margin-bottom: 7vh;
+        }
+
+        .buttons-container {
+          position: absolute;
+          display: flex;
+          margin-right: 30vw;
+          width: 45vw;
+          top: 75vh;
+        }
+
+        button {
+          padding: 0.6vw;
+          margin: 0 0.1vw;
+          background-color: ${lightGray};
+          border: none;
+          border-radius: 5px;
+          color: ${darkGray};
+          font-size: 1vw;
+          font-family: filson-pro;
+          cursor: pointer;
+        }
+
+        button.selecionado {
+          background-color: ${lightGreen};
           color: ${offBlack};
-          margin-top: 10%;
-          margin-left: 0vw;
         }
 
-        .Range-text-small {
-          font-size: 2vw;
-          margin-bottom: 10em;
+        .content-container {
+          position: relative;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          width: 100%;
+          height: 100%;
         }
 
-        .Range-text-large {
-          font-size: 4vw;
-          font-weight: 800;
+        .image-container {
+          margin-top: 3vh;
+          margin-right: 0;
+          maring-bottom: 3vh;
+          width: 100%;
+          height: 100%;
+          position: relative;
         }
 
-        .Range-text-details {
-          font-size: 1.5vw;
-          font-weight: 400;
+        img {
+          object-fit: cover;
+          height: 100%;
+          position: absolute;
+          opacity: 0;
+          transition: opacity 0.5s ease-in-out;
+        }
+
+        img.active {
+          opacity: 1;
+        }
+
+        .text-container {
+          margin-left: 4vw;
+          margin-right: 4vw;
+          width: 30vw;
         }
       `}</style>
     </div>
