@@ -73,11 +73,10 @@ const Range = () => {
           ))}
         </div>
         <div className="text-container">
-          <h1>Essa vai longe.</h1>
-          <p>
-            Rode até 40km com uma bateria de lítio de apenas 2kg da Vela X você
-            tem autonomia para atravessar a cidade de fora a fora com uma
-            recarga.
+          <p className="title">Vai longe.</p>
+          <p className="details">
+            Pedale até 40km com uma carga da bateria de lítio de apenas 2kg da
+            Vela X você tem autonomia para atravessar a cidade de fora a fora.
           </p>
         </div>
       </div>
@@ -92,6 +91,16 @@ const Range = () => {
           margin-top: 5vh;
           margin-left: 5vw;
           margin-bottom: 7vh;
+        }
+        .title {
+          font-size: 2.5vw;
+          font-weight: 800;
+        }
+
+        .details {
+          font-size: 1.35vw;
+          margin-top: -1vw;
+          font-weight: 400;
         }
 
         .buttons-container {

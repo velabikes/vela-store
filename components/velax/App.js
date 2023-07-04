@@ -151,13 +151,13 @@ const App = () => {
 
         @media only screen and (min-width: 1100px) {
           .app-container {
-            margin-bottom: -180vh;
+            margin-bottom: -200vh;
           }
         }
 
         @media only screen and (min-width: 1300px) {
           .app-container {
-            margin-bottom: -140vh;
+            margin-bottom: -150vh;
           }
         }
         @media only screen and (min-width: 1500px) {

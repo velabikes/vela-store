@@ -117,6 +117,8 @@ const ScrollImageContainer = () => {
       scrollTriggerEnd = "11000vh 0";
     } else if (screenWidth < 1200) {
       scrollTriggerEnd = "12000vh 0";
+    } else if (screenWidth < 1400) {
+      scrollTriggerEnd = "13000vh 0";
     } else if (screenWidth < 1600) {
       scrollTriggerEnd = "13000vh 0";
     } else if (screenWidth < 1800) {

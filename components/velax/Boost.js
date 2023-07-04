@@ -49,10 +49,15 @@ const Boost = () => {
 
       <VisibilitySensor onChange={onVisibilityChange} partialVisibility>
         <div className={`Boost-text-container ${isVisible ? "fade-in" : ""}`}>
-          <p className="Boost-text-tittle">Boost</p>
-          <p className="Boost-text">
-            Hidráulico com regulagem por pressão de ar: responsiva e apenas
-            1.730g de peso.
+          <p className="Boost-text-tittle">BOOST</p>
+          <p className="Boost-subtitle">
+            <p>Velocidade máxima e até 550W de potência com um toque.</p>{" "}
+          </p>
+          <p className="text-details">
+            {" "}
+            Além essa fnução, o botão também age como um acelerador que vai até
+            6km/h sem precisar pedalar. Essa funcionalidade é conhecida como
+            walk-assim ou start-assist.
           </p>
         </div>
       </VisibilitySensor>
@@ -61,91 +66,51 @@ const Boost = () => {
         .Boost {
           position: relative;
           height: 100vh;
-          margin-bottom: 0vw;
-          margin-top: -2vw;
         }
 
         .Boost-video {
           object-fit: cover;
           margin-top: 0vh;
           margin-bottom: 0vw;
-          width: 100%;
+          width: 100vw;
           height: 100vh;
         }
 
         .Boost-text-container {
           position: absolute;
-          width: 30vw;
-          bottom: 10vh;
-          left: 78vw;
-          transform: translate(-50%, -50%);
+          top: 45vh;
+          width: 35vw;
+          left: 60vw;
           text-align: left;
           z-index: 1;
           opacity: 0;
           transition: opacity 0.5s ease;
-          transition-delay: 3s; /* Add a 5-second delay */
+          transition-delay: 4s; /* Add a 5-second delay */
         }
 
         .Boost-text-container.fade-in {
           opacity: 1;
         }
 
-        .Boost-text {
-          font-size: 2vw;
-          font-weight: 600;
+        .Boost-subtitle {
+          font-size: 2.2vw;
+          font-weight: 700;
           color: ${offBlack};
-          top: 70%;
-          margin: 0;
+          margin-top: 3vh;
         }
 
         .Boost-text-tittle {
-          font-size: 5vw;
+          font-size: 1.6vw;
           font-weight: 800;
           color: ${offBlack};
-          top: 90%;
+
           margin-bottom: -1vw;
         }
 
-        @media only screen and (max-width: 868px) {
-          .Boost-image {
-            object-fit: cover;
-            margin-right: 300px;
-            width: auto;
-            height: 90vh;
-          }
-
-          .Boost-text-container {
-            position: absolute;
-            width: 40vw;
-            top: 80%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: left;
-            z-index: 1;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-            transition-delay: 0.5s;
-          }
-
-          .Boost-text-container.fade-in {
-            opacity: 1;
-          }
-
-          .Boost-text-small,
-          .Boost-text-medium {
-            display: inline-block;
-            font-weight: 300;
-            color: ${offBlack};
-          }
-
-          .Boost-text-details {
-            font-size: 5vw;
-            width: 60vw;
-            font-weight: 300;
-            color: ${offBlack};
-            margin-left: 20vw;
-            margin-top: -15vw;
-          }
+        .text-details {
+          font-size: 1.3vw;
+          font-weight: 200;
+          color: ${offBlack};
         }
       `}</style>
     </div>

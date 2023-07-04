@@ -44,17 +44,22 @@ const Boostmob = () => {
         className="Boostmob-video"
         poster="/velax/boost-poster.jpg" // Add the poster image URL here
       >
-        {playVideo && <source src="/velax/boost.mp4" type="video/mp4" />}
+        {playVideo && <source src="/velax/boostmob.mp4" type="video/mp4" />}
       </video>
 
       <VisibilitySensor onChange={onVisibilityChange} partialVisibility>
         <div
           className={`Boostmob-text-container ${isVisible ? "fade-in" : ""}`}
         >
-          <p className="Boostmob-text-tittle">Boostmob</p>
-          <p className="Boostmob-text">
-            Hidráulico com regulagem por pressão de ar: responsiva e apenas
-            1.730g de peso.
+          <p className="Boostmob-text-tittle">BOOST</p>
+          <p className="Boostmob-subtitle">
+            <p>Velocidade máxima e até 550W de potência com um toque.</p>{" "}
+          </p>
+          <p className="text-details">
+            {" "}
+            Além da função de boost de potêcnia o botão também age como um
+            acelerador que vai até 6km/h sem precisar pedalar. Essa
+            funcionalidade é conhecida como walk-assim ou start-assist.
           </p>
         </div>
       </VisibilitySensor>
@@ -62,92 +67,56 @@ const Boostmob = () => {
       <style jsx>{`
         .Boostmob {
           position: relative;
+          display: cover;
           height: 100vh;
-          margin-bottom: 0vw;
-          margin-top: -2vw;
+          width: 100vw;
         }
 
         .Boostmob-video {
           object-fit: cover;
-          margin-top: 0vh;
-          margin-bottom: 0vw;
-          width: 100%;
+          width: 100vw;
           height: 100vh;
         }
 
         .Boostmob-text-container {
           position: absolute;
-          width: 30vw;
-          bottom: 10vh;
-          left: 78vw;
-          transform: translate(-50%, -50%);
+          width: 80vw;
+          top: 65vh;
+          margin-left: 10vw;
           text-align: left;
           z-index: 1;
           opacity: 0;
           transition: opacity 0.5s ease;
-          transition-delay: 3s; /* Add a 5-second delay */
+          transition-delay: 5s; /* Add a 5-second delay */
         }
 
         .Boostmob-text-container.fade-in {
           opacity: 1;
         }
 
-        .Boostmob-text {
-          font-size: 2vw;
-          font-weight: 600;
+        .Boostmob-subtitle {
+          font-size: 5vw;
+          font-weight: 700;
           color: ${offBlack};
-          top: 70%;
-          margin: 0;
+          margin-top: 3vh;
         }
 
         .Boostmob-text-tittle {
-          font-size: 5vw;
+          font-size: 3.5vw;
           font-weight: 800;
           color: ${offBlack};
-          top: 90%;
+       
+
           margin-bottom: -1vw;
         }
 
-        @media only screen and (max-width: 868px) {
-          .Boostmob-image {
-            object-fit: cover;
-            margin-right: 300px;
-            width: auto;
-            height: 90vh;
-          }
+        .text-details {
+          font-size: 3vw;
+          font-weight: 200;
+          color: ${offBlack};
+        }
 
-          .Boostmob-text-container {
-            position: absolute;
-            width: 40vw;
-            top: 80%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: left;
-            z-index: 1;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-            transition-delay: 0.5s;
-          }
-
-          .Boostmob-text-container.fade-in {
-            opacity: 1;
-          }
-
-          .Boostmob-text-small,
-          .Boostmob-text-medium {
-            display: inline-block;
-            font-weight: 300;
-            color: ${offBlack};
-          }
-
-          .Boostmob-text-details {
-            font-size: 5vw;
-            width: 60vw;
-            font-weight: 300;
-            color: ${offBlack};
-            margin-left: 20vw;
-            margin-top: -15vw;
-          }
+       
         }
       `}</style>
     </div>

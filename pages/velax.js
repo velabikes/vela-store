@@ -44,6 +44,7 @@ import {
 } from "../style/colors";
 import Appmob from "../components/velax/Appmob";
 import AppTitle from "../components/velax/AppTitle";
+import AppTitlemob from "../components/velax/AppTitlemob";
 
 const VelaX = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -155,14 +156,12 @@ const VelaX = () => {
       )}
 
       {isMobile ? (
-        <Boostmob className="bosstmob" />
+        <Boostmob className="boostmob" />
       ) : (
         <Boost className="boost" />
       )}
 
       <Uphill />
-
-      <Motorbrake />
 
       {isMobile ? (
         <Batterymob className="Batterymob" />
@@ -195,7 +194,11 @@ const VelaX = () => {
 
       <Forkrender />
 
-      <AppTitle />
+      {isMobile ? (
+        <AppTitlemob className="apptitlemob" />
+      ) : (
+        <AppTitle className="apptitle" />
+      )}
 
       <div className="app-container">
         <div className="app">

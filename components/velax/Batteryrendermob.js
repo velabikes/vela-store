@@ -56,6 +56,7 @@ const Batteryrendermob = () => {
 
         .Batteryrender-text-small {
           font-size: 4vw;
+          padding-bottom: 2vh;
         }
 
         .Batteryrender-text-large {

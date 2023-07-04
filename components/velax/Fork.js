@@ -44,8 +44,8 @@ const Fork = () => {
       </video>
 
       <div className="Fork-text-container">
-        <p className="Fork-text-tittle">Robusta</p>
-        <p className="Fork-text">Uma urbana pra qualquer rota.</p>
+        <p className="Fork-text-tittle">Urbana</p>
+        <p className="Fork-text">Preparada pra encarar qualquer rota.</p>
       </div>
 
       <style jsx>{`
