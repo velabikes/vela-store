@@ -43,6 +43,7 @@ import {
   offWhite,
 } from "../style/colors";
 import Appmob from "../components/velax/Appmob";
+import AppTitle from "../components/velax/AppTitle";
 
 const VelaX = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -193,9 +194,8 @@ const VelaX = () => {
       {isMobile ? <Forkmob className="forkmob" /> : <Fork className="fork" />}
 
       <Forkrender />
-      <div className="apptittle">
-        <p>App</p>
-      </div>
+
+      <AppTitle />
 
       <div className="app-container">
         <div className="app">
@@ -251,20 +251,41 @@ const VelaX = () => {
           z-index: 999;
         }
 
-        .apptittle {
+        .apptitle {
           position: relative;
+          display: cover;
           background-color: #ebbd99;
-          font-size: 5vw;
           margin-top: 0vw;
-          padding-top: 40vh;
+          padding-top: 25vh;
           padding-left: 0vw;
-          font-weight: 500;
           text-align: center;
+
           color: white;
           width: 100vw;
-          height: 80vh;
+          height: 100vh;
           z-index: 1;
         }
+
+        .apptitle-text-container {
+          width: 50vw;
+          margin-left: 25vw;
+        }
+        .title {
+          font-size: 3vh;
+          font-weight: 500;
+          margin-bottom: -0.5vh;
+        }
+
+        .call {
+          font-size: 6vh;
+          font-weight: 500;
+        }
+
+        .details {
+          font-size: 3vh;
+          font-weight: 200;
+        }
+
         .scroll-preload {
           position: absolute;
           height: 1vh;

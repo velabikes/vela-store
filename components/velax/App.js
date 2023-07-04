@@ -140,46 +140,46 @@ const App = () => {
           width: 100vw;
           background-color: #ebbd99;
           overflow: hidden;
-          margin-bottom: -190vh;
+          margin-bottom: -180vh;
         }
 
         @media only screen and (min-width: 880px) {
           .app-container {
-            margin-bottom: -250vh;
+            margin-bottom: -240vh;
           }
         }
 
         @media only screen and (min-width: 1100px) {
           .app-container {
-            margin-bottom: -220vh;
+            margin-bottom: -180vh;
           }
         }
 
         @media only screen and (min-width: 1300px) {
           .app-container {
-            margin-bottom: -190vh;
+            margin-bottom: -140vh;
           }
         }
         @media only screen and (min-width: 1500px) {
           .app-container {
-            margin-bottom: -148vh;
+            margin-bottom: -110vh;
           }
         }
         @media only screen and (min-width: 1700px) {
           .app-container {
-            margin-bottom: -115vh;
+            margin-bottom: -90vh;
           }
         }
 
         @media only screen and (min-width: 1900px) {
           .app-container {
-            margin-bottom: -75vh;
+            margin-bottom: -60vh;
           }
         }
 
         @media only screen and (min-width: 2100px) {
           .app-container {
-            margin-bottom: -40vh;
+            margin-bottom: -35vh;
           }
         }
 

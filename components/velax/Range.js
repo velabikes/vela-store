@@ -73,9 +73,9 @@ const Range = () => {
           ))}
         </div>
         <div className="text-container">
-          <h2>Até 40km.</h2>
+          <h1>Essa vai longe.</h1>
           <p>
-            Com a capacidade da bateria de lítio de apenas 2kg da Vela X você
+            Rode até 40km com uma bateria de lítio de apenas 2kg da Vela X você
             tem autonomia para atravessar a cidade de fora a fora com uma
             recarga.
           </p>
