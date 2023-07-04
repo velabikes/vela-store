@@ -24,10 +24,9 @@ const AppTitlemob = () => {
           padding-top: 25vh;
           padding-left: 0vw;
           text-align: center;
-
           color: white;
           width: 100vw;
-          height: 100vh;
+          height: 80vh;
           z-index: 1;
         }
 
