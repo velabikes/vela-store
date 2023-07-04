@@ -24,6 +24,7 @@ import Boost from "/components/velax/Boost";
 import Boostmob from "../components/velax/Boostmob";
 import Explode from "../components/velax/Specs";
 import Uphill from "../components/velax/Uphill";
+import Uphillmob from "../components/velax/Uphillmob";
 import Forkrender from "../components/velax/Forkrender";
 import App from "../components/velax/App";
 import Range from "../components/velax/Range";
@@ -161,7 +162,11 @@ const VelaX = () => {
         <Boost className="boost" />
       )}
 
-      <Uphill />
+      {isMobile ? (
+        <Uphillmob className="uphillmob" />
+      ) : (
+        <Uphill className="uphill" />
+      )}
 
       {isMobile ? (
         <Batterymob className="Batterymob" />

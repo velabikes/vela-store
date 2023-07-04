@@ -94,7 +94,6 @@ const Rangemob = () => {
           height: 95vh;
           margin-top: 0vh;
           margin-left: 0vh;
-          margin-bottom: 7vh;
         }
 
         .buttons-container {
@@ -155,7 +154,7 @@ const Rangemob = () => {
 
         .text-container {
           margin-left: 10vw;
-          margin-top: 12vh;
+          margin-top: 8vh;
           margin-right: 4vw;
           width: 80vw;
         }
