@@ -9,9 +9,9 @@ const AppTitlemob = () => {
         <p className="call">Um universo em expansão sem limites.</p>
 
         <p className="details">
-          Monitore, controle e mantenha o funcionamento da sua Vela X sempre e
+          Monitore, controle e mantenha o funcionamento da sua Vela X sempre em
           dia com as atualizações remotas. Novas funcionalidades e melhorias de
-          forma contínua e fácil.
+          forma contínua.
         </p>
       </div>
 
