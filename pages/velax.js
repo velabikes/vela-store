@@ -28,6 +28,7 @@ import Batteryrender from "../components/velax/Batteryrender";
 import Motorbrake from "../components/velax/Motorbrake";
 import Specs from "../components/velax/Specs";
 import Explosion from "../components/velax/Explosion";
+import Explosionmob from "../components/velax/Explosionmob";
 
 import {
   darkGray,
@@ -189,7 +190,11 @@ const VelaX = () => {
         </div>
       </div>
 
-      <Explosion className="explosion" />
+      {isMobile ? (
+        <Explosionmob className="exposionmob" />
+      ) : (
+        <Explosion className="explosion" />
+      )}
 
       <Specs className="specs" />
 
@@ -200,6 +205,9 @@ const VelaX = () => {
           height: auto;
           overflow: hidden;
           background-color: #ede6de;
+        }
+        .scroll-image {
+          magin-top: 5vh;
         }
 
         .app-container {
@@ -237,7 +245,7 @@ const VelaX = () => {
           text-align: center;
           color: white;
           width: 100vw;
-          height: 100vh;
+          height: 80vh;
           z-index: 1;
         }
         .scroll-preload {

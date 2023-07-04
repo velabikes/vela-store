@@ -12,7 +12,7 @@ const ScrollImageContainer = () => {
   });
 
   const [currentImage, setCurrentImage] = useState(0);
-  const imageCount = 885; // Replace this with the number of images in your sequence
+  const imageCount = 553; // Replace this with the number of images in your sequence
 
   const lastFrameTimeRef = useRef(0);
   const previousImageRef = useRef(null);
@@ -65,7 +65,7 @@ const ScrollImageContainer = () => {
         });
 
         // Set the image source
-        image.src = `/velax/image-scroll-1/VX-Scroll-${i}.webp`;
+        image.src = `/velax/image-scroll-1/introrender-${i}.webp`;
 
         imagePromises.push(promise);
       }
@@ -132,12 +132,13 @@ const ScrollImageContainer = () => {
     <div className="scroll-image-container" ref={containerRef}>
       <img
         ref={scrollContainerRef}
-        src={`/velax/image-scroll-1/VX-Scroll-${currentImage}.webp`}
+        src={`/velax/image-scroll-1/introrender-${currentImage}.webp`}
         alt="Scrolling image sequence"
         style={{
           objectFit: "cover",
           height: "100vh",
           width: "100vw",
+          paddingTop: "5vh",
         }} // adjust the height and width here
       />
     </div>
