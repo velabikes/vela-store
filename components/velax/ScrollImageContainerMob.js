@@ -12,14 +12,17 @@ const ScrollImageContainerMob = () => {
   });
 
   const [currentImage, setCurrentImage] = useState(0);
-  const imageCount = 453; // Replace this with the number of images in your sequence
+  const imageCount = 340; // Replace this with the number of images in your sequence
 
   useEffect(() => {
     const handleScroll = () => {
       if (inView) {
         const scrollPercentage =
           window.scrollY / (document.body.scrollHeight - window.innerHeight);
-        const currentImageIndex = Math.floor(scrollPercentage * imageCount);
+        const scrollSpeed = 2.5; // Ajuste esse valor para aumentar a velocidade de rolagem
+        const currentImageIndex = Math.floor(
+          scrollPercentage * imageCount * scrollSpeed
+        );
         setCurrentImage(currentImageIndex);
       }
     };
@@ -38,13 +41,12 @@ const ScrollImageContainerMob = () => {
         scrollTrigger: {
           trigger: scrollContainerElement,
           start: "top 0",
-          end: "20000vh top",
+          end: "4500vh top",
           pin: true,
-          scrub: 30, // Adjust this value to increase/decrease the transition sensitivity
+          scrub: 0.01, // Adjust this value to increase/decrease the transition sensitivity
           pinSpacing: true,
           markers: false,
         },
-        duration: 5, // Adjust this value to increase/decrease the transition speed
       });
     }
   }, []);

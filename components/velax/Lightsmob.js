@@ -51,7 +51,7 @@ const Lightsmob = () => {
           object-fit: cover;
           margin-right: 300px;
           width: 100vw;
-          height: 70vh;
+          height: 100vh;
         }
 
         .lights-text-container {
