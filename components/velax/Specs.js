@@ -12,6 +12,7 @@ const Specs = ({ maskSize }) => {
                 <h2>Mecânica</h2>
               </th>
             </tr>
+
             <tr className="tr-specs">
               <td className="td-specs">Quadro</td>
               <td className="td-specs">
@@ -36,7 +37,7 @@ const Specs = ({ maskSize }) => {
             <tr className="tr-specs">
               <td className="td-specs">Tamanhos</td>
               <td className="td-specs">
-                M: 1,64 à 1,75m | G: 1,75 à 1,85 | GGC: 1,85 à 2,10
+                M: 1,64 à 1,75m | G: 1,75 à 1,85m | GGC: 1,85 à 2,10m
               </td>
             </tr>
             <tr className="tr-specs">
@@ -106,8 +107,9 @@ const Specs = ({ maskSize }) => {
             <tr className="tr-specs">
               <td className="td-specs">Autonomia</td>
               <td className="td-specs">
-                De 20 até 40km que varia de acordo com o terreno, modos de
-                condução e
+                De 20 até 40km que varia de acordo com diversos fatores,
+                incluindo modos de condução e uso do boost. A média global de
+                autonomia dos nossos clientes é de 30km com uma recarga.
               </td>
             </tr>
             <tr className="tr-specs">
@@ -181,11 +183,13 @@ const Specs = ({ maskSize }) => {
         .Specsimage {
           z-index: 99;
         }
-
+    
+        }
         .table-specs {
           border-collapse: collapse;
           margin: 2em 0;
-          font-size: 1em;
+          font-size: 0.8em;
+          font-weight: 200;
           width: 100%;
         }
 
@@ -208,7 +212,8 @@ const Specs = ({ maskSize }) => {
 
         .specs-content h2,
         .specs-tech-content h2 {
-          margin: 0 1em;
+          margin: 2 0em;
+          font-size: 2em;
         }
       `}</style>
     </div>

@@ -38,12 +38,13 @@ const ScrollImageContainerMob = () => {
         scrollTrigger: {
           trigger: scrollContainerElement,
           start: "top 0",
-          end: "20000vh  0 ",
+          end: "20000vh top",
           pin: true,
-          scrub: 0.1,
+          scrub: 30, // Adjust this value to increase/decrease the transition sensitivity
           pinSpacing: true,
           markers: false,
         },
+        duration: 5, // Adjust this value to increase/decrease the transition speed
       });
     }
   }, []);

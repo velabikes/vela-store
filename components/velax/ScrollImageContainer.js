@@ -137,7 +137,7 @@ const ScrollImageContainer = () => {
         style={{
           objectFit: "cover",
           height: "100vh",
-          width: "100vw",
+          width: "100%",
           paddingTop: "5vh",
         }} // adjust the height and width here
       />

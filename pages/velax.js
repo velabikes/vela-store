@@ -16,14 +16,17 @@ import Lightspecs from "/components/velax/Lightspecs";
 import Comparelights from "/components/velax/Comparelights";
 import Battery from "/components/velax/Battery";
 import Batterymob from "/components/velax/Batterymob";
+import Batteryrendermob from "../components/velax/Batteryrendermob";
 import Colors from "/components/velax/Colors";
 import Fork from "/components/velax/Fork";
 import Boost from "/components/velax/Boost";
+import Boostmob from "../components/velax/Boostmob";
 import Explode from "../components/velax/Specs";
 import Uphill from "../components/velax/Uphill";
 import Forkrender from "../components/velax/Forkrender";
 import App from "../components/velax/App";
 import Range from "../components/velax/Range";
+import Rangemob from "../components/velax/Rangemob";
 import Batteryrender from "../components/velax/Batteryrender";
 import Motorbrake from "../components/velax/Motorbrake";
 import Specs from "../components/velax/Specs";
@@ -149,7 +152,11 @@ const VelaX = () => {
         <Speed className="Speed" />
       )}
 
-      <Boost />
+      {isMobile ? (
+        <Boostmob className="bosstmob" />
+      ) : (
+        <Boost className="boost" />
+      )}
 
       <Uphill />
 
@@ -160,8 +167,17 @@ const VelaX = () => {
       ) : (
         <Battery className="Battery" />
       )}
-      <Range />
-      <Batteryrender />
+      {isMobile ? (
+        <Rangemob className="Rangemob" />
+      ) : (
+        <Range className="Range" />
+      )}
+
+      {isMobile ? (
+        <Batteryrendermob className="Batteryrendermob" />
+      ) : (
+        <Batteryrender className="Batteryrender" />
+      )}
 
       <div className="image-2" ref={image2Ref}>
         <img src="/velax/VX-1.jpg" alt="Image 2" />

@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { useInView } from "react-intersection-observer";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import { offBlack } from "../../style/colors";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -51,6 +52,7 @@ const Explosion = () => {
 
   return (
     <div className="scroll-image-container" ref={containerRef}>
+      <p className="inside">Por dentro da Vela X</p>
       <img
         ref={scrollContainerRef}
         src={`/velax/explosion/explode-${currentImage}.webp`}
@@ -68,6 +70,14 @@ const Explosion = () => {
           padding-bottom: 300vh;
 
           padding-top: 20vh;
+        }
+        .inside {
+          margin-top: 20vh;
+          margin-bottom: 20vh;
+          font-size: 5vh;
+          text-align: center;
+          font-weight: 900;
+          color: ${offBlack};
         }
       `}</style>
     </div>
