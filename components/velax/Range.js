@@ -11,19 +11,19 @@ import {
 } from "../../style/colors";
 
 const Range = () => {
-  const [imagemVisivel, setImagemVisivel] = useState("/velax/sp.png");
+  const [imagemVisivel, setImagemVisivel] = useState("/velax/sp.jpg");
 
   const imagens = [
-    "/velax/sp.png",
-    "/velax/rj.png",
-    "/velax/bh.png",
-    "/velax/bsb.png",
-    "/velax/gyn.png",
-    "/velax/cwb.png",
-    "/velax/cpq.png",
-    "/velax/ssa.png",
-    "/velax/poa.png",
-    "/velax/fln.png",
+    "/velax/sp.jpg",
+    "/velax/rj.jpg",
+    "/velax/bh.jpg",
+    "/velax/bsb.jpg",
+    "/velax/gyn.jpg",
+    "/velax/cwb.jpg",
+    "/velax/cpq.jpg",
+    "/velax/ssa.jpg",
+    "/velax/poa.jpg",
+    "/velax/fln.jpg",
   ];
 
   const exibirImagem = (index) => {
@@ -73,8 +73,12 @@ const Range = () => {
           ))}
         </div>
         <div className="text-container">
-          <h2>Título do Texto</h2>
-          <p>Este é um exemplo de texto que será exibido ao lado da imagem.</p>
+          <h2>Até 40km.</h2>
+          <p>
+            Com a capacidade da bateria de lítio de apenas 2kg da Vela X você
+            tem autonomia para atravessar a cidade de fora a fora com uma
+            recarga.
+          </p>
         </div>
       </div>
 
@@ -101,7 +105,7 @@ const Range = () => {
         button {
           padding: 0.6vw;
           margin: 0 0.1vw;
-          background-color: ${lightGray};
+          background-color: #ebbd99;
           border: none;
           border-radius: 5px;
           color: ${darkGray};

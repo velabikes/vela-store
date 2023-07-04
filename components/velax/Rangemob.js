@@ -11,19 +11,19 @@ import {
 } from "../../style/colors";
 
 const Rangemob = () => {
-  const [imagemVisivel, setImagemVisivel] = useState("/velax/sp.png");
+  const [imagemVisivel, setImagemVisivel] = useState("/velax/sp.jpg");
 
   const imagens = [
-    "/velax/sp.png",
-    "/velax/rj.png",
-    "/velax/bh.png",
-    "/velax/bsb.png",
-    "/velax/gyn.png",
-    "/velax/cwb.png",
-    "/velax/cpq.png",
-    "/velax/ssa.png",
-    "/velax/poa.png",
-    "/velax/fln.png",
+    "/velax/sp.jpg",
+    "/velax/rj.jpg",
+    "/velax/bh.jpg",
+    "/velax/bsb.jpg",
+    "/velax/gyn.jpg",
+    "/velax/cwb.jpg",
+    "/velax/cpq.jpg",
+    "/velax/ssa.jpg",
+    "/velax/poa.jpg",
+    "/velax/fln.jpg",
   ];
 
   const exibirImagem = (index) => {
@@ -43,24 +43,10 @@ const Rangemob = () => {
     return nomeImagem.toUpperCase();
   };
 
+  const larguraBotao = 100 / imagens.length;
+
   return (
     <div className="container">
-      <div className="buttons-container">
-        {imagens.map((imagem, index) => (
-          <button
-            key={index}
-            onClick={() => exibirImagem(index)}
-            className={imagemVisivel === imagem ? "selecionado" : ""}
-            style={{
-              zIndex: 2,
-              position: "absolute",
-              left: `${(index / imagens.length) * 100}%`,
-            }}
-          >
-            {obterTextoBotao(imagem)}
-          </button>
-        ))}
-      </div>
       <div className="content-container">
         <div className="image-container">
           {imagens.map((imagem, index) => (
@@ -72,40 +58,62 @@ const Rangemob = () => {
             />
           ))}
         </div>
-        <div className="text-container">
-          <h2>Título do Texto</h2>
-          <p>Este é um exemplo de texto que será exibido ao lado da imagem.</p>
-        </div>
+      </div>
+
+      <div className="buttons-container">
+        {imagens.map((imagem, index) => (
+          <button
+            key={index}
+            onClick={() => exibirImagem(index)}
+            className={imagemVisivel === imagem ? "selecionado" : ""}
+            style={{
+              zIndex: 2,
+              position: "absolute",
+              left: `${index * larguraBotao}%`,
+              width: `${larguraBotao}%`,
+            }}
+          >
+            {obterTextoBotao(imagem)}
+          </button>
+        ))}
+      </div>
+
+      <div className="text-container">
+        <h2>Até 40km</h2>
+        <p>
+          Com a capacidade da bateria de lítio de apenas 2kg da Vela X você tem
+          autonomia para atravessar a cidade de fora a fora com uma recarga.
+        </p>
       </div>
 
       <style jsx>{`
         .container {
           position: relative;
-          display: flex;
-          flex-direction: roll;
+          flex-direction: collum;
           align-items: center;
-          height: 80vh;
-          margin-top: 5vh;
-          margin-left: 5vw;
+          height: 95vh;
+          margin-top: 0vh;
+          margin-left: 0vh;
           margin-bottom: 7vh;
         }
 
         .buttons-container {
-          position: absolute;
+          justify-content: space-between;
           display: flex;
-          margin-right: 30vw;
-          width: 45vw;
-          top: 75vh;
+          margin-right: 3vw;
+          margin-left: 3vw;
+          width: 94vw;
+          top: 65vh;
         }
 
         button {
           padding: 0.6vw;
           margin: 0 0.1vw;
-          background-color: ${lightGray};
+          background-color: #ebbd99;
           border: none;
-          border-radius: 5px;
+          border-radius: 0px;
           color: ${darkGray};
-          font-size: 1vw;
+          font-size: 2.5vw;
           font-family: filson-pro;
           cursor: pointer;
         }
@@ -121,11 +129,11 @@ const Rangemob = () => {
           flex-direction: row;
           align-items: center;
           width: 100%;
-          height: 100%;
+          height: 70vh;
         }
 
         .image-container {
-          margin-top: 3vh;
+          margin-top: 0vh;
           margin-right: 0;
           maring-bottom: 3vh;
           width: 100%;
@@ -147,8 +155,9 @@ const Rangemob = () => {
 
         .text-container {
           margin-left: 4vw;
+          margin-top: 12vh;
           margin-right: 4vw;
-          width: 30vw;
+          width: 80vw;
         }
       `}</style>
     </div>
