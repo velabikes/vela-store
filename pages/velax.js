@@ -204,6 +204,16 @@ const VelaX = () => {
       </div>
 
       {isMobile ? (
+        <div className="gallerymob">
+          <img src="/velax/gallerymob.webp"></img>
+        </div>
+      ) : (
+        <div className="gallery">
+          <img src="/velax/gallery.webp"></img>
+        </div>
+      )}
+
+      {isMobile ? (
         <Explosionmob className="exposionmob" />
       ) : (
         <Explosion className="explosion" />

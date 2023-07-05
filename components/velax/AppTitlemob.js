@@ -26,7 +26,7 @@ const AppTitlemob = () => {
           text-align: center;
           color: white;
           width: 100vw;
-          height: 80vh;
+          height: 70vh;
           z-index: 1;
         }
 
