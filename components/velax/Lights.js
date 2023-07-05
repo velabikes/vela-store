@@ -45,7 +45,7 @@ const Lights = () => {
 
       <div className="lights-text-container">
         <p className="lights-text-tittle">Muita Luz</p>
-        <p className="lights-text">Pra ver e ser visto.</p>
+        <p className="lights-text">Para ver e ser visto.</p>
       </div>
 
       <style jsx>{`

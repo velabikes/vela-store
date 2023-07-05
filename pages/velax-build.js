@@ -118,7 +118,7 @@ const Vela2 = ({ checkout, checkoutLineItemsAdd, handleCheckoutCreation }) => {
         <meta name="application-name" content="Vela Bikes Store" />
         <meta
           name="description"
-          content="Escolha o modelo da sua Vela 2, os acessórios essenciais para a cidade e aproveite para pedalar smart!"
+          content="Monte a sua Vela X com os acessórios essenciais para a cidade e aproveite para pedalar smart!"
         />
         <meta
           property="og:url"

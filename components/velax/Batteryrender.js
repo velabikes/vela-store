@@ -19,7 +19,7 @@ const Batteryrender = () => {
       </div>
       <img
         className="Batteryrender-image"
-        src="/velax/batteryrender.png"
+        src="/velax/batteryrender.webp"
         alt="Vela x - Lights Specs"
       />
 
