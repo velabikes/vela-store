@@ -11,7 +11,7 @@ const Uphill = () => {
 
   return (
     <div className="Uphill">
-      <img src="/velax/uphill.jpg" alt="Uphill" className="Uphill-image" />
+      <img src="/velax/uphill.webp" alt="Uphill" className="Uphill-image" />
 
       <VisibilitySensor onChange={onVisibilityChange} partialVisibility>
         <div className={`Uphill-text-container ${isVisible ? "fade-in" : ""}`}>
