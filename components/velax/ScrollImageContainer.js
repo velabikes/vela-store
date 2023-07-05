@@ -22,7 +22,7 @@ const ScrollImageContainer = () => {
       if (inView) {
         const scrollPercentage =
           window.scrollY / (document.body.scrollHeight - window.innerHeight);
-        const scrollSpeed = 4.5; // Ajuste esse valor para aumentar a velocidade de rolagem
+        const scrollSpeed = 3.8; // Ajuste esse valor para aumentar a velocidade de rolagem
         const currentImageIndex = Math.floor(
           scrollPercentage * imageCount * scrollSpeed
         );
