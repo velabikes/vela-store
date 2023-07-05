@@ -51,11 +51,11 @@ const Boost = () => {
         <div className={`Boost-text-container ${isVisible ? "fade-in" : ""}`}>
           <p className="Boost-text-tittle">BOOST</p>
           <p className="Boost-subtitle">
-            <p>550W de potência com um toque.</p>{" "}
+            <p>Potência com um toque.</p>{" "}
           </p>
           <p className="text-details">
             {" "}
-            Além essa função, o botão também aciona o motor para partida nos
+            Além desta função, o botão também aciona o motor para partida nos
             modos conhecidos como start-assist e walk-assist.
           </p>
         </div>
@@ -77,10 +77,10 @@ const Boost = () => {
 
         .Boost-text-container {
           position: absolute;
-          top: 45vh;
-          width: 35vw;
+          top: 55vh;
+          width: 30vw;
           left: 60vw;
-          text-align: left;
+          text-align: right;
           z-index: 1;
           opacity: 0;
           transition: opacity 0.5s ease;

@@ -51,15 +51,14 @@ const Forkrender = () => {
         <div
           className={`Forkrender-text-container ${isVisible ? "fade-in" : ""}`}
         >
-          <p className="Forkrender-text-tittle">Amortecedor</p>
+          <p className="Forkrender-text-tittle">PREPARADA</p>
           <p className="Forkrender-subtitle">
-            <p>Hidráulico e Pneumático</p>{" "}
+            <p>Amortecedor hidráulico com suspensão pneumática.</p>{" "}
           </p>
           <p className="text-details">
             {" "}
-            Amortecimento hidráulico com regulagem de pressão pneumática. Leve e
-            responsivo para deixar você mais confiante em trechos que não
-            possuem uma infraestrutura adequada.
+            Leve e responsivo para deixar você confiante em trechos sem
+            infraestrutura adequada.
           </p>
         </div>
       </VisibilitySensor>
@@ -87,7 +86,7 @@ const Forkrender = () => {
           z-index: 1;
           opacity: 0;
           transition: opacity 0.5s ease;
-          transition-delay: 2.5s; /* Add a 5-second delay */
+          transition-delay: 0.5s; /* Add a 5-second delay */
         }
 
         .Forkrender-text-container.fade-in {

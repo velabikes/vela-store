@@ -14,7 +14,7 @@ const Batteryrendermob = () => {
         </p>
         <p className="Batteryrender-text-details">
           Desde 2017 a maior garantia do mercado contra defeito de fabrição.
-          Toda a segurança e confiabilidade que você precisa pra deixar o carro
+          Toda a segurança e confiabilidade que você precisa para deixar o carro
           em casa. <br></br>
           <br></br>Um projeto Vela.
         </p>
