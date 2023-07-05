@@ -24,7 +24,7 @@ const Item = ({
         {isSelected === false && <AddIcon fill={white} />}
         {isSelected === true && <CloseIcon color={white} />}
       </div>
-      <img src={images && images.edges[0].node.src} alt={title} />
+      <img src={images && images.edges[0].node.url} alt={title} />
       <h4>{title}</h4>
       <Price value={variants.edges[0].node.priceV2.amount} />
       <style jsx>{`

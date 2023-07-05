@@ -12,14 +12,14 @@ const ProductTeaser = ({ product }) => (
     >
       <a>
         <ProductImage src={product?.images?.edges[0]?.node.src} />
-        {!product.variants.edges[0].node.availableForSale && (
+        {!product.variants?.edges[0].node.availableForSale && (
           <img src="/images/vendida.png" className="sold" />
         )}
         <h3>{product.title}</h3>
         <ProductPrice
           product={product}
           variant={
-            product.variants.edges.length === 1 && product.variants.edges[0]
+            product.variants?.edges.length === 1 && product.variants.edges[0]
           }
         />
       </a>

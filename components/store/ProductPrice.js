@@ -67,7 +67,7 @@ export default compose(
           },
         }) => amount
       );
-    const comparePrices = product.variants.edges
+    const comparePrices = product.variants?.edges
       .map(
         ({ node: { compareAtPriceV2 } }) =>
           compareAtPriceV2 && compareAtPriceV2.amount
@@ -76,7 +76,7 @@ export default compose(
     const minPrice = Math.min.apply(null, prices);
     const maxPrice = Math.max.apply(null, prices);
     const minCompare =
-      !!comparePrices.length && Math.min.apply(null, comparePrices);
+      !!comparePrices?.length && Math.min.apply(null, comparePrices);
     const selectedPrice = variant && variant.node.priceV2.amount;
     const selectedCompare =
       variant &&

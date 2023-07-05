@@ -20,8 +20,8 @@ const ProductImageGallery = ({ product }) => (
       product.images.edges.map(
         (image, i) =>
           !product.variants.edges.find(
-            (variant) => image.node.src === variant.node.image.src
-          ) && <ProductImage src={image.node.src} key={i} />
+            (variant) => image.node.url === variant.node.image.src
+          ) && <ProductImage src={image.node.url} key={i} />
       )}
     <style jsx>{`
       .ProductImageGallery :global(.ProductImage) {

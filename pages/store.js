@@ -11,7 +11,12 @@ import { midGray, velaRed, white } from "../style/colors";
 import { useState } from "react";
 import Button from "../components/Button";
 
-const Store = ({ collection, isCollectionLoading, router }) => {
+const Store = ({
+  collection,
+  isCollectionLoading,
+  collectionError,
+  router,
+}) => {
   const [filter, setFilter] = useState(null);
   const products = collection?.products?.edges;
   const filteredProducts = products?.filter((i) =>
@@ -111,6 +116,7 @@ export default compose(
     filterUnavailable: false,
   })
 )(Store);
+
 Store.propTypes = {
   collection: PropTypes.object,
   isCollectionLoading: PropTypes.bool,
