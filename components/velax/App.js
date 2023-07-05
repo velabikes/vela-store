@@ -30,103 +30,103 @@ const App = () => {
         <div className="parallax-images">
           <img
             className="trees"
-            src="/velax/app/trees.svg"
+            src="/velax/app/trees.webp"
             style={{ transform: `translateY(${calculateScrollSpeed(0.25)}px)` }}
             alt="Trees"
           />
           <img
             className="turnoff"
-            src="/velax/app/turnoff.svg"
+            src="/velax/app/turnoff.webp"
             style={{ transform: `translateY(${calculateScrollSpeed(0.12)}px)` }}
             alt="Turn Off"
           />
           <img
             className="notifications"
-            src="/velax/app/notifications.svg"
+            src="/velax/app/notifications.webp"
             style={{ transform: `translateY(${calculateScrollSpeed(0.1)}px)` }}
             alt="Notifications"
           />
           <img
             className="nav"
-            src="/velax/app/nav.svg"
+            src="/velax/app/nav.webp"
             style={{ transform: `translateY(${calculateScrollSpeed(0.12)}px)` }}
             alt="Navigation"
           />
           <img
             className="paneltext"
-            src="/velax/app/paneltext.svg"
+            src="/velax/app/paneltext.webp"
             style={{ transform: `translateY(${calculateScrollSpeed(0.3)}px)` }}
             alt="Panel Text"
           />
           <img
             className="orangedetail"
-            src="/velax/app/orangedetail.svg"
+            src="/velax/app/orangedetail.webp"
             style={{ transform: `translateY(${calculateScrollSpeed(0.25)}px)` }}
             alt="Orange Detail"
           />
           <img
             className="gps"
-            src="/velax/app/gps.svg"
+            src="/velax/app/gps.webp"
             style={{ transform: `translateY(${calculateScrollSpeed(0.25)}px)` }}
             alt="GPS"
           />
           <img
             className="mockup"
-            src="/velax/app/mockup.svg"
+            src="/velax/app/mockup.webp"
             style={{ transform: `translateY(${calculateScrollSpeed(0.52)}px)` }}
             alt="Mockup"
           />
           <img
             className="greendetail"
-            src="/velax/app/greendetail.svg"
+            src="/velax/app/greendetail.webp"
             style={{ transform: `translateY(${calculateScrollSpeed(0.35)}px)` }}
             alt="Green Detail"
           />
           <img
             className="modes"
-            src="/velax/app/modes.svg"
+            src="/velax/app/modes.webp"
             style={{ transform: `translateY(${calculateScrollSpeed(0.31)}px)` }}
             alt="Modes"
           />
           <img
             className="bluedetail"
-            src="/velax/app/bluedetail.svg"
+            src="/velax/app/bluedetail.webp"
             style={{ transform: `translateY(${calculateScrollSpeed(0.25)}px)` }}
             alt="Blue Detail"
           />
           <img
             className="settingtext"
-            src="/velax/app/settingtext.svg"
+            src="/velax/app/settingtext.webp"
             style={{ transform: `translateY(${calculateScrollSpeed(0.24)}px)` }}
             alt="Setting Text"
           />
           <img
             className="dashboard"
-            src="/velax/app/dashboard.svg"
+            src="/velax/app/dashboard.webp"
             style={{ transform: `translateY(${calculateScrollSpeed(0.28)}px)` }}
             alt="Dashboard"
           />
           <img
             className="bt"
-            src="/velax/app/bt.svg"
+            src="/velax/app/bt.webp"
             style={{ transform: `translateY(${calculateScrollSpeed(0.32)}px)` }}
             alt="Bluetooth"
           />
           <img
             className="myvela"
-            src="/velax/app/myvela.svg"
+            src="/velax/app/myvela.webp"
             style={{ transform: `translateY(${calculateScrollSpeed(0.24)}px)` }}
             alt="My Vela"
           />
           <img
             className="map"
-            src="/velax/app/map.svg"
+            src="/velax/app/map.webp"
             style={{ transform: `translateY(${calculateScrollSpeed(0.14)}px)` }}
             alt="Map"
           />
           <img
             className="help"
-            src="/velax/app/help.svg"
+            src="/velax/app/help.webp"
             style={{ transform: `translateY(${calculateScrollSpeed(0.32)}px)` }}
             alt="Help"
           />
