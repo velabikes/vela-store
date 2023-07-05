@@ -9,16 +9,13 @@ const Display = ({ model: { frame, size, color, tire } }) => {
   return (
     <div className="Display">
       {selectedModelData.photos && selectedModelData.photos[0] && (
-        <video
-          className="video"
-          autoPlay
-          muted
-          loop
-          playsInline
-          key={selectedModelData.photos[0]}
-        >
-          <source src={selectedModelData.photos[0]} type="video/mp4" />
-        </video>
+        <div className="image-container">
+          <img
+            className="image"
+            src={selectedModelData.photos[0]}
+            alt="Model Image"
+          />
+        </div>
       )}
       <style jsx>{`
         .Display {
@@ -30,7 +27,7 @@ const Display = ({ model: { frame, size, color, tire } }) => {
           flex: 1;
           position: fixed;
           z-index: 5;
-          width: 100%;
+          width: 66vw;
         }
         h1 {
           color: ${darkGray};
@@ -38,9 +35,19 @@ const Display = ({ model: { frame, size, color, tire } }) => {
           text-align: center;
         }
 
-        .video {
+        .image-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
           max-height: 50vh;
           width: 140vw;
+        }
+
+        .image {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
         }
 
         @media only screen and (min-width: 868px) {
@@ -48,10 +55,12 @@ const Display = ({ model: { frame, size, color, tire } }) => {
             position: relative;
             height: 80vh;
           }
-          .video {
-            height: 100%;
-            width: 100%;
+          .image-container {
+            overflow: hidden;
+            margin-top: ;
             max-height: 80vh;
+
+            width: 80vw;
           }
 
           h1 {

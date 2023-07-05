@@ -21,13 +21,13 @@ const AppTitle = () => {
           display: cover;
           background-color: #ebbd99;
           margin-top: 0vw;
-          padding-top: 25vh;
+          padding-top: 30vh;
           padding-left: 0vw;
           text-align: center;
 
           color: #2f2f2f;
           width: 100vw;
-          height: 90vh;
+          height: 100vh;
           z-index: 1;
         }
 

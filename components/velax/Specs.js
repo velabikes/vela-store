@@ -42,7 +42,7 @@ const Specs = ({ maskSize }) => {
             </tr>
             <tr className="tr-specs">
               <td className="td-specs">Peso</td>
-              <td className="td-specs"> Bike: 19-22kg | Bateria: 2,1kg</td>
+              <td className="td-specs"> Bike: 21-23kg | Bateria: 2,1kg</td>
             </tr>
             <tr className="tr-specs">
               <td className="td-specs">Rodas</td>
