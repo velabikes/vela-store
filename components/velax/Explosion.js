@@ -1,82 +1,110 @@
-import React, { useEffect, useState, useRef } from "react";
-import { useInView } from "react-intersection-observer";
-import gsap from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import React, { useState, useEffect } from "react";
+import VisibilitySensor from "react-visibility-sensor";
 import { offBlack } from "../../style/colors";
-
-gsap.registerPlugin(ScrollTrigger);
-
 const Explosion = () => {
-  const scrollContainerRef = useRef(null);
-  const [containerRef, inView] = useInView({
-    triggerOnce: true,
-  });
+  const [isVisible, setIsVisible] = useState(false);
+  const [playVideo, setPlayVideo] = useState(false);
 
-  const [currentImage, setCurrentImage] = useState(0);
-  const imageCount = 147; // Replace this with the number of images in your sequence
+  const onVisibilityChange = (visible) => {
+    setIsVisible(visible);
+  };
 
-  useEffect(() => {
-    const imagesLoaded = Array.from({ length: imageCount }, (_, index) => {
-      const image = new Image();
-      image.src = `/velax/explosion/explode-${index}.webp`;
-      return new Promise((resolve) => {
-        image.onload = resolve;
-      });
-    });
-
-    Promise.all(imagesLoaded).then(() => {
-      console.log("All images pre-loaded");
-    });
-  }, [imageCount]);
+  const resetVideo = () => {
+    setPlayVideo(false);
+  };
 
   useEffect(() => {
-    if (inView) {
-      const scrollContainerElement = scrollContainerRef.current;
-      gsap.to(scrollContainerElement, {
-        scrollTrigger: {
-          trigger: scrollContainerElement,
-          start: "top 5%",
-          end: "300% top",
-          scrub: 0.1,
-          pin: true,
-          pinSpacing: false,
-          onUpdate: (self) => {
-            const progress = self.progress;
-            const currentImageIndex = Math.floor(progress * imageCount);
-            setCurrentImage(currentImageIndex);
-          },
-        },
-      });
+    let timeout;
+    if (isVisible) {
+      timeout = setTimeout(() => {
+        setPlayVideo(true);
+      }, 500); // 3-second delay
     }
-  }, [inView, imageCount]);
+    return () => clearTimeout(timeout);
+  }, [isVisible]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (isVisible && !playVideo) {
+        resetVideo();
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isVisible, playVideo]);
 
   return (
-    <div className="scroll-image-container" ref={containerRef}>
-      <p className="inside">Por dentro da Vela X</p>
-      <img
-        ref={scrollContainerRef}
-        src={`/velax/explosion/explode-${currentImage}.webp`}
-        alt="Scrolling image sequence"
-        style={{
-          objectFit: "cover",
-          height: "100vh",
-          width: "100vw",
-        }}
-      />
+    <div className="Boost">
+      <video
+        autoPlay
+        muted
+        playsInline
+        preload="auto"
+        className="Boost-video"
+        poster="/velax/explosion-poster.webp" // Add the poster image URL here
+      >
+        {playVideo && <source src="/velax/explosion.mp4" type="video/mp4" />}
+      </video>
+
+      <VisibilitySensor onChange={onVisibilityChange} partialVisibility>
+        <div className={`Boost-text-container ${isVisible ? "fade-in" : ""}`}>
+          <p className="Boost-text-tittle"></p>
+          <p className="Boost-subtitle">
+            <p>Por dentro da Vela X</p>{" "}
+          </p>
+          <p className="text-details"> </p>
+        </div>
+      </VisibilitySensor>
 
       <style jsx>{`
-        .scroll-image-container {
+        .Boost {
           position: relative;
-          padding-bottom: 300vh;
-
-          padding-top: 20vh;
+          height: 140vh;
         }
-        .inside {
-          margin-top: 20vh;
-          margin-bottom: 20vh;
-          font-size: 5vh;
-          text-align: center;
-          font-weight: 900;
+
+        .Boost-video {
+          object-fit: cover;
+          margin-top: 40vh;
+          margin-bottom: vw;
+          width: 100vw;
+          height: 100vh;
+        }
+
+        .Boost-text-container {
+          position: absolute;
+          top: 20vh;
+          width: 50vw;
+          left: 35vw;
+          text-align: left;
+          z-index: 1;
+          opacity: 0;
+          transition: opacity 0.2s ease;
+          transition-delay: 0.1s; /* Add a 5-second delay */
+        }
+
+        .Boost-text-container.fade-in {
+          opacity: 1;
+        }
+
+        .Boost-subtitle {
+          font-size: 3vw;
+          font-weight: 700;
+          color: ${offBlack};
+          margin-top: 3vh;
+        }
+
+        .Boost-text-tittle {
+          font-size: 1.6vw;
+          font-weight: 800;
+          color: ${offBlack};
+
+          margin-bottom: -1vw;
+        }
+
+        .text-details {
+          font-size: 1.4vw;
+          font-weight: 300;
           color: ${offBlack};
         }
       `}</style>
