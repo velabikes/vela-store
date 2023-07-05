@@ -1,4 +1,4 @@
-import gql from 'graphql-tag'
+import gql from "graphql-tag";
 
 export default gql`
   fragment CheckoutFragment on Checkout {
@@ -31,7 +31,7 @@ export default gql`
       totalRefunded
       customerUrl
     }
-    lineItems (first: 250) {
+    lineItems(first: 250) {
       edges {
         node {
           id
@@ -39,8 +39,8 @@ export default gql`
           variant {
             id
             title
-            image(maxWidth: 350) {
-              src
+            image {
+              url
             }
             price
           }
@@ -49,4 +49,4 @@ export default gql`
       }
     }
   }
-`
+`;
