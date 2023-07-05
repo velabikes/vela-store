@@ -68,7 +68,7 @@ const ScrollImageContainer = () => {
         });
 
         // Set the image source
-        image.src = `/velax/image-scroll-1/introrender-${i}.webp`;
+        image.url = `/velax/image-scroll-1/introrender-${i}.webp`;
 
         imagePromises.push(promise);
       }

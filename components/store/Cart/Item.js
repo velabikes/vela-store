@@ -15,7 +15,7 @@ const CartItem = ({ item, handleLessClick }) => (
       <tr key={item.node.title}>
         <td>
           <ProductImage
-            src={item.node.variant && item.node.variant.image.src}
+            src={item.node.variant && item.node.variant.image.url}
             alt=""
           />
           <span className="quant">{item.node.quantity}</span>
@@ -92,35 +92,35 @@ export default compose(
   withCheckoutId,
   withCheckoutLineItemsUpdate,
   withHandlers({
-    handleMoreClick: ({ checkoutLineItemsUpdate, checkoutId }) => async (
-      item
-    ) => {
-      await checkoutLineItemsUpdate({
-        variables: {
-          checkoutId: checkoutId,
-          lineItems: [
-            {
-              quantity: parseInt(item.node.quantity + 1, 10),
-              id: item.node.id,
-            },
-          ],
-        },
-      });
-    },
-    handleLessClick: ({ checkoutLineItemsUpdate, checkoutId }) => async (
-      item
-    ) => {
-      await checkoutLineItemsUpdate({
-        variables: {
-          checkoutId: checkoutId,
-          lineItems: [
-            {
-              quantity: parseInt(item.node.quantity - 1, 10),
-              id: item.node.id,
-            },
-          ],
-        },
-      });
-    },
+    handleMoreClick:
+      ({ checkoutLineItemsUpdate, checkoutId }) =>
+      async (item) => {
+        await checkoutLineItemsUpdate({
+          variables: {
+            checkoutId: checkoutId,
+            lineItems: [
+              {
+                quantity: parseInt(item.node.quantity + 1, 10),
+                id: item.node.id,
+              },
+            ],
+          },
+        });
+      },
+    handleLessClick:
+      ({ checkoutLineItemsUpdate, checkoutId }) =>
+      async (item) => {
+        await checkoutLineItemsUpdate({
+          variables: {
+            checkoutId: checkoutId,
+            lineItems: [
+              {
+                quantity: parseInt(item.node.quantity - 1, 10),
+                id: item.node.id,
+              },
+            ],
+          },
+        });
+      },
   })
 )(CartItem);

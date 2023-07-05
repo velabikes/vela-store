@@ -63,7 +63,7 @@ const ScrollImageContainerMob = () => {
           image.onerror = reject;
         });
 
-        image.src = `/velax/image-scroll-1mob/introrendermob-${i}.webp`;
+        image.url = `/velax/image-scroll-1mob/introrendermob-${i}.webp`;
 
         imagePromises.push(promise);
       }

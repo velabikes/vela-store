@@ -62,7 +62,7 @@ const Comparelights = () => {
         });
 
         // Set the image source
-        image.src = `/velax/comparelights/comparelights-${i}.webp`;
+        image.url = `/velax/comparelights/comparelights-${i}.webp`;
 
         imagePromises.push(promise);
       }

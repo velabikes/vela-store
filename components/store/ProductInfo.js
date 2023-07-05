@@ -7,7 +7,7 @@ import ProductForm from "./ProductForm";
 import { offBlack } from "../../style/colors";
 
 const ProductVariantImage = ({ variant }) => (
-  <ProductImage src={variant.node && variant.node.image.src} />
+  <ProductImage src={variant.node && variant.node.image.url} />
 );
 
 ProductVariantImage.propTypes = {
@@ -20,7 +20,7 @@ const ProductImageGallery = ({ product }) => (
       product.images.edges.map(
         (image, i) =>
           !product.variants.edges.find(
-            (variant) => image.node.url === variant.node.image.src
+            (variant) => image.node.url === variant.node.image.url
           ) && <ProductImage src={image.node.url} key={i} />
       )}
     <style jsx>{`
