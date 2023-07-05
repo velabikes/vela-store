@@ -11,19 +11,19 @@ import {
 } from "../../style/colors";
 
 const Rangemob = () => {
-  const [imagemVisivel, setImagemVisivel] = useState("/velax/sp.jpg");
+  const [imagemVisivel, setImagemVisivel] = useState("/velax/sp.webp");
 
   const imagens = [
-    "/velax/sp.jpg",
-    "/velax/rj.jpg",
-    "/velax/bh.jpg",
-    "/velax/bsb.jpg",
-    "/velax/gyn.jpg",
-    "/velax/cwb.jpg",
-    "/velax/cpq.jpg",
-    "/velax/ssa.jpg",
-    "/velax/poa.jpg",
-    "/velax/fln.jpg",
+    "/velax/sp.webp",
+    "/velax/rj.webp",
+    "/velax/bh.webp",
+    "/velax/bsb.webp",
+    "/velax/gyn.webp",
+    "/velax/cwb.webp",
+    "/velax/cpq.webp",
+    "/velax/ssa.webp",
+    "/velax/poa.webp",
+    "/velax/fln.webp",
   ];
 
   const exibirImagem = (index) => {
