@@ -51,7 +51,7 @@ const Boost = () => {
         <div className={`Boost-text-container ${isVisible ? "fade-in" : ""}`}>
           <p className="Boost-text-tittle">BOOST</p>
           <p className="Boost-subtitle">
-            <p>Velocidade máxima e até 550W de potência com um toque.</p>{" "}
+            <p>550W de potência com um toque.</p>{" "}
           </p>
           <p className="text-details">
             {" "}

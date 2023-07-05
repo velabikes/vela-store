@@ -53,7 +53,9 @@ const Boostmob = () => {
         >
           <p className="Boostmob-text-tittle">BOOST</p>
           <p className="Boostmob-subtitle">
-            <p>Velocidade máxima e até 550W de potência com um toque.</p>{" "}
+            <p>
+              550W de potência <br></br>com um toque.
+            </p>{" "}
           </p>
           <p className="text-details">
             {" "}
@@ -84,9 +86,8 @@ const Boostmob = () => {
           margin-left: 10vw;
           text-align: left;
           z-index: 1;
-          opacity: 0;
-          transition: opacity 0.5s ease;
-          transition-delay: 4s; /* Add a 5-second delay */
+    
+      
         }
 
         .Boostmob-text-container.fade-in {
@@ -110,7 +111,7 @@ const Boostmob = () => {
         }
 
         .text-details {
-          font-size: 3.3vw;
+          font-size: 3.5vw;
           font-weight: 300;
           color: ${offBlack};
         }

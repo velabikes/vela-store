@@ -54,7 +54,7 @@ const Speedmob = () => {
             <span className="speed-text-medium">km/h</span>
           </p>
           <p className="speed-text-details">
-            <br></br>Velocidade máxima de assistência do motor.
+            <br></br>
           </p>
         </div>
       </Parallax>
@@ -84,7 +84,6 @@ const Speedmob = () => {
         .speed-text {
           font-size: 10vw;
           font-weight: 800;
-          color: ${offWhite};
           margin: 0;
         }
 
@@ -92,7 +91,7 @@ const Speedmob = () => {
         .speed-text-medium {
           display: inline-block;
           font-weight: 300;
-          color: ${offWhite};
+          color: red;
         }
 
         .speed-text-small {
@@ -106,12 +105,13 @@ const Speedmob = () => {
         .speed-text-count {
           font-size: 10vw;
           font-weight: 800;
+          color: red;
         }
 
         .speed-text-details {
           font-size: 1.8vw;
           font-weight: 200;
-          color: ${offWhite};
+          color: red;
           margin-top: -7vw;
         }
 
@@ -136,7 +136,7 @@ const Speedmob = () => {
           .speed-text {
             font-size: 20vw;
             font-weight: 800;
-            color: ${offWhite};
+            color: white;
             margin: 0;
           }
 
@@ -144,7 +144,7 @@ const Speedmob = () => {
           .speed-text-medium {
             display: inline-block;
             font-weight: 500;
-            color: ${offWhite};
+            color: white;
           }
 
           .speed-text-small {
@@ -158,6 +158,7 @@ const Speedmob = () => {
           .speed-text-count {
             font-size: 10vw;
             font-weight: 800;
+            color: red;
           }
 
           .speed-text-details {

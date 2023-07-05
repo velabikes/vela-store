@@ -91,7 +91,7 @@ const IntroDarkMob = () => {
           style={playButtonStyle}
           onClick={toggleVideo}
         >
-          Assista ao vídeo.
+          ASSISTA AO VIDEO
         </button>
       )}
     </div>

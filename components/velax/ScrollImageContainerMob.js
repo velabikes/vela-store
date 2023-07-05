@@ -86,6 +86,7 @@ const ScrollImageContainerMob = () => {
           objectFit: "cover",
           height: "100vh",
           width: "100vw",
+          marginTop: "0vh",
         }}
       />
     </div>

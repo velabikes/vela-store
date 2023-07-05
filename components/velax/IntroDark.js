@@ -3,6 +3,7 @@ import React, { useState, useRef, useEffect } from "react";
 const IntroDark = () => {
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [showCloseButton, setShowCloseButton] = useState(false);
 
   useEffect(() => {
     if (isPlaying) {
@@ -23,6 +24,13 @@ const IntroDark = () => {
 
   const toggleVideo = () => {
     setIsPlaying(!isPlaying);
+  };
+
+  const closeVideo = () => {
+    setIsPlaying(false);
+    setShowCloseButton(false);
+    videoRef.current.pause();
+    videoRef.current.currentTime = 0;
   };
 
   const exitFullscreen = () => {
@@ -47,7 +55,7 @@ const IntroDark = () => {
     top: 0,
     left: 0,
     width: "100%",
-    height: "90%",
+    height: "80%",
     objectFit: "cover",
     zIndex: 99,
     opacity: isPlaying ? 1 : 0,
@@ -70,6 +78,23 @@ const IntroDark = () => {
     cursor: "pointer",
   };
 
+  const closeButtonStyle = {
+    display: showCloseButton ? "block" : "none",
+    position: "absolute",
+    top: "10px",
+    right: "10px",
+    fontSize: "15px",
+    fontWeight: 50,
+    fontFamily: "Filson-pro",
+    padding: "5px 10px",
+    border: "1px solid white",
+    borderRadius: "0%",
+    backgroundColor: "transparent",
+    color: "white",
+    cursor: "pointer",
+    zIndex: "99",
+  };
+
   const hideIntroDarkClass = isPlaying ? "hide-intro-dark" : "";
 
   return (
@@ -82,15 +107,23 @@ const IntroDark = () => {
         style={videoStyle}
         src="/velax/velax.mp4"
         type="video/mp4"
-        controls
+        controls="true"
       />
       {!isPlaying && (
         <button
           className={hideIntroDarkClass}
           style={playButtonStyle}
-          onClick={toggleVideo}
+          onClick={() => {
+            toggleVideo();
+            setShowCloseButton(true);
+          }}
         >
-          Assista ao vídeo.
+          ASSISTIR VIDEO
+        </button>
+      )}
+      {showCloseButton && (
+        <button style={closeButtonStyle} onClick={closeVideo}>
+          X
         </button>
       )}
     </div>
