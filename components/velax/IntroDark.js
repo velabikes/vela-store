@@ -80,7 +80,7 @@ const IntroDark = () => {
       <video
         className={hideIntroDarkClass}
         style={videoStyle}
-        src="/velax/vx-launch-full.mp4"
+        src="/velax/velax.mp4"
         type="video/mp4"
         controls
       />

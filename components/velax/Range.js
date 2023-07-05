@@ -75,7 +75,7 @@ const Range = () => {
         <div className="text-container">
           <p className="title">Vai longe.</p>
           <p className="details">
-            A bateria da Vela pesa só 2kg e tem autonomia de até 40km. Com
+            A bateria da Vela pesa apenas 2kg e tem autonomia de até 40km. Com
             apenas uma recarga você pedala de ponta a ponta da cidade.
           </p>
         </div>
