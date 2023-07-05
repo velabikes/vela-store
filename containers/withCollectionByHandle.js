@@ -55,7 +55,7 @@ export default (handle, { filterUnavailable }) =>
   graphql(collectionByHandle, {
     alias: "withCollectionByHandle",
 
-    props: ({ data: { collectionByHandle, loading, error }, loading }) => {
+    props: ({ data: { collectionByHandle, loading, error } }) => {
       const collection = !collectionByHandle
         ? {}
         : filterUnavailable
