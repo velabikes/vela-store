@@ -145,7 +145,7 @@ const Rangemob = () => {
           height: 100%;
           position: absolute;
           opacity: 0;
-          transition: opacity 0.5s ease-in-out;
+          transition: opacity 0.01s ease-in-out;
         }
 
         img.active {

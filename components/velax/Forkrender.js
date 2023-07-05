@@ -57,7 +57,7 @@ const Forkrender = () => {
           </p>
           <p className="text-details">
             {" "}
-            Leve e responsivo para deixar você confiante em trechos sem
+            Leve e responsiva para deixar você confiante em trechos sem
             infraestrutura adequada.
           </p>
         </div>
