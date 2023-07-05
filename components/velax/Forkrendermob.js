@@ -45,19 +45,17 @@ const Forkrendermob = () => {
         <div
           className={`Forkrender-text-container ${isVisible ? "fade-in" : ""}`}
         >
-          <p className="Forkrender-text-tittle">Amortecedor</p>
+          <p className="Forkrender-text-tittle">PREPARADA</p>
           <p className="Forkrender-subtitle">
-            <p>Hidráulico e Pneumático.</p>{" "}
+            <p>Amortecedor hidráulico com suspensão pneumática.</p>{" "}
           </p>
           <p className="text-details">
             {" "}
-            Amortecimento hidráulico com regulagem de pressão pneumática. Leve e
-            responsivo deixar você mmais confiante e seguro trechos que não
-            possuem uma infraestrutura adequada.
+            Leve e responsiva para deixar você confiante em trechos sem
+            infraestrutura adequada.
           </p>
         </div>
       </VisibilitySensor>
-
       <style jsx>{`
         .Forkrender {
           position: relative;
@@ -93,6 +91,7 @@ const Forkrendermob = () => {
           font-weight: 700;
           color: ${offBlack};
           margin-top: 3vh;
+          line-height: 50%;
         }
 
         .Forkrender-text-tittle {
