@@ -28,7 +28,7 @@ const Forkrender = () => {
         playsInline
         preload="auto"
         className="Forkrender-video"
-        poster="/velax/Forkrender-poster.jpg" // Add the poster image URL here
+        poster="/velax/Forkrender-poster.webp" // Add the poster image URL here
       >
         {playVideo && <source src="/velax/Forkrender.mp4" type="video/mp4" />}
       </video>
