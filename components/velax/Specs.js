@@ -147,14 +147,13 @@ const Specs = ({ maskSize }) => {
             <tr className="tr-specs">
               <td className="td-specs">Motor</td>
               <td className="td-specs">
-                550W de pico, traseiro e com frenagem eletromagnética. 45Nm de
-                torque.{" "}
+                550W, traseiro e com frenagem eletromagnética. 45Nm de torque.{" "}
               </td>
             </tr>
             <tr className="tr-specs">
               <td className="td-specs">Garantia</td>
               <td className="td-specs">
-                Contra defeitos de fabricação: Completa: 1 ano | Bateria: 2 anos
+                Contra defeitos de fabricação. Completa: 1 ano | Bateria: 2 anos
                 | Quadro: 3 anos | Legal: 90 dias de acordo com o Código de
                 Defesa do Consumidor (lei 8078/1990).
               </td>
