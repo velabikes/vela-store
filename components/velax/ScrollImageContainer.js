@@ -12,7 +12,7 @@ const ScrollImageContainer = () => {
   });
 
   const [currentImage, setCurrentImage] = useState(0);
-  const imageCount = 450; // Replace this with the number of images in your sequence
+  const imageCount = 285; // Replace this with the number of images in your sequence
 
   const lastFrameTimeRef = useRef(0);
   const previousImageRef = useRef(null);
@@ -22,7 +22,10 @@ const ScrollImageContainer = () => {
       if (inView) {
         const scrollPercentage =
           window.scrollY / (document.body.scrollHeight - window.innerHeight);
-        const currentImageIndex = Math.floor(scrollPercentage * imageCount);
+        const scrollSpeed = 4.5; // Ajuste esse valor para aumentar a velocidade de rolagem
+        const currentImageIndex = Math.floor(
+          scrollPercentage * imageCount * scrollSpeed
+        );
         setCurrentImage(currentImageIndex);
       }
     };
@@ -114,17 +117,17 @@ const ScrollImageContainer = () => {
     let scrollTriggerEnd;
 
     if (screenWidth < 1000) {
-      scrollTriggerEnd = "11000vh 0";
+      scrollTriggerEnd = "2400vh 0";
     } else if (screenWidth < 1200) {
-      scrollTriggerEnd = "12000vh 0";
+      scrollTriggerEnd = "2400vh 0";
     } else if (screenWidth < 1400) {
-      scrollTriggerEnd = "13000vh 0";
+      scrollTriggerEnd = "2600vh 0";
     } else if (screenWidth < 1600) {
-      scrollTriggerEnd = "13000vh 0";
+      scrollTriggerEnd = "2800vh 0";
     } else if (screenWidth < 1800) {
-      scrollTriggerEnd = "14000vh 0";
+      scrollTriggerEnd = "3000vh 0";
     } else {
-      scrollTriggerEnd = "18000vh 0";
+      scrollTriggerEnd = "3200vh 0";
     }
 
     return scrollTriggerEnd;

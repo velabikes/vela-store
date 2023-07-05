@@ -79,7 +79,7 @@ const Batterymob = () => {
           margin: 0;
         }
         .battery-text-tittle {
-          font-size: 3vw;
+          font-size: 3.3vw;
           font-weight: 500;
           color: #ffffff;
           top: 90%;
