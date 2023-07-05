@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import VisibilitySensor from "react-visibility-sensor";
 import { offBlack } from "../../style/colors";
-const Forkrender = () => {
+const Forkrendermob = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [playVideo, setPlayVideo] = useState(false);
 
@@ -36,16 +36,10 @@ const Forkrender = () => {
 
   return (
     <div className="Forkrender">
-      <video
-        autoPlay
-        muted
-        playsInline
-        preload="auto"
-        className="Forkrender-video"
-        poster="/velax/Forkrender-poster.webp" // Add the poster image URL here
-      >
-        {playVideo && <source src="/velax/Forkrender.mp4" type="video/mp4" />}
-      </video>
+      <img
+        className="image"
+        src="/velax/forkrendermob.webp" // Add the poster image URL here
+      ></img>
 
       <VisibilitySensor onChange={onVisibilityChange} partialVisibility>
         <div
@@ -53,12 +47,12 @@ const Forkrender = () => {
         >
           <p className="Forkrender-text-tittle">Amortecedor</p>
           <p className="Forkrender-subtitle">
-            <p>Hidráulico e Pneumático</p>{" "}
+            <p>Hidráulico e Pneumático.</p>{" "}
           </p>
           <p className="text-details">
             {" "}
             Amortecimento hidráulico com regulagem de pressão pneumática. Leve e
-            responsivo para deixar você mais confiante em trechos que não
+            responsivo deixar você mmais confiante e seguro trechos que não
             possuem uma infraestrutura adequada.
           </p>
         </div>
@@ -80,14 +74,14 @@ const Forkrender = () => {
 
         .Forkrender-text-container {
           position: absolute;
-          top: 12vh;
-          width: 35vw;
-          left: 60vw;
+          top: 3vh;
+          width: 40vw;
+          left: 50vw;
           text-align: right;
           z-index: 1;
           opacity: 0;
           transition: opacity 0.5s ease;
-          transition-delay: 2.5s; /* Add a 5-second delay */
+          transition-delay: 0.5s; /* Add a 5-second delay */
         }
 
         .Forkrender-text-container.fade-in {
@@ -95,19 +89,22 @@ const Forkrender = () => {
         }
 
         .Forkrender-subtitle {
-          font-size: 2.2vw;
+          font-size: 6vw;
           font-weight: 700;
           color: ${offBlack};
+          margin-top: 3vh;
         }
 
         .Forkrender-text-tittle {
-          font-size: 1.6vw;
+          font-size: 4vw;
           font-weight: 800;
           color: ${offBlack};
+
+          margin-bottom: -1vw;
         }
 
         .text-details {
-          font-size: 1.4vw;
+          font-size: 3vw;
           font-weight: 300;
           color: ${offBlack};
         }
@@ -116,4 +113,4 @@ const Forkrender = () => {
   );
 };
 
-export default Forkrender;
+export default Forkrendermob;

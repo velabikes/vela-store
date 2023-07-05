@@ -19,6 +19,7 @@ import Batterymob from "/components/velax/Batterymob";
 import Batteryrendermob from "../components/velax/Batteryrendermob";
 import Colors from "/components/velax/Colors";
 import Fork from "/components/velax/Fork";
+import Forkrendermob from "../components/velax/Forkrendermob";
 import Forkmob from "../components/velax/Forkmob";
 import Boost from "/components/velax/Boost";
 import Boostmob from "../components/velax/Boostmob";
@@ -178,8 +179,11 @@ const VelaX = () => {
       )}
 
       {isMobile ? <Forkmob className="forkmob" /> : <Fork className="fork" />}
-
-      <Forkrender />
+      {isMobile ? (
+        <Forkrendermob className="forkrendermob" />
+      ) : (
+        <Forkrender className="forkrender" />
+      )}
 
       {isMobile ? (
         <AppTitlemob className="apptitlemob" />
