@@ -41,7 +41,7 @@ const ScrollImageContainerMob = () => {
         scrollTrigger: {
           trigger: scrollContainerElement,
           start: "top 0",
-          end: "4500vh top",
+          end: "4000vh top",
           pin: true,
           scrub: 0.01, // Adjust this value to increase/decrease the transition sensitivity
           pinSpacing: true,

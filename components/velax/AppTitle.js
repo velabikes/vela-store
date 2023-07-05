@@ -27,7 +27,7 @@ const AppTitle = () => {
 
           color: white;
           width: 100vw;
-          height: 100vh;
+          height: 80vh;
           z-index: 1;
         }
 

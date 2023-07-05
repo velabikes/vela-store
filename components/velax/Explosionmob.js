@@ -68,7 +68,7 @@ const Explosionmob = () => {
           margin-top: 30vh;
           mnargin-left: -50vw;
           width: 100vw;
-          height: 75vh;
+          height: 70vh;
         }
 
         .Boost-text-container {

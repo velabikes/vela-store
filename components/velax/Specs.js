@@ -37,7 +37,7 @@ const Specs = ({ maskSize }) => {
             <tr className="tr-specs">
               <td className="td-specs">Tamanhos</td>
               <td className="td-specs">
-                M: 1,64 à 1,75m | G: 1,75 à 1,85m | GGC: 1,85 à 2,10m
+                M: 1,64 à 1,75m | G: 1,75 à 1,85m | GG: 1,85 à 2,10m
               </td>
             </tr>
             <tr className="tr-specs">

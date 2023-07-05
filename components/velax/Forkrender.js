@@ -15,7 +15,7 @@ const Forkrender = () => {
     if (isVisible) {
       timeout = setTimeout(() => {
         setPlayVideo(true);
-      }, 1500); // 3-second delay
+      }, 500); // 3-second delay
     }
     return () => clearTimeout(timeout);
   }, [isVisible]);

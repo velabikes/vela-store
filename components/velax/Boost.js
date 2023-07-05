@@ -18,7 +18,7 @@ const Boost = () => {
     if (isVisible) {
       timeout = setTimeout(() => {
         setPlayVideo(true);
-      }, 1000); // 3-second delay
+      }, 300); // 3-second delay
     }
     return () => clearTimeout(timeout);
   }, [isVisible]);
@@ -84,7 +84,7 @@ const Boost = () => {
           z-index: 1;
           opacity: 0;
           transition: opacity 0.5s ease;
-          transition-delay: 4s; /* Add a 5-second delay */
+          transition-delay: 2.5s; /* Add a 5-second delay */
         }
 
         .Boost-text-container.fade-in {

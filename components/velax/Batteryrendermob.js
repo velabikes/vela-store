@@ -46,7 +46,7 @@ const Batteryrendermob = () => {
           margin-bottom: -2.5vh;
         }
         .Batteryrender-image {
-          margin-top: 5vh;
+          margin-top: 15vh;
           margin-left: 0vw;
           width: 100vw;
           height: 130%;
