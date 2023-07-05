@@ -75,8 +75,8 @@ const Range = () => {
         <div className="text-container">
           <p className="title">Vai longe.</p>
           <p className="details">
-            Pedale até 40km com uma carga da bateria de lítio de apenas 2kg da
-            Vela X você tem autonomia para atravessar a cidade de fora a fora.
+            A bateria da Vela pesa só 2kg e tem autonomia de até 40km. Com
+            apenas uma recarga você pedala de ponta a ponta da cidade.
           </p>
         </div>
       </div>

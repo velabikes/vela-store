@@ -42,7 +42,7 @@ const Boost = () => {
         playsInline
         preload="auto"
         className="Boost-video"
-        poster="/velax/boost-poster.jpg" // Add the poster image URL here
+        poster="/velax/boost-poster.webp" // Add the poster image URL here
       >
         {playVideo && <source src="/velax/boost.mp4" type="video/mp4" />}
       </video>
@@ -55,9 +55,8 @@ const Boost = () => {
           </p>
           <p className="text-details">
             {" "}
-            Além essa função, o botão também age como um acelerador que vai até
-            6km/h sem precisar pedalar. Essa funcionalidade é conhecida como
-            walk-assim ou start-assist.
+            Além essa função, o botão também aciona o motor para partida nos
+            modos conhecidos como start-assist e walk-assist.
           </p>
         </div>
       </VisibilitySensor>
@@ -109,7 +108,7 @@ const Boost = () => {
 
         .text-details {
           font-size: 1.4vw;
-          font-weight: 200;
+          font-weight: 300;
           color: ${offBlack};
         }
       `}</style>

@@ -43,12 +43,12 @@ const AppTitlemob = () => {
         .call {
           font-size: 7vw;
           line-height: 1.3;
-          font-weight: 500;
+          font-weight: 600;
         }
 
         .details {
-          font-size: 3.5vw;
-          font-weight: 200;
+          font-size: 4vw;
+          font-weight: 300;
           margin-top: -1vh;
         }
       `}</style>

@@ -81,8 +81,8 @@ const Rangemob = () => {
       <div className="text-container">
         <h2>Vai longe.</h2>
         <p>
-          Pedale até 40km com uma carga da bateria de lítio de apenas 2kg da
-          Vela X você tem autonomia para atravessar a cidade de fora a fora.
+          A bateria da Vela pesa só 2kg e tem autonomia de até 40km. Com apenas
+          uma recarga você pedala de ponta a ponta da cidade.
         </p>
       </div>
 
@@ -128,7 +128,7 @@ const Rangemob = () => {
           flex-direction: row;
           align-items: center;
           width: 100%;
-          height: 70vh;
+          height: 60vh;
         }
 
         .image-container {
@@ -157,6 +157,8 @@ const Rangemob = () => {
           margin-top: 8vh;
           margin-right: 4vw;
           width: 80vw;
+          font-size: 4vw;
+          font-weight: 300;
         }
       `}</style>
     </div>

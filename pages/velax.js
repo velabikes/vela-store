@@ -111,6 +111,13 @@ const VelaX = () => {
 
   return (
     <div className="VelaX landing">
+      <title>
+        Bicicleta Elétrica Vela X - Mobilidade urbana sustentável | Vela Bikes
+      </title>
+      <meta
+        name="description"
+        content="Conheça a Vela X, a bicicleta elétrica urbana de alta velocidade e longa autonomia. Transforme sua mobilidade com sustentabilidade com a Vela Bikes. Saiba mais!"
+      />
       <div className="topcta">
         <button className="button" onClick={redirectToBuildPage}>
           MONTE A SUA

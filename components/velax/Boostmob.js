@@ -18,7 +18,7 @@ const Boostmob = () => {
     if (isVisible) {
       timeout = setTimeout(() => {
         setPlayVideo(true);
-      }, 1000); // 3-second delay
+      }, 500); // 3-second delay
     }
     return () => clearTimeout(timeout);
   }, [isVisible]);
@@ -42,7 +42,7 @@ const Boostmob = () => {
         playsInline
         preload="auto"
         className="Boostmob-video"
-        poster="/velax/boost-poster.jpg" // Add the poster image URL here
+        poster="/velax/boostmob-poster.webp" // Add the poster image URL here
       >
         {playVideo && <source src="/velax/boostmob.mp4" type="video/mp4" />}
       </video>
@@ -57,9 +57,8 @@ const Boostmob = () => {
           </p>
           <p className="text-details">
             {" "}
-            Além da função de boost de potêcnia o botão também age como um
-            acelerador que vai até 6km/h sem precisar pedalar. Essa
-            funcionalidade é conhecida como walk-assim ou start-assist.
+            Além essa função, o botão também aciona o motor para partida nos
+            modos conhecidos como start-assist e walk-assist.
           </p>
         </div>
       </VisibilitySensor>
@@ -87,7 +86,7 @@ const Boostmob = () => {
           z-index: 1;
           opacity: 0;
           transition: opacity 0.5s ease;
-          transition-delay: 5s; /* Add a 5-second delay */
+          transition-delay: 6s; /* Add a 5-second delay */
         }
 
         .Boostmob-text-container.fade-in {
@@ -111,8 +110,8 @@ const Boostmob = () => {
         }
 
         .text-details {
-          font-size: 3vw;
-          font-weight: 200;
+          font-size: 3.3vw;
+          font-weight: 300;
           color: ${offBlack};
         }
 

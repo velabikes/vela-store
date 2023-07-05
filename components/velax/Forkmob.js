@@ -45,7 +45,7 @@ const Forkmob = () => {
 
       <div className="Forkmob-text-container">
         <p className="Forkmob-text-tittle">Urbana</p>
-        <p className="Forkmob-text">Pra qualquer rota.</p>
+        <p className="Forkmob-text">Para qualquer rota.</p>
       </div>
 
       <style jsx>{`
@@ -79,7 +79,7 @@ const Forkmob = () => {
           margin: 0;
         }
         .Forkmob-text-tittle {
-          font-size: 3vw;
+          font-size: 3.3vw;
           font-weight: 500;
           color: #ffffff;
           top: 90%;

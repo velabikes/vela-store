@@ -16,7 +16,7 @@ const Batteryrendermob = () => {
           Desde 2017 a maior garantia do mercado contra defeito de fabrição.
           Toda a segurança e confiabilidade que você precisa pra deixar o carro
           em casa. <br></br>
-          <br></br>Um projeto da Vela.
+          <br></br>Um projeto Vela.
         </p>
       </div>
       <img
@@ -39,14 +39,14 @@ const Batteryrendermob = () => {
           width: 70vw;
           font-weight: 500;
           color: ${offWhite};
-          margin-top: 10%;
+          margin-top: 20%;
           margin-left: 10vw;
         }
         .garantia {
           margin-bottom: -2.5vh;
         }
         .Batteryrender-image {
-          margin-top: 0vh;
+          margin-top: 5vh;
           margin-left: 0vw;
           width: 100vw;
           height: 130%;
@@ -55,7 +55,7 @@ const Batteryrendermob = () => {
         }
 
         .Batteryrender-text-small {
-          font-size: 4vw;
+          font-size: 5vw;
           padding-bottom: 2vh;
         }
 
@@ -65,7 +65,7 @@ const Batteryrendermob = () => {
         }
 
         .Batteryrender-text-details {
-          font-size: 3vw;
+          font-size: 4vw;
           font-weight: 300;
         }
       `}</style>

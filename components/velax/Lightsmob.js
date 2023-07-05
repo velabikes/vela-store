@@ -38,7 +38,7 @@ const Lightsmob = () => {
 
       <div className="lights-text-container">
         <p className="lights-text-tittle">Muita Luz</p>
-        <p className="lights-text">Pra ver e ser visto.</p>
+        <p className="lights-text">Para ver e ser visto.</p>
       </div>
 
       <style jsx>{`
@@ -104,7 +104,7 @@ const Lightsmob = () => {
             margin: 0;
           }
           .lights-text-tittle {
-            font-size: 3vw;
+            font-size: 3.3vw;
             font-weight: 500;
             color: #ffffff;
             top: 90%;
