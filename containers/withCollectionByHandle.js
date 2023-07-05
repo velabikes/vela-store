@@ -3,38 +3,36 @@ import gql from "graphql-tag";
 
 const collectionByHandle = gql`
   query collectionByHandleQuery($handle: String!) {
-    shop {
-      collectionByHandle(handle: $handle) {
-        title
-        descriptionHtml
-        image(maxWidth: 2000) {
-          transformedSrc
-        }
-        products(first: 100) {
-          edges {
-            node {
-              id
-              title
-              handle
-              images(first: 1, maxWidth: 800) {
-                edges {
-                  node {
-                    src
-                  }
+    collectionByHandle(handle: $handle) {
+      title
+      descriptionHtml
+      image {
+        url
+      }
+      products(first: 100) {
+        edges {
+          node {
+            id
+            title
+            handle
+            images(first: 1) {
+              edges {
+                node {
+                  url
                 }
               }
-              variants(first: 250) {
-                edges {
-                  node {
-                    id
-                    priceV2 {
-                      amount
-                    }
-                    compareAtPriceV2 {
-                      amount
-                    }
-                    availableForSale
+            }
+            variants(first: 250) {
+              edges {
+                node {
+                  id
+                  priceV2 {
+                    amount
                   }
+                  compareAtPriceV2 {
+                    amount
+                  }
+                  availableForSale
                 }
               }
             }
@@ -57,16 +55,17 @@ export default (handle, { filterUnavailable }) =>
   graphql(collectionByHandle, {
     alias: "withCollectionByHandle",
 
-    props: ({ data: { shop }, loading }) => {
-      const collection = !shop
+    props: ({ data: { collectionByHandle, loading, error }, loading }) => {
+      const collection = !collectionByHandle
         ? {}
         : filterUnavailable
-        ? filter(shop.collectionByHandle)
-        : shop.collectionByHandle;
+        ? filter(collectionByHandle)
+        : collectionByHandle;
 
       return {
         collection: collection,
         isCollectionLoading: loading,
+        collectionError: error,
       };
     },
 

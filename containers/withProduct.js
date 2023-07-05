@@ -1,9 +1,8 @@
-import { graphql } from 'react-apollo'
-import gql from 'graphql-tag'
+import { graphql } from "react-apollo";
+import gql from "graphql-tag";
 
 const product = gql`
-query productQuery($handle: String!) {
-  shop {
+  query productQuery($handle: String!) {
     productByHandle(handle: $handle) {
       id
       title
@@ -14,10 +13,10 @@ query productQuery($handle: String!) {
         name
         values
       }
-      images(first: 40, maxWidth: 900) {
+      images(first: 40) {
         edges {
           node {
-            src
+            url
           }
         }
       }
@@ -36,31 +35,31 @@ query productQuery($handle: String!) {
               name
               value
             }
-            image(maxWidth: 900) {
-              src
+            image {
+              url
             }
           }
         }
       }
     }
   }
-}
-`
+`;
 
-export default handleFn => graphql(product, {
-  alias: 'withProduct',
+export default (handleFn) =>
+  graphql(product, {
+    alias: "withProduct",
 
-  options (props) {
-    return {
-      variables: {
-        handle: handleFn(props)
-      }
-    }
-  },
+    options(props) {
+      return {
+        variables: {
+          handle: handleFn(props),
+        },
+      };
+    },
 
-  props: ({ data }) =>
-    ({
-      product: data.shop ? data.shop.productByHandle : {},
-      isProductLoading: data.loading
-    })
-})
+    props: ({ data }) => ({
+      product: data.productByHandle || {},
+      isProductLoading: data.loading,
+      productError: data.error,
+    }),
+  });
