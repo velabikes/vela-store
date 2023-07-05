@@ -37,7 +37,7 @@ const Lightsmob = () => {
       </video>
 
       <div className="lights-text-container">
-        <p className="lights-text-tittle">Muita Luz</p>
+        <p className="lights-text-tittle">Muita Luz.</p>
         <p className="lights-text">Para ver e ser visto.</p>
       </div>
 
@@ -104,8 +104,8 @@ const Lightsmob = () => {
             margin: 0;
           }
           .lights-text-tittle {
-            font-size: 3.3vw;
-            font-weight: 500;
+            font-size: 6vw;
+            font-weight: 600;
             color: #ffffff;
             top: 90%;
             margin-bottom: -1vw;

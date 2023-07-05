@@ -44,8 +44,8 @@ const Battery = () => {
       </video>
 
       <div className="battery-text-container">
-        <p className="battery-text-tittle">Bateria</p>
-        <p className="battery-text">Claro, a bateria da Vela.</p>
+        <p className="battery-text-tittle">Claro.</p>
+        <p className="battery-text">A bateria da Vela.</p>
       </div>
 
       <style jsx>{`
@@ -79,8 +79,8 @@ const Battery = () => {
           margin: 0;
         }
         .battery-text-tittle {
-          font-size: 1.6vw;
-          font-weight: 500;
+          font-size: 3.8vw;
+          font-weight: 600;
           color: #ffffff;
           top: 90%;
           margin-bottom: -1vw;

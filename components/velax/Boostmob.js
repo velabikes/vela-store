@@ -46,19 +46,18 @@ const Boostmob = () => {
       >
         {playVideo && <source src="/velax/boostmob.mp4" type="video/mp4" />}
       </video>
-
       <VisibilitySensor onChange={onVisibilityChange} partialVisibility>
         <div
           className={`Boostmob-text-container ${isVisible ? "fade-in" : ""}`}
         >
           <p className="Boostmob-text-tittle">BOOST</p>
           <p className="Boostmob-subtitle">
-            <p>
-              550W de potência <br></br>com um toque.
-            </p>{" "}
+            <p className="subtittle-lineheight">
+              Potência máxima <br />
+              com um toque.
+            </p>
           </p>
           <p className="text-details">
-            {" "}
             Além desta função, o botão também aciona o motor para partida nos
             modos conhecidos como start-assist e walk-assist.
           </p>
@@ -95,10 +94,13 @@ const Boostmob = () => {
         }
 
         .Boostmob-subtitle {
-          font-size: 5vw;
+          font-size: 8vw;
           font-weight: 700;
           color: ${offBlack};
-          margin-top: 3vh;
+          line-height: 1.2em; /* Adjust the line height value as needed */
+        }
+        
+   
         }
 
         .Boostmob-text-tittle {
@@ -111,7 +113,7 @@ const Boostmob = () => {
         }
 
         .text-details {
-          font-size: 3.5vw;
+          font-size: 3.8vw;
           font-weight: 300;
           color: ${offBlack};
         }

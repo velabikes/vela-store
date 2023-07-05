@@ -22,16 +22,7 @@ const Forkrender = () => {
 
   return (
     <div className="Forkrender">
-      <video
-        autoPlay
-        muted
-        playsInline
-        preload="auto"
-        className="Forkrender-video"
-        poster="/velax/Forkrender-poster.webp" // Add the poster image URL here
-      >
-        {playVideo && <source src="/velax/Forkrender.mp4" type="video/mp4" />}
-      </video>
+      <img src="/velax/forkrendermob.webp"></img>
 
       <VisibilitySensor onChange={onVisibilityChange} partialVisibility>
         <div
@@ -39,8 +30,8 @@ const Forkrender = () => {
         >
           <p className="Forkrender-text-tittle">Amortecedor</p>
           <p className="Forkrender-text">
-            Hidráulico com regulagem por pressão de ar: responsiva e apenas
-            1.730g de peso.
+            Você mais seguro e confiante. Uma Vela preparada com absorsão
+            hidráulica e regulagem pneumática: leve e responsivo.
           </p>
         </div>
       </VisibilitySensor>
@@ -64,11 +55,11 @@ const Forkrender = () => {
 
         .Forkrender-text-container {
           position: absolute;
-          width: 30vw;
-          top: 13vw;
+          width: 40vw;
+          top: 0vw;
           left: 73%;
           transform: translate(-50%, -50%);
-          text-align: left;
+          text-align: right;
           z-index: 1;
           opacity: 0;
           transition: opacity 0.5s ease;
@@ -105,11 +96,11 @@ const Forkrender = () => {
 
           .Forkrender-text-container {
             position: absolute;
-            width: 40vw;
-            top: 80%;
-            left: 50%;
+            width: 35vw;
+            top: 12%;
+            left: 70%;
             transform: translate(-50%, -50%);
-            text-align: left;
+            text-align: right;
             z-index: 1;
             opacity: 0;
             transition: opacity 0.5s ease;
@@ -127,8 +118,13 @@ const Forkrender = () => {
             color: ${offBlack};
           }
 
+          .Forkrender-text {
+            font-size: 3.5vw;
+            font-weight: 300;
+          }
+
           .Forkrender-text-details {
-            font-size: 5vw;
+            font-size: 6vw;
             width: 60vw;
             font-weight: 300;
             color: ${offBlack};

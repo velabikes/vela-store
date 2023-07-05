@@ -25,7 +25,7 @@ const AppTitle = () => {
           padding-left: 0vw;
           text-align: center;
 
-          color: white;
+          color: #2f2f2f;
           width: 100vw;
           height: 80vh;
           z-index: 1;

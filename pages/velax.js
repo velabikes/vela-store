@@ -155,26 +155,20 @@ const VelaX = () => {
       )}
 
       {isMobile ? (
-        <Uphillmob className="uphillmob" />
-      ) : (
-        <Uphill className="uphill" />
-      )}
-
-      {isMobile ? (
         <Batterymob className="Batterymob" />
       ) : (
         <Battery className="Battery" />
-      )}
-      {isMobile ? (
-        <Rangemob className="Rangemob" />
-      ) : (
-        <Range className="Range" />
       )}
 
       {isMobile ? (
         <Batteryrendermob className="Batteryrendermob" />
       ) : (
         <Batteryrender className="Batteryrender" />
+      )}
+      {isMobile ? (
+        <Rangemob className="Rangemob" />
+      ) : (
+        <Range className="Range" />
       )}
 
       {isMobile ? (

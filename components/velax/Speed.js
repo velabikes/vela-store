@@ -53,9 +53,6 @@ const Speed = () => {
             </VisibilitySensor>
             <span className="speed-text-medium">km/h</span>
           </p>
-          <p className="speed-text-details">
-            <br></br>Velocidade máxima de assistência do motor.
-          </p>
         </div>
       </Parallax>
 

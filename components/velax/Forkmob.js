@@ -44,7 +44,7 @@ const Forkmob = () => {
       </video>
 
       <div className="Forkmob-text-container">
-        <p className="Forkmob-text-tittle">Urbana</p>
+        <p className="Forkmob-text-tittle">Urbana.</p>
         <p className="Forkmob-text">Para qualquer rota.</p>
       </div>
 
@@ -79,8 +79,8 @@ const Forkmob = () => {
           margin: 0;
         }
         .Forkmob-text-tittle {
-          font-size: 3.3vw;
-          font-weight: 500;
+          font-size: 6vw;
+          font-weight: 600;
           color: #ffffff;
           top: 90%;
           margin-bottom: -1vw;

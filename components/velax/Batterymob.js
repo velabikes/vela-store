@@ -44,8 +44,8 @@ const Batterymob = () => {
       </video>
 
       <div className="battery-text-container">
-        <p className="battery-text-tittle">Bateria</p>
-        <p className="battery-text">Claro, a bateria da Vela.</p>
+        <p className="battery-text-tittle">Claro.</p>
+        <p className="battery-text">A bateria da Vela.</p>
       </div>
 
       <style jsx>{`
@@ -79,8 +79,8 @@ const Batterymob = () => {
           margin: 0;
         }
         .battery-text-tittle {
-          font-size: 3.3vw;
-          font-weight: 500;
+          font-size: 6vw;
+          font-weight: 600;
           color: #ffffff;
           top: 90%;
           margin-bottom: -1vw;
@@ -112,7 +112,7 @@ const Batterymob = () => {
           }
 
           .battery-text-details {
-            font-size: 5vw;
+            font-size: 6vw;
             width: 60vw;
             font-weight: 300;
             color: ${offWhite};
