@@ -85,41 +85,6 @@ const Lights = () => {
           top: 90%;
           margin-bottom: -1vw;
         }
-
-        @media only screen and (max-width: 868px) {
-          .lights-image {
-            object-fit: cover;
-            margin-right: 300px;
-            width: auto;
-            height: 90vh;
-          }
-
-          .lights-text-container {
-            position: absolute;
-            width: 100vw;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            z-index: 1; // Garante que o texto fique acima da imagem
-          }
-
-          .lights-text-small,
-          .lights-text-medium {
-            display: inline-block;
-            font-weight: 300;
-            color: ${offWhite};
-          }
-
-          .lights-text-details {
-            font-size: 5vw;
-            width: 60vw;
-            font-weight: 300;
-            color: ${offWhite};
-            margin-left: 20vw;
-            margin-top: -15vw;
-          }
-        }
       `}</style>
     </div>
   );

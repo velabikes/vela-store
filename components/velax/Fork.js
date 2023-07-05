@@ -82,43 +82,7 @@ const Fork = () => {
           font-size: 1.6vw;
           font-weight: 500;
           color: #ffffff;
-          top: 90%;
-          margin-bottom: -1vw;
-        }
-
-        @media only screen and (max-width: 868px) {
-          .Fork-image {
-            object-fit: cover;
-            margin-right: 300px;
-            width: auto;
-            height: 90vh;
-          }
-
-          .Fork-text-container {
-            position: absolute;
-            width: 100vw;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            z-index: 1; // Garante que o texto fique acima da imagem
-          }
-
-          .Fork-text-small,
-          .Fork-text-medium {
-            display: inline-block;
-            font-weight: 300;
-            color: ${offWhite};
-          }
-
-          .Fork-text-details {
-            font-size: 5vw;
-            width: 60vw;
-            font-weight: 300;
-            color: ${offWhite};
-            margin-left: 20vw;
-            margin-top: -15vw;
-          }
+          margin-bottom: -2vh;
         }
       `}</style>
     </div>

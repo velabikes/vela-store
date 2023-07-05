@@ -72,21 +72,6 @@ const VelaX = () => {
   }, []);
 
   useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.pageYOffset;
-      const containerOffset = scrollPosition - image2Ref.current.offsetTop;
-      const offset = containerOffset + 2500; // Subtract 200 pixels from the container offset
-      setImage2Offset(offset);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
-  useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 868);
     };
@@ -184,10 +169,6 @@ const VelaX = () => {
       ) : (
         <Batteryrender className="Batteryrender" />
       )}
-
-      <div className="image-2" ref={image2Ref}>
-        <img src="/velax/VX-1.jpg" alt="Image 2" />
-      </div>
 
       {isMobile ? (
         <Lightsmob className="Lightmob" />

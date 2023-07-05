@@ -55,7 +55,7 @@ const Boost = () => {
           </p>
           <p className="text-details">
             {" "}
-            Além essa fnução, o botão também age como um acelerador que vai até
+            Além essa função, o botão também age como um acelerador que vai até
             6km/h sem precisar pedalar. Essa funcionalidade é conhecida como
             walk-assim ou start-assist.
           </p>
@@ -108,7 +108,7 @@ const Boost = () => {
         }
 
         .text-details {
-          font-size: 1.3vw;
+          font-size: 1.4vw;
           font-weight: 200;
           color: ${offBlack};
         }

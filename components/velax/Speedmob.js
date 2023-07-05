@@ -33,7 +33,7 @@ const Speedmob = () => {
   return (
     <div className="speed">
       <Parallax
-        bgImage="/velax/speedmob.jpg"
+        bgImage="/velax/speedmob.webp"
         bgImageAlt="Vela X Speed Iamge"
         strength={200} // Ajuste o valor para alterar a intensidade do efeito
       >

@@ -11,7 +11,7 @@ const Appmob = () => {
 
   return (
     <div className="Appmob">
-      <img src="/velax/appmob.png" alt="Appmob" className="Appmob-image" />
+      <img src="/velax/appmob.webp" alt="Appmob" className="Appmob-image" />
 
       <style jsx>{`
         .Appmob {
