@@ -11,7 +11,7 @@ const ProductTeaser = ({ product }) => (
       as={"/loja/produto/" + product.handle}
     >
       <a>
-        <ProductImage src={product?.images?.edges[0]?.node.src} />
+        <ProductImage src={product?.images?.edges[0]?.node.url} />
         {!product.variants?.edges[0].node.availableForSale && (
           <img src="/images/vendida.png" className="sold" />
         )}
