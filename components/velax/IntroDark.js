@@ -25,7 +25,6 @@ const IntroDark = () => {
   const toggleVideo = () => {
     setIsPlaying(!isPlaying);
   };
-
   const closeVideo = () => {
     setIsPlaying(false);
     setShowCloseButton(false);
@@ -118,7 +117,7 @@ const IntroDark = () => {
             setShowCloseButton(true);
           }}
         >
-          ASSISTIR VIDEO
+          ASSISTIR VÍDEO
         </button>
       )}
       {showCloseButton && (

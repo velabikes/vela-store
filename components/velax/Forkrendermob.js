@@ -47,12 +47,12 @@ const Forkrendermob = () => {
         >
           <p className="Forkrender-text-tittle">PREPARADA</p>
           <p className="Forkrender-subtitle">
-            <p>Amortecedor hidráulico com suspensão pneumática.</p>{" "}
+            SUSPENSÃO PNEUMÁTICA E<br />
+            AMORTECEDOR HIDRÁULICO
           </p>
           <p className="text-details">
-            {" "}
             Leve e responsiva para deixar você confiante em trechos sem
-            infraestrutura adequada.
+            infraestrutura.
           </p>
         </div>
       </VisibilitySensor>
@@ -73,8 +73,8 @@ const Forkrendermob = () => {
         .Forkrender-text-container {
           position: absolute;
           top: 3vh;
-          width: 40vw;
-          left: 50vw;
+          width: 50vw;
+          left: 40vw;
           text-align: right;
           z-index: 1;
           opacity: 0;
@@ -91,11 +91,12 @@ const Forkrendermob = () => {
           font-weight: 700;
           color: ${offBlack};
           margin-top: 3vh;
-          line-height: 50%;
+          width: 50vw;
+          line-height: 1.2; /* Set the desired line height value */
         }
 
         .Forkrender-text-tittle {
-          font-size: 4vw;
+          font-size: 3.5vw;
           font-weight: 800;
           color: ${offBlack};
 
@@ -103,9 +104,11 @@ const Forkrendermob = () => {
         }
 
         .text-details {
-          font-size: 3vw;
+          font-size: 3.8vw;
           font-weight: 300;
           color: ${offBlack};
+          width: 40vw;
+          margin-left: 10vw;
         }
       `}</style>
     </div>

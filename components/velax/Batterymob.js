@@ -44,8 +44,8 @@ const Batterymob = () => {
       </video>
 
       <div className="battery-text-container">
-        <p className="battery-text-tittle">Claro.</p>
-        <p className="battery-text">A bateria da Vela.</p>
+        <p className="battery-text-tittle">Claro,</p>
+        <p className="battery-text">a bateria da Vela.</p>
       </div>
 
       <style jsx>{`

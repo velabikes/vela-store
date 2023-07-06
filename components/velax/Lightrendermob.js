@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import VisibilitySensor from "react-visibility-sensor";
 import { offBlack } from "../../style/colors";
-const Forkrender = () => {
+const Lightrendermob = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [playVideo, setPlayVideo] = useState(false);
 
@@ -35,43 +35,36 @@ const Forkrender = () => {
   }, [isVisible, playVideo]);
 
   return (
-    <div className="Forkrender">
-      <video
-        autoPlay
-        muted
-        playsInline
-        preload="auto"
-        className="Forkrender-video"
-        poster="/velax/Forkrender-poster.webp" // Add the poster image URL here
-      >
-        {playVideo && <source src="/velax/Forkrender.mp4" type="video/mp4" />}
-      </video>
+    <div className="Lightrender">
+      <img
+        className="image"
+        src="/velax/lightrendermob.webp" // Add the poster image URL here
+      ></img>
 
       <VisibilitySensor onChange={onVisibilityChange} partialVisibility>
         <div
-          className={`Forkrender-text-container ${isVisible ? "fade-in" : ""}`}
+          className={`Lightrender-text-container ${isVisible ? "fade-in" : ""}`}
         >
-          <p className="Forkrender-text-tittle">PREPARADA</p>
-          <p className="Forkrender-subtitle">
-            SUSPENSÃO PNEUMÁTICA E<br />
-            AMORTECEDOR HIDRÁULICO
+          <p className="Lightrender-text-tittle">FAROL</p>
+          <p className="Lightrender-subtitle">
+            3X MAIS BRILHO COM O NOVO FAROL LED
           </p>
           <p className="text-details">
-            {" "}
-            Leve e responsiva para deixar você confiante em trechos sem
-            infraestrutura adequada. Mais conforto e segurança pro seu dia a
-            dia.
+            O farol integrado e automático da Vela sempre adicionou praticidade.
+            A Vela X vem com o mesmo sistema, mas dessa vez com a tecnologia
+            CREE de LEDs que fornecem um brilho superior.
           </p>
         </div>
       </VisibilitySensor>
-
       <style jsx>{`
-        .Forkrender {
+        .Lightrender {
           position: relative;
-          height: 100vh;
+          width: 100vw;
+          height: auto;
+          margin-top: 10vh;
         }
 
-        .Forkrender-video {
+        .Lightrender-video {
           object-fit: cover;
           margin-top: 0vh;
           margin-bottom: 0vw;
@@ -79,37 +72,41 @@ const Forkrender = () => {
           height: 100vh;
         }
 
-        .Forkrender-text-container {
+        .Lightrender-text-container {
           position: absolute;
-          top: 12vh;
-          width: 35vw;
-          left: 60vw;
-          text-align: right;
+          top: -3vh;
+          width: 80vw;
+          left: 10vw;
+          text-align: center;
           z-index: 1;
           opacity: 0;
           transition: opacity 0.5s ease;
           transition-delay: 0.5s; /* Add a 5-second delay */
         }
 
-        .Forkrender-text-container.fade-in {
+        .Lightrender-text-container.fade-in {
           opacity: 1;
         }
 
-        .Forkrender-subtitle {
-          font-size: 2.2vw;
+        .Lightrender-subtitle {
+          font-size: 6vw;
           font-weight: 700;
           color: ${offBlack};
-          line-height: 1.2; /* Add the line-height property */
+          margin-top: 3vh;
+
+          line-height: 1.2; /* Set the desired line height value */
         }
 
-        .Forkrender-text-tittle {
-          font-size: 1.6vw;
+        .Lightrender-text-tittle {
+          font-size: 3.5vw;
           font-weight: 800;
           color: ${offBlack};
+
+          margin-bottom: -1vw;
         }
 
         .text-details {
-          font-size: 1.4vw;
+          font-size: 3.8vw;
           font-weight: 300;
           color: ${offBlack};
         }
@@ -118,4 +115,4 @@ const Forkrender = () => {
   );
 };
 
-export default Forkrender;
+export default Lightrendermob;

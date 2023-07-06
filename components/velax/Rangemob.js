@@ -82,7 +82,7 @@ const Rangemob = () => {
         <h2>Vai longe.</h2>
         <p>
           A bateria da Vela pesa apenas 2kg e tem autonomia de até 40km. Com
-          apenas uma recarga você pedala a cidade de ponta a ponta.
+          apenas uma carga você pedala a cidade de ponta a ponta.
         </p>
       </div>
 
@@ -156,7 +156,7 @@ const Rangemob = () => {
           margin-left: 10vw;
           margin-top: 8vh;
           margin-right: 4vw;
-          width: 80vw;
+          width: 75vw;
           font-size: 4vw;
           font-weight: 300;
         }

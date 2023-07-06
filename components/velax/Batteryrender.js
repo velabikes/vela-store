@@ -6,15 +6,15 @@ const Batteryrender = () => {
     <div className="Batteryrender">
       <div className="Batteryrender-text-container">
         <p className="Batteryrender-text">
-          <span className="Batteryrender-text-small">Garantia</span> <br />
+          <span className="Batteryrender-text-small">BATERIA</span> <br />
           <br />
-          <span className="Batteryrender-text-large">2 ANOS</span>
+          <span className="Batteryrender-text-large">2 ANOS DE GARANTIA</span>
         </p>
         <p className="Batteryrender-text-details">
-          A maior garantia do mercado contra defeito de fabrição. Toda a
+          A maior garantia do mercado contra defeito de fabricação. Toda a
           segurança e confiabilidade que você precisa para deixar o carro em
           casa. <br></br>
-          <br></br>Um projeto da Vela.
+          <br></br>Um projeto Vela.
         </p>
       </div>
       <img
@@ -34,7 +34,7 @@ const Batteryrender = () => {
         .Batteryrender-text-container {
           position: relative;
           text-align: left;
-          width: 32vw;
+          width: 40vw;
           font-weight: 500;
           color: ${offWhite};
           margin-top: 10%;
@@ -52,18 +52,20 @@ const Batteryrender = () => {
         }
 
         .Batteryrender-text-small {
-          font-size: 2vw;
-          margin-bottom: 10em;
-        }
-
-        .Batteryrender-text-large {
-          font-size: 4vw;
+          font-size: 1.6vw;
           font-weight: 800;
         }
 
+        .Batteryrender-text-large {
+          font-size: 2.2vw;
+          font-weight: 700;
+        }
+
         .Batteryrender-text-details {
-          font-size: 1.5vw;
-          font-weight: 400;
+          font-size: 1.4vw;
+          font-weight: 300;
+          margin-top: 2vw;
+          margin-bottom: 2vw;
         }
       `}</style>
     </div>

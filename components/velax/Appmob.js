@@ -17,6 +17,7 @@ const Appmob = () => {
         .Appmob {
           position: relative;
           height: 100%;
+          background-color: #ebbd99;
 
         }
 
@@ -24,6 +25,7 @@ const Appmob = () => {
           object-fit: cover;
           width: 100vw;
           height: auto;
+          margin-bottom: 10vh;
         }
 
         }

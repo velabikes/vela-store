@@ -47,6 +47,8 @@ import {
 import Appmob from "../components/velax/Appmob";
 import AppTitle from "../components/velax/AppTitle";
 import AppTitlemob from "../components/velax/AppTitlemob";
+import Lightrender from "../components/velax/Lightrender";
+import Lightrendermob from "../components/velax/Lightrendermob";
 
 const VelaX = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -176,6 +178,12 @@ const VelaX = () => {
         <Lightsmob className="Lightmob" />
       ) : (
         <Lights className="Lightsmob" />
+      )}
+
+      {isMobile ? (
+        <Lightrendermob className="Lightrendermob" />
+      ) : (
+        <Lightrender className="Lightrender" />
       )}
 
       {isMobile ? <Forkmob className="forkmob" /> : <Fork className="fork" />}

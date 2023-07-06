@@ -36,7 +36,7 @@ const AppTitle = () => {
           margin-left: 25vw;
         }
         .title {
-          font-size: 2vw;
+          font-size: 2.5vw;
           font-weight: 500;
           margin-bottom: vh;
         }

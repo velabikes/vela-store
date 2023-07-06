@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import VisibilitySensor from "react-visibility-sensor";
 import { offBlack } from "../../style/colors";
+
 const Boostmob = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [playVideo, setPlayVideo] = useState(false);
@@ -52,10 +53,8 @@ const Boostmob = () => {
         >
           <p className="Boostmob-text-tittle">BOOST</p>
           <p className="Boostmob-subtitle">
-            <p className="subtittle-lineheight">
-              Potência máxima <br />
-              com um toque.
-            </p>
+            POTÊNCIA MÁXIMA <br />
+            COM UM TOQUE
           </p>
           <p className="text-details">
             Além desta função, o botão também aciona o motor para partida nos
@@ -85,8 +84,6 @@ const Boostmob = () => {
           margin-left: 10vw;
           text-align: left;
           z-index: 1;
-    
-      
         }
 
         .Boostmob-text-container.fade-in {
@@ -94,21 +91,17 @@ const Boostmob = () => {
         }
 
         .Boostmob-subtitle {
-          font-size: 8vw;
+          font-size: 6vw;
           font-weight: 700;
           color: ${offBlack};
-          line-height: 1.2em; /* Adjust the line height value as needed */
-        }
-        
-   
+          margin-top: 3vh;
+          line-height: 1.2; /* Adjust the line height value as needed */
         }
 
         .Boostmob-text-tittle {
           font-size: 3.5vw;
           font-weight: 800;
           color: ${offBlack};
-       
-
           margin-bottom: -1vw;
         }
 
@@ -116,9 +109,6 @@ const Boostmob = () => {
           font-size: 3.8vw;
           font-weight: 300;
           color: ${offBlack};
-        }
-
-       
         }
       `}</style>
     </div>

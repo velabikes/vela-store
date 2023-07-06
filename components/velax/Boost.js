@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import VisibilitySensor from "react-visibility-sensor";
 import { offBlack } from "../../style/colors";
+
 const Boost = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [playVideo, setPlayVideo] = useState(false);
@@ -51,10 +52,10 @@ const Boost = () => {
         <div className={`Boost-text-container ${isVisible ? "fade-in" : ""}`}>
           <p className="Boost-text-tittle">BOOST</p>
           <p className="Boost-subtitle">
-            <p>Potência com um toque.</p>{" "}
+            POTÊNCIA MÁXIMA <br />
+            COM UM TOQUE
           </p>
           <p className="text-details">
-            {" "}
             Além desta função, o botão também aciona o motor para partida nos
             modos conhecidos como start-assist e walk-assist.
           </p>
@@ -96,13 +97,13 @@ const Boost = () => {
           font-weight: 700;
           color: ${offBlack};
           margin-top: 3vh;
+          line-height: 1.2; /* Adjust the line height value as needed */
         }
 
         .Boost-text-tittle {
           font-size: 1.6vw;
           font-weight: 800;
           color: ${offBlack};
-
           margin-bottom: -1vw;
         }
 
