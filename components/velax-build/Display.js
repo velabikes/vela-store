@@ -54,6 +54,7 @@ const Display = ({ model: { frame, size, color, tire } }) => {
           .Display {
             position: relative;
             height: 80vh;
+            max-width: 70vw;
           }
           .image-container {
             overflow: hidden;
