@@ -59,11 +59,12 @@ const Forkrendermob = () => {
       <style jsx>{`
         .Forkrender {
           position: relative;
-          height: 100vh;
+          height: 90vh;
         }
 
         .Forkrender-video {
           object-fit: cover;
+          overflow: hidden;
           margin-top: 0vh;
           margin-bottom: 0vw;
           width: 100vw;
