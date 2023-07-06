@@ -72,7 +72,7 @@ const options = {
     {
       label: "Quadro baixo",
       option: "Baixo",
-      sizes: ["BP", "BM"],
+      sizes: ["BM"],
     },
     {
       label: "Quadro reto",
