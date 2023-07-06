@@ -16,6 +16,11 @@ const Footer = () => (
             <h3>Loja</h3>
             <ul className="store-items">
               <li>
+                <Link href="/velax">
+                  <a>Vela X</a>
+                </Link>
+              </li>
+              <li>
                 <Link href="/vela">
                   <a>Vela 2</a>
                 </Link>

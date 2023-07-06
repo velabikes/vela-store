@@ -12,7 +12,7 @@ const ScrollImageContainer = () => {
   });
 
   const [currentImage, setCurrentImage] = useState(0);
-  const imageCount = 285; // Replace this with the number of images in your sequence
+  const imageCount = 299; // Replace this with the number of images in your sequence
 
   const lastFrameTimeRef = useRef(0);
   const previousImageRef = useRef(null);
@@ -22,7 +22,7 @@ const ScrollImageContainer = () => {
       if (inView) {
         const scrollPercentage =
           window.scrollY / (document.body.scrollHeight - window.innerHeight);
-        const scrollSpeed = 3.8; // Ajuste esse valor para aumentar a velocidade de rolagem
+        const scrollSpeed = 3.9; // Ajuste esse valor para aumentar a velocidade de rolagem
         const currentImageIndex = Math.floor(
           scrollPercentage * imageCount * scrollSpeed
         );
@@ -144,7 +144,6 @@ const ScrollImageContainer = () => {
           height: "100vh",
           width: "100%",
           paddingTop: "5vh",
-          
         }} // adjust the height and width here
       />
     </div>

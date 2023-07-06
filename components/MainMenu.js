@@ -6,6 +6,11 @@ const MainMenu = () => (
     <h2>Menu</h2>
     <ul className="items">
       <li>
+        <Link href="/velax">
+          <a>Vela X</a>
+        </Link>
+      </li>
+      <li>
         <Link href="/vela">
           <a>Vela 2</a>
         </Link>

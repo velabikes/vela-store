@@ -27,7 +27,7 @@ const Display = ({ model: { frame, size, color, tire } }) => {
           flex: 1;
           position: fixed;
           z-index: 5;
-          width: 66vw;
+          width: 100vw;
         }
         h1 {
           color: ${darkGray};

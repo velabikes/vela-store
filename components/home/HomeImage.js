@@ -1,12 +1,12 @@
 const HomeImage = () => (
   <div>
     <img
-      src="/images/Vela_Bikes_Quadro_Baixo_Azul_Home_Banner_Main_Desktop.webp"
+      src="/images/velax-homebanner.webp"
       className="desktop"
       alt="Vela 2 - Vela Bikes"
     />
     <img
-      src="/images/Vela_Bikes_Quadro_Baixo_Azul_Home_Banner_Main_Mobile.webp"
+      src="/images/velax-homebannermob.webp"
       className="mobile"
       alt="Smartbike - Vela Bikes"
     />
