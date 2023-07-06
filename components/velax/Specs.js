@@ -21,10 +21,11 @@ const Specs = ({ maskSize }) => {
               </td>
             </tr>
             <tr className="tr-specs">
-              <td className="td-specs">Garfo Amortecedor</td>
+              <td className="td-specs">Garfo</td>
               <td className="td-specs">
-                Hidráulica com calibragem pneumática, bengalas e crown em liga
-                de alumínio, amortecimento com 100mm de curso e peso 1.730g.
+                Amortecedor hidráulico com suspensão pneumática, bengalas e
+                crown em liga de alumínio, amortecimento com 100mm de curso e
+                peso 1.730g.
               </td>
             </tr>
             <tr className="tr-specs">
