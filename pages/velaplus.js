@@ -67,7 +67,7 @@ const VelaPlus = () => {
             hoverColor={"#DCF5EB"}
             textColor={offBlack}
             title="1. O que eu preciso para contratar a assinatura do plano?"
-            content="Basta você ser um cliente Vela e possuir um dos modelos que já fabricamos: Vela 1, Vela S e Vela 2. Também vamos precisar de alguns documentos, como nota fiscal e comprovante de residência para análise e elaboração do contrato com os termos."
+            content="Basta você ser um cliente Vela e possuir um dos modelos que já fabricamos: Vela 1, Vela S, Vela 2 e Vela X. Também vamos precisar de alguns documentos, como nota fiscal e comprovante de residência para análise e elaboração do contrato com os termos."
           />
           <Accordion
             color={white}
@@ -96,7 +96,7 @@ Para mais informações a respeito dos dispositivos SmartTag, acesse o link: htt
             color={white}
             hoverColor={"#DCF5EB"}
             textColor={offBlack}
-            title="5.Já sou assinante Vela+, como posso usufruir do Novo Plano Vela+? "
+            title="5. Já sou assinante Vela+, como posso usufruir do Novo Plano Vela+? "
             content="Os benefícios acrescentados no Novo Plano Vela+ já estão disponíveis para os atuais assinantes, é só começar a usar. Para agendar a instalação do localizador AirTag ou SmartTag, basta fazer a renovação e adicionar mais um ano de benefícios."
           />
           <Accordion
