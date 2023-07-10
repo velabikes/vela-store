@@ -426,7 +426,7 @@ const Vela = () => (
             </tr>
             <tr>
               <td>Motor</td>
-              <td>350W traseiro com frenagem regenerativa | Bafang </td>
+              <td>350W traseiro. </td>
             </tr>
             <tr>
               <td>Garantia</td>

@@ -148,7 +148,8 @@ const Specs = ({ maskSize }) => {
             <tr className="tr-specs">
               <td className="td-specs">Motor</td>
               <td className="td-specs">
-                550W, traseiro e com frenagem eletromagnética. 45Nm de torque.{" "}
+                550-850W, traseiro e com frenagem eletromagnética. 45Nm de
+                torque.{" "}
               </td>
             </tr>
             <tr className="tr-specs">
