@@ -4,7 +4,9 @@ export default gql`
   fragment CheckoutFragment on Checkout {
     id
     webUrl
-    totalTax
+    totalTax {
+      amount
+    }
     subtotalPrice {
       amount
     }
@@ -14,7 +16,9 @@ export default gql`
     createdAt
     completedAt
     ready
-    paymentDue
+    paymentDue {
+      amount
+    }
     requiresShipping
     shippingAddress {
       address1
@@ -40,7 +44,9 @@ export default gql`
         amount
       }
       currencyCode
-      totalRefunded
+      totalRefunded {
+        amount
+      }
       customerUrl
     }
     lineItems(first: 250) {
@@ -54,7 +60,9 @@ export default gql`
             image {
               url
             }
-            price
+            price {
+              amount
+            }
           }
           quantity
         }

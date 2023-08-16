@@ -5,8 +5,8 @@ import ProductTeaser from "./ProductTeaser";
 const ProductListLoading = () => (
   <>
     <ProductTeaser product={{}} key={1} />
-    <ProductTeaser product={{}} key={1} />
-    <ProductTeaser product={{}} key={1} />
+    <ProductTeaser product={{}} key={2} />
+    <ProductTeaser product={{}} key={3} />
   </>
 );
 

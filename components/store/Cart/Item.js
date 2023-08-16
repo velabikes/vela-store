@@ -33,7 +33,9 @@ const CartItem = ({ item, handleLessClick }) => (
               item.node.variant.title.replace(/\s*\[.*?\]/g, "")}
           </small>
           <div>
-            <Price value={item.node.variant && item.node.variant.price} />
+            <Price
+              value={item.node.variant && item.node.variant.price.amount}
+            />
           </div>
         </td>
       </tr>

@@ -1,14 +1,13 @@
-
 /*
   Query to get Checkout object
 */
-import { graphql } from 'react-apollo'
-import gql from 'graphql-tag'
-import { compose } from 'recompose'
-import withCustomerAccessToken from './withCustomerAccessToken'
+import { graphql } from "react-apollo";
+import gql from "graphql-tag";
+import { compose } from "recompose";
+import withCustomerAccessToken from "./withCustomerAccessToken";
 
 const customer = gql`
-  query($customerAccessToken: String!) {
+  query ($customerAccessToken: String!) {
     customer(customerAccessToken: $customerAccessToken) {
       firstName
       lastName
@@ -33,30 +32,32 @@ const customer = gql`
             name
             orderNumber
             statusUrl
-            totalPrice
+            totalPrice {
+              amount
+            }
             customerUrl
           }
         }
       }
     }
   }
-`
+`;
 
 export default compose(
   withCustomerAccessToken,
   graphql(customer, {
-    alias: 'withCustomerAccessToken',
+    alias: "withCustomerAccessToken",
 
-    options (props) {
+    options(props) {
       return {
         variables: {
-          id: props.customerAccessToken
-        }
-      }
+          id: props.customerAccessToken,
+        },
+      };
     },
 
-    props ({ data: { customer } }) {
-      return { customer }
-    }
+    props({ data: { customer } }) {
+      return { customer };
+    },
   })
-)
+);

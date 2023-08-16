@@ -82,48 +82,50 @@ ProductForm.propTypes = {
   hasOptions: PropTypes.any,
 };
 
-const handleAddToCartClick = ({
-  checkoutLineItemsAdd,
-  checkoutId,
-  setAddToCartLoading,
-  product,
-  hasOptions,
-  selectedVariant,
-  dispatch,
-}) => async (e) => {
-  const variant = hasOptions
-    ? selectedVariant.edges[0]
-    : product.variants.edges[0];
-  setAddToCartLoading(true);
-  await checkoutLineItemsAdd({
-    variables: {
-      checkoutId: checkoutId,
-      lineItems: [
-        {
-          variantId: variant.node.id,
-          quantity: 1,
-        },
-      ],
-    },
-  });
+const handleAddToCartClick =
+  ({
+    checkoutLineItemsAdd,
+    checkoutId,
+    setAddToCartLoading,
+    product,
+    hasOptions,
+    selectedVariant,
+    dispatch,
+  }) =>
+  async (e) => {
+    const variant = hasOptions
+      ? selectedVariant.edges[0]
+      : product.variants.edges[0];
+    setAddToCartLoading(true);
+    await checkoutLineItemsAdd({
+      variables: {
+        checkoutId: checkoutId,
+        lineItems: [
+          {
+            variantId: variant.node.id,
+            quantity: 1,
+          },
+        ],
+      },
+    });
 
-  ReactGA.plugin.require("ec");
-  ReactGA.plugin.execute("ec", "addProduct", {
-    id: variant.node.id,
-    name: product.title,
-    price: variant.node.price,
-    quantity: 1,
-  });
-  ReactGA.plugin.execute("ec", "setAction", "add");
-  ReactGA.event({
-    category: "UX",
-    action: "click",
-    label: "add to cart",
-  });
+    ReactGA.plugin.require("ec");
+    ReactGA.plugin.execute("ec", "addProduct", {
+      id: variant.node.id,
+      name: product.title,
+      price: variant.node.price,
+      quantity: 1,
+    });
+    ReactGA.plugin.execute("ec", "setAction", "add");
+    ReactGA.event({
+      category: "UX",
+      action: "click",
+      label: "add to cart",
+    });
 
-  setAddToCartLoading(false);
-  dispatch(toggleDrawer("CART"));
-};
+    setAddToCartLoading(false);
+    dispatch(toggleDrawer("CART"));
+  };
 
 export default compose(
   withState("isAddToCartLoading", "setAddToCartLoading", false),
