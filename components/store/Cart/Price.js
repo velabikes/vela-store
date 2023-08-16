@@ -13,14 +13,14 @@ const CartPrice = ({ checkout }) => (
             <label>Total:</label>
           </td>
           <td className="price-container">
-            <Price value={checkout.totalPrice} />
+            <Price value={checkout.totalPrice.amount} />
           </td>
         </tr>
       </tbody>
       <tr>
         <td></td>
         <td className="installment">
-          <InstallmentPrice count={12} value={checkout.totalPrice} />
+          <InstallmentPrice count={12} value={checkout.totalPrice.amount} />
         </td>
       </tr>
     </table>

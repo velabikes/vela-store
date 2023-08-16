@@ -5,8 +5,12 @@ export default gql`
     id
     webUrl
     totalTax
-    subtotalPrice
-    totalPrice
+    subtotalPrice {
+      amount
+    }
+    totalPrice {
+      amount
+    }
     createdAt
     completedAt
     ready
@@ -23,10 +27,18 @@ export default gql`
       id
       processedAt
       orderNumber
-      subtotalPrice
-      totalShippingPrice
-      totalTax
-      totalPrice
+      subtotalPrice {
+        amount
+      }
+      totalShippingPrice {
+        amount
+      }
+      totalTax {
+        amount
+      }
+      totalPrice {
+        amount
+      }
       currencyCode
       totalRefunded
       customerUrl

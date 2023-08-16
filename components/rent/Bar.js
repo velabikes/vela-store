@@ -20,9 +20,7 @@ const Bar = ({ onContinue, extra, step, checkout, model, activeButton }) => {
           Entrega de
           <br /> 4 até 8 semanas
         </div>
-        <p>
-          A Vela é um produto sob medida e artesanal.
-        </p>
+        <p>A Vela é um produto sob medida e artesanal.</p>
       </div>
       <div className="bottom">
         <div className="left">
@@ -55,10 +53,10 @@ const Bar = ({ onContinue, extra, step, checkout, model, activeButton }) => {
               <Price
                 value={
                   model.time === "Anual"
-                    ? checkout.totalPrice / 365
+                    ? checkout.totalPrice.amount / 365
                     : model.time === "Semestral"
-                    ? checkout.totalPrice / 180
-                    : checkout.totalPrice / 90
+                    ? checkout.totalPrice.amount / 180
+                    : checkout.totalPrice.amount / 90
                 }
                 period={"/dia"}
               />

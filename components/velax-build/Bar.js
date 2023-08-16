@@ -38,7 +38,9 @@ const Bar = ({ onContinue, extra, step, checkout }) => {
                 }
               />
             )}
-            {step === 4 && "Total:" && <Price value={checkout.totalPrice} />}
+            {step === 4 && "Total:" && (
+              <Price value={checkout.totalPrice.amount} />
+            )}
           </h2>
         </div>
         <div className="actions">
