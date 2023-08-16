@@ -17,8 +17,8 @@
     "type": "git",
     "url": "git+https://github.com/velabikes/vela-store.git"
   },
-  "author": "",
   "license": "ISC",
+  "author": "",
   "bugs": {
     "url": "https://github.com/velabikes/vela-store/issues"
   },
