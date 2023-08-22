@@ -283,13 +283,58 @@ module.exports = async (req, res) => {
           "SP, 05408-002, Brasil",
         ],
         phone: "(11) 9.6541-7538",
-        extra: "Essa é uma oficina recomendada pelos nossos clientes.",
+        extra: [
+          "Essa é uma oficina recomendada pelos nossos clientes, está aberta de segunda à sexta das 9 às 19h e, aos sábados, das 9 às 13:30.",
+        ],
+
         open: true,
         pos: {
           lat: -23.562933,
           lng: -46.69088,
         },
         googlePlace: "ChIJcyCY9qFXzpQREiC7QlNLwDY",
+        type: ["service"],
+      },
+      {
+        name: "MagaBike",
+        address: [
+          "R. Padre Artur Somensi, 103",
+          "Vila Madalena",
+          "São Paulo - SP",
+          "SP, 05443-030 Brasil",
+        ],
+        phone: "(11) 98471-9693",
+        extra: [
+          "Essa é uma oficina recomendada pelos nossos clientes, está aberta de segunda à sexta das 9 às 18h e, aos sábados, das 9 às 15h.",
+        ],
+
+        open: true,
+        pos: {
+          lat: -23.553633,
+          lng: -46.697323,
+        },
+        googlePlace: "ChIJY38hqblXzpQRlExwKXFwHqY",
+        type: ["service"],
+      },
+      {
+        name: "Pedalla",
+        address: [
+          "Rua Solon, 795",
+          "Bom Retiro",
+          "São Paulo - SP",
+          "SP, 01127-010 Brasil",
+        ],
+        phone: "(11) 9.7386-6788",
+        extra: [
+          "Essa é uma oficina recomendada pelos nossos clientes, está aberta de segunda à sexta das 8:30 às 17h e, aos sábados, das 9:30 às 12:00.",
+        ],
+
+        open: true,
+        pos: {
+          lat: -23.525521,
+          lng: -46.643825,
+        },
+        googlePlace: "ChIJHQLVA29YzpQReEcaDlfIA_8",
         type: ["service"],
       },
       {
