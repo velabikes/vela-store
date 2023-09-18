@@ -46,7 +46,7 @@ module.exports = async (req, res) => {
           lng: -47.563659,
         },
         googlePlace: "ChIJx3pF7n7ax5QRFVQG0nTnhZ0",
-        type: ["store", "charger", "service"],
+        type: ["service"],
       },
       {
         name: "Barcellos Ipanema",
@@ -526,6 +526,51 @@ module.exports = async (req, res) => {
         },
         googlePlace: "ChIJUb-kvoJZzpQRcKWYxtrRZY0",
         type: ["service", "charger"],
+      },
+      {
+        name: "Bike Tools Service & Shop",
+        address: [
+          "Av. Albino J. B. de Oliveira, 1823",
+          "Jd. Afife, Campinas",
+          "SP, 13084-551, Brasil",
+        ],
+        phone: "(19) 99706-9117",
+        pos: {
+          lat: -22.822273,
+          lng: -47.080792,
+        },
+        googlePlace: "ChIJcX0dG8vGyJQRhmsONaVAJto",
+        type: ["service"],
+      },
+      {
+        name: "Outplay BiKe",
+        address: [
+          "Rua Domingos Rodrigues, 162",
+          "Lapa, Campinas",
+          "SP, 05075-000, Brasil",
+        ],
+        phone: "(11) 91482-7272",
+        pos: {
+          lat: -23.519701,
+          lng: -46.707874,
+        },
+        googlePlace: "ChIJGboBv2H4zpQRjCOR9BlOsP4",
+        type: ["service"],
+      },
+      {
+        name: "JC Bikes SP",
+        address: [
+          "Av. Cruzeiro do Sul, 2635",
+          "Santana, São Paulo",
+          "SP, 02031-000, Brasil",
+        ],
+        phone: "(11) 99747-5470",
+        pos: {
+          lat: -23.507874,
+          lng: -46.625151,
+        },
+        googlePlace: "ChIJn9lYZoJYzpQRrWnR96kotfs",
+        type: ["service"],
       },
       {
         name: "Fábrica Vela Brasil",
