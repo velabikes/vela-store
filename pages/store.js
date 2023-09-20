@@ -22,7 +22,7 @@ const Store = ({
   const filteredProducts = products?.filter((i) =>
     i.node.title.includes(filter)
   );
-  const isBf22 = router.asPath == "/loja/bf22";
+  const isLiquidacao = router.asPath == "/loja/liquidacao";
 
   return (
     <PaddedView>
@@ -34,7 +34,7 @@ const Store = ({
           <MainHeader title={collection && collection.title} />
           <h2>{collection && collection.descriptionHtml}</h2>
         </div>
-        {isBf22 && (
+        {isLiquidacao && (
           <>
             <div className="filter-wrapper">
               <div className="filter-container">
@@ -102,12 +102,12 @@ const Store = ({
 
 const descriptionDictionary = {
   [null]:
-    "As unidades da Black Friday, incluindo as unidades de Outlet e Seminovas, serão entregues com baterias, acessórios novos e protegidas sob garantia completa fornecida pela própria Vela: 1 ano para todos os componentes, 2 anos para a bateria, 3 anos para o motor e 5 anos para o quadro.",
+    "As unidades da Liquidação, incluindo as unidades de Outlet e Seminovas, serão entregues atualizadas para Vela 2 modeo 2024, com 50% mais potêcnia (550W), velocidade final de 32km/h com baterias, acessórios novos e protegidas sob garantia completa fornecida pela própria Vela: 1 ano para todos os componentes, 2 anos para a bateria e motor, 3 anos para o quadro.",
   Outlet:
-    "Unidades novas que podem possuir algum detalhe estético irregular, normalmente um arranhão na pintura ou marca gerada durante alguma etapa da montagem. Elas não atendem nosso padrão de qualidade para serem vendidas como novas, mas tem perfeitas condições de funcionamento e incluem garantia completa fornecida pela própria Vela: 1 ano para todos os componentes, 2 anos para a bateria, 3 anos para o motor e 5 anos para o quadro.",
+    "Unidades novas que podem possuir algum detalhe estético irregular, normalmente um arranhão na pintura ou marca gerada durante alguma etapa da montagem. Elas não atendem nosso padrão de qualidade para serem vendidas como novas, mas tem perfeitas condições de funcionamento e incluem todas as atualização 2024 e garantia completa fornecida pela própria Vela: 1 ano para todos os componentes, 2 anos para a bateria e motor, 3 anos para o quadro.",
   Seminova:
-    "Unidades que já rodaram alguns quilômetros além do teste padrão da Vela. A origem delas pode variar desde bikes que eram da nossa frota de experimentação, test-ride, vitrine, até unidades da Vela 1 que recebemos como base de troca na compra de uma Vela 2, por exemplo. Também incluem garantia completa fornecida pela própria Vela: 1 ano para todos os componentes, 2 anos para a bateria, 3 anos para o motor e 5 anos para o quadro.",
-  Nova: "Poucas unidades 100% novas que finalizamos nas últimas semanas. Não possuem detalhes ou marcas estéticas irregulares, mas também querem participar dessa grande festa! Incluem garantia completa fornecida pela própria Vela: 1 ano para todos os componentes, 2 anos para a bateria, 3 anos para o motor e 5 anos para o quadro.",
+    "Unidades que já rodaram alguns quilômetros além do teste padrão da Vela. A origem delas pode variar desde bikes que eram da nossa frota de experimentação, test-ride, vitrine, até unidades que recebemos como base de troca na compra de uma nova uniadde, por exemplo. Também incluem todas as atualizações 2024 e garantia completa fornecida pela própria Vela: 1 ano para todos os componentes, 2 anos para a bateria e motor, 3 anos para o quadro.",
+  Nova: "Poucas unidades 100% novas que finalizamos nas últimas semanas. Não possuem detalhes ou marcas estéticas irregulares, mas também querem participar dessa grande festa! Incluem garantia completa fornecida pela própria Vela: 1 ano para todos os componentes, 2 anos para a bateria e motor, 3 anos para o quadro.",
 };
 
 export default compose(
