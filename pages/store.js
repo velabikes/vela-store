@@ -30,12 +30,16 @@ const Store = ({
         <Head>
           <title>{collection && collection.title} - Vela Bikes</title>
         </Head>
+
         <div className="title">
           <MainHeader title={collection && collection.title} />
           <h2>{collection && collection.descriptionHtml}</h2>
         </div>
         {isLiquidacao && (
           <>
+            <div className="banner">
+              <img src="/images/banner-liquidacao.png" alt="Banner da página" />
+            </div>
             <div className="filter-wrapper">
               <div className="filter-container">
                 <Button
@@ -75,6 +79,7 @@ const Store = ({
         )}
         <div />
         <ProductList
+          className="list"
           products={filter ? filteredProducts : products}
           loading={isCollectionLoading}
         />
@@ -90,9 +95,16 @@ const Store = ({
             margin-top: 0.8em;
           }
           .filter-description {
-            margin: 1rem 0;
-            font-size: 0.8rem;
-            max-width: 700px;
+            margin-top: 1em;
+            margin-bottom: 3em;
+            margin-left: 1em;
+            font-size: 1rem;
+          }
+          .banner {
+            margin-bottom: 2em;
+          }
+          .list {
+            margin-top: 2em;
           }
         `}
       </style>
@@ -102,7 +114,7 @@ const Store = ({
 
 const descriptionDictionary = {
   [null]:
-    "As unidades da Liquidação, incluindo as unidades de Outlet e Seminovas, serão entregues atualizadas para Vela 2 modeo 2024, com 50% mais potêcnia (550W), velocidade final de 32km/h com baterias, acessórios novos e protegidas sob garantia completa fornecida pela própria Vela: 1 ano para todos os componentes, 2 anos para a bateria e motor, 3 anos para o quadro.",
+    "As unidades da Liquidação, incluindo as unidades de Outlet e Seminovas, serão entregues atualizadas para Vela 2 modeo 2024, com 50% mais potêcnia (550W), velocidade final de 32km/h com baterias novas, acessórios novos e protegidas sob garantia completa fornecida pela própria Vela: 1 ano para todos os componentes, 2 anos para a bateria e motor, 3 anos para o quadro.",
   Outlet:
     "Unidades novas que podem possuir algum detalhe estético irregular, normalmente um arranhão na pintura ou marca gerada durante alguma etapa da montagem. Elas não atendem nosso padrão de qualidade para serem vendidas como novas, mas tem perfeitas condições de funcionamento e incluem todas as atualização 2024 e garantia completa fornecida pela própria Vela: 1 ano para todos os componentes, 2 anos para a bateria e motor, 3 anos para o quadro.",
   Seminova:

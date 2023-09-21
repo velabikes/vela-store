@@ -56,6 +56,11 @@ const Footer = () => (
                   <a>Rede</a>
                 </Link>
               </li>
+              <li>
+                <Link href="/loja/liquidacao" as="/loja/liquidacao">
+                  <a>Liquidação 2023</a>
+                </Link>
+              </li>
               {/* <li>
                 <Link href="/test-ride" as="/rede/testride">
                   <a>Test-ride</a>
