@@ -76,15 +76,6 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) => (
             <a>Rede</a>
           </Link>
         </div>
-        <div className="left">
-          <div className="liquidacao">
-            <Link href="/loja/liquidacao" as="/loja/liquidacao">
-              <a style={{ color: "#db9612", fontWeight: "bold" }}>
-                Liquidação 2023
-              </a>
-            </Link>
-          </div>
-        </div>
 
         {/* <div className='left'><Link href='/testride'><a>
           Test-ride

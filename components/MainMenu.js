@@ -36,13 +36,7 @@ const MainMenu = () => (
           <a>Serviços</a>
         </Link>
       </li>
-      <li>
-        <Link href="/loja/liquidacao" as="/loja/liquidacao">
-          <a style={{ color: "#db9612", fontWeight: "bold" }}>
-            Liquidação 2023
-          </a>
-        </Link>
-      </li>
+
       {/* <li><Link href='/network/stores' as='/rede/lojas'><a>
         Nossas lojas
       </a></Link></li> */}

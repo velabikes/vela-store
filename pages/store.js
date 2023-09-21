@@ -96,7 +96,7 @@ const Store = ({
           }
           .filter-wrapper {
             display: flex;
-            flex-direction: column; /* Define a direção como coluna */
+            flex-direction: column;
           }
           .filter-description {
             margin-top: 1em;
