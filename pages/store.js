@@ -94,10 +94,15 @@ const Store = ({
           .title p {
             margin-top: 0.8em;
           }
+          .filter-wrapper {
+            display: flex;
+            flex-direction: column; /* Define a direção como coluna */
+          }
           .filter-description {
             margin-top: 1em;
-            margin-bottom: 3em;
             margin-left: 1em;
+            margin-right: 1em;
+            margin-bottom: 2em;
             font-size: 1rem;
           }
           .banner {
@@ -116,9 +121,9 @@ const descriptionDictionary = {
   [null]:
     "As unidades da Liquidação, incluindo as unidades de Outlet e Seminovas, serão entregues atualizadas para Vela 2 modeo 2024, com 50% mais potêcnia (550W), velocidade final de 32km/h com baterias novas, acessórios novos e protegidas sob garantia completa fornecida pela própria Vela: 1 ano para todos os componentes, 2 anos para a bateria e motor, 3 anos para o quadro.",
   Outlet:
-    "Unidades novas que podem possuir algum detalhe estético irregular, normalmente um arranhão na pintura ou marca gerada durante alguma etapa da montagem. Elas não atendem nosso padrão de qualidade para serem vendidas como novas, mas tem perfeitas condições de funcionamento e incluem todas as atualização 2024 e garantia completa fornecida pela própria Vela: 1 ano para todos os componentes, 2 anos para a bateria e motor, 3 anos para o quadro.",
+    "Unidades novas que podem possuir algum detalhe estético irregular, normalmente um arranhão na pintura ou marca gerada durante alguma etapa da montagem. Elas não atendem nosso padrão de qualidade para serem vendidas como novas, mas têm perfeitas condições de funcionamento e incluem todas as atualizações 2024 e garantia completa fornecida pela própria Vela: 1 ano para todos os componentes, 2 anos para a bateria e motor, 3 anos para o quadro.",
   Seminova:
-    "Unidades que já rodaram alguns quilômetros além do teste padrão da Vela. A origem delas pode variar desde bikes que eram da nossa frota de experimentação, test-ride, vitrine, até unidades que recebemos como base de troca na compra de uma nova uniadde, por exemplo. Também incluem todas as atualizações 2024 e garantia completa fornecida pela própria Vela: 1 ano para todos os componentes, 2 anos para a bateria e motor, 3 anos para o quadro.",
+    "Unidades que já rodaram alguns quilômetros além do teste padrão da Vela. A origem delas pode variar desde bikes que eram da nossa frota de experimentação, test-ride, vitrine, até unidades que recebemos como base de troca na compra de uma nova unidade, por exemplo. Também incluem todas as atualizações 2024 e garantia completa fornecida pela própria Vela: 1 ano para todos os componentes, 2 anos para a bateria e motor, 3 anos para o quadro.",
   Nova: "Poucas unidades 100% novas que finalizamos nas últimas semanas. Não possuem detalhes ou marcas estéticas irregulares, mas também querem participar dessa grande festa! Incluem garantia completa fornecida pela própria Vela: 1 ano para todos os componentes, 2 anos para a bateria e motor, 3 anos para o quadro.",
 };
 
