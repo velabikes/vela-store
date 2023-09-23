@@ -528,6 +528,66 @@ module.exports = async (req, res) => {
         type: ["service", "charger"],
       },
       {
+        name: "Oficina de Bicicletas do CP",
+        address: [
+          "R. Maracá, 429A",
+          "Jabaquara, São Paulo",
+          "SP, 04313-210, Brasil",
+        ],
+        phone: "(11) 91682-5789",
+        pos: {
+          lat: -23.636508,
+          lng: -46.638729,
+        },
+        googlePlace: "ChIJDwKx3eRazpQRBxTufPiqodw",
+        type: ["service"],
+      },
+      {
+        name: "Conserta Bike Santos SP",
+        address: [
+          "R. Joaquim Távola, 46",
+          "Vila Matias, Santos",
+          "SP, 11075-300, Brasil",
+        ],
+        phone: "(13) 98182-4078",
+        pos: {
+          lat: -23.949596,
+          lng: -46.327455,
+        },
+        googlePlace: "ChIJozRpnnYDzpQRNUdHQGMLE2c",
+        type: ["service"],
+      },
+      {
+        name: "JRV Bikes",
+        address: [
+          "Av. Antônio Emmerich, 590",
+          "Vila Cascatinha, São Vicente",
+          "SP, 11390-010, Brasil",
+        ],
+        phone: "(13) 99678-9710",
+        pos: {
+          lat: -23.961183,
+          lng: -46.377156,
+        },
+        googlePlace: "ChIJc0elZqMczpQRoo7dinqfu2w",
+        type: ["service"],
+      },
+      {
+        name: "Conserta Bike Blumenau",
+        address: [
+          "R. Benjamin Constant, 2670 - Loja 9",
+          "Vila Nova, Blumenau",
+          "SC, 89035-100, Brasil",
+        ],
+        phone: "(47) 99189-9930",
+        pos: {
+          lat: -26.905124,
+          lng: -49.092984,
+        },
+        googlePlace: "ChIJp0dBOM4e35QRZoSJ6XMTlgk",
+        type: ["service"],
+      },
+      {
         name: "Bike Tools Service & Shop",
         address: [
           "Av. Albino J. B. de Oliveira, 1823",
