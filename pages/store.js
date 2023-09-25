@@ -40,40 +40,39 @@ const Store = ({
             <div className="banner">
               <img src="/images/banner-liquidacao.png" alt="Banner da página" />
             </div>
-            <div className="filter-wrapper">
-              <div className="filter-container">
-                <Button
-                  onClick={() => setFilter(null)}
-                  secondary={filter === null}
-                  outline
-                >
-                  Todas
-                </Button>
-                <Button
-                  onClick={() => setFilter("Outlet")}
-                  secondary={filter === "Outlet"}
-                  outline
-                >
-                  Outlet
-                </Button>
-                <Button
-                  onClick={() => setFilter("Seminova")}
-                  secondary={filter === "Seminova"}
-                  outline
-                >
-                  Seminovas
-                </Button>
-                <Button
-                  onClick={() => setFilter("Nova")}
-                  secondary={filter === "Nova"}
-                  outline
-                >
-                  Novas
-                </Button>
-              </div>
-              <div className="filter-description">
-                {descriptionDictionary[filter]}
-              </div>
+
+            <div className="filter-container">
+              <Button
+                onClick={() => setFilter(null)}
+                secondary={filter === null}
+                outline
+              >
+                Todas
+              </Button>
+              <Button
+                onClick={() => setFilter("Outlet")}
+                secondary={filter === "Outlet"}
+                outline
+              >
+                Outlet
+              </Button>
+              <Button
+                onClick={() => setFilter("Seminova")}
+                secondary={filter === "Seminova"}
+                outline
+              >
+                Seminovas
+              </Button>
+              <Button
+                onClick={() => setFilter("Nova")}
+                secondary={filter === "Nova"}
+                outline
+              >
+                Novas
+              </Button>
+            </div>
+            <div className="filter-description">
+              {descriptionDictionary[filter]}
             </div>
           </>
         )}
