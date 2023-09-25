@@ -534,7 +534,7 @@ module.exports = async (req, res) => {
           "Jabaquara, São Paulo",
           "SP, 04313-210, Brasil",
         ],
-        phone: "(11) 91682-5789",
+        phone: "(11) 91673-3992",
         pos: {
           lat: -23.636508,
           lng: -46.638729,
