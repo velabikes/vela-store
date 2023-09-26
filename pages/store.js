@@ -97,7 +97,7 @@ const Store = ({
           }
           .banner2 {
             margin-top: 0;
-            margin-bottom: 3em;
+            margin-bottom: 7vh;
           }
           .title {
             display: flex;
@@ -105,18 +105,18 @@ const Store = ({
             justify-content: space-between;
           }
           .title p {
-            margin-top: 10em;
+            margin-top: 15em;
           }
           .filter-wrapper {
             display: flex;
             flex-direction: column;
-            margin-top: 2em;
+            margin-top: 3em;
           }
           .filter-description {
             margin-top: 1em;
             margin-left: 1em;
             margin-right: 1em;
-            margin-bottom: 2em;
+            margin-bottom: 3em;
             font-size: 1rem;
           }
 
