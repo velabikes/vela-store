@@ -76,14 +76,15 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) => (
             <a>Rede</a>
           </Link>
         </div>
-        <div className="left liquidacao">
-          <Link
-            href="https://velabikes.com.br/loja/liquidacao"
-            as="https://velabikes.com.br/loja/liquidacao"
-          >
-            <a target="_blank">Liquidação 2023</a>
-          </Link>
-        </div>
+        {/*   <div className="left liquidacao">
+            <Link
+              href="https://velabikes.com.br/loja/liquidacao"
+              as="https://velabikes.com.br/loja/liquidacao"
+            >
+              <a target="_blank">Liquidação 2023</a>
+            </Link>
+          </div>
+*/}
 
         {/* <div className='left'><Link href='/testride'><a>
           Test-ride
