@@ -76,6 +76,14 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) => (
             <a>Rede</a>
           </Link>
         </div>
+        <div className="left liquidacao">
+          <Link
+            href="https://velabikes.com.br/loja/liquidacao"
+            as="https://velabikes.com.br/loja/liquidacao"
+          >
+            <a target="_blank">Liquidação 2023</a>
+          </Link>
+        </div>
 
         {/* <div className='left'><Link href='/testride'><a>
           Test-ride
@@ -144,7 +152,7 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) => (
       .right :global(a) {
         min-width: 3rem;
       }
-      .blackfriday a {
+      .liquidacao a {
         font-weight: bold;
         color: #db9612;
         opacity: 0;
@@ -174,12 +182,10 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) => (
         .right :global(.CartIcon) {
           fill: ${offWhite};
         }
-        .blackfriday a {
+        .liquidacao a {
           display: flex;
-          margin-top: 5px;
-          padding: 0 1.2rem;
           font-weight: 500;
-          color: ${midGray};
+          color: #db9612;
           opacity: 1;
         }
       }

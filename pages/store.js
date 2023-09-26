@@ -40,6 +40,12 @@ const Store = ({
             <div className="banner">
               <img src="/images/banner-liquidacao.png" alt="Banner da página" />
             </div>
+            <div className="banner2">
+              <img
+                src="/images/banner-liquidacao2.png"
+                alt="Banner2 da página"
+              />
+            </div>
 
             <div className="filter-container">
               <Button
@@ -85,17 +91,26 @@ const Store = ({
       </Main>
       <style jsx>
         {`
+          .banner {
+            margin-top: -3em;
+            height: 60vh;
+          }
+          .banner2 {
+            margin-top: 0;
+            margin-bottom: 3em;
+          }
           .title {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
           }
           .title p {
-            margin-top: 0.8em;
+            margin-top: 10em;
           }
           .filter-wrapper {
             display: flex;
             flex-direction: column;
+            margin-top: 2em;
           }
           .filter-description {
             margin-top: 1em;
@@ -104,9 +119,7 @@ const Store = ({
             margin-bottom: 2em;
             font-size: 1rem;
           }
-          .banner {
-            margin-bottom: 2em;
-          }
+
           .list {
             margin-top: 2em;
           }

@@ -72,9 +72,9 @@ const HomePage = ({ highlight }) => (
       <HomeImage />
       <div className="cta-bf">
         <div className="slogan">
-          <h1>Vela X</h1>
-          <a href="/velax">
-            <Button primary>Conheça</Button>
+          <h1>Aproveite a oportunidade!</h1>
+          <a href="/loja/liquidacao">
+            <Button primary>Unidades disponíveis</Button>
           </a>
         </div>
       </div>
