@@ -9,6 +9,7 @@ import PaddedView from "components/PaddedView";
 import Button from "../components/Button";
 import VelaPoint from "../components/charge/VelaPoint";
 import {
+  darkGray,
   midGray,
   offBlack,
   offWhite,
@@ -169,6 +170,8 @@ const HomePage = ({ highlight }) => (
       .cta :global(button),
       .cta-bf :global(button) {
         margin: 1em 0em 1em 0;
+        background-color: #db9612;
+        color: ${offBlack};
       }
       @media only screen and (min-width: 768px) {
         .cover {
@@ -212,7 +215,7 @@ const HomePage = ({ highlight }) => (
           max-width: 22em;
           padding-top: 2.6em;
           text-align: right;
-          top: 25em;
+          top: 60vh;
           right: 3em;
           background-color: rgba(25, 25, 25, 0.8);
 

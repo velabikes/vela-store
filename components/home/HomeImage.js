@@ -25,7 +25,7 @@ const HomeImage = () => (
       }
       @media only screen and (min-width: 768px) {
         img {
-          margin-top: -5em;
+          margin-top: -3em;
           object-fit: cover;
           width: 100vw;
           height: calc(95);
