@@ -112,7 +112,7 @@ const Store = ({
             margin-left: -4vw;
           }
           .banner2 {
-            margin-bottom: 12vh;
+            margin-bottom: 10vh;
             margin-top: 7vh;
             width: 110%;
             margin-left: -5%;
@@ -130,6 +130,10 @@ const Store = ({
             flex-direction: column;
             margin-top: 3em;
           }
+          .filter-container {
+            margin-top: 5em;
+          }
+
           .filter-description {
             margin-top: 1em;
             margin-left: 1em;
