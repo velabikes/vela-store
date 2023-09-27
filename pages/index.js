@@ -70,14 +70,14 @@ const HomePage = ({ highlight }) => (
     </Head>
     <div className="cover">
       <HomeImage />
-      {/*<div className="cta-bf">
+      <div className="cta-bf">
         <div className="slogan">
           <h1>Aproveite a oportunidade!</h1>
           <a href="/loja/liquidacao">
-            <Button primary>Unidades disponíveis</Button>
+            <Button primary>Ver Unidades</Button>
           </a>
         </div>
-      </div> */}
+      </div>{" "}
     </div>
     <div className="cover">
       <HomeVideo />

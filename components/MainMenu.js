@@ -31,7 +31,7 @@ const MainMenu = () => (
           <a>Peças</a>
         </Link>
       </li>
-      {/*<li>
+      <li>
         <a
           href="/store/liquidacao"
           target="_blank"
@@ -40,7 +40,6 @@ const MainMenu = () => (
           Liquidação 2023
         </a>
       </li>
-*/}
 
       <li>
         <Link href="/store/services" as="/loja/servicos">

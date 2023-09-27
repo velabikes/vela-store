@@ -40,10 +40,24 @@ const Store = ({
         {isLiquidacao && (
           <>
             <div className="banner">
-              <img src="/images/banner1.png" alt="Banner da página" />
+              <img
+                src={
+                  window.innerWidth <= 800
+                    ? "/images/banner1mob.png"
+                    : "/images/banner1.png"
+                }
+                alt="Banner da página"
+              />
             </div>
             <div className="banner2">
-              <img src="/images/banner2.png" alt="Banner2 da página" />
+              <img
+                src={
+                  window.innerWidth <= 800
+                    ? "/images/banner2mob.png"
+                    : "/images/banner2.png"
+                }
+                alt="Banner2 da página"
+              />
             </div>
 
             <div className="filter-container">
@@ -94,10 +108,9 @@ const Store = ({
           }
 
           .banner {
-            margin-top: -13em;
-            margin-left: -10%;
-            min-height: 20vh;
-            width: 120%;
+            margin-top: -10vh;
+            width: 110%;
+            margin-left: -3vw;
           }
           .banner2 {
             margin-bottom: 8vh;
