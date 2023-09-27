@@ -29,9 +29,6 @@ const Store = ({
   return (
     <PaddedView className={pageClassName}>
       <Main>
-        <Head>
-          <title>{collection && collection.title} - Vela Bikes</title>
-        </Head>
         {isLiquidacao && (
           <>
             <div className="banner">
@@ -94,6 +91,9 @@ const Store = ({
           <MainHeader title={collection && collection.title} />
           <h2>{collection && collection.descriptionHtml}</h2>
         </div>
+        <Head>
+          <title>{collection && collection.title} - Vela Bikes</title>
+        </Head>
         <div />
         <ProductList
           className="list"
@@ -112,7 +112,7 @@ const Store = ({
             margin-left: -4vw;
           }
           .banner2 {
-            margin-bottom: 10vh;
+            margin-bottom: 12vh;
             margin-top: 7vh;
             width: 110%;
             margin-left: -5%;
