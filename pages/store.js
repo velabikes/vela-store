@@ -107,7 +107,7 @@ const Store = ({
           }
 
           .banner {
-            margin-top: -5em;
+            margin-top: -1em;
             width: 110%;
             margin-left: -4vw;
           }

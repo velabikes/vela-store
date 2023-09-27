@@ -15,8 +15,6 @@ const MapMarkerIcon = ({ type }) => {
       return <MarkerStoreIcon />;
     case "service":
       return <MarkerServiceIcon />;
-    case "delivery":
-      return <MarkerAreaIcon />;
 
     default:
       return null;

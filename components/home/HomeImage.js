@@ -13,12 +13,12 @@ const HomeImage = () => (
     <style jsx>{`
       img {
         margin-top: -2em;
-        min-height: 50vh;
-        object-fit: cover;
-        object-position: right;
-        object-position: top;
       
-        width: 100%;
+        object-fit: cover;
+        object-position: center;
+        object-position: top;
+        margin-top: -1vh;
+        height: 40vh;
       }
       .desktop {
         display: none;
@@ -27,8 +27,8 @@ const HomeImage = () => (
         img {
           margin-top: -3em;
           object-fit: cover;
-          width: 100vw;
-          height: calc(95);
+          max-width: 100vw;
+          height: 120vh;
           object-position: bottom-right;
         }
         .mobile {

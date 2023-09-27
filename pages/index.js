@@ -147,7 +147,7 @@ const HomePage = ({ highlight }) => (
         color: ${offWhite};
       }
       h1 {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
         color: ${offBlack};
       }
       h2 {

@@ -24,8 +24,7 @@ const typeToLabel = (type) => {
       return "Loja";
     case "service":
       return "Oficina";
-    case "delivery":
-      return "Leva & Traz";
+
     default:
       return "?";
   }
@@ -39,8 +38,6 @@ const typeToIcon = (type) => {
       return <MarkerServiceIcon />;
     case "store":
       return <MarkerStoreIcon />;
-    case "delivery":
-      return <MarkerDeliveryIcon />;
 
     default:
       return "?";
