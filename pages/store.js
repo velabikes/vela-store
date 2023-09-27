@@ -7,7 +7,6 @@ import MainHeader from "components/MainHeader";
 import ProductList from "../components/store/ProductList";
 import PaddedView from "../components/PaddedView";
 import withCollectionByHandle from "../containers/withCollectionByHandle";
-import { midGray, velaRed, white } from "../style/colors";
 import { useState } from "react";
 import Button from "../components/Button";
 
@@ -24,8 +23,11 @@ const Store = ({
   );
   const isLiquidacao = router.asPath == "/loja/liquidacao";
 
+  // Adicione a classe condicional ao elemento raiz
+  const pageClassName = isLiquidacao ? "liquidacao-page" : "";
+
   return (
-    <PaddedView>
+    <PaddedView className={pageClassName}>
       <Main>
         <Head>
           <title>{collection && collection.title} - Vela Bikes</title>
@@ -38,13 +40,10 @@ const Store = ({
         {isLiquidacao && (
           <>
             <div className="banner">
-              <img src="/images/banner-liquidacao.png" alt="Banner da página" />
+              <img src="/images/banner1.png" alt="Banner da página" />
             </div>
             <div className="banner2">
-              <img
-                src="/images/banner-liquidacao2.png"
-                alt="Banner2 da página"
-              />
+              <img src="/images/banner2.png" alt="Banner2 da página" />
             </div>
 
             <div className="filter-container">
@@ -91,13 +90,20 @@ const Store = ({
       </Main>
       <style jsx>
         {`
+          .liquidacao-page {
+          }
+
           .banner {
-            margin-top: -3em;
-            height: 60vh;
+            margin-top: -13em;
+            margin-left: -10%;
+            min-height: 20vh;
+            width: 120%;
           }
           .banner2 {
-            margin-top: 0;
-            margin-bottom: 7vh;
+            margin-bottom: 8vh;
+            margin-top: 7vh;
+            width: 110%;
+            margin-left: -5%;
           }
           .title {
             display: flex;
