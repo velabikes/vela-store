@@ -72,7 +72,7 @@ const HomePage = ({ highlight }) => (
       <HomeImage />
       <div className="cta-bf">
         <div className="slogan">
-          <h1>Aproveite a oportunidade!</h1>
+          <h1>APROVEITE A OPORTUNIDADE</h1>
           <a href="/loja/liquidacao">
             <Button primary>Ver Unidades</Button>
           </a>
@@ -119,7 +119,7 @@ const HomePage = ({ highlight }) => (
       }
       .cta-bf {
         text-align: center;
-        padding: 1rem 3rem 2rem 3rem;
+        padding: 3rem 3rem 2rem 3rem;
         background-color: ${offWhite};
       }
       .cta-bf h3 {
@@ -209,11 +209,11 @@ const HomePage = ({ highlight }) => (
         .cta-bf {
           position: absolute;
           justify-content: right;
-          max-width: 25em;
-          padding-top: 2.5em;
+          max-width: 22em;
+          padding-top: 2.6em;
           text-align: right;
-          top: 4em;
-          right: 4em;
+          top: 25em;
+          right: 3em;
           background-color: rgba(25, 25, 25, 0.8);
 
           z-index: 2;
