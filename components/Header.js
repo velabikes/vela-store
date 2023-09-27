@@ -109,7 +109,7 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) => (
         right: 0;
         z-index: 998;
         width: 100%;
-        height: 50px;
+        height: 55px;
         background-color: ${offBlack};
         opacity: 1;
       }
