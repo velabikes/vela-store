@@ -37,12 +37,7 @@ const LocationsInfo = ({
         ))}
       </div>
     )}
-    {
-      {
-        grudi: <GrudiButton />,
-        default: "",
-      }[type]
-    }
+    {}
     <style jsx>{`
       .tags,
       address {

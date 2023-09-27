@@ -23,7 +23,7 @@ const LocationFilter = ({ onFilterSelect, selectedFilter }) => (
     <style jsx>{`
       div {
         background: ${white};
-        padding: 1rem;
+        padding: 0.8rem;
         white-space: nowrap;
       }
     `}</style>

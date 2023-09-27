@@ -55,21 +55,22 @@ const LocationsMap = ({
       }
       .info {
         position: absolute;
-        top: 1rem;
+        top: 40vh;
         left: 1rem;
         right: 1rem;
         background-color: #f5f5f5;
       }
-      
+
       .filter {
         position: absolute;
-        top: 0rem;
+        top: 1rem;
         left: 50%;
         transform: translateX(-50%);
       }
       @media only screen and (min-width: 768px) {
         .info {
           max-width: 340px;
+          top: 3vh;
         }
         .filter {
           top: auto;
