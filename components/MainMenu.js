@@ -32,11 +32,7 @@ const MainMenu = () => (
         </Link>
       </li>
       <li>
-        <a
-          href="/store/liquidacao"
-          target="_blank"
-          style={{ color: "#db9612" }}
-        >
+        <a href="/loja/liquidacao" target="_blank" style={{ color: "#db9612" }}>
           Liquidação 2023
         </a>
       </li>
