@@ -77,11 +77,8 @@ const Header = ({ isCartOpen, isMenuOpen, children, handleContentClick }) => (
           </Link>
         </div>
         <div className="left liquidacao">
-          <Link
-            href="https://velabikes.com.br/loja/liquidacao"
-            as="https://velabikes.com.br/loja/liquidacao"
-          >
-            <a target="_blank">Liquidação 2023</a>
+          <Link href="https://velabikes.com.br/loja/liquidacao">
+            <a>Liquidação 2023</a>
           </Link>
         </div>
 
