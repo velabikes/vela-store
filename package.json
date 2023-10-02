@@ -53,6 +53,7 @@
     "node-correios": "^2.2.0",
     "node-fetch": "^2.6.1",
     "nprogress": "^0.2.0",
+    "or": "^0.2.0",
     "prismic-javascript": "^2.1.1",
     "prismic-reactjs": "^1.1.0",
     "prop-types": "^15.7.2",
@@ -86,7 +87,7 @@
     "scrollmagic": "^2.0.8",
     "scrollmagic-plugin-gsap": "^1.0.4",
     "styled-components": "^5.2.1",
-    "vercel": "^24.2.5",
+    "vercel": "^32.3.1",
     "vidar": "^0.8.5"
   },
   "devDependencies": {

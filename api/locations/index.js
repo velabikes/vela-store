@@ -528,6 +528,36 @@ module.exports = async (req, res) => {
         type: ["service", "charger"],
       },
       {
+        name: "Baltaz Bicycle",
+        address: [
+          "R. Sen. Jaime N 166 quadra 67 lote 01",
+          "Setor Centro-Oeste, Goiânia",
+          "GO, 74560-500, Brasil",
+        ],
+        phone: "(62) 99871-2196",
+        pos: {
+          lat: -16.65499,
+          lng: -49.274127,
+        },
+        googlePlace: "ChIJT3tT2q7zXpMRqNFoYLYhp8Y",
+        type: ["service"],
+      },
+      {
+        name: "VOLTA e-Bikes",
+        address: [
+          "Rua Lauro Muller, 860, Box C04",
+          "Navegantes, Porto ALegre",
+          "RS, 90240-130, Brasil",
+        ],
+        phone: "(51) 99235-7005",
+        pos: {
+          lat: -29.996727,
+          lng: -51.193204,
+        },
+        googlePlace: "ChIJGwybCPF5GZUR_FtSitkshfw",
+        type: ["service"],
+      },
+      {
         name: "Oficina de Bicicletas do CP",
         address: [
           "R. Maracá, 429A",
