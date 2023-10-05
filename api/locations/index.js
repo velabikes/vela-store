@@ -99,7 +99,7 @@ module.exports = async (req, res) => {
           "Rio Tavares, Florianópolis",
           "SC, 88048-301, Brasil",
         ],
-        phone: "(48) 99912-5999",
+        phone: "(48) 9.9109-9412",
         pos: {
           lat: -27.657597,
           lng: -48.486085,
