@@ -11,6 +11,10 @@ module.exports = async (req, res) => {
           "SP, 05417-030, Brasil",
         ],
         phone: "(11) 4550-4701",
+        extra: [
+          "As oficinas e bicicletarias que fazem parte da nossa rede são estabelecimentos indicados por outros clientes dessa região. A Vela não é responsável pelo serviço, atendimento ou condições de pagamento oferecidas por eles, mas temos um canal de comunicação direto com eles e oferecemos todo o apoio técnico necessário.",
+        ],
+
         pos: {
           lat: -23.566483,
           lng: -46.6870085,
@@ -26,6 +30,10 @@ module.exports = async (req, res) => {
           "PR, 80045-390, Brasil",
         ],
         phone: "(41) 3535-0330",
+        extra: [
+          "As oficinas e bicicletarias que fazem parte da nossa rede são estabelecimentos indicados por outros clientes dessa região. A Vela não é responsável pelo serviço, atendimento ou condições de pagamento oferecidas por eles, mas temos um canal de comunicação direto com eles e oferecemos todo o apoio técnico necessário.",
+        ],
+
         pos: {
           lat: -25.423713,
           lng: -49.24581,
@@ -41,6 +49,10 @@ module.exports = async (req, res) => {
           "SP, 13501-613, Brasil",
         ],
         phone: "(19) 99426-1010",
+        extra: [
+          "As oficinas e bicicletarias que fazem parte da nossa rede são estabelecimentos indicados por outros clientes dessa região. A Vela não é responsável pelo serviço, atendimento ou condições de pagamento oferecidas por eles, mas temos um canal de comunicação direto com eles e oferecemos todo o apoio técnico necessário.",
+        ],
+
         pos: {
           lat: -22.438018,
           lng: -47.563659,
@@ -56,6 +68,10 @@ module.exports = async (req, res) => {
           "RJ, 22081-042, Brasil",
         ],
         phone: "(21) 3489-9368",
+        extra: [
+          "As oficinas e bicicletarias que fazem parte da nossa rede são estabelecimentos indicados por outros clientes dessa região. A Vela não é responsável pelo serviço, atendimento ou condições de pagamento oferecidas por eles, mas temos um canal de comunicação direto com eles e oferecemos todo o apoio técnico necessário.",
+        ],
+
         pos: {
           lat: -22.985616,
           lng: -43.193712,
@@ -71,6 +87,10 @@ module.exports = async (req, res) => {
           "RJ, 24230-541, Brasil",
         ],
         phone: "(21) 2710-8069",
+        extra: [
+          "As oficinas e bicicletarias que fazem parte da nossa rede são estabelecimentos indicados por outros clientes dessa região. A Vela não é responsável pelo serviço, atendimento ou condições de pagamento oferecidas por eles, mas temos um canal de comunicação direto com eles e oferecemos todo o apoio técnico necessário.",
+        ],
+
         pos: {
           lat: -22.912072,
           lng: -43.108285,
@@ -85,6 +105,10 @@ module.exports = async (req, res) => {
           "Adilson Pacheco tem anos de experiência com bicicletas elétricas. Atende em toda Rio de Janeiro.",
         ],
         phone: "(21) 96440-9727",
+        extra: [
+          "As oficinas e bicicletarias que fazem parte da nossa rede são estabelecimentos indicados por outros clientes dessa região. A Vela não é responsável pelo serviço, atendimento ou condições de pagamento oferecidas por eles, mas temos um canal de comunicação direto com eles e oferecemos todo o apoio técnico necessário.",
+        ],
+
         pos: {
           lat: -22.808638,
           lng: -43.328631,
@@ -100,6 +124,10 @@ module.exports = async (req, res) => {
           "SC, 88048-301, Brasil",
         ],
         phone: "(48) 9.9109-9412",
+        extra: [
+          "As oficinas e bicicletarias que fazem parte da nossa rede são estabelecimentos indicados por outros clientes dessa região. A Vela não é responsável pelo serviço, atendimento ou condições de pagamento oferecidas por eles, mas temos um canal de comunicação direto com eles e oferecemos todo o apoio técnico necessário.",
+        ],
+
         pos: {
           lat: -27.657597,
           lng: -48.486085,
@@ -115,6 +143,10 @@ module.exports = async (req, res) => {
           "BA, 41760-000, Brasil",
         ],
         phone: "(71) 3014-6717",
+        extra: [
+          "As oficinas e bicicletarias que fazem parte da nossa rede são estabelecimentos indicados por outros clientes dessa região. A Vela não é responsável pelo serviço, atendimento ou condições de pagamento oferecidas por eles, mas temos um canal de comunicação direto com eles e oferecemos todo o apoio técnico necessário.",
+        ],
+
         pos: {
           lat: -12.988539,
           lng: -38.447918,
@@ -130,6 +162,10 @@ module.exports = async (req, res) => {
           "MG, 30310-080, Brasil",
         ],
         phone: "(31) 99313-4888",
+        extra: [
+          "As oficinas e bicicletarias que fazem parte da nossa rede são estabelecimentos indicados por outros clientes dessa região. A Vela não é responsável pelo serviço, atendimento ou condições de pagamento oferecidas por eles, mas temos um canal de comunicação direto com eles e oferecemos todo o apoio técnico necessário.",
+        ],
+
         pos: {
           lat: -19.942624,
           lng: -43.930013,
@@ -145,6 +181,10 @@ module.exports = async (req, res) => {
           "SC, 88040-5410, Brasil",
         ],
         phone: "(48) 99110-8989",
+        extra: [
+          "As oficinas e bicicletarias que fazem parte da nossa rede são estabelecimentos indicados por outros clientes dessa região. A Vela não é responsável pelo serviço, atendimento ou condições de pagamento oferecidas por eles, mas temos um canal de comunicação direto com eles e oferecemos todo o apoio técnico necessário.",
+        ],
+
         pos: {
           lat: -27.605697,
           lng: -48.52817,
@@ -160,6 +200,10 @@ module.exports = async (req, res) => {
           "MS, 79800-003, Brasil",
         ],
         phone: "(67) 3427-5035",
+        extra: [
+          "As oficinas e bicicletarias que fazem parte da nossa rede são estabelecimentos indicados por outros clientes dessa região. A Vela não é responsável pelo serviço, atendimento ou condições de pagamento oferecidas por eles, mas temos um canal de comunicação direto com eles e oferecemos todo o apoio técnico necessário.",
+        ],
+
         pos: {
           lat: -22.226551,
           lng: -54.801404,
@@ -176,6 +220,7 @@ module.exports = async (req, res) => {
           "SP, 05435-001, Brasil",
         ],
         phone: "(11) 99693-1212",
+
         pos: {
           lat: -23.5486881,
           lng: -46.69166939999999,
@@ -284,7 +329,7 @@ module.exports = async (req, res) => {
         ],
         phone: "(11) 9.6541-7538",
         extra: [
-          "Essa é uma oficina recomendada pelos nossos clientes, está aberta de segunda à sexta das 9 às 19h e, aos sábados, das 9 às 13:30.",
+          "As oficinas e bicicletarias que fazem parte da nossa rede são estabelecimentos indicados por outros clientes dessa região. A Vela não é responsável pelo serviço, atendimento ou condições de pagamento oferecidas por eles, mas temos um canal de comunicação direto com eles e oferecemos todo o apoio técnico necessário.",
         ],
 
         open: true,
@@ -305,7 +350,7 @@ module.exports = async (req, res) => {
         ],
         phone: "(11) 98471-9693",
         extra: [
-          "Essa é uma oficina recomendada pelos nossos clientes, está aberta de segunda à sexta das 9 às 18h e, aos sábados, das 9 às 15h.",
+          "As oficinas e bicicletarias que fazem parte da nossa rede são estabelecimentos indicados por outros clientes dessa região. A Vela não é responsável pelo serviço, atendimento ou condições de pagamento oferecidas por eles, mas temos um canal de comunicação direto com eles e oferecemos todo o apoio técnico necessário.",
         ],
 
         open: true,
@@ -326,7 +371,7 @@ module.exports = async (req, res) => {
         ],
         phone: "(11) 9.7386-6788",
         extra: [
-          "Essa é uma oficina recomendada pelos nossos clientes, está aberta de segunda à sexta das 8:30 às 17h e, aos sábados, das 9:30 às 12:00.",
+          "As oficinas e bicicletarias que fazem parte da nossa rede são estabelecimentos indicados por outros clientes dessa região. A Vela não é responsável pelo serviço, atendimento ou condições de pagamento oferecidas por eles, mas temos um canal de comunicação direto com eles e oferecemos todo o apoio técnico necessário.",
         ],
 
         open: true,
@@ -347,6 +392,10 @@ module.exports = async (req, res) => {
           "ES, 29065-475, Brasil",
         ],
         phone: "(27) 9.9251-5669",
+        extra: [
+          "As oficinas e bicicletarias que fazem parte da nossa rede são estabelecimentos indicados por outros clientes dessa região. A Vela não é responsável pelo serviço, atendimento ou condições de pagamento oferecidas por eles, mas temos um canal de comunicação direto com eles e oferecemos todo o apoio técnico necessário.",
+        ],
+
         open: true,
         pos: {
           lat: -20.2792453,
@@ -364,6 +413,10 @@ module.exports = async (req, res) => {
           "DF, 70670-503, Brasil",
         ],
         phone: "(61) 3344-8042",
+        extra: [
+          "As oficinas e bicicletarias que fazem parte da nossa rede são estabelecimentos indicados por outros clientes dessa região. A Vela não é responsável pelo serviço, atendimento ou condições de pagamento oferecidas por eles, mas temos um canal de comunicação direto com eles e oferecemos todo o apoio técnico necessário.",
+        ],
+
         open: true,
         pos: {
           lat: -15.7986565,
@@ -382,6 +435,10 @@ module.exports = async (req, res) => {
           "PE, 52041-015, Brasil",
         ],
         phone: "(81) 3048-4050",
+        extra: [
+          "As oficinas e bicicletarias que fazem parte da nossa rede são estabelecimentos indicados por outros clientes dessa região. A Vela não é responsável pelo serviço, atendimento ou condições de pagamento oferecidas por eles, mas temos um canal de comunicação direto com eles e oferecemos todo o apoio técnico necessário.",
+        ],
+
         open: true,
         pos: {
           lat: -8.0366288,
@@ -398,6 +455,10 @@ module.exports = async (req, res) => {
           "DF, 70847-520, Brasil",
         ],
         phone: "(61) 3202-2775",
+        extra: [
+          "As oficinas e bicicletarias que fazem parte da nossa rede são estabelecimentos indicados por outros clientes dessa região. A Vela não é responsável pelo serviço, atendimento ou condições de pagamento oferecidas por eles, mas temos um canal de comunicação direto com eles e oferecemos todo o apoio técnico necessário.",
+        ],
+
         open: true,
         pos: {
           lat: -15.7669266,
@@ -414,6 +475,10 @@ module.exports = async (req, res) => {
           "RJ, 26012-410, Brasil",
         ],
         phone: "(21) 98121-8727",
+        extra: [
+          "As oficinas e bicicletarias que fazem parte da nossa rede são estabelecimentos indicados por outros clientes dessa região. A Vela não é responsável pelo serviço, atendimento ou condições de pagamento oferecidas por eles, mas temos um canal de comunicação direto com eles e oferecemos todo o apoio técnico necessário.",
+        ],
+
         open: true,
         pos: {
           lat: -22.739496,
@@ -430,6 +495,10 @@ module.exports = async (req, res) => {
           "RS, 95185-000, Brasil",
         ],
         phone: "(54) 99184-0145",
+        extra: [
+          "As oficinas e bicicletarias que fazem parte da nossa rede são estabelecimentos indicados por outros clientes dessa região. A Vela não é responsável pelo serviço, atendimento ou condições de pagamento oferecidas por eles, mas temos um canal de comunicação direto com eles e oferecemos todo o apoio técnico necessário.",
+        ],
+
         pos: {
           lat: -29.3096603,
           lng: -51.49419049999999,
@@ -445,6 +514,10 @@ module.exports = async (req, res) => {
           "CE, 60811-341, Brasil",
         ],
         phone: "(85) 99205-3891",
+        extra: [
+          "As oficinas e bicicletarias que fazem parte da nossa rede são estabelecimentos indicados por outros clientes dessa região. A Vela não é responsável pelo serviço, atendimento ou condições de pagamento oferecidas por eles, mas temos um canal de comunicação direto com eles e oferecemos todo o apoio técnico necessário.",
+        ],
+
         pos: {
           lat: -3.7850419,
           lng: -38.4825672,
@@ -460,6 +533,10 @@ module.exports = async (req, res) => {
           "SP, 13875-031, Brasil",
         ],
         phone: "(19) 3631-0034",
+        extra: [
+          "As oficinas e bicicletarias que fazem parte da nossa rede são estabelecimentos indicados por outros clientes dessa região. A Vela não é responsável pelo serviço, atendimento ou condições de pagamento oferecidas por eles, mas temos um canal de comunicação direto com eles e oferecemos todo o apoio técnico necessário.",
+        ],
+
         pos: {
           lat: -21.986355,
           lng: -46.781424,
@@ -475,6 +552,10 @@ module.exports = async (req, res) => {
           "RS, 90220-130 Brasil",
         ],
         phone: "(51) 3092-0070",
+        extra: [
+          "As oficinas e bicicletarias que fazem parte da nossa rede são estabelecimentos indicados por outros clientes dessa região. A Vela não é responsável pelo serviço, atendimento ou condições de pagamento oferecidas por eles, mas temos um canal de comunicação direto com eles e oferecemos todo o apoio técnico necessário.",
+        ],
+
         pos: {
           lat: -30.018188631201216,
           lng: -51.2087267387078,
@@ -490,6 +571,10 @@ module.exports = async (req, res) => {
           "MG, 38408-311, Brasil",
         ],
         phone: "(34) 3229-6664",
+        extra: [
+          "As oficinas e bicicletarias que fazem parte da nossa rede são estabelecimentos indicados por outros clientes dessa região. A Vela não é responsável pelo serviço, atendimento ou condições de pagamento oferecidas por eles, mas temos um canal de comunicação direto com eles e oferecemos todo o apoio técnico necessário.",
+        ],
+
         pos: {
           lat: -18.9388577,
           lng: -48.224602,
@@ -505,6 +590,10 @@ module.exports = async (req, res) => {
           "PR, 86060-680, Brasil",
         ],
         phone: "(43) 3327-6295",
+        extra: [
+          "As oficinas e bicicletarias que fazem parte da nossa rede são estabelecimentos indicados por outros clientes dessa região. A Vela não é responsável pelo serviço, atendimento ou condições de pagamento oferecidas por eles, mas temos um canal de comunicação direto com eles e oferecemos todo o apoio técnico necessário.",
+        ],
+
         pos: {
           lat: -23.3037226,
           lng: -51.178016,
@@ -520,6 +609,10 @@ module.exports = async (req, res) => {
           "SP, 04109-120, Brasil",
         ],
         phone: "(11) 97422-8054",
+        extra: [
+          "As oficinas e bicicletarias que fazem parte da nossa rede são estabelecimentos indicados por outros clientes dessa região. A Vela não é responsável pelo serviço, atendimento ou condições de pagamento oferecidas por eles, mas temos um canal de comunicação direto com eles e oferecemos todo o apoio técnico necessário.",
+        ],
+
         pos: {
           lat: -23.5771711,
           lng: -46.6328599,
@@ -535,6 +628,10 @@ module.exports = async (req, res) => {
           "GO, 74560-500, Brasil",
         ],
         phone: "(62) 99871-2196",
+        extra: [
+          "As oficinas e bicicletarias que fazem parte da nossa rede são estabelecimentos indicados por outros clientes dessa região. A Vela não é responsável pelo serviço, atendimento ou condições de pagamento oferecidas por eles, mas temos um canal de comunicação direto com eles e oferecemos todo o apoio técnico necessário.",
+        ],
+
         pos: {
           lat: -16.65499,
           lng: -49.274127,
@@ -550,6 +647,10 @@ module.exports = async (req, res) => {
           "RS, 90240-130, Brasil",
         ],
         phone: "(51) 99235-7005",
+        extra: [
+          "As oficinas e bicicletarias que fazem parte da nossa rede são estabelecimentos indicados por outros clientes dessa região. A Vela não é responsável pelo serviço, atendimento ou condições de pagamento oferecidas por eles, mas temos um canal de comunicação direto com eles e oferecemos todo o apoio técnico necessário.",
+        ],
+
         pos: {
           lat: -29.996727,
           lng: -51.193204,
@@ -565,6 +666,10 @@ module.exports = async (req, res) => {
           "SP, 04313-210, Brasil",
         ],
         phone: "(11) 91673-3992",
+        extra: [
+          "As oficinas e bicicletarias que fazem parte da nossa rede são estabelecimentos indicados por outros clientes dessa região. A Vela não é responsável pelo serviço, atendimento ou condições de pagamento oferecidas por eles, mas temos um canal de comunicação direto com eles e oferecemos todo o apoio técnico necessário.",
+        ],
+
         pos: {
           lat: -23.636508,
           lng: -46.638729,
@@ -580,6 +685,10 @@ module.exports = async (req, res) => {
           "SP, 11075-300, Brasil",
         ],
         phone: "(13) 98182-4078",
+        extra: [
+          "As oficinas e bicicletarias que fazem parte da nossa rede são estabelecimentos indicados por outros clientes dessa região. A Vela não é responsável pelo serviço, atendimento ou condições de pagamento oferecidas por eles, mas temos um canal de comunicação direto com eles e oferecemos todo o apoio técnico necessário.",
+        ],
+
         pos: {
           lat: -23.949596,
           lng: -46.327455,
@@ -595,6 +704,10 @@ module.exports = async (req, res) => {
           "SP, 11390-010, Brasil",
         ],
         phone: "(13) 99678-9710",
+        extra: [
+          "As oficinas e bicicletarias que fazem parte da nossa rede são estabelecimentos indicados por outros clientes dessa região. A Vela não é responsável pelo serviço, atendimento ou condições de pagamento oferecidas por eles, mas temos um canal de comunicação direto com eles e oferecemos todo o apoio técnico necessário.",
+        ],
+
         pos: {
           lat: -23.961183,
           lng: -46.377156,
@@ -610,6 +723,10 @@ module.exports = async (req, res) => {
           "SC, 89035-100, Brasil",
         ],
         phone: "(47) 99189-9930",
+        extra: [
+          "As oficinas e bicicletarias que fazem parte da nossa rede são estabelecimentos indicados por outros clientes dessa região. A Vela não é responsável pelo serviço, atendimento ou condições de pagamento oferecidas por eles, mas temos um canal de comunicação direto com eles e oferecemos todo o apoio técnico necessário.",
+        ],
+
         pos: {
           lat: -26.905124,
           lng: -49.092984,
@@ -625,6 +742,11 @@ module.exports = async (req, res) => {
           "SP, 13084-551, Brasil",
         ],
         phone: "(19) 99706-9117",
+
+        extra: [
+          "As oficinas e bicicletarias que fazem parte da nossa rede são estabelecimentos indicados por outros clientes dessa região. A Vela não é responsável pelo serviço, atendimento ou condições de pagamento oferecidas por eles, mas temos um canal de comunicação direto com eles e oferecemos todo o apoio técnico necessário.",
+        ],
+
         pos: {
           lat: -22.822273,
           lng: -47.080792,
@@ -640,6 +762,10 @@ module.exports = async (req, res) => {
           "SP, 05075-000, Brasil",
         ],
         phone: "(11) 91482-7272",
+        extra: [
+          "As oficinas e bicicletarias que fazem parte da nossa rede são estabelecimentos indicados por outros clientes dessa região. A Vela não é responsável pelo serviço, atendimento ou condições de pagamento oferecidas por eles, mas temos um canal de comunicação direto com eles e oferecemos todo o apoio técnico necessário.",
+        ],
+
         pos: {
           lat: -23.519701,
           lng: -46.707874,
@@ -655,6 +781,10 @@ module.exports = async (req, res) => {
           "SP, 02031-000, Brasil",
         ],
         phone: "(11) 99747-5470",
+        extra: [
+          "As oficinas e bicicletarias que fazem parte da nossa rede são estabelecimentos indicados por outros clientes dessa região. A Vela não é responsável pelo serviço, atendimento ou condições de pagamento oferecidas por eles, mas temos um canal de comunicação direto com eles e oferecemos todo o apoio técnico necessário.",
+        ],
+
         pos: {
           lat: -23.507874,
           lng: -46.625151,
@@ -670,6 +800,10 @@ module.exports = async (req, res) => {
           "SP, 01201-020, Brasil",
         ],
         phone: "(11) 96393-4737",
+        extra: [
+          "As oficinas e bicicletarias que fazem parte da nossa rede são estabelecimentos indicados por outros clientes dessa região. A Vela não é responsável pelo serviço, atendimento ou condições de pagamento oferecidas por eles, mas temos um canal de comunicação direto com eles e oferecemos todo o apoio técnico necessário.",
+        ],
+
         pos: {
           lat: -23.535952,
           lng: -46.650572,
@@ -701,6 +835,10 @@ module.exports = async (req, res) => {
           "MS, 79332-010, Brasil",
         ],
         phone: "(67) 3232-9743",
+        extra: [
+          "As oficinas e bicicletarias que fazem parte da nossa rede são estabelecimentos indicados por outros clientes dessa região. A Vela não é responsável pelo serviço, atendimento ou condições de pagamento oferecidas por eles, mas temos um canal de comunicação direto com eles e oferecemos todo o apoio técnico necessário.",
+        ],
+
         pos: {
           lat: -19.0110916,
           lng: -57.654644,
