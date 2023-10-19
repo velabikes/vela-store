@@ -758,7 +758,7 @@ module.exports = async (req, res) => {
         name: "Outplay BiKe",
         address: [
           "Rua Domingos Rodrigues, 162",
-          "Lapa, Campinas",
+          "Lapa, São Paulo",
           "SP, 05075-000, Brasil",
         ],
         phone: "(11) 91482-7272",
