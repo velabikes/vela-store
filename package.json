@@ -44,7 +44,7 @@
     "locomotive-scroll": "^4.1.4",
     "logrocket": "^1.0.1",
     "micro": "^9.3.4",
-    "next": "^9.3.2",
+    "next": "^9.5.5",
     "next-apollo": "^2.1.0",
     "next-ga": "^2.3.4",
     "next-redux-wrapper": "^3.0.0-alpha.2",
@@ -87,7 +87,7 @@
     "scrollmagic": "^2.0.8",
     "scrollmagic-plugin-gsap": "^1.0.4",
     "styled-components": "^5.2.1",
-    "vercel": "^32.3.1",
+    "vercel": "^32.5.0",
     "vidar": "^0.8.5"
   },
   "devDependencies": {

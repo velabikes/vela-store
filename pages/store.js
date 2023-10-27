@@ -153,7 +153,7 @@ const Store = ({
 
 const descriptionDictionary = {
   [null]:
-    "As unidades da Liquidação, incluindo as unidades de Outlet e Seminovas, serão entregues atualizadas para Vela 2 modeo 2024, com 50% mais potêcnia (550W), velocidade final de 32km/h com baterias novas, acessórios novos e protegidas sob garantia completa fornecida pela própria Vela: 1 ano para todos os componentes, 2 anos para a bateria e motor, 3 anos para o quadro.",
+    "As unidades da Liquidação, incluindo as unidades de Outlet e Seminovas, serão entregues atualizadas para Vela 2 modelo 2024, com 50% mais potêcnia (550W), velocidade final de 32km/h com baterias novas, acessórios novos e protegidas sob garantia completa fornecida pela própria Vela: 1 ano para todos os componentes, 2 anos para a bateria e motor, 3 anos para o quadro.",
   Outlet:
     "Unidades novas que podem possuir algum detalhe estético irregular, normalmente um arranhão na pintura ou marca gerada durante alguma etapa da montagem. Elas não atendem nosso padrão de qualidade para serem vendidas como novas, mas têm perfeitas condições de funcionamento e incluem todas as atualizações 2024 e garantia completa fornecida pela própria Vela: 1 ano para todos os componentes, 2 anos para a bateria e motor, 3 anos para o quadro.",
   Seminova:
