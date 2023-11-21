@@ -25,13 +25,13 @@ const CustomHead = () => {
       <Head>
 
  {/* Google Analytics gtag.js tracking code */}
- <script async src="https://www.googletagmanager.com/gtag/js?id=G-F3W6Q7GX9D"></script>
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-HS0HK755P4"></script>
   <script>
     {`
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-      gtag('config', 'G-F3W6Q7GX9D');
+      gtag('config', 'G-HS0HK755P4');
     `}
   </script>
         
