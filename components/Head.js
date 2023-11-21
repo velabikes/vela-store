@@ -24,15 +24,16 @@ const CustomHead = () => {
     <div className="Head">
       <Head>
 
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-F3W6Q7GX9D"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-F3W6Q7GX9D');
-</script>
+ {/* Google Analytics gtag.js tracking code */}
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-F3W6Q7GX9D"></script>
+  <script>
+    {`
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-F3W6Q7GX9D');
+    `}
+  </script>
         
         <meta
           name="viewport"
