@@ -111,8 +111,8 @@ const Vela = () => (
           <div className="right-content">
             <h2>Sistema regenerativo</h2>
             <h4>
-              Recupera energia para a bateria nas descidas, com até <b>50km</b>{" "}
-              de autonomia em trajetos
+              Recupera energia para a bateria nas descidas, com até <b>40km</b>{" "}
+              de autonomia em trajeto no modo econômico
             </h4>
             <p>
               Tenha toda a assistência necessária para pedalar sem qualquer
