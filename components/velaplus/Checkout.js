@@ -54,7 +54,7 @@ const Checkout = ({
             <h2 className="desktop">Tudo que sua Vela precisa está aqui.</h2>
             <div className="button-action">
               <h3>
-                Apenas <p>R$ 99/mês</p>
+                Apenas <p>R$ 79/mês</p>
               </h3>
               <p>Pacote anual parcelado em até 12x sem juros no cartão.</p>
               <div className="button-svg">
