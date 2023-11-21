@@ -23,14 +23,17 @@ const CustomHead = () => {
   return (
     <div className="Head">
       <Head>
-            <script async src="https://www.googletagmanager.com/gtag/js?id=G-F3W6Q7GX9D"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-    
-      gtag('config', 'G-F3W6Q7GX9D');
-    </script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-F3W6Q7GX9D"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-F3W6Q7GX9D');
+</script>
+        
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"
