@@ -21,11 +21,11 @@ const Bar = ({ onContinue, extra, step, checkout }) => {
       <div className="bottom">
         <div className="left">
           <h2>
-            {step === 1 && <Price value={9890} />}
+            {step === 1 && <Price value={11890} />}
             {step === 2 && (
               <Price
                 value={
-                  9890 +
+                  11890 +
                   extra.reduce((a, b) => a + parseInt(b.priceV2.amount), 0)
                 }
               />
@@ -33,7 +33,7 @@ const Bar = ({ onContinue, extra, step, checkout }) => {
             {step === 3 && (
               <Price
                 value={
-                  9890 +
+                  11890 +
                   extra.reduce((c, d) => c + parseInt(d.priceV2.amount), 0)
                 }
               />
