@@ -24,7 +24,7 @@ const ServiceItem = ({
       </div>
       <img src={images && images.edges[0].node.url} alt={title} />
       <h4>{title}</h4>
-      <p> R$ 79/mês</p>
+      <p> R$ 99/mês</p>
       <style jsx>{`
         div {
           max-width: 100%;
