@@ -14,14 +14,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/velabikes/vela-store.git"
+    "url": "git+https://github.com/victorhugo/sauva-store.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/velabikes/vela-store/issues"
+    "url": "https://github.com/victorhugo/sauva-store/issues"
   },
-  "homepage": "https://github.com/velabikes/vela-store#readme",
+  "homepage": "https://github.com/victorhugo/sauva-store#readme",
   "dependencies": {
     "@google/maps": "^0.5.5",
     "@next/bundle-analyzer": "^14.0.3",
