@@ -90,7 +90,7 @@ const HomePage = ({ highlight }) => (
           </h2>
           <h5>
             Nascida na capital paulista, a Vela desenvolve e produz bicicletas
-            elétricas para cidades mais saudáveis desde 2012.
+            elétricas para cidades mais saudáveis desde 2014.
           </h5>
 
           <a href="/vela">
