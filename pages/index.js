@@ -9,7 +9,6 @@ import PaddedView from "components/PaddedView";
 import Button from "../components/Button";
 import VelaPoint from "../components/charge/VelaPoint";
 import {
-  darkGray,
   midGray,
   offBlack,
   offWhite,
@@ -23,8 +22,8 @@ import Pop from "../components/home/Pop";
 
 const HomePage = ({ highlight }) => (
   <div className="HomePage">
-    <Pop />
     <Head>
+      <Pop />
       <script
         id="mcjs"
         dangerouslySetInnerHTML={{
