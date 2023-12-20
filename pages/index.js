@@ -19,9 +19,11 @@ import {
   white,
 } from "../style/colors";
 import HomeImage from "../components/home/HomeImage";
+import Pop from "../components/home/Pop";
 
 const HomePage = ({ highlight }) => (
   <div className="HomePage">
+    <Pop />
     <Head>
       <script
         id="mcjs"

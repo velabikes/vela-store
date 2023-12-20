@@ -15,9 +15,9 @@ const Pop = () => {
       </div>
       <h3>Comunicado!</h3>
       <br />
-      <h6>Em razão do recesso coletivo de final do ano nossos produtos serão enviados a partir de Janeiro e nossa loja estará fechada até 04/01.</h6>
+      <h6>Em razão do recesso coletivo de final do ano nossos produtos serão enviados a partir de Janeiro e nossa loja estará fechada até 08/01.</h6>
       <br />
-      <p><small>O <b>atendimento online</b> segue de seg à sex das 10h às 17h.</small></p>
+      <p><small>O <b>atendimento online</b> segue de forma parcial via WhatsApp.</small></p>
       <h2>Boas Festas!</h2>
       <style jsx>{`
     .Pop {
