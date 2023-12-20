@@ -3,6 +3,25 @@ const GoogleMaps = require("@google/maps");
 module.exports = async (req, res) => {
   return res.end(
     JSON.stringify([
+          {
+        name: "Bike Shop Sul ",
+        address: [
+          "R. Dr. Bruno de Andrade, 544",
+          "Industrial, Montenegro",
+          "RS, 92523-666, Brasil",
+        ],
+        phone: "(13) 632-9332",
+        extra: [
+          "Os pontos da nossa rede foram indicados por clientes dessa região. A Vela não é responsável pelo serviço, atendimento ou condições de pagamento oferecidas por eles, mas temos um canal de comunicação direto e oferecemos o apoio necessário.",
+        ],
+
+        pos: {
+          lat: -29.694932,
+          lng: -51.469153,
+        },
+        googlePlace: "ChIJJ0Yc9dTkG5URvNs_vQ7nz7k",
+        type: ["service"],
+      },
       {
         name: "Alva Coworking",
         address: [
